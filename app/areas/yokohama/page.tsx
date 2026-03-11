@@ -1,35 +1,94 @@
 import Link from "next/link";
-import { Star, MapPin } from "lucide-react";
 
 export const metadata = {
-  title: "横浜市のハウスクリーニング業者比較 | クリーンナビ",
-  description: "横浜市でおすすめのハウスクリーニング業者を比較。18区全域対応。",
+  title: "横浜市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+  description: "横浜市でおすすめのハウスクリーニング業者を徹底比較。全域対応。",
 };
 
 export default function YokohamaArea() {
-  const areas = ["青葉区", "旭区", "泉区", "磯子区", "神奈川区", "金沢区", "港南区", "港北区", "栄区", "瀬谷区", "都筑区", "鶴見区", "戸塚区", "中区", "西区", "保土ケ谷区", "緑区", "南区"];
+  const companies = [
+    { name: "おそうじ革命", kitchen: "17,930円〜", bathroom: "17,930円〜", toilet: "8,250円〜", recommend: "コスパ重視" },
+    { name: "おそうじ本舗", kitchen: "19,800円〜", bathroom: "19,800円〜", toilet: "9,900円〜", recommend: "技術力重視" },
+    { name: "カジタク", kitchen: "19,580円〜", bathroom: "19,580円〜", toilet: "19,580円", recommend: "安心感重視" },
+    { name: "ベアーズ", kitchen: "18,920円〜", bathroom: "19,910円〜", toilet: "10,340円〜", recommend: "家事代行も" },
+  ];
+  const areas = ['青葉区', '旭区', '泉区', '磯子区', '神奈川区', '金沢区', '港南区', '港北区', '栄区', '瀬谷区', '都筑区', '鶴見区', '戸塚区', '中区', '西区', '保土ケ谷区', '緑区', '南区'];
   return (
     <div className="min-h-screen bg-base-100">
-      <header className="navbar bg-primary text-primary-content sticky top-0 z-50 shadow-lg">
-        <div className="container mx-auto"><Link href="/" className="btn btn-ghost text-xl font-bold">クリーンナビ</Link></div>
+      <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
+        <Link href="/" className="btn btn-ghost text-xl">クリーンナビ</Link>
       </header>
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">横浜市のハウスクリーニング業者</h1>
-          <p className="text-xl mb-8">横浜市18区全域対応！</p>
+          <h1 className="text-4xl font-bold mb-4">横浜市のハウスクリーニング業者比較</h1>
+          <p className="text-xl">横浜市全域対応！信頼できる業者をご紹介</p>
+        </div>
+      </section>
+      <section className="py-12 bg-base-100">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4">横浜市でハウスクリーニングを依頼するなら？</h2>
+            <p className="text-lg">横浜市は神奈川県最大の都市で、18区からなる政令指定都市です。港町として発展し、海風による塩害対策が重要です。</p>
+          </div>
         </div>
       </section>
       <section className="py-16 bg-base-200">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">対応エリア（横浜市18区）</h2>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-3 max-w-5xl mx-auto">
-            {areas.map(a => <div key={a} className="badge badge-lg p-3">{a}</div>)}
+          <h2 className="text-3xl font-bold text-center mb-12">おすすめ業者比較</h2>
+          <div className="overflow-x-auto">
+            <table className="table table-zebra w-full max-w-6xl mx-auto bg-white">
+              <thead>
+                <tr>
+                  <th>業者名</th>
+                  <th>キッチン</th>
+                  <th>浴室</th>
+                  <th>トイレ</th>
+                  <th>おすすめの人</th>
+                </tr>
+              </thead>
+              <tbody>
+                {companies.map((c, i) => (
+                  <tr key={i}>
+                    <td className="font-bold">{c.name}</td>
+                    <td>{c.kitchen}</td>
+                    <td>{c.bathroom}</td>
+                    <td>{c.toilet}</td>
+                    <td>{c.recommend}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
       <section className="py-16">
-        <div className="container mx-auto px-4 text-center">
-          <Link href="/services/aircon" className="btn btn-primary btn-lg">サービスを見る</Link>
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center mb-8">対応エリア</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
+            {areas.map(a => <div key={a} className="badge badge-lg badge-outline p-4">{a}</div>)}
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-base-200">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4">料金相場</h2>
+            <ul className="space-y-2">
+              <li>• エアコンクリーニング：10,000円〜15,000円</li>
+              <li>• キッチンクリーニング：18,000円〜20,000円</li>
+              <li>• 浴室クリーニング：19,000円〜22,000円</li>
+              <li>• トイレクリーニング：9,000円〜10,000円</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-4">横浜市で最適な業者を見つけよう</h2>
+          <div className="flex gap-4 justify-center mt-8">
+            <Link href="/services/aircon" className="btn btn-lg bg-white text-primary">サービスから探す</Link>
+            <Link href="/price" className="btn btn-lg btn-outline text-white border-white">料金相場を見る</Link>
+          </div>
         </div>
       </section>
       <footer className="footer footer-center p-10 bg-base-200"><p>© 2024 クリーンナビ</p></footer>
