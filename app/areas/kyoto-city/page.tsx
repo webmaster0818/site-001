@@ -78,6 +78,54 @@ export default function KyotocityArea() {
           </div>
         </div>
       </section>
+
+      {/* 各業者詳細 */}
+      <section className="py-16 bg-base-200">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">おすすめ業者詳細</h2>
+          <div className="space-y-8 max-w-4xl mx-auto">
+            {companies.map((company, index) => {
+              const Icon = companyIcons[index % companyIcons.length];
+              const gradient = companyColors[index % companyColors.length];
+              return (
+                <div key={index} className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
+                  <div className="card-body">
+                    <div className="flex items-start gap-4">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                        <Icon className="w-8 h-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="card-title text-2xl">{company.name}</h3>
+                        <p className="text-sm text-gray-600 mt-1">{company.recommend || "おすすめ"}</p>
+                      </div>
+                    </div>
+                    <div className="divider"></div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <h4 className="font-bold mb-2">料金</h4>
+                        <ul className="space-y-1">
+                          <li>• キッチン: {company.kitchen}</li>
+                          <li>• 浴室: {company.bathroom}</li>
+                          <li>• トイレ: {company.toilet}</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-bold mb-2">特徴</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {(company.features || []).map((feature, idx) => (
+                            <div key={idx} className="badge badge-primary">{feature}</div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-base-200">
         <div className="container mx-auto px-4">
           <div className="prose max-w-4xl mx-auto">
