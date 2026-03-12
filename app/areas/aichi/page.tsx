@@ -72,6 +72,19 @@ export default function AichiArea() {
           <Link href="/services/aircon" className="btn btn-lg bg-white text-primary">サービスを見る</Link>
         </div>
       </section>
+
+      {/* 近隣エリア */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <Link href="/areas/osaka" className="btn btn-outline">大阪府</Link>
+            <Link href="/areas/shizuoka" className="btn btn-outline">静岡県</Link>
+            <Link href="/areas/fukuoka" className="btn btn-outline">福岡県</Link>
+            <Link href="/areas/kyoto" className="btn btn-outline">京都府</Link>
+          </div>
+        </div>
+      </section>
       <footer className="footer footer-center p-10"><p>© 2024 クリーンナビ</p></footer>
     </div>
   );
