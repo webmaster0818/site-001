@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Building2, CheckCircle, Star, MapPin, Phone, Mail } from "lucide-react";
+import { Building2, CheckCircle, Star, MapPin, Phone, Mail, Sparkles, Award, Shield, Zap, Crown } from "lucide-react";
 
 export const metadata = {
   title: "大阪府のハウスクリーニング業者おすすめ比較16選 | 料金・口コミ | クリーンナビ",
@@ -8,6 +8,15 @@ export const metadata = {
 };
 
 export default function OsakaArea() {
+  const companyIcons = [Sparkles, Award, Shield, Zap, Crown];
+  const companyColors = [
+    "from-blue-500 to-blue-600",
+    "from-green-500 to-green-600",
+    "from-purple-500 to-purple-600",
+    "from-orange-500 to-orange-600",
+    "from-red-500 to-red-600",
+  ];
+
   const companies = [
     {
       name: "おそうじ革命",
@@ -160,33 +169,45 @@ export default function OsakaArea() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">各業者の詳細</h2>
           <div className="space-y-8 max-w-4xl mx-auto">
-            {companies.map((company, index) => (
-              <div key={index} className="card bg-base-100 shadow-xl">
-                <div className="card-body">
-                  <h3 className="card-title text-2xl">{company.name}</h3>
-                  <div className="divider"></div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <h4 className="font-bold mb-2">料金</h4>
-                      <ul className="space-y-1">
-                        <li>• キッチン: {company.kitchen}</li>
-                        <li>• 浴室: {company.bathroom}</li>
-                        <li>• トイレ: {company.toilet}</li>
-                        <li>• 洗面所: {company.washroom}</li>
-                      </ul>
+            {companies.map((company, index) => {
+              const Icon = companyIcons[index];
+              const gradient = companyColors[index];
+              return (
+                <div key={index} className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
+                  <div className="card-body">
+                    <div className="flex items-start gap-4">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                        <Icon className="w-8 h-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="card-title text-2xl">{company.name}</h3>
+                        <p className="text-sm text-gray-600 mt-1">{company.recommend}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold mb-2">特徴</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {company.features.map((feature, idx) => (
-                          <div key={idx} className="badge badge-primary">{feature}</div>
-                        ))}
+                    <div className="divider"></div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <h4 className="font-bold mb-2">料金</h4>
+                        <ul className="space-y-1">
+                          <li>• キッチン: {company.kitchen}</li>
+                          <li>• 浴室: {company.bathroom}</li>
+                          <li>• トイレ: {company.toilet}</li>
+                          <li>• 洗面所: {company.washroom}</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-bold mb-2">特徴</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {company.features.map((feature, idx) => (
+                            <div key={idx} className="badge badge-primary">{feature}</div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
