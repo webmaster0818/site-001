@@ -172,6 +172,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* エリアから探す */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            エリアから業者を探す
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+            <Link href="/areas/tokyo" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">東京都</div>
+            </Link>
+            <Link href="/areas/kanagawa" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">神奈川県</div>
+            </Link>
+            <Link href="/areas/osaka" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">大阪府</div>
+            </Link>
+            <Link href="/areas/aichi" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">愛知県</div>
+            </Link>
+            <Link href="/areas/fukuoka" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">福岡県</div>
+            </Link>
+            <Link href="/areas/saitama" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">埼玉県</div>
+            </Link>
+            <Link href="/areas/chiba" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">千葉県</div>
+            </Link>
+            <Link href="/areas/hyogo" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">兵庫県</div>
+            </Link>
+            <Link href="/areas/sapporo" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">札幌市</div>
+            </Link>
+            <Link href="/areas/kyoto" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">京都府</div>
+            </Link>
+            <Link href="/areas/sendai" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">仙台市</div>
+            </Link>
+            <Link href="/areas/hiroshima" className="bg-white border-2 border-gray-200 rounded-lg p-4 text-center hover:border-blue-600 hover:shadow-lg transition">
+              <div className="font-bold text-gray-900">広島市</div>
+            </Link>
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-gray-600 text-sm">その他のエリアもお探しください</p>
+          </div>
+        </div>
+      </section>
+
       {/* 選ばれる理由 */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
