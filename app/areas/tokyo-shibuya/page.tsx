@@ -6,6 +6,15 @@ export const metadata = {
 };
 
 export default function TokyoshibuyaArea() {
+  const companyIcons = [Sparkles, Award, Shield, Zap];
+  const companyColors = [
+    "from-blue-500 to-blue-600",
+    "from-green-500 to-green-600",
+    "from-purple-500 to-purple-600",
+    "from-orange-500 to-orange-600",
+  ];
+
+
   const companies = [
     { name: "おそうじ革命", kitchen: "17,930円〜", bathroom: "17,930円〜", toilet: "8,250円〜", recommend: "コスパ重視" },
     { name: "おそうじ本舗", kitchen: "19,800円〜", bathroom: "19,800円〜", toilet: "9,900円〜", recommend: "技術力重視" },

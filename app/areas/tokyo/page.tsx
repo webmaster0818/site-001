@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Building2, MapPin } from "lucide-react";
+import { Building2, MapPin, Sparkles, Award, Shield, Zap , Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
   title: "東京都のハウスクリーニング業者おすすめ比較 | 料金・口コミ | クリーンナビ",
@@ -8,6 +8,15 @@ export const metadata = {
 };
 
 export default function TokyoArea() {
+  const companyIcons = [Sparkles, Award, Shield, Zap];
+  const companyColors = [
+    "from-blue-500 to-blue-600",
+    "from-green-500 to-green-600",
+    "from-purple-500 to-purple-600",
+    "from-orange-500 to-orange-600",
+  ];
+
+
   const companies = [
     {
       name: "おそうじ革命",
