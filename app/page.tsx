@@ -84,29 +84,48 @@ export default function Home() {
       </header>
 
       {/* ヒーローセクション */}
-      <section className="bg-gradient-to-b from-blue-50 to-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      <section className="relative bg-gradient-to-r from-blue-400 to-blue-600 py-32">
+        {/* 背景画像オーバーレイ */}
+        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
             プロのハウスクリーニングを<br />
             簡単比較・予約
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto drop-shadow">
             30〜50代の忙しい主婦・共働き世帯に選ばれています。<br />
             信頼できる業者を口コミ・料金・サービス内容で徹底比較。
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-4 justify-center flex-wrap mb-12">
             <Link
               href="/services/aircon"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg"
+              className="bg-yellow-400 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-yellow-500 transition shadow-xl"
             >
               業者を探す
             </Link>
             <Link
               href="/about"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition border-2 border-blue-600"
+              className="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl"
             >
               サービスについて
             </Link>
+          </div>
+          
+          {/* 統計数字 */}
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">3,000</div>
+              <div className="text-white text-sm md:text-base">登録業者数</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">97,000</div>
+              <div className="text-white text-sm md:text-base">利用者数</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">満足度</div>
+              <div className="text-white text-sm md:text-base">★★★★☆ 4.5</div>
+            </div>
           </div>
         </div>
       </section>
@@ -126,7 +145,9 @@ export default function Home() {
             {/* ペルソナ1 */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
               <div className="flex items-center gap-3 mb-4">
-                <div className="text-4xl">👩</div>
+                <div className="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center text-3xl flex-shrink-0">
+                  👩
+                </div>
                 <div>
                   <div className="font-bold text-gray-900">30代 共働き主婦</div>
                   <div className="text-sm text-gray-500">東京都在住</div>
@@ -140,7 +161,9 @@ export default function Home() {
             {/* ペルソナ2 */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
               <div className="flex items-center gap-3 mb-4">
-                <div className="text-4xl">👨</div>
+                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center text-3xl flex-shrink-0">
+                  👨
+                </div>
                 <div>
                   <div className="font-bold text-gray-900">40代 会社員</div>
                   <div className="text-sm text-gray-500">神奈川県在住</div>
@@ -154,7 +177,9 @@ export default function Home() {
             {/* ペルソナ3 */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
               <div className="flex items-center gap-3 mb-4">
-                <div className="text-4xl">👩</div>
+                <div className="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center text-3xl flex-shrink-0">
+                  👩
+                </div>
                 <div>
                   <div className="font-bold text-gray-900">50代 専業主婦</div>
                   <div className="text-sm text-gray-500">大阪府在住</div>
@@ -168,7 +193,9 @@ export default function Home() {
             {/* ペルソナ4 */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
               <div className="flex items-center gap-3 mb-4">
-                <div className="text-4xl">👨</div>
+                <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-3xl flex-shrink-0">
+                  👨
+                </div>
                 <div>
                   <div className="font-bold text-gray-900">30代 一人暮らし</div>
                   <div className="text-sm text-gray-500">愛知県在住</div>
@@ -182,7 +209,9 @@ export default function Home() {
             {/* ペルソナ5 */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
               <div className="flex items-center gap-3 mb-4">
-                <div className="text-4xl">👩</div>
+                <div className="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-3xl flex-shrink-0">
+                  👩
+                </div>
                 <div>
                   <div className="font-bold text-gray-900">40代 子育て中</div>
                   <div className="text-sm text-gray-500">埼玉県在住</div>
@@ -196,7 +225,9 @@ export default function Home() {
             {/* ペルソナ6 */}
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
               <div className="flex items-center gap-3 mb-4">
-                <div className="text-4xl">👨</div>
+                <div className="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-3xl flex-shrink-0">
+                  👨
+                </div>
                 <div>
                   <div className="font-bold text-gray-900">50代 持ち家</div>
                   <div className="text-sm text-gray-500">福岡県在住</div>
@@ -206,6 +237,16 @@ export default function Home() {
                 「換気扇の油汚れがひどくて換気が弱い。年に一度はプロにお願いしたいが、信頼できる業者を見つけたい。」
               </p>
             </div>
+          </div>
+          
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <Link
+              href="/services/aircon"
+              className="inline-block bg-yellow-400 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-yellow-500 transition shadow-lg"
+            >
+              あなたに合った業者を探す
+            </Link>
           </div>
         </div>
       </section>
@@ -322,40 +363,58 @@ export default function Home() {
       </section>
 
       {/* 選ばれる理由 */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
             クリーンナビが選ばれる理由
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🔍</span>
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <span className="text-4xl">🔍</span>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">簡単比較</h4>
-              <p className="text-gray-600">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">簡単比較</h4>
+              <p className="text-gray-600 leading-relaxed">
                 料金・口コミ・サービス内容を一目で比較。最適な業者がすぐ見つかります。
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">⭐</span>
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <span className="text-4xl">⭐</span>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">実績豊富</h4>
-              <p className="text-gray-600">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">実績豊富</h4>
+              <p className="text-gray-600 leading-relaxed">
                 厳選された優良業者のみを掲載。安心してご利用いただけます。
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">💰</span>
+              <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <span className="text-4xl">💰</span>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">お得な価格</h4>
-              <p className="text-gray-600">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">お得な価格</h4>
+              <p className="text-gray-600 leading-relaxed">
                 複数業者を比較することで、適正価格でサービスを受けられます。
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* フッター前CTA */}
+      <section className="py-20 bg-gradient-to-r from-blue-500 to-blue-700">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            まずは無料で業者を比較してみませんか？
+          </h3>
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
+            あなたにピッタリのハウスクリーニング業者を見つけましょう
+          </p>
+          <Link
+            href="/services/aircon"
+            className="inline-block bg-yellow-400 text-gray-900 px-12 py-5 rounded-lg font-bold text-xl hover:bg-yellow-500 transition shadow-2xl"
+          >
+            今すぐ業者を探す
+          </Link>
         </div>
       </section>
 
