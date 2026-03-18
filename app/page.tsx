@@ -112,9 +112,9 @@ export default function Home() {
           <div className="flex gap-4 justify-center flex-wrap mb-12">
             <Link
               href="/services/aircon"
-              className="bg-amber-400 text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-amber-500 transition shadow-xl"
+              className="bg-yellow-400 text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition shadow-xl"
             >
-              ✨ 業者を探す
+              業者を探す
             </Link>
             <Link
               href="/about"
@@ -255,9 +255,9 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/services/aircon"
-              className="inline-block bg-amber-400 text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-amber-500 transition shadow-lg"
+              className="inline-block bg-yellow-400 text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition shadow-lg"
             >
-              ✨ あなたに合った業者を探す
+              あなたに合った業者を探す
             </Link>
           </div>
         </div>
@@ -423,9 +423,9 @@ export default function Home() {
           </p>
           <Link
             href="/services/aircon"
-            className="inline-block bg-amber-400 text-gray-900 px-12 py-5 rounded-full font-bold text-xl hover:bg-amber-500 transition shadow-2xl"
+            className="inline-block bg-yellow-400 text-gray-900 px-12 py-5 rounded-full font-bold text-xl hover:bg-yellow-500 transition shadow-2xl"
           >
-            ✨ 今すぐ業者を探す
+            今すぐ業者を探す
           </Link>
         </div>
       </section>
