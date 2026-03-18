@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Sparkles, Award, Shield, Zap , Sparkles, Award, Shield, Zap } from "lucide-react";
+import { MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
   title: "埼玉県のハウスクリーニング業者おすすめ比較 | クリーンナビ",

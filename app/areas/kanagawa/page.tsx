@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Building2, MapPin, Sparkles, Award, Shield, Zap , Sparkles, Award, Shield, Zap } from "lucide-react";
+import { Building2, MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
   title: "神奈川県のハウスクリーニング業者おすすめ比較 | 料金・口コミ | クリーンナビ",
