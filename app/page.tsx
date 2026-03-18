@@ -127,15 +127,15 @@ export default function Home() {
           {/* 統計数字 */}
           <div className="flex flex-wrap justify-center gap-4">
             <div className="bg-white/30 backdrop-blur-md rounded-lg px-6 py-4 border border-white/40">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-1 drop-shadow-lg">3,000<span className="text-xl">件+</span></div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-1 drop-shadow-lg">3,000<span className="text-xl">件+</span></div>
               <div className="text-white text-xs md:text-sm font-semibold">掲載業者数</div>
             </div>
             <div className="bg-white/30 backdrop-blur-md rounded-lg px-6 py-4 border border-white/40">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-1 drop-shadow-lg">47<span className="text-xl">都道府県</span></div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-1 drop-shadow-lg">47<span className="text-xl">都道府県</span></div>
               <div className="text-white text-xs md:text-sm font-semibold">対応エリア</div>
             </div>
             <div className="bg-white/30 backdrop-blur-md rounded-lg px-6 py-4 border border-white/40">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-1 drop-shadow-lg">98<span className="text-xl">%</span></div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-1 drop-shadow-lg">98<span className="text-xl">%</span></div>
               <div className="text-white text-xs md:text-sm font-semibold">満足度</div>
             </div>
           </div>
