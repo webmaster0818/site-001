@@ -16,11 +16,11 @@ export default function Home() {
             <img 
               src="/images/logo-character.png" 
               alt="クリーンナビ キャラクター" 
-              className="w-12 h-12 object-contain"
+              className="w-16 h-16 md:w-20 md:h-20 object-contain"
             />
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">クリーンナビ</h1>
-              <p className="text-xs text-gray-500">ハウスクリーニング業者比較サイト</p>
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-900">クリーンナビ</h1>
+              <p className="text-xs md:text-sm text-gray-500">ハウスクリーニング業者比較サイト</p>
             </div>
           </Link>
           
@@ -98,59 +98,45 @@ export default function Home() {
         }}
       >
         {/* 背景画像オーバーレイ */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/90 to-blue-500/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-300/85 to-blue-400/85"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            {/* 左側：テキストコンテンツ */}
-            <div className="flex-1 text-center lg:text-left">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-                プロのハウスクリーニングを<br />
-                簡単比較・予約
-              </h2>
-              <p className="text-xl md:text-2xl text-white mb-8 drop-shadow">
-                30〜50代の忙しい主婦・共働き世帯に選ばれています。<br />
-                信頼できる業者を口コミ・料金・サービス内容で徹底比較。
-              </p>
-              <div className="flex gap-4 justify-center lg:justify-start flex-wrap mb-12">
-                <Link
-                  href="/services/aircon"
-                  className="bg-orange-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-xl"
-                >
-                  業者を探す
-                </Link>
-                <Link
-                  href="/about"
-                  className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition shadow-xl"
-                >
-                  初めての方はこちら →
-                </Link>
-              </div>
-              
-              {/* 統計数字 */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4 text-center lg:text-left">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">3,000<span className="text-xl">件+</span></div>
-                  <div className="text-white text-xs md:text-sm">掲載業者数</div>
-                </div>
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4 text-center lg:text-left">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">47<span className="text-xl">都道府県</span></div>
-                  <div className="text-white text-xs md:text-sm">対応エリア</div>
-                </div>
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4 text-center lg:text-left">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">98<span className="text-xl">%</span></div>
-                  <div className="text-white text-xs md:text-sm">満足度</div>
-                </div>
-              </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+            プロのハウスクリーニングを<br />
+            簡単比較・予約
+          </h2>
+          <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto drop-shadow">
+            30〜50代の忙しい主婦・共働き世帯に選ばれています。<br />
+            信頼できる業者を口コミ・料金・サービス内容で徹底比較。
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap mb-12">
+            <Link
+              href="/services/aircon"
+              className="bg-orange-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-xl"
+            >
+              業者を探す
+            </Link>
+            <Link
+              href="/about"
+              className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition shadow-xl"
+            >
+              初めての方はこちら →
+            </Link>
+          </div>
+          
+          {/* 統計数字 */}
+          <div className="flex flex-wrap justify-center gap-4">
+            <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">3,000<span className="text-xl">件+</span></div>
+              <div className="text-white text-xs md:text-sm">掲載業者数</div>
             </div>
-            
-            {/* 右側：キャラクター画像 */}
-            <div className="flex-shrink-0 hidden lg:block">
-              <img 
-                src="/images/logo-character.png" 
-                alt="クリーンナビ キャラクター" 
-                className="w-80 h-80 object-contain drop-shadow-2xl"
-              />
+            <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">47<span className="text-xl">都道府県</span></div>
+              <div className="text-white text-xs md:text-sm">対応エリア</div>
+            </div>
+            <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">98<span className="text-xl">%</span></div>
+              <div className="text-white text-xs md:text-sm">満足度</div>
             </div>
           </div>
         </div>
