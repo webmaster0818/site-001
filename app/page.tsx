@@ -98,7 +98,7 @@ export default function Home() {
         }}
       >
         {/* 背景画像オーバーレイ */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-300/60 to-blue-400/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-300/45 to-blue-400/55"></div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
