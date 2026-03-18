@@ -84,9 +84,14 @@ export default function Home() {
       </header>
 
       {/* ヒーローセクション */}
-      <section className="relative bg-gradient-to-r from-blue-400 to-blue-600 py-32">
+      <section 
+        className="relative py-32 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1920&q=80')"
+        }}
+      >
         {/* 背景画像オーバーレイ */}
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/80 to-blue-700/80"></div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
