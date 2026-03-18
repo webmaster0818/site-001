@@ -111,6 +111,105 @@ export default function Home() {
         </div>
       </section>
 
+      {/* こんなお悩みありませんか？ */}
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              こんなお悩みありませんか？
+            </h3>
+            <p className="text-lg text-gray-600">
+              多くのお客様が同じ悩みを抱えてクリーンナビを利用されています
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {/* ペルソナ1 */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-4xl">👩</div>
+                <div>
+                  <div className="font-bold text-gray-900">30代 共働き主婦</div>
+                  <div className="text-sm text-gray-500">東京都在住</div>
+                </div>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                「仕事と育児で掃除する時間がない…。エアコンのカビ臭が気になるけど、自分では分解できなくて困っています。」
+              </p>
+            </div>
+
+            {/* ペルソナ2 */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-4xl">👨</div>
+                <div>
+                  <div className="font-bold text-gray-900">40代 会社員</div>
+                  <div className="text-sm text-gray-500">神奈川県在住</div>
+                </div>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                「業者がたくさんあってどこに頼めばいいかわからない。料金もバラバラで、比較するのが大変で…。」
+              </p>
+            </div>
+
+            {/* ペルソナ3 */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-4xl">👩</div>
+                <div>
+                  <div className="font-bold text-gray-900">50代 専業主婦</div>
+                  <div className="text-sm text-gray-500">大阪府在住</div>
+                </div>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                「浴室のカビが何度掃除しても取れない…。市販の洗剤では限界を感じています。プロに任せたい。」
+              </p>
+            </div>
+
+            {/* ペルソナ4 */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-4xl">👨</div>
+                <div>
+                  <div className="font-bold text-gray-900">30代 一人暮らし</div>
+                  <div className="text-sm text-gray-500">愛知県在住</div>
+                </div>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                「引越し前に部屋をピカピカにしたいけど、退去費用を抑えるためにどの業者がコスパ良いか知りたい。」
+              </p>
+            </div>
+
+            {/* ペルソナ5 */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-4xl">👩</div>
+                <div>
+                  <div className="font-bold text-gray-900">40代 子育て中</div>
+                  <div className="text-sm text-gray-500">埼玉県在住</div>
+                </div>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                「小さい子どもがいるから安全な洗剤を使ってくれる業者がいい。口コミで安心できるところを探したい。」
+              </p>
+            </div>
+
+            {/* ペルソナ6 */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-4xl">👨</div>
+                <div>
+                  <div className="font-bold text-gray-900">50代 持ち家</div>
+                  <div className="text-sm text-gray-500">福岡県在住</div>
+                </div>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                「換気扇の油汚れがひどくて換気が弱い。年に一度はプロにお願いしたいが、信頼できる業者を見つけたい。」
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* サービスカテゴリ */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
