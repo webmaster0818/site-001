@@ -98,7 +98,7 @@ export default function Home() {
         }}
       >
         {/* 背景画像オーバーレイ */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/80 to-blue-700/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/90 to-blue-500/90"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -115,31 +115,31 @@ export default function Home() {
               <div className="flex gap-4 justify-center lg:justify-start flex-wrap mb-12">
                 <Link
                   href="/services/aircon"
-                  className="bg-yellow-400 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-yellow-500 transition shadow-xl"
+                  className="bg-orange-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-xl"
                 >
                   業者を探す
                 </Link>
                 <Link
                   href="/about"
-                  className="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl"
+                  className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition shadow-xl"
                 >
-                  サービスについて
+                  初めての方はこちら →
                 </Link>
               </div>
               
               {/* 統計数字 */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-8 md:gap-12">
-                <div className="text-center lg:text-left">
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">3,000</div>
-                  <div className="text-white text-sm md:text-base">登録業者数</div>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4 text-center lg:text-left">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">3,000<span className="text-xl">件+</span></div>
+                  <div className="text-white text-xs md:text-sm">掲載業者数</div>
                 </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">97,000</div>
-                  <div className="text-white text-sm md:text-base">利用者数</div>
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4 text-center lg:text-left">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">47<span className="text-xl">都道府県</span></div>
+                  <div className="text-white text-xs md:text-sm">対応エリア</div>
                 </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">満足度</div>
-                  <div className="text-white text-sm md:text-base">★★★★☆ 4.5</div>
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4 text-center lg:text-left">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">98<span className="text-xl">%</span></div>
+                  <div className="text-white text-xs md:text-sm">満足度</div>
                 </div>
               </div>
             </div>
@@ -269,9 +269,9 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/services/aircon"
-              className="inline-block bg-yellow-400 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-yellow-500 transition shadow-lg"
+              className="inline-block bg-orange-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-lg"
             >
-              あなたに合った業者を探す
+              ✨ あなたに合った業者を探す
             </Link>
           </div>
         </div>
@@ -427,19 +427,19 @@ export default function Home() {
       </section>
 
       {/* フッター前CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-500 to-blue-700">
+      <section className="py-20 bg-gradient-to-r from-cyan-500 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
             まずは無料で業者を比較してみませんか？
           </h3>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            あなたにピッタリのハウスクリーニング業者を見つけましょう
+            料金・口コミ・サービス内容を一括比較。<br />最適な業者がすぐに見つかります。
           </p>
           <Link
             href="/services/aircon"
-            className="inline-block bg-yellow-400 text-gray-900 px-12 py-5 rounded-lg font-bold text-xl hover:bg-yellow-500 transition shadow-2xl"
+            className="inline-block bg-orange-500 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-orange-600 transition shadow-2xl"
           >
-            今すぐ業者を探す
+            ✨ 今すぐ業者を探す
           </Link>
         </div>
       </section>
