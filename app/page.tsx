@@ -12,9 +12,16 @@ export default function Home() {
       {/* ヘッダー */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Sparkles className="w-8 h-8 text-blue-600" />
-            <h1 className="text-2xl font-bold text-gray-900">クリーンナビ</h1>
+          <Link href="/" className="flex items-center gap-3">
+            <img 
+              src="/images/logo-character.png" 
+              alt="クリーンナビ キャラクター" 
+              className="w-12 h-12 object-contain"
+            />
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">クリーンナビ</h1>
+              <p className="text-xs text-gray-500">ハウスクリーニング業者比較サイト</p>
+            </div>
           </Link>
           
           {/* デスクトップナビ */}
@@ -93,43 +100,57 @@ export default function Home() {
         {/* 背景画像オーバーレイ */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/80 to-blue-700/80"></div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-            プロのハウスクリーニングを<br />
-            簡単比較・予約
-          </h2>
-          <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto drop-shadow">
-            30〜50代の忙しい主婦・共働き世帯に選ばれています。<br />
-            信頼できる業者を口コミ・料金・サービス内容で徹底比較。
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap mb-12">
-            <Link
-              href="/services/aircon"
-              className="bg-yellow-400 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-yellow-500 transition shadow-xl"
-            >
-              業者を探す
-            </Link>
-            <Link
-              href="/about"
-              className="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl"
-            >
-              サービスについて
-            </Link>
-          </div>
-          
-          {/* 統計数字 */}
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">3,000</div>
-              <div className="text-white text-sm md:text-base">登録業者数</div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            {/* 左側：テキストコンテンツ */}
+            <div className="flex-1 text-center lg:text-left">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+                プロのハウスクリーニングを<br />
+                簡単比較・予約
+              </h2>
+              <p className="text-xl md:text-2xl text-white mb-8 drop-shadow">
+                30〜50代の忙しい主婦・共働き世帯に選ばれています。<br />
+                信頼できる業者を口コミ・料金・サービス内容で徹底比較。
+              </p>
+              <div className="flex gap-4 justify-center lg:justify-start flex-wrap mb-12">
+                <Link
+                  href="/services/aircon"
+                  className="bg-yellow-400 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-yellow-500 transition shadow-xl"
+                >
+                  業者を探す
+                </Link>
+                <Link
+                  href="/about"
+                  className="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl"
+                >
+                  サービスについて
+                </Link>
+              </div>
+              
+              {/* 統計数字 */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-8 md:gap-12">
+                <div className="text-center lg:text-left">
+                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">3,000</div>
+                  <div className="text-white text-sm md:text-base">登録業者数</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">97,000</div>
+                  <div className="text-white text-sm md:text-base">利用者数</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">満足度</div>
+                  <div className="text-white text-sm md:text-base">★★★★☆ 4.5</div>
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">97,000</div>
-              <div className="text-white text-sm md:text-base">利用者数</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">満足度</div>
-              <div className="text-white text-sm md:text-base">★★★★☆ 4.5</div>
+            
+            {/* 右側：キャラクター画像 */}
+            <div className="flex-shrink-0 hidden lg:block">
+              <img 
+                src="/images/logo-character.png" 
+                alt="クリーンナビ キャラクター" 
+                className="w-80 h-80 object-contain drop-shadow-2xl"
+              />
             </div>
           </div>
         </div>
@@ -428,9 +449,16 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Sparkles className="w-6 h-6 text-blue-400" />
-                <h5 className="text-xl font-bold">クリーンナビ</h5>
+              <div className="flex items-center gap-3 mb-4">
+                <img 
+                  src="/images/logo-character.png" 
+                  alt="クリーンナビ キャラクター" 
+                  className="w-12 h-12 object-contain"
+                />
+                <div>
+                  <h5 className="text-xl font-bold">クリーンナビ</h5>
+                  <p className="text-xs text-gray-500">ハウスクリーニング業者比較サイト</p>
+                </div>
               </div>
               <p className="text-gray-400 text-sm">
                 ハウスクリーニング業者を簡単比較・予約できるサービスです。
