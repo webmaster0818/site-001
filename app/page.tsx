@@ -107,14 +107,14 @@ export default function Home() {
           </h2>
           <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto drop-shadow">
             30〜50代の忙しい主婦・共働き世帯に選ばれています。<br />
-            信頼できる業者を口コミ・料金・サービス内容で徹底比較。
+            信頼できる業者を<span className="text-yellow-300 font-bold">口コミ・料金・サービス内容</span>で徹底比較。
           </p>
           <div className="flex gap-4 justify-center flex-wrap mb-12">
             <Link
               href="/services/aircon"
-              className="bg-orange-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-xl"
+              className="bg-yellow-500 text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-600 transition shadow-xl"
             >
-              業者を探す
+              ✨ 業者を探す
             </Link>
             <Link
               href="/about"
@@ -255,7 +255,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/services/aircon"
-              className="inline-block bg-orange-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-lg"
+              className="inline-block bg-yellow-500 text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-600 transition shadow-lg"
             >
               ✨ あなたに合った業者を探す
             </Link>
@@ -423,7 +423,7 @@ export default function Home() {
           </p>
           <Link
             href="/services/aircon"
-            className="inline-block bg-orange-500 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-orange-600 transition shadow-2xl"
+            className="inline-block bg-yellow-500 text-gray-900 px-12 py-5 rounded-full font-bold text-xl hover:bg-yellow-600 transition shadow-2xl"
           >
             ✨ 今すぐ業者を探す
           </Link>
