@@ -126,17 +126,17 @@ export default function Home() {
           
           {/* 統計数字 */}
           <div className="flex flex-wrap justify-center gap-4">
-            <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">3,000<span className="text-xl">件+</span></div>
-              <div className="text-white text-xs md:text-sm">掲載業者数</div>
+            <div className="bg-white/30 backdrop-blur-md rounded-lg px-6 py-4 border border-white/40">
+              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-1 drop-shadow-lg">3,000<span className="text-xl">件+</span></div>
+              <div className="text-white text-xs md:text-sm font-semibold">掲載業者数</div>
             </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">47<span className="text-xl">都道府県</span></div>
-              <div className="text-white text-xs md:text-sm">対応エリア</div>
+            <div className="bg-white/30 backdrop-blur-md rounded-lg px-6 py-4 border border-white/40">
+              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-1 drop-shadow-lg">47<span className="text-xl">都道府県</span></div>
+              <div className="text-white text-xs md:text-sm font-semibold">対応エリア</div>
             </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-4">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-1">98<span className="text-xl">%</span></div>
-              <div className="text-white text-xs md:text-sm">満足度</div>
+            <div className="bg-white/30 backdrop-blur-md rounded-lg px-6 py-4 border border-white/40">
+              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-1 drop-shadow-lg">98<span className="text-xl">%</span></div>
+              <div className="text-white text-xs md:text-sm font-semibold">満足度</div>
             </div>
           </div>
         </div>
