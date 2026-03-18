@@ -195,14 +195,7 @@ export default function OsakaArea() {
                           <li>• 洗面所: {company.washroom}</li>
                         </ul>
                       </div>
-                      <div>
-                        <h4 className="font-bold mb-2">特徴</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {company.features.map((feature, idx) => (
-                            <div key={idx} className="badge badge-primary">{feature}</div>
-                          ))}
-                        </div>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
   title: "横浜市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
@@ -96,7 +97,7 @@ export default function YokohamaArea() {
                       </div>
                       <div className="flex-1">
                         <h3 className="card-title text-2xl">{company.name}</h3>
-                        <p className="text-sm text-gray-600 mt-1">{company.recommend || "おすすめ"}</p>
+                        
                       </div>
                     </div>
                     <div className="divider"></div>
@@ -109,14 +110,7 @@ export default function YokohamaArea() {
                           <li>• トイレ: {company.toilet}</li>
                         </ul>
                       </div>
-                      <div>
-                        <h4 className="font-bold mb-2">特徴</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {(company.features || []).map((feature, idx) => (
-                            <div key={idx} className="badge badge-primary">{feature}</div>
-                          ))}
-                        </div>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
