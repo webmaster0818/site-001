@@ -143,6 +143,228 @@ export default function TokyosetagayaArea() {
         </div>
       </section>
 
+      {/* エリア特有のポイント */}
+      <section className="py-16 bg-base-100">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">世田谷区でハウスクリーニングを依頼する際のポイント</h2>
+            
+            <h3 className="text-2xl font-bold mb-4 mt-8">東京23区最大の人口・ファミリー世帯が多い</h3>
+            <p className="text-lg mb-4">
+              世田谷区は東京23区で最も人口が多く（約93万人）、ファミリー世帯が中心の住宅地が広がっています。
+              子育て世帯が多いため、清潔で快適な住環境を保つためのハウスクリーニング需要が高いエリアです。
+              浴室、キッチン、エアコンなど、家族が毎日使う場所の定期的な清掃が重要です。
+            </p>
+            
+            <h3 className="text-2xl font-bold mb-4 mt-8">高級住宅地と一般住宅地の混在</h3>
+            <p className="text-lg mb-4">
+              世田谷区には成城、等々力、田園調布などの高級住宅地から、三軒茶屋、下北沢、駒沢などの一般住宅地まで多様なエリアが存在します。
+              戸建て住宅も多く、庭や外構の清掃、大型エアコンの清掃など、戸建て特有のクリーニングニーズもあります。
+              一方、マンションも多く、高層階の窓清掃や共用部の清掃も需要が高い地域です。
+            </p>
+            
+            <h3 className="text-2xl font-bold mb-4 mt-8">東京都心に隣接し業者の選択肢が豊富</h3>
+            <p className="text-lg mb-4">
+              世田谷区は渋谷区、目黒区など都心に隣接しており、多くのハウスクリーニング業者が営業しています。
+              大手チェーンから地域密着型まで選択肢が豊富で、競争も激しいため価格も比較的良心的です。
+              複数社を比較することで、最適な業者を見つけやすい環境といえます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 賢く安く依頼するコツ */}
+      <section className="py-16 bg-base-200">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">賢く安く依頼するコツ</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title text-xl">💰 複数業者から見積もり</h3>
+                  <p>世田谷区は業者が非常に多いため、最低3社から見積もりを取ることをおすすめします。特に都心に近いエリアは業者数が豊富で比較しやすい環境です。</p>
+                </div>
+              </div>
+              
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title text-xl">📅 閑散期を狙う</h3>
+                  <p>1月、2月、6月などの閑散期は料金が安くなる傾向があります。繁忙期（3-4月、9-10月）を避けるだけで10-20%お得になることも。</p>
+                </div>
+              </div>
+              
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title text-xl">🎁 セット割引を活用</h3>
+                  <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。戸建ての場合は庭・外構も含めたセット依頼がお得です。</p>
+                </div>
+              </div>
+              
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title text-xl">⏰ 平日・午前中を選ぶ</h3>
+                  <p>土日や夜間は割増料金の業者が多いです。平日の午前中など、通常料金で対応してもらえる時間帯を選びましょう。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 業者の選び方 */}
+      <section className="py-16 bg-base-100">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">失敗しない業者の選び方</h2>
+            
+            <div className="space-y-6">
+              <div className="border-l-4 border-primary pl-6 py-4">
+                <h3 className="text-xl font-bold mb-2">✓ 料金が明確</h3>
+                <p className="text-lg">事前見積もりで追加料金の有無を確認。「追加料金なし」を明記している業者が安心です。</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6 py-4">
+                <h3 className="text-xl font-bold mb-2">✓ 実績と口コミ</h3>
+                <p className="text-lg">Googleレビューや口コミサイトで実際の利用者の声を確認。評価3.5以上が目安です。</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6 py-4">
+                <h3 className="text-xl font-bold mb-2">✓ 損害保険に加入</h3>
+                <p className="text-lg">万が一の破損・傷に備えて、損害保険加入業者を選びましょう。大手は必ず加入しています。</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6 py-4">
+                <h3 className="text-xl font-bold mb-2">✓ スタッフの研修体制</h3>
+                <p className="text-lg">研修制度がしっかりした業者は技術力が高く、仕上がりに差が出ます。研修期間50日以上が一つの基準です。</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6 py-4">
+                <h3 className="text-xl font-bold mb-2">✓ 戸建て・マンション両方の経験</h3>
+                <p className="text-lg">世田谷区は戸建てとマンションが混在しているため、両方の清掃経験が豊富な業者を選びましょう。戸建ての庭・外構、マンションの高層階など、それぞれに適した対応ができる業者が安心です。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-base-200">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">よくある質問</h2>
+            
+            <div className="space-y-4">
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 世田谷区でハウスクリーニングの料金相場はいくらですか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">エアコンクリーニングは8,000円〜15,000円、浴室クリーニングは12,000円〜20,000円、キッチンクリーニングは10,000円〜18,000円が相場です。世田谷区は業者が多く競争が激しいため、東京23区の中でも比較的良心的な価格帯です。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 戸建てとマンションで料金に差はありますか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">基本的なクリーニング料金（エアコン、浴室、キッチンなど）はほぼ同じです。ただし、戸建ての場合は庭・外構、2階以上の窓清掃などで追加料金が発生する場合があります。マンションの高層階（10階以上）では窓清掃に追加料金がかかることもあります。見積もり時に確認しましょう。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 成城・等々力など高級住宅地でも同じ料金ですか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">基本料金は世田谷区内でほぼ統一されています。ただし、高級住宅地の大型戸建てや特殊な設備（輸入エアコン、大理石床など）がある場合は、別途料金がかかることがあります。見積もり時に設備の詳細を伝えることをおすすめします。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 作業時間はどれくらいかかりますか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">エアコン1台で1.5〜2時間、浴室で2〜3時間、キッチンで2.5〜3.5時間が目安です。汚れの程度により前後します。戸建ての場合、複数台のエアコンや広いキッチンなど、全体で半日〜1日かかることもあります。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 即日対応は可能ですか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">世田谷区は業者数が非常に多いため、即日対応可能な業者も多数あります。ただし、繁忙期（3-4月、9-10月）は予約が取りづらいため、1週間前の予約がおすすめです。特に週末は予約が集中するため、平日の方が予約しやすい傾向があります。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 立ち会いは必要ですか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">作業開始時と終了時の立ち会いが基本です。作業中は外出可能な業者もありますが、貴重品の管理などのため在宅が推奨されます。特に戸建ての場合、防犯面から在宅をおすすめします。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. どれくらいの頻度で依頼すべきですか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">エアコンは年1回（使用前の5-6月）、浴室・キッチンは半年〜1年に1回が目安です。ファミリー世帯が多い世田谷区では、子供がいる家庭は浴室・キッチンの頻度を上げる（年2回）ことで、より清潔な環境を保てます。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* まとめ */}
+      <section className="py-16 bg-base-100">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">まとめ：世田谷区で最適なハウスクリーニング業者を見つけよう</h2>
+            
+            <p className="text-lg mb-6">
+              世田谷区は東京23区最大の人口を誇り、ファミリー世帯が中心の住宅地です。
+              本記事で紹介した<strong>おそうじ革命、おそうじ本舗、カジタク、ベアーズ</strong>は、いずれも世田谷区全域で実績豊富な信頼できる業者です。
+            </p>
+            
+            <div className="bg-primary/10 border-l-4 border-primary p-6 mb-6">
+              <h3 className="text-xl font-bold mb-3">業者選びのポイント まとめ</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>複数業者から見積もりを取る（3社以上）</li>
+                <li>口コミ・実績を確認する</li>
+                <li>料金体系が明確か確認する</li>
+                <li>損害保険加入を確認する</li>
+                <li>閑散期（1-2月、6月）を狙う</li>
+                <li>戸建て・マンション両方の経験がある業者を選ぶ</li>
+              </ul>
+            </div>
+            
+            <p className="text-lg mb-6">
+              世田谷区は成城や等々力などの高級住宅地から、三軒茶屋や下北沢などの一般住宅地まで多様なエリアがあります。
+              戸建ての場合は庭・外構の清掃、マンションの場合は高層階の窓清掃など、住宅タイプに応じた対応ができる業者を選びましょう。
+              業者の選択肢が豊富なため、しっかり比較して最適な業者を見つけることができます。
+            </p>
+            
+            <p className="text-lg font-bold">
+              まずは気になる業者3社に見積もり依頼をして、料金とサービス内容を比較することから始めてみてください。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* 近隣エリア */}
       <section className="py-16">
         <div className="container mx-auto px-4">
