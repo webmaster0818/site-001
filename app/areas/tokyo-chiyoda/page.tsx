@@ -13,13 +13,115 @@ export default function TokyoChiyodaArea() {
     "from-green-500 to-green-600",
     "from-purple-500 to-purple-600",
     "from-orange-500 to-orange-600",
+    "from-cyan-500 to-cyan-600",
+    "from-pink-500 to-pink-600",
+    "from-indigo-500 to-indigo-600",
+    "from-red-500 to-red-600",
+    "from-yellow-500 to-yellow-600",
+    "from-teal-500 to-teal-600",
   ];
 
   const companies = [
-    { name: "おそうじ革命", kitchen: "17,930円〜", bathroom: "17,930円〜", toilet: "8,250円〜" },
-    { name: "おそうじ本舗", kitchen: "19,800円〜", bathroom: "19,800円〜", toilet: "9,900円〜" },
-    { name: "カジタク", kitchen: "19,580円〜", bathroom: "19,580円〜", toilet: "19,580円" },
-    { name: "ベアーズ", kitchen: "18,920円〜", bathroom: "19,910円〜", toilet: "10,340円〜" },
+    { 
+      name: "おそうじ革命", 
+      kitchen: "17,930円〜", 
+      bathroom: "17,930円〜", 
+      toilet: "8,250円〜",
+      description: "技術力と価格のバランスが良く、約420店舗を全国展開。50日間の研修を受けたスタッフが対応。",
+      hours: "9:00-20:00（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇クリーニング",
+      website: "https://www.osoujikakumei.jp/"
+    },
+    { 
+      name: "おそうじ本舗", 
+      kitchen: "19,800円〜", 
+      bathroom: "19,800円〜", 
+      toilet: "9,900円〜",
+      description: "全国47都道府県に店舗展開する最大手。早朝・夜間対応も可能で予約が取りやすい。",
+      hours: "8:00-21:00（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、洗濯機、外壁クリーニング",
+      website: "https://www.osoujihonpo.com/"
+    },
+    { 
+      name: "カジタク", 
+      kitchen: "19,580円〜", 
+      bathroom: "19,580円〜", 
+      toilet: "19,580円",
+      description: "イオングループ運営で安心。仕上がり満足度97%を誇る高品質サービス。",
+      hours: "10:00-19:00（年末年始除く）",
+      services: "エアコン、浴室、キッチン、換気扇、窓・サッシクリーニング",
+      website: "https://www.kajitaku.com/"
+    },
+    { 
+      name: "ベアーズ", 
+      kitchen: "18,920円〜", 
+      bathroom: "19,910円〜", 
+      toilet: "10,340円〜",
+      description: "家事代行大手による質の高いサービス。スタッフ教育に力を入れ、丁寧な作業が特徴。",
+      hours: "9:00-20:00（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
+      website: "https://www.happy-bears.com/"
+    },
+    { 
+      name: "ダスキン", 
+      kitchen: "18,700円〜", 
+      bathroom: "19,800円〜", 
+      toilet: "9,460円〜",
+      description: "清掃業界の老舗大手。47都道府県に拠点があり、専門資器材と洗剤で徹底清掃。",
+      hours: "9:00-18:00（店舗により異なる）",
+      services: "エアコン、浴室、キッチン、トイレ、レンジフード、フロアクリーニング",
+      website: "https://www.duskin.jp/servicemaster/"
+    },
+    { 
+      name: "東京ガスのハウスクリーニング", 
+      kitchen: "20,900円〜", 
+      bathroom: "19,800円〜", 
+      toilet: "11,000円〜",
+      description: "大手ガス会社による安心サービス。独自の清掃技術をマスターしたスタッフが対応。",
+      hours: "8:30-17:00（平日・土日祝）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
+      website: "https://kaji.tokyo-gas.co.jp/"
+    },
+    { 
+      name: "サニクリーン", 
+      kitchen: "17,600円〜", 
+      bathroom: "18,700円〜", 
+      toilet: "8,800円〜",
+      description: "全国対応の大手清掃会社。無料見積もりサービスで事前に汚れ状況を確認。",
+      hours: "9:00-18:00（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
+      website: "https://www.sanikleen.co.jp/housecleaning/"
+    },
+    { 
+      name: "おそうじマスター", 
+      kitchen: "16,500円〜", 
+      bathroom: "17,600円〜", 
+      toilet: "7,700円〜",
+      description: "全国1000以上の拠点で24時間対応。近くのスタッフがすぐに正確な見積もりを提示。",
+      hours: "24時間対応（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
+      website: "https://osoji-master.info/"
+    },
+    { 
+      name: "アズマのホームクリーニング", 
+      kitchen: "18,150円〜", 
+      bathroom: "18,700円〜", 
+      toilet: "9,350円〜",
+      description: "創業130年の老舗。年間実績20,000件、独自の研修制度で業界水準を超えるサービス。",
+      hours: "9:00-18:00（年末年始除く）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
+      website: "https://www.azuma-cleaning.com/"
+    },
+    { 
+      name: "くらしのセゾン", 
+      kitchen: "19,250円〜", 
+      bathroom: "20,350円〜", 
+      toilet: "10,450円〜",
+      description: "クレディセゾングループ。セゾン/UCカード会員は全メニュー5%OFF、永久不滅ポイント利用可能。",
+      hours: "10:00-18:00（年末年始除く）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
+      website: "https://www.kurashi-saison.co.jp/cleaning/"
+    },
   ];
 
   const areas = ['丸の内', '大手町', '秋葉原', '神田', '永田町', '霞が関'];
@@ -40,6 +142,7 @@ export default function TokyoChiyodaArea() {
           <div className="prose max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-4">千代田区でハウスクリーニングを依頼するなら？</h2>
             <p className="text-lg">千代田区は東京23区の中心部に位置し、皇居、大手町、丸の内、秋葉原などビジネス街と高級住宅地が混在するエリアです。昼間人口と夜間人口の差が大きく、都心の利便性と高品質な生活環境が魅力です。</p>
+            <p className="text-lg mt-4">本記事では、千代田区全域対応の<strong>おすすめハウスクリーニング業者10社</strong>を徹底比較。料金、サービス内容、営業時間などの詳細情報を掲載しています。</p>
           </div>
         </div>
       </section>
@@ -60,8 +163,8 @@ export default function TokyoChiyodaArea() {
               </thead>
               <tbody>
                 {companies.map((company, index) => {
-                  const Icon = companyIcons[index];
-                  const gradient = companyColors[index];
+                  const Icon = companyIcons[index % companyIcons.length];
+                  const gradient = companyColors[index % companyColors.length];
                   return (
                     <tr key={company.name} className="hover">
                       <td>
@@ -88,10 +191,10 @@ export default function TokyoChiyodaArea() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">各業者の詳細</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 gap-8 max-w-6xl mx-auto">
             {companies.map((company, index) => {
-              const Icon = companyIcons[index];
-              const gradient = companyColors[index];
+              const Icon = companyIcons[index % companyIcons.length];
+              const gradient = companyColors[index % companyColors.length];
               return (
                 <div key={company.name} className="card bg-base-100 shadow-xl">
                   <div className="card-body">
@@ -99,12 +202,33 @@ export default function TokyoChiyodaArea() {
                       <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center`}>
                         <Icon className="w-8 h-8 text-white" />
                       </div>
-                      <h3 className="card-title text-2xl">{company.name}</h3>
+                      <div>
+                        <h3 className="card-title text-2xl">{company.name}</h3>
+                        <a href={company.website} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                          公式サイト →
+                        </a>
+                      </div>
                     </div>
-                    <div className="space-y-2">
-                      <p><strong>キッチン:</strong> {company.kitchen}</p>
-                      <p><strong>浴室:</strong> {company.bathroom}</p>
-                      <p><strong>トイレ:</strong> {company.toilet}</p>
+                    
+                    <p className="text-base mb-4 text-gray-700">{company.description}</p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <h4 className="font-bold mb-2">料金目安</h4>
+                        <div className="space-y-1 text-sm">
+                          <p><span className="text-gray-600">キッチン:</span> {company.kitchen}</p>
+                          <p><span className="text-gray-600">浴室:</span> {company.bathroom}</p>
+                          <p><span className="text-gray-600">トイレ:</span> {company.toilet}</p>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-bold mb-2">営業情報</h4>
+                        <div className="space-y-1 text-sm">
+                          <p><span className="text-gray-600">営業時間:</span> {company.hours}</p>
+                          <p className="text-xs text-gray-600 mt-2">{company.services}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
