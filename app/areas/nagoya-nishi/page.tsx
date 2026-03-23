@@ -1,0 +1,409 @@
+import Link from "next/link";
+import { Sparkles, Award, Shield, Zap } from "lucide-react";
+
+export const metadata = {
+  title: "名古屋市西区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+  description: "名古屋市西区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+};
+
+export default function NagoyaNishiArea() {
+  const companyIcons = [Sparkles, Award, Shield, Zap];
+  const companyColors = [
+    "from-blue-500 to-blue-600",
+    "from-green-500 to-green-600",
+    "from-purple-500 to-purple-600",
+    "from-orange-500 to-orange-600",
+  ];
+
+  const companies = [
+    { name: "おそうじ革命", kitchen: "17,930円〜", bathroom: "17,930円〜", toilet: "8,250円〜" },
+    { name: "おそうじ本舗", kitchen: "19,800円〜", bathroom: "19,800円〜", toilet: "9,900円〜" },
+    { name: "カジタク", kitchen: "19,580円〜", bathroom: "19,580円〜", toilet: "19,580円" },
+    { name: "ベアーズ", kitchen: "18,920円〜", bathroom: "19,910円〜", toilet: "10,340円〜" },
+  ];
+
+  const areas = ['浄心', '浅間町', '庄内通', '庄内緑地公園', '上小田井', '栄生'];
+
+  return (
+    <div className="min-h-screen bg-base-100">
+      {/* ヒーローセクション */}
+      <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold mb-4">名古屋市西区のハウスクリーニング業者比較</h1>
+          <p className="text-xl">西区全域対応！信頼できる業者をご紹介</p>
+        </div>
+      </section>
+
+      {/* 導入文 */}
+      <section className="py-12 bg-base-100">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4">名古屋市西区でハウスクリーニングを依頼するなら？</h2>
+            <p className="text-lg">西区は名古屋市の西部に位置し、商業地と住宅地が混在するエリアです。庄内川沿いの自然環境も特徴です。</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 業者比較テーブル */}
+      <section className="py-16 bg-base-200">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">おすすめ業者比較</h2>
+          <div className="overflow-x-auto">
+            <table className="table table-zebra w-full max-w-6xl mx-auto bg-white">
+              <thead>
+                <tr>
+                  <th className="text-lg">業者名</th>
+                  <th className="text-lg">キッチン</th>
+                  <th className="text-lg">浴室</th>
+                  <th className="text-lg">トイレ</th>
+                </tr>
+              </thead>
+              <tbody>
+                {companies.map((company, index) => {
+                  const Icon = companyIcons[index];
+                  const gradient = companyColors[index];
+                  return (
+                    <tr key={company.name} className="hover">
+                      <td>
+                        <div className="flex items-center gap-3">
+                          <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center`}>
+                            <Icon className="w-6 h-6 text-white" />
+                          </div>
+                          <span className="font-bold text-lg">{company.name}</span>
+                        </div>
+                      </td>
+                      <td className="text-lg">{company.kitchen}</td>
+                      <td className="text-lg">{company.bathroom}</td>
+                      <td className="text-lg">{company.toilet}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* 各業者詳細 */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">各業者の詳細</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {companies.map((company, index) => {
+              const Icon = companyIcons[index];
+              const gradient = companyColors[index];
+              return (
+                <div key={company.name} className="card bg-base-100 shadow-xl">
+                  <div className="card-body">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center`}>
+                        <Icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="card-title text-2xl">{company.name}</h3>
+                    </div>
+                    <div className="space-y-2">
+                      <p><strong>キッチン:</strong> {company.kitchen}</p>
+                      <p><strong>浴室:</strong> {company.bathroom}</p>
+                      <p><strong>トイレ:</strong> {company.toilet}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* エリア特有のポイント */}
+      <section className="py-16 bg-base-100">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">西区でハウスクリーニングを依頼する際のポイント</h2>
+            
+            <h3 className="text-2xl font-bold mb-4 mt-8">名古屋駅西側、商業地と住宅地が混在、多様な物件タイプへの対応が必要</h3>
+            <p className="text-lg mb-4">
+              西区は名古屋市の西部に位置し、名古屋駅西側の商業地と住宅地が混在するエリアです。
+              栄生、浄心など名古屋駅に近い商業地がある一方、庄内通、上小田井など住宅地も広がっています。
+              商業地では店舗やオフィスの清掃、住宅地では一般家庭の清掃と、清掃ニーズが多様です。
+              また、マンションや戸建てなど、物件タイプも多様です。
+              業者選びでは、商業地と住宅地両方での清掃経験が豊富で、多様な物件タイプに対応できる業者を選ぶことが重要です。
+            </p>
+            
+            <h3 className="text-2xl font-bold mb-4 mt-8">庄内川沿いエリア、河川による湿気・カビ対策が重要</h3>
+            <p className="text-lg mb-4">
+              西区は庄内川が流れており、河川沿いのエリアは湿気が多い環境です。
+              庄内川は名古屋市北部を流れる一級河川で、西区の北側を東西に横断しています。
+              河川沿いは湿度が高く、特に梅雨時や夏季は湿気がこもりやすくなります。
+              湿気が多いと、浴室、キッチン、押入れ、窓周辺などでカビが発生しやすくなります。
+              定期的な浴室クリーニング（年1回）とエアコンクリーニング（年1回）、換気扇クリーニング（年1回）で、カビ・湿気対策ができます。
+              業者選びでは、河川沿いエリアでの清掃経験が豊富で、カビ・湿気対策の知識がある業者を選ぶことが重要です。
+            </p>
+            
+            <h3 className="text-2xl font-bold mb-4 mt-8">地下鉄鶴舞線など交通良好、業者の選択肢が豊富</h3>
+            <p className="text-lg mb-4">
+              西区は地下鉄鶴舞線などが通っており、交通の便が良好です。
+              浄心駅、浅間町駅、庄内通駅、庄内緑地公園駅、上小田井駅、栄生駅など複数の駅があり、名古屋市内外からアクセスしやすいエリアです。
+              多くのハウスクリーニング業者が営業しており、大手チェーンから地域密着型まで選択肢が豊富です。
+              即日対応可能な業者も多数あり、複数社を比較することで、最適な業者を見つけやすい環境といえます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 賢く安く依頼するコツ */}
+      <section className="py-16 bg-base-200">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">賢く安く依頼するコツ</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title text-xl">💰 複数業者から見積もり</h3>
+                  <p>西区は業者が多いため、最低3社から見積もりを取ることをおすすめします。商業地と住宅地での料金も比較しましょう。</p>
+                </div>
+              </div>
+              
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title text-xl">📅 閑散期を狙う</h3>
+                  <p>1月、2月、6月などの閑散期は料金が安くなる傾向があります。繁忙期（3-4月、9-10月）を避けるだけで10-20%お得になることも。</p>
+                </div>
+              </div>
+              
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title text-xl">🎁 セット割引を活用</h3>
+                  <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。河川沿いでは浴室+換気扇のセット依頼がお得です。</p>
+                </div>
+              </div>
+              
+              <div className="card bg-base-100 shadow-lg">
+                <div className="card-body">
+                  <h3 className="card-title text-xl">⏰ 平日・午前中を選ぶ</h3>
+                  <p>土日や夜間は割増料金の業者が多いです。平日の午前中など、通常料金で対応してもらえる時間帯を選びましょう。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 業者の選び方 */}
+      <section className="py-16 bg-base-100">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">失敗しない業者の選び方</h2>
+            
+            <div className="space-y-6">
+              <div className="border-l-4 border-primary pl-6 py-4">
+                <h3 className="text-xl font-bold mb-2">✓ 料金が明確</h3>
+                <p className="text-lg">事前見積もりで追加料金の有無を確認。「追加料金なし」を明記している業者が安心です。</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6 py-4">
+                <h3 className="text-xl font-bold mb-2">✓ 実績と口コミ</h3>
+                <p className="text-lg">Googleレビューや口コミサイトで実際の利用者の声を確認。評価3.5以上が目安です。</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6 py-4">
+                <h3 className="text-xl font-bold mb-2">✓ 損害保険に加入</h3>
+                <p className="text-lg">万が一の破損・傷に備えて、損害保険加入業者を選びましょう。大手は必ず加入しています。</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6 py-4">
+                <h3 className="text-xl font-bold mb-2">✓ スタッフの研修体制</h3>
+                <p className="text-lg">研修制度がしっかりした業者は技術力が高く、仕上がりに差が出ます。研修期間50日以上が一つの基準です。</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6 py-4">
+                <h3 className="text-xl font-bold mb-2">✓ 商業地・住宅地での清掃経験、河川沿いエリアでのカビ・湿気対策の知識</h3>
+                <p className="text-lg">西区は商業地と住宅地が混在し、多様な物件タイプへの対応が必要です。また、庄内川沿いエリアは湿気が多く、カビ対策が重要です。商業地・住宅地での清掃経験が豊富で、河川沿いエリアでのカビ・湿気対策の知識がある業者を選びましょう。見積もり時に物件タイプと立地を伝えると、適切な提案がもらえます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-base-200">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">よくある質問</h2>
+            
+            <div className="space-y-4">
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 名古屋市西区でハウスクリーニングの料金相場はいくらですか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">エアコンクリーニングは8,000円〜15,000円、浴室クリーニングは12,000円〜20,000円、キッチンクリーニングは10,000円〜18,000円が相場です。西区は業者が多く競争が激しいため、名古屋市内でも比較的リーズナブルな価格帯です。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 商業地と住宅地で料金は違いますか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">西区は商業地と住宅地が混在するエリアです。商業地では店舗やオフィスの清掃が多く、面積が広い場合や業務用機器の清掃が必要な場合もあるため、住宅より料金が高くなる傾向があります。見積もり時に物件タイプを伝えると、適切な料金を提示してもらえます。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 河川沿いエリアでの湿気対策はどうすればいいですか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">西区は庄内川が流れており、河川沿いのエリアは湿気が多い環境です。湿度が高いと、浴室、キッチン、押入れ、窓周辺などでカビが発生しやすくなります。プロによる年1回の浴室クリーニング、エアコンクリーニング、換気扇クリーニングで、カビ・湿気対策ができます。河川沿いエリアでの清掃経験が豊富な業者を選ぶことをおすすめします。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 作業時間はどれくらいかかりますか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">エアコン1台で1.5〜2時間、浴室で2〜3時間、キッチンで2.5〜3.5時間が目安です。汚れの程度により前後します。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 即日対応は可能ですか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">西区は業者数が多く、交通の便も良好なため、即日対応可能な業者も多数あります。ただし、繁忙期（3-4月、9-10月）は予約が取りづらいため、1週間前の予約がおすすめです。特に週末は予約が集中するため、平日の方が予約しやすい傾向があります。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. 立ち会いは必要ですか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">作業開始時と終了時の立ち会いが基本です。作業中は外出可能な業者もありますが、貴重品の管理などのため在宅が推奨されます。</p>
+                </div>
+              </div>
+
+              <div className="collapse collapse-arrow bg-base-100">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-bold">
+                  Q. どれくらいの頻度で依頼すべきですか？
+                </div>
+                <div className="collapse-content">
+                  <p className="text-lg">エアコンは年1回（使用前の5-6月）、浴室・キッチンは半年〜1年に1回が目安です。西区は庄内川沿いエリアで湿気が多いため、浴室・換気扇は年1回の清掃をおすすめします。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* まとめ */}
+      <section className="py-16 bg-base-100">
+        <div className="container mx-auto px-4">
+          <div className="prose max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">まとめ：西区で最適なハウスクリーニング業者を見つけよう</h2>
+            
+            <p className="text-lg mb-6">
+              西区は名古屋市の西部に位置し、商業地と住宅地が混在するエリアです。
+              本記事で紹介した<strong>おそうじ革命、おそうじ本舗、カジタク、ベアーズ</strong>は、いずれも西区全域で実績豊富な信頼できる業者です。
+            </p>
+            
+            <div className="bg-primary/10 border-l-4 border-primary p-6 mb-6">
+              <h3 className="text-xl font-bold mb-3">業者選びのポイント まとめ</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>複数業者から見積もりを取る（商業地と住宅地での料金も比較）</li>
+                <li>口コミ・実績を確認する</li>
+                <li>料金体系が明確か確認する</li>
+                <li>損害保険加入を確認する</li>
+                <li>閑散期（1-2月、6月）を狙う</li>
+                <li>商業地・住宅地での清掃経験、河川沿いエリアでのカビ・湿気対策の知識を確認する</li>
+              </ul>
+            </div>
+            
+            <p className="text-lg mb-6">
+              西区は商業地と住宅地が混在し、多様な物件タイプへの対応が必要です。
+              庄内川沿いエリアは湿気が多く、カビ対策が重要です。
+              浴室・換気扇は年1回の清掃で、快適な室内環境を保てます。
+              地下鉄鶴舞線など交通の便が良好で、業者の選択肢が豊富です。
+            </p>
+            
+            <p className="text-lg font-bold">
+              まずは気になる業者3社に見積もり依頼をして、料金とサービス内容を比較することから始めてみてください。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 料金相場 */}
+      <section className="py-16 bg-base-200">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">西区の料金相場</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="card bg-base-100 shadow-lg">
+              <div className="card-body text-center">
+                <h3 className="text-xl font-bold mb-2">エアコン</h3>
+                <p className="text-3xl font-bold text-primary">8,000円〜</p>
+                <p className="text-sm text-gray-600">1台あたり</p>
+              </div>
+            </div>
+            <div className="card bg-base-100 shadow-lg">
+              <div className="card-body text-center">
+                <h3 className="text-xl font-bold mb-2">浴室</h3>
+                <p className="text-3xl font-bold text-primary">12,000円〜</p>
+                <p className="text-sm text-gray-600">一式</p>
+              </div>
+            </div>
+            <div className="card bg-base-100 shadow-lg">
+              <div className="card-body text-center">
+                <h3 className="text-xl font-bold mb-2">キッチン</h3>
+                <p className="text-3xl font-bold text-primary">10,000円〜</p>
+                <p className="text-sm text-gray-600">一式</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 対応エリア */}
+      <section className="py-16 bg-base-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">西区内の対応エリア</h2>
+          <div className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
+            {areas.map((area) => (
+              <div key={area} className="badge badge-lg badge-outline">{area}</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 近隣エリア */}
+      <section className="py-16 bg-base-200">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <Link href="/areas/aichi" className="btn btn-outline">愛知県</Link>
+            <Link href="/areas/nagoya-nakamura" className="btn btn-outline">名古屋市中村区</Link>
+            <Link href="/areas/nagoya-kita" className="btn btn-outline">名古屋市北区</Link>
+            <Link href="/areas/nagoya-nakagawa" className="btn btn-outline">名古屋市中川区</Link>
+          </div>
+        </div>
+      </section>
+
+      <footer className="footer footer-center p-10 bg-base-200">
+        <div>
+          <p className="font-bold text-lg">クリーンナビ</p>
+          <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
