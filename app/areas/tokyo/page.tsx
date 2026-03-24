@@ -115,7 +115,7 @@ export default function TokyoArea() {
                   <th>キッチン</th>
                   <th>浴室</th>
                   <th>トイレ</th>
-                  <th>おすすめの人</th>
+                  
                 </tr>
               </thead>
               <tbody>
@@ -125,7 +125,7 @@ export default function TokyoArea() {
                     <td>{company.kitchen}</td>
                     <td>{company.bathroom}</td>
                     <td>{company.toilet}</td>
-                    <td>{company.recommend}</td>
+                    
                   </tr>
                 ))}
               </tbody>

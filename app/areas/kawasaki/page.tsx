@@ -53,7 +53,7 @@ export default function KawasakiArea() {
                   <th>キッチン</th>
                   <th>浴室</th>
                   <th>トイレ</th>
-                  <th>おすすめの人</th>
+                  
                 </tr>
               </thead>
               <tbody>
@@ -63,7 +63,7 @@ export default function KawasakiArea() {
                     <td>{c.kitchen}</td>
                     <td>{c.bathroom}</td>
                     <td>{c.toilet}</td>
-                    <td>{c.recommend}</td>
+                    
                   </tr>
                 ))}
               </tbody>

@@ -144,7 +144,7 @@ export default function OsakaArea() {
                   <th>浴室</th>
                   <th>トイレ</th>
                   <th>洗面所</th>
-                  <th>おすすめの人</th>
+                  
                 </tr>
               </thead>
               <tbody>
@@ -155,7 +155,7 @@ export default function OsakaArea() {
                     <td>{company.bathroom}</td>
                     <td>{company.toilet}</td>
                     <td>{company.washroom}</td>
-                    <td>{company.recommend}</td>
+                    
                   </tr>
                 ))}
               </tbody>

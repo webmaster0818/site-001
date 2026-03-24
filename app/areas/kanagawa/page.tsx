@@ -52,7 +52,7 @@ export default function KanagawaArea() {
             <thead><tr><th>業者名</th><th>キッチン</th><th>浴室</th><th>トイレ</th><th>おすすめ</th></tr></thead>
             <tbody>
               {companies.map((c, i) => (
-                <tr key={i}><td className="font-bold">{c.name}</td><td>{c.kitchen}</td><td>{c.bathroom}</td><td>{c.toilet}</td><td>{c.recommend}</td></tr>
+                <tr key={i}><td className="font-bold">{c.name}</td><td>{c.kitchen}</td><td>{c.bathroom}</td><td>{c.toilet}</td></tr>
               ))}
             </tbody>
           </table>
