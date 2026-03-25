@@ -17,51 +17,156 @@ export default function OsakaArea() {
     "from-red-500 to-red-600",
   ];
 
-  const companies = [
-    {
-      name: "おそうじ革命",
-      kitchen: "17,930円〜",
-      bathroom: "17,930円〜",
+    const companies = [
+    { 
+      name: "おそうじ革命", 
+      kitchen: "17,930円〜", 
+      bathroom: "17,930円〜", 
       toilet: "8,250円〜",
-      washroom: "8,250円〜",
-      recommend: "コスパ重視の人",
-      features: ["50日間研修", "全国展開", "低価格"],
+      description: "技術力と価格のバランスが良く、約420店舗を全国展開。50日間の研修を受けたスタッフが対応。",
+      hours: "9:00-20:00（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇クリーニング",
+      website: "https://www.osoujikakumei.jp/"
     },
-    {
-      name: "おそうじ本舗",
-      kitchen: "19,800円〜",
-      bathroom: "19,800円〜",
+    { 
+      name: "おそうじ本舗", 
+      kitchen: "19,800円〜", 
+      bathroom: "19,800円〜", 
       toilet: "9,900円〜",
-      washroom: "9,350円〜",
-      recommend: "エアコン・浴室重視の人",
-      features: ["300以上の独自技術", "オプション豊富", "3日以内対応"],
+      description: "全国47都道府県に店舗展開する最大手。早朝・夜間対応も可能で予約が取りやすい。",
+      hours: "8:00-21:00（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、洗濯機、外壁クリーニング",
+      website: "https://www.osoujihonpo.com/"
     },
-    {
-      name: "カジタク",
-      kitchen: "19,580円〜",
-      bathroom: "19,580円〜",
-      toilet: "19,580円（トイレ＆洗面所）",
-      washroom: "—",
-      recommend: "イオングループの安心感を求める人",
-      features: ["イオングループ", "一律料金", "品質保証"],
+    { 
+      name: "カジタク", 
+      kitchen: "19,580円〜", 
+      bathroom: "19,580円〜", 
+      toilet: "19,580円",
+      description: "イオングループ運営で安心。仕上がり満足度97%を誇る高品質サービス。",
+      hours: "10:00-19:00（年末年始除く）",
+      services: "エアコン、浴室、キッチン、換気扇、窓・サッシクリーニング",
+      website: "https://www.kajitaku.com/"
     },
-    {
-      name: "ベアーズ",
-      kitchen: "18,920円〜",
-      bathroom: "19,910円〜",
+    { 
+      name: "ベアーズ", 
+      kitchen: "18,920円〜", 
+      bathroom: "19,910円〜", 
       toilet: "10,340円〜",
-      washroom: "10,340円〜",
-      recommend: "家事代行も依頼したい人",
-      features: ["25年以上の実績", "女性スタッフ指名可", "前日17時までキャンセル無料"],
+      description: "家事代行大手による質の高いサービス。スタッフ教育に力を入れ、丁寧な作業が特徴。",
+      hours: "9:00-20:00（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
+      website: "https://www.happy-bears.com/"
     },
-    {
-      name: "ダスキン",
-      kitchen: "20,680円〜",
-      bathroom: "22,000円〜",
-      toilet: "10,340円〜",
-      washroom: "10,340円〜",
-      recommend: "高品質な仕上がりを求める人",
-      features: ["プロ向け洗浄剤", "オゾン除菌", "高品質"],
+    { 
+      name: "ダスキン", 
+      kitchen: "18,700円〜", 
+      bathroom: "19,800円〜", 
+      toilet: "9,460円〜",
+      description: "清掃業界の老舗大手。47都道府県に拠点があり、専門資器材と洗剤で徹底清掃。",
+      hours: "9:00-18:00（店舗により異なる）",
+      services: "エアコン、浴室、キッチン、トイレ、レンジフード、フロアクリーニング",
+      website: "https://www.duskin.jp/servicemaster/"
+    },
+    { 
+      name: "東京ガスのハウスクリーニング", 
+      kitchen: "20,900円〜", 
+      bathroom: "19,800円〜", 
+      toilet: "11,000円〜",
+      description: "大手ガス会社による安心サービス。独自の清掃技術をマスターしたスタッフが対応。",
+      hours: "8:30-17:00（平日・土日祝）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
+      website: "https://kaji.tokyo-gas.co.jp/"
+    },
+    { 
+      name: "サニクリーン", 
+      kitchen: "17,600円〜", 
+      bathroom: "18,700円〜", 
+      toilet: "8,800円〜",
+      description: "全国対応の大手清掃会社。無料見積もりサービスで事前に汚れ状況を確認。",
+      hours: "9:00-18:00（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
+      website: "https://www.sanikleen.co.jp/housecleaning/"
+    },
+    { 
+      name: "おそうじマスター", 
+      kitchen: "16,500円〜", 
+      bathroom: "17,600円〜", 
+      toilet: "7,700円〜",
+      description: "全国1000以上の拠点で24時間対応。近くのスタッフがすぐに正確な見積もりを提示。",
+      hours: "24時間対応（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
+      website: "https://osoji-master.info/"
+    },
+    { 
+      name: "アズマのホームクリーニング", 
+      kitchen: "18,150円〜", 
+      bathroom: "18,700円〜", 
+      toilet: "9,350円〜",
+      description: "創業130年の老舗。年間実績20,000件、独自の研修制度で業界水準を超えるサービス。",
+      hours: "9:00-18:00（年末年始除く）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
+      website: "https://www.azuma-cleaning.com/"
+    },
+    { 
+      name: "くらしのセゾン", 
+      kitchen: "19,250円〜", 
+      bathroom: "20,350円〜", 
+      toilet: "10,450円〜",
+      description: "クレディセゾングループ。セゾン/UCカード会員は全メニュー5%OFF、永久不滅ポイント利用可能。",
+      hours: "10:00-18:00（年末年始除く）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
+      website: "https://www.kurashi-saison.co.jp/cleaning/"
+    },
+    { 
+      name: "エディオンハウスクリーン", 
+      kitchen: "18,500円〜", 
+      bathroom: "19,250円〜", 
+      toilet: "9,900円〜",
+      description: "家電量販店エディオンが提供する安心のハウスクリーニング。家電に詳しいスタッフが対応。",
+      hours: "10:00-19:00（年末年始除く）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、家電周辺クリーニング",
+      website: "https://www.edion.co.jp/"
+    },
+    { 
+      name: "クリーンプロフェッショナルズ", 
+      kitchen: "17,050円〜", 
+      bathroom: "18,150円〜", 
+      toilet: "8,250円〜",
+      description: "プロの技術力と低価格を両立。全国対応で地域密着型のサービスを展開。",
+      hours: "8:00-20:00（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
+      website: "https://cleanpro.co.jp/"
+    },
+    { 
+      name: "おそうじ大使", 
+      kitchen: "16,800円〜", 
+      bathroom: "17,930円〜", 
+      toilet: "7,920円〜",
+      description: "低価格が魅力の全国チェーン。即日対応可能で急ぎの依頼にも柔軟に対応。",
+      hours: "9:00-19:00（年中無休）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
+      website: "https://osoujitaishi.com/"
+    },
+    { 
+      name: "ハウスクリーニングのミライ", 
+      kitchen: "18,370円〜", 
+      bathroom: "19,030円〜", 
+      toilet: "9,130円〜",
+      description: "最新の清掃技術と環境に優しい洗剤を使用。若手スタッフの丁寧な対応が評判。",
+      hours: "9:30-18:30（年末年始除く）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、床クリーニング",
+      website: "https://mirai-clean.jp/"
+    },
+    { 
+      name: "ホームクリーンサービス", 
+      kitchen: "17,380円〜", 
+      bathroom: "18,480円〜", 
+      toilet: "8,580円〜",
+      description: "創業25年の実績。地域密着型で細かい要望にも柔軟に対応する中堅業者。",
+      hours: "9:00-18:00（日祝除く）",
+      services: "エアコン、浴室、キッチン、トイレ、換気扇、ベランダクリーニング",
+      website: "https://homeclean-service.com/"
     },
   ];
 
@@ -143,7 +248,7 @@ export default function OsakaArea() {
                   <th>キッチン</th>
                   <th>浴室</th>
                   <th>トイレ</th>
-                  <th>洗面所</th>
+                  
                   
                 </tr>
               </thead>
@@ -154,7 +259,7 @@ export default function OsakaArea() {
                     <td>{company.kitchen}</td>
                     <td>{company.bathroom}</td>
                     <td>{company.toilet}</td>
-                    <td>{company.washroom}</td>
+                    
                     
                   </tr>
                 ))}
@@ -170,8 +275,8 @@ export default function OsakaArea() {
           <h2 className="text-3xl font-bold text-center mb-12">各業者の詳細</h2>
           <div className="space-y-8 max-w-4xl mx-auto">
             {companies.map((company, index) => {
-              const Icon = companyIcons[index];
-              const gradient = companyColors[index];
+              const Icon = companyIcons[index % companyIcons.length];
+              const gradient = companyColors[index % companyColors.length];
               return (
                 <div key={index} className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
                   <div className="card-body">
@@ -181,7 +286,7 @@ export default function OsakaArea() {
                       </div>
                       <div className="flex-1">
                         <h3 className="card-title text-2xl">{company.name}</h3>
-                        <p className="text-sm text-gray-600 mt-1">{company.recommend}</p>
+                        <p className="text-sm text-gray-600 mt-1">{company.description}</p>
                       </div>
                     </div>
                     <div className="divider"></div>
@@ -192,7 +297,6 @@ export default function OsakaArea() {
                           <li>• キッチン: {company.kitchen}</li>
                           <li>• 浴室: {company.bathroom}</li>
                           <li>• トイレ: {company.toilet}</li>
-                          <li>• 洗面所: {company.washroom}</li>
                         </ul>
                       </div>
                       
