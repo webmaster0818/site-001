@@ -179,7 +179,22 @@ export default function SaitamaArea() {
       website: "https://homeclean-service.com/"
     },
   ];
-  const areas = ["さいたま市", "川口市", "所沢市", "越谷市", "川越市", "熊谷市", "草加市", "春日部市", "上尾市", "狭山市", "入間市", "朝霞市", "志木市", "和光市", "新座市"];
+  // さいたま市10区（リンク付き）
+  const saitamaWards = [
+    { name: "西区", slug: "saitama-nishi" },
+    { name: "北区", slug: "saitama-kita" },
+    { name: "大宮区", slug: "saitama-omiya" },
+    { name: "見沼区", slug: "saitama-minuma" },
+    { name: "中央区", slug: "saitama-chuo" },
+    { name: "桜区", slug: "saitama-sakura" },
+    { name: "浦和区", slug: "saitama-urawa" },
+    { name: "南区", slug: "saitama-minami" },
+    { name: "緑区", slug: "saitama-midori" },
+    { name: "岩槻区", slug: "saitama-iwatsuki" },
+  ];
+
+  // その他の市（テキストのみ、ページ未作成）
+  const otherCities = ["川口市", "所沢市", "越谷市", "川越市", "熊谷市", "草加市", "春日部市", "上尾市", "狭山市", "入間市", "朝霞市", "志木市", "和光市", "新座市"];
   return (
     <div className="min-h-screen bg-base-100">
       <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
@@ -248,9 +263,29 @@ export default function SaitamaArea() {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">対応エリア</h2>
-          <div className="grid grid-cols-3 gap-3 max-w-4xl mx-auto">
-            {areas.map(a => <div key={a} className="badge badge-lg p-3">{a}</div>)}
+          <h2 className="text-2xl font-bold text-center mb-8">対応エリア（埼玉県全域）</h2>
+          <div className="max-w-5xl mx-auto">
+            {/* さいたま市10区（リンク付き） */}
+            <h3 className="text-2xl font-bold mb-4">さいたま市10区</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+              {saitamaWards.map((ward) => (
+                <Link 
+                  key={ward.slug} 
+                  href={`/areas/${ward.slug}/`}
+                  className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+                >
+                  {ward.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* その他の市（テキストのみ） */}
+            <h3 className="text-2xl font-bold mb-4">その他の市</h3>
+            <div className="grid grid-cols-3 gap-3 max-w-4xl mx-auto">
+              {otherCities.map((city) => (
+                <div key={city} className="badge badge-lg p-3">{city}</div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

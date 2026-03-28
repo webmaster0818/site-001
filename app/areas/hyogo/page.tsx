@@ -179,7 +179,21 @@ export default function HyogoArea() {
       website: "https://homeclean-service.com/"
     },
   ];
-  const areas = ['神戸市', '姫路市', '尼崎市', '明石市', '西宮市', '芦屋市', '伊丹市', '加古川市', '宝塚市', '川西市'];
+  // 神戸市9区（リンク付き）
+  const kobeWards = [
+    { name: "東灘区", slug: "kobe-higashinada" },
+    { name: "灘区", slug: "kobe-nada" },
+    { name: "中央区", slug: "kobe-chuo" },
+    { name: "兵庫区", slug: "kobe-hyogo" },
+    { name: "北区", slug: "kobe-kita" },
+    { name: "長田区", slug: "kobe-nagata" },
+    { name: "須磨区", slug: "kobe-suma" },
+    { name: "垂水区", slug: "kobe-tarumi" },
+    { name: "西区", slug: "kobe-nishi" },
+  ];
+
+  // その他の市（テキストのみ、ページ未作成）
+  const otherCities = ['姫路市', '尼崎市', '明石市', '西宮市', '芦屋市', '伊丹市', '加古川市', '宝塚市', '川西市'];
   return (
     <div className="min-h-screen bg-base-100">
       <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
@@ -255,9 +269,29 @@ export default function HyogoArea() {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">対応エリア</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
-            {areas.map(a => <div key={a} className="badge badge-lg p-3">{a}</div>)}
+          <h2 className="text-2xl font-bold text-center mb-8">対応エリア（兵庫県全域）</h2>
+          <div className="max-w-5xl mx-auto">
+            {/* 神戸市9区（リンク付き） */}
+            <h3 className="text-2xl font-bold mb-4">神戸市9区</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+              {kobeWards.map((ward) => (
+                <Link 
+                  key={ward.slug} 
+                  href={`/areas/${ward.slug}/`}
+                  className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+                >
+                  {ward.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* その他の市（テキストのみ） */}
+            <h3 className="text-2xl font-bold mb-4">その他の市</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {otherCities.map((city) => (
+                <div key={city} className="badge badge-lg p-3">{city}</div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

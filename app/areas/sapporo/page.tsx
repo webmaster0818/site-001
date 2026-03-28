@@ -179,7 +179,19 @@ export default function SapporoArea() {
       website: "https://homeclean-service.com/"
     },
   ];
-  const areas = ['中央区', '北区', '東区', '白石区', '豊平区', '南区', '西区', '厚別区', '手稲区', '清田区'];
+  // 札幌市10区（リンク付き）
+  const wards = [
+    { name: "中央区", slug: "sapporo-chuo" },
+    { name: "北区", slug: "sapporo-kita" },
+    { name: "東区", slug: "sapporo-higashi" },
+    { name: "白石区", slug: "sapporo-shiroishi" },
+    { name: "豊平区", slug: "sapporo-toyohira" },
+    { name: "南区", slug: "sapporo-minami" },
+    { name: "西区", slug: "sapporo-nishi" },
+    { name: "厚別区", slug: "sapporo-atsubetsu" },
+    { name: "手稲区", slug: "sapporo-teine" },
+    { name: "清田区", slug: "sapporo-kiyota" },
+  ];
   return (
     <div className="min-h-screen bg-base-100">
       <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
@@ -255,9 +267,17 @@ export default function SapporoArea() {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">対応エリア</h2>
+          <h2 className="text-2xl font-bold text-center mb-8">対応エリア（札幌市全10区）</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
-            {areas.map(a => <div key={a} className="badge badge-lg p-3">{a}</div>)}
+            {wards.map((ward) => (
+              <Link 
+                key={ward.slug} 
+                href={`/areas/${ward.slug}/`}
+                className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+              >
+                {ward.name}
+              </Link>
+            ))}
           </div>
         </div>
       </section>

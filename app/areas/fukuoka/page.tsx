@@ -179,7 +179,30 @@ export default function FukuokaArea() {
       website: "https://homeclean-service.com/"
     },
   ];
-  const areas = ['福岡市', '北九州市', '久留米市', '直方市', '飯塚市', '田川市', '柳川市', '大牟田市', '筑紫野市', '春日市', '大野城市'];
+  // 福岡市7区（リンク付き）
+  const fukuokaWards = [
+    { name: "東区", slug: "fukuoka-higashi" },
+    { name: "博多区", slug: "fukuoka-hakata" },
+    { name: "中央区", slug: "fukuoka-chuo" },
+    { name: "南区", slug: "fukuoka-minami" },
+    { name: "西区", slug: "fukuoka-nishi" },
+    { name: "城南区", slug: "fukuoka-jonan" },
+    { name: "早良区", slug: "fukuoka-sawara" },
+  ];
+
+  // 北九州市7区（リンク付き）
+  const kitakyushuWards = [
+    { name: "門司区", slug: "kitakyushu-moji" },
+    { name: "若松区", slug: "kitakyushu-wakamatsu" },
+    { name: "戸畑区", slug: "kitakyushu-tobata" },
+    { name: "小倉北区", slug: "kitakyushu-kokurakita" },
+    { name: "小倉南区", slug: "kitakyushu-kokuraminami" },
+    { name: "八幡東区", slug: "kitakyushu-yahatahigashi" },
+    { name: "八幡西区", slug: "kitakyushu-yahatanishi" },
+  ];
+
+  // その他の市（テキストのみ、ページ未作成）
+  const otherCities = ['久留米市', '直方市', '飯塚市', '田川市', '柳川市', '大牟田市', '筑紫野市', '春日市', '大野城市'];
   return (
     <div className="min-h-screen bg-base-100">
       <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
@@ -255,9 +278,43 @@ export default function FukuokaArea() {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">対応エリア</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
-            {areas.map(a => <div key={a} className="badge badge-lg p-3">{a}</div>)}
+          <h2 className="text-2xl font-bold text-center mb-8">対応エリア（福岡県全域）</h2>
+          <div className="max-w-5xl mx-auto">
+            {/* 福岡市7区（リンク付き） */}
+            <h3 className="text-2xl font-bold mb-4">福岡市7区</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+              {fukuokaWards.map((ward) => (
+                <Link 
+                  key={ward.slug} 
+                  href={`/areas/${ward.slug}/`}
+                  className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+                >
+                  {ward.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* 北九州市7区（リンク付き） */}
+            <h3 className="text-2xl font-bold mb-4">北九州市7区</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+              {kitakyushuWards.map((ward) => (
+                <Link 
+                  key={ward.slug} 
+                  href={`/areas/${ward.slug}/`}
+                  className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+                >
+                  {ward.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* その他の市（テキストのみ） */}
+            <h3 className="text-2xl font-bold mb-4">その他の市</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {otherCities.map((city) => (
+                <div key={city} className="badge badge-lg p-3">{city}</div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -179,7 +179,20 @@ export default function KyotocityArea() {
       website: "https://homeclean-service.com/"
     },
   ];
-  const areas = ['北区', '上京区', '左京区', '中京区', '東山区', '下京区', '南区', '右京区', '伏見区', '山科区', '西京区'];
+  // 京都市11区（リンク付き）
+  const wards = [
+    { name: "北区", slug: "kyoto-kita" },
+    { name: "上京区", slug: "kyoto-kamigyo" },
+    { name: "左京区", slug: "kyoto-sakyo" },
+    { name: "中京区", slug: "kyoto-nakagyo" },
+    { name: "東山区", slug: "kyoto-higashiyama" },
+    { name: "下京区", slug: "kyoto-shimogyo" },
+    { name: "南区", slug: "kyoto-minami" },
+    { name: "右京区", slug: "kyoto-ukyo" },
+    { name: "伏見区", slug: "kyoto-fushimi" },
+    { name: "山科区", slug: "kyoto-yamashina" },
+    { name: "西京区", slug: "kyoto-nishikyo" },
+  ];
   return (
     <div className="min-h-screen bg-base-100">
       <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
@@ -230,9 +243,17 @@ export default function KyotocityArea() {
       </section>
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">対応エリア</h2>
+          <h2 className="text-2xl font-bold text-center mb-8">対応エリア（京都市全11区）</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
-            {areas.map(a => <div key={a} className="badge badge-lg badge-outline p-4">{a}</div>)}
+            {wards.map((ward) => (
+              <Link 
+                key={ward.slug} 
+                href={`/areas/${ward.slug}/`}
+                className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+              >
+                {ward.name}
+              </Link>
+            ))}
           </div>
         </div>
       </section>

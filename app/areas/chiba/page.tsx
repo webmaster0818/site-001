@@ -179,7 +179,18 @@ export default function ChibaArea() {
       website: "https://homeclean-service.com/"
     },
   ];
-  const areas = ["千葉市", "船橋市", "松戸市", "市川市", "柏市", "市原市", "八千代市", "我孫子市", "鎌ケ谷市", "浦安市", "習志野市", "流山市", "野田市"];
+  // 千葉市6区（リンク付き）
+  const chibaWards = [
+    { name: "中央区", slug: "chiba-chuo" },
+    { name: "花見川区", slug: "chiba-hanamigawa" },
+    { name: "稲毛区", slug: "chiba-inage" },
+    { name: "若葉区", slug: "chiba-wakaba" },
+    { name: "緑区", slug: "chiba-midori" },
+    { name: "美浜区", slug: "chiba-mihama" },
+  ];
+
+  // その他の市（テキストのみ、ページ未作成）
+  const otherCities = ["船橋市", "松戸市", "市川市", "柏市", "市原市", "八千代市", "我孫子市", "鎌ケ谷市", "浦安市", "習志野市", "流山市", "野田市"];
   return (
     <div className="min-h-screen bg-base-100">
       <header className="navbar bg-primary text-primary-content">
@@ -207,8 +218,29 @@ export default function ChibaArea() {
       </section>
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-3 gap-3 max-w-4xl mx-auto">
-            {areas.map(a => <div key={a} className="badge p-3">{a}</div>)}
+          <h2 className="text-2xl font-bold text-center mb-8">対応エリア（千葉県全域）</h2>
+          <div className="max-w-5xl mx-auto">
+            {/* 千葉市6区（リンク付き） */}
+            <h3 className="text-2xl font-bold mb-4">千葉市6区</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+              {chibaWards.map((ward) => (
+                <Link 
+                  key={ward.slug} 
+                  href={`/areas/${ward.slug}/`}
+                  className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+                >
+                  {ward.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* その他の市（テキストのみ） */}
+            <h3 className="text-2xl font-bold mb-4">その他の市</h3>
+            <div className="grid grid-cols-3 gap-3 max-w-4xl mx-auto">
+              {otherCities.map((city) => (
+                <div key={city} className="badge p-3">{city}</div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

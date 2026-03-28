@@ -170,8 +170,37 @@ export default function OsakaArea() {
     },
   ];
 
-  const areas = [
-    "大阪市", "堺市", "岸和田市", "豊中市", "池田市", "吹田市", "泉大津市", "高槻市",
+  // 大阪市24区（リンク付き）
+  const osakaWards = [
+    { name: "北区", slug: "osaka-kita" },
+    { name: "都島区", slug: "osaka-miyakojima" },
+    { name: "福島区", slug: "osaka-fukushima" },
+    { name: "此花区", slug: "osaka-konohana" },
+    { name: "中央区", slug: "osaka-chuo" },
+    { name: "西区", slug: "osaka-nishi" },
+    { name: "港区", slug: "osaka-minato" },
+    { name: "大正区", slug: "osaka-taisho" },
+    { name: "天王寺区", slug: "osaka-tennoji" },
+    { name: "浪速区", slug: "osaka-naniwa" },
+    { name: "西淀川区", slug: "osaka-nishiyodogawa" },
+    { name: "淀川区", slug: "osaka-yodogawa" },
+    { name: "東淀川区", slug: "osaka-higashiyodogawa" },
+    { name: "東成区", slug: "osaka-higashinari" },
+    { name: "生野区", slug: "osaka-ikuno" },
+    { name: "旭区", slug: "osaka-asahi" },
+    { name: "城東区", slug: "osaka-joto" },
+    { name: "鶴見区", slug: "osaka-tsurumi" },
+    { name: "阿倍野区", slug: "osaka-abeno" },
+    { name: "住之江区", slug: "osaka-suminoe" },
+    { name: "住吉区", slug: "osaka-sumiyoshi" },
+    { name: "東住吉区", slug: "osaka-higashisumiyoshi" },
+    { name: "平野区", slug: "osaka-hirano" },
+    { name: "西成区", slug: "osaka-nishinari" },
+  ];
+
+  // その他の市（テキストのみ、ページ未作成）
+  const otherCities = [
+    "堺市", "岸和田市", "豊中市", "池田市", "吹田市", "泉大津市", "高槻市",
     "貝塚市", "守口市", "枚方市", "茨木市", "八尾市", "泉佐野市", "富田林市", "寝屋川市",
     "河内長野市", "松原市", "大東市", "和泉市", "箕面市", "柏原市", "羽曳野市", "門真市",
     "摂津市", "高石市", "藤井寺市", "東大阪市", "泉南市", "四條畷市", "交野市", "大阪狭山市",
@@ -338,10 +367,26 @@ export default function OsakaArea() {
             <Building2 className="w-8 h-8 text-primary" />対応エリア（大阪府全域）
           </h2>
           <div className="max-w-5xl mx-auto">
+            {/* 大阪市24区（リンク付き） */}
+            <h3 className="text-2xl font-bold mb-4">大阪市24区</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-8">
+              {osakaWards.map((ward) => (
+                <Link 
+                  key={ward.slug} 
+                  href={`/areas/${ward.slug}/`}
+                  className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+                >
+                  {ward.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* その他の市（テキストのみ） */}
+            <h3 className="text-2xl font-bold mb-4">その他の市</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-              {areas.map((area) => (
-                <div key={area} className="badge badge-lg badge-outline hover:badge-primary cursor-pointer transition-all p-4">
-                  {area}
+              {otherCities.map((city) => (
+                <div key={city} className="badge badge-lg badge-outline hover:badge-primary cursor-pointer transition-all p-4">
+                  {city}
                 </div>
               ))}
             </div>

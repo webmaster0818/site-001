@@ -179,7 +179,28 @@ export default function AichiArea() {
       website: "https://homeclean-service.com/"
     },
   ];
-  const areas = ['名古屋市', '豊橋市', '岡崎市', '一宮市', '瀬戸市', '半田市', '春日井市', '豊川市', '津島市', '刈谷市', '豊田市', '安城市'];
+  // 名古屋市16区（リンク付き）
+  const nagoyaWards = [
+    { name: "千種区", slug: "nagoya-chikusa" },
+    { name: "東区", slug: "nagoya-higashi" },
+    { name: "北区", slug: "nagoya-kita" },
+    { name: "西区", slug: "nagoya-nishi" },
+    { name: "中村区", slug: "nagoya-nakamura" },
+    { name: "中区", slug: "nagoya-nakaku" },
+    { name: "昭和区", slug: "nagoya-showa" },
+    { name: "瑞穂区", slug: "nagoya-mizuho" },
+    { name: "熱田区", slug: "nagoya-atsuta" },
+    { name: "中川区", slug: "nagoya-nakagawa" },
+    { name: "港区", slug: "nagoya-minato" },
+    { name: "南区", slug: "nagoya-minami" },
+    { name: "守山区", slug: "nagoya-moriyama" },
+    { name: "緑区", slug: "nagoya-midori" },
+    { name: "名東区", slug: "nagoya-meito" },
+    { name: "天白区", slug: "nagoya-tempaku" },
+  ];
+
+  // その他の市（テキストのみ、ページ未作成）
+  const otherCities = ['豊橋市', '岡崎市', '一宮市', '瀬戸市', '半田市', '春日井市', '豊川市', '津島市', '刈谷市', '豊田市', '安城市'];
   return (
     <div className="min-h-screen bg-base-100">
       <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
@@ -255,9 +276,29 @@ export default function AichiArea() {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">対応エリア</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
-            {areas.map(a => <div key={a} className="badge badge-lg p-3">{a}</div>)}
+          <h2 className="text-2xl font-bold text-center mb-8">対応エリア（愛知県全域）</h2>
+          <div className="max-w-5xl mx-auto">
+            {/* 名古屋市16区（リンク付き） */}
+            <h3 className="text-2xl font-bold mb-4">名古屋市16区</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+              {nagoyaWards.map((ward) => (
+                <Link 
+                  key={ward.slug} 
+                  href={`/areas/${ward.slug}/`}
+                  className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+                >
+                  {ward.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* その他の市（テキストのみ） */}
+            <h3 className="text-2xl font-bold mb-4">その他の市</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {otherCities.map((city) => (
+                <div key={city} className="badge badge-lg p-3">{city}</div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
