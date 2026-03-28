@@ -181,10 +181,35 @@ export default function TokyoArea() {
     },
   ];
 
-  const areas = [
-    "千代田区", "中央区", "港区", "新宿区", "文京区", "台東区", "墨田区", "江東区",
-    "品川区", "目黒区", "大田区", "世田谷区", "渋谷区", "中野区", "杉並区", "豊島区",
-    "北区", "荒川区", "板橋区", "練馬区", "足立区", "葛飾区", "江戸川区",
+  // 東京23区（リンク付き）
+  const wards = [
+    { name: "千代田区", slug: "tokyo-chiyoda" },
+    { name: "中央区", slug: "tokyo-chuo" },
+    { name: "港区", slug: "tokyo-minato" },
+    { name: "新宿区", slug: "tokyo-shinjuku" },
+    { name: "文京区", slug: "tokyo-bunkyo" },
+    { name: "台東区", slug: "tokyo-taito" },
+    { name: "墨田区", slug: "tokyo-sumida" },
+    { name: "江東区", slug: "tokyo-koto" },
+    { name: "品川区", slug: "tokyo-shinagawa" },
+    { name: "目黒区", slug: "tokyo-meguro" },
+    { name: "大田区", slug: "tokyo-ota" },
+    { name: "世田谷区", slug: "tokyo-setagaya" },
+    { name: "渋谷区", slug: "tokyo-shibuya" },
+    { name: "中野区", slug: "tokyo-nakano" },
+    { name: "杉並区", slug: "tokyo-suginami" },
+    { name: "豊島区", slug: "tokyo-toshima" },
+    { name: "北区", slug: "tokyo-kita" },
+    { name: "荒川区", slug: "tokyo-arakawa" },
+    { name: "板橋区", slug: "tokyo-itabashi" },
+    { name: "練馬区", slug: "tokyo-nerima" },
+    { name: "足立区", slug: "tokyo-adachi" },
+    { name: "葛飾区", slug: "tokyo-katsushika" },
+    { name: "江戸川区", slug: "tokyo-edogawa" },
+  ];
+
+  // 多摩地域など（テキストのみ、ページ未作成）
+  const cities = [
     "八王子市", "立川市", "武蔵野市", "三鷹市", "府中市", "調布市", "町田市", "小金井市"
   ];
 
@@ -311,10 +336,26 @@ export default function TokyoArea() {
             対応エリア（東京都全域）
           </h2>
           <div className="max-w-5xl mx-auto">
+            {/* 東京23区（リンク付き） */}
+            <h3 className="text-2xl font-bold mb-4">東京23区</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+              {wards.map((ward) => (
+                <Link 
+                  key={ward.slug} 
+                  href={`/areas/${ward.slug}/`}
+                  className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+                >
+                  {ward.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* 多摩地域など（テキストのみ） */}
+            <h3 className="text-2xl font-bold mb-4">多摩地域・その他</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {areas.map((area) => (
-                <div key={area} className="badge badge-lg badge-outline p-4">
-                  {area}
+              {cities.map((city) => (
+                <div key={city} className="badge badge-lg badge-outline p-4">
+                  {city}
                 </div>
               ))}
             </div>
