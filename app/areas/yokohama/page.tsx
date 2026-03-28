@@ -179,7 +179,27 @@ export default function YokohamaArea() {
       website: "https://homeclean-service.com/"
     },
   ];
-  const areas = ['青葉区', '旭区', '泉区', '磯子区', '神奈川区', '金沢区', '港南区', '港北区', '栄区', '瀬谷区', '都筑区', '鶴見区', '戸塚区', '中区', '西区', '保土ケ谷区', '緑区', '南区'];
+  // 横浜市18区（リンク付き）
+  const wards = [
+    { name: "青葉区", slug: "yokohama-aoba" },
+    { name: "旭区", slug: "yokohama-asahi" },
+    { name: "泉区", slug: "yokohama-izumi" },
+    { name: "磯子区", slug: "yokohama-isogo" },
+    { name: "神奈川区", slug: "yokohama-kanagawa" },
+    { name: "金沢区", slug: "yokohama-kanazawa" },
+    { name: "港南区", slug: "yokohama-konan" },
+    { name: "港北区", slug: "yokohama-kohoku" },
+    { name: "栄区", slug: "yokohama-sakae" },
+    { name: "瀬谷区", slug: "yokohama-seya" },
+    { name: "都筑区", slug: "yokohama-tsuzuki" },
+    { name: "鶴見区", slug: "yokohama-tsurumi" },
+    { name: "戸塚区", slug: "yokohama-totsuka" },
+    { name: "中区", slug: "yokohama-naka" },
+    { name: "西区", slug: "yokohama-nishi" },
+    { name: "保土ケ谷区", slug: "yokohama-hodogaya" },
+    { name: "緑区", slug: "yokohama-midori" },
+    { name: "南区", slug: "yokohama-minami" },
+  ];
   return (
     <div className="min-h-screen bg-base-100">
       <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
@@ -230,9 +250,17 @@ export default function YokohamaArea() {
       </section>
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">対応エリア</h2>
+          <h2 className="text-2xl font-bold text-center mb-8">対応エリア（横浜市全18区）</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
-            {areas.map(a => <div key={a} className="badge badge-lg badge-outline p-4">{a}</div>)}
+            {wards.map((ward) => (
+              <Link 
+                key={ward.slug} 
+                href={`/areas/${ward.slug}/`}
+                className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+              >
+                {ward.name}
+              </Link>
+            ))}
           </div>
         </div>
       </section>

@@ -179,7 +179,16 @@ export default function KawasakiArea() {
       website: "https://homeclean-service.com/"
     },
   ];
-  const areas = ['川崎区', '幸区', '中原区', '高津区', '多摩区', '宮前区', '麻生区'];
+  // 川崎市7区（リンク付き）
+  const wards = [
+    { name: "川崎区", slug: "kawasaki-kawasaki" },
+    { name: "幸区", slug: "kawasaki-saiwai" },
+    { name: "中原区", slug: "kawasaki-nakahara" },
+    { name: "高津区", slug: "kawasaki-takatsu" },
+    { name: "多摩区", slug: "kawasaki-tama" },
+    { name: "宮前区", slug: "kawasaki-miyamae" },
+    { name: "麻生区", slug: "kawasaki-asao" },
+  ];
   return (
     <div className="min-h-screen bg-base-100">
       <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
@@ -230,9 +239,17 @@ export default function KawasakiArea() {
       </section>
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">対応エリア</h2>
+          <h2 className="text-2xl font-bold text-center mb-8">対応エリア（川崎市全7区）</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
-            {areas.map(a => <div key={a} className="badge badge-lg badge-outline p-4">{a}</div>)}
+            {wards.map((ward) => (
+              <Link 
+                key={ward.slug} 
+                href={`/areas/${ward.slug}/`}
+                className="badge badge-lg badge-outline p-4 hover:bg-primary hover:text-primary-content transition-colors cursor-pointer"
+              >
+                {ward.name}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
