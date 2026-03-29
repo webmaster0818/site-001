@@ -1012,7 +1012,7 @@ export default function Home() {
           <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <img
-                src="images/logo-character.png"
+                src="/images/logo-character.png"
                 alt="クリーンナビ キャラクター"
                 className="w-16 h-16 object-contain drop-shadow-lg"
               />
@@ -1258,7 +1258,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-3">
               <div className="flex items-center gap-3">
                 <img
-                  src="images/logo-character.png"
+                  src="/images/logo-character.png"
                   alt=""
                   className="w-8 h-8 object-contain opacity-60"
                 />

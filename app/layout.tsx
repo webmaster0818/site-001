@@ -7,7 +7,8 @@ import Script from "next/script";
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "900"],
+  display: "swap", // フォント読み込み中の表示改善
 });
 
 export const metadata: Metadata = {

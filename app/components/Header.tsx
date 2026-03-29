@@ -29,7 +29,7 @@ export default function Header() {
         <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between">
           <a className="flex items-center gap-3" href="/">
             <img
-              src="images/logo-character.png"
+              src="/images/logo-character.png"
               alt="クリーンナビ キャラクター"
               className="w-12 h-12 md:w-14 md:h-14 object-contain drop-shadow-md"
             />
