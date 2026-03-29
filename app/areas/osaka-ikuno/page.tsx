@@ -215,6 +215,18 @@ export default function OsakaIkunoArea() {
           <p className="text-xl">生野区全域対応！信頼できる業者をご紹介</p>
         </div>
       </section>
+      {/* パンくずリスト */}
+      <div className="bg-base-100 py-4 border-b border-base-300">
+        <div className="container mx-auto px-4">
+          <div className="breadcrumbs text-sm">
+            <ul>
+              <li><Link href="/">HOME</Link></li>
+              <li><Link href="/areas/osaka/">大阪府</Link></li>
+              <li>生野区</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       {/* 導入文 */}
       <section className="py-12 bg-base-100">

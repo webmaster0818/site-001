@@ -215,6 +215,20 @@ export default function TokyominatoArea() {
           <p className="text-xl">港区全域対応！信頼できる業者をご紹介</p>
         </div>
       </section>
+
+      {/* パンくずリスト */}
+      <div className="bg-base-100 py-4 border-b border-base-300">
+        <div className="container mx-auto px-4">
+          <div className="breadcrumbs text-sm">
+            <ul>
+              <li><Link href="/">HOME</Link></li>
+              <li><Link href="/areas/tokyo/">東京都</Link></li>
+              <li>港区</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <section className="py-12 bg-base-100">
         <div className="container mx-auto px-4">
           <div className="prose max-w-4xl mx-auto">
