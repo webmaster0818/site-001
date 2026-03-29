@@ -4,6 +4,31 @@ import { Sparkles, Award, Shield, Zap } from "lucide-react";
 export const metadata = {
   title: "江戸川区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
   description: "江戸川区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+  openGraph: {
+    title: "江戸川区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+    description: "江戸川区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+    url: "https://clean-navi.jp/areas/tokyo-edogawa/",
+    siteName: "クリーンナビ",
+    images: [
+      {
+        url: "https://clean-navi.jp/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "江戸川区のハウスクリーニング業者比較 - クリーンナビ",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "江戸川区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+    description: "江戸川区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+    images: ["https://clean-navi.jp/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://clean-navi.jp/areas/tokyo-edogawa/",
+  },
 };
 
 export default function TokyoEdogawaArea() {

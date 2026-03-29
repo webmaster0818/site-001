@@ -34,9 +34,9 @@ export default function Header() {
               className="w-12 h-12 md:w-14 md:h-14 object-contain drop-shadow-md"
             />
             <div>
-              <h1 className="text-xl md:text-2xl font-black text-gray-900 leading-tight">
+              <div className="text-xl md:text-2xl font-black text-gray-900 leading-tight">
                 クリーンナビ
-              </h1>
+              </div>
               <p className="text-[10px] md:text-xs text-gray-400 -mt-0.5 tracking-wider">
                 ハウスクリーニング業者比較サイト
               </p>

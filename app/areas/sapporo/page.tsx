@@ -3,7 +3,32 @@ import { Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
   title: "札幌市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
-  description: "札幌市でおすすめのハウスクリーニング業者を徹底比較。札幌市など全域対応。",
+  description: "札幌市でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+  openGraph: {
+    title: "札幌市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+    description: "札幌市でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+    url: "https://clean-navi.jp/areas/sapporo/",
+    siteName: "クリーンナビ",
+    images: [
+      {
+        url: "https://clean-navi.jp/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "札幌市のハウスクリーニング業者比較 - クリーンナビ",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "札幌市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+    description: "札幌市でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+    images: ["https://clean-navi.jp/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://clean-navi.jp/areas/sapporo/",
+  },
 };
 
 export default function SapporoArea() {

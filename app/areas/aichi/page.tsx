@@ -3,7 +3,32 @@ import { Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
   title: "愛知県のハウスクリーニング業者おすすめ比較 | クリーンナビ",
-  description: "愛知県でおすすめのハウスクリーニング業者を徹底比較。名古屋市など全域対応。",
+  description: "愛知県でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+  openGraph: {
+    title: "愛知県のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+    description: "愛知県でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+    url: "https://clean-navi.jp/areas/aichi/",
+    siteName: "クリーンナビ",
+    images: [
+      {
+        url: "https://clean-navi.jp/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "愛知県のハウスクリーニング業者比較 - クリーンナビ",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "愛知県のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+    description: "愛知県でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+    images: ["https://clean-navi.jp/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://clean-navi.jp/areas/aichi/",
+  },
 };
 
 export default function AichiArea() {
