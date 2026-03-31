@@ -222,14 +222,34 @@ export default function SaitamaArea() {
   const otherCities = ["川口市", "所沢市", "越谷市", "川越市", "熊谷市", "草加市", "春日部市", "上尾市", "狭山市", "入間市", "朝霞市", "志木市", "和光市", "新座市"];
   return (
     <div className="min-h-screen bg-base-100">
-      <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
-        <Link href="/" className="btn btn-ghost text-xl">クリーンナビ</Link>
-      </header>
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">埼玉県のハウスクリーニング業者比較</h1>
-          <p className="text-xl">さいたま市・川口市など埼玉県全域対応</p>
+      <div className="container mx-auto px-4 py-4">
+        <div className="text-sm breadcrumbs">
+          <ul>
+            <li><Link href="/">ホーム</Link></li>
+            <li><Link href="/areas/saitama">埼玉県</Link></li>
+          </ul>
         </div>
+      </div>
+
+      <section className="hero-section py-16 md:py-20 relative">
+        <div className="hero-bg">
+          <img src="https://images.unsplash.com/photo-1590559900489-2f6c3f1a4d3a?auto=format&fit=crop&w=1920&q=80" alt="埼玉県の街並み" />
+        </div>
+        <div className="hero-overlay"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <MapPin className="w-10 h-10 text-yellow-300" />
+            <h1 className="text-3xl md:text-5xl font-black text-white leading-tight" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.2)' }}>
+              埼玉県のハウスクリーニング業者おすすめ比較
+            </h1>
+          </div>
+          <p className="text-base md:text-xl text-white leading-relaxed max-w-3xl mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.15)' }}>
+            さいたま市など埼玉県全域対応！料金・口コミで徹底比較
+          </p>
+        </div>
+        <svg className="hero-wave" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="#f9fafb"></path>
+        </svg>
       </section>
       <section className="py-12">
         <div className="container mx-auto px-4">
