@@ -67,12 +67,9 @@ export default function Home() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex gap-4 justify-center flex-wrap mb-10">
-            <a className="btn-cta" href="/services/aircon/">
-              ✨ 業者を探す
-            </a>
-            <a className="btn-outline" href="/about/">
-              初めての方はこちら →
+          <div className="flex gap-4 justify-center flex-wrap mb-8">
+            <a className="btn-cta" href="#services">
+              ✨ あなたに合った業者を探す
             </a>
           </div>
 
