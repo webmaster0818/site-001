@@ -7,7 +7,7 @@ export default function Header() {
       {/* PHONE / INFO BAR */}
       <div
         className="text-white py-1.5"
-        style={{ background: 'linear-gradient(90deg, #0c4a6e, #0369a1)' }}
+        style={{ background: 'linear-gradient(90deg, #14532d, #166534)' }}
       >
         <div className="container mx-auto px-4 flex items-center justify-between text-xs md:text-sm">
           <div className="flex items-center gap-4">
@@ -75,7 +75,7 @@ export default function Header() {
             </a>
             <a
               className="ml-3 px-5 py-2.5 rounded-full text-sm font-bold text-white"
-              style={{ background: 'linear-gradient(135deg, #0ea5e9, #0284c7)' }}
+              style={{ background: 'linear-gradient(135deg, #22c55e, #16a34a)' }}
               href="/contact/"
             >
               無料お見積り
@@ -122,7 +122,7 @@ export default function Header() {
           <div className="flex whitespace-nowrap px-3 py-2 gap-1.5">
             <a
               className="px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-sm"
-              style={{ background: 'linear-gradient(135deg, #0ea5e9, #0284c7)' }}
+              style={{ background: 'linear-gradient(135deg, #22c55e, #16a34a)' }}
               href="/"
             >
               🏠 トップ
