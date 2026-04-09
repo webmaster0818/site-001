@@ -6,7 +6,7 @@ export default function Home() {
         {/* Background Photo */}
         <div className="hero-bg">
           <img
-            src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1920&q=80"
+            src="/images/hero-banner.png"
             alt="ハウスクリーニングスタッフが掃除している様子"
           />
         </div>
