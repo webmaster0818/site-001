@@ -9,16 +9,16 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-noto-sans-jp);
-  --color-brand-50: #f0fdf4;
-  --color-brand-100: #dcfce7;
-  --color-brand-200: #bbf7d0;
-  --color-brand-300: #86efac;
-  --color-brand-400: #4ade80;
-  --color-brand-500: #22c55e;
-  --color-brand-600: #16a34a;
-  --color-brand-700: #15803d;
-  --color-brand-800: #166534;
-  --color-brand-900: #14532d;
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bae6fd;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-800: #075985;
+  --color-brand-900: #0c4a6e;
   --color-accent-400: #60a5fa;
   --color-accent-500: #3b82f6;
   --color-accent-600: #2563eb;
@@ -39,17 +39,17 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-/* Top accent bar - 清潔感のあるグリーン×ブルー */
+/* Top accent bar - 清潔感のある薄いブルー */
 .top-bar {
-  background: linear-gradient(90deg, #22c55e, #16a34a, #15803d);
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9, #0284c7);
   height: 4px;
 }
 
 /* Header - やわらかい白ベース */
 .site-header {
-  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
-  box-shadow: 0 2px 16px rgba(34, 197, 94, 0.08);
-  border-bottom: 2px solid rgba(34, 197, 94, 0.12);
+  background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+  box-shadow: 0 2px 16px rgba(14, 165, 233, 0.08);
+  border-bottom: 2px solid rgba(14, 165, 233, 0.12);
 }
 
 /* Nav hover effect */
@@ -65,23 +65,23 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #22c55e;
+  background: #0ea5e9;
   transition: width 0.3s;
 }
 .nav-link:hover::after {
   width: 100%;
 }
 .nav-link:hover {
-  color: #16a34a;
+  color: #0ea5e9;
 }
 
-/* Hero - 親しみやすいグリーン系グラデーション */
+/* Hero - 清潔感のある薄いブルー */
 .hero-section {
   background: linear-gradient(
     135deg,
-    rgba(34, 197, 94, 0.88) 0%,
-    rgba(22, 163, 74, 0.85) 40%,
-    rgba(21, 128, 61, 0.9) 100%
+    rgba(14, 165, 233, 0.85) 0%,
+    rgba(2, 132, 199, 0.82) 40%,
+    rgba(3, 105, 161, 0.88) 100%
   );
   position: relative;
   overflow: hidden;
@@ -99,7 +99,7 @@ body {
 }
 @media (max-width: 768px) {
   .hero-bg img {
-    object-position: 75% top;
+    object-position: 30% top;
   }
 }
 .hero-overlay {
@@ -107,9 +107,9 @@ body {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(34, 197, 94, 0.4) 0%,
-    rgba(22, 163, 74, 0.35) 40%,
-    rgba(21, 128, 61, 0.45) 100%
+    rgba(14, 165, 233, 0.4) 0%,
+    rgba(2, 132, 199, 0.35) 40%,
+    rgba(3, 105, 161, 0.45) 100%
   );
   z-index: 1;
 }
@@ -142,11 +142,11 @@ body {
   width: 100%;
 }
 
-/* Parallax voices - やわらかいグリーン系 */
+/* Parallax voices - やわらかいブルー系 */
 .parallax-container {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 50%, #f0fdf4 100%);
+  background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%);
 }
 .parallax-bg {
   position: absolute;
@@ -167,13 +167,13 @@ body {
   backdrop-filter: blur(8px);
   border-radius: 16px;
   padding: 24px 28px;
-  border: 1px solid rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .voice-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(34, 197, 94, 0.1);
+  box-shadow: 0 12px 32px rgba(14, 165, 233, 0.1);
 }
 .voice-avatar {
   width: 48px;
@@ -197,7 +197,7 @@ body {
 }
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(34, 197, 94, 0.12);
+  box-shadow: 0 20px 40px rgba(14, 165, 233, 0.12);
 }
 .service-card-icon {
   width: 72px;
@@ -217,9 +217,9 @@ body {
   padding: 16px 12px;
 }
 .area-card:hover {
-  border-color: #22c55e;
-  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.12);
+  border-color: #0ea5e9;
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.12);
   transform: translateY(-2px);
 }
 
@@ -291,14 +291,14 @@ body {
   display: block;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #22c55e, #86efac);
+  background: linear-gradient(90deg, #0ea5e9, #7dd3fc);
   border-radius: 2px;
   margin: 12px auto 0;
 }
 
-/* Footer - 落ち着いたダークグリーン */
+/* Footer - 落ち着いたダークブルー */
 .site-footer {
-  background: linear-gradient(135deg, #14532d 0%, #166534 100%);
+  background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
 }
 
 /* Badge */
@@ -312,7 +312,7 @@ body {
   letter-spacing: 0.05em;
 }
 .badge-recommend {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
   color: #fff;
   font-size: 11px;
   font-weight: 700;
