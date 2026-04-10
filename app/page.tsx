@@ -136,12 +136,11 @@ export default function Home() {
             {/* Voice 1 */}
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="voice-avatar"
-                  style={{ background: 'linear-gradient(135deg, #f472b6, #ec4899)' }}
-                >
-                  👩
-                </div>
+                <img
+                  src="/images/avatar-woman-30s.png"
+                  alt="30代女性"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-bold text-gray-900 text-sm">30代 共働き主婦</p>
                   <p className="text-xs text-gray-400">東京都在住</p>
@@ -157,12 +156,11 @@ export default function Home() {
             {/* Voice 2 */}
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="voice-avatar"
-                  style={{ background: 'linear-gradient(135deg, #60a5fa, #3b82f6)' }}
-                >
-                  👨
-                </div>
+                <img
+                  src="/images/avatar-man-50s.png"
+                  alt="40代男性"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-bold text-gray-900 text-sm">40代 会社員</p>
                   <p className="text-xs text-gray-400">神奈川県在住</p>
@@ -178,12 +176,11 @@ export default function Home() {
             {/* Voice 3 */}
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="voice-avatar"
-                  style={{ background: 'linear-gradient(135deg, #a78bfa, #8b5cf6)' }}
-                >
-                  👩
-                </div>
+                <img
+                  src="/images/avatar-woman-40s.png"
+                  alt="50代女性"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-bold text-gray-900 text-sm">50代 専業主婦</p>
                   <p className="text-xs text-gray-400">大阪府在住</p>
@@ -199,12 +196,11 @@ export default function Home() {
             {/* Voice 4 */}
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="voice-avatar"
-                  style={{ background: 'linear-gradient(135deg, #34d399, #10b981)' }}
-                >
-                  👨
-                </div>
+                <img
+                  src="/images/avatar-man-50s.png"
+                  alt="30代男性"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-bold text-gray-900 text-sm">30代 一人暮らし</p>
                   <p className="text-xs text-gray-400">愛知県在住</p>
@@ -220,12 +216,11 @@ export default function Home() {
             {/* Voice 5 */}
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="voice-avatar"
-                  style={{ background: 'linear-gradient(135deg, #fbbf24, #f59e0b)' }}
-                >
-                  👩
-                </div>
+                <img
+                  src="/images/avatar-woman-30s.png"
+                  alt="40代女性"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-bold text-gray-900 text-sm">40代 子育て中</p>
                   <p className="text-xs text-gray-400">埼玉県在住</p>
@@ -241,12 +236,11 @@ export default function Home() {
             {/* Voice 6 */}
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="voice-avatar"
-                  style={{ background: 'linear-gradient(135deg, #fb923c, #f97316)' }}
-                >
-                  👨
-                </div>
+                <img
+                  src="/images/avatar-man-50s.png"
+                  alt="50代男性"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-bold text-gray-900 text-sm">50代 持ち家</p>
                   <p className="text-xs text-gray-400">福岡県在住</p>
