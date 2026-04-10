@@ -163,14 +163,14 @@ export default function KawasakiNakaharaArea() {
       website: "https://www.edion.co.jp/"
     },
     { 
-      name: "クリーンプロフェッショナルズ", 
+      name: "おそうじ革命", 
       kitchen: "17,050円〜", 
       bathroom: "18,150円〜", 
       toilet: "8,250円〜",
       description: "プロの技術力と低価格を両立。全国対応で地域密着型のサービスを展開。",
       hours: "8:00-20:00（年中無休）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
-      website: "https://cleanpro.co.jp/"
+      website: "https://www.osoujikakumei.jp/"
     },
     { 
       name: "おそうじ大使", 
