@@ -137,7 +137,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
                 <img
-                  src="/images/avatar-woman-30s.png"
+                  src="/images/avatar-1.png"
                   alt="30代女性"
                   className="w-12 h-12 rounded-full object-cover"
                 />
@@ -157,7 +157,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
                 <img
-                  src="/images/avatar-man-50s.png"
+                  src="/images/avatar-2.png"
                   alt="40代男性"
                   className="w-12 h-12 rounded-full object-cover"
                 />
@@ -177,7 +177,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
                 <img
-                  src="/images/avatar-woman-40s.png"
+                  src="/images/avatar-3.png"
                   alt="50代女性"
                   className="w-12 h-12 rounded-full object-cover"
                 />
@@ -197,7 +197,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
                 <img
-                  src="/images/avatar-man-50s.png"
+                  src="/images/avatar-4.png"
                   alt="30代男性"
                   className="w-12 h-12 rounded-full object-cover"
                 />
@@ -217,7 +217,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
                 <img
-                  src="/images/avatar-woman-30s.png"
+                  src="/images/avatar-5.png"
                   alt="40代女性"
                   className="w-12 h-12 rounded-full object-cover"
                 />
@@ -237,7 +237,7 @@ export default function Home() {
             <div className="voice-card">
               <div className="flex items-center gap-3 mb-3">
                 <img
-                  src="/images/avatar-man-50s.png"
+                  src="/images/avatar-6.png"
                   alt="50代男性"
                   className="w-12 h-12 rounded-full object-cover"
                 />
