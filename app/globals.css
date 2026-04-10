@@ -99,7 +99,7 @@ body {
 }
 @media (max-width: 768px) {
   .hero-bg img {
-    object-position: 60% top;
+    object-position: 75% top;
   }
 }
 .hero-overlay {
