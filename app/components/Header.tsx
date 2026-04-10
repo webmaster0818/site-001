@@ -12,7 +12,7 @@ export default function Header() {
         <div className="container mx-auto px-4 flex items-center justify-between text-xs md:text-sm">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
-              📞 <span className="font-bold">お問い合わせ: 0120-XXX-XXX</span>
+              📞 <span className="font-bold">お問い合わせはWebから</span>
             </span>
             <span className="hidden md:inline text-brand-300">
               受付 9:00〜18:00（年中無休）

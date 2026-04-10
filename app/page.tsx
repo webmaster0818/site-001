@@ -80,9 +80,9 @@ export default function Home() {
                 className="text-3xl font-black text-white mb-1"
                 style={{ textShadow: '0 1px 4px rgba(0,0,0,0.2)' }}
               >
-                3,000<span className="text-lg text-yellow-300 font-bold">件+</span>
+                全国<span className="text-lg text-yellow-300 font-bold">対応</span>
               </div>
-              <p className="text-xs text-blue-200 font-medium">掲載業者数</p>
+              <p className="text-xs text-blue-200 font-medium">主要エリア網羅</p>
             </div>
             <div className="stat-box">
               <div
@@ -98,9 +98,9 @@ export default function Home() {
                 className="text-3xl font-black text-white mb-1"
                 style={{ textShadow: '0 1px 4px rgba(0,0,0,0.2)' }}
               >
-                98<span className="text-lg text-yellow-300 font-bold">%</span>
+                厳選<span className="text-lg text-yellow-300 font-bold">比較</span>
               </div>
-              <p className="text-xs text-blue-200 font-medium">満足度</p>
+              <p className="text-xs text-blue-200 font-medium">優良業者のみ掲載</p>
             </div>
           </div>
         </div>
@@ -1021,7 +1021,7 @@ export default function Home() {
             <div className="flex items-center gap-4">
               <div className="hidden md:block text-right">
                 <p className="text-sm text-sky-200">お気軽にお問い合わせください</p>
-                <p className="text-2xl font-black text-white tracking-wider">📞 0120-XXX-XXX</p>
+                <p className="text-2xl font-black text-white tracking-wider">📩 Webでお問い合わせ</p>
               </div>
               <a
                 className="px-6 py-3 rounded-full text-sm font-bold"

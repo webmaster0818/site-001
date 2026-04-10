@@ -90,7 +90,7 @@ const structuredData = {
     "sameAs": [],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+81-120-XXX-XXX",
+      "telephone": "",
       "contactType": "customer service",
       "availableLanguage": "Japanese",
       "areaServed": "JP"
