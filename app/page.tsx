@@ -407,70 +407,66 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4 max-w-5xl mx-auto">
             <a className="area-card text-center group" href="/areas/tokyo/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                🗼 東京都
+                東京都
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/kanagawa/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                🌊 神奈川県
+                神奈川県
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/osaka/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                🏯 大阪府
+                大阪府
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/aichi/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                🏙 愛知県
+                愛知県
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/fukuoka/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                🍜 福岡県
+                福岡県
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/saitama/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                🌸 埼玉県
+                埼玉県
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/chiba/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                🎡 千葉県
+                千葉県
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/hyogo/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                ⚓ 兵庫県
+                兵庫県
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/sapporo/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                ⛄ 札幌市
+                札幌市
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/kyoto/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                ⛩ 京都府
+                京都府
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/sendai/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                🌿 仙台市
+                仙台市
               </div>
             </a>
             <a className="area-card text-center group" href="/areas/hiroshima/">
               <div className="font-bold text-gray-900 group-hover:text-sky-500 transition">
-                🕊 広島市
+                広島市
               </div>
             </a>
           </div>
-          <div className="text-center mt-8">
-            <a href="/areas/" className="text-sky-500 font-bold hover:underline text-base">
-              その他のエリアも見る →
-            </a>
-          </div>
+          {/* エリア一覧ページは準備中のためリンク非表示 */}
         </div>
       </section>
 
