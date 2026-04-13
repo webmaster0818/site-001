@@ -7,11 +7,11 @@ export const metadata = {
   openGraph: {
     title: "保土ケ谷区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
     description: "保土ケ谷区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
-    url: "https://clean-navi.jp/areas/yokohama-hodogaya/",
+    url: "https://cleaning-choices.com/areas/yokohama-hodogaya/",
     siteName: "クリーンナビ",
     images: [
       {
-        url: "https://clean-navi.jp/og-image.png",
+        url: "https://cleaning-choices.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "保土ケ谷区のハウスクリーニング業者比較 - クリーンナビ",
@@ -24,10 +24,10 @@ export const metadata = {
     card: "summary_large_image",
     title: "保土ケ谷区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
     description: "保土ケ谷区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
-    images: ["https://clean-navi.jp/og-image.png"],
+    images: ["https://cleaning-choices.com/og-image.png"],
   },
   alternates: {
-    canonical: "https://clean-navi.jp/areas/yokohama-hodogaya/",
+    canonical: "https://cleaning-choices.com/areas/yokohama-hodogaya/",
   },
 };
 

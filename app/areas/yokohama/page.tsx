@@ -7,11 +7,11 @@ export const metadata = {
   openGraph: {
     title: "横浜市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
     description: "横浜市でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
-    url: "https://clean-navi.jp/areas/yokohama/",
+    url: "https://cleaning-choices.com/areas/yokohama/",
     siteName: "クリーンナビ",
     images: [
       {
-        url: "https://clean-navi.jp/og-image.png",
+        url: "https://cleaning-choices.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "横浜市のハウスクリーニング業者比較 - クリーンナビ",
@@ -24,10 +24,10 @@ export const metadata = {
     card: "summary_large_image",
     title: "横浜市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
     description: "横浜市でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
-    images: ["https://clean-navi.jp/og-image.png"],
+    images: ["https://cleaning-choices.com/og-image.png"],
   },
   alternates: {
-    canonical: "https://clean-navi.jp/areas/yokohama/",
+    canonical: "https://cleaning-choices.com/areas/yokohama/",
   },
 };
 

@@ -30,11 +30,11 @@ export async function generateMetadata({
     openGraph: {
       title: `${info.title}業者おすすめ比較 | クリーンナビ`,
       description: info.description,
-      url: `https://clean-navi.jp/services/${category}/`,
+      url: `https://cleaning-choices.com/services/${category}/`,
       siteName: "クリーンナビ",
       images: [
         {
-          url: "https://clean-navi.jp/og-image.png",
+          url: "https://cleaning-choices.com/og-image.png",
           width: 1200,
           height: 630,
           alt: `${info.title}業者比較 - クリーンナビ`,
@@ -47,10 +47,10 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: `${info.title}業者おすすめ比較 | クリーンナビ`,
       description: info.description,
-      images: ["https://clean-navi.jp/og-image.png"],
+      images: ["https://cleaning-choices.com/og-image.png"],
     },
     alternates: {
-      canonical: `https://clean-navi.jp/services/${category}/`,
+      canonical: `https://cleaning-choices.com/services/${category}/`,
     },
   };
 }
