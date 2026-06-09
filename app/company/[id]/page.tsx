@@ -1,8 +1,10 @@
 import CompanyPageClient from "./CompanyPageClient";
 
 export async function generateStaticParams() {
-  // 各ページで使用されている業者IDを列挙
-  return Array.from({ length: 10 }, (_, i) => ({ id: String(i + 1) }));
+  // 実データ(COMPANY_DATA)が存在する業者IDのみ生成する。
+  // データの無いID(3〜10)は「業者が見つかりません」の空ページになり、
+  // Scaled Content（情報利得ゼロの重複ページ）となるため生成しない。
+  return [{ id: "1" }, { id: "2" }];
 }
 
 export default async function CompanyPage({
