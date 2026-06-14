@@ -572,10 +572,10 @@ export default function Chiba緑Area() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/chiba" className="btn btn-outline">千葉県</Link>
-            <Link href="/areas/chiba-chuo" className="btn btn-outline">千葉市中央区</Link>
-            <Link href="/areas/chiba-hanamigawa" className="btn btn-outline">千葉市花見川区</Link>
-            <Link href="/areas/chiba-inage" className="btn btn-outline">千葉市稲毛区</Link>
+            <Link href="/areas/chiba/" className="btn btn-outline">千葉県</Link>
+            <Link href="/areas/chiba-chuo/" className="btn btn-outline">千葉市中央区</Link>
+            <Link href="/areas/chiba-hanamigawa/" className="btn btn-outline">千葉市花見川区</Link>
+            <Link href="/areas/chiba-inage/" className="btn btn-outline">千葉市稲毛区</Link>
           </div>
         </div>
       </section>

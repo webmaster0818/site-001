@@ -573,10 +573,10 @@ export default function Kitakyushu戸畑Area() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/kitakyushu" className="btn btn-outline">福岡県</Link>
-            <Link href="/areas/kitakyushu-moji" className="btn btn-outline">北九州市門司区</Link>
-            <Link href="/areas/kitakyushu-wakamatsu" className="btn btn-outline">北九州市若松区</Link>
-            <Link href="/areas/kitakyushu-kokurakita" className="btn btn-outline">北九州市小倉北区</Link>
+            <Link href="/areas/kitakyushu/" className="btn btn-outline">福岡県</Link>
+            <Link href="/areas/kitakyushu-moji/" className="btn btn-outline">北九州市門司区</Link>
+            <Link href="/areas/kitakyushu-wakamatsu/" className="btn btn-outline">北九州市若松区</Link>
+            <Link href="/areas/kitakyushu-kokurakita/" className="btn btn-outline">北九州市小倉北区</Link>
           </div>
         </div>
       </section>

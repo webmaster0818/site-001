@@ -16,7 +16,7 @@ export default function TimecomparisonComparison() {
           <h1 className="text-4xl font-bold text-center mb-8">作業時間・所要時間比較</h1>
           <p className="text-xl text-center mb-12">サービス別の作業時間を比較</p>
           <div className="text-center">
-            <Link href="/guide" className="btn btn-primary btn-lg">業者選びガイドを見る</Link>
+            <Link href="/guide/" className="btn btn-primary btn-lg">業者選びガイドを見る</Link>
           </div>
         </div>
       </section>

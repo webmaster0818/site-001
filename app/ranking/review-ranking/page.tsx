@@ -16,7 +16,7 @@ export default function ReviewrankingPage() {
           <h1 className="text-4xl font-bold text-center mb-8">口コミ評価が高い業者ランキング</h1>
           <p className="text-xl text-center mb-12">実際の利用者評価で選ぶおすすめ業者</p>
           <div className="text-center">
-            <Link href="/services/aircon" className="btn btn-primary btn-lg">業者を探す</Link>
+            <Link href="/services/aircon/" className="btn btn-primary btn-lg">業者を探す</Link>
           </div>
         </div>
       </section>

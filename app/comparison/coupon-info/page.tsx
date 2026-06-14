@@ -16,7 +16,7 @@ export default function CouponinfoComparison() {
           <h1 className="text-4xl font-bold text-center mb-8">クーポン・割引情報まとめ</h1>
           <p className="text-xl text-center mb-12">お得なクーポン・キャンペーン情報</p>
           <div className="text-center">
-            <Link href="/guide" className="btn btn-primary btn-lg">業者選びガイドを見る</Link>
+            <Link href="/guide/" className="btn btn-primary btn-lg">業者選びガイドを見る</Link>
           </div>
         </div>
       </section>

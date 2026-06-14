@@ -222,7 +222,7 @@ export default function ChibaArea() {
         <div className="text-sm breadcrumbs">
           <ul>
             <li><Link href="/">ホーム</Link></li>
-            <li><Link href="/areas/chiba">千葉県</Link></li>
+            <li><Link href="/areas/chiba/">千葉県</Link></li>
           </ul>
         </div>
       </div>
@@ -331,7 +331,7 @@ export default function ChibaArea() {
       </section>
 
       <section className="py-16 bg-primary text-white text-center">
-        <Link href="/services/aircon" className="btn btn-lg">サービスを見る</Link>
+        <Link href="/services/aircon/" className="btn btn-lg">サービスを見る</Link>
       </section>
 
       {/* エリア特有のポイント */}
@@ -563,10 +563,10 @@ export default function ChibaArea() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/tokyo" className="btn btn-outline">東京都</Link>
-            <Link href="/areas/saitama" className="btn btn-outline">埼玉県</Link>
-            <Link href="/areas/kanagawa" className="btn btn-outline">神奈川県</Link>
-            <Link href="/areas/shizuoka" className="btn btn-outline">静岡県</Link>
+            <Link href="/areas/tokyo/" className="btn btn-outline">東京都</Link>
+            <Link href="/areas/saitama/" className="btn btn-outline">埼玉県</Link>
+            <Link href="/areas/kanagawa/" className="btn btn-outline">神奈川県</Link>
+            <Link href="/areas/shizuoka/" className="btn btn-outline">静岡県</Link>
           </div>
         </div>
       </section>

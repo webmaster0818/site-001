@@ -16,7 +16,7 @@ export default function QuickservicePage() {
           <h1 className="text-4xl font-bold text-center mb-8">即日対応可能な業者まとめ</h1>
           <p className="text-xl text-center mb-12">今すぐ依頼できる即日対応業者</p>
           <div className="text-center">
-            <Link href="/services/aircon" className="btn btn-primary btn-lg">業者を探す</Link>
+            <Link href="/services/aircon/" className="btn btn-primary btn-lg">業者を探す</Link>
           </div>
         </div>
       </section>

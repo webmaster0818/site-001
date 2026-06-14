@@ -582,10 +582,10 @@ export default function YokohamaNakaArea() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/kanagawa" className="btn btn-outline">神奈川県</Link>
-            <Link href="/areas/yokohama-nishi" className="btn btn-outline">横浜市西区</Link>
-            <Link href="/areas/yokohama-minami" className="btn btn-outline">横浜市南区</Link>
-            <Link href="/areas/yokohama-isogo" className="btn btn-outline">横浜市磯子区</Link>
+            <Link href="/areas/kanagawa/" className="btn btn-outline">神奈川県</Link>
+            <Link href="/areas/yokohama-nishi/" className="btn btn-outline">横浜市西区</Link>
+            <Link href="/areas/yokohama-minami/" className="btn btn-outline">横浜市南区</Link>
+            <Link href="/areas/yokohama-isogo/" className="btn btn-outline">横浜市磯子区</Link>
           </div>
         </div>
       </section>

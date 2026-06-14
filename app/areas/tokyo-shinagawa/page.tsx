@@ -581,10 +581,10 @@ export default function TokyoShinagawaArea() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/tokyo" className="btn btn-outline">東京都</Link>
-            <Link href="/areas/tokyo-minato" className="btn btn-outline">港区</Link>
-            <Link href="/areas/tokyo-meguro" className="btn btn-outline">目黒区</Link>
-            <Link href="/areas/tokyo-ota" className="btn btn-outline">大田区</Link>
+            <Link href="/areas/tokyo/" className="btn btn-outline">東京都</Link>
+            <Link href="/areas/tokyo-minato/" className="btn btn-outline">港区</Link>
+            <Link href="/areas/tokyo-meguro/" className="btn btn-outline">目黒区</Link>
+            <Link href="/areas/tokyo-ota/" className="btn btn-outline">大田区</Link>
           </div>
         </div>
       </section>

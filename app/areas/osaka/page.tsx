@@ -238,7 +238,7 @@ export default function OsakaArea() {
         <div className="text-sm breadcrumbs">
           <ul>
             <li><Link href="/">ホーム</Link></li>
-            <li><Link href="/areas/osaka">大阪府</Link></li>
+            <li><Link href="/areas/osaka/">大阪府</Link></li>
           </ul>
         </div>
       </div>
@@ -770,10 +770,10 @@ export default function OsakaArea() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/hyogo" className="btn btn-outline">兵庫県</Link>
-            <Link href="/areas/kyoto" className="btn btn-outline">京都府</Link>
-            <Link href="/areas/aichi" className="btn btn-outline">愛知県</Link>
-            <Link href="/areas/hiroshima" className="btn btn-outline">広島市</Link>
+            <Link href="/areas/hyogo/" className="btn btn-outline">兵庫県</Link>
+            <Link href="/areas/kyoto/" className="btn btn-outline">京都府</Link>
+            <Link href="/areas/aichi/" className="btn btn-outline">愛知県</Link>
+            <Link href="/areas/hiroshima/" className="btn btn-outline">広島市</Link>
           </div>
         </div>
       </section>
@@ -783,8 +783,8 @@ export default function OsakaArea() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">大阪府で最適なハウスクリーニング業者を見つけよう</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Link href="/services/aircon" className="btn btn-lg bg-white text-primary hover:bg-base-200">サービスから探す</Link>
-            <Link href="/price" className="btn btn-lg btn-outline text-white border-white hover:bg-white hover:text-primary">料金相場を見る</Link>
+            <Link href="/services/aircon/" className="btn btn-lg bg-white text-primary hover:bg-base-200">サービスから探す</Link>
+            <Link href="/price/" className="btn btn-lg btn-outline text-white border-white hover:bg-white hover:text-primary">料金相場を見る</Link>
           </div>
         </div>
       </section>

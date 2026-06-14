@@ -564,10 +564,10 @@ export default function Area_okayama_higashi() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/okayama" className="btn btn-outline">岡山市</Link>
-            <Link href="/areas/okayama-kita" className="btn btn-outline">岡山市北区</Link>
-            <Link href="/areas/okayama-naka" className="btn btn-outline">岡山市中区</Link>
-            <Link href="/areas/okayama-minami" className="btn btn-outline">岡山市南区</Link>
+            <Link href="/areas/okayama/" className="btn btn-outline">岡山市</Link>
+            <Link href="/areas/okayama-kita/" className="btn btn-outline">岡山市北区</Link>
+            <Link href="/areas/okayama-naka/" className="btn btn-outline">岡山市中区</Link>
+            <Link href="/areas/okayama-minami/" className="btn btn-outline">岡山市南区</Link>
           
           </div>
         </div>

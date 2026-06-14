@@ -135,19 +135,19 @@ export default function ServicePageClient({ category }: { category: string }) {
           </Link>
           <nav className="hidden md:flex gap-8">
             <Link
-              href="/services/aircon"
+              href="/services/aircon/"
               className="text-gray-700 hover:text-blue-600 transition"
             >
               エアコン
             </Link>
             <Link
-              href="/services/bathroom"
+              href="/services/bathroom/"
               className="text-gray-700 hover:text-blue-600 transition"
             >
               浴室
             </Link>
             <Link
-              href="/services/kitchen"
+              href="/services/kitchen/"
               className="text-gray-700 hover:text-blue-600 transition"
             >
               キッチン
@@ -257,7 +257,7 @@ export default function ServicePageClient({ category }: { category: string }) {
               {filteredCompanies.map((company) => (
                 <Link
                   key={company.id}
-                  href={`/company/${company.id}`}
+                  href={`/company/${company.id}/`}
                   className="block bg-white rounded-lg shadow-sm hover:shadow-md transition overflow-hidden"
                 >
                   <div className="flex flex-col md:flex-row">

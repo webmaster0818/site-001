@@ -16,7 +16,7 @@ export default function BathroomrankingPage() {
           <h1 className="text-4xl font-bold text-center mb-8">浴室クリーニング業者ランキング</h1>
           <p className="text-xl text-center mb-12">浴室クリーニングでおすすめの業者トップ10</p>
           <div className="text-center">
-            <Link href="/services/aircon" className="btn btn-primary btn-lg">業者を探す</Link>
+            <Link href="/services/aircon/" className="btn btn-primary btn-lg">業者を探す</Link>
           </div>
         </div>
       </section>

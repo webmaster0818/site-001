@@ -121,8 +121,8 @@ export default function Guide() {
           </div>
           <div className="flex-none">
             <ul className="menu menu-horizontal px-1">
-              <li><Link href="/services/aircon">サービス一覧</Link></li>
-              <li><Link href="/price">料金相場</Link></li>
+              <li><Link href="/services/aircon/">サービス一覧</Link></li>
+              <li><Link href="/price/">料金相場</Link></li>
             </ul>
           </div>
         </div>
@@ -133,7 +133,7 @@ export default function Guide() {
         <div className="text-sm breadcrumbs">
           <ul>
             <li><Link href="/">ホーム</Link></li>
-            <li><Link href="/guide">業者選びガイド</Link></li>
+            <li><Link href="/guide/">業者選びガイド</Link></li>
           </ul>
         </div>
       </div>
@@ -353,10 +353,10 @@ export default function Guide() {
             クリーンナビで、あなたにピッタリのハウスクリーニング業者を比較・検討
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/services/aircon" className="btn btn-lg bg-white text-primary hover:bg-base-200">
+            <Link href="/services/aircon/" className="btn btn-lg bg-white text-primary hover:bg-base-200">
               業者を探す
             </Link>
-            <Link href="/price" className="btn btn-lg btn-outline text-white border-white hover:bg-white hover:text-primary">
+            <Link href="/price/" className="btn btn-lg btn-outline text-white border-white hover:bg-white hover:text-primary">
               料金相場を見る
             </Link>
           </div>
@@ -372,9 +372,9 @@ export default function Guide() {
         </div>
         <div>
           <div className="grid grid-flow-col gap-4">
-            <Link href="/price" className="link link-hover">料金相場</Link>
-            <Link href="/guide" className="link link-hover">業者選びガイド</Link>
-            <Link href="/faq" className="link link-hover">よくある質問</Link>
+            <Link href="/price/" className="link link-hover">料金相場</Link>
+            <Link href="/guide/" className="link link-hover">業者選びガイド</Link>
+            <Link href="/faq/" className="link link-hover">よくある質問</Link>
           </div>
         </div>
       </footer>

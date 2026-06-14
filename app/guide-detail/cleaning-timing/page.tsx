@@ -20,7 +20,7 @@ export default function CleaningtimingGuide() {
             <p>プロの業者によるハウスクリーニングのタイミングについて、詳しく解説していきます。</p>
           </div>
           <div className="text-center mt-12">
-            <Link href="/guide" className="btn btn-primary">業者選びガイドを見る</Link>
+            <Link href="/guide/" className="btn btn-primary">業者選びガイドを見る</Link>
           </div>
         </div>
       </section>

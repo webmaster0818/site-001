@@ -220,7 +220,7 @@ export default function KawasakiArea() {
         <div className="text-sm breadcrumbs">
           <ul>
             <li><Link href="/">ホーム</Link></li>
-            <li><Link href="/areas/kawasaki">川崎市</Link></li>
+            <li><Link href="/areas/kawasaki/">川崎市</Link></li>
           </ul>
         </div>
       </div>
@@ -356,8 +356,8 @@ export default function KawasakiArea() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">川崎市で最適な業者を見つけよう</h2>
           <div className="flex gap-4 justify-center mt-8">
-            <Link href="/services/aircon" className="btn btn-lg bg-white text-primary">サービスから探す</Link>
-            <Link href="/price" className="btn btn-lg btn-outline text-white border-white">料金相場を見る</Link>
+            <Link href="/services/aircon/" className="btn btn-lg bg-white text-primary">サービスから探す</Link>
+            <Link href="/price/" className="btn btn-lg btn-outline text-white border-white">料金相場を見る</Link>
           </div>
         </div>
       </section>
@@ -367,10 +367,10 @@ export default function KawasakiArea() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/yokohama" className="btn btn-outline">横浜市</Link>
-            <Link href="/areas/tokyo" className="btn btn-outline">東京都</Link>
-            <Link href="/areas/kanagawa" className="btn btn-outline">神奈川県</Link>
-            <Link href="/areas/chiba" className="btn btn-outline">千葉県</Link>
+            <Link href="/areas/yokohama/" className="btn btn-outline">横浜市</Link>
+            <Link href="/areas/tokyo/" className="btn btn-outline">東京都</Link>
+            <Link href="/areas/kanagawa/" className="btn btn-outline">神奈川県</Link>
+            <Link href="/areas/chiba/" className="btn btn-outline">千葉県</Link>
           </div>
         </div>
       </section>

@@ -153,7 +153,7 @@ export default function CompanyPageClient({ id }: { id: string }) {
             ホーム
           </Link>
           <span className="mx-2">/</span>
-          <Link href={`/services/${company.category}`} className="hover:text-blue-600">
+          <Link href={`/services/${company.category}/`} className="hover:text-blue-600">
             {company.category}
           </Link>
           <span className="mx-2">/</span>

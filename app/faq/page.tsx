@@ -149,8 +149,8 @@ export default function FAQ() {
           </div>
           <div className="flex-none">
             <ul className="menu menu-horizontal px-1">
-              <li><Link href="/services/aircon">サービス一覧</Link></li>
-              <li><Link href="/price">料金相場</Link></li>
+              <li><Link href="/services/aircon/">サービス一覧</Link></li>
+              <li><Link href="/price/">料金相場</Link></li>
             </ul>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function FAQ() {
         <div className="text-sm breadcrumbs">
           <ul>
             <li><Link href="/">ホーム</Link></li>
-            <li><Link href="/faq">よくある質問</Link></li>
+            <li><Link href="/faq/">よくある質問</Link></li>
           </ul>
         </div>
       </div>
@@ -226,10 +226,10 @@ export default function FAQ() {
               上記で解決しない質問は、各業者に直接お問い合わせください
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services/aircon" className="btn btn-primary btn-lg">
+              <Link href="/services/aircon/" className="btn btn-primary btn-lg">
                 業者を探す
               </Link>
-              <Link href="/guide" className="btn btn-outline btn-lg">
+              <Link href="/guide/" className="btn btn-outline btn-lg">
                 業者選びガイドを見る
               </Link>
             </div>
@@ -244,7 +244,7 @@ export default function FAQ() {
             関連ページ
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <Link href="/price" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
+            <Link href="/price/" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
               <div className="card-body">
                 <h3 className="card-title text-primary">料金相場</h3>
                 <p className="text-sm text-base-content/70">
@@ -256,7 +256,7 @@ export default function FAQ() {
               </div>
             </Link>
 
-            <Link href="/guide" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
+            <Link href="/guide/" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
               <div className="card-body">
                 <h3 className="card-title text-primary">業者選びガイド</h3>
                 <p className="text-sm text-base-content/70">
@@ -268,7 +268,7 @@ export default function FAQ() {
               </div>
             </Link>
 
-            <Link href="/services/aircon" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
+            <Link href="/services/aircon/" className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
               <div className="card-body">
                 <h3 className="card-title text-primary">サービス一覧</h3>
                 <p className="text-sm text-base-content/70">
@@ -292,9 +292,9 @@ export default function FAQ() {
         </div>
         <div>
           <div className="grid grid-flow-col gap-4">
-            <Link href="/price" className="link link-hover">料金相場</Link>
-            <Link href="/guide" className="link link-hover">業者選びガイド</Link>
-            <Link href="/faq" className="link link-hover">よくある質問</Link>
+            <Link href="/price/" className="link link-hover">料金相場</Link>
+            <Link href="/guide/" className="link link-hover">業者選びガイド</Link>
+            <Link href="/faq/" className="link link-hover">よくある質問</Link>
           </div>
         </div>
       </footer>

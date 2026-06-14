@@ -15,7 +15,7 @@ export default function NewhouseScene() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-8">新築・リフォーム後クリーニング</h1>
           <p className="text-xl mb-12">新築・リフォーム後の仕上げ清掃</p>
-          <Link href="/services/aircon" className="btn btn-primary btn-lg">業者を探す</Link>
+          <Link href="/services/aircon/" className="btn btn-primary btn-lg">業者を探す</Link>
         </div>
       </section>
       <footer className="footer footer-center p-10"><p>© 2024 クリーンナビ</p></footer>

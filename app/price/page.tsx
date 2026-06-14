@@ -82,13 +82,13 @@ export default function PricePage() {
             <h1 className="text-2xl font-bold text-gray-900">クリーンナビ</h1>
           </Link>
           <nav className="hidden md:flex gap-8">
-            <Link href="/services/aircon" className="text-gray-700 hover:text-blue-600 transition">
+            <Link href="/services/aircon/" className="text-gray-700 hover:text-blue-600 transition">
               エアコン
             </Link>
-            <Link href="/services/bathroom" className="text-gray-700 hover:text-blue-600 transition">
+            <Link href="/services/bathroom/" className="text-gray-700 hover:text-blue-600 transition">
               浴室
             </Link>
-            <Link href="/services/kitchen" className="text-gray-700 hover:text-blue-600 transition">
+            <Link href="/services/kitchen/" className="text-gray-700 hover:text-blue-600 transition">
               キッチン
             </Link>
           </nav>
@@ -129,7 +129,7 @@ export default function PricePage() {
                       {service.service}
                     </h4>
                     <Link
-                      href={`/services/${service.category}`}
+                      href={`/services/${service.category}/`}
                       className="text-green-600 hover:text-green-700 font-semibold text-sm"
                     >
                       業者を探す →
@@ -257,7 +257,7 @@ export default function PricePage() {
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link
-              href="/services/aircon"
+              href="/services/aircon/"
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg"
             >
               業者を探す

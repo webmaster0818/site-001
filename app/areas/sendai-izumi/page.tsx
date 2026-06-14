@@ -564,10 +564,10 @@ export default function Area_sendai_izumi() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/sendai" className="btn btn-outline">宮城県</Link>
-            <Link href="/areas/sendai-aoba" className="btn btn-outline">仙台市青葉区</Link>
-            <Link href="/areas/sendai-miyagino" className="btn btn-outline">仙台市宮城野区</Link>
-            <Link href="/areas/sendai-wakabayashi" className="btn btn-outline">仙台市若林区</Link>
+            <Link href="/areas/sendai/" className="btn btn-outline">宮城県</Link>
+            <Link href="/areas/sendai-aoba/" className="btn btn-outline">仙台市青葉区</Link>
+            <Link href="/areas/sendai-miyagino/" className="btn btn-outline">仙台市宮城野区</Link>
+            <Link href="/areas/sendai-wakabayashi/" className="btn btn-outline">仙台市若林区</Link>
           
           </div>
         </div>

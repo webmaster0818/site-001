@@ -564,8 +564,8 @@ export default function Area_machida() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/hachioji" className="btn btn-outline">八王子市</Link>
-            <Link href="/areas/fujisawa" className="btn btn-outline">藤沢市</Link>
+            <Link href="/areas/hachioji/" className="btn btn-outline">八王子市</Link>
+            <Link href="/areas/fujisawa/" className="btn btn-outline">藤沢市</Link>
           
           </div>
         </div>

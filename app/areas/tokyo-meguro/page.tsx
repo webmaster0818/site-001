@@ -582,10 +582,10 @@ export default function TokyoMeguroArea() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/tokyo" className="btn btn-outline">東京都</Link>
-            <Link href="/areas/tokyo-shinagawa" className="btn btn-outline">品川区</Link>
-            <Link href="/areas/tokyo-setagaya" className="btn btn-outline">世田谷区</Link>
-            <Link href="/areas/tokyo-shibuya" className="btn btn-outline">渋谷区</Link>
+            <Link href="/areas/tokyo/" className="btn btn-outline">東京都</Link>
+            <Link href="/areas/tokyo-shinagawa/" className="btn btn-outline">品川区</Link>
+            <Link href="/areas/tokyo-setagaya/" className="btn btn-outline">世田谷区</Link>
+            <Link href="/areas/tokyo-shibuya/" className="btn btn-outline">渋谷区</Link>
           </div>
         </div>
       </section>

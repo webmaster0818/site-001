@@ -564,10 +564,10 @@ export default function Area_niigata_akiha() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/niigata" className="btn btn-outline">新潟県</Link>
-            <Link href="/areas/niigata-kita" className="btn btn-outline">新潟市北区</Link>
-            <Link href="/areas/niigata-higashi" className="btn btn-outline">新潟市東区</Link>
-            <Link href="/areas/niigata-chuo" className="btn btn-outline">新潟市秋葉区</Link>
+            <Link href="/areas/niigata/" className="btn btn-outline">新潟県</Link>
+            <Link href="/areas/niigata-kita/" className="btn btn-outline">新潟市北区</Link>
+            <Link href="/areas/niigata-higashi/" className="btn btn-outline">新潟市東区</Link>
+            <Link href="/areas/niigata-chuo/" className="btn btn-outline">新潟市秋葉区</Link>
           
           </div>
         </div>

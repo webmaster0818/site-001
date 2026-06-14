@@ -20,7 +20,7 @@ export default function TroublecasesGuide() {
             <p>プロの業者によるトラブル事例と対処法について、詳しく解説していきます。</p>
           </div>
           <div className="text-center mt-12">
-            <Link href="/guide" className="btn btn-primary">業者選びガイドを見る</Link>
+            <Link href="/guide/" className="btn btn-primary">業者選びガイドを見る</Link>
           </div>
         </div>
       </section>

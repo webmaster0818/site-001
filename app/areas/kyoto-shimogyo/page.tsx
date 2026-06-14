@@ -571,10 +571,10 @@ export default function Kyoto下京Area() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/kyoto" className="btn btn-outline">京都府</Link>
-            <Link href="/areas/kyoto-kita" className="btn btn-outline">京都市北区</Link>
-            <Link href="/areas/kyoto-kamigyo" className="btn btn-outline">京都市上京区</Link>
-            <Link href="/areas/kyoto-sakyo" className="btn btn-outline">京都市左京区</Link>
+            <Link href="/areas/kyoto/" className="btn btn-outline">京都府</Link>
+            <Link href="/areas/kyoto-kita/" className="btn btn-outline">京都市北区</Link>
+            <Link href="/areas/kyoto-kamigyo/" className="btn btn-outline">京都市上京区</Link>
+            <Link href="/areas/kyoto-sakyo/" className="btn btn-outline">京都市左京区</Link>
           </div>
         </div>
       </section>

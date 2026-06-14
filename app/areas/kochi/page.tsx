@@ -564,7 +564,7 @@ export default function Area_kochi() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/wakayama" className="btn btn-outline">和歌山市</Link>
+            <Link href="/areas/wakayama/" className="btn btn-outline">和歌山市</Link>
           
           </div>
         </div>

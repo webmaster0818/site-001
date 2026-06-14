@@ -16,7 +16,7 @@ export default function AreapricecomparisonComparison() {
           <h1 className="text-4xl font-bold text-center mb-8">エリア別料金相場比較</h1>
           <p className="text-xl text-center mb-12">全国主要都市の料金相場を比較</p>
           <div className="text-center">
-            <Link href="/guide" className="btn btn-primary btn-lg">業者選びガイドを見る</Link>
+            <Link href="/guide/" className="btn btn-primary btn-lg">業者選びガイドを見る</Link>
           </div>
         </div>
       </section>

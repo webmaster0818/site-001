@@ -277,7 +277,7 @@ export default function KyotoArea() {
       <section className="py-16 bg-primary text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">京都府で業者を探す</h2>
-          <Link href="/services/aircon" className="btn btn-lg bg-white text-primary">サービスを見る</Link>
+          <Link href="/services/aircon/" className="btn btn-lg bg-white text-primary">サービスを見る</Link>
         </div>
       </section>
 
@@ -509,10 +509,10 @@ export default function KyotoArea() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/osaka" className="btn btn-outline">大阪府</Link>
-            <Link href="/areas/hyogo" className="btn btn-outline">兵庫県</Link>
-            <Link href="/areas/aichi" className="btn btn-outline">愛知県</Link>
-            <Link href="/areas/shizuoka" className="btn btn-outline">静岡県</Link>
+            <Link href="/areas/osaka/" className="btn btn-outline">大阪府</Link>
+            <Link href="/areas/hyogo/" className="btn btn-outline">兵庫県</Link>
+            <Link href="/areas/aichi/" className="btn btn-outline">愛知県</Link>
+            <Link href="/areas/shizuoka/" className="btn btn-outline">静岡県</Link>
           </div>
         </div>
       </section>

@@ -570,10 +570,10 @@ export default function SapporoTeineArea() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/sapporo" className="btn btn-outline">北海道</Link>
-            <Link href="/areas/sapporo-chuo" className="btn btn-outline">札幌市中央区</Link>
-            <Link href="/areas/sapporo-kita" className="btn btn-outline">札幌市北区</Link>
-            <Link href="/areas/sapporo-higashi" className="btn btn-outline">札幌市東区</Link>
+            <Link href="/areas/sapporo/" className="btn btn-outline">北海道</Link>
+            <Link href="/areas/sapporo-chuo/" className="btn btn-outline">札幌市中央区</Link>
+            <Link href="/areas/sapporo-kita/" className="btn btn-outline">札幌市北区</Link>
+            <Link href="/areas/sapporo-higashi/" className="btn btn-outline">札幌市東区</Link>
           </div>
         </div>
       </section>

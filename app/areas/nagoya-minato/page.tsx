@@ -2,10 +2,10 @@ import Link from "next/link";
 import { Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
-  title: "港区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+  title: "【2026年6月最新】港区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
   description: "港区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
   openGraph: {
-    title: "港区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+    title: "【2026年6月最新】港区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
     description: "港区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
     url: "https://cleaning-choices.com/areas/nagoya-minato/",
     siteName: "クリーンナビ",
@@ -22,7 +22,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "港区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+    title: "【2026年6月最新】港区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
     description: "港区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
     images: ["https://cleaning-choices.com/og-image.png"],
   },
@@ -580,15 +580,27 @@ export default function NagoyaMinatoArea() {
         </div>
       </section>
 
+      {/* サービス別に探す */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center mb-8">サービス別に探す</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <Link href="/services/aircon/" className="btn btn-outline">エアコンクリーニング</Link>
+            <Link href="/services/bathroom/" className="btn btn-outline">浴室クリーニング</Link>
+            <Link href="/services/kitchen/" className="btn btn-outline">キッチンクリーニング</Link>
+          </div>
+        </div>
+      </section>
+
       {/* 近隣エリア */}
       <section className="py-16 bg-base-200">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/areas/aichi" className="btn btn-outline">愛知県</Link>
-            <Link href="/areas/nagoya-atsuta" className="btn btn-outline">名古屋市熱田区</Link>
-            <Link href="/areas/nagoya-nakagawa" className="btn btn-outline">名古屋市中川区</Link>
-            <Link href="/areas/nagoya-minami" className="btn btn-outline">名古屋市南区</Link>
+            <Link href="/areas/aichi/" className="btn btn-outline">愛知県</Link>
+            <Link href="/areas/nagoya-atsuta/" className="btn btn-outline">名古屋市熱田区</Link>
+            <Link href="/areas/nagoya-nakagawa/" className="btn btn-outline">名古屋市中川区</Link>
+            <Link href="/areas/nagoya-minami/" className="btn btn-outline">名古屋市南区</Link>
           </div>
         </div>
       </section>

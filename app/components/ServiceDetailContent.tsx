@@ -75,8 +75,8 @@ export default function ServiceDetailContent({ data }: { data: ServiceDetailData
       <div className="bg-base-200 rounded-2xl p-6 my-8 text-center">
         <p className="font-bold mb-3">{data.name}の料金は業者で差が出ます。まずは無料見積りで比較を。</p>
         <div className="flex flex-wrap gap-3 justify-center">
-          <Link href="/services/aircon" className="btn btn-primary">業者を探す</Link>
-          <Link href="/price" className="btn btn-outline">料金相場を見る</Link>
+          <Link href="/services/aircon/" className="btn btn-primary">業者を探す</Link>
+          <Link href="/price/" className="btn btn-outline">料金相場を見る</Link>
         </div>
       </div>
 
