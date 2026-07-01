@@ -61,9 +61,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
-  alternates: {
-    canonical: "https://cleaning-choices.com/",
-  },
 };
 
 // 構造化データ（JSON-LD）
