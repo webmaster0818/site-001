@@ -5,6 +5,11 @@ Discord ch: `1481169542838489150` / push→CF自動ビルド（HTTPS push要ト�
 
 ## 作業ログ
 
+### 2026-07-01 トップのcanonical欠落を修正（MediaXAI全サイトcanonical点検依頼）
+- 本番トップ(cleaning-choices.com/)にcanonicalタグが出力されていなかった（配下エリアページ等は正常）。cf-cache-status=DYNAMIC＝キャッシュでなく実配信で欠落。トップがlayoutのcanonical継承に依存していたのが原因
+- app/page.tsx に `metadata.alternates.canonical="https://cleaning-choices.com/"` を明示追加→build→push(CF自動ビルド)→本番トップにcanonical反映を確認。title等の継承は維持
+- ※別課題「/areas/xxx と /areas/xxx/ の末尾スラッシュ重複インデックス」はcanonicalタグとは別のリダイレクト正規化論点で未対応（戦略Phase0で対応予定）
+
 ### 2026-06-12 MediaXAI依頼: 最短・最大成長戦略（ASP以外）
 GSC実数診断:
 - 28日: クリック14・表示2,411・平均39.2位・CTR 0.58%。週500-700表示で横ばい
