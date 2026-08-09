@@ -42,14 +42,6 @@ const SCENES = [
 export default function SceneIndexPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="border-b border-gray-200 bg-white">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Sparkles className="w-8 h-8 text-blue-600" />
-            <h1 className="text-2xl font-bold text-gray-900">クリーンナビ</h1>
-          </Link>
-        </div>
-      </header>
 
       <section className="bg-blue-600 text-white py-12">
         <div className="container mx-auto px-4">

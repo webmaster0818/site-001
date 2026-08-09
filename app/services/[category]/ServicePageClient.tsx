@@ -127,34 +127,6 @@ export default function ServicePageClient({ category }: { category: string }) {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* ヘッダー */}
-      <header className="border-b border-gray-200 bg-white">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Sparkles className="w-8 h-8 text-blue-600" />
-            <h1 className="text-2xl font-bold text-gray-900">クリーンナビ</h1>
-          </Link>
-          <nav className="hidden md:flex gap-8">
-            <Link
-              href="/services/aircon/"
-              className="text-gray-700 hover:text-blue-600 transition"
-            >
-              エアコン
-            </Link>
-            <Link
-              href="/services/bathroom/"
-              className="text-gray-700 hover:text-blue-600 transition"
-            >
-              浴室
-            </Link>
-            <Link
-              href="/services/kitchen/"
-              className="text-gray-700 hover:text-blue-600 transition"
-            >
-              キッチン
-            </Link>
-          </nav>
-        </div>
-      </header>
 
       {/* ページタイトル */}
       <section className="bg-blue-600 text-white py-12">

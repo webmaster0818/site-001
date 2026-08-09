@@ -8,9 +8,6 @@ export const metadata = {
 export default function ReviewrankingPage() {
   return (
     <div className="min-h-screen bg-base-100">
-      <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
-        <Link href="/" className="btn btn-ghost text-xl">クリーンナビ</Link>
-      </header>
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-8">口コミ評価が高い業者ランキング</h1>

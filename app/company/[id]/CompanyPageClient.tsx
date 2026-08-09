@@ -227,14 +227,6 @@ export default function CompanyPageClient({ id }: { id: string }) {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* ヘッダー */}
-      <header className="border-b border-gray-200 bg-white">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Sparkles className="w-8 h-8 text-blue-600" />
-            <h1 className="text-2xl font-bold text-gray-900">クリーンナビ</h1>
-          </Link>
-        </div>
-      </header>
 
       <div className="container mx-auto px-4 py-8">
         {/* パンくずリスト */}
