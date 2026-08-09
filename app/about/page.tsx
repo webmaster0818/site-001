@@ -190,27 +190,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* フッター */}
-      <footer className="footer footer-center p-10 bg-base-200 text-base-content">
-        <div>
-          <p className="font-bold text-lg">クリーンナビ</p>
-          <p>ハウスクリーニング業者の比較・検索サイト</p>
-          <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
-        </div>
-        <div>
-          <div className="grid grid-flow-col gap-4">
-            <Link href="/price/" className="link link-hover">料金相場</Link>
-            <Link href="/guide/" className="link link-hover">業者選びガイド</Link>
-            <Link href="/faq/" className="link link-hover">よくある質問</Link>
-          </div>
-          <div className="grid grid-flow-col gap-4 mt-2">
-            <Link href="/about/" className="link link-hover">運営者情報</Link>
-            <Link href="/privacy/" className="link link-hover">プライバシーポリシー</Link>
-            <Link href="/terms/" className="link link-hover">利用規約</Link>
-            <Link href="/contact/" className="link link-hover">お問い合わせ</Link>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

@@ -573,7 +573,7 @@ export default function Kitakyushu戸畑Area() {
  <div className="container mx-auto px-4">
  <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
- <Link href="/areas/kitakyushu/"className="btn btn-outline">福岡県</Link>
+ <Link href="/areas/fukuoka/"className="btn btn-outline">福岡県</Link>
  <Link href="/areas/kitakyushu-moji/"className="btn btn-outline">北九州市門司区</Link>
  <Link href="/areas/kitakyushu-wakamatsu/"className="btn btn-outline">北九州市若松区</Link>
  <Link href="/areas/kitakyushu-kokurakita/"className="btn btn-outline">北九州市小倉北区</Link>
@@ -581,12 +581,6 @@ export default function Kitakyushu戸畑Area() {
  </div>
  </section>
 
- <footer className="footer footer-center p-10 bg-base-200">
- <div>
- <p className="font-bold text-lg">クリーンナビ</p>
- <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
- </div>
- </footer>
  </div>
  );
 }

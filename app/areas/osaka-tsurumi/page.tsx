@@ -600,17 +600,10 @@ export default function OsakaTsurumiArea() {
  <Link href="/areas/osaka/"className="btn btn-outline">大阪府</Link>
  <Link href="/areas/osaka-joto/"className="btn btn-outline">大阪市城東区</Link>
  <Link href="/areas/osaka-higashinari/"className="btn btn-outline">大阪市東成区</Link>
- <Link href="/areas/kadoma/"className="btn btn-outline">門真市</Link>
  </div>
  </div>
  </section>
 
- <footer className="footer footer-center p-10 bg-base-200">
- <div>
- <p className="font-bold text-lg">クリーンナビ</p>
- <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
- </div>
- </footer>
  </div>
  );
 }

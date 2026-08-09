@@ -19,11 +19,12 @@ const COMPANY_DATA: { [key: string]: any } = {
     id: 1,
     name: "おそうじ本舗",
     category: "エアコンクリーニング",
+    categorySlug: "aircon",
     rating: 4.5,
     reviewCount: 1200,
     price: 12100,
     area: "全国対応（約1,900店舗）",
-    image: "/images/companies/osouji-honpo.png",
+    image: "/images/service-aircon.png",
     description:
       "全国約1,900店舗を展開する業界最大手のハウスクリーニングチェーン。特許取得の「ファインバブルエアコンクリーニング」で、微細な泡が奥のカビ・汚れまで徹底除去。スタッフは全員、独自の研修プログラムを修了した有資格者です。",
     features: [
@@ -41,6 +42,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     workingHours: "9:00〜20:00（店舗により異なる）",
     phone: "公式サイトからWeb予約",
     email: "公式サイトの問い合わせフォームをご利用ください",
+    guarantee: "損害保険加入済み",
     reviews: [
       {
         id: 1,
@@ -72,11 +74,12 @@ const COMPANY_DATA: { [key: string]: any } = {
     id: 2,
     name: "ダスキン サービスマスター",
     category: "浴室クリーニング",
+    categorySlug: "bathroom",
     rating: 4.6,
     reviewCount: 890,
     price: 19800,
     area: "全国対応（約1,600拠点）",
-    image: "/images/companies/duskin.png",
+    image: "/images/service-bathroom.png",
     description:
       "1963年創業の老舗クリーニングブランド。全国約1,600拠点で展開し、浴室クリーニングをはじめとする各種ハウスクリーニングを提供。専門的な技術と設備を持ち、高い清掃スキルを持ったスタッフが在籍。トラブル時のサポート体制も万全です。",
     features: [
@@ -94,6 +97,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     workingHours: "9:00〜17:00（店舗により異なる）",
     phone: "公式サイトからWeb予約",
     email: "公式サイトの問い合わせフォームをご利用ください",
+    guarantee: "損害保険加入済み",
     reviews: [
       {
         id: 1,
@@ -112,6 +116,92 @@ const COMPANY_DATA: { [key: string]: any } = {
           "料金は少し高めですが、仕上がりの品質は間違いなし。定期サービスも検討しています。",
       },
     ],
+  },
+  "3": {
+    id: 3,
+    name: "おそうじ革命",
+    category: "エアコンクリーニング",
+    categorySlug: "aircon",
+    rating: 4.7,
+    reviewCount: 680,
+    price: 9980,
+    area: "全国対応（約420店舗）",
+    image: "/images/service-aircon.png",
+    description:
+      "全国約420店舗を展開するハウスクリーニングチェーン。技術力と価格のバランスに優れ、50日間の研修を受けたスタッフが対応します。エアコンクリーニングは業界最安クラスの料金設定で、追加料金なしの明朗会計が特徴です。",
+    features: ["業界最安クラス", "50日間の研修", "追加料金なし", "全国約420店舗展開"],
+    services: [
+      { name: "エアコンクリーニング", price: 9980 },
+      { name: "キッチンクリーニング", price: 17930 },
+      { name: "浴室クリーニング", price: 17930 },
+    ],
+    workingHours: "9:00〜20:00（年中無休）",
+    phone: "公式サイトからWeb予約",
+    email: "公式サイトの問い合わせフォームをご利用ください",
+  },
+  "4": {
+    id: 4,
+    name: "東京ガス ハウスクリーニング",
+    category: "キッチンクリーニング",
+    categorySlug: "kitchen",
+    rating: 4.8,
+    reviewCount: 950,
+    price: 19800,
+    area: "東京・神奈川・千葉・埼玉",
+    image: "/images/service-kitchen.png",
+    description:
+      "大手ガス会社が運営するハウスクリーニングサービス。独自の清掃技術をマスターしたスタッフが対応し、高品質なサービスに定評があります。対応エリアは東京・神奈川・千葉・埼玉で、Webで簡単に予約できます。",
+    features: ["大手ガス会社運営", "高品質サービス", "Webで簡単予約"],
+    services: [
+      { name: "キッチンクリーニング", price: 19800 },
+      { name: "浴室クリーニング", price: 19800 },
+    ],
+    workingHours: "8:30〜17:00（平日・土日祝）",
+    phone: "公式サイトからWeb予約",
+    email: "公式サイトの問い合わせフォームをご利用ください",
+  },
+  "5": {
+    id: 5,
+    name: "カジタク（イオングループ）",
+    category: "浴室クリーニング",
+    categorySlug: "bathroom",
+    rating: 4.4,
+    reviewCount: 720,
+    price: 16500,
+    area: "全国対応",
+    image: "/images/service-bathroom.png",
+    description:
+      "イオングループが運営するハウスクリーニングサービス。仕上がり満足保証付きの高品質なサービスが特徴で、浴室クリーニングでは防カビコーティングにも対応しています。",
+    features: ["イオングループ", "仕上がり満足保証", "防カビコーティング"],
+    services: [
+      { name: "浴室クリーニング", price: 16500 },
+      { name: "キッチンクリーニング", price: 19580 },
+    ],
+    workingHours: "10:00〜19:00（年末年始除く）",
+    phone: "公式サイトからWeb予約",
+    email: "公式サイトの問い合わせフォームをご利用ください",
+    guarantee: "仕上がり満足保証あり",
+  },
+  "6": {
+    id: 6,
+    name: "ベアーズ",
+    category: "キッチンクリーニング",
+    categorySlug: "kitchen",
+    rating: 4.5,
+    reviewCount: 580,
+    price: 17600,
+    area: "東京・神奈川・千葉・埼玉・大阪・兵庫",
+    image: "/images/service-kitchen.png",
+    description:
+      "家事代行サービス大手が手がけるハウスクリーニング。スタッフ教育に力を入れており、丁寧な作業が特徴です。複数箇所のセット割引や定期利用にも対応しています。",
+    features: ["家事代行大手", "セット割引", "定期利用対応"],
+    services: [
+      { name: "キッチンクリーニング", price: 17600 },
+      { name: "浴室クリーニング", price: 19910 },
+    ],
+    workingHours: "9:00〜20:00（年中無休）",
+    phone: "公式サイトからWeb予約",
+    email: "公式サイトの問い合わせフォームをご利用ください",
   },
 };
 
@@ -153,7 +243,7 @@ export default function CompanyPageClient({ id }: { id: string }) {
             ホーム
           </Link>
           <span className="mx-2">/</span>
-          <Link href={`/services/${company.category}/`} className="hover:text-blue-600">
+          <Link href={`/services/${company.categorySlug}/`} className="hover:text-blue-600">
             {company.category}
           </Link>
           <span className="mx-2">/</span>
@@ -234,6 +324,7 @@ export default function CompanyPageClient({ id }: { id: string }) {
             </div>
 
             {/* 口コミ */}
+            {company.reviews && company.reviews.length > 0 && (
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 お客様の声
@@ -268,6 +359,7 @@ export default function CompanyPageClient({ id }: { id: string }) {
                 ))}
               </div>
             </div>
+            )}
           </div>
 
           {/* サイドバー */}
@@ -323,15 +415,17 @@ export default function CompanyPageClient({ id }: { id: string }) {
                   </div>
                 </div>
 
+                {company.guarantee && (
                 <div className="flex items-start gap-3">
                   <Shield className="w-5 h-5 text-gray-400 mt-0.5" />
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">
                       保証・保険
                     </div>
-                    <div className="text-gray-600">損害保険加入済み</div>
+                    <div className="text-gray-600">{company.guarantee}</div>
                   </div>
                 </div>
+                )}
               </div>
             </div>
           </div>

@@ -207,9 +207,6 @@ export default function TokyosetagayaArea() {
  const areas = ['三軒茶屋', '下北沢', '二子玉川', '成城', '等々力', '駒沢'];
  return (
  <div className="min-h-screen bg-base-100">
- <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
- <Link href="/"className="btn btn-ghost text-xl">クリーンナビ</Link>
- </header>
  <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
  <div className="container mx-auto px-4 text-center">
  <h1 className="text-4xl font-bold mb-4">世田谷区のハウスクリーニング業者比較</h1>
@@ -573,7 +570,6 @@ export default function TokyosetagayaArea() {
  </div>
  </div>
  </section>
- <footer className="footer footer-center p-10 bg-base-200"><p>© 2024 クリーンナビ</p></footer>
  </div>
  );
 }

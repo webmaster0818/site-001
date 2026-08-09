@@ -182,9 +182,6 @@ export default function HiroshimaArea() {
   const areas = ['中区', '東区', '南区', '西区', '安佐南区', '安佐北区', '安芸区', '佐伯区'];
   return (
     <div className="min-h-screen bg-base-100">
-      <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
-        <Link href="/" className="btn btn-ghost text-xl">クリーンナビ</Link>
-      </header>
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">広島市のハウスクリーニング業者比較</h1>
@@ -293,7 +290,6 @@ export default function HiroshimaArea() {
           </div>
         </div>
       </section>
-      <footer className="footer footer-center p-10"><p>© 2024 クリーンナビ</p></footer>
     </div>
   );
 }

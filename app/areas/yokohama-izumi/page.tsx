@@ -588,17 +588,10 @@ export default function YokohamaIzumiArea() {
  <Link href="/areas/kanagawa/"className="btn btn-outline">神奈川県</Link>
  <Link href="/areas/yokohama-totsuka/"className="btn btn-outline">横浜市戸塚区</Link>
  <Link href="/areas/yokohama-seya/"className="btn btn-outline">横浜市瀬谷区</Link>
- <Link href="/areas/yamato/"className="btn btn-outline">大和市</Link>
  </div>
  </div>
  </section>
 
- <footer className="footer footer-center p-10 bg-base-200">
- <div>
- <p className="font-bold text-lg">クリーンナビ</p>
- <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
- </div>
- </footer>
  </div>
  );
 }

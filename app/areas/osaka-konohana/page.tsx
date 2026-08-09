@@ -600,17 +600,11 @@ export default function OsakaKonohanaArea() {
  <Link href="/areas/osaka/"className="btn btn-outline">大阪府</Link>
  <Link href="/areas/osaka-fukushima/"className="btn btn-outline">大阪市福島区</Link>
  <Link href="/areas/osaka-nishi/"className="btn btn-outline">大阪市西区</Link>
- <Link href="/areas/osaka-港/"className="btn btn-outline">大阪市港区</Link>
+ <Link href="/areas/osaka-minato/"className="btn btn-outline">大阪市港区</Link>
  </div>
  </div>
  </section>
 
- <footer className="footer footer-center p-10 bg-base-200">
- <div>
- <p className="font-bold text-lg">クリーンナビ</p>
- <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
- </div>
- </footer>
  </div>
  );
 }

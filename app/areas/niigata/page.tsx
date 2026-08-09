@@ -182,9 +182,6 @@ export default function NiigataArea() {
   const areas = ['新潟市', '長岡市', '三条市', '柏崎市', '新発田市', '小千谷市', '加茂市', '十日町市', '見附市', '村上市'];
   return (
     <div className="min-h-screen bg-base-100">
-      <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
-        <Link href="/" className="btn btn-ghost text-xl">クリーンナビ</Link>
-      </header>
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">新潟県のハウスクリーニング業者比較</h1>
@@ -293,7 +290,6 @@ export default function NiigataArea() {
           </div>
         </div>
       </section>
-      <footer className="footer footer-center p-10"><p>© 2024 クリーンナビ</p></footer>
     </div>
   );
 }

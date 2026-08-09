@@ -28,7 +28,7 @@ export default function Home() {
  >
  <span className="text-yellow-300 text-sm"></span>
  <span className="text-white text-sm font-medium">
- 2026年3月 最新版 — 厳選業者を徹底比較
+ 2026年8月 最新版 — 厳選業者を徹底比較
  </span>
  </div>
 

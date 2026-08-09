@@ -207,9 +207,6 @@ export default function TokyoshinjukuArea() {
   const areas = ['新宿駅周辺', '高田馬場', '早稲田', '神楽坂', '四谷', '市ヶ谷', '大久保'];
   return (
     <div className="min-h-screen bg-base-100">
-      <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
-        <Link href="/" className="btn btn-ghost text-xl">クリーンナビ</Link>
-      </header>
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">新宿区のハウスクリーニング業者比較</h1>
@@ -351,7 +348,6 @@ export default function TokyoshinjukuArea() {
           </div>
         </div>
       </section>
-      <footer className="footer footer-center p-10 bg-base-200"><p>© 2024 クリーンナビ</p></footer>
     </div>
   );
 }

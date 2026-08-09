@@ -206,9 +206,6 @@ export default function TokyominatoArea() {
   const areas = ['赤坂', '青山', '麻布', '六本木', '芝', '白金', '台場', '虎ノ門'];
   return (
     <div className="min-h-screen bg-base-100">
-      <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
-        <Link href="/" className="btn btn-ghost text-xl">クリーンナビ</Link>
-      </header>
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">港区のハウスクリーニング業者比較</h1>
@@ -359,7 +356,6 @@ export default function TokyominatoArea() {
           </div>
         </div>
       </section>
-      <footer className="footer footer-center p-10 bg-base-200"><p>© 2024 クリーンナビ</p></footer>
     </div>
   );
 }

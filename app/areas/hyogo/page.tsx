@@ -596,7 +596,6 @@ export default function HyogoArea() {
  </div>
  </div>
  </section>
- <footer className="footer footer-center p-10"><p>© 2024 クリーンナビ</p></footer>
  </div>
  );
 }

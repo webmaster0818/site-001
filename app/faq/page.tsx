@@ -139,22 +139,6 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen bg-base-100">
-      {/* ヘッダー */}
-      <header className="navbar bg-primary text-primary-content sticky top-0 z-50 shadow-lg">
-        <div className="container mx-auto">
-          <div className="flex-1">
-            <Link href="/" className="btn btn-ghost text-xl font-bold">
-              クリーンナビ
-            </Link>
-          </div>
-          <div className="flex-none">
-            <ul className="menu menu-horizontal px-1">
-              <li><Link href="/services/aircon/">サービス一覧</Link></li>
-              <li><Link href="/price/">料金相場</Link></li>
-            </ul>
-          </div>
-        </div>
-      </header>
 
       {/* パンくずリスト */}
       <div className="container mx-auto px-4 py-4">
@@ -283,21 +267,6 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* フッター */}
-      <footer className="footer footer-center p-10 bg-base-200 text-base-content">
-        <div>
-          <p className="font-bold text-lg">クリーンナビ</p>
-          <p>ハウスクリーニング業者の比較・検索サイト</p>
-          <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
-        </div>
-        <div>
-          <div className="grid grid-flow-col gap-4">
-            <Link href="/price/" className="link link-hover">料金相場</Link>
-            <Link href="/guide/" className="link link-hover">業者選びガイド</Link>
-            <Link href="/faq/" className="link link-hover">よくある質問</Link>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

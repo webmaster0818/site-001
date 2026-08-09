@@ -663,9 +663,6 @@ export default function TokyoArea() {
  </div>
  </div>
  </section>
- <footer className="footer footer-center p-10 bg-base-200">
- <p>© 2024 クリーンナビ</p>
- </footer>
  </div>
  );
 }

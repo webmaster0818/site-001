@@ -571,12 +571,6 @@ export default function Area_kagoshima() {
  </div>
  </section>
 
- <footer className="footer footer-center p-10 bg-base-200">
- <div>
- <p className="font-bold text-lg">クリーンナビ</p>
- <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
- </div>
- </footer>
  </div>
  );
 }

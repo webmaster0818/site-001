@@ -587,17 +587,10 @@ export default function YokohamaSeyaArea() {
  <Link href="/areas/kanagawa/"className="btn btn-outline">神奈川県</Link>
  <Link href="/areas/yokohama-asahi/"className="btn btn-outline">横浜市旭区</Link>
  <Link href="/areas/yokohama-izumi/"className="btn btn-outline">横浜市泉区</Link>
- <Link href="/areas/yamato/"className="btn btn-outline">大和市</Link>
  </div>
  </div>
  </section>
 
- <footer className="footer footer-center p-10 bg-base-200">
- <div>
- <p className="font-bold text-lg">クリーンナビ</p>
- <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
- </div>
- </footer>
  </div>
  );
 }

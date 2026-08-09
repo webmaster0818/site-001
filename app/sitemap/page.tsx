@@ -67,7 +67,6 @@ const rankingPages: PageLink[] = [
 ];
 
 const comparisonPages: PageLink[] = [
-  { href: "/comparison/", name: "業者比較一覧" },
   { href: "/comparison/major-3-comparison/", name: "大手3社徹底比較" },
   { href: "/comparison/area-price-comparison/", name: "エリア別料金相場比較" },
   { href: "/comparison/time-comparison/", name: "作業時間・所要時間比較" },
@@ -190,20 +189,6 @@ export default function SitemapPage() {
         </div>
       </section>
 
-      {/* フッター */}
-      <footer className="footer footer-center p-10 bg-base-200 text-base-content">
-        <div>
-          <p className="font-bold text-lg">クリーンナビ</p>
-          <p>ハウスクリーニング業者の比較・検索サイト</p>
-        </div>
-        <div>
-          <div className="grid grid-flow-col gap-4">
-            <Link href="/price/" className="link link-hover">料金相場</Link>
-            <Link href="/guide/" className="link link-hover">業者選びガイド</Link>
-            <Link href="/faq/" className="link link-hover">よくある質問</Link>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

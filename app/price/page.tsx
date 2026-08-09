@@ -74,26 +74,6 @@ const PRICE_FACTORS = [
 export default function PricePage() {
  return (
  <div className="min-h-screen bg-gray-50">
- {/* ヘッダー */}
- <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
- <div className="container mx-auto px-4 py-4 flex items-center justify-between">
- <Link href="/"className="flex items-center gap-2">
- <Sparkles className="w-8 h-8 text-blue-600"/>
- <h1 className="text-2xl font-bold text-gray-900">クリーンナビ</h1>
- </Link>
- <nav className="hidden md:flex gap-8">
- <Link href="/services/aircon/"className="text-gray-700 hover:text-blue-600 transition">
- エアコン
- </Link>
- <Link href="/services/bathroom/"className="text-gray-700 hover:text-blue-600 transition">
- 浴室
- </Link>
- <Link href="/services/kitchen/"className="text-gray-700 hover:text-blue-600 transition">
- キッチン
- </Link>
- </nav>
- </div>
- </header>
 
  {/* ページヘッダー */}
  <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
@@ -272,23 +252,6 @@ export default function PricePage() {
  </div>
  </section>
 
- {/* フッター */}
- <footer className="bg-gray-900 text-white py-12">
- <div className="container mx-auto px-4">
- <div className="text-center">
- <div className="flex items-center justify-center gap-2 mb-4">
- <Sparkles className="w-6 h-6 text-blue-400"/>
- <h5 className="text-xl font-bold">クリーンナビ</h5>
- </div>
- <p className="text-gray-400 text-sm mb-4">
- ハウスクリーニング業者を簡単比較・予約できるサービスです。
- </p>
- <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
- <p>&copy; 2026 クリーンナビ All rights reserved.</p>
- </div>
- </div>
- </div>
- </footer>
  </div>
  );
 }

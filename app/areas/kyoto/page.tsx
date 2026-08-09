@@ -182,9 +182,6 @@ export default function KyotoArea() {
  const areas = ['京都市', '宇治市', '亀岡市', '城陽市', '向日市', '長岡京市', '八幡市', '京田辺市', '木津川市', '南丹市'];
  return (
  <div className="min-h-screen bg-base-100">
- <header className="navbar bg-primary text-primary-content sticky top-0 z-50">
- <Link href="/"className="btn btn-ghost text-xl">クリーンナビ</Link>
- </header>
  <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
  <div className="container mx-auto px-4 text-center">
  <h1 className="text-4xl font-bold mb-4">京都府のハウスクリーニング業者比較</h1>
@@ -516,7 +513,6 @@ export default function KyotoArea() {
  </div>
  </div>
  </section>
- <footer className="footer footer-center p-10"><p>© 2024 クリーンナビ</p></footer>
  </div>
  );
 }

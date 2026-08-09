@@ -587,17 +587,10 @@ export default function YokohamaSakaeArea() {
  <Link href="/areas/kanagawa/"className="btn btn-outline">神奈川県</Link>
  <Link href="/areas/yokohama-totsuka/"className="btn btn-outline">横浜市戸塚区</Link>
  <Link href="/areas/yokohama-kanazawa/"className="btn btn-outline">横浜市金沢区</Link>
- <Link href="/areas/kamakura/"className="btn btn-outline">鎌倉市</Link>
  </div>
  </div>
  </section>
 
- <footer className="footer footer-center p-10 bg-base-200">
- <div>
- <p className="font-bold text-lg">クリーンナビ</p>
- <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
- </div>
- </footer>
  </div>
  );
 }

@@ -598,18 +598,11 @@ export default function NagoyaNakakuArea() {
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
  <Link href="/areas/aichi/"className="btn btn-outline">愛知県</Link>
  <Link href="/areas/nagoya-higashi/"className="btn btn-outline">名古屋市東区</Link>
- <Link href="/areas/nagoya-naka/"className="btn btn-outline">名古屋市中区</Link>
  <Link href="/areas/nagoya-showa/"className="btn btn-outline">名古屋市昭和区</Link>
  </div>
  </div>
  </section>
 
- <footer className="footer footer-center p-10 bg-base-200">
- <div>
- <p className="font-bold text-lg">クリーンナビ</p>
- <p className="text-sm mt-2">© 2024 クリーンナビ All rights reserved.</p>
- </div>
- </footer>
  </div>
  );
 }

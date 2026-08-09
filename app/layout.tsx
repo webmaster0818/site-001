@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { Noto_Sans_JP, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Script from "next/script";
 
 const notoSansJP = Noto_Sans_JP({
@@ -9,6 +10,13 @@ const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "900"],
   display: "swap", // フォント読み込み中の表示改善
+});
+
+const zenMaru = Zen_Maru_Gothic({
+  weight: ["500", "700"],
+  subsets: ["latin"],
+  variable: "--font-zen-maru",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -209,10 +217,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.itemList) }}
         />
       </head>
-      <body className={`${notoSansJP.variable} antialiased font-sans`}>
+      <body className={`${notoSansJP.variable} ${zenMaru.variable} antialiased font-sans`}>
         <Header />
         <p className="bg-gray-50 border-b border-gray-100 text-center text-[11px] text-gray-500 py-1 px-4">本サイトはプロモーション（PR）を含みます。</p>
         {children}
+        <Footer />
       </body>
     </html>
   );

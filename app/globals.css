@@ -26,6 +26,14 @@
   --color-warm-100: #fef3c7;
   --color-warm-400: #fbbf24;
   --color-warm-500: #f59e0b;
+  --color-primary: #0e7490;
+  --color-primary-content: #ffffff;
+  --color-secondary: #155e75;
+  --color-ink: #16323a;
+  --color-ink-soft: #3c5a62;
+  --color-muted: #7b969c;
+  --color-paper: #f6f9f9;
+  --font-display: var(--font-zen-maru);
 }
 
 body {
@@ -324,4 +332,173 @@ body {
 /* Phone bar */
 .phone-bar {
   background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+/* ============================================================
+   Design Refresh 2026-08 — クリーン&フレッシュ
+   （深シアン × 紙白 × 丸ゴシック見出し／daisyUI互換シム）
+   ============================================================ */
+
+body {
+  background:
+    radial-gradient(1200px 400px at 85% -100px, rgba(14, 116, 144, 0.05), transparent 60%),
+    #f6f9f9;
+  color: #16323a;
+}
+
+.brand-wordmark {
+  font-family: var(--font-zen-maru), var(--font-noto-sans-jp), sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3, .card-title {
+  font-family: var(--font-zen-maru), var(--font-noto-sans-jp), sans-serif;
+  letter-spacing: 0.015em;
+}
+
+/* --- Header --- */
+.top-bar {
+  height: 3px;
+  background: linear-gradient(90deg, #0e7490, #22d3ee 55%, #f59e0b);
+}
+.site-header {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e3ecec;
+  box-shadow: 0 1px 0 rgba(22, 50, 58, 0.03);
+}
+.nav-link { position: relative; padding-bottom: 4px; transition: color .2s; border-radius: 8px; }
+.nav-link::after {
+  content: ""; position: absolute; bottom: 2px; left: 14px; right: 14px;
+  height: 2px; border-radius: 2px; background: #0e7490;
+  transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+}
+.nav-link:hover { color: #0e7490; }
+.nav-link:hover::after { transform: scaleX(1); }
+.btn-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: linear-gradient(135deg, #0e7490, #155e75);
+  color: #fff; font-weight: 700; font-size: 0.88rem;
+  padding: 0.6rem 1.25rem; border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(14, 116, 144, 0.25);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn-cta:hover { transform: translateY(-1px); box-shadow: 0 7px 20px rgba(14, 116, 144, 0.32); }
+.mobile-subnav { background: #fff; border-top: 1px solid #eef3f3; }
+.chip {
+  display: inline-block; padding: 0.35rem 0.85rem; border-radius: 999px;
+  font-size: 0.75rem; font-weight: 600; color: #3c5a62;
+  background: #f2f7f7; border: 1px solid #e3ecec;
+}
+.chip-active { background: #0e7490; color: #fff; border-color: #0e7490; }
+
+/* --- Footer --- */
+.site-footer { background: #132b31; }
+.footer-link { font-size: 0.85rem; color: rgba(255, 255, 255, 0.72); transition: color .2s; }
+.footer-link:hover { color: #7dd8e8; }
+
+/* --- daisyUI互換シム（旧テンプレページの未定義クラス救済） --- */
+.card {
+  background: #fff; border: 1px solid #e3ecec; border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(22, 50, 58, 0.04);
+  transition: box-shadow .2s ease, transform .2s ease;
+  overflow: hidden;
+}
+.card:hover { box-shadow: 0 8px 24px rgba(22, 50, 58, 0.08); }
+.card-body { padding: 1.4rem 1.5rem; }
+.card-title { font-size: 1.06rem; font-weight: 700; color: #16323a; margin-bottom: 0.5rem; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 0.6rem 1.3rem; border-radius: 10px; font-weight: 700; font-size: 0.9rem;
+  border: 1px solid transparent; cursor: pointer;
+  transition: background .18s, color .18s, box-shadow .18s, transform .18s;
+  text-decoration: none;
+}
+.btn-primary, .btn:not(.btn-outline):not(.btn-ghost) {
+  background: #0e7490; color: #fff;
+  box-shadow: 0 3px 10px rgba(14, 116, 144, 0.22);
+}
+.btn-primary:hover, .btn:not(.btn-outline):not(.btn-ghost):hover { background: #0b5d74; transform: translateY(-1px); }
+.btn-outline { background: #fff; color: #0e7490; border-color: #9fc9d3; }
+.btn-outline:hover { background: #eef7f9; border-color: #0e7490; }
+.btn-ghost { background: transparent; color: #16323a; }
+.btn-ghost:hover { background: #eef3f3; }
+
+.badge {
+  display: inline-flex; align-items: center; padding: 0.22rem 0.7rem;
+  border-radius: 999px; font-size: 0.72rem; font-weight: 700;
+  background: #e6f3f6; color: #0e7490;
+}
+.badge-outline { background: #fff; border: 1px solid #9fc9d3; color: #0e7490; }
+.badge-primary { background: #0e7490; color: #fff; }
+.badge-secondary { background: #155e75; color: #fff; }
+
+.prose { max-width: 46rem; line-height: 1.85; color: #2c4850; }
+.prose h2 {
+  font-size: 1.32rem; font-weight: 700; color: #16323a;
+  margin: 2.4em 0 0.9em; padding-left: 0.8rem;
+  border-left: 4px solid #0e7490;
+}
+.prose h3 { font-size: 1.1rem; font-weight: 700; color: #16323a; margin: 1.8em 0 0.7em; }
+.prose p { margin: 0.9em 0; }
+.prose ul, .prose ol { margin: 0.9em 0; padding-left: 1.4em; }
+.prose li { margin: 0.35em 0; }
+.prose ul > li { list-style: none; position: relative; }
+.prose ul > li::before {
+  content: ""; position: absolute; left: -1.1em; top: 0.72em;
+  width: 6px; height: 6px; border-radius: 2px; background: #22a3bf;
+}
+.prose a { color: #0e7490; text-decoration: underline; text-underline-offset: 3px; }
+.prose table { width: 100%; }
+
+.table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.9rem; }
+.table th {
+  background: #eef5f6; color: #16323a; font-weight: 700;
+  padding: 0.7rem 0.9rem; text-align: left; border-bottom: 1px solid #dfe9ea;
+}
+.table td { padding: 0.7rem 0.9rem; border-bottom: 1px solid #edf2f3; background: #fff; }
+.table-zebra tbody tr:nth-child(even) td { background: #f8fbfb; }
+.table tr:hover td { background: #f1f8f9; }
+
+.collapse { border: 1px solid #e3ecec; border-radius: 12px; background: #fff; margin: 0.5rem 0; }
+.collapse summary, .collapse .collapse-title { cursor: pointer; font-weight: 700; padding: 1rem 1.2rem; color: #16323a; }
+.collapse .collapse-content { padding: 0 1.2rem 1rem; color: #2c4850; }
+details.collapse summary { list-style: none; position: relative; padding-right: 2.4rem; }
+details.collapse summary::-webkit-details-marker { display: none; }
+details.collapse summary::after {
+  content: "+"; position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%);
+  color: #0e7490; font-weight: 700; font-size: 1.1rem; transition: transform .2s;
+}
+details.collapse[open] summary::after { content: "−"; }
+
+.breadcrumbs { font-size: 0.78rem; color: #7b969c; padding: 0.6rem 0; }
+.breadcrumbs a { color: #0e7490; }
+.breadcrumbs ul, .breadcrumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; }
+.breadcrumbs li + li::before { content: "›"; margin-right: 0.3rem; color: #b7c9cd; }
+
+.divider {
+  display: flex; align-items: center; gap: 1rem; margin: 1.4rem 0;
+  color: #7b969c; font-size: 0.8rem;
+}
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: #e3ecec; }
+
+.alert {
+  display: flex; gap: 0.7rem; align-items: flex-start;
+  border-radius: 12px; padding: 0.9rem 1.1rem; font-size: 0.88rem;
+  background: #eef5f6; border: 1px solid #d5e6e9; color: #2c4850;
+}
+.alert-info { background: #e6f3f6; border-color: #bfe0e8; }
+.alert-warning { background: #fdf6e7; border-color: #f2ddb0; color: #6b5320; }
+
+.navbar { display: none; } /* 旧テンプレの残存インラインnavbarは非表示化（撤去漏れ保険） */
+
+.stats { display: flex; gap: 1rem; flex-wrap: wrap; }
+.stat { background: #fff; border: 1px solid #e3ecec; border-radius: 14px; padding: 1rem 1.3rem; }
+
+::selection { background: rgba(34, 211, 238, 0.25); }
+
+@media (min-width: 1024px) {
+  .only-mobile { display: none !important; }
 }
