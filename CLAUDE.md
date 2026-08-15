@@ -37,3 +37,4 @@ GSC実数診断:
 - D2内容: ①未作成24県ページ新設(app/areas/[pref]/動的ルート・既存静的dir優先仕様を利用) ②既存23県ページにPrefProviders組込(県別店舗一覧) ③/for-business/新設(掲載基準・訂正/削除依頼・新規掲載窓口) ④/areas/ハブに47県グリッド・HTMLサイトマップに47県+for-business・Footerにfor-business追加 ⑤provider側areaHrefのフォールバック撤去(47県全て実在のため常に県ページ直リンク)
 - sitemap.xml=out/から決定的再生成で3,843URL(292→3,843)。PREF_PAGES(47県)をareaIndexData.tsに一元定義
 - 機械監査: 全3,845頁でheader=1・絵文字0・内部切れリンク0。全providerが県ページへリンク確認済み
+- ⚠️push後40分CF未反映(2回push・空コミット再トリガーも不発・本番は旧版292頁のまま実害なし)。ローカルビルド全パスのためCF側(ビルド失敗/無料枠500回/webhook不達)疑い→MediaXAIにダッシュボード確認依頼(id 1538022629191974986)。反映検知の常駐監視を設置済み→検知後に本番検証+GSC送信+完了報告
