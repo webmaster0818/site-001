@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PrefProviders from "../../components/PrefProviders";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -570,6 +571,7 @@ export default function Area_toyama() {
  </div>
  </div>
  </section>
+ <PrefProviders pref="toyama" prefJa="富山県" />
 
  </div>
  );

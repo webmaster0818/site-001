@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AREA_INDEX, areaLabel } from "@/app/components/areaIndexData";
+import { AREA_INDEX, areaLabel, PREF_PAGES } from "@/app/components/areaIndexData";
 
 const TITLE = "サイトマップ | クリーンナビ";
 const DESCRIPTION =
@@ -38,7 +38,13 @@ const basicPages: PageLink[] = [
   { href: "/privacy/", name: "プライバシーポリシー" },
   { href: "/terms/", name: "利用規約" },
   { href: "/sitemap/", name: "サイトマップ" },
+  { href: "/for-business/", name: "掲載をご希望の事業者さまへ" },
 ];
+
+const prefDbPages: PageLink[] = PREF_PAGES.map((p) => ({
+  href: `/areas/${p.slug}/`,
+  name: p.name,
+}));
 
 const servicePages: PageLink[] = [
   { href: "/services/", name: "サービス一覧" },
@@ -150,6 +156,7 @@ export default function SitemapPage() {
             <LinkSection title="お役立ちガイド" pages={guideDetailPages} />
             <LinkSection title="シーン別ページ" pages={scenePages} />
             <LinkSection title="掲載業者" pages={companyPages} />
+            <LinkSection title="都道府県別 店舗データベース" pages={prefDbPages} />
 
             {/* 地域別ページ */}
             <div className="card bg-base-100 shadow border border-base-200">

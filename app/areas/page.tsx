@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { AREA_INDEX, AREA_TOTAL } from "@/app/components/areaIndexData";
+import { AREA_INDEX, AREA_TOTAL, PREF_PAGES } from "@/app/components/areaIndexData";
 
 const TITLE = "地域からハウスクリーニング業者を探す | クリーンナビ";
 const DESCRIPTION =
@@ -63,8 +63,31 @@ export default function AreasIndex() {
         </div>
       </section>
 
-      {/* 都道府県別索引 */}
+      {/* 47都道府県 店舗データベース */}
       <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl font-bold mb-2">都道府県別 店舗データベース</h2>
+            <p className="text-sm text-muted mb-6">
+              各ブランド公式サイトで確認した全国の実在店舗を、都道府県ごとに一覧掲載しています。
+            </p>
+            <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8 gap-2">
+              {PREF_PAGES.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/areas/${p.slug}/`}
+                  className="card p-2 text-center text-sm block"
+                >
+                  {p.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 都道府県別索引 */}
+      <section className="pb-12">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto space-y-8">
             {AREA_INDEX.map((pref) => (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PrefProviders from "../../components/PrefProviders";
 import {Sparkles, Award, Shield, Zap, MapPin } from "lucide-react";
 
 export const metadata = {
@@ -596,6 +597,7 @@ export default function HyogoArea() {
  </div>
  </div>
  </section>
+ <PrefProviders pref="hyogo" prefJa="兵庫県" />
  </div>
  );
 }

@@ -27,6 +27,7 @@ export default function Footer() {
         { href: "/privacy/", label: "プライバシーポリシー" },
         { href: "/terms/", label: "利用規約" },
         { href: "/sitemap/", label: "サイトマップ" },
+        { href: "/for-business/", label: "掲載をご希望の事業者さまへ" },
       ],
     },
   ];

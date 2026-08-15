@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PrefProviders from "../../components/PrefProviders";
 import {MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -572,6 +573,7 @@ export default function SaitamaArea() {
  </div>
  </div>
  </section>
+ <PrefProviders pref="saitama" prefJa="埼玉県" />
  </div>
  );
 }

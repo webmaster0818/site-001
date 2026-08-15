@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PrefProviders from "../../components/PrefProviders";
 import {Building2, CheckCircle, Star, MapPin, Phone, Mail, Sparkles, Award, Shield, Zap, Crown } from "lucide-react";
 
 export const metadata = {
@@ -788,6 +789,7 @@ export default function OsakaArea() {
  </div>
  </div>
  </section>
+ <PrefProviders pref="osaka" prefJa="大阪府" />
 
  </div>
  );

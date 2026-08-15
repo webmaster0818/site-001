@@ -24,16 +24,9 @@ type Provider = {
 
 const list = providers as Provider[];
 
-// 実在する地域ページのslug（未作成の県はハブへフォールバック）
-import * as fs from "fs";
-import * as path from "path";
-const areaDirs = new Set(
-  fs.readdirSync(path.join(process.cwd(), "app", "areas"), { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name)
-);
+// D2で47都道府県ページが全て揃ったため、常に県ページへ直リンク
 function areaHref(pref: string): string {
-  return areaDirs.has(pref) ? `/areas/${pref}/` : "/areas/";
+  return `/areas/${pref}/`;
 }
 
 export async function generateStaticParams() {
