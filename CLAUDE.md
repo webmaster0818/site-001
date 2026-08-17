@@ -38,3 +38,4 @@ GSC実数診断:
 - sitemap.xml=out/から決定的再生成で3,843URL(292→3,843)。PREF_PAGES(47県)をareaIndexData.tsに一元定義
 - 機械監査: 全3,845頁でheader=1・絵文字0・内部切れリンク0。全providerが県ページへリンク確認済み
 - ⚠️push後40分CF未反映(2回push・空コミット再トリガーも不発・本番は旧版292頁のまま実害なし)。ローカルビルド全パスのためCF側(ビルド失敗/無料枠500回/webhook不達)疑い→MediaXAIにダッシュボード確認依頼(id 1538022629191974986)。反映検知の常駐監視を設置済み→検知後に本番検証+GSC送信+完了報告
+- 2026-08-17 CF失敗の真因判明: MediaXAIのビルドログスクショ=buildステップ3m52sでfailure(webhook不達ではない)。ローカル成功×CF失敗=SSG並列ワーカーのOOM推定→next.config.tsにexperimental.cpus:2を追加(3GB制限のローカル検証パス)して再push
