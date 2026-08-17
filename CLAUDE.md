@@ -39,3 +39,4 @@ GSC実数診断:
 - 機械監査: 全3,845頁でheader=1・絵文字0・内部切れリンク0。全providerが県ページへリンク確認済み
 - ⚠️push後40分CF未反映(2回push・空コミット再トリガーも不発・本番は旧版292頁のまま実害なし)。ローカルビルド全パスのためCF側(ビルド失敗/無料枠500回/webhook不達)疑い→MediaXAIにダッシュボード確認依頼(id 1538022629191974986)。反映検知の常駐監視を設置済み→検知後に本番検証+GSC送信+完了報告
 - 2026-08-17 CF失敗の真因判明: MediaXAIのビルドログスクショ=buildステップ3m52sでfailure(webhook不達ではない)。ローカル成功×CF失敗=SSG並列ワーカーのOOM推定→next.config.tsにexperimental.cpus:2を追加(3GB制限のローカル検証パス)して再push
+- 2026-08-18 真因確定(ログ全文受領): 「Pages only supports up to 20,000 files」=ファイル数上限。Next16のセグメントキャッシュが__next.*.txt×8/頁を生成し34,993ファイル化。対策=next.config.tsにexitフックでビルド後__next.*.txt削除(26,892個・index.txtは残しクライアント遷移無傷)→8,101ファイルに削減。OOM説は誤り(cpus:2は維持)
