@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import {
   Sparkles,
@@ -10,7 +9,6 @@ import {
   Shield,
   Phone,
   Mail,
-  X,
 } from "lucide-react";
 
 // 実在業者データ
@@ -206,7 +204,6 @@ const COMPANY_DATA: { [key: string]: any } = {
 };
 
 export default function CompanyPageClient({ id }: { id: string }) {
-  const [showContactModal, setShowContactModal] = useState(false);
   const company = COMPANY_DATA[id];
 
   if (!company) {
@@ -365,17 +362,6 @@ export default function CompanyPageClient({ id }: { id: string }) {
                 <div className="text-sm text-gray-500">〜</div>
               </div>
 
-              <button
-                onClick={() => setShowContactModal(true)}
-                className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition mb-4"
-              >
-                お問い合わせ
-              </button>
-
-              <button className="w-full border-2 border-blue-600 text-blue-600 py-4 rounded-lg font-bold hover:bg-blue-50 transition mb-6">
-                お気に入りに追加
-              </button>
-
               <div className="space-y-4 text-sm">
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-gray-400 mt-0.5" />
@@ -425,86 +411,6 @@ export default function CompanyPageClient({ id }: { id: string }) {
       </div>
 
       {/* お問い合わせモーダル */}
-      {showContactModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg max-w-md w-full p-6 relative">
-            <button
-              onClick={() => setShowContactModal(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
-            >
-              <X className="w-6 h-6" />
-            </button>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              お問い合わせ
-            </h3>
-
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  お名前 <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="山田太郎"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  メールアドレス <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="example@email.com"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  電話番号 <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="tel"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="090-1234-5678"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  希望日時
-                </label>
-                <input
-                  type="text"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="例: 3月15日 14:00〜"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  お問い合わせ内容
-                </label>
-                <textarea
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  rows={4}
-                  placeholder="ご質問やご要望をご記入ください"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition"
-              >
-                送信する
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
