@@ -3,7 +3,6 @@
 import Link from "next/link";
 import {
   Sparkles,
-  Star,
   MapPin,
   Clock,
   Shield,
@@ -18,8 +17,6 @@ const COMPANY_DATA: { [key: string]: any } = {
     name: "おそうじ本舗",
     category: "エアコンクリーニング",
     categorySlug: "aircon",
-    rating: 4.5,
-    reviewCount: 1200,
     price: 12100,
     area: "全国対応（約1,900店舗）",
     image: "/images/service-aircon.png",
@@ -41,40 +38,12 @@ const COMPANY_DATA: { [key: string]: any } = {
     phone: "公式サイトからWeb予約",
     email: "公式サイトの問い合わせフォームをご利用ください",
     guarantee: "損害保険加入済み",
-    reviews: [
-      {
-        id: 1,
-        author: "利用者A（40代女性）",
-        rating: 5,
-        date: "2026-03-05",
-        comment:
-          "ファインバブル洗浄で、エアコンの嫌な臭いが完全に消えました。作業後の汚水を見てびっくり。スタッフの方の説明も丁寧で安心してお任せできました。",
-      },
-      {
-        id: 2,
-        author: "利用者B（30代男性）",
-        rating: 4,
-        date: "2026-03-01",
-        comment:
-          "繁忙期は予約が取りにくいですが、技術力は確か。お掃除機能付きエアコンも対応してもらえて助かりました。",
-      },
-      {
-        id: 3,
-        author: "利用者C（50代女性）",
-        rating: 5,
-        date: "2026-02-20",
-        comment:
-          "3年ぶりのエアコンクリーニングでしたが、新品のように綺麗になりました。全国チェーンなので安心感があります。",
-      },
-    ],
   },
   "2": {
     id: 2,
     name: "ダスキン サービスマスター",
     category: "浴室クリーニング",
     categorySlug: "bathroom",
-    rating: 4.6,
-    reviewCount: 890,
     price: 19800,
     area: "全国対応（約1,600拠点）",
     image: "/images/service-bathroom.png",
@@ -96,32 +65,12 @@ const COMPANY_DATA: { [key: string]: any } = {
     phone: "公式サイトからWeb予約",
     email: "公式サイトの問い合わせフォームをご利用ください",
     guarantee: "損害保険加入済み",
-    reviews: [
-      {
-        id: 1,
-        author: "利用者D（30代女性）",
-        rating: 5,
-        date: "2026-03-08",
-        comment:
-          "さすが大手の安心感。浴室の頑固な水垢がピカピカになりました。スタッフの方も礼儀正しく、安心してお任せできました。",
-      },
-      {
-        id: 2,
-        author: "利用者E（40代女性）",
-        rating: 4,
-        date: "2026-02-28",
-        comment:
-          "料金は少し高めですが、仕上がりの品質は間違いなし。定期サービスも検討しています。",
-      },
-    ],
   },
   "3": {
     id: 3,
     name: "おそうじ革命",
     category: "エアコンクリーニング",
     categorySlug: "aircon",
-    rating: 4.7,
-    reviewCount: 680,
     price: 9980,
     area: "全国対応（約420店舗）",
     image: "/images/service-aircon.png",
@@ -142,8 +91,6 @@ const COMPANY_DATA: { [key: string]: any } = {
     name: "東京ガス ハウスクリーニング",
     category: "キッチンクリーニング",
     categorySlug: "kitchen",
-    rating: 4.8,
-    reviewCount: 950,
     price: 19800,
     area: "東京・神奈川・千葉・埼玉",
     image: "/images/service-kitchen.png",
@@ -163,8 +110,6 @@ const COMPANY_DATA: { [key: string]: any } = {
     name: "カジタク（イオングループ）",
     category: "浴室クリーニング",
     categorySlug: "bathroom",
-    rating: 4.4,
-    reviewCount: 720,
     price: 16500,
     area: "全国対応",
     image: "/images/service-bathroom.png",
@@ -185,8 +130,6 @@ const COMPANY_DATA: { [key: string]: any } = {
     name: "ベアーズ",
     category: "キッチンクリーニング",
     categorySlug: "kitchen",
-    rating: 4.5,
-    reviewCount: 580,
     price: 17600,
     area: "東京・神奈川・千葉・埼玉・大阪・兵庫",
     image: "/images/service-kitchen.png",
@@ -260,13 +203,6 @@ export default function CompanyPageClient({ id }: { id: string }) {
                   </h2>
                   <div className="flex items-center gap-4 text-gray-600">
                     <div className="flex items-center gap-1">
-                      <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      <span className="font-semibold text-lg">
-                        {company.rating}
-                      </span>
-                      <span>({company.reviewCount}件の口コミ)</span>
-                    </div>
-                    <div className="flex items-center gap-1">
                       <MapPin className="w-5 h-5" />
                       <span>{company.area}</span>
                     </div>
@@ -312,43 +248,6 @@ export default function CompanyPageClient({ id }: { id: string }) {
               </div>
             </div>
 
-            {/* 口コミ */}
-            {company.reviews && company.reviews.length > 0 && (
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                お客様の声
-              </h3>
-              <div className="space-y-6">
-                {company.reviews.map((review: any) => (
-                  <div key={review.id} className="border-b last:border-b-0 pb-6 last:pb-0">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="flex">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-4 h-4 ${
-                              i < review.rating
-                                ? "fill-yellow-400 text-yellow-400"
-                                : "text-gray-300"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                      <span className="font-semibold text-gray-900">
-                        {review.author}
-                      </span>
-                      <span className="text-sm text-gray-500">
-                        {review.date}
-                      </span>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      {review.comment}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            )}
           </div>
 
           {/* サイドバー */}
