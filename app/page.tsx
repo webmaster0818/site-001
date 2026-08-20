@@ -126,146 +126,35 @@ export default function Home() {
  </section>
 
  {/* PARALLAX: USER VOICES */}
- <section className="parallax-container py-16 md:py-20">
- <div className="parallax-bg"></div>
- <div className="container mx-auto px-4 relative z-10">
- <div className="text-center mb-12">
- <h3 className="text-2xl md:text-3xl font-bold text-gray-900 section-heading">
- こんなお悩みありませんか？
+ <section className="py-14 md:py-20 bg-gray-50">
+ <div className="container mx-auto px-4">
+ <div className="text-center mb-10">
+ <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+ こんなお悩みはありませんか？
  </h3>
- <p className="text-sm md:text-base text-gray-500 mt-6">
- 多くのお客様が同じ悩みを抱えてクリーンナビを利用されています
+ <p className="text-sm md:text-base text-gray-500 mt-4">
+ ハウスクリーニングを検討するきっかけとして多いお悩みです
  </p>
  </div>
-
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
- {/* Voice 1 */}
- <div className="voice-card">
- <div className="flex items-center gap-3 mb-3">
- <img
- src="/images/avatar-1.png"
- alt="30代女性"
- className="w-12 h-12 rounded-full object-cover"
- />
- <div>
- <p className="font-bold text-gray-900 text-sm">30代 共働き主婦</p>
- <p className="text-xs text-gray-400">東京都在住</p>
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+ {[
+ "仕事や育児で掃除の時間がとれず、エアコンや水回りの汚れが気になっている",
+ "業者が多すぎて、どこに頼めばよいか・料金が適正か分からない",
+ "浴室のカビや換気扇の油汚れが市販の洗剤では落ちなくなってきた",
+ "引越しや退去の前に、部屋をまとめてきれいにしたい",
+ "小さい子どもやペットがいるので、洗剤や作業の安全性が気になる",
+ "年末の大掃除を全部自分でやるのは大変なので、一部をプロに任せたい",
+ ].map((worry) => (
+ <div key={worry} className="card bg-white p-5 text-sm text-gray-700 leading-relaxed">
+ {worry}
  </div>
+ ))}
  </div>
- <p className="text-base text-gray-700 leading-relaxed">
- 「仕事と育児で
- <span className="font-bold text-sky-600">掃除する時間がない</span>
- …。エアコンのカビ臭が気になるけど、自分では分解できなくて困っています。」
- </p>
- </div>
-
- {/* Voice 2 */}
- <div className="voice-card">
- <div className="flex items-center gap-3 mb-3">
- <img
- src="/images/avatar-2.png"
- alt="40代男性"
- className="w-12 h-12 rounded-full object-cover"
- />
- <div>
- <p className="font-bold text-gray-900 text-sm">40代 会社員</p>
- <p className="text-xs text-gray-400">神奈川県在住</p>
- </div>
- </div>
- <p className="text-base text-gray-700 leading-relaxed">
- 「業者がたくさんあって
- <span className="font-bold text-sky-600">どこに頼めばいいかわからない</span>
- 。料金もバラバラで、比較するのが大変で…。」
- </p>
- </div>
-
- {/* Voice 3 */}
- <div className="voice-card">
- <div className="flex items-center gap-3 mb-3">
- <img
- src="/images/avatar-3.png"
- alt="50代女性"
- className="w-12 h-12 rounded-full object-cover"
- />
- <div>
- <p className="font-bold text-gray-900 text-sm">50代 専業主婦</p>
- <p className="text-xs text-gray-400">大阪府在住</p>
- </div>
- </div>
- <p className="text-base text-gray-700 leading-relaxed">
- 「浴室のカビが
- <span className="font-bold text-sky-600">何度掃除しても取れない</span>
- …。市販の洗剤では限界を感じています。プロに任せたい。」
- </p>
- </div>
-
- {/* Voice 4 */}
- <div className="voice-card">
- <div className="flex items-center gap-3 mb-3">
- <img
- src="/images/avatar-4.png"
- alt="30代男性"
- className="w-12 h-12 rounded-full object-cover"
- />
- <div>
- <p className="font-bold text-gray-900 text-sm">30代 一人暮らし</p>
- <p className="text-xs text-gray-400">愛知県在住</p>
- </div>
- </div>
- <p className="text-base text-gray-700 leading-relaxed">
- 「引越し前に
- <span className="font-bold text-sky-600">部屋をピカピカにしたい</span>
- けど、退去費用を抑えるためにどの業者がコスパ良いか知りたい。」
- </p>
- </div>
-
- {/* Voice 5 */}
- <div className="voice-card">
- <div className="flex items-center gap-3 mb-3">
- <img
- src="/images/avatar-5.png"
- alt="40代女性"
- className="w-12 h-12 rounded-full object-cover"
- />
- <div>
- <p className="font-bold text-gray-900 text-sm">40代 子育て中</p>
- <p className="text-xs text-gray-400">埼玉県在住</p>
- </div>
- </div>
- <p className="text-base text-gray-700 leading-relaxed">
- 「小さい子どもがいるから
- <span className="font-bold text-sky-600">安全な洗剤を使ってくれる業者</span>
- がいい。口コミで安心できるところを探したい。」
- </p>
- </div>
-
- {/* Voice 6 */}
- <div className="voice-card">
- <div className="flex items-center gap-3 mb-3">
- <img
- src="/images/avatar-6.png"
- alt="50代男性"
- className="w-12 h-12 rounded-full object-cover"
- />
- <div>
- <p className="font-bold text-gray-900 text-sm">50代 持ち家</p>
- <p className="text-xs text-gray-400">福岡県在住</p>
- </div>
- </div>
- <p className="text-base text-gray-700 leading-relaxed">
- 「換気扇の
- <span className="font-bold text-sky-600">油汚れがひどくて換気が弱い</span>
- 。年に一度はプロにお願いしたいが、信頼できる業者を見つけたい。」
- </p>
- </div>
- </div>
-
- {/* CTA after voices */}
  <div className="text-center mt-10">
  <p className="text-lg font-bold text-gray-800 mb-4">
- そのお悩み、<span className="text-sky-500">クリーンナビ</span>が解決します！
+ そのお悩み、<span className="text-sky-500">クリーンナビ</span>の比較で解決できます
  </p>
- <a className="btn-cta"href="#services">
+ <a className="btn-cta" href="#services">
  あなたに合った業者を探す
  </a>
  </div>

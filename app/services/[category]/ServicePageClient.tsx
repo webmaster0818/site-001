@@ -10,8 +10,6 @@ const COMPANIES = [
     id: 1,
     name: "おそうじ本舗",
     category: "aircon",
-    rating: 4.5,
-    reviewCount: 1200,
     price: 12100,
     area: "全国対応（約1,900店舗）",
     image: "/images/service-aircon.png",
@@ -21,8 +19,6 @@ const COMPANIES = [
     id: 2,
     name: "ダスキン サービスマスター",
     category: "bathroom",
-    rating: 4.6,
-    reviewCount: 890,
     price: 19800,
     area: "全国対応（約1,600拠点）",
     image: "/images/service-bathroom.png",
@@ -32,8 +28,6 @@ const COMPANIES = [
     id: 3,
     name: "おそうじ革命",
     category: "aircon",
-    rating: 4.7,
-    reviewCount: 680,
     price: 9980,
     area: "全国対応（約420店舗）",
     image: "/images/service-aircon.png",
@@ -43,8 +37,6 @@ const COMPANIES = [
     id: 4,
     name: "東京ガス ハウスクリーニング",
     category: "kitchen",
-    rating: 4.8,
-    reviewCount: 950,
     price: 19800,
     area: "東京・神奈川・千葉・埼玉",
     image: "/images/service-kitchen.png",
@@ -54,8 +46,6 @@ const COMPANIES = [
     id: 5,
     name: "カジタク（イオングループ）",
     category: "bathroom",
-    rating: 4.4,
-    reviewCount: 720,
     price: 16500,
     area: "全国対応",
     image: "/images/service-bathroom.png",
@@ -65,8 +55,6 @@ const COMPANIES = [
     id: 6,
     name: "ベアーズ",
     category: "kitchen",
-    rating: 4.5,
-    reviewCount: 580,
     price: 17600,
     area: "東京・神奈川・千葉・埼玉・大阪・兵庫",
     image: "/images/service-kitchen.png",
@@ -114,14 +102,10 @@ export default function ServicePageClient({ category }: { category: string }) {
   }
 
   // ソート処理
-  if (sortBy === "popular") {
-    filteredCompanies.sort((a, b) => b.rating - a.rating);
-  } else if (sortBy === "price-low") {
+  if (sortBy === "price-low") {
     filteredCompanies.sort((a, b) => a.price - b.price);
   } else if (sortBy === "price-high") {
     filteredCompanies.sort((a, b) => b.price - a.price);
-  } else if (sortBy === "reviews") {
-    filteredCompanies.sort((a, b) => b.reviewCount - a.reviewCount);
   }
 
   return (
@@ -181,24 +165,6 @@ export default function ServicePageClient({ category }: { category: string }) {
                 </select>
               </div>
 
-              {/* 評価 */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  評価
-                </label>
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2 text-sm">
-                    <input type="checkbox" className="rounded" />
-                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    <span>4.5以上</span>
-                  </label>
-                  <label className="flex items-center gap-2 text-sm">
-                    <input type="checkbox" className="rounded" />
-                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    <span>4.0以上</span>
-                  </label>
-                </div>
-              </div>
             </div>
           </aside>
 
@@ -216,10 +182,9 @@ export default function ServicePageClient({ category }: { category: string }) {
                   onChange={(e) => setSortBy(e.target.value)}
                   className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <option value="popular">人気順</option>
+                  <option value="popular">おすすめ順</option>
                   <option value="price-low">価格が安い順</option>
                   <option value="price-high">価格が高い順</option>
-                  <option value="reviews">口コミ数順</option>
                 </select>
               </div>
             </div>
@@ -247,13 +212,6 @@ export default function ServicePageClient({ category }: { category: string }) {
                             {company.name}
                           </h3>
                           <div className="flex items-center gap-4 text-sm text-gray-600">
-                            <div className="flex items-center gap-1">
-                              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                              <span className="font-semibold">
-                                {company.rating}
-                              </span>
-                              <span>({company.reviewCount}件)</span>
-                            </div>
                             <div className="flex items-center gap-1">
                               <MapPin className="w-4 h-4" />
                               <span>{company.area}</span>
