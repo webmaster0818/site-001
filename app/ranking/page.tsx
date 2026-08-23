@@ -1,4 +1,5 @@
 import Link from "next/link";
+import OfficialRatingStores from "../components/OfficialRatingStores";
 import { Metadata } from "next";
 import { Sparkles, Trophy, ChevronRight } from "lucide-react";
 
@@ -89,6 +90,8 @@ export default function RankingIndexPage() {
           </p>
         </section>
       </div>
+
+      <OfficialRatingStores limit={10} />
 
       <footer className="bg-white border-t border-gray-200 py-8 mt-12">
         <div className="container mx-auto px-4 text-center text-sm text-gray-500">

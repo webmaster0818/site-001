@@ -1,4 +1,5 @@
 import type {Metadata } from "next";
+import OfficialRatingStores from "./components/OfficialRatingStores";
 
 export const metadata: Metadata = {
  alternates: {canonical: "https://cleaning-choices.com/"},
@@ -160,6 +161,8 @@ export default function Home() {
  </div>
  </div>
  </section>
+
+ <OfficialRatingStores limit={6} />
 
  {/* POPULAR SERVICES */}
  <section className="py-16 md:py-20 bg-gray-50"id="services">
