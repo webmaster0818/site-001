@@ -100,7 +100,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
       </nav>
 
       <div className="flex flex-wrap items-center gap-3 mb-2">
-        <span className="badge badge-primary">{p.brand_name}</span>
+        <a href={`/brand/${{"honpo":"osoujihonpo","duskin":"duskin","kakumei":"osoujikakumei"}[p.brand] ?? ""}/`} className="badge badge-primary">{p.brand_name}の店舗一覧</a>
         <span className="badge badge-outline">{p.pref_ja}</span>
       </div>
       <h1 className="text-2xl md:text-3xl font-bold text-ink mb-3">{p.name}</h1>
