@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CityProviders from "../../components/CityProviders";
 import PrefProviders from "../../components/PrefProviders";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
@@ -189,6 +190,8 @@ export default function KyotoArea() {
  <p className="text-xl">京都市など京都府全域対応</p>
  </div>
  </section>
+
+ <CityProviders match={["京都市"]} cityJa="京都市" />
  <section className="py-12">
  <div className="container mx-auto px-4">
  <div className="prose max-w-4xl mx-auto">

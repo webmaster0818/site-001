@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CityProviders from "../../components/CityProviders";
 import { Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -188,6 +189,8 @@ export default function SendaiArea() {
           <p className="text-xl">仙台市など仙台市全域対応</p>
         </div>
       </section>
+
+ <CityProviders match={["仙台市"]} cityJa="仙台市" />
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="prose max-w-4xl mx-auto">

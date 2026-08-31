@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CityProviders from "../../components/CityProviders";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -215,6 +216,8 @@ export default function Area_matsudo() {
  <p className="text-xl">松戸市全域対応！信頼できる業者をご紹介</p>
  </div>
  </section>
+
+ <CityProviders match={["松戸市"]} cityJa="松戸市" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
  <div className="container mx-auto px-4">

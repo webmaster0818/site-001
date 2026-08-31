@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CityProviders from "../../components/CityProviders";
 import PrefProviders from "../../components/PrefProviders";
 import {Sparkles, Award, Shield, Zap, MapPin } from "lucide-react";
 
@@ -248,6 +249,8 @@ export default function ChibaArea() {
  <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z"fill="#f9fafb"></path>
  </svg>
  </section>
+
+ <CityProviders match={["千葉市"]} cityJa="千葉市" />
  <section className="py-12">
  <div className="container mx-auto px-4">
  <p className="text-lg max-w-4xl mx-auto">千葉県は東京湾に面しており、海風による塩害対策も重要です。ディズニーリゾート周辺の浦安市などは観光客も多く、清潔さを保つためのハウスクリーニング需要が高いエリアです。</p>

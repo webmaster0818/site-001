@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CityProviders from "../../components/CityProviders";
 import PrefProviders from "../../components/PrefProviders";
 import {Sparkles, Award, Shield, Zap, MapPin } from "lucide-react";
 
@@ -260,6 +261,8 @@ export default function FukuokaArea() {
  <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z"fill="#f9fafb"></path>
  </svg>
  </section>
+
+ <CityProviders match={["福岡市"]} cityJa="福岡市" />
  <section className="py-12">
  <div className="container mx-auto px-4">
  <div className="prose max-w-4xl mx-auto">

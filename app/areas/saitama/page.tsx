@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CityProviders from "../../components/CityProviders";
 import PrefProviders from "../../components/PrefProviders";
 import {MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 
@@ -252,6 +253,8 @@ export default function SaitamaArea() {
  <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z"fill="#f9fafb"></path>
  </svg>
  </section>
+
+ <CityProviders match={["さいたま市"]} cityJa="さいたま市" />
  <section className="py-12">
  <div className="container mx-auto px-4">
  <p className="text-lg max-w-4xl mx-auto">埼玉県は東京のベッドタウンとして発展しており、ファミリー世帯が多く、ハウスクリーニングの需要が高いエリアです。</p>

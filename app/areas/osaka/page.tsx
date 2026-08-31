@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CityProviders from "../../components/CityProviders";
 import PrefProviders from "../../components/PrefProviders";
 import {Building2, CheckCircle, Star, MapPin, Phone, Mail, Sparkles, Award, Shield, Zap, Crown } from "lucide-react";
 
@@ -278,6 +279,8 @@ export default function OsakaArea() {
  ></path>
  </svg>
  </section>
+
+ <CityProviders match={["大阪市"]} cityJa="大阪市" />
 
  {/* 導入文 */}
  <section className="py-12 bg-base-100">
