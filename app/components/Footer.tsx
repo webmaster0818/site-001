@@ -20,6 +20,14 @@ export default function Footer() {
       ],
     },
     {
+      title: "ブランドから探す",
+      links: [
+        { href: "/brand/osoujihonpo/", label: "おそうじ本舗の店舗一覧" },
+        { href: "/brand/duskin/", label: "ダスキン サービスマスターの店舗一覧" },
+        { href: "/brand/osoujikakumei/", label: "おそうじ革命の店舗一覧" },
+      ],
+    },
+    {
       title: "サイト情報",
       links: [
         { href: "/about/", label: "運営者情報" },
@@ -34,7 +42,7 @@ export default function Footer() {
   return (
     <footer className="site-footer mt-16">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr_1fr_1fr]">
           <div>
             <p className="brand-wordmark text-xl text-white">クリーンナビ</p>
             <p className="mt-3 text-[0.82rem] leading-relaxed text-white/60">

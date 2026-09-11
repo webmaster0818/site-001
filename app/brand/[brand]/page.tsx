@@ -65,8 +65,8 @@ export async function generateMetadata({ params }: { params: Promise<{ brand: st
   if (!b) return {};
   const stores = list.filter((p) => p.brand === BRAND_KEY[brand]);
   return {
-    title: `${b.name}の店舗一覧（全国${stores.length}店舗）・特徴｜クリーンナビ`,
-    description: `${b.name}の全国${stores.length}店舗を都道府県別に一覧掲載。公式サイトで確認した実在店舗のみ、所在地・対応エリア・公式評価を確認日つきでまとめています。`,
+    title: `${b.name}の店舗一覧・対応エリア検索（全国${stores.length}店舗）｜クリーンナビ`,
+    description: `${b.name}の全国${stores.length}店舗を都道府県別に検索できます。公式サイトで確認した実在店舗のみ、所在地・対応エリア・公式評価を確認日つきで掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/brand/${brand}/` },
   };
 }

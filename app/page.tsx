@@ -1,5 +1,12 @@
 import type {Metadata } from "next";
 import OfficialRatingStores from "./components/OfficialRatingStores";
+import providersData from "./data/providers.json";
+
+const brandCounts = (() => {
+ const list = providersData as { brand: string }[];
+ const count = (k: string) => list.filter((p) => p.brand === k).length;
+ return { honpo: count("honpo"), duskin: count("duskin"), kakumei: count("kakumei") };
+})();
 
 export const metadata: Metadata = {
  alternates: {canonical: "https://cleaning-choices.com/"},
@@ -346,6 +353,37 @@ export default function Home() {
  <h4 className="text-sm font-bold text-gray-500 mb-3 max-w-5xl mx-auto">九州・沖縄</h4>
  <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3 max-w-5xl mx-auto mb-6">
  <a className="area-card text-center group"href="/areas/fukuoka/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">福岡県</div></a>
+ </div>
+ </div>
+ </section>
+
+ {/* 大手ブランドの店舗から探す */}
+ <section className="py-16 md:py-20 bg-white">
+ <div className="container mx-auto px-4">
+ <div className="text-center mb-12">
+ <h3 className="text-2xl md:text-3xl font-bold text-gray-900 section-heading">
+ 大手ブランドの店舗から探す
+ </h3>
+ <p className="text-sm md:text-base text-gray-500 mt-6">
+ 公式サイトで実在確認した全国の加盟店・拠点を、都道府県別に検索できます
+ </p>
+ </div>
+ <div className="grid gap-5 md:grid-cols-3 max-w-5xl mx-auto">
+ <a href="/brand/osoujihonpo/" className="block rounded-xl border border-gray-200 bg-white p-6 hover:border-sky-400 hover:shadow-md transition group">
+ <div className="font-bold text-lg text-gray-900 group-hover:text-sky-600 transition">おそうじ本舗</div>
+ <p className="text-sm text-gray-500 mt-2">全国{brandCounts.honpo.toLocaleString()}店舗の一覧・対応エリア</p>
+ <span className="inline-block mt-4 text-sm font-bold text-sky-600">店舗一覧を見る →</span>
+ </a>
+ <a href="/brand/duskin/" className="block rounded-xl border border-gray-200 bg-white p-6 hover:border-sky-400 hover:shadow-md transition group">
+ <div className="font-bold text-lg text-gray-900 group-hover:text-sky-600 transition">ダスキン サービスマスター</div>
+ <p className="text-sm text-gray-500 mt-2">全国{brandCounts.duskin.toLocaleString()}拠点の一覧・対応エリア</p>
+ <span className="inline-block mt-4 text-sm font-bold text-sky-600">店舗一覧を見る →</span>
+ </a>
+ <a href="/brand/osoujikakumei/" className="block rounded-xl border border-gray-200 bg-white p-6 hover:border-sky-400 hover:shadow-md transition group">
+ <div className="font-bold text-lg text-gray-900 group-hover:text-sky-600 transition">おそうじ革命</div>
+ <p className="text-sm text-gray-500 mt-2">全国{brandCounts.kakumei.toLocaleString()}店舗の一覧・対応エリア</p>
+ <span className="inline-block mt-4 text-sm font-bold text-sky-600">店舗一覧を見る →</span>
+ </a>
  </div>
  </div>
  </section>
