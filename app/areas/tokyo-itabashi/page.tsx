@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -585,6 +586,8 @@ export default function TokyoItabashiArea() {
  </div>
  </div>
  </section>
+
+ <SeasonalCleaningNote />
 
  </div>
  );

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import CityProviders from "../../components/CityProviders";
 import { Sparkles, Award, Shield, Zap, MapPin } from "lucide-react";
 
@@ -259,6 +260,7 @@ export default function YokohamaArea() {
       </section>
 
  <CityProviders match={["横浜市"]} cityJa="横浜市" />
+ <SeasonalCleaningNote />
       <section className="py-12 bg-base-100">
         <div className="container mx-auto px-4">
           <div className="prose max-w-4xl mx-auto">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import PrefProviders from "../../components/PrefProviders";
 import {Building2, MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 
@@ -503,6 +504,7 @@ export default function KanagawaArea() {
  </div>
  </section>
  <PrefProviders pref="kanagawa" prefJa="神奈川県" />
+ <SeasonalCleaningNote />
  </div>
  );
 }

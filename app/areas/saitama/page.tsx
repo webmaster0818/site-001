@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import CityProviders from "../../components/CityProviders";
 import PrefProviders from "../../components/PrefProviders";
 import {MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
@@ -577,6 +578,7 @@ export default function SaitamaArea() {
  </div>
  </section>
  <PrefProviders pref="saitama" prefJa="埼玉県" />
+ <SeasonalCleaningNote />
  </div>
  );
 }
