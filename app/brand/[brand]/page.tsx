@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import providers from "../../data/providers.json";
+import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
 
 type Provider = {
   slug: string;
@@ -136,6 +137,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
             掲載店舗は{b.name}公式サイトで確認した実在店舗のみです（各店舗ページに出典・確認日を記載）。最新の営業状況・料金は必ず公式サイト・店舗にご確認ください。
           </p>
         </div>
+        {brand === "osoujikakumei" && <KakumeiAffiliateCTA variant="text1" banner />}
       </section>
 
       {rated.length > 0 && (

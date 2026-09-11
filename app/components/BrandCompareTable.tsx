@@ -1,4 +1,5 @@
 import providers from "../data/providers.json";
+import KakumeiAffiliateCTA from "./KakumeiAffiliateCTA";
 
 // 大手3ブランドの比較表。内容はcompany/brandページで公開済みの公式確認情報のみ(新規の数値創作なし)
 // 掲載順は店舗数順であり、優劣の評価ではない
@@ -70,6 +71,7 @@ export default function BrandCompareTable() {
       <p className="text-xs text-gray-500 mt-3">
         掲載内容は各社公式サイトで確認した情報のみです（店舗数は当サイト収録の実在確認済み店舗数）。掲載順は店舗数順であり、優劣の評価ではありません。
       </p>
+      <KakumeiAffiliateCTA variant="text1" />
     </div>
   );
 }

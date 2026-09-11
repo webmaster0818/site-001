@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import providers from "../../data/providers.json";
 // CTR実験(2026-09-11開始): GSC表示上位50店のみtitle/descに比較フックを追加。2週間で判定→全展開or撤収
 import ctrTestSlugs from "../../data/ctr_test_slugs.json";
+import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
 
 type Provider = {
   slug: string;
@@ -170,6 +171,8 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
           </div>
         </section>
       )}
+
+      {p.brand === "kakumei" && <KakumeiAffiliateCTA variant="text2" />}
 
       <section className="card mb-8">
         <div className="card-body">
