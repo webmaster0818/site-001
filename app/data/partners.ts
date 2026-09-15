@@ -31,8 +31,10 @@ export type Partner = {
   fitFor: string; // 確認できた事実から言える向いているケース
   checkBefore: string;
   confirmedAt: string;
-  affiliateUrl: string | null; // felmat計測リンク(受領まで null)
-  affiliateLabel?: string; // 計測リンクのテキスト(felmat指定文言)
+  affiliateUrl: string | null; // felmat計測リンク(2026-09-15受領・提供コードのまま使用)
+  affiliateLabel?: string; // 計測リンクのテキスト(felmat指定文言・改変不可)
+  affiliatePixel?: string; // インプレッション計測用1x1画像(必須)
+  banner?: { href: string; img: string; width: number; height: number }; // バナー(あれば検証ページに併設)
 };
 
 export const SERVICE_LABELS: Record<ServiceTag, string> = {
@@ -78,7 +80,10 @@ export const PARTNERS: Partner[] = [
     fitFor: "退去後・入居前の空室をまとめて定額で頼みたい人、関東・関西・東海で現地見積もりなしに料金を確定させたい人に向いています。オプションでエアコン・風呂釜洗浄まで同日にまとめられます。",
     checkBefore: "在宅（居住中）のクリーニングは対象外の空室専門です。前日12時以降のキャンセルは料金全額なので日程は確定してから予約してください。ワックス施工後は翌日以降の入居推奨です。",
     confirmedAt: AT,
-    affiliateUrl: null,
+    affiliateUrl: "https://t.felmat.net/fmcl?ak=L5238P.1.Z91998A.C1396789",
+    affiliateLabel: "引越しハウスクリーニング専門店【ミガクる】",
+    affiliatePixel: "https://t.felmat.net/fmimp/L5238P.Z91998A.C1396789",
+    banner: { href: "https://t.felmat.net/fmcl?ak=L5238P.1.792086S.C1396789", img: "https://t.felmat.net/fmimg/L5238P.792086S.C1396789", width: 300, height: 250 },
   },
   {
     slug: "on",
@@ -111,7 +116,10 @@ export const PARTNERS: Partner[] = [
     fitFor: "エアコン・水回り・空室清掃まで1社でまとめて頼みたい人、料金を事前に定額で確定させたい人に向いています。PayPay払いに対応している点も特徴です。",
     checkBefore: "受付は土日祝休みのため、週末作業の予約は平日のうちに済ませてください。前営業日12時以降のキャンセルは料金全額です。お掃除機能付きエアコンは加算（18,700円）になるので機種を先に確認しましょう。",
     confirmedAt: AT,
-    affiliateUrl: null,
+    affiliateUrl: "https://t.felmat.net/fmcl?ak=O5219A.1.H91724L.C1396789",
+    affiliateLabel: "お掃除のことならハウスクリーニングのオン",
+    affiliatePixel: "https://t.felmat.net/fmimp/O5219A.H91724L.C1396789",
+    banner: { href: "https://t.felmat.net/fmcl?ak=O5219A.1.L91905E.C1396789", img: "https://t.felmat.net/fmimg/O5219A.L91905E.C1396789", width: 300, height: 250 },
   },
   {
     slug: "kireiyu",
@@ -141,7 +149,9 @@ export const PARTNERS: Partner[] = [
     fitFor: "追い焚き配管の汚れや臭いが気になる人、中古住宅の入居前や赤ちゃんが生まれる前に配管を洗っておきたい人に向いています。バスルームクリーニングとのセットで19,800円になります。",
     checkBefore: "「除菌」「レジオネラ属菌」などの記載は公式サイトの説明であり、当サイトが効果を検証したものではありません。公式自身が効果を保証しないと明記しているため、設備の状態によって結果が変わる前提で申し込んでください。エリアによっては出張費が別途かかる場合があります。",
     confirmedAt: AT,
-    affiliateUrl: null,
+    affiliateUrl: "https://t.felmat.net/fmcl?ak=G53280.1.Y930341.C1396789",
+    affiliateLabel: "【キレイユ 風呂釜洗浄】大浴場の配管洗浄から生まれた徹底除菌の風呂釜洗浄",
+    affiliatePixel: "https://t.felmat.net/fmimp/G53280.Y930341.C1396789",
   },
   {
     slug: "seifu",
@@ -173,7 +183,10 @@ export const PARTNERS: Partner[] = [
     fitFor: "3大都市圏の指定エリアで、お掃除機能付きエアコンを追加料金なしの定額で頼みたい人に向いています。作業は土日祝も可能です（受付は平日のみ）。",
     checkBefore: "対応エリアが営業所近隣の市区に限定されているため、住所がエリア内かを先に確認してください。製造から約8年を超えるエアコンはトラブル時の補償対象外です。家庭用の複数台割引は公式に記載がありません。",
     confirmedAt: AT,
-    affiliateUrl: null,
+    affiliateUrl: "https://t.felmat.net/fmcl?ak=C5230Q.1.W91862D.C1396789",
+    affiliateLabel: "専門店だからできるプロの清掃【エアコンクリーニング清風】",
+    affiliatePixel: "https://t.felmat.net/fmimp/C5230Q.W91862D.C1396789",
+    banner: { href: "https://t.felmat.net/fmcl?ak=C5230Q.1.O91913U.C1396789", img: "https://t.felmat.net/fmimg/C5230Q.O91913U.C1396789", width: 300, height: 300 },
   },
   {
     slug: "nac-duskin",
@@ -204,7 +217,10 @@ export const PARTNERS: Partner[] = [
     fitFor: "上場企業の運営・自社スタッフ対応という体制面を重視する人、ダスキンブランドのサービスを首都圏・関西・福岡・札幌の支店エリアで頼みたい人に向いています。家事代行や害虫駆除までまとめて相談できます。",
     checkBefore: "土日祝は休日料金が加算されるため、平日に頼めるなら費用を抑えられます。浴室・キッチンの料金は公式料金表（画像）で確認が必要です。キャンセル規定は公式サイトに記載がないため、予約時に確認してください。",
     confirmedAt: AT,
-    affiliateUrl: null,
+    affiliateUrl: "https://t.felmat.net/fmcl?ak=P70497.1.S111184H.C1396789",
+    affiliateLabel: "ハウスクリーニングはまとめてお任せください！【ナックダスキン】",
+    affiliatePixel: "https://t.felmat.net/fmimp/P70497.S111184H.C1396789",
+    banner: { href: "https://t.felmat.net/fmcl?ak=P70497.1.H148180V.C1396789", img: "https://t.felmat.net/fmimg/P70497.H148180V.C1396789", width: 300, height: 250 },
   },
   {
     slug: "four-l",
@@ -236,7 +252,9 @@ export const PARTNERS: Partner[] = [
     fitFor: "関西圏や東京23区で、完全定額・現金払いで安く頼みたい人、複数台のエアコンをまとめて頼みたい人に向いています（2台目以降の割引が公式に明記）。",
     checkBefore: "クレジットカードは使えません（現金またはNP後払い）。東京・神奈川エリアは駐車場代が客負担です。キャンセルは4日前まで無料、3日前から50%です。",
     confirmedAt: AT,
-    affiliateUrl: null,
+    affiliateUrl: "https://t.felmat.net/fmcl?ak=Z3453Q.1.967368A.C1396789",
+    affiliateLabel: "ハウスクリーニング専門店「フォーエル」",
+    affiliatePixel: "https://t.felmat.net/fmimp/Z3453Q.967368A.C1396789",
   },
   {
     slug: "osouji-labo",
@@ -269,7 +287,10 @@ export const PARTNERS: Partner[] = [
     fitFor: "大阪府・兵庫県東部で、エアコンを複数台まとめて安く頼みたい人、外注ではなく自社スタッフの施工を重視する人に向いています。LINE予約に対応しています。",
     checkBefore: "対応エリアは大阪府と兵庫県東部のみです。お掃除機能付きは対応不可機種・難解機種（一律27,000円）があるため、申込み時に機種名を伝えてください。当日キャンセルは料金全額です。",
     confirmedAt: AT,
-    affiliateUrl: null,
+    affiliateUrl: "https://t.felmat.net/fmcl?ak=A11875S.1.B162747B.C1396789",
+    affiliateLabel: "プロの徹底洗浄で劇的エアコンクリーニングおそうじLabo",
+    affiliatePixel: "https://t.felmat.net/fmimp/A11875S.B162747B.C1396789",
+    banner: { href: "https://t.felmat.net/fmcl?ak=A11875S.1.V1646036.C1396789", img: "https://t.felmat.net/fmimg/A11875S.V1646036.C1396789", width: 300, height: 250 },
   },
   {
     slug: "housecleaning110",
@@ -301,7 +322,10 @@ export const PARTNERS: Partner[] = [
     fitFor: "地方や深夜・早朝など対応業者が見つけにくい条件で、まず全国窓口に相談して見積を取りたい人に向いています。現地見積で他社比較してから決められます。",
     checkBefore: "契約先は運営会社ではなく加盟店です。料金は「〜」の下限表示なので、現地見積の金額と追加条件を確認してから発注してください。一部地域は出張費や見積費用が発生する場合があります。",
     confirmedAt: AT,
-    affiliateUrl: null,
+    affiliateUrl: "https://t.felmat.net/fmcl?ak=A9631V.1.R1398324.C1396789",
+    affiliateLabel: "お掃除のプロが丁寧に対応いたします！【ハウスクリーニング110番】",
+    affiliatePixel: "https://t.felmat.net/fmimp/A9631V.R1398324.C1396789",
+    banner: { href: "https://t.felmat.net/fmcl?ak=A9631V.1.V141074I.C1396789", img: "https://t.felmat.net/fmimg/A9631V.V141074I.C1396789", width: 300, height: 250 },
   },
 ];
 

@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+// felmat計測リンク: URL・文言は提供コードのまま(改変不可)・インプレッションピクセル必須・relはnofollowにsponsoredを追加
 import { PARTNERS, SERVICE_LABELS, partnersByTag, type ServiceTag } from "../data/partners";
 
 // 提携パートナー紹介枠。公式確認情報のみ表示し、CTAは計測リンク受領後(affiliateUrl非null)のみ描画。
@@ -47,21 +49,24 @@ export default function PartnerCards({
                   口コミ・評判と料金の検証を見る
                 </a>
                 {p.affiliateUrl && (
-                  <a
-                    href={p.affiliateUrl}
-                    rel="sponsored nofollow noopener"
-                    target="_blank"
-                    className="rounded-lg bg-amber-600 px-4 py-2 text-xs font-bold text-white hover:bg-amber-700 transition"
-                  >
-                    {p.affiliateLabel ?? `${p.name}の公式サイトへ（PR）`}
-                  </a>
+                  <>
+                    <a
+                      href={p.affiliateUrl}
+                      rel="sponsored nofollow noopener"
+                      target="_blank"
+                      className="rounded-lg bg-amber-600 px-4 py-2 text-xs font-bold text-white hover:bg-amber-700 transition"
+                    >
+                      {p.affiliateLabel ?? `${p.name}の公式サイトへ`}
+                    </a>
+                    {p.affiliatePixel && <img width={1} height={1} src={p.affiliatePixel} alt="" style={{ border: "none" }} />}
+                  </>
                 )}
               </div>
             </div>
           ))}
         </div>
         <p className="text-xs text-gray-500 mt-4">
-          各社の料金・エリア・保証は変更される場合があります。申込み前に必ず公式サイトで最新情報をご確認ください。
+          「PR」のボタンは提携先の公式サイトへ移動します（広告の有無は掲載内容・評価に影響しません）。各社の料金・エリア・保証は変更される場合があります。申込み前に必ず公式サイトで最新情報をご確認ください。
         </p>
       </div>
     </section>

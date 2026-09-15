@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PARTNERS, SERVICE_LABELS } from "../../data/partners";
@@ -212,6 +213,14 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
               >
                 {p.affiliateLabel ?? `${p.name}の公式サイトで最新料金を確認する`}
               </a>
+              {p.affiliatePixel && <img width={1} height={1} src={p.affiliatePixel} alt="" style={{ border: "none" }} />}
+              {p.banner && (
+                <div className="mt-4 flex justify-center">
+                  <a href={p.banner.href} rel="sponsored nofollow noopener" target="_blank">
+                    <img src={p.banner.img} width={p.banner.width} height={p.banner.height} alt={p.name} style={{ border: "none" }} />
+                  </a>
+                </div>
+              )}
               <p className="mt-2 text-[11px] text-gray-500">PR・{p.name}の公式サイトへ移動します。広告の有無は当サイトの掲載内容・評価に影響しません。</p>
             </div>
           )}
