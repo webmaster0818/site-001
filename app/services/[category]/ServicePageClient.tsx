@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Sparkles, Star, MapPin, DollarSign, ChevronDown } from "lucide-react";
+import PartnerCards from "../../components/PartnerCards";
+import type { ServiceTag } from "../../data/partners";
 
 // 実在業者データ
 const COMPANIES = [
@@ -253,6 +255,8 @@ export default function ServicePageClient({ category }: { category: string }) {
           </main>
         </div>
       </div>
+
+      <PartnerCards tag={(["aircon", "bathroom", "kitchen"].includes(category) ? category : "whole") as ServiceTag} />
     </div>
   );
 }

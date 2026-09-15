@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AREA_INDEX, areaLabel, PREF_PAGES } from "@/app/components/areaIndexData";
+import { PARTNERS } from "../data/partners";
 
 const TITLE = "サイトマップ | クリーンナビ";
 const DESCRIPTION =
@@ -99,6 +100,11 @@ const scenePages: PageLink[] = [
   { href: "/scene/office/", name: "事務所・オフィスクリーニング" },
 ];
 
+const reviewPages: PageLink[] = [
+  { href: "/review/", name: "提携業者の口コミ・評判検証（一覧）" },
+  ...PARTNERS.map((p) => ({ href: `/review/${p.slug}/`, name: `${p.name}の口コミ・評判検証` })),
+];
+
 const companyPages: PageLink[] = [
   { href: "/company/1/", name: "おそうじ本舗" },
   { href: "/company/2/", name: "ダスキン サービスマスター" },
@@ -156,6 +162,7 @@ export default function SitemapPage() {
             <LinkSection title="お役立ちガイド" pages={guideDetailPages} />
             <LinkSection title="シーン別ページ" pages={scenePages} />
             <LinkSection title="掲載業者" pages={companyPages} />
+            <LinkSection title="提携業者の検証" pages={reviewPages} />
             <LinkSection title="都道府県別 店舗データベース" pages={prefDbPages} />
 
             {/* 地域別ページ */}

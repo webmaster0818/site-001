@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import BrandCompareTable from "../../components/BrandCompareTable";
 import OfficialRatingStores from "../../components/OfficialRatingStores";
+import PartnerCards from "../../components/PartnerCards";
 
 export const metadata: Metadata = {
   title: "エアコンクリーニング業者おすすめランキング｜大手3社の比較と選び方【2026年9月】",
@@ -106,6 +107,8 @@ export default function AirconRankingPage() {
       </section>
 
       <OfficialRatingStores limit={6} />
+
+      <PartnerCards tag="aircon" />
 
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">

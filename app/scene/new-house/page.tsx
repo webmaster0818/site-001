@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PartnerCards from "../../components/PartnerCards";
 
 export const metadata = {
   title: "新築・リフォーム後クリーニング | クリーンナビ",
@@ -8,6 +9,8 @@ export const metadata = {
 export default function NewhouseScene() {
   return (
     <div className="min-h-screen bg-base-100">
+      <PartnerCards tag="moving" title="入居前・新居のクリーニングに対応する提携業者" />
+
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-8">新築・リフォーム後クリーニング</h1>

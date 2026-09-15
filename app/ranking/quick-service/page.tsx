@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PartnerCards from "../../components/PartnerCards";
 
 export const metadata: Metadata = {
   title: "ハウスクリーニングの即日・急ぎ対応業者の探し方｜当日予約のコツと注意点",
@@ -98,6 +99,8 @@ export default function QuickServicePage() {
           </div>
         </div>
       </section>
+
+      <PartnerCards title="提携業者の対応エリアと料金（公式確認）" intro="即日対応の可否は日程・地域で変わるため、各社公式サイトの記載を確認日つきで整理した業者ページをご確認ください。掲載順は優劣の評価ではありません。" />
 
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import providers from "../../data/providers.json";
+import PartnerCards from "../../components/PartnerCards";
 
 type Provider = {
   slug: string;
@@ -99,6 +100,8 @@ export default function ReviewRankingPage() {
           </div>
         </div>
       </section>
+
+      <PartnerCards title="口コミ・評判を公式情報で検証した提携業者" intro="口コミを読む前に押さえたい料金・エリア・保証を各社公式サイトで一次確認した業者ページです。架空の口コミ・独自評点は作成していません。掲載順は優劣の評価ではありません。" />
 
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl text-center">

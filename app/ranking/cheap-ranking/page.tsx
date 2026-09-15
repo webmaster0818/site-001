@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BrandCompareTable from "../../components/BrandCompareTable";
+import PartnerCards from "../../components/PartnerCards";
 
 export const metadata: Metadata = {
   title: "ハウスクリーニングを安く頼むには｜サービス別の料金相場と節約のコツ【2026年9月】",
@@ -116,6 +117,8 @@ export default function CheapRankingPage() {
           <BrandCompareTable />
         </div>
       </section>
+
+      <PartnerCards title="料金を公式サイトで明示している提携業者" intro="当サイトと提携している業者のうち、公式サイトで料金を明示している業者です。料金は公式表記のまま転記し、掲載順は優劣の評価ではありません。" />
 
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">

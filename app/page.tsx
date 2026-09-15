@@ -1,6 +1,7 @@
 import type {Metadata } from "next";
 import OfficialRatingStores from "./components/OfficialRatingStores";
 import providersData from "./data/providers.json";
+import PartnerCards from "./components/PartnerCards";
 
 const brandCounts = (() => {
  const list = providersData as { brand: string }[];
@@ -387,6 +388,8 @@ export default function Home() {
  </div>
  </div>
  </section>
+
+      <PartnerCards title="提携業者の口コミ・評判を公式情報で検証" intro="当サイトと提携している専門業者について、料金・対応エリア・保証を各社公式サイトで一次確認し、確認日つきで整理しています。架空の口コミ・独自評点は作成しません。掲載順は優劣の評価ではありません。" limit={8} />
 
  {/* WHY CHOOSE US */}
  <section className="py-16 md:py-20 bg-gray-50">

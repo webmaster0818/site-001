@@ -65,3 +65,16 @@ GSC実数診断:
 - P2=上位20市区(GSC表示実績順・横浜103店〜名古屋北区4店)にCityProviders(住所市区名マッチの決定的抽出)をヒーロー直下組込。全20の店舗数を事前検証
 - P3=year-end-package全面再構築(21行薄ページ→2026年版: 結論10-11月予約/箇所3種/料金業者選び/47県導線/FAQ4+schema・金額断定なし)
 - sitemap lastmod21・本番検証(4市区+year-end title/FAQ)・GSC済。観測=P2 9月中旬/P3 10月。P1登録リクエストはコンソール待ち
+
+### 2026-09-11 P1-P3+ranking再構築+おそうじ革命A8設置（一括実装日）
+- P1: brandハブtitle「店舗一覧・対応エリア検索」化+Footer「ブランドから探す」列(全3,849頁監査)+TOP大手ブランド節(providers.json実数)
+- P2: CTR実験=GSC表示上位50店(app/data/ctr_test_slugs.json)のみtitle/desc「近隣店舗と比較」。9/25判定→全展開or撤収
+- P3: SeasonalCleaningNote(大掃除節)をGSC観測35市区ページに設置(挿入位置2パターン: CityProviders後/最終section後)
+- ranking配下5ページ=404再建スタブ(23行)だったのを全再構築(aircon/bathroom=BrandCompareTable+相場+FAQ schema/cheap=相場+コツ/quick=手順型/review=公式レビューTOP10実数)
+- おそうじ革命A8: KakumeiAffiliateCTA.tsx(提供コード改変不可・pixel必須)。設置=革命ハブ(banner付)/kakumei全452店/BrandCompareTable内。他ブランドリーク0を全数監査
+
+### 2026-09-15 felmat提携8案件の掲載準備（MediaXAI「以下対応してほしい」・id 1549342804243652649）
+- 新設: app/data/partners.ts(8社・公式一次確認・affiliateUrl null=CTA非描画)・components/PartnerCards.tsx(ジャンル別紹介枠)・/review/(ハブ)・/review/[slug]/(8ページ: 料金表/基本情報/特徴/確認できなかったこと/口コミの読み方/FAQ schema)
+- 既存配線: ranking5(aircon/bathroom=tag別・cheap/quick/review=全社)・scene/moving-aircon・new-house(moving)・services/[category] ServicePageClient末尾(category→tag)・TOP(大手ブランド節直後・8社)・Footer・HTMLサイトマップ(PARTNERS動的)
+- 照合: 8社の運営会社名・料金・特記をホストcurl+grep 24件中23件OK(migxlキャンセル料はFAQでなく特商法ページで確認済)。★判明: オン=47都道府県(felmat情報の43都府県は誤り)/清風=家庭用2台目割引なし(felmat情報と不一致)/ミガクる=基本2プラン/おそうじLabo=公式エリアは兵庫7市町(felmat情報の尼崎・伊丹より広い)/110番=運営会社の非公開化報道(9/9)のため上場表記は未確認扱い
+- sitemap 3,846→3,855(regen_sitemap_clean.py・lastmod12件)。out 8,125ファイル(<20,000)

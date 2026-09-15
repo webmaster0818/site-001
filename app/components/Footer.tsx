@@ -25,6 +25,7 @@ export default function Footer() {
         { href: "/brand/osoujihonpo/", label: "おそうじ本舗の店舗一覧" },
         { href: "/brand/duskin/", label: "ダスキン サービスマスターの店舗一覧" },
         { href: "/brand/osoujikakumei/", label: "おそうじ革命の店舗一覧" },
+        { href: "/review/", label: "提携業者の口コミ・評判検証" },
       ],
     },
     {
