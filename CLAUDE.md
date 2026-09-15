@@ -78,3 +78,4 @@ GSC実数診断:
 - 既存配線: ranking5(aircon/bathroom=tag別・cheap/quick/review=全社)・scene/moving-aircon・new-house(moving)・services/[category] ServicePageClient末尾(category→tag)・TOP(大手ブランド節直後・8社)・Footer・HTMLサイトマップ(PARTNERS動的)
 - 照合: 8社の運営会社名・料金・特記をホストcurl+grep 24件中23件OK(migxlキャンセル料はFAQでなく特商法ページで確認済)。★判明: オン=47都道府県(felmat情報の43都府県は誤り)/清風=家庭用2台目割引なし(felmat情報と不一致)/ミガクる=基本2プラン/おそうじLabo=公式エリアは兵庫7市町(felmat情報の尼崎・伊丹より広い)/110番=運営会社の非公開化報道(9/9)のため上場表記は未確認扱い
 - sitemap 3,846→3,855(regen_sitemap_clean.py・lastmod12件)。out 8,125ファイル(<20,000)
+- 同日 計測リンク受領→設置(3189992): partners.tsにaffiliateUrl/Label/Pixel/banner。PartnerCardsと/review/[slug]でpixel(1x1 fmimp)必須・rel="sponsored nofollow noopener"・文言は提供コードのまま。監査スクリプト=scriptタグ除去後のfmcl/fmimpコード集合一致で確認(RSC payload重複で生カウントは不一致になる罠)
