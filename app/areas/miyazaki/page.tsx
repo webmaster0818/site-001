@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PrefProviders from "../../components/PrefProviders";
+import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -216,6 +216,7 @@ export default function Area_miyazaki() {
  <p className="text-xl">宮崎市全域対応！信頼できる業者をご紹介</p>
  </div>
  </section>
+ <AreaProvidersLead slug="miyazaki" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
  <div className="container mx-auto px-4">
@@ -571,8 +572,6 @@ export default function Area_miyazaki() {
  </div>
  </div>
  </section>
- <PrefProviders pref="miyazaki" prefJa="宮崎県" />
-
  </div>
  );
 }

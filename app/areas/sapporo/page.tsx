@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Sparkles, Award, Shield, Zap, MapPin } from "lucide-react";
 
 export const metadata = {
@@ -248,6 +249,7 @@ export default function SapporoArea() {
  <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z"fill="#f9fafb"></path>
  </svg>
  </section>
+ <AreaProvidersLead slug="sapporo" />
  <section className="py-12">
  <div className="container mx-auto px-4">
  <div className="prose max-w-4xl mx-auto">

@@ -1,6 +1,5 @@
 import Link from "next/link";
-import CityProviders from "../../components/CityProviders";
-import PrefProviders from "../../components/PrefProviders";
+import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Building2, CheckCircle, Star, MapPin, Phone, Mail, Sparkles, Award, Shield, Zap, Crown } from "lucide-react";
 
 export const metadata = {
@@ -279,9 +278,7 @@ export default function OsakaArea() {
  ></path>
  </svg>
  </section>
-
- <CityProviders match={["大阪市"]} cityJa="大阪市" />
-
+ <AreaProvidersLead slug="osaka" />
  {/* 導入文 */}
  <section className="py-12 bg-base-100">
  <div className="container mx-auto px-4">
@@ -792,8 +789,6 @@ export default function OsakaArea() {
  </div>
  </div>
  </section>
- <PrefProviders pref="osaka" prefJa="大阪府" />
-
  </div>
  );
 }

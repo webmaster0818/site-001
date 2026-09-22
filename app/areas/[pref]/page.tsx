@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import providers from "../../data/providers.json";
-import PrefProviders from "../../components/PrefProviders";
+import AreaProvidersLead from "../../components/AreaProvidersLead";
 
 // 既存の静的ディレクトリ(app/areas/tokyo等)が優先されるため、
 // この動的ルートは「県ページ未作成の24県」だけを生成する
@@ -65,7 +65,7 @@ export default async function PrefPage({ params }: { params: Promise<{ pref: str
           </ol>
         </nav>
       </div>
-      <PrefProviders pref={pref} prefJa={prefJa} />
+      <AreaProvidersLead slug={pref} />
       <section className="container mx-auto px-4 pb-14">
         <div className="alert alert-info">
           <p className="text-sm">

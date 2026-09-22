@@ -1,7 +1,6 @@
 import Link from "next/link";
+import AreaProvidersLead from "../../components/AreaProvidersLead";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
-import CityProviders from "../../components/CityProviders";
-import PrefProviders from "../../components/PrefProviders";
 import { Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -192,8 +191,7 @@ export default function HiroshimaArea() {
           <p className="text-xl">広島市など広島市全域対応</p>
         </div>
       </section>
-
- <CityProviders match={["広島市"]} cityJa="広島市" />
+ <AreaProvidersLead slug="hiroshima" />
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="prose max-w-4xl mx-auto">
@@ -296,7 +294,6 @@ export default function HiroshimaArea() {
           </div>
         </div>
       </section>
- <PrefProviders pref="hiroshima" prefJa="広島県" />
  <SeasonalCleaningNote />
     </div>
   );

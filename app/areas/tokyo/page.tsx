@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PrefProviders from "../../components/PrefProviders";
+import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Building2, MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -284,6 +284,7 @@ export default function TokyoArea() {
  ></path>
  </svg>
  </section>
+ <AreaProvidersLead slug="tokyo" />
 
  <section className="py-12 bg-base-100">
  <div className="container mx-auto px-4">
@@ -664,7 +665,6 @@ export default function TokyoArea() {
  </div>
  </div>
  </section>
- <PrefProviders pref="tokyo" prefJa="東京都" />
  </div>
  );
 }

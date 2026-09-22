@@ -1,0 +1,5323 @@
+{
+ "sapporo": {
+  "slug": "sapporo",
+  "kind": "city",
+  "label": "札幌市",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市"
+  ],
+  "areaTerms": [
+   "札幌市"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "sapporo-chuo",
+    "name": "札幌市中央区"
+   },
+   {
+    "slug": "sapporo-kita",
+    "name": "札幌市北区"
+   },
+   {
+    "slug": "sapporo-higashi",
+    "name": "札幌市東区"
+   },
+   {
+    "slug": "sapporo-shiroishi",
+    "name": "札幌市白石区"
+   },
+   {
+    "slug": "sapporo-atsubetsu",
+    "name": "札幌市厚別区"
+   },
+   {
+    "slug": "sapporo-toyohira",
+    "name": "札幌市豊平区"
+   },
+   {
+    "slug": "sapporo-kiyota",
+    "name": "札幌市清田区"
+   },
+   {
+    "slug": "sapporo-minami",
+    "name": "札幌市南区"
+   },
+   {
+    "slug": "sapporo-nishi",
+    "name": "札幌市西区"
+   },
+   {
+    "slug": "sapporo-teine",
+    "name": "札幌市手稲区"
+   }
+  ],
+  "count": 50
+ },
+ "sapporo-chuo": {
+  "slug": "sapporo-chuo",
+  "kind": "ward",
+  "label": "札幌市中央区",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市中央区"
+  ],
+  "areaTerms": [
+   "札幌市中央区"
+  ],
+  "parent": {
+   "slug": "sapporo",
+   "name": "札幌市"
+  },
+  "children": [],
+  "count": 7
+ },
+ "sapporo-kita": {
+  "slug": "sapporo-kita",
+  "kind": "ward",
+  "label": "札幌市北区",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市北区"
+  ],
+  "areaTerms": [
+   "札幌市北区"
+  ],
+  "parent": {
+   "slug": "sapporo",
+   "name": "札幌市"
+  },
+  "children": [],
+  "count": 5
+ },
+ "sapporo-higashi": {
+  "slug": "sapporo-higashi",
+  "kind": "ward",
+  "label": "札幌市東区",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市東区"
+  ],
+  "areaTerms": [
+   "札幌市東区"
+  ],
+  "parent": {
+   "slug": "sapporo",
+   "name": "札幌市"
+  },
+  "children": [],
+  "count": 7
+ },
+ "sapporo-shiroishi": {
+  "slug": "sapporo-shiroishi",
+  "kind": "ward",
+  "label": "札幌市白石区",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市白石区"
+  ],
+  "areaTerms": [
+   "札幌市白石区"
+  ],
+  "parent": {
+   "slug": "sapporo",
+   "name": "札幌市"
+  },
+  "children": [],
+  "count": 8
+ },
+ "sapporo-atsubetsu": {
+  "slug": "sapporo-atsubetsu",
+  "kind": "ward",
+  "label": "札幌市厚別区",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市厚別区"
+  ],
+  "areaTerms": [
+   "札幌市厚別区"
+  ],
+  "parent": {
+   "slug": "sapporo",
+   "name": "札幌市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "sapporo-toyohira": {
+  "slug": "sapporo-toyohira",
+  "kind": "ward",
+  "label": "札幌市豊平区",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市豊平区"
+  ],
+  "areaTerms": [
+   "札幌市豊平区"
+  ],
+  "parent": {
+   "slug": "sapporo",
+   "name": "札幌市"
+  },
+  "children": [],
+  "count": 7
+ },
+ "sapporo-kiyota": {
+  "slug": "sapporo-kiyota",
+  "kind": "ward",
+  "label": "札幌市清田区",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市清田区"
+  ],
+  "areaTerms": [
+   "札幌市清田区"
+  ],
+  "parent": {
+   "slug": "sapporo",
+   "name": "札幌市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "sapporo-minami": {
+  "slug": "sapporo-minami",
+  "kind": "ward",
+  "label": "札幌市南区",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市南区"
+  ],
+  "areaTerms": [
+   "札幌市南区"
+  ],
+  "parent": {
+   "slug": "sapporo",
+   "name": "札幌市"
+  },
+  "children": [],
+  "count": 2
+ },
+ "sapporo-nishi": {
+  "slug": "sapporo-nishi",
+  "kind": "ward",
+  "label": "札幌市西区",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市西区"
+  ],
+  "areaTerms": [
+   "札幌市西区"
+  ],
+  "parent": {
+   "slug": "sapporo",
+   "name": "札幌市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "sapporo-teine": {
+  "slug": "sapporo-teine",
+  "kind": "ward",
+  "label": "札幌市手稲区",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [
+   "札幌市手稲区"
+  ],
+  "areaTerms": [
+   "札幌市手稲区"
+  ],
+  "parent": {
+   "slug": "sapporo",
+   "name": "札幌市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "sendai": {
+  "slug": "sendai",
+  "kind": "city",
+  "label": "仙台市",
+  "pref": "宮城県",
+  "prefSlug": "miyagi",
+  "match": [
+   "仙台市"
+  ],
+  "areaTerms": [
+   "仙台市"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "sendai-aoba",
+    "name": "仙台市青葉区"
+   },
+   {
+    "slug": "sendai-miyagino",
+    "name": "仙台市宮城野区"
+   },
+   {
+    "slug": "sendai-wakabayashi",
+    "name": "仙台市若林区"
+   },
+   {
+    "slug": "sendai-taihaku",
+    "name": "仙台市太白区"
+   },
+   {
+    "slug": "sendai-izumi",
+    "name": "仙台市泉区"
+   }
+  ],
+  "count": 44
+ },
+ "sendai-aoba": {
+  "slug": "sendai-aoba",
+  "kind": "ward",
+  "label": "仙台市青葉区",
+  "pref": "宮城県",
+  "prefSlug": "miyagi",
+  "match": [
+   "仙台市青葉区"
+  ],
+  "areaTerms": [
+   "仙台市青葉区"
+  ],
+  "parent": {
+   "slug": "sendai",
+   "name": "仙台市"
+  },
+  "children": [],
+  "count": 14
+ },
+ "sendai-miyagino": {
+  "slug": "sendai-miyagino",
+  "kind": "ward",
+  "label": "仙台市宮城野区",
+  "pref": "宮城県",
+  "prefSlug": "miyagi",
+  "match": [
+   "仙台市宮城野区"
+  ],
+  "areaTerms": [
+   "仙台市宮城野区"
+  ],
+  "parent": {
+   "slug": "sendai",
+   "name": "仙台市"
+  },
+  "children": [],
+  "count": 6
+ },
+ "sendai-wakabayashi": {
+  "slug": "sendai-wakabayashi",
+  "kind": "ward",
+  "label": "仙台市若林区",
+  "pref": "宮城県",
+  "prefSlug": "miyagi",
+  "match": [
+   "仙台市若林区"
+  ],
+  "areaTerms": [
+   "仙台市若林区"
+  ],
+  "parent": {
+   "slug": "sendai",
+   "name": "仙台市"
+  },
+  "children": [],
+  "count": 6
+ },
+ "sendai-taihaku": {
+  "slug": "sendai-taihaku",
+  "kind": "ward",
+  "label": "仙台市太白区",
+  "pref": "宮城県",
+  "prefSlug": "miyagi",
+  "match": [
+   "仙台市太白区"
+  ],
+  "areaTerms": [
+   "仙台市太白区"
+  ],
+  "parent": {
+   "slug": "sendai",
+   "name": "仙台市"
+  },
+  "children": [],
+  "count": 10
+ },
+ "sendai-izumi": {
+  "slug": "sendai-izumi",
+  "kind": "ward",
+  "label": "仙台市泉区",
+  "pref": "宮城県",
+  "prefSlug": "miyagi",
+  "match": [
+   "仙台市泉区"
+  ],
+  "areaTerms": [
+   "仙台市泉区"
+  ],
+  "parent": {
+   "slug": "sendai",
+   "name": "仙台市"
+  },
+  "children": [],
+  "count": 8
+ },
+ "tokyo": {
+  "slug": "tokyo",
+  "kind": "pref",
+  "label": "東京都",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [],
+  "areaTerms": [
+   "東京都"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "tokyo-chiyoda",
+    "name": "千代田区"
+   },
+   {
+    "slug": "tokyo-chuo",
+    "name": "中央区"
+   },
+   {
+    "slug": "tokyo-minato",
+    "name": "港区"
+   },
+   {
+    "slug": "tokyo-shinjuku",
+    "name": "新宿区"
+   },
+   {
+    "slug": "tokyo-bunkyo",
+    "name": "文京区"
+   },
+   {
+    "slug": "tokyo-taito",
+    "name": "台東区"
+   },
+   {
+    "slug": "tokyo-sumida",
+    "name": "墨田区"
+   },
+   {
+    "slug": "tokyo-koto",
+    "name": "江東区"
+   },
+   {
+    "slug": "tokyo-shinagawa",
+    "name": "品川区"
+   },
+   {
+    "slug": "tokyo-meguro",
+    "name": "目黒区"
+   },
+   {
+    "slug": "tokyo-ota",
+    "name": "大田区"
+   },
+   {
+    "slug": "tokyo-setagaya",
+    "name": "世田谷区"
+   },
+   {
+    "slug": "tokyo-shibuya",
+    "name": "渋谷区"
+   },
+   {
+    "slug": "tokyo-nakano",
+    "name": "中野区"
+   },
+   {
+    "slug": "tokyo-suginami",
+    "name": "杉並区"
+   },
+   {
+    "slug": "tokyo-toshima",
+    "name": "豊島区"
+   },
+   {
+    "slug": "tokyo-kita",
+    "name": "北区"
+   },
+   {
+    "slug": "tokyo-arakawa",
+    "name": "荒川区"
+   },
+   {
+    "slug": "tokyo-itabashi",
+    "name": "板橋区"
+   },
+   {
+    "slug": "tokyo-nerima",
+    "name": "練馬区"
+   },
+   {
+    "slug": "tokyo-adachi",
+    "name": "足立区"
+   },
+   {
+    "slug": "tokyo-katsushika",
+    "name": "葛飾区"
+   },
+   {
+    "slug": "tokyo-edogawa",
+    "name": "江戸川区"
+   },
+   {
+    "slug": "hachioji",
+    "name": "八王子市"
+   },
+   {
+    "slug": "machida",
+    "name": "町田市"
+   }
+  ],
+  "count": 537
+ },
+ "tokyo-chiyoda": {
+  "slug": "tokyo-chiyoda",
+  "kind": "ward",
+  "label": "千代田区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都千代田区"
+  ],
+  "areaTerms": [
+   "千代田区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "tokyo-chuo": {
+  "slug": "tokyo-chuo",
+  "kind": "ward",
+  "label": "中央区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都中央区"
+  ],
+  "areaTerms": [
+   "中央区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 13
+ },
+ "tokyo-minato": {
+  "slug": "tokyo-minato",
+  "kind": "ward",
+  "label": "港区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都港区"
+  ],
+  "areaTerms": [
+   "港区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 22
+ },
+ "tokyo-shinjuku": {
+  "slug": "tokyo-shinjuku",
+  "kind": "ward",
+  "label": "新宿区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都新宿区"
+  ],
+  "areaTerms": [
+   "新宿区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 18
+ },
+ "tokyo-bunkyo": {
+  "slug": "tokyo-bunkyo",
+  "kind": "ward",
+  "label": "文京区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都文京区"
+  ],
+  "areaTerms": [
+   "文京区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 10
+ },
+ "tokyo-taito": {
+  "slug": "tokyo-taito",
+  "kind": "ward",
+  "label": "台東区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都台東区"
+  ],
+  "areaTerms": [
+   "台東区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 8
+ },
+ "tokyo-sumida": {
+  "slug": "tokyo-sumida",
+  "kind": "ward",
+  "label": "墨田区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都墨田区"
+  ],
+  "areaTerms": [
+   "墨田区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 11
+ },
+ "tokyo-koto": {
+  "slug": "tokyo-koto",
+  "kind": "ward",
+  "label": "江東区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都江東区"
+  ],
+  "areaTerms": [
+   "江東区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 21
+ },
+ "tokyo-shinagawa": {
+  "slug": "tokyo-shinagawa",
+  "kind": "ward",
+  "label": "品川区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都品川区"
+  ],
+  "areaTerms": [
+   "品川区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 18
+ },
+ "tokyo-meguro": {
+  "slug": "tokyo-meguro",
+  "kind": "ward",
+  "label": "目黒区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都目黒区"
+  ],
+  "areaTerms": [
+   "目黒区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 17
+ },
+ "tokyo-ota": {
+  "slug": "tokyo-ota",
+  "kind": "ward",
+  "label": "大田区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都大田区"
+  ],
+  "areaTerms": [
+   "大田区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 30
+ },
+ "tokyo-setagaya": {
+  "slug": "tokyo-setagaya",
+  "kind": "ward",
+  "label": "世田谷区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都世田谷区"
+  ],
+  "areaTerms": [
+   "世田谷区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 40
+ },
+ "tokyo-shibuya": {
+  "slug": "tokyo-shibuya",
+  "kind": "ward",
+  "label": "渋谷区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都渋谷区"
+  ],
+  "areaTerms": [
+   "渋谷区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 11
+ },
+ "tokyo-nakano": {
+  "slug": "tokyo-nakano",
+  "kind": "ward",
+  "label": "中野区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都中野区"
+  ],
+  "areaTerms": [
+   "中野区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 18
+ },
+ "tokyo-suginami": {
+  "slug": "tokyo-suginami",
+  "kind": "ward",
+  "label": "杉並区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都杉並区"
+  ],
+  "areaTerms": [
+   "杉並区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 22
+ },
+ "tokyo-toshima": {
+  "slug": "tokyo-toshima",
+  "kind": "ward",
+  "label": "豊島区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都豊島区"
+  ],
+  "areaTerms": [
+   "豊島区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 10
+ },
+ "tokyo-kita": {
+  "slug": "tokyo-kita",
+  "kind": "ward",
+  "label": "北区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都北区"
+  ],
+  "areaTerms": [
+   "北区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 14
+ },
+ "tokyo-arakawa": {
+  "slug": "tokyo-arakawa",
+  "kind": "ward",
+  "label": "荒川区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都荒川区"
+  ],
+  "areaTerms": [
+   "荒川区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 11
+ },
+ "tokyo-itabashi": {
+  "slug": "tokyo-itabashi",
+  "kind": "ward",
+  "label": "板橋区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都板橋区"
+  ],
+  "areaTerms": [
+   "板橋区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 21
+ },
+ "tokyo-nerima": {
+  "slug": "tokyo-nerima",
+  "kind": "ward",
+  "label": "練馬区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都練馬区"
+  ],
+  "areaTerms": [
+   "練馬区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 26
+ },
+ "tokyo-adachi": {
+  "slug": "tokyo-adachi",
+  "kind": "ward",
+  "label": "足立区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都足立区"
+  ],
+  "areaTerms": [
+   "足立区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 25
+ },
+ "tokyo-katsushika": {
+  "slug": "tokyo-katsushika",
+  "kind": "ward",
+  "label": "葛飾区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都葛飾区"
+  ],
+  "areaTerms": [
+   "葛飾区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 14
+ },
+ "tokyo-edogawa": {
+  "slug": "tokyo-edogawa",
+  "kind": "ward",
+  "label": "江戸川区",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "東京都江戸川区"
+  ],
+  "areaTerms": [
+   "江戸川区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 25
+ },
+ "hachioji": {
+  "slug": "hachioji",
+  "kind": "city",
+  "label": "八王子市",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "八王子市"
+  ],
+  "areaTerms": [
+   "八王子市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 19
+ },
+ "machida": {
+  "slug": "machida",
+  "kind": "city",
+  "label": "町田市",
+  "pref": "東京都",
+  "prefSlug": "tokyo",
+  "match": [
+   "町田市"
+  ],
+  "areaTerms": [
+   "町田市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 15
+ },
+ "kanagawa": {
+  "slug": "kanagawa",
+  "kind": "pref",
+  "label": "神奈川県",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [],
+  "areaTerms": [
+   "神奈川県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "yokohama",
+    "name": "横浜市"
+   },
+   {
+    "slug": "yokohama-tsurumi",
+    "name": "横浜市鶴見区"
+   },
+   {
+    "slug": "yokohama-kanagawa",
+    "name": "横浜市神奈川区"
+   },
+   {
+    "slug": "yokohama-nishi",
+    "name": "横浜市西区"
+   },
+   {
+    "slug": "yokohama-naka",
+    "name": "横浜市中区"
+   },
+   {
+    "slug": "yokohama-minami",
+    "name": "横浜市南区"
+   },
+   {
+    "slug": "yokohama-konan",
+    "name": "横浜市港南区"
+   },
+   {
+    "slug": "yokohama-hodogaya",
+    "name": "横浜市保土ケ谷区"
+   },
+   {
+    "slug": "yokohama-asahi",
+    "name": "横浜市旭区"
+   },
+   {
+    "slug": "yokohama-isogo",
+    "name": "横浜市磯子区"
+   },
+   {
+    "slug": "yokohama-kanazawa",
+    "name": "横浜市金沢区"
+   },
+   {
+    "slug": "yokohama-kohoku",
+    "name": "横浜市港北区"
+   },
+   {
+    "slug": "yokohama-midori",
+    "name": "横浜市緑区"
+   },
+   {
+    "slug": "yokohama-aoba",
+    "name": "横浜市青葉区"
+   },
+   {
+    "slug": "yokohama-tsuzuki",
+    "name": "横浜市都筑区"
+   },
+   {
+    "slug": "yokohama-totsuka",
+    "name": "横浜市戸塚区"
+   },
+   {
+    "slug": "yokohama-sakae",
+    "name": "横浜市栄区"
+   },
+   {
+    "slug": "yokohama-izumi",
+    "name": "横浜市泉区"
+   },
+   {
+    "slug": "yokohama-seya",
+    "name": "横浜市瀬谷区"
+   },
+   {
+    "slug": "kawasaki",
+    "name": "川崎市"
+   },
+   {
+    "slug": "kawasaki-kawasaki",
+    "name": "川崎市川崎区"
+   },
+   {
+    "slug": "kawasaki-saiwai",
+    "name": "川崎市幸区"
+   },
+   {
+    "slug": "kawasaki-nakahara",
+    "name": "川崎市中原区"
+   },
+   {
+    "slug": "kawasaki-takatsu",
+    "name": "川崎市高津区"
+   },
+   {
+    "slug": "kawasaki-tama",
+    "name": "川崎市多摩区"
+   },
+   {
+    "slug": "kawasaki-miyamae",
+    "name": "川崎市宮前区"
+   },
+   {
+    "slug": "kawasaki-asao",
+    "name": "川崎市麻生区"
+   },
+   {
+    "slug": "sagamihara-midori",
+    "name": "相模原市緑区"
+   },
+   {
+    "slug": "sagamihara-chuo",
+    "name": "相模原市中央区"
+   },
+   {
+    "slug": "sagamihara-minami",
+    "name": "相模原市南区"
+   },
+   {
+    "slug": "fujisawa",
+    "name": "藤沢市"
+   },
+   {
+    "slug": "yokosuka",
+    "name": "横須賀市"
+   }
+  ],
+  "count": 241
+ },
+ "yokohama": {
+  "slug": "yokohama",
+  "kind": "city",
+  "label": "横浜市",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市"
+  ],
+  "areaTerms": [
+   "横浜市"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "yokohama-tsurumi",
+    "name": "横浜市鶴見区"
+   },
+   {
+    "slug": "yokohama-kanagawa",
+    "name": "横浜市神奈川区"
+   },
+   {
+    "slug": "yokohama-nishi",
+    "name": "横浜市西区"
+   },
+   {
+    "slug": "yokohama-naka",
+    "name": "横浜市中区"
+   },
+   {
+    "slug": "yokohama-minami",
+    "name": "横浜市南区"
+   },
+   {
+    "slug": "yokohama-konan",
+    "name": "横浜市港南区"
+   },
+   {
+    "slug": "yokohama-hodogaya",
+    "name": "横浜市保土ケ谷区"
+   },
+   {
+    "slug": "yokohama-asahi",
+    "name": "横浜市旭区"
+   },
+   {
+    "slug": "yokohama-isogo",
+    "name": "横浜市磯子区"
+   },
+   {
+    "slug": "yokohama-kanazawa",
+    "name": "横浜市金沢区"
+   },
+   {
+    "slug": "yokohama-kohoku",
+    "name": "横浜市港北区"
+   },
+   {
+    "slug": "yokohama-midori",
+    "name": "横浜市緑区"
+   },
+   {
+    "slug": "yokohama-aoba",
+    "name": "横浜市青葉区"
+   },
+   {
+    "slug": "yokohama-tsuzuki",
+    "name": "横浜市都筑区"
+   },
+   {
+    "slug": "yokohama-totsuka",
+    "name": "横浜市戸塚区"
+   },
+   {
+    "slug": "yokohama-sakae",
+    "name": "横浜市栄区"
+   },
+   {
+    "slug": "yokohama-izumi",
+    "name": "横浜市泉区"
+   },
+   {
+    "slug": "yokohama-seya",
+    "name": "横浜市瀬谷区"
+   }
+  ],
+  "count": 103
+ },
+ "yokohama-tsurumi": {
+  "slug": "yokohama-tsurumi",
+  "kind": "ward",
+  "label": "横浜市鶴見区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市鶴見区"
+  ],
+  "areaTerms": [
+   "横浜市鶴見区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 14
+ },
+ "yokohama-kanagawa": {
+  "slug": "yokohama-kanagawa",
+  "kind": "ward",
+  "label": "横浜市神奈川区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市神奈川区"
+  ],
+  "areaTerms": [
+   "横浜市神奈川区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 2
+ },
+ "yokohama-nishi": {
+  "slug": "yokohama-nishi",
+  "kind": "ward",
+  "label": "横浜市西区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市西区"
+  ],
+  "areaTerms": [
+   "横浜市西区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "yokohama-naka": {
+  "slug": "yokohama-naka",
+  "kind": "ward",
+  "label": "横浜市中区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市中区"
+  ],
+  "areaTerms": [
+   "横浜市中区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 6
+ },
+ "yokohama-minami": {
+  "slug": "yokohama-minami",
+  "kind": "ward",
+  "label": "横浜市南区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市南区"
+  ],
+  "areaTerms": [
+   "横浜市南区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 9
+ },
+ "yokohama-konan": {
+  "slug": "yokohama-konan",
+  "kind": "ward",
+  "label": "横浜市港南区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市港南区"
+  ],
+  "areaTerms": [
+   "横浜市港南区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 5
+ },
+ "yokohama-hodogaya": {
+  "slug": "yokohama-hodogaya",
+  "kind": "ward",
+  "label": "横浜市保土ケ谷区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市保土ケ谷区"
+  ],
+  "areaTerms": [
+   "横浜市保土ケ谷区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "yokohama-asahi": {
+  "slug": "yokohama-asahi",
+  "kind": "ward",
+  "label": "横浜市旭区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市旭区"
+  ],
+  "areaTerms": [
+   "横浜市旭区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "yokohama-isogo": {
+  "slug": "yokohama-isogo",
+  "kind": "ward",
+  "label": "横浜市磯子区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市磯子区"
+  ],
+  "areaTerms": [
+   "横浜市磯子区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "yokohama-kanazawa": {
+  "slug": "yokohama-kanazawa",
+  "kind": "ward",
+  "label": "横浜市金沢区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市金沢区"
+  ],
+  "areaTerms": [
+   "横浜市金沢区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 5
+ },
+ "yokohama-kohoku": {
+  "slug": "yokohama-kohoku",
+  "kind": "ward",
+  "label": "横浜市港北区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市港北区"
+  ],
+  "areaTerms": [
+   "横浜市港北区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 10
+ },
+ "yokohama-midori": {
+  "slug": "yokohama-midori",
+  "kind": "ward",
+  "label": "横浜市緑区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市緑区"
+  ],
+  "areaTerms": [
+   "横浜市緑区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 2
+ },
+ "yokohama-aoba": {
+  "slug": "yokohama-aoba",
+  "kind": "ward",
+  "label": "横浜市青葉区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市青葉区"
+  ],
+  "areaTerms": [
+   "横浜市青葉区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 10
+ },
+ "yokohama-tsuzuki": {
+  "slug": "yokohama-tsuzuki",
+  "kind": "ward",
+  "label": "横浜市都筑区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市都筑区"
+  ],
+  "areaTerms": [
+   "横浜市都筑区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 9
+ },
+ "yokohama-totsuka": {
+  "slug": "yokohama-totsuka",
+  "kind": "ward",
+  "label": "横浜市戸塚区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市戸塚区"
+  ],
+  "areaTerms": [
+   "横浜市戸塚区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 7
+ },
+ "yokohama-sakae": {
+  "slug": "yokohama-sakae",
+  "kind": "ward",
+  "label": "横浜市栄区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市栄区"
+  ],
+  "areaTerms": [
+   "横浜市栄区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 5
+ },
+ "yokohama-izumi": {
+  "slug": "yokohama-izumi",
+  "kind": "ward",
+  "label": "横浜市泉区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市泉区"
+  ],
+  "areaTerms": [
+   "横浜市泉区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 2
+ },
+ "yokohama-seya": {
+  "slug": "yokohama-seya",
+  "kind": "ward",
+  "label": "横浜市瀬谷区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横浜市瀬谷区"
+  ],
+  "areaTerms": [
+   "横浜市瀬谷区"
+  ],
+  "parent": {
+   "slug": "yokohama",
+   "name": "横浜市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "kawasaki": {
+  "slug": "kawasaki",
+  "kind": "city",
+  "label": "川崎市",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "川崎市"
+  ],
+  "areaTerms": [
+   "川崎市"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "kawasaki-kawasaki",
+    "name": "川崎市川崎区"
+   },
+   {
+    "slug": "kawasaki-saiwai",
+    "name": "川崎市幸区"
+   },
+   {
+    "slug": "kawasaki-nakahara",
+    "name": "川崎市中原区"
+   },
+   {
+    "slug": "kawasaki-takatsu",
+    "name": "川崎市高津区"
+   },
+   {
+    "slug": "kawasaki-tama",
+    "name": "川崎市多摩区"
+   },
+   {
+    "slug": "kawasaki-miyamae",
+    "name": "川崎市宮前区"
+   },
+   {
+    "slug": "kawasaki-asao",
+    "name": "川崎市麻生区"
+   }
+  ],
+  "count": 40
+ },
+ "kawasaki-kawasaki": {
+  "slug": "kawasaki-kawasaki",
+  "kind": "ward",
+  "label": "川崎市川崎区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "川崎市川崎区"
+  ],
+  "areaTerms": [
+   "川崎市川崎区"
+  ],
+  "parent": {
+   "slug": "kawasaki",
+   "name": "川崎市"
+  },
+  "children": [],
+  "count": 5
+ },
+ "kawasaki-saiwai": {
+  "slug": "kawasaki-saiwai",
+  "kind": "ward",
+  "label": "川崎市幸区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "川崎市幸区"
+  ],
+  "areaTerms": [
+   "川崎市幸区"
+  ],
+  "parent": {
+   "slug": "kawasaki",
+   "name": "川崎市"
+  },
+  "children": [],
+  "count": 8
+ },
+ "kawasaki-nakahara": {
+  "slug": "kawasaki-nakahara",
+  "kind": "ward",
+  "label": "川崎市中原区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "川崎市中原区"
+  ],
+  "areaTerms": [
+   "川崎市中原区"
+  ],
+  "parent": {
+   "slug": "kawasaki",
+   "name": "川崎市"
+  },
+  "children": [],
+  "count": 6
+ },
+ "kawasaki-takatsu": {
+  "slug": "kawasaki-takatsu",
+  "kind": "ward",
+  "label": "川崎市高津区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "川崎市高津区"
+  ],
+  "areaTerms": [
+   "川崎市高津区"
+  ],
+  "parent": {
+   "slug": "kawasaki",
+   "name": "川崎市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "kawasaki-tama": {
+  "slug": "kawasaki-tama",
+  "kind": "ward",
+  "label": "川崎市多摩区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "川崎市多摩区"
+  ],
+  "areaTerms": [
+   "川崎市多摩区"
+  ],
+  "parent": {
+   "slug": "kawasaki",
+   "name": "川崎市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "kawasaki-miyamae": {
+  "slug": "kawasaki-miyamae",
+  "kind": "ward",
+  "label": "川崎市宮前区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "川崎市宮前区"
+  ],
+  "areaTerms": [
+   "川崎市宮前区"
+  ],
+  "parent": {
+   "slug": "kawasaki",
+   "name": "川崎市"
+  },
+  "children": [],
+  "count": 5
+ },
+ "kawasaki-asao": {
+  "slug": "kawasaki-asao",
+  "kind": "ward",
+  "label": "川崎市麻生区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "川崎市麻生区"
+  ],
+  "areaTerms": [
+   "川崎市麻生区"
+  ],
+  "parent": {
+   "slug": "kawasaki",
+   "name": "川崎市"
+  },
+  "children": [],
+  "count": 8
+ },
+ "sagamihara-midori": {
+  "slug": "sagamihara-midori",
+  "kind": "ward",
+  "label": "相模原市緑区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "相模原市緑区"
+  ],
+  "areaTerms": [
+   "相模原市緑区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "sagamihara-chuo": {
+  "slug": "sagamihara-chuo",
+  "kind": "ward",
+  "label": "相模原市中央区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "相模原市中央区"
+  ],
+  "areaTerms": [
+   "相模原市中央区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "sagamihara-minami": {
+  "slug": "sagamihara-minami",
+  "kind": "ward",
+  "label": "相模原市南区",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "相模原市南区"
+  ],
+  "areaTerms": [
+   "相模原市南区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "fujisawa": {
+  "slug": "fujisawa",
+  "kind": "city",
+  "label": "藤沢市",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "藤沢市"
+  ],
+  "areaTerms": [
+   "藤沢市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 14
+ },
+ "yokosuka": {
+  "slug": "yokosuka",
+  "kind": "city",
+  "label": "横須賀市",
+  "pref": "神奈川県",
+  "prefSlug": "kanagawa",
+  "match": [
+   "横須賀市"
+  ],
+  "areaTerms": [
+   "横須賀市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 8
+ },
+ "saitama": {
+  "slug": "saitama",
+  "kind": "pref",
+  "label": "埼玉県",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [],
+  "areaTerms": [
+   "埼玉県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "saitama-nishi",
+    "name": "さいたま市西区"
+   },
+   {
+    "slug": "saitama-kita",
+    "name": "さいたま市北区"
+   },
+   {
+    "slug": "saitama-omiya",
+    "name": "さいたま市大宮区"
+   },
+   {
+    "slug": "saitama-minuma",
+    "name": "さいたま市見沼区"
+   },
+   {
+    "slug": "saitama-chuo",
+    "name": "さいたま市中央区"
+   },
+   {
+    "slug": "saitama-sakura",
+    "name": "さいたま市桜区"
+   },
+   {
+    "slug": "saitama-urawa",
+    "name": "さいたま市浦和区"
+   },
+   {
+    "slug": "saitama-minami",
+    "name": "さいたま市南区"
+   },
+   {
+    "slug": "saitama-midori",
+    "name": "さいたま市緑区"
+   },
+   {
+    "slug": "saitama-iwatsuki",
+    "name": "さいたま市岩槻区"
+   },
+   {
+    "slug": "kawaguchi",
+    "name": "川口市"
+   },
+   {
+    "slug": "kawagoe",
+    "name": "川越市"
+   },
+   {
+    "slug": "tokorozawa",
+    "name": "所沢市"
+   },
+   {
+    "slug": "koshigaya",
+    "name": "越谷市"
+   }
+  ],
+  "count": 201
+ },
+ "saitama-nishi": {
+  "slug": "saitama-nishi",
+  "kind": "ward",
+  "label": "さいたま市西区",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "さいたま市西区"
+  ],
+  "areaTerms": [
+   "さいたま市西区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "saitama-kita": {
+  "slug": "saitama-kita",
+  "kind": "ward",
+  "label": "さいたま市北区",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "さいたま市北区"
+  ],
+  "areaTerms": [
+   "さいたま市北区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "saitama-omiya": {
+  "slug": "saitama-omiya",
+  "kind": "ward",
+  "label": "さいたま市大宮区",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "さいたま市大宮区"
+  ],
+  "areaTerms": [
+   "さいたま市大宮区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "saitama-minuma": {
+  "slug": "saitama-minuma",
+  "kind": "ward",
+  "label": "さいたま市見沼区",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "さいたま市見沼区"
+  ],
+  "areaTerms": [
+   "さいたま市見沼区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "saitama-chuo": {
+  "slug": "saitama-chuo",
+  "kind": "ward",
+  "label": "さいたま市中央区",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "さいたま市中央区"
+  ],
+  "areaTerms": [
+   "さいたま市中央区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "saitama-sakura": {
+  "slug": "saitama-sakura",
+  "kind": "ward",
+  "label": "さいたま市桜区",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "さいたま市桜区"
+  ],
+  "areaTerms": [
+   "さいたま市桜区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "saitama-urawa": {
+  "slug": "saitama-urawa",
+  "kind": "ward",
+  "label": "さいたま市浦和区",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "さいたま市浦和区"
+  ],
+  "areaTerms": [
+   "さいたま市浦和区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "saitama-minami": {
+  "slug": "saitama-minami",
+  "kind": "ward",
+  "label": "さいたま市南区",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "さいたま市南区"
+  ],
+  "areaTerms": [
+   "さいたま市南区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "saitama-midori": {
+  "slug": "saitama-midori",
+  "kind": "ward",
+  "label": "さいたま市緑区",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "さいたま市緑区"
+  ],
+  "areaTerms": [
+   "さいたま市緑区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "saitama-iwatsuki": {
+  "slug": "saitama-iwatsuki",
+  "kind": "ward",
+  "label": "さいたま市岩槻区",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "さいたま市岩槻区"
+  ],
+  "areaTerms": [
+   "さいたま市岩槻区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "kawaguchi": {
+  "slug": "kawaguchi",
+  "kind": "city",
+  "label": "川口市",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "川口市"
+  ],
+  "areaTerms": [
+   "川口市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 15
+ },
+ "kawagoe": {
+  "slug": "kawagoe",
+  "kind": "city",
+  "label": "川越市",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "川越市"
+  ],
+  "areaTerms": [
+   "川越市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 12
+ },
+ "tokorozawa": {
+  "slug": "tokorozawa",
+  "kind": "city",
+  "label": "所沢市",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "所沢市"
+  ],
+  "areaTerms": [
+   "所沢市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 10
+ },
+ "koshigaya": {
+  "slug": "koshigaya",
+  "kind": "city",
+  "label": "越谷市",
+  "pref": "埼玉県",
+  "prefSlug": "saitama",
+  "match": [
+   "越谷市"
+  ],
+  "areaTerms": [
+   "越谷市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 12
+ },
+ "chiba": {
+  "slug": "chiba",
+  "kind": "pref",
+  "label": "千葉県",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [],
+  "areaTerms": [
+   "千葉県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "chiba-chuo",
+    "name": "千葉市中央区"
+   },
+   {
+    "slug": "chiba-hanamigawa",
+    "name": "千葉市花見川区"
+   },
+   {
+    "slug": "chiba-inage",
+    "name": "千葉市稲毛区"
+   },
+   {
+    "slug": "chiba-wakaba",
+    "name": "千葉市若葉区"
+   },
+   {
+    "slug": "chiba-midori",
+    "name": "千葉市緑区"
+   },
+   {
+    "slug": "chiba-mihama",
+    "name": "千葉市美浜区"
+   },
+   {
+    "slug": "funabashi",
+    "name": "船橋市"
+   },
+   {
+    "slug": "matsudo",
+    "name": "松戸市"
+   },
+   {
+    "slug": "ichikawa",
+    "name": "市川市"
+   },
+   {
+    "slug": "kashiwa",
+    "name": "柏市"
+   },
+   {
+    "slug": "ichihara",
+    "name": "市原市"
+   }
+  ],
+  "count": 181
+ },
+ "chiba-chuo": {
+  "slug": "chiba-chuo",
+  "kind": "ward",
+  "label": "千葉市中央区",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "千葉市中央区"
+  ],
+  "areaTerms": [
+   "千葉市中央区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 8
+ },
+ "chiba-hanamigawa": {
+  "slug": "chiba-hanamigawa",
+  "kind": "ward",
+  "label": "千葉市花見川区",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "千葉市花見川区"
+  ],
+  "areaTerms": [
+   "千葉市花見川区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "chiba-inage": {
+  "slug": "chiba-inage",
+  "kind": "ward",
+  "label": "千葉市稲毛区",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "千葉市稲毛区"
+  ],
+  "areaTerms": [
+   "千葉市稲毛区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "chiba-wakaba": {
+  "slug": "chiba-wakaba",
+  "kind": "ward",
+  "label": "千葉市若葉区",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "千葉市若葉区"
+  ],
+  "areaTerms": [
+   "千葉市若葉区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "chiba-midori": {
+  "slug": "chiba-midori",
+  "kind": "ward",
+  "label": "千葉市緑区",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "千葉市緑区"
+  ],
+  "areaTerms": [
+   "千葉市緑区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "chiba-mihama": {
+  "slug": "chiba-mihama",
+  "kind": "ward",
+  "label": "千葉市美浜区",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "千葉市美浜区"
+  ],
+  "areaTerms": [
+   "千葉市美浜区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "funabashi": {
+  "slug": "funabashi",
+  "kind": "city",
+  "label": "船橋市",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "船橋市"
+  ],
+  "areaTerms": [
+   "船橋市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 21
+ },
+ "matsudo": {
+  "slug": "matsudo",
+  "kind": "city",
+  "label": "松戸市",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "松戸市"
+  ],
+  "areaTerms": [
+   "松戸市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 17
+ },
+ "ichikawa": {
+  "slug": "ichikawa",
+  "kind": "city",
+  "label": "市川市",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "市川市"
+  ],
+  "areaTerms": [
+   "市川市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 17
+ },
+ "kashiwa": {
+  "slug": "kashiwa",
+  "kind": "city",
+  "label": "柏市",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "柏市"
+  ],
+  "areaTerms": [
+   "柏市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 12
+ },
+ "ichihara": {
+  "slug": "ichihara",
+  "kind": "city",
+  "label": "市原市",
+  "pref": "千葉県",
+  "prefSlug": "chiba",
+  "match": [
+   "市原市"
+  ],
+  "areaTerms": [
+   "市原市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 9
+ },
+ "niigata": {
+  "slug": "niigata",
+  "kind": "pref",
+  "label": "新潟県",
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "match": [],
+  "areaTerms": [
+   "新潟県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "niigata-kita",
+    "name": "新潟市北区"
+   },
+   {
+    "slug": "niigata-higashi",
+    "name": "新潟市東区"
+   },
+   {
+    "slug": "niigata-chuo",
+    "name": "新潟市中央区"
+   },
+   {
+    "slug": "niigata-konan",
+    "name": "新潟市江南区"
+   },
+   {
+    "slug": "niigata-akiha",
+    "name": "新潟市秋葉区"
+   },
+   {
+    "slug": "niigata-minami",
+    "name": "新潟市南区"
+   },
+   {
+    "slug": "niigata-nishi",
+    "name": "新潟市西区"
+   },
+   {
+    "slug": "niigata-nishikan",
+    "name": "新潟市西蒲区"
+   }
+  ],
+  "count": 52
+ },
+ "niigata-kita": {
+  "slug": "niigata-kita",
+  "kind": "ward",
+  "label": "新潟市北区",
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "match": [
+   "新潟市北区"
+  ],
+  "areaTerms": [
+   "新潟市北区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "niigata-higashi": {
+  "slug": "niigata-higashi",
+  "kind": "ward",
+  "label": "新潟市東区",
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "match": [
+   "新潟市東区"
+  ],
+  "areaTerms": [
+   "新潟市東区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "niigata-chuo": {
+  "slug": "niigata-chuo",
+  "kind": "ward",
+  "label": "新潟市中央区",
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "match": [
+   "新潟市中央区"
+  ],
+  "areaTerms": [
+   "新潟市中央区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "niigata-konan": {
+  "slug": "niigata-konan",
+  "kind": "ward",
+  "label": "新潟市江南区",
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "match": [
+   "新潟市江南区"
+  ],
+  "areaTerms": [
+   "新潟市江南区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "niigata-akiha": {
+  "slug": "niigata-akiha",
+  "kind": "ward",
+  "label": "新潟市秋葉区",
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "match": [
+   "新潟市秋葉区"
+  ],
+  "areaTerms": [
+   "新潟市秋葉区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "niigata-minami": {
+  "slug": "niigata-minami",
+  "kind": "ward",
+  "label": "新潟市南区",
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "match": [
+   "新潟市南区"
+  ],
+  "areaTerms": [
+   "新潟市南区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 0
+ },
+ "niigata-nishi": {
+  "slug": "niigata-nishi",
+  "kind": "ward",
+  "label": "新潟市西区",
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "match": [
+   "新潟市西区"
+  ],
+  "areaTerms": [
+   "新潟市西区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "niigata-nishikan": {
+  "slug": "niigata-nishikan",
+  "kind": "ward",
+  "label": "新潟市西蒲区",
+  "pref": "新潟県",
+  "prefSlug": "niigata",
+  "match": [
+   "新潟市西蒲区"
+  ],
+  "areaTerms": [
+   "新潟市西蒲区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "toyama": {
+  "slug": "toyama",
+  "kind": "city",
+  "label": "富山市",
+  "pref": "富山県",
+  "prefSlug": "toyama",
+  "match": [
+   "富山市"
+  ],
+  "areaTerms": [
+   "富山市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 10
+ },
+ "kanazawa": {
+  "slug": "kanazawa",
+  "kind": "city",
+  "label": "金沢市",
+  "pref": "石川県",
+  "prefSlug": "ishikawa",
+  "match": [
+   "金沢市"
+  ],
+  "areaTerms": [
+   "金沢市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 11
+ },
+ "fukui": {
+  "slug": "fukui",
+  "kind": "city",
+  "label": "福井市",
+  "pref": "福井県",
+  "prefSlug": "fukui",
+  "match": [
+   "福井市"
+  ],
+  "areaTerms": [
+   "福井市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 8
+ },
+ "kofu": {
+  "slug": "kofu",
+  "kind": "city",
+  "label": "甲府市",
+  "pref": "山梨県",
+  "prefSlug": "yamanashi",
+  "match": [
+   "甲府市"
+  ],
+  "areaTerms": [
+   "甲府市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "nagano": {
+  "slug": "nagano",
+  "kind": "city",
+  "label": "長野市",
+  "pref": "長野県",
+  "prefSlug": "nagano",
+  "match": [
+   "長野市"
+  ],
+  "areaTerms": [
+   "長野市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 16
+ },
+ "gifu": {
+  "slug": "gifu",
+  "kind": "city",
+  "label": "岐阜市",
+  "pref": "岐阜県",
+  "prefSlug": "gifu",
+  "match": [
+   "岐阜市"
+  ],
+  "areaTerms": [
+   "岐阜市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 13
+ },
+ "shizuoka": {
+  "slug": "shizuoka",
+  "kind": "pref",
+  "label": "静岡県",
+  "pref": "静岡県",
+  "prefSlug": "shizuoka",
+  "match": [],
+  "areaTerms": [
+   "静岡県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "shizuoka-aoi",
+    "name": "静岡市葵区"
+   },
+   {
+    "slug": "shizuoka-suruga",
+    "name": "静岡市駿河区"
+   },
+   {
+    "slug": "shizuoka-shimizu",
+    "name": "静岡市清水区"
+   }
+  ],
+  "count": 100
+ },
+ "shizuoka-aoi": {
+  "slug": "shizuoka-aoi",
+  "kind": "ward",
+  "label": "静岡市葵区",
+  "pref": "静岡県",
+  "prefSlug": "shizuoka",
+  "match": [
+   "静岡市葵区"
+  ],
+  "areaTerms": [
+   "静岡市葵区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 10
+ },
+ "shizuoka-suruga": {
+  "slug": "shizuoka-suruga",
+  "kind": "ward",
+  "label": "静岡市駿河区",
+  "pref": "静岡県",
+  "prefSlug": "shizuoka",
+  "match": [
+   "静岡市駿河区"
+  ],
+  "areaTerms": [
+   "静岡市駿河区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "shizuoka-shimizu": {
+  "slug": "shizuoka-shimizu",
+  "kind": "ward",
+  "label": "静岡市清水区",
+  "pref": "静岡県",
+  "prefSlug": "shizuoka",
+  "match": [
+   "静岡市清水区"
+  ],
+  "areaTerms": [
+   "静岡市清水区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "aichi": {
+  "slug": "aichi",
+  "kind": "pref",
+  "label": "愛知県",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [],
+  "areaTerms": [
+   "愛知県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "nagoya-chikusa",
+    "name": "名古屋市千種区"
+   },
+   {
+    "slug": "nagoya-higashi",
+    "name": "名古屋市東区"
+   },
+   {
+    "slug": "nagoya-kita",
+    "name": "名古屋市北区"
+   },
+   {
+    "slug": "nagoya-nishi",
+    "name": "名古屋市西区"
+   },
+   {
+    "slug": "nagoya-nakamura",
+    "name": "名古屋市中村区"
+   },
+   {
+    "slug": "nagoya-nakaku",
+    "name": "名古屋市中区"
+   },
+   {
+    "slug": "nagoya-showa",
+    "name": "名古屋市昭和区"
+   },
+   {
+    "slug": "nagoya-mizuho",
+    "name": "名古屋市瑞穂区"
+   },
+   {
+    "slug": "nagoya-atsuta",
+    "name": "名古屋市熱田区"
+   },
+   {
+    "slug": "nagoya-nakagawa",
+    "name": "名古屋市中川区"
+   },
+   {
+    "slug": "nagoya-minato",
+    "name": "名古屋市港区"
+   },
+   {
+    "slug": "nagoya-minami",
+    "name": "名古屋市南区"
+   },
+   {
+    "slug": "nagoya-moriyama",
+    "name": "名古屋市守山区"
+   },
+   {
+    "slug": "nagoya-midori",
+    "name": "名古屋市緑区"
+   },
+   {
+    "slug": "nagoya-meito",
+    "name": "名古屋市名東区"
+   },
+   {
+    "slug": "nagoya-tempaku",
+    "name": "名古屋市天白区"
+   }
+  ],
+  "count": 202
+ },
+ "nagoya-chikusa": {
+  "slug": "nagoya-chikusa",
+  "kind": "ward",
+  "label": "名古屋市千種区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市千種区"
+  ],
+  "areaTerms": [
+   "名古屋市千種区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "nagoya-higashi": {
+  "slug": "nagoya-higashi",
+  "kind": "ward",
+  "label": "名古屋市東区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市東区"
+  ],
+  "areaTerms": [
+   "名古屋市東区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "nagoya-kita": {
+  "slug": "nagoya-kita",
+  "kind": "ward",
+  "label": "名古屋市北区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市北区"
+  ],
+  "areaTerms": [
+   "名古屋市北区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "nagoya-nishi": {
+  "slug": "nagoya-nishi",
+  "kind": "ward",
+  "label": "名古屋市西区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市西区"
+  ],
+  "areaTerms": [
+   "名古屋市西区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "nagoya-nakamura": {
+  "slug": "nagoya-nakamura",
+  "kind": "ward",
+  "label": "名古屋市中村区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市中村区"
+  ],
+  "areaTerms": [
+   "名古屋市中村区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "nagoya-nakaku": {
+  "slug": "nagoya-nakaku",
+  "kind": "ward",
+  "label": "名古屋市中区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市中区"
+  ],
+  "areaTerms": [
+   "名古屋市中区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "nagoya-showa": {
+  "slug": "nagoya-showa",
+  "kind": "ward",
+  "label": "名古屋市昭和区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市昭和区"
+  ],
+  "areaTerms": [
+   "名古屋市昭和区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "nagoya-mizuho": {
+  "slug": "nagoya-mizuho",
+  "kind": "ward",
+  "label": "名古屋市瑞穂区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市瑞穂区"
+  ],
+  "areaTerms": [
+   "名古屋市瑞穂区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "nagoya-atsuta": {
+  "slug": "nagoya-atsuta",
+  "kind": "ward",
+  "label": "名古屋市熱田区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市熱田区"
+  ],
+  "areaTerms": [
+   "名古屋市熱田区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "nagoya-nakagawa": {
+  "slug": "nagoya-nakagawa",
+  "kind": "ward",
+  "label": "名古屋市中川区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市中川区"
+  ],
+  "areaTerms": [
+   "名古屋市中川区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 8
+ },
+ "nagoya-minato": {
+  "slug": "nagoya-minato",
+  "kind": "ward",
+  "label": "名古屋市港区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市港区"
+  ],
+  "areaTerms": [
+   "名古屋市港区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "nagoya-minami": {
+  "slug": "nagoya-minami",
+  "kind": "ward",
+  "label": "名古屋市南区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市南区"
+  ],
+  "areaTerms": [
+   "名古屋市南区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "nagoya-moriyama": {
+  "slug": "nagoya-moriyama",
+  "kind": "ward",
+  "label": "名古屋市守山区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市守山区"
+  ],
+  "areaTerms": [
+   "名古屋市守山区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "nagoya-midori": {
+  "slug": "nagoya-midori",
+  "kind": "ward",
+  "label": "名古屋市緑区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市緑区"
+  ],
+  "areaTerms": [
+   "名古屋市緑区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 8
+ },
+ "nagoya-meito": {
+  "slug": "nagoya-meito",
+  "kind": "ward",
+  "label": "名古屋市名東区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市名東区"
+  ],
+  "areaTerms": [
+   "名古屋市名東区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "nagoya-tempaku": {
+  "slug": "nagoya-tempaku",
+  "kind": "ward",
+  "label": "名古屋市天白区",
+  "pref": "愛知県",
+  "prefSlug": "aichi",
+  "match": [
+   "名古屋市天白区"
+  ],
+  "areaTerms": [
+   "名古屋市天白区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "kyoto": {
+  "slug": "kyoto",
+  "kind": "pref",
+  "label": "京都府",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [],
+  "areaTerms": [
+   "京都府"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "kyoto-city",
+    "name": "京都市"
+   },
+   {
+    "slug": "kyoto-kita",
+    "name": "京都市北区"
+   },
+   {
+    "slug": "kyoto-kamigyo",
+    "name": "京都市上京区"
+   },
+   {
+    "slug": "kyoto-sakyo",
+    "name": "京都市左京区"
+   },
+   {
+    "slug": "kyoto-nakagyo",
+    "name": "京都市中京区"
+   },
+   {
+    "slug": "kyoto-higashiyama",
+    "name": "京都市東山区"
+   },
+   {
+    "slug": "kyoto-shimogyo",
+    "name": "京都市下京区"
+   },
+   {
+    "slug": "kyoto-minami",
+    "name": "京都市南区"
+   },
+   {
+    "slug": "kyoto-ukyo",
+    "name": "京都市右京区"
+   },
+   {
+    "slug": "kyoto-fushimi",
+    "name": "京都市伏見区"
+   },
+   {
+    "slug": "kyoto-yamashina",
+    "name": "京都市山科区"
+   },
+   {
+    "slug": "kyoto-nishikyo",
+    "name": "京都市西京区"
+   }
+  ],
+  "count": 71
+ },
+ "kyoto-city": {
+  "slug": "kyoto-city",
+  "kind": "city",
+  "label": "京都市",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市"
+  ],
+  "areaTerms": [
+   "京都市"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "kyoto-kita",
+    "name": "京都市北区"
+   },
+   {
+    "slug": "kyoto-kamigyo",
+    "name": "京都市上京区"
+   },
+   {
+    "slug": "kyoto-sakyo",
+    "name": "京都市左京区"
+   },
+   {
+    "slug": "kyoto-nakagyo",
+    "name": "京都市中京区"
+   },
+   {
+    "slug": "kyoto-higashiyama",
+    "name": "京都市東山区"
+   },
+   {
+    "slug": "kyoto-shimogyo",
+    "name": "京都市下京区"
+   },
+   {
+    "slug": "kyoto-minami",
+    "name": "京都市南区"
+   },
+   {
+    "slug": "kyoto-ukyo",
+    "name": "京都市右京区"
+   },
+   {
+    "slug": "kyoto-fushimi",
+    "name": "京都市伏見区"
+   },
+   {
+    "slug": "kyoto-yamashina",
+    "name": "京都市山科区"
+   },
+   {
+    "slug": "kyoto-nishikyo",
+    "name": "京都市西京区"
+   }
+  ],
+  "count": 46
+ },
+ "kyoto-kita": {
+  "slug": "kyoto-kita",
+  "kind": "ward",
+  "label": "京都市北区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市北区"
+  ],
+  "areaTerms": [
+   "京都市北区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 2
+ },
+ "kyoto-kamigyo": {
+  "slug": "kyoto-kamigyo",
+  "kind": "ward",
+  "label": "京都市上京区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市上京区"
+  ],
+  "areaTerms": [
+   "京都市上京区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "kyoto-sakyo": {
+  "slug": "kyoto-sakyo",
+  "kind": "ward",
+  "label": "京都市左京区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市左京区"
+  ],
+  "areaTerms": [
+   "京都市左京区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 5
+ },
+ "kyoto-nakagyo": {
+  "slug": "kyoto-nakagyo",
+  "kind": "ward",
+  "label": "京都市中京区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市中京区"
+  ],
+  "areaTerms": [
+   "京都市中京区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "kyoto-higashiyama": {
+  "slug": "kyoto-higashiyama",
+  "kind": "ward",
+  "label": "京都市東山区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市東山区"
+  ],
+  "areaTerms": [
+   "京都市東山区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 1
+ },
+ "kyoto-shimogyo": {
+  "slug": "kyoto-shimogyo",
+  "kind": "ward",
+  "label": "京都市下京区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市下京区"
+  ],
+  "areaTerms": [
+   "京都市下京区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 2
+ },
+ "kyoto-minami": {
+  "slug": "kyoto-minami",
+  "kind": "ward",
+  "label": "京都市南区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市南区"
+  ],
+  "areaTerms": [
+   "京都市南区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "kyoto-ukyo": {
+  "slug": "kyoto-ukyo",
+  "kind": "ward",
+  "label": "京都市右京区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市右京区"
+  ],
+  "areaTerms": [
+   "京都市右京区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "kyoto-fushimi": {
+  "slug": "kyoto-fushimi",
+  "kind": "ward",
+  "label": "京都市伏見区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市伏見区"
+  ],
+  "areaTerms": [
+   "京都市伏見区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 9
+ },
+ "kyoto-yamashina": {
+  "slug": "kyoto-yamashina",
+  "kind": "ward",
+  "label": "京都市山科区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市山科区"
+  ],
+  "areaTerms": [
+   "京都市山科区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 6
+ },
+ "kyoto-nishikyo": {
+  "slug": "kyoto-nishikyo",
+  "kind": "ward",
+  "label": "京都市西京区",
+  "pref": "京都府",
+  "prefSlug": "kyoto",
+  "match": [
+   "京都市西京区"
+  ],
+  "areaTerms": [
+   "京都市西京区"
+  ],
+  "parent": {
+   "slug": "kyoto-city",
+   "name": "京都市"
+  },
+  "children": [],
+  "count": 6
+ },
+ "osaka": {
+  "slug": "osaka",
+  "kind": "pref",
+  "label": "大阪府",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [],
+  "areaTerms": [
+   "大阪府"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "osaka-miyakojima",
+    "name": "大阪市都島区"
+   },
+   {
+    "slug": "osaka-fukushima",
+    "name": "大阪市福島区"
+   },
+   {
+    "slug": "osaka-konohana",
+    "name": "大阪市此花区"
+   },
+   {
+    "slug": "osaka-nishi",
+    "name": "大阪市西区"
+   },
+   {
+    "slug": "osaka-minato",
+    "name": "大阪市港区"
+   },
+   {
+    "slug": "osaka-taisho",
+    "name": "大阪市大正区"
+   },
+   {
+    "slug": "osaka-tennoji",
+    "name": "大阪市天王寺区"
+   },
+   {
+    "slug": "osaka-naniwa",
+    "name": "大阪市浪速区"
+   },
+   {
+    "slug": "osaka-nishiyodogawa",
+    "name": "大阪市西淀川区"
+   },
+   {
+    "slug": "osaka-higashiyodogawa",
+    "name": "大阪市東淀川区"
+   },
+   {
+    "slug": "osaka-higashinari",
+    "name": "大阪市東成区"
+   },
+   {
+    "slug": "osaka-ikuno",
+    "name": "大阪市生野区"
+   },
+   {
+    "slug": "osaka-asahi",
+    "name": "大阪市旭区"
+   },
+   {
+    "slug": "osaka-joto",
+    "name": "大阪市城東区"
+   },
+   {
+    "slug": "osaka-tsurumi",
+    "name": "大阪市鶴見区"
+   },
+   {
+    "slug": "osaka-abeno",
+    "name": "大阪市阿倍野区"
+   },
+   {
+    "slug": "osaka-suminoe",
+    "name": "大阪市住之江区"
+   },
+   {
+    "slug": "osaka-sumiyoshi",
+    "name": "大阪市住吉区"
+   },
+   {
+    "slug": "osaka-higashisumiyoshi",
+    "name": "大阪市東住吉区"
+   },
+   {
+    "slug": "osaka-hirano",
+    "name": "大阪市平野区"
+   },
+   {
+    "slug": "osaka-nishinari",
+    "name": "大阪市西成区"
+   },
+   {
+    "slug": "osaka-yodogawa",
+    "name": "大阪市淀川区"
+   },
+   {
+    "slug": "osaka-kita",
+    "name": "大阪市北区"
+   },
+   {
+    "slug": "osaka-chuo",
+    "name": "大阪市中央区"
+   },
+   {
+    "slug": "toyonaka",
+    "name": "豊中市"
+   },
+   {
+    "slug": "suita",
+    "name": "吹田市"
+   },
+   {
+    "slug": "takatsuki",
+    "name": "高槻市"
+   },
+   {
+    "slug": "hirakata",
+    "name": "枚方市"
+   },
+   {
+    "slug": "higashiosaka",
+    "name": "東大阪市"
+   }
+  ],
+  "count": 254
+ },
+ "osaka-miyakojima": {
+  "slug": "osaka-miyakojima",
+  "kind": "ward",
+  "label": "大阪市都島区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市都島区"
+  ],
+  "areaTerms": [
+   "大阪市都島区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "osaka-fukushima": {
+  "slug": "osaka-fukushima",
+  "kind": "ward",
+  "label": "大阪市福島区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市福島区"
+  ],
+  "areaTerms": [
+   "大阪市福島区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "osaka-konohana": {
+  "slug": "osaka-konohana",
+  "kind": "ward",
+  "label": "大阪市此花区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市此花区"
+  ],
+  "areaTerms": [
+   "大阪市此花区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "osaka-nishi": {
+  "slug": "osaka-nishi",
+  "kind": "ward",
+  "label": "大阪市西区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市西区"
+  ],
+  "areaTerms": [
+   "大阪市西区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "osaka-minato": {
+  "slug": "osaka-minato",
+  "kind": "ward",
+  "label": "大阪市港区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市港区"
+  ],
+  "areaTerms": [
+   "大阪市港区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 1
+ },
+ "osaka-taisho": {
+  "slug": "osaka-taisho",
+  "kind": "ward",
+  "label": "大阪市大正区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市大正区"
+  ],
+  "areaTerms": [
+   "大阪市大正区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "osaka-tennoji": {
+  "slug": "osaka-tennoji",
+  "kind": "ward",
+  "label": "大阪市天王寺区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市天王寺区"
+  ],
+  "areaTerms": [
+   "大阪市天王寺区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "osaka-naniwa": {
+  "slug": "osaka-naniwa",
+  "kind": "ward",
+  "label": "大阪市浪速区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市浪速区"
+  ],
+  "areaTerms": [
+   "大阪市浪速区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "osaka-nishiyodogawa": {
+  "slug": "osaka-nishiyodogawa",
+  "kind": "ward",
+  "label": "大阪市西淀川区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市西淀川区"
+  ],
+  "areaTerms": [
+   "大阪市西淀川区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "osaka-higashiyodogawa": {
+  "slug": "osaka-higashiyodogawa",
+  "kind": "ward",
+  "label": "大阪市東淀川区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市東淀川区"
+  ],
+  "areaTerms": [
+   "大阪市東淀川区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "osaka-higashinari": {
+  "slug": "osaka-higashinari",
+  "kind": "ward",
+  "label": "大阪市東成区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市東成区"
+  ],
+  "areaTerms": [
+   "大阪市東成区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "osaka-ikuno": {
+  "slug": "osaka-ikuno",
+  "kind": "ward",
+  "label": "大阪市生野区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市生野区"
+  ],
+  "areaTerms": [
+   "大阪市生野区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "osaka-asahi": {
+  "slug": "osaka-asahi",
+  "kind": "ward",
+  "label": "大阪市旭区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市旭区"
+  ],
+  "areaTerms": [
+   "大阪市旭区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "osaka-joto": {
+  "slug": "osaka-joto",
+  "kind": "ward",
+  "label": "大阪市城東区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市城東区"
+  ],
+  "areaTerms": [
+   "大阪市城東区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "osaka-tsurumi": {
+  "slug": "osaka-tsurumi",
+  "kind": "ward",
+  "label": "大阪市鶴見区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市鶴見区"
+  ],
+  "areaTerms": [
+   "大阪市鶴見区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "osaka-abeno": {
+  "slug": "osaka-abeno",
+  "kind": "ward",
+  "label": "大阪市阿倍野区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市阿倍野区"
+  ],
+  "areaTerms": [
+   "大阪市阿倍野区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "osaka-suminoe": {
+  "slug": "osaka-suminoe",
+  "kind": "ward",
+  "label": "大阪市住之江区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市住之江区"
+  ],
+  "areaTerms": [
+   "大阪市住之江区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "osaka-sumiyoshi": {
+  "slug": "osaka-sumiyoshi",
+  "kind": "ward",
+  "label": "大阪市住吉区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市住吉区"
+  ],
+  "areaTerms": [
+   "大阪市住吉区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "osaka-higashisumiyoshi": {
+  "slug": "osaka-higashisumiyoshi",
+  "kind": "ward",
+  "label": "大阪市東住吉区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市東住吉区"
+  ],
+  "areaTerms": [
+   "大阪市東住吉区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "osaka-hirano": {
+  "slug": "osaka-hirano",
+  "kind": "ward",
+  "label": "大阪市平野区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市平野区"
+  ],
+  "areaTerms": [
+   "大阪市平野区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "osaka-nishinari": {
+  "slug": "osaka-nishinari",
+  "kind": "ward",
+  "label": "大阪市西成区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市西成区"
+  ],
+  "areaTerms": [
+   "大阪市西成区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 1
+ },
+ "osaka-yodogawa": {
+  "slug": "osaka-yodogawa",
+  "kind": "ward",
+  "label": "大阪市淀川区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市淀川区"
+  ],
+  "areaTerms": [
+   "大阪市淀川区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "osaka-kita": {
+  "slug": "osaka-kita",
+  "kind": "ward",
+  "label": "大阪市北区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市北区"
+  ],
+  "areaTerms": [
+   "大阪市北区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "osaka-chuo": {
+  "slug": "osaka-chuo",
+  "kind": "ward",
+  "label": "大阪市中央区",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "大阪市中央区"
+  ],
+  "areaTerms": [
+   "大阪市中央区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "toyonaka": {
+  "slug": "toyonaka",
+  "kind": "city",
+  "label": "豊中市",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "豊中市"
+  ],
+  "areaTerms": [
+   "豊中市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 13
+ },
+ "suita": {
+  "slug": "suita",
+  "kind": "city",
+  "label": "吹田市",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "吹田市"
+  ],
+  "areaTerms": [
+   "吹田市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 12
+ },
+ "takatsuki": {
+  "slug": "takatsuki",
+  "kind": "city",
+  "label": "高槻市",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "高槻市"
+  ],
+  "areaTerms": [
+   "高槻市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 8
+ },
+ "hirakata": {
+  "slug": "hirakata",
+  "kind": "city",
+  "label": "枚方市",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "枚方市"
+  ],
+  "areaTerms": [
+   "枚方市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 12
+ },
+ "higashiosaka": {
+  "slug": "higashiosaka",
+  "kind": "city",
+  "label": "東大阪市",
+  "pref": "大阪府",
+  "prefSlug": "osaka",
+  "match": [
+   "東大阪市"
+  ],
+  "areaTerms": [
+   "東大阪市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 12
+ },
+ "hyogo": {
+  "slug": "hyogo",
+  "kind": "pref",
+  "label": "兵庫県",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [],
+  "areaTerms": [
+   "兵庫県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "kobe-higashinada",
+    "name": "神戸市東灘区"
+   },
+   {
+    "slug": "kobe-nada",
+    "name": "神戸市灘区"
+   },
+   {
+    "slug": "kobe-chuo",
+    "name": "神戸市中央区"
+   },
+   {
+    "slug": "kobe-hyogo",
+    "name": "神戸市兵庫区"
+   },
+   {
+    "slug": "kobe-kita",
+    "name": "神戸市北区"
+   },
+   {
+    "slug": "kobe-nagata",
+    "name": "神戸市長田区"
+   },
+   {
+    "slug": "kobe-suma",
+    "name": "神戸市須磨区"
+   },
+   {
+    "slug": "kobe-tarumi",
+    "name": "神戸市垂水区"
+   },
+   {
+    "slug": "kobe-nishi",
+    "name": "神戸市西区"
+   },
+   {
+    "slug": "himeji",
+    "name": "姫路市"
+   },
+   {
+    "slug": "nishinomiya",
+    "name": "西宮市"
+   },
+   {
+    "slug": "amagasaki",
+    "name": "尼崎市"
+   }
+  ],
+  "count": 143
+ },
+ "kobe-higashinada": {
+  "slug": "kobe-higashinada",
+  "kind": "ward",
+  "label": "神戸市東灘区",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "神戸市東灘区"
+  ],
+  "areaTerms": [
+   "神戸市東灘区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "kobe-nada": {
+  "slug": "kobe-nada",
+  "kind": "ward",
+  "label": "神戸市灘区",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "神戸市灘区"
+  ],
+  "areaTerms": [
+   "神戸市灘区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "kobe-chuo": {
+  "slug": "kobe-chuo",
+  "kind": "ward",
+  "label": "神戸市中央区",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "神戸市中央区"
+  ],
+  "areaTerms": [
+   "神戸市中央区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "kobe-hyogo": {
+  "slug": "kobe-hyogo",
+  "kind": "ward",
+  "label": "神戸市兵庫区",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "神戸市兵庫区"
+  ],
+  "areaTerms": [
+   "神戸市兵庫区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "kobe-kita": {
+  "slug": "kobe-kita",
+  "kind": "ward",
+  "label": "神戸市北区",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "神戸市北区"
+  ],
+  "areaTerms": [
+   "神戸市北区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 3
+ },
+ "kobe-nagata": {
+  "slug": "kobe-nagata",
+  "kind": "ward",
+  "label": "神戸市長田区",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "神戸市長田区"
+  ],
+  "areaTerms": [
+   "神戸市長田区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 1
+ },
+ "kobe-suma": {
+  "slug": "kobe-suma",
+  "kind": "ward",
+  "label": "神戸市須磨区",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "神戸市須磨区"
+  ],
+  "areaTerms": [
+   "神戸市須磨区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "kobe-tarumi": {
+  "slug": "kobe-tarumi",
+  "kind": "ward",
+  "label": "神戸市垂水区",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "神戸市垂水区"
+  ],
+  "areaTerms": [
+   "神戸市垂水区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 4
+ },
+ "kobe-nishi": {
+  "slug": "kobe-nishi",
+  "kind": "ward",
+  "label": "神戸市西区",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "神戸市西区"
+  ],
+  "areaTerms": [
+   "神戸市西区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "himeji": {
+  "slug": "himeji",
+  "kind": "city",
+  "label": "姫路市",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "姫路市"
+  ],
+  "areaTerms": [
+   "姫路市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 18
+ },
+ "nishinomiya": {
+  "slug": "nishinomiya",
+  "kind": "city",
+  "label": "西宮市",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "西宮市"
+  ],
+  "areaTerms": [
+   "西宮市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 13
+ },
+ "amagasaki": {
+  "slug": "amagasaki",
+  "kind": "city",
+  "label": "尼崎市",
+  "pref": "兵庫県",
+  "prefSlug": "hyogo",
+  "match": [
+   "尼崎市"
+  ],
+  "areaTerms": [
+   "尼崎市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 16
+ },
+ "wakayama": {
+  "slug": "wakayama",
+  "kind": "city",
+  "label": "和歌山市",
+  "pref": "和歌山県",
+  "prefSlug": "wakayama",
+  "match": [
+   "和歌山市"
+  ],
+  "areaTerms": [
+   "和歌山市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 11
+ },
+ "okayama": {
+  "slug": "okayama",
+  "kind": "city",
+  "label": "岡山市",
+  "pref": "岡山県",
+  "prefSlug": "okayama",
+  "match": [
+   "岡山市"
+  ],
+  "areaTerms": [
+   "岡山市"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "okayama-kita",
+    "name": "岡山市北区"
+   },
+   {
+    "slug": "okayama-naka",
+    "name": "岡山市中区"
+   },
+   {
+    "slug": "okayama-higashi",
+    "name": "岡山市東区"
+   },
+   {
+    "slug": "okayama-minami",
+    "name": "岡山市南区"
+   }
+  ],
+  "count": 18
+ },
+ "okayama-kita": {
+  "slug": "okayama-kita",
+  "kind": "ward",
+  "label": "岡山市北区",
+  "pref": "岡山県",
+  "prefSlug": "okayama",
+  "match": [
+   "岡山市北区"
+  ],
+  "areaTerms": [
+   "岡山市北区"
+  ],
+  "parent": {
+   "slug": "okayama",
+   "name": "岡山市"
+  },
+  "children": [],
+  "count": 9
+ },
+ "okayama-naka": {
+  "slug": "okayama-naka",
+  "kind": "ward",
+  "label": "岡山市中区",
+  "pref": "岡山県",
+  "prefSlug": "okayama",
+  "match": [
+   "岡山市中区"
+  ],
+  "areaTerms": [
+   "岡山市中区"
+  ],
+  "parent": {
+   "slug": "okayama",
+   "name": "岡山市"
+  },
+  "children": [],
+  "count": 5
+ },
+ "okayama-higashi": {
+  "slug": "okayama-higashi",
+  "kind": "ward",
+  "label": "岡山市東区",
+  "pref": "岡山県",
+  "prefSlug": "okayama",
+  "match": [
+   "岡山市東区"
+  ],
+  "areaTerms": [
+   "岡山市東区"
+  ],
+  "parent": {
+   "slug": "okayama",
+   "name": "岡山市"
+  },
+  "children": [],
+  "count": 1
+ },
+ "okayama-minami": {
+  "slug": "okayama-minami",
+  "kind": "ward",
+  "label": "岡山市南区",
+  "pref": "岡山県",
+  "prefSlug": "okayama",
+  "match": [
+   "岡山市南区"
+  ],
+  "areaTerms": [
+   "岡山市南区"
+  ],
+  "parent": {
+   "slug": "okayama",
+   "name": "岡山市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "hiroshima": {
+  "slug": "hiroshima",
+  "kind": "city",
+  "label": "広島市",
+  "pref": "広島県",
+  "prefSlug": "hiroshima",
+  "match": [
+   "広島市"
+  ],
+  "areaTerms": [
+   "広島市"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "hiroshima-naka",
+    "name": "広島市中区"
+   },
+   {
+    "slug": "hiroshima-higashi",
+    "name": "広島市東区"
+   },
+   {
+    "slug": "hiroshima-minami",
+    "name": "広島市南区"
+   },
+   {
+    "slug": "hiroshima-nishi",
+    "name": "広島市西区"
+   },
+   {
+    "slug": "hiroshima-asaminami",
+    "name": "広島市安佐南区"
+   },
+   {
+    "slug": "hiroshima-asakita",
+    "name": "広島市安佐北区"
+   },
+   {
+    "slug": "hiroshima-aki",
+    "name": "広島市安芸区"
+   },
+   {
+    "slug": "hiroshima-saeki",
+    "name": "広島市佐伯区"
+   }
+  ],
+  "count": 34
+ },
+ "hiroshima-naka": {
+  "slug": "hiroshima-naka",
+  "kind": "ward",
+  "label": "広島市中区",
+  "pref": "広島県",
+  "prefSlug": "hiroshima",
+  "match": [
+   "広島市中区"
+  ],
+  "areaTerms": [
+   "広島市中区"
+  ],
+  "parent": {
+   "slug": "hiroshima",
+   "name": "広島市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "hiroshima-higashi": {
+  "slug": "hiroshima-higashi",
+  "kind": "ward",
+  "label": "広島市東区",
+  "pref": "広島県",
+  "prefSlug": "hiroshima",
+  "match": [
+   "広島市東区"
+  ],
+  "areaTerms": [
+   "広島市東区"
+  ],
+  "parent": {
+   "slug": "hiroshima",
+   "name": "広島市"
+  },
+  "children": [],
+  "count": 2
+ },
+ "hiroshima-minami": {
+  "slug": "hiroshima-minami",
+  "kind": "ward",
+  "label": "広島市南区",
+  "pref": "広島県",
+  "prefSlug": "hiroshima",
+  "match": [
+   "広島市南区"
+  ],
+  "areaTerms": [
+   "広島市南区"
+  ],
+  "parent": {
+   "slug": "hiroshima",
+   "name": "広島市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "hiroshima-nishi": {
+  "slug": "hiroshima-nishi",
+  "kind": "ward",
+  "label": "広島市西区",
+  "pref": "広島県",
+  "prefSlug": "hiroshima",
+  "match": [
+   "広島市西区"
+  ],
+  "areaTerms": [
+   "広島市西区"
+  ],
+  "parent": {
+   "slug": "hiroshima",
+   "name": "広島市"
+  },
+  "children": [],
+  "count": 6
+ },
+ "hiroshima-asaminami": {
+  "slug": "hiroshima-asaminami",
+  "kind": "ward",
+  "label": "広島市安佐南区",
+  "pref": "広島県",
+  "prefSlug": "hiroshima",
+  "match": [
+   "広島市安佐南区"
+  ],
+  "areaTerms": [
+   "広島市安佐南区"
+  ],
+  "parent": {
+   "slug": "hiroshima",
+   "name": "広島市"
+  },
+  "children": [],
+  "count": 6
+ },
+ "hiroshima-asakita": {
+  "slug": "hiroshima-asakita",
+  "kind": "ward",
+  "label": "広島市安佐北区",
+  "pref": "広島県",
+  "prefSlug": "hiroshima",
+  "match": [
+   "広島市安佐北区"
+  ],
+  "areaTerms": [
+   "広島市安佐北区"
+  ],
+  "parent": {
+   "slug": "hiroshima",
+   "name": "広島市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "hiroshima-aki": {
+  "slug": "hiroshima-aki",
+  "kind": "ward",
+  "label": "広島市安芸区",
+  "pref": "広島県",
+  "prefSlug": "hiroshima",
+  "match": [
+   "広島市安芸区"
+  ],
+  "areaTerms": [
+   "広島市安芸区"
+  ],
+  "parent": {
+   "slug": "hiroshima",
+   "name": "広島市"
+  },
+  "children": [],
+  "count": 2
+ },
+ "hiroshima-saeki": {
+  "slug": "hiroshima-saeki",
+  "kind": "ward",
+  "label": "広島市佐伯区",
+  "pref": "広島県",
+  "prefSlug": "hiroshima",
+  "match": [
+   "広島市佐伯区"
+  ],
+  "areaTerms": [
+   "広島市佐伯区"
+  ],
+  "parent": {
+   "slug": "hiroshima",
+   "name": "広島市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "takamatsu": {
+  "slug": "takamatsu",
+  "kind": "city",
+  "label": "高松市",
+  "pref": "香川県",
+  "prefSlug": "kagawa",
+  "match": [
+   "高松市"
+  ],
+  "areaTerms": [
+   "高松市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 16
+ },
+ "matsuyama": {
+  "slug": "matsuyama",
+  "kind": "city",
+  "label": "松山市",
+  "pref": "愛媛県",
+  "prefSlug": "ehime",
+  "match": [
+   "松山市"
+  ],
+  "areaTerms": [
+   "松山市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 14
+ },
+ "kochi": {
+  "slug": "kochi",
+  "kind": "city",
+  "label": "高知市",
+  "pref": "高知県",
+  "prefSlug": "kochi",
+  "match": [
+   "高知市"
+  ],
+  "areaTerms": [
+   "高知市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 13
+ },
+ "fukuoka": {
+  "slug": "fukuoka",
+  "kind": "pref",
+  "label": "福岡県",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [],
+  "areaTerms": [
+   "福岡県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "fukuoka-higashi",
+    "name": "福岡市東区"
+   },
+   {
+    "slug": "fukuoka-hakata",
+    "name": "福岡市博多区"
+   },
+   {
+    "slug": "fukuoka-chuo",
+    "name": "福岡市中央区"
+   },
+   {
+    "slug": "fukuoka-minami",
+    "name": "福岡市南区"
+   },
+   {
+    "slug": "fukuoka-nishi",
+    "name": "福岡市西区"
+   },
+   {
+    "slug": "fukuoka-jonan",
+    "name": "福岡市城南区"
+   },
+   {
+    "slug": "fukuoka-sawara",
+    "name": "福岡市早良区"
+   },
+   {
+    "slug": "kitakyushu-moji",
+    "name": "北九州市門司区"
+   },
+   {
+    "slug": "kitakyushu-wakamatsu",
+    "name": "北九州市若松区"
+   },
+   {
+    "slug": "kitakyushu-tobata",
+    "name": "北九州市戸畑区"
+   },
+   {
+    "slug": "kitakyushu-kokurakita",
+    "name": "北九州市小倉北区"
+   },
+   {
+    "slug": "kitakyushu-kokuraminami",
+    "name": "北九州市小倉南区"
+   },
+   {
+    "slug": "kitakyushu-yahatahigashi",
+    "name": "北九州市八幡東区"
+   },
+   {
+    "slug": "kitakyushu-yahatanishi",
+    "name": "北九州市八幡西区"
+   }
+  ],
+  "count": 155
+ },
+ "fukuoka-higashi": {
+  "slug": "fukuoka-higashi",
+  "kind": "ward",
+  "label": "福岡市東区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "福岡市東区"
+  ],
+  "areaTerms": [
+   "福岡市東区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 9
+ },
+ "fukuoka-hakata": {
+  "slug": "fukuoka-hakata",
+  "kind": "ward",
+  "label": "福岡市博多区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "福岡市博多区"
+  ],
+  "areaTerms": [
+   "福岡市博多区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 12
+ },
+ "fukuoka-chuo": {
+  "slug": "fukuoka-chuo",
+  "kind": "ward",
+  "label": "福岡市中央区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "福岡市中央区"
+  ],
+  "areaTerms": [
+   "福岡市中央区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 9
+ },
+ "fukuoka-minami": {
+  "slug": "fukuoka-minami",
+  "kind": "ward",
+  "label": "福岡市南区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "福岡市南区"
+  ],
+  "areaTerms": [
+   "福岡市南区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 10
+ },
+ "fukuoka-nishi": {
+  "slug": "fukuoka-nishi",
+  "kind": "ward",
+  "label": "福岡市西区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "福岡市西区"
+  ],
+  "areaTerms": [
+   "福岡市西区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "fukuoka-jonan": {
+  "slug": "fukuoka-jonan",
+  "kind": "ward",
+  "label": "福岡市城南区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "福岡市城南区"
+  ],
+  "areaTerms": [
+   "福岡市城南区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "fukuoka-sawara": {
+  "slug": "fukuoka-sawara",
+  "kind": "ward",
+  "label": "福岡市早良区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "福岡市早良区"
+  ],
+  "areaTerms": [
+   "福岡市早良区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "kitakyushu-moji": {
+  "slug": "kitakyushu-moji",
+  "kind": "ward",
+  "label": "北九州市門司区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "北九州市門司区"
+  ],
+  "areaTerms": [
+   "北九州市門司区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "kitakyushu-wakamatsu": {
+  "slug": "kitakyushu-wakamatsu",
+  "kind": "ward",
+  "label": "北九州市若松区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "北九州市若松区"
+  ],
+  "areaTerms": [
+   "北九州市若松区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 1
+ },
+ "kitakyushu-tobata": {
+  "slug": "kitakyushu-tobata",
+  "kind": "ward",
+  "label": "北九州市戸畑区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "北九州市戸畑区"
+  ],
+  "areaTerms": [
+   "北九州市戸畑区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 1
+ },
+ "kitakyushu-kokurakita": {
+  "slug": "kitakyushu-kokurakita",
+  "kind": "ward",
+  "label": "北九州市小倉北区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "北九州市小倉北区"
+  ],
+  "areaTerms": [
+   "北九州市小倉北区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 5
+ },
+ "kitakyushu-kokuraminami": {
+  "slug": "kitakyushu-kokuraminami",
+  "kind": "ward",
+  "label": "北九州市小倉南区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "北九州市小倉南区"
+  ],
+  "areaTerms": [
+   "北九州市小倉南区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 6
+ },
+ "kitakyushu-yahatahigashi": {
+  "slug": "kitakyushu-yahatahigashi",
+  "kind": "ward",
+  "label": "北九州市八幡東区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "北九州市八幡東区"
+  ],
+  "areaTerms": [
+   "北九州市八幡東区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 2
+ },
+ "kitakyushu-yahatanishi": {
+  "slug": "kitakyushu-yahatanishi",
+  "kind": "ward",
+  "label": "北九州市八幡西区",
+  "pref": "福岡県",
+  "prefSlug": "fukuoka",
+  "match": [
+   "北九州市八幡西区"
+  ],
+  "areaTerms": [
+   "北九州市八幡西区"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 7
+ },
+ "kumamoto": {
+  "slug": "kumamoto",
+  "kind": "city",
+  "label": "熊本市",
+  "pref": "熊本県",
+  "prefSlug": "kumamoto",
+  "match": [
+   "熊本市"
+  ],
+  "areaTerms": [
+   "熊本市"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "kumamoto-chuo",
+    "name": "熊本市中央区"
+   },
+   {
+    "slug": "kumamoto-higashi",
+    "name": "熊本市東区"
+   },
+   {
+    "slug": "kumamoto-nishi",
+    "name": "熊本市西区"
+   },
+   {
+    "slug": "kumamoto-minami",
+    "name": "熊本市南区"
+   },
+   {
+    "slug": "kumamoto-kita",
+    "name": "熊本市北区"
+   }
+  ],
+  "count": 24
+ },
+ "kumamoto-chuo": {
+  "slug": "kumamoto-chuo",
+  "kind": "ward",
+  "label": "熊本市中央区",
+  "pref": "熊本県",
+  "prefSlug": "kumamoto",
+  "match": [
+   "熊本市中央区"
+  ],
+  "areaTerms": [
+   "熊本市中央区"
+  ],
+  "parent": {
+   "slug": "kumamoto",
+   "name": "熊本市"
+  },
+  "children": [],
+  "count": 7
+ },
+ "kumamoto-higashi": {
+  "slug": "kumamoto-higashi",
+  "kind": "ward",
+  "label": "熊本市東区",
+  "pref": "熊本県",
+  "prefSlug": "kumamoto",
+  "match": [
+   "熊本市東区"
+  ],
+  "areaTerms": [
+   "熊本市東区"
+  ],
+  "parent": {
+   "slug": "kumamoto",
+   "name": "熊本市"
+  },
+  "children": [],
+  "count": 8
+ },
+ "kumamoto-nishi": {
+  "slug": "kumamoto-nishi",
+  "kind": "ward",
+  "label": "熊本市西区",
+  "pref": "熊本県",
+  "prefSlug": "kumamoto",
+  "match": [
+   "熊本市西区"
+  ],
+  "areaTerms": [
+   "熊本市西区"
+  ],
+  "parent": {
+   "slug": "kumamoto",
+   "name": "熊本市"
+  },
+  "children": [],
+  "count": 2
+ },
+ "kumamoto-minami": {
+  "slug": "kumamoto-minami",
+  "kind": "ward",
+  "label": "熊本市南区",
+  "pref": "熊本県",
+  "prefSlug": "kumamoto",
+  "match": [
+   "熊本市南区"
+  ],
+  "areaTerms": [
+   "熊本市南区"
+  ],
+  "parent": {
+   "slug": "kumamoto",
+   "name": "熊本市"
+  },
+  "children": [],
+  "count": 3
+ },
+ "kumamoto-kita": {
+  "slug": "kumamoto-kita",
+  "kind": "ward",
+  "label": "熊本市北区",
+  "pref": "熊本県",
+  "prefSlug": "kumamoto",
+  "match": [
+   "熊本市北区"
+  ],
+  "areaTerms": [
+   "熊本市北区"
+  ],
+  "parent": {
+   "slug": "kumamoto",
+   "name": "熊本市"
+  },
+  "children": [],
+  "count": 4
+ },
+ "oita": {
+  "slug": "oita",
+  "kind": "city",
+  "label": "大分市",
+  "pref": "大分県",
+  "prefSlug": "oita",
+  "match": [
+   "大分市"
+  ],
+  "areaTerms": [
+   "大分市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 11
+ },
+ "miyazaki": {
+  "slug": "miyazaki",
+  "kind": "city",
+  "label": "宮崎市",
+  "pref": "宮崎県",
+  "prefSlug": "miyazaki",
+  "match": [
+   "宮崎市"
+  ],
+  "areaTerms": [
+   "宮崎市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 13
+ },
+ "kagoshima": {
+  "slug": "kagoshima",
+  "kind": "city",
+  "label": "鹿児島市",
+  "pref": "鹿児島県",
+  "prefSlug": "kagoshima",
+  "match": [
+   "鹿児島市"
+  ],
+  "areaTerms": [
+   "鹿児島市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 22
+ },
+ "naha": {
+  "slug": "naha",
+  "kind": "city",
+  "label": "那覇市",
+  "pref": "沖縄県",
+  "prefSlug": "okinawa",
+  "match": [
+   "那覇市"
+  ],
+  "areaTerms": [
+   "那覇市"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 13
+ },
+ "hokkaido": {
+  "slug": "hokkaido",
+  "kind": "pref",
+  "label": "北海道",
+  "pref": "北海道",
+  "prefSlug": "hokkaido",
+  "match": [],
+  "areaTerms": [
+   "北海道"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 129
+ },
+ "aomori": {
+  "slug": "aomori",
+  "kind": "pref",
+  "label": "青森県",
+  "pref": "青森県",
+  "prefSlug": "aomori",
+  "match": [],
+  "areaTerms": [
+   "青森県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 33
+ },
+ "iwate": {
+  "slug": "iwate",
+  "kind": "pref",
+  "label": "岩手県",
+  "pref": "岩手県",
+  "prefSlug": "iwate",
+  "match": [],
+  "areaTerms": [
+   "岩手県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 36
+ },
+ "miyagi": {
+  "slug": "miyagi",
+  "kind": "pref",
+  "label": "宮城県",
+  "pref": "宮城県",
+  "prefSlug": "miyagi",
+  "match": [],
+  "areaTerms": [
+   "宮城県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 75
+ },
+ "akita": {
+  "slug": "akita",
+  "kind": "pref",
+  "label": "秋田県",
+  "pref": "秋田県",
+  "prefSlug": "akita",
+  "match": [],
+  "areaTerms": [
+   "秋田県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 29
+ },
+ "yamagata": {
+  "slug": "yamagata",
+  "kind": "pref",
+  "label": "山形県",
+  "pref": "山形県",
+  "prefSlug": "yamagata",
+  "match": [],
+  "areaTerms": [
+   "山形県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 30
+ },
+ "fukushima": {
+  "slug": "fukushima",
+  "kind": "pref",
+  "label": "福島県",
+  "pref": "福島県",
+  "prefSlug": "fukushima",
+  "match": [],
+  "areaTerms": [
+   "福島県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 59
+ },
+ "ibaraki": {
+  "slug": "ibaraki",
+  "kind": "pref",
+  "label": "茨城県",
+  "pref": "茨城県",
+  "prefSlug": "ibaraki",
+  "match": [],
+  "areaTerms": [
+   "茨城県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 84
+ },
+ "tochigi": {
+  "slug": "tochigi",
+  "kind": "pref",
+  "label": "栃木県",
+  "pref": "栃木県",
+  "prefSlug": "tochigi",
+  "match": [],
+  "areaTerms": [
+   "栃木県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 58
+ },
+ "gunma": {
+  "slug": "gunma",
+  "kind": "pref",
+  "label": "群馬県",
+  "pref": "群馬県",
+  "prefSlug": "gunma",
+  "match": [],
+  "areaTerms": [
+   "群馬県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 52
+ },
+ "ishikawa": {
+  "slug": "ishikawa",
+  "kind": "pref",
+  "label": "石川県",
+  "pref": "石川県",
+  "prefSlug": "ishikawa",
+  "match": [],
+  "areaTerms": [
+   "石川県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 21
+ },
+ "yamanashi": {
+  "slug": "yamanashi",
+  "kind": "pref",
+  "label": "山梨県",
+  "pref": "山梨県",
+  "prefSlug": "yamanashi",
+  "match": [],
+  "areaTerms": [
+   "山梨県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 20
+ },
+ "mie": {
+  "slug": "mie",
+  "kind": "pref",
+  "label": "三重県",
+  "pref": "三重県",
+  "prefSlug": "mie",
+  "match": [],
+  "areaTerms": [
+   "三重県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 45
+ },
+ "shiga": {
+  "slug": "shiga",
+  "kind": "pref",
+  "label": "滋賀県",
+  "pref": "滋賀県",
+  "prefSlug": "shiga",
+  "match": [],
+  "areaTerms": [
+   "滋賀県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 33
+ },
+ "nara": {
+  "slug": "nara",
+  "kind": "pref",
+  "label": "奈良県",
+  "pref": "奈良県",
+  "prefSlug": "nara",
+  "match": [],
+  "areaTerms": [
+   "奈良県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 33
+ },
+ "tottori": {
+  "slug": "tottori",
+  "kind": "pref",
+  "label": "鳥取県",
+  "pref": "鳥取県",
+  "prefSlug": "tottori",
+  "match": [],
+  "areaTerms": [
+   "鳥取県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 11
+ },
+ "shimane": {
+  "slug": "shimane",
+  "kind": "pref",
+  "label": "島根県",
+  "pref": "島根県",
+  "prefSlug": "shimane",
+  "match": [],
+  "areaTerms": [
+   "島根県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 16
+ },
+ "yamaguchi": {
+  "slug": "yamaguchi",
+  "kind": "pref",
+  "label": "山口県",
+  "pref": "山口県",
+  "prefSlug": "yamaguchi",
+  "match": [],
+  "areaTerms": [
+   "山口県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 32
+ },
+ "tokushima": {
+  "slug": "tokushima",
+  "kind": "pref",
+  "label": "徳島県",
+  "pref": "徳島県",
+  "prefSlug": "tokushima",
+  "match": [],
+  "areaTerms": [
+   "徳島県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 19
+ },
+ "kagawa": {
+  "slug": "kagawa",
+  "kind": "pref",
+  "label": "香川県",
+  "pref": "香川県",
+  "prefSlug": "kagawa",
+  "match": [],
+  "areaTerms": [
+   "香川県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 27
+ },
+ "ehime": {
+  "slug": "ehime",
+  "kind": "pref",
+  "label": "愛媛県",
+  "pref": "愛媛県",
+  "prefSlug": "ehime",
+  "match": [],
+  "areaTerms": [
+   "愛媛県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 29
+ },
+ "saga": {
+  "slug": "saga",
+  "kind": "pref",
+  "label": "佐賀県",
+  "pref": "佐賀県",
+  "prefSlug": "saga",
+  "match": [],
+  "areaTerms": [
+   "佐賀県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 19
+ },
+ "nagasaki": {
+  "slug": "nagasaki",
+  "kind": "pref",
+  "label": "長崎県",
+  "pref": "長崎県",
+  "prefSlug": "nagasaki",
+  "match": [],
+  "areaTerms": [
+   "長崎県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 22
+ },
+ "okinawa": {
+  "slug": "okinawa",
+  "kind": "pref",
+  "label": "沖縄県",
+  "pref": "沖縄県",
+  "prefSlug": "okinawa",
+  "match": [],
+  "areaTerms": [
+   "沖縄県"
+  ],
+  "parent": null,
+  "children": [],
+  "count": 42
+ }
+}

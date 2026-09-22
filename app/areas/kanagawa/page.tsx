@@ -1,6 +1,6 @@
 import Link from "next/link";
+import AreaProvidersLead from "../../components/AreaProvidersLead";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
-import PrefProviders from "../../components/PrefProviders";
 import {Building2, MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -194,6 +194,7 @@ export default function KanagawaArea() {
  <p className="text-xl">横浜市・川崎市・相模原市など神奈川県全域対応</p>
  </div>
  </section>
+ <AreaProvidersLead slug="kanagawa" />
  <section className="py-12">
  <div className="container mx-auto px-4">
  <div className="prose max-w-4xl mx-auto">
@@ -504,7 +505,6 @@ export default function KanagawaArea() {
  </div>
  </div>
  </section>
- <PrefProviders pref="kanagawa" prefJa="神奈川県" />
  <SeasonalCleaningNote />
  </div>
  );

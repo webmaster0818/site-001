@@ -1,6 +1,5 @@
 import Link from "next/link";
-import CityProviders from "../../components/CityProviders";
-import PrefProviders from "../../components/PrefProviders";
+import AreaProvidersLead from "../../components/AreaProvidersLead";
 import { Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -191,8 +190,7 @@ export default function NiigataArea() {
           <p className="text-xl">新潟市など新潟県全域対応</p>
         </div>
       </section>
-
- <CityProviders match={["新潟市"]} cityJa="新潟市" />
+ <AreaProvidersLead slug="niigata" />
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="prose max-w-4xl mx-auto">
@@ -295,7 +293,6 @@ export default function NiigataArea() {
           </div>
         </div>
       </section>
- <PrefProviders pref="niigata" prefJa="新潟県" />
     </div>
   );
 }

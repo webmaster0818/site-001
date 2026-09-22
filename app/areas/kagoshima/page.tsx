@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PrefProviders from "../../components/PrefProviders";
+import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -216,6 +216,7 @@ export default function Area_kagoshima() {
  <p className="text-xl">鹿児島市全域対応！信頼できる業者をご紹介</p>
  </div>
  </section>
+ <AreaProvidersLead slug="kagoshima" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
  <div className="container mx-auto px-4">
@@ -571,8 +572,6 @@ export default function Area_kagoshima() {
  </div>
  </div>
  </section>
- <PrefProviders pref="kagoshima" prefJa="鹿児島県" />
-
  </div>
  );
 }

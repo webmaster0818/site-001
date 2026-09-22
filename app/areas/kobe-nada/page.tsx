@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
@@ -215,6 +216,7 @@ export default function KobeNadaArea() {
  <p className="text-xl">灘区全域対応！信頼できる業者をご紹介</p>
  </div>
  </section>
+ <AreaProvidersLead slug="kobe-nada" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
  <div className="container mx-auto px-4">
