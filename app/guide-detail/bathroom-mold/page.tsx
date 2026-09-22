@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/guide-detail/bathroom-mold/" },
   title: "浴室のカビ対策 | クリーンナビ",
   description: "浴室のカビを防ぐための完全ガイド。プロが教える掃除のコツとポイント。",
 };

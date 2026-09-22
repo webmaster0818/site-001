@@ -4,6 +4,7 @@ import PrefProviders from "../../components/PrefProviders";
 import {Building2, MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/areas/kanagawa/" },
  title: "神奈川県のハウスクリーニング業者おすすめ比較 | 料金・口コミ | クリーンナビ",
  description: "神奈川県でおすすめのハウスクリーニング業者を徹底比較。横浜市、川崎市、相模原市など全域対応。",
  viewport: "width=device-width, initial-scale=1",

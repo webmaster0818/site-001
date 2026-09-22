@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/comparison/major-3-comparison/" },
   title: "大手3社徹底比較 | クリーンナビ",
   description: "ダスキン・おそうじ本舗・ベアーズを徹底比較。最適な業者選びをサポート。",
 };

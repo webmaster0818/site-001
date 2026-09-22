@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/guide-detail/before-checklist/" },
   title: "依頼前のチェックリスト | クリーンナビ",
   description: "業者に依頼する前に確認すべき10のポイント。プロが教える掃除のコツとポイント。",
 };

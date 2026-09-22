@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CheckCircle, AlertTriangle, Star, Shield, Clock, DollarSign, Users, FileCheck } from "lucide-react";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/guide/" },
   title: "ハウスクリーニング業者の選び方完全ガイド | クリーンナビ",
   description: "失敗しないハウスクリーニング業者の選び方を徹底解説。料金相場、チェックポイント、よくあるトラブルと対策まで完全網羅。",
   viewport: "width=device-width, initial-scale=1",

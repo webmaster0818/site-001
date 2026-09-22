@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/guide-detail/trouble-cases/" },
   title: "トラブル事例と対処法 | クリーンナビ",
   description: "よくあるトラブルと解決方法。プロが教える掃除のコツとポイント。",
 };

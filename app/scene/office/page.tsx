@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/scene/office/" },
   title: "事務所・オフィスクリーニング | クリーンナビ",
   description: "オフィス全体の清掃サービス。料金相場、おすすめ業者を比較。",
 };

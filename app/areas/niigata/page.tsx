@@ -4,6 +4,7 @@ import PrefProviders from "../../components/PrefProviders";
 import { Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/areas/niigata/" },
   title: "新潟県のハウスクリーニング業者おすすめ比較 | クリーンナビ",
   description: "新潟県でおすすめのハウスクリーニング業者を徹底比較。新潟市など全域対応。",
 };

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/guide-detail/aircon-frequency/" },
   title: "エアコンクリーニングの頻度 | クリーンナビ",
   description: "エアコンクリーニングの最適な頻度と時期。プロが教える掃除のコツとポイント。",
 };

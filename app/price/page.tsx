@@ -1,5 +1,15 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import {Sparkles, DollarSign, TrendingUp, Info } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "ハウスクリーニング料金相場一覧【エアコン・浴室・キッチン】 | クリーンナビ",
+  description:
+    "ハウスクリーニングの料金相場をエアコン・浴室・キッチン別に一覧。料金が変わる6つの要因（作業範囲・汚れ・設備・地域・時期・オプション）と、セット割引や閑散期など安く依頼するコツを解説します。",
+  alternates: {
+    canonical: "https://cleaning-choices.com/price/",
+  },
+};
 
 // 料金相場データ
 const PRICE_DATA = [
@@ -80,9 +90,9 @@ export default function PricePage() {
  <div className="container mx-auto px-4">
  <div className="flex items-center gap-3 mb-4">
  <DollarSign className="w-12 h-12"/>
- <h2 className="text-4xl md:text-5xl font-bold">
+ <h1 className="text-4xl md:text-5xl font-bold">
  ハウスクリーニング料金相場
- </h2>
+ </h1>
  </div>
  <p className="text-xl opacity-90 max-w-3xl">
  各サービスの料金相場を詳しく解説。適正価格を知って、賢く業者を選びましょう。

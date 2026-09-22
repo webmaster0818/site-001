@@ -4,6 +4,7 @@ import PrefProviders from "../../components/PrefProviders";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/areas/kyoto/" },
  title: "京都府のハウスクリーニング業者おすすめ比較 | クリーンナビ",
  description: "京都府でおすすめのハウスクリーニング業者を徹底比較。京都市など全域対応。",
 };

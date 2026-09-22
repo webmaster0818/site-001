@@ -2,6 +2,7 @@ import Link from "next/link";
 import PartnerCards from "../../components/PartnerCards";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/scene/moving-aircon/" },
   title: "引越し前エアコンクリーニング | クリーンナビ",
   description: "引越し前のエアコン清掃で新居を快適に。料金相場、おすすめ業者を比較。",
 };

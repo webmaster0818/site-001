@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/guide-detail/cleaning-timing/" },
   title: "ハウスクリーニングのタイミング | クリーンナビ",
   description: "プロに依頼すべきベストタイミング。プロが教える掃除のコツとポイント。",
 };

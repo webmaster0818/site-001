@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/comparison/warranty-comparison/" },
   title: "保証・補償制度比較 | クリーンナビ",
   description: "各業者の保証内容を徹底比較。最適な業者選びをサポート。",
 };

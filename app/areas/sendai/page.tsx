@@ -3,6 +3,7 @@ import CityProviders from "../../components/CityProviders";
 import { Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/areas/sendai/" },
   title: "仙台市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
   description: "仙台市でおすすめのハウスクリーニング業者を徹底比較。仙台市など全域対応。",
 };

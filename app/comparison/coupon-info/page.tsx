@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/comparison/coupon-info/" },
   title: "クーポン・割引情報まとめ | クリーンナビ",
   description: "お得なクーポン・キャンペーン情報。最適な業者選びをサポート。",
 };

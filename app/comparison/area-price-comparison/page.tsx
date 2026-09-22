@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/comparison/area-price-comparison/" },
   title: "エリア別料金相場比較 | クリーンナビ",
   description: "全国主要都市の料金相場を比較。最適な業者選びをサポート。",
 };

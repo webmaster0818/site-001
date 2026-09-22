@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/comparison/time-comparison/" },
   title: "作業時間・所要時間比較 | クリーンナビ",
   description: "サービス別の作業時間を比較。最適な業者選びをサポート。",
 };

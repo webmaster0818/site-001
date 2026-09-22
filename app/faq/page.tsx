@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HelpCircle, ChevronDown } from "lucide-react";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/faq/" },
   title: "よくある質問（FAQ）| クリーンナビ",
   description: "ハウスクリーニングに関するよくある質問と回答。料金、作業時間、準備するもの、トラブル対応など、気になる疑問を解決します。",
   viewport: "width=device-width, initial-scale=1",

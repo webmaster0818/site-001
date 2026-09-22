@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/guide-detail/diy-vs-pro/" },
   title: "自分でできる掃除vs業者 | クリーンナビ",
   description: "DIYとプロの違い、使い分けのコツ。プロが教える掃除のコツとポイント。",
 };

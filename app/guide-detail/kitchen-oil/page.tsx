@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/guide-detail/kitchen-oil/" },
   title: "キッチンの油汚れ対策 | クリーンナビ",
   description: "頑固な油汚れを落とす方法と予防策。プロが教える掃除のコツとポイント。",
 };

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/scene/airbnb/" },
   title: "民泊・Airbnb向けクリーニング | クリーンナビ",
   description: "民泊運営に最適な定期清掃プラン。料金相場、おすすめ業者を比較。",
 };

@@ -5,6 +5,7 @@ import PrefProviders from "../../components/PrefProviders";
 import { Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/areas/hiroshima/" },
   title: "広島市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
   description: "広島市でおすすめのハウスクリーニング業者を徹底比較。広島市など全域対応。",
 };

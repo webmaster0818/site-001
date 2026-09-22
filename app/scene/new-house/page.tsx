@@ -2,6 +2,7 @@ import Link from "next/link";
 import PartnerCards from "../../components/PartnerCards";
 
 export const metadata = {
+  alternates: { canonical: "https://cleaning-choices.com/scene/new-house/" },
   title: "新築・リフォーム後クリーニング | クリーンナビ",
   description: "新築・リフォーム後の仕上げ清掃。料金相場、おすすめ業者を比較。",
 };
