@@ -83,3 +83,9 @@ GSC実数診断:
 ### 2026-09-22 D1: /price/ メタ欠落修正+canonical欠落34頁一括修正（「①進めて」）
 - /price/にmetadata(title/desc/canonical)追加+h2→h1。監査でcanonical欠落34頁(export const metadataにalternates無し)を発見→自己参照canonicalを一括注入。62dcfbe。監査コマンド=out/全index.htmlのcanonical==自URL検査(404/_not-found除外)
 - 次=A1(一覧154頁の店舗DB前面化)→A2(市区×サービス20頁)→B1B2→C1C2→A3D3
+
+### 2026-09-22 A1: 地域一覧262頁を店舗DB前面型に統一（「②進めて」）
+- app/components/AreaProvidersLead.tsx(slug→areaMap.json→providers.json住所マッチ)。ヒーロー直下(最初の<h1>後の</section>直後)に挿入。CityProviders/PrefProviders削除
+- scripts/gen-area-map.py: areaIndexData.ts(AREA_INDEX/PREF_PAGES)をnodeで評価→areaMap.json(kind pref/city/ward・match・areaTerms・parent/children・count)。app/areas/実在dirと突合し不一致は異常終了。AREA_INDEX変更時は再実行
+- 東京23区=label区名のみ/住所照合は「東京都中野区」。対応エリア(charge_region)は公式表記がlabelと一致(東京=区名/政令市=市+区)
+- 監査: out/areas全頁でid="stores"・h1→stores順・店舗数==areaMap.count・内部リンク切れ0。0c732b7

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import providers from "../../data/providers.json";
 // CTR実験(2026-09-11開始): GSC表示上位50店のみtitle/descに比較フックを追加。2週間で判定→全展開or撤収
-import ctrTestSlugs from "../../data/ctr_test_slugs.json";
 import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
 
 type Provider = {
@@ -41,12 +40,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const p = list.find((x) => x.slug === slug);
   if (!p) return {};
   return {
-    title: ctrTestSlugs.includes(p.slug)
-      ? `${p.name}（${p.pref_ja}）の店舗情報・対応エリア｜近隣店舗と比較`
-      : `${p.name}（${p.pref_ja}）の店舗情報・対応エリア`,
-    description: ctrTestSlugs.includes(p.slug)
-      ? `${p.name}の店舗情報。${p.address ?? p.pref_ja}を拠点とする${p.brand_name}の加盟店です。対応エリア・営業時間を公式確認情報のみで掲載。同じ地域の近隣店舗ともあわせて比較できます。`
-      : `${p.name}の店舗情報。${p.address ?? p.pref_ja}を拠点とする${p.brand_name}の加盟店です。対応エリア・営業時間など、公式サイトで確認した情報のみを確認日つきで掲載しています。`,
+    // P2 CTR実験(9/11〜9/24)は表示▲64%・CTR低下で撤収→全店舗を標準型に統一
+    title: `${p.name}（${p.pref_ja}）の店舗情報・対応エリア`,
+    description: `${p.name}の店舗情報。${p.address ?? p.pref_ja}を拠点とする${p.brand_name}の加盟店です。対応エリア・営業時間など、公式サイトで確認した情報のみを確認日つきで掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/provider/${p.slug}/` },
   };
 }
