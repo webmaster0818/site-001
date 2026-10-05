@@ -10,6 +10,14 @@ export const metadata = {
       "クリーンナビのプライバシーポリシーです。個人情報の取り扱い、アクセス解析ツール（Google Analytics 4）の利用、広告プログラムへの参加についてご説明します。",
     url: "https://cleaning-choices.com/privacy/",
     siteName: "クリーンナビ",
+    images: [
+      {
+        url: "https://cleaning-choices.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "クリーンナビ - ハウスクリーニング業者比較",
+      },
+    ],
     locale: "ja_JP",
     type: "website",
   },

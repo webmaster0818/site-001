@@ -54,9 +54,24 @@ function sortStores(a: Provider, b: Provider) {
  * - 対応エリア店舗: 公式の対応エリア(charge_region)に市区名を含む近隣店舗(所在店舗と重複しないもの)
  * - 0件の市区は所在店舗の代わりに対応エリア店舗と上位ページへの導線を出す
  */
-export default function AreaProvidersLead({ slug }: { slug: string }) {
+export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug: string; breadcrumbLd?: boolean }) {
   const area = AREA_MAP[slug];
   if (!area) return null;
+
+  // パンくず(構造化データ)。このブロック下部に実際に表示している上位ページ(都道府県・市)だけを階層に入れる。
+  // prefSlug が市ページと同名(例: kumamoto=熊本市)の県は都道府県ページが無いので階層に入れない。
+  const ORIGIN = "https://cleaning-choices.com";
+  const crumbs: { name: string; item: string }[] = [{ name: "ホーム", item: `${ORIGIN}/` }];
+  if (area.kind !== "pref" && area.prefSlug && AREA_MAP[area.prefSlug]?.kind === "pref") {
+    crumbs.push({ name: area.pref, item: `${ORIGIN}/areas/${area.prefSlug}/` });
+  }
+  if (area.parent) crumbs.push({ name: area.parent.name, item: `${ORIGIN}/areas/${area.parent.slug}/` });
+  crumbs.push({ name: area.label, item: `${ORIGIN}/areas/${area.slug}/` });
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.name, item: c.item })),
+  };
 
   const located = (
     area.kind === "pref"
@@ -99,6 +114,9 @@ export default function AreaProvidersLead({ slug }: { slug: string }) {
 
   return (
     <section id="stores" className="py-10 bg-white border-b border-gray-100">
+      {breadcrumbLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      )}
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-ink mb-2">{heading}</h2>
         <p className="text-sm text-muted mb-1">

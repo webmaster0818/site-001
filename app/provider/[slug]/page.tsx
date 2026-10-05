@@ -41,16 +41,46 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!p) return {};
   return {
     // P2 CTR実験(9/11〜9/24)は表示▲64%・CTR低下で撤収→全店舗を標準型に統一
-    title: `${p.name}（${p.pref_ja}）の店舗情報・対応エリア`,
+    title: `${p.name}（${titleQualifier(p)}）の店舗情報・対応エリア`,
     description: `${p.name}の店舗情報。${p.address ?? p.pref_ja}を拠点とする${p.brand_name}の加盟店です。対応エリア・営業時間など、公式サイトで確認した情報のみを確認日つきで掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/provider/${p.slug}/` },
   };
 }
 
+// 「同じ都道府県の他の店舗」は住所順で前後3店ずつ(=同じ市区町村・隣接する市区町村の店舗)を出す。
+// 以前は県内の先頭6店を全店舗ページで固定表示していたため、同じ6店にしかリンクが集まらず、
+// 県ページ(または市ページ)に載らない店舗がブランド一覧からしか辿れなかった。
+const byPrefSorted: Record<string, Provider[]> = {};
+for (const x of list) (byPrefSorted[x.pref] ||= []).push(x);
+for (const k of Object.keys(byPrefSorted)) {
+  byPrefSorted[k].sort((a, b) => {
+    const aa = a.address ?? "";
+    const bb = b.address ?? "";
+    return aa < bb ? -1 : aa > bb ? 1 : a.slug < b.slug ? -1 : 1;
+  });
+}
+
 function nearbyProviders(p: Provider): Provider[] {
-  return list
-    .filter((x) => x.slug !== p.slug && x.pref === p.pref)
-    .slice(0, 6);
+  const arr = byPrefSorted[p.pref] ?? [];
+  const i = arr.findIndex((x) => x.slug === p.slug);
+  if (i < 0) return [];
+  const n = arr.length;
+  const picked: Provider[] = [];
+  for (const d of [-3, -2, -1, 1, 2, 3]) {
+    const x = arr[(((i + d) % n) + n) % n];
+    if (x.slug !== p.slug && !picked.includes(x)) picked.push(x);
+  }
+  return picked;
+}
+
+// 同じ都道府県に同名の店舗が複数ある場合(公式サイトに別ページとして掲載)は、
+// 出典である公式店舗ページの番号でtitleを区別する。
+const nameCount: Record<string, number> = {};
+for (const x of list) nameCount[`${x.pref}|${x.name}`] = (nameCount[`${x.pref}|${x.name}`] || 0) + 1;
+function titleQualifier(p: Provider): string {
+  if (nameCount[`${p.pref}|${p.name}`] < 2) return p.pref_ja;
+  const m = p.source_url.match(/(\d+)\/?$/);
+  return m ? `${p.pref_ja}・公式店舗ページ番号${m[1]}` : p.pref_ja;
 }
 
 export default async function ProviderPage({ params }: { params: Promise<{ slug: string }> }) {

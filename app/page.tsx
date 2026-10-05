@@ -41,7 +41,7 @@ export default function Home() {
  </span>
  </div>
 
- <h2
+ <h1
  className="text-3xl md:text-5xl font-black text-white leading-tight mb-4"
  style={{textShadow: '0 2px 16px rgba(0,0,0,0.2)' }}
  >
@@ -68,7 +68,7 @@ export default function Home() {
  >
  予約
  </span>
- </h2>
+ </h1>
 
  <p
  className="text-base md:text-lg text-white leading-relaxed max-w-2xl mx-auto mb-8"

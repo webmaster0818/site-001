@@ -46,9 +46,9 @@ export default function RankingIndexPage() {
 
       <section className="bg-blue-600 text-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
             業者ランキング一覧
-          </h2>
+          </h1>
           <p className="text-lg opacity-90">
             サービス別・料金・口コミ・対応スピードの切り口から、目的に合った業者を比較できます。
           </p>
@@ -82,6 +82,25 @@ export default function RankingIndexPage() {
             </Link>
           ))}
         </div>
+
+        <section className="bg-white rounded-lg shadow-sm p-6 mb-8">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">テーマ別の比較記事</h3>
+          <ul className="grid gap-2 md:grid-cols-2">
+            {[
+              { href: "/comparison/major-3-comparison/", label: "大手3社徹底比較" },
+              { href: "/comparison/area-price-comparison/", label: "エリア別料金相場比較" },
+              { href: "/comparison/time-comparison/", label: "作業時間・所要時間比較" },
+              { href: "/comparison/warranty-comparison/", label: "保証・補償制度比較" },
+              { href: "/comparison/coupon-info/", label: "クーポン・割引情報まとめ" },
+            ].map((c) => (
+              <li key={c.href}>
+                <Link href={c.href} className="text-blue-600 hover:underline">
+                  {c.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <section className="bg-white rounded-lg shadow-sm p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">比較の考え方</h3>

@@ -65,7 +65,7 @@ export default async function PrefPage({ params }: { params: Promise<{ pref: str
           </ol>
         </nav>
       </div>
-      <AreaProvidersLead slug={pref} />
+      <AreaProvidersLead slug={pref} breadcrumbLd={false} />
       <section className="container mx-auto px-4 pb-14">
         <div className="alert alert-info">
           <p className="text-sm">

@@ -10,6 +10,14 @@ export const metadata = {
       "クリーンナビの運営者情報です。運営会社、編集方針、比較・掲載の基準、広告（PR）についての開示、免責事項をご確認いただけます。",
     url: "https://cleaning-choices.com/about/",
     siteName: "クリーンナビ",
+    images: [
+      {
+        url: "https://cleaning-choices.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "クリーンナビ - ハウスクリーニング業者比較",
+      },
+    ],
     locale: "ja_JP",
     type: "website",
   },

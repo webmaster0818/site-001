@@ -4,10 +4,10 @@ import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
- title: "北区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+ title: "神戸市北区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
  description: "北区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
  openGraph: {
- title: "北区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+ title: "神戸市北区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
  description: "北区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
  url: "https://cleaning-choices.com/areas/kobe-kita/",
  siteName: "クリーンナビ",
@@ -24,7 +24,7 @@ export const metadata = {
  },
  twitter: {
  card: "summary_large_image",
- title: "北区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+ title: "神戸市北区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
  description: "北区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
  images: ["https://cleaning-choices.com/og-image.png"],
  },

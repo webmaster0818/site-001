@@ -198,9 +198,9 @@ export default function CompanyPageClient({ id }: { id: string }) {
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                  <h1 className="text-3xl font-bold text-gray-900 mb-2">
                     {company.name}
-                  </h2>
+                  </h1>
                   <div className="flex items-center gap-4 text-gray-600">
                     <div className="flex items-center gap-1">
                       <MapPin className="w-5 h-5" />
@@ -307,6 +307,31 @@ export default function CompanyPageClient({ id }: { id: string }) {
             </div>
           </div>
         </div>
+
+        {/* 同じカテゴリの掲載業者 */}
+        {Object.keys(COMPANY_DATA).some((k) => k !== id && COMPANY_DATA[k].categorySlug === company.categorySlug) && (
+          <section className="bg-white rounded-lg shadow-sm p-6 mt-8">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
+              {company.category}の他の掲載業者
+            </h2>
+            <ul className="space-y-2">
+              {Object.keys(COMPANY_DATA)
+                .filter((k) => k !== id && COMPANY_DATA[k].categorySlug === company.categorySlug)
+                .map((k) => (
+                  <li key={k}>
+                    <Link href={`/company/${k}/`} className="text-blue-600 hover:underline">
+                      {COMPANY_DATA[k].name}
+                    </Link>
+                  </li>
+                ))}
+              <li>
+                <Link href={`/services/${company.categorySlug}/`} className="text-blue-600 hover:underline">
+                  {company.category}の業者一覧へ
+                </Link>
+              </li>
+            </ul>
+          </section>
+        )}
       </div>
 
       {/* お問い合わせモーダル */}

@@ -45,9 +45,9 @@ export default function SceneIndexPage() {
 
       <section className="bg-blue-600 text-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
             シーン別クリーニングガイド
-          </h2>
+          </h1>
           <p className="text-lg opacity-90">
             引越し・新築・年末大掃除・民泊・オフィスなど、利用シーンに合わせたハウスクリーニングの活用方法を紹介します。
           </p>

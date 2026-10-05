@@ -14,6 +14,14 @@ export const metadata = {
     description: DESCRIPTION,
     url: "https://cleaning-choices.com/sitemap/",
     siteName: "クリーンナビ",
+    images: [
+      {
+        url: "https://cleaning-choices.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "クリーンナビ - ハウスクリーニング業者比較",
+      },
+    ],
     locale: "ja_JP",
     type: "website",
   },

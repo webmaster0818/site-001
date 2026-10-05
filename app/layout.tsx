@@ -73,33 +73,22 @@ export const metadata: Metadata = {
 
 // 構造化データ（JSON-LD）
 const structuredData = {
+  // WebSite / Organization は静的HTMLに直接出力する(next/scriptだとクライアント注入になり、HTML上は構造化データ0になる)。
+  // 実在しないサイト内検索(SearchAction)と空の電話番号は載せない。
   website: {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "クリーンナビ",
     "alternateName": "CleanNavi",
     "url": "https://cleaning-choices.com/",
-    "description": "ハウスクリーニング業者を料金・口コミ・サービス内容で簡単比較できるサイト",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://cleaning-choices.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "description": "ハウスクリーニング業者を料金・口コミ・サービス内容で簡単比較できるサイト"
   },
   organization: {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "クリーンナビ",
     "url": "https://cleaning-choices.com/",
-    "logo": "https://cleaning-choices.com/images/logo-character.png",
-    "sameAs": [],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "",
-      "contactType": "customer service",
-      "availableLanguage": "Japanese",
-      "areaServed": "JP"
-    }
+    "logo": "https://cleaning-choices.com/images/logo-character.png"
   },
   breadcrumb: {
     "@context": "https://schema.org",
@@ -182,20 +171,16 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         
-        {/* 構造化データ: WebSite */}
-        <Script
-          id="structured-data-website"
+        {/* 構造化データ: WebSite / Organization（静的HTMLに出力） */}
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.website) }}
         />
-        
-        {/* 構造化データ: Organization */}
-        <Script
-          id="structured-data-organization"
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.organization) }}
         />
-        
+
         {/* 構造化データ: BreadcrumbList */}
         <Script
           id="structured-data-breadcrumb"

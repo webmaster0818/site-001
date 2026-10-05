@@ -3,10 +3,10 @@ import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
- title: "西区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+ title: "横浜市西区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
  description: "西区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
  openGraph: {
- title: "西区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+ title: "横浜市西区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
  description: "西区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
  url: "https://cleaning-choices.com/areas/yokohama-nishi/",
  siteName: "クリーンナビ",
@@ -23,7 +23,7 @@ export const metadata = {
  },
  twitter: {
  card: "summary_large_image",
- title: "西区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+ title: "横浜市西区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
  description: "西区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
  images: ["https://cleaning-choices.com/og-image.png"],
  },

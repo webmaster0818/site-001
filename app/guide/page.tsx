@@ -328,6 +328,30 @@ export default function Guide() {
         </div>
       </section>
 
+      {/* テーマ別ガイド */}
+      <section className="py-16 bg-base-200">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-8">テーマ別のガイド記事</h2>
+          <ul className="grid gap-3 md:grid-cols-2">
+            {[
+              { href: "/guide-detail/before-checklist/", label: "依頼前のチェックリスト" },
+              { href: "/guide-detail/cleaning-timing/", label: "ハウスクリーニングのタイミング" },
+              { href: "/guide-detail/diy-vs-pro/", label: "自分でできる掃除vs業者" },
+              { href: "/guide-detail/trouble-cases/", label: "トラブル事例と対処法" },
+              { href: "/guide-detail/aircon-frequency/", label: "エアコンクリーニングの頻度" },
+              { href: "/guide-detail/bathroom-mold/", label: "浴室のカビ対策" },
+              { href: "/guide-detail/kitchen-oil/", label: "キッチンの油汚れ対策" },
+            ].map((g) => (
+              <li key={g.href}>
+                <Link href={g.href} className="card bg-base-100 p-4 block text-primary font-bold hover:underline">
+                  {g.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto px-4 text-center">

@@ -89,3 +89,11 @@ GSC実数診断:
 - scripts/gen-area-map.py: areaIndexData.ts(AREA_INDEX/PREF_PAGES)をnodeで評価→areaMap.json(kind pref/city/ward・match・areaTerms・parent/children・count)。app/areas/実在dirと突合し不一致は異常終了。AREA_INDEX変更時は再実行
 - 東京23区=label区名のみ/住所照合は「東京都中野区」。対応エリア(charge_region)は公式表記がlabelと一致(東京=区名/政令市=市+区)
 - 監査: out/areas全頁でid="stores"・h1→stores順・店舗数==areaMap.count・内部リンク切れ0。0c732b7
+
+### 2026-10-05 公開前チェック(site-precheck.py)不合格5項目を修正 → 全項目OK
+- 構造化データ0(16種別277頁): layoutのJSON-LDがnext/script(クライアント注入)でHTMLに出ていなかった→WebSite/Organizationを素の<script>で静的出力(実在しないSearchAction・空telは削除)。地域ページはAreaProvidersLeadでBreadcrumbList出力([pref]動的ルートは既存があるのでbreadcrumbLd={false})
+- og:image無し5頁(about/contact/privacy/terms/sitemap)にimages追加。★public/og-image.pngが存在せず本番404だった→scripts/make-og.pyで生成(数字なし)
+- title重複13組: 同名区58頁のtitleを「市名+区名」(東京は東京都+区名)に。同名同住所のダスキン新宮2店は公式店舗ページ番号で区別
+- h1×0の12頁: TOP/ranking/scene/services[category]/company[id]のヒーローh2→h1
+- 被リンク≤1: provider198=「県内の他の店舗」を先頭6店固定→住所順の前後3店に変更 / guideハブ→guide-detail7 / rankingハブ→comparison5 / company=同カテゴリ業者リンク
+- 未対応(要判断): layoutのFAQPage/ItemList/BreadcrumbList(ホームのみ)は全ページにクライアント注入されたまま。areaMapのprefSlugが市ページと同名の12県(長野・岐阜・熊本・広島・鹿児島・岡山・宮崎・富山・和歌山・福井・大分・高知)は県ページが実在せず、店舗ページの「県の業者一覧」リンクが市ページに着地する
