@@ -3,7 +3,6 @@ import { Noto_Sans_JP, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Script from "next/script";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -181,26 +180,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.organization) }}
         />
 
-        {/* 構造化データ: BreadcrumbList */}
-        <Script
-          id="structured-data-breadcrumb"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.breadcrumb) }}
-        />
-        
-        {/* 構造化データ: FAQPage */}
-        <Script
-          id="structured-data-faq"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.faq) }}
-        />
-        
-        {/* 構造化データ: ItemList */}
-        <Script
-          id="structured-data-itemlist"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.itemList) }}
-        />
+        {/* 2026-10-06 削除: 全ページに next/script で注入していた FAQPage・ItemList・BreadcrumbList（ホームのみ）。
+            どのページにも画面上に対応する FAQ / 一覧が無く、FAQ の回答文には「基準を満たした優良業者のみを掲載」
+            という確認できない記述もあった。パンくずは各ページ側で出している。 */}
       </head>
       <body className={`${notoSansJP.variable} ${zenMaru.variable} antialiased font-sans`}>
         <Header />
