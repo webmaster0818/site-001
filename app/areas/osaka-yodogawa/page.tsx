@@ -3,10 +3,10 @@ import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 
 export const metadata = {
- title: "【2026年6月最新】淀川区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
+ title: "淀川区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
  description: "淀川区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
  openGraph: {
- title: "【2026年6月最新】淀川区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
+ title: "淀川区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
  description: "淀川区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
  url: "https://cleaning-choices.com/areas/osaka-yodogawa/",
  siteName: "クリーンナビ",
@@ -23,7 +23,7 @@ export const metadata = {
  },
  twitter: {
  card: "summary_large_image",
- title: "【2026年6月最新】淀川区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
+ title: "淀川区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
  description: "淀川区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
  images: ["https://cleaning-choices.com/og-image.png"],
  },

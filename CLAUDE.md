@@ -97,3 +97,9 @@ GSC実数診断:
 - h1×0の12頁: TOP/ranking/scene/services[category]/company[id]のヒーローh2→h1
 - 被リンク≤1: provider198=「県内の他の店舗」を先頭6店固定→住所順の前後3店に変更 / guideハブ→guide-detail7 / rankingハブ→comparison5 / company=同カテゴリ業者リンク
 - 未対応(要判断): layoutのFAQPage/ItemList/BreadcrumbList(ホームのみ)は全ページにクライアント注入されたまま。areaMapのprefSlugが市ページと同名の12県(長野・岐阜・熊本・広島・鹿児島・岡山・宮崎・富山・和歌山・福井・大分・高知)は県ページが実在せず、店舗ページの「県の業者一覧」リンクが市ページに着地する
+
+### 2026-10-07 title/TOPの「最新」表記を外す + 同名区titleの市名漏れ10頁
+- 実測(out/): title「【2026年6月最新】」40頁(名古屋16区+大阪24区)・TOP「2026年8月 最新版」1頁・layout継承のog:title「【2026年最新】」3,615頁・description「【2026年最新】」3頁 → 全て0。内容を今日確認していないため年月を進めず「最新」の語を削除（area titleは接頭辞のみ削除、他は維持）。TOPバッジは「厳選業者を徹底比較」
+- 10/05の同名区58頁対応の漏れ: 大阪市中央区・名古屋市中区/南区/東区/緑区・大阪市旭区/鶴見区・横浜市旭区/鶴見区・東京都港区 のtitleに市名付与(title/og/twitterの3箇所)。sitemap lastmod 44
+- 残: ranking4頁の「【2026年9月】」は日付表記(「最新」でない)のため据え置き。精査なし
+- 公開前チェック 全項目OK（title重複は404系のみ）
