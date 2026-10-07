@@ -78,8 +78,8 @@ export default function Area_hachioji() {
  kitchen: "19,580円〜", 
  bathroom: "19,580円〜", 
  toilet: "19,580円",
- description: "イオングループ運営で安心。仕上がり満足度97%を誇る高品質サービス。",
- hours: "10:00-19:00（年末年始除く）",
+ description: "イオングループ運営。お客さま満足度95%（2025年 カジタク調べ）。",
+ hours: "10:00-17:00（年末年始除く）",
  services: "エアコン、浴室、キッチン、換気扇、窓・サッシクリーニング",
  website: "https://www.kajitaku.com/"
  },
