@@ -223,7 +223,8 @@ export default function Area_hiroshima_aki() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li><Link href="/areas/hiroshima/">広島県</Link></li>
+ <li><Link href="/areas/hiroshima-ken/">広島県</Link></li>
+ <li><Link href="/areas/hiroshima/">広島市</Link></li>
  <li>安芸区</li>
  </ul>
  </div>
@@ -566,7 +567,7 @@ export default function Area_hiroshima_aki() {
  <div className="container mx-auto px-4">
  <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
- <Link href="/areas/hiroshima/"className="btn btn-outline">広島県</Link>
+ <Link href="/areas/hiroshima-ken/"className="btn btn-outline">広島県</Link>
  <Link href="/areas/hiroshima-naka/"className="btn btn-outline">広島市中区</Link>
  <Link href="/areas/hiroshima-higashi/"className="btn btn-outline">広島市東区</Link>
  <Link href="/areas/hiroshima-minami/"className="btn btn-outline">広島市南区</Link>

@@ -192,6 +192,18 @@ export default function HiroshimaArea() {
         </div>
       </section>
  <AreaProvidersLead slug="hiroshima" />
+ {/* パンくずリスト */}
+ <div className="bg-base-100 py-4 border-b border-base-300">
+ <div className="container mx-auto px-4">
+ <div className="breadcrumbs text-sm">
+ <ul>
+ <li><Link href="/">HOME</Link></li>
+ <li><Link href="/areas/hiroshima-ken/">広島県</Link></li>
+ <li>広島市</li>
+ </ul>
+ </div>
+ </div>
+ </div>
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="prose max-w-4xl mx-auto">

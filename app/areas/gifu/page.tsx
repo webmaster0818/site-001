@@ -223,7 +223,7 @@ export default function Area_gifu() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>岐阜県</li>
+ <li><Link href="/areas/gifu-ken/">岐阜県</Link></li>
  <li>岐阜市</li>
  </ul>
  </div>

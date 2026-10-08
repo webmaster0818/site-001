@@ -223,7 +223,7 @@ export default function Area_kumamoto() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>熊本県</li>
+ <li><Link href="/areas/kumamoto-ken/">熊本県</Link></li>
  <li>熊本市</li>
  </ul>
  </div>

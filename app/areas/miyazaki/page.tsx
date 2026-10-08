@@ -223,7 +223,7 @@ export default function Area_miyazaki() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>宮崎県</li>
+ <li><Link href="/areas/miyazaki-ken/">宮崎県</Link></li>
  <li>宮崎市</li>
  </ul>
  </div>

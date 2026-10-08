@@ -223,7 +223,7 @@ export default function Area_toyama() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>富山県</li>
+ <li><Link href="/areas/toyama-ken/">富山県</Link></li>
  <li>富山市</li>
  </ul>
  </div>

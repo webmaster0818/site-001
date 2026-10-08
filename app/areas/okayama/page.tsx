@@ -223,7 +223,7 @@ export default function Area_okayama() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>岡山県</li>
+ <li><Link href="/areas/okayama-ken/">岡山県</Link></li>
  <li>岡山市</li>
  </ul>
  </div>

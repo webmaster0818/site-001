@@ -347,7 +347,7 @@ export default function Home() {
  {/* 中国・四国 */}
  <h4 className="text-sm font-bold text-gray-500 mb-3 max-w-5xl mx-auto">中国・四国</h4>
  <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3 max-w-5xl mx-auto mb-6">
- <a className="area-card text-center group"href="/areas/hiroshima/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">広島県</div></a>
+ <a className="area-card text-center group"href="/areas/hiroshima-ken/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">広島県</div></a>
  </div>
 
  {/* 九州・沖縄 */}

@@ -223,7 +223,7 @@ export default function Area_nagano() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>長野県</li>
+ <li><Link href="/areas/nagano-ken/">長野県</Link></li>
  <li>長野市</li>
  </ul>
  </div>

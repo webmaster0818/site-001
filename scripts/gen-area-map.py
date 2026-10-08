@@ -74,11 +74,18 @@ def main():
                     "match": match, "areaTerms": area_terms, "parent": parent_link, "children": children,
                 }
 
-    # 静的ディレクトリの無い都道府県([pref]動的ルート)も pref エントリを持たせる
+    # 静的ディレクトリの無い都道府県([pref]動的ルート)も pref エントリを持たせる。
+    # その県の AREA_INDEX にある市区ページ(県庁所在地 gifu=岐阜市 等)を children にして「市区から探す」導線を出す
+    by_pref = {pg["pref"]: pg for pg in d["AREA_INDEX"]}
     for p in d["PREF_PAGES"]:
         if p["slug"] not in entries:
+            children = []
+            for cg in by_pref.get(p["name"], {"cities": []})["cities"]:
+                for x in cg["areas"]:
+                    nm = (cg["prefix"] + x["name"]) if (x["name"].endswith("区") and cg["prefix"] and not x["name"].startswith(cg["prefix"])) else x["name"]
+                    children.append({"slug": x["slug"], "name": nm})
             entries[p["slug"]] = {"slug": p["slug"], "kind": "pref", "label": p["name"], "pref": p["name"],
-                                  "prefSlug": p["slug"], "match": [], "areaTerms": [p["name"]], "parent": None, "children": []}
+                                  "prefSlug": p["slug"], "match": [], "areaTerms": [p["name"]], "parent": None, "children": children}
 
     # 突合: app/areas/ の実在ディレクトリ
     dirs = {x for x in os.listdir(os.path.join(ROOT, "app/areas")) if os.path.isdir(os.path.join(ROOT, "app/areas", x)) and x != "[pref]"}

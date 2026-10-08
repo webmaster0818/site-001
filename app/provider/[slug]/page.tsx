@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import providers from "../../data/providers.json";
 // CTR実験(2026-09-11開始): GSC表示上位50店のみtitle/descに比較フックを追加。2週間で判定→全展開or撤収
 import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
+import { prefPageHref } from "../../components/areaIndexData";
 
 type Provider = {
   slug: string;
@@ -26,9 +27,10 @@ type Provider = {
 
 const list = providers as Provider[];
 
-// D2で47都道府県ページが全て揃ったため、常に県ページへ直リンク
-function areaHref(pref: string): string {
-  return `/areas/${pref}/`;
+// D2で47都道府県ページが全て揃ったため、常に県ページへ直リンク。
+// slugは providers.pref ではなく PREF_PAGES から引く(岐阜など12県は市ページが県名slugを使っていて県ページは gifu-ken)
+function areaHref(prefJa: string): string {
+  return prefPageHref(prefJa);
 }
 
 export async function generateStaticParams() {
@@ -104,7 +106,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "ホーム", item: "https://cleaning-choices.com/" },
-      { "@type": "ListItem", position: 2, name: `${p.pref_ja}のハウスクリーニング`, item: `https://cleaning-choices.com${areaHref(p.pref)}` },
+      { "@type": "ListItem", position: 2, name: `${p.pref_ja}のハウスクリーニング`, item: `https://cleaning-choices.com${areaHref(p.pref_ja)}` },
       { "@type": "ListItem", position: 3, name: p.name, item: `https://cleaning-choices.com/provider/${p.slug}/` },
     ],
   };
@@ -127,7 +129,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
       <nav className="breadcrumbs mb-6" aria-label="パンくず">
         <ol>
           <li><a href="/">ホーム</a></li>
-          <li><a href={areaHref(p.pref)}>{p.pref_ja}</a></li>
+          <li><a href={areaHref(p.pref_ja)}>{p.pref_ja}</a></li>
           <li>{p.name}</li>
         </ol>
       </nav>
@@ -205,7 +207,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
           <h2 className="card-title">依頼前のチェックポイント</h2>
           <ul className="space-y-2 text-sm text-ink-soft">
             <li>・料金は作業範囲・汚れの状態で変わるため、見積りで総額と追加料金の条件を確認しましょう</li>
-            <li>・1社即決を避け、2〜3社の相見積もりが基本です（<a href="/ranking/" className="underline text-primary">比較ランキング</a>・<a href={areaHref(p.pref)} className="underline text-primary">{p.pref_ja}の業者一覧</a>）</li>
+            <li>・1社即決を避け、2〜3社の相見積もりが基本です（<a href="/ranking/" className="underline text-primary">比較ランキング</a>・<a href={areaHref(p.pref_ja)} className="underline text-primary">{p.pref_ja}の業者一覧</a>）</li>
             <li>・損害保険の加入有無・作業後の保証条件は事前に確認を</li>
           </ul>
         </div>

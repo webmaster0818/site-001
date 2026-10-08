@@ -587,6 +587,8 @@ export function areaLabel(group: CityGroup, area: AreaLink): string {
 }
 
 // 47都道府県ページ（/areas/{slug}/）。D2で全県分の店舗データベースページが揃った
+// ※県庁所在地の市ページが県名slug(gifu=岐阜市 等)を先に使っている12県は、県ページを "{slug}-ken" にする
+//   (静的dirの市ページが優先されるため同じslugでは県ページを生成できない)。県ページURLは必ずこの表(prefPageHref)経由で引く
 export const PREF_PAGES: { slug: string; name: string }[] = [
   { slug: "hokkaido", name: "北海道" }, { slug: "aomori", name: "青森県" },
   { slug: "iwate", name: "岩手県" }, { slug: "miyagi", name: "宮城県" },
@@ -595,21 +597,28 @@ export const PREF_PAGES: { slug: string; name: string }[] = [
   { slug: "tochigi", name: "栃木県" }, { slug: "gunma", name: "群馬県" },
   { slug: "saitama", name: "埼玉県" }, { slug: "chiba", name: "千葉県" },
   { slug: "tokyo", name: "東京都" }, { slug: "kanagawa", name: "神奈川県" },
-  { slug: "niigata", name: "新潟県" }, { slug: "toyama", name: "富山県" },
-  { slug: "ishikawa", name: "石川県" }, { slug: "fukui", name: "福井県" },
-  { slug: "yamanashi", name: "山梨県" }, { slug: "nagano", name: "長野県" },
-  { slug: "gifu", name: "岐阜県" }, { slug: "shizuoka", name: "静岡県" },
+  { slug: "niigata", name: "新潟県" }, { slug: "toyama-ken", name: "富山県" },
+  { slug: "ishikawa", name: "石川県" }, { slug: "fukui-ken", name: "福井県" },
+  { slug: "yamanashi", name: "山梨県" }, { slug: "nagano-ken", name: "長野県" },
+  { slug: "gifu-ken", name: "岐阜県" }, { slug: "shizuoka", name: "静岡県" },
   { slug: "aichi", name: "愛知県" }, { slug: "mie", name: "三重県" },
   { slug: "shiga", name: "滋賀県" }, { slug: "kyoto", name: "京都府" },
   { slug: "osaka", name: "大阪府" }, { slug: "hyogo", name: "兵庫県" },
-  { slug: "nara", name: "奈良県" }, { slug: "wakayama", name: "和歌山県" },
+  { slug: "nara", name: "奈良県" }, { slug: "wakayama-ken", name: "和歌山県" },
   { slug: "tottori", name: "鳥取県" }, { slug: "shimane", name: "島根県" },
-  { slug: "okayama", name: "岡山県" }, { slug: "hiroshima", name: "広島県" },
+  { slug: "okayama-ken", name: "岡山県" }, { slug: "hiroshima-ken", name: "広島県" },
   { slug: "yamaguchi", name: "山口県" }, { slug: "tokushima", name: "徳島県" },
   { slug: "kagawa", name: "香川県" }, { slug: "ehime", name: "愛媛県" },
-  { slug: "kochi", name: "高知県" }, { slug: "fukuoka", name: "福岡県" },
+  { slug: "kochi-ken", name: "高知県" }, { slug: "fukuoka", name: "福岡県" },
   { slug: "saga", name: "佐賀県" }, { slug: "nagasaki", name: "長崎県" },
-  { slug: "kumamoto", name: "熊本県" }, { slug: "oita", name: "大分県" },
-  { slug: "miyazaki", name: "宮崎県" }, { slug: "kagoshima", name: "鹿児島県" },
+  { slug: "kumamoto-ken", name: "熊本県" }, { slug: "oita-ken", name: "大分県" },
+  { slug: "miyazaki-ken", name: "宮崎県" }, { slug: "kagoshima-ken", name: "鹿児島県" },
   { slug: "okinawa", name: "沖縄県" },
 ];
+
+// 都道府県名(例: "岐阜県") → 県ページURL。providers.json の pref_ja から県ページへリンクする箇所は全てこれを使う
+export function prefPageHref(prefJa: string): string {
+  const p = PREF_PAGES.find((x) => x.name === prefJa);
+  if (!p) throw new Error(`PREF_PAGES に無い都道府県: ${prefJa}`);
+  return `/areas/${p.slug}/`;
+}

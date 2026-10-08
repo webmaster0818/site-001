@@ -223,6 +223,7 @@ export default function Area_okayama_kita() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
+ <li><Link href="/areas/okayama-ken/">岡山県</Link></li>
  <li><Link href="/areas/okayama/">岡山市</Link></li>
  <li>北区</li>
  </ul>

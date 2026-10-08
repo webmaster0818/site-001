@@ -2435,7 +2435,7 @@
   "kind": "city",
   "label": "富山市",
   "pref": "富山県",
-  "prefSlug": "toyama",
+  "prefSlug": "toyama-ken",
   "match": [
    "富山市"
   ],
@@ -2467,7 +2467,7 @@
   "kind": "city",
   "label": "福井市",
   "pref": "福井県",
-  "prefSlug": "fukui",
+  "prefSlug": "fukui-ken",
   "match": [
    "福井市"
   ],
@@ -2499,7 +2499,7 @@
   "kind": "city",
   "label": "長野市",
   "pref": "長野県",
-  "prefSlug": "nagano",
+  "prefSlug": "nagano-ken",
   "match": [
    "長野市"
   ],
@@ -2515,7 +2515,7 @@
   "kind": "city",
   "label": "岐阜市",
   "pref": "岐阜県",
-  "prefSlug": "gifu",
+  "prefSlug": "gifu-ken",
   "match": [
    "岐阜市"
   ],
@@ -4124,7 +4124,7 @@
   "kind": "city",
   "label": "和歌山市",
   "pref": "和歌山県",
-  "prefSlug": "wakayama",
+  "prefSlug": "wakayama-ken",
   "match": [
    "和歌山市"
   ],
@@ -4140,7 +4140,7 @@
   "kind": "city",
   "label": "岡山市",
   "pref": "岡山県",
-  "prefSlug": "okayama",
+  "prefSlug": "okayama-ken",
   "match": [
    "岡山市"
   ],
@@ -4173,7 +4173,7 @@
   "kind": "ward",
   "label": "岡山市北区",
   "pref": "岡山県",
-  "prefSlug": "okayama",
+  "prefSlug": "okayama-ken",
   "match": [
    "岡山市北区"
   ],
@@ -4192,7 +4192,7 @@
   "kind": "ward",
   "label": "岡山市中区",
   "pref": "岡山県",
-  "prefSlug": "okayama",
+  "prefSlug": "okayama-ken",
   "match": [
    "岡山市中区"
   ],
@@ -4211,7 +4211,7 @@
   "kind": "ward",
   "label": "岡山市東区",
   "pref": "岡山県",
-  "prefSlug": "okayama",
+  "prefSlug": "okayama-ken",
   "match": [
    "岡山市東区"
   ],
@@ -4230,7 +4230,7 @@
   "kind": "ward",
   "label": "岡山市南区",
   "pref": "岡山県",
-  "prefSlug": "okayama",
+  "prefSlug": "okayama-ken",
   "match": [
    "岡山市南区"
   ],
@@ -4249,7 +4249,7 @@
   "kind": "city",
   "label": "広島市",
   "pref": "広島県",
-  "prefSlug": "hiroshima",
+  "prefSlug": "hiroshima-ken",
   "match": [
    "広島市"
   ],
@@ -4298,7 +4298,7 @@
   "kind": "ward",
   "label": "広島市中区",
   "pref": "広島県",
-  "prefSlug": "hiroshima",
+  "prefSlug": "hiroshima-ken",
   "match": [
    "広島市中区"
   ],
@@ -4317,7 +4317,7 @@
   "kind": "ward",
   "label": "広島市東区",
   "pref": "広島県",
-  "prefSlug": "hiroshima",
+  "prefSlug": "hiroshima-ken",
   "match": [
    "広島市東区"
   ],
@@ -4336,7 +4336,7 @@
   "kind": "ward",
   "label": "広島市南区",
   "pref": "広島県",
-  "prefSlug": "hiroshima",
+  "prefSlug": "hiroshima-ken",
   "match": [
    "広島市南区"
   ],
@@ -4355,7 +4355,7 @@
   "kind": "ward",
   "label": "広島市西区",
   "pref": "広島県",
-  "prefSlug": "hiroshima",
+  "prefSlug": "hiroshima-ken",
   "match": [
    "広島市西区"
   ],
@@ -4374,7 +4374,7 @@
   "kind": "ward",
   "label": "広島市安佐南区",
   "pref": "広島県",
-  "prefSlug": "hiroshima",
+  "prefSlug": "hiroshima-ken",
   "match": [
    "広島市安佐南区"
   ],
@@ -4393,7 +4393,7 @@
   "kind": "ward",
   "label": "広島市安佐北区",
   "pref": "広島県",
-  "prefSlug": "hiroshima",
+  "prefSlug": "hiroshima-ken",
   "match": [
    "広島市安佐北区"
   ],
@@ -4412,7 +4412,7 @@
   "kind": "ward",
   "label": "広島市安芸区",
   "pref": "広島県",
-  "prefSlug": "hiroshima",
+  "prefSlug": "hiroshima-ken",
   "match": [
    "広島市安芸区"
   ],
@@ -4431,7 +4431,7 @@
   "kind": "ward",
   "label": "広島市佐伯区",
   "pref": "広島県",
-  "prefSlug": "hiroshima",
+  "prefSlug": "hiroshima-ken",
   "match": [
    "広島市佐伯区"
   ],
@@ -4482,7 +4482,7 @@
   "kind": "city",
   "label": "高知市",
   "pref": "高知県",
-  "prefSlug": "kochi",
+  "prefSlug": "kochi-ken",
   "match": [
    "高知市"
   ],
@@ -4793,7 +4793,7 @@
   "kind": "city",
   "label": "熊本市",
   "pref": "熊本県",
-  "prefSlug": "kumamoto",
+  "prefSlug": "kumamoto-ken",
   "match": [
    "熊本市"
   ],
@@ -4830,7 +4830,7 @@
   "kind": "ward",
   "label": "熊本市中央区",
   "pref": "熊本県",
-  "prefSlug": "kumamoto",
+  "prefSlug": "kumamoto-ken",
   "match": [
    "熊本市中央区"
   ],
@@ -4849,7 +4849,7 @@
   "kind": "ward",
   "label": "熊本市東区",
   "pref": "熊本県",
-  "prefSlug": "kumamoto",
+  "prefSlug": "kumamoto-ken",
   "match": [
    "熊本市東区"
   ],
@@ -4868,7 +4868,7 @@
   "kind": "ward",
   "label": "熊本市西区",
   "pref": "熊本県",
-  "prefSlug": "kumamoto",
+  "prefSlug": "kumamoto-ken",
   "match": [
    "熊本市西区"
   ],
@@ -4887,7 +4887,7 @@
   "kind": "ward",
   "label": "熊本市南区",
   "pref": "熊本県",
-  "prefSlug": "kumamoto",
+  "prefSlug": "kumamoto-ken",
   "match": [
    "熊本市南区"
   ],
@@ -4906,7 +4906,7 @@
   "kind": "ward",
   "label": "熊本市北区",
   "pref": "熊本県",
-  "prefSlug": "kumamoto",
+  "prefSlug": "kumamoto-ken",
   "match": [
    "熊本市北区"
   ],
@@ -4925,7 +4925,7 @@
   "kind": "city",
   "label": "大分市",
   "pref": "大分県",
-  "prefSlug": "oita",
+  "prefSlug": "oita-ken",
   "match": [
    "大分市"
   ],
@@ -4941,7 +4941,7 @@
   "kind": "city",
   "label": "宮崎市",
   "pref": "宮崎県",
-  "prefSlug": "miyazaki",
+  "prefSlug": "miyazaki-ken",
   "match": [
    "宮崎市"
   ],
@@ -4957,7 +4957,7 @@
   "kind": "city",
   "label": "鹿児島市",
   "pref": "鹿児島県",
-  "prefSlug": "kagoshima",
+  "prefSlug": "kagoshima-ken",
   "match": [
    "鹿児島市"
   ],
@@ -4995,7 +4995,52 @@
    "北海道"
   ],
   "parent": null,
-  "children": [],
+  "children": [
+   {
+    "slug": "sapporo",
+    "name": "札幌市"
+   },
+   {
+    "slug": "sapporo-chuo",
+    "name": "札幌市中央区"
+   },
+   {
+    "slug": "sapporo-kita",
+    "name": "札幌市北区"
+   },
+   {
+    "slug": "sapporo-higashi",
+    "name": "札幌市東区"
+   },
+   {
+    "slug": "sapporo-shiroishi",
+    "name": "札幌市白石区"
+   },
+   {
+    "slug": "sapporo-atsubetsu",
+    "name": "札幌市厚別区"
+   },
+   {
+    "slug": "sapporo-toyohira",
+    "name": "札幌市豊平区"
+   },
+   {
+    "slug": "sapporo-kiyota",
+    "name": "札幌市清田区"
+   },
+   {
+    "slug": "sapporo-minami",
+    "name": "札幌市南区"
+   },
+   {
+    "slug": "sapporo-nishi",
+    "name": "札幌市西区"
+   },
+   {
+    "slug": "sapporo-teine",
+    "name": "札幌市手稲区"
+   }
+  ],
   "count": 129
  },
  "aomori": {
@@ -5037,7 +5082,32 @@
    "宮城県"
   ],
   "parent": null,
-  "children": [],
+  "children": [
+   {
+    "slug": "sendai",
+    "name": "仙台市"
+   },
+   {
+    "slug": "sendai-aoba",
+    "name": "仙台市青葉区"
+   },
+   {
+    "slug": "sendai-miyagino",
+    "name": "仙台市宮城野区"
+   },
+   {
+    "slug": "sendai-wakabayashi",
+    "name": "仙台市若林区"
+   },
+   {
+    "slug": "sendai-taihaku",
+    "name": "仙台市太白区"
+   },
+   {
+    "slug": "sendai-izumi",
+    "name": "仙台市泉区"
+   }
+  ],
   "count": 75
  },
  "akita": {
@@ -5124,6 +5194,25 @@
   "children": [],
   "count": 52
  },
+ "toyama-ken": {
+  "slug": "toyama-ken",
+  "kind": "pref",
+  "label": "富山県",
+  "pref": "富山県",
+  "prefSlug": "toyama-ken",
+  "match": [],
+  "areaTerms": [
+   "富山県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "toyama",
+    "name": "富山市"
+   }
+  ],
+  "count": 21
+ },
  "ishikawa": {
   "slug": "ishikawa",
   "kind": "pref",
@@ -5135,7 +5224,31 @@
    "石川県"
   ],
   "parent": null,
-  "children": [],
+  "children": [
+   {
+    "slug": "kanazawa",
+    "name": "金沢市"
+   }
+  ],
+  "count": 21
+ },
+ "fukui-ken": {
+  "slug": "fukui-ken",
+  "kind": "pref",
+  "label": "福井県",
+  "pref": "福井県",
+  "prefSlug": "fukui-ken",
+  "match": [],
+  "areaTerms": [
+   "福井県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "fukui",
+    "name": "福井市"
+   }
+  ],
   "count": 21
  },
  "yamanashi": {
@@ -5149,8 +5262,51 @@
    "山梨県"
   ],
   "parent": null,
-  "children": [],
+  "children": [
+   {
+    "slug": "kofu",
+    "name": "甲府市"
+   }
+  ],
   "count": 20
+ },
+ "nagano-ken": {
+  "slug": "nagano-ken",
+  "kind": "pref",
+  "label": "長野県",
+  "pref": "長野県",
+  "prefSlug": "nagano-ken",
+  "match": [],
+  "areaTerms": [
+   "長野県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "nagano",
+    "name": "長野市"
+   }
+  ],
+  "count": 66
+ },
+ "gifu-ken": {
+  "slug": "gifu-ken",
+  "kind": "pref",
+  "label": "岐阜県",
+  "pref": "岐阜県",
+  "prefSlug": "gifu-ken",
+  "match": [],
+  "areaTerms": [
+   "岐阜県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "gifu",
+    "name": "岐阜市"
+   }
+  ],
+  "count": 46
  },
  "mie": {
   "slug": "mie",
@@ -5194,6 +5350,25 @@
   "children": [],
   "count": 33
  },
+ "wakayama-ken": {
+  "slug": "wakayama-ken",
+  "kind": "pref",
+  "label": "和歌山県",
+  "pref": "和歌山県",
+  "prefSlug": "wakayama-ken",
+  "match": [],
+  "areaTerms": [
+   "和歌山県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "wakayama",
+    "name": "和歌山市"
+   }
+  ],
+  "count": 22
+ },
  "tottori": {
   "slug": "tottori",
   "kind": "pref",
@@ -5221,6 +5396,92 @@
   "parent": null,
   "children": [],
   "count": 16
+ },
+ "okayama-ken": {
+  "slug": "okayama-ken",
+  "kind": "pref",
+  "label": "岡山県",
+  "pref": "岡山県",
+  "prefSlug": "okayama-ken",
+  "match": [],
+  "areaTerms": [
+   "岡山県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "okayama",
+    "name": "岡山市"
+   },
+   {
+    "slug": "okayama-kita",
+    "name": "岡山市北区"
+   },
+   {
+    "slug": "okayama-naka",
+    "name": "岡山市中区"
+   },
+   {
+    "slug": "okayama-higashi",
+    "name": "岡山市東区"
+   },
+   {
+    "slug": "okayama-minami",
+    "name": "岡山市南区"
+   }
+  ],
+  "count": 40
+ },
+ "hiroshima-ken": {
+  "slug": "hiroshima-ken",
+  "kind": "pref",
+  "label": "広島県",
+  "pref": "広島県",
+  "prefSlug": "hiroshima-ken",
+  "match": [],
+  "areaTerms": [
+   "広島県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "hiroshima",
+    "name": "広島市"
+   },
+   {
+    "slug": "hiroshima-naka",
+    "name": "広島市中区"
+   },
+   {
+    "slug": "hiroshima-higashi",
+    "name": "広島市東区"
+   },
+   {
+    "slug": "hiroshima-minami",
+    "name": "広島市南区"
+   },
+   {
+    "slug": "hiroshima-nishi",
+    "name": "広島市西区"
+   },
+   {
+    "slug": "hiroshima-asaminami",
+    "name": "広島市安佐南区"
+   },
+   {
+    "slug": "hiroshima-asakita",
+    "name": "広島市安佐北区"
+   },
+   {
+    "slug": "hiroshima-aki",
+    "name": "広島市安芸区"
+   },
+   {
+    "slug": "hiroshima-saeki",
+    "name": "広島市佐伯区"
+   }
+  ],
+  "count": 56
  },
  "yamaguchi": {
   "slug": "yamaguchi",
@@ -5261,7 +5522,12 @@
    "香川県"
   ],
   "parent": null,
-  "children": [],
+  "children": [
+   {
+    "slug": "takamatsu",
+    "name": "高松市"
+   }
+  ],
   "count": 27
  },
  "ehime": {
@@ -5275,8 +5541,32 @@
    "愛媛県"
   ],
   "parent": null,
-  "children": [],
+  "children": [
+   {
+    "slug": "matsuyama",
+    "name": "松山市"
+   }
+  ],
   "count": 29
+ },
+ "kochi-ken": {
+  "slug": "kochi-ken",
+  "kind": "pref",
+  "label": "高知県",
+  "pref": "高知県",
+  "prefSlug": "kochi-ken",
+  "match": [],
+  "areaTerms": [
+   "高知県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "kochi",
+    "name": "高知市"
+   }
+  ],
+  "count": 15
  },
  "saga": {
   "slug": "saga",
@@ -5306,6 +5596,102 @@
   "children": [],
   "count": 22
  },
+ "kumamoto-ken": {
+  "slug": "kumamoto-ken",
+  "kind": "pref",
+  "label": "熊本県",
+  "pref": "熊本県",
+  "prefSlug": "kumamoto-ken",
+  "match": [],
+  "areaTerms": [
+   "熊本県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "kumamoto",
+    "name": "熊本市"
+   },
+   {
+    "slug": "kumamoto-chuo",
+    "name": "熊本市中央区"
+   },
+   {
+    "slug": "kumamoto-higashi",
+    "name": "熊本市東区"
+   },
+   {
+    "slug": "kumamoto-nishi",
+    "name": "熊本市西区"
+   },
+   {
+    "slug": "kumamoto-minami",
+    "name": "熊本市南区"
+   },
+   {
+    "slug": "kumamoto-kita",
+    "name": "熊本市北区"
+   }
+  ],
+  "count": 49
+ },
+ "oita-ken": {
+  "slug": "oita-ken",
+  "kind": "pref",
+  "label": "大分県",
+  "pref": "大分県",
+  "prefSlug": "oita-ken",
+  "match": [],
+  "areaTerms": [
+   "大分県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "oita",
+    "name": "大分市"
+   }
+  ],
+  "count": 22
+ },
+ "miyazaki-ken": {
+  "slug": "miyazaki-ken",
+  "kind": "pref",
+  "label": "宮崎県",
+  "pref": "宮崎県",
+  "prefSlug": "miyazaki-ken",
+  "match": [],
+  "areaTerms": [
+   "宮崎県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "miyazaki",
+    "name": "宮崎市"
+   }
+  ],
+  "count": 31
+ },
+ "kagoshima-ken": {
+  "slug": "kagoshima-ken",
+  "kind": "pref",
+  "label": "鹿児島県",
+  "pref": "鹿児島県",
+  "prefSlug": "kagoshima-ken",
+  "match": [],
+  "areaTerms": [
+   "鹿児島県"
+  ],
+  "parent": null,
+  "children": [
+   {
+    "slug": "kagoshima",
+    "name": "鹿児島市"
+   }
+  ],
+  "count": 45
+ },
  "okinawa": {
   "slug": "okinawa",
   "kind": "pref",
@@ -5317,7 +5703,12 @@
    "沖縄県"
   ],
   "parent": null,
-  "children": [],
+  "children": [
+   {
+    "slug": "naha",
+    "name": "那覇市"
+   }
+  ],
   "count": 42
  }
 }

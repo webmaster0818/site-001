@@ -223,7 +223,7 @@ export default function Area_oita() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>大分県</li>
+ <li><Link href="/areas/oita-ken/">大分県</Link></li>
  <li>大分市</li>
  </ul>
  </div>

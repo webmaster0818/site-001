@@ -223,6 +223,7 @@ export default function Area_kumamoto_nishi() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
+ <li><Link href="/areas/kumamoto-ken/">熊本県</Link></li>
  <li><Link href="/areas/kumamoto/">熊本市</Link></li>
  <li>西区</li>
  </ul>

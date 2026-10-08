@@ -1,30 +1,30 @@
 import type { Metadata } from "next";
+import * as fs from "fs";
+import * as path from "path";
 import providers from "../../data/providers.json";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import { PREF_PAGES } from "../../components/areaIndexData";
 
 // 既存の静的ディレクトリ(app/areas/tokyo等)が優先されるため、
-// この動的ルートは「県ページ未作成の24県」だけを生成する
-const MISSING_PREFS: Record<string, string> = {
-  hokkaido: "北海道", aomori: "青森県", iwate: "岩手県", miyagi: "宮城県",
-  akita: "秋田県", yamagata: "山形県", fukushima: "福島県", ibaraki: "茨城県",
-  tochigi: "栃木県", gunma: "群馬県", ishikawa: "石川県", yamanashi: "山梨県",
-  mie: "三重県", shiga: "滋賀県", nara: "奈良県", tottori: "鳥取県",
-  shimane: "島根県", yamaguchi: "山口県", tokushima: "徳島県", kagawa: "香川県",
-  ehime: "愛媛県", saga: "佐賀県", nagasaki: "長崎県", okinawa: "沖縄県",
-};
+// この動的ルートは「静的ディレクトリの無い県ページ」だけを生成する。
+// 対象は PREF_PAGES(areaIndexData.ts) から app/areas/ に実在するディレクトリを除いて決める
+// (D2の24県 + 県庁所在地の市ページが県名slugを使っている12県の "{slug}-ken")。
+const AREAS_DIR = path.join(process.cwd(), "app", "areas");
+const DYNAMIC_PREFS = PREF_PAGES.filter((p) => !fs.existsSync(path.join(AREAS_DIR, p.slug)));
+const PREF_NAME: Record<string, string> = Object.fromEntries(DYNAMIC_PREFS.map((p) => [p.slug, p.name]));
 
-type Provider = { pref: string };
+type Provider = { pref_ja: string };
 const list = providers as Provider[];
 
 export async function generateStaticParams() {
-  return Object.keys(MISSING_PREFS).map((pref) => ({ pref }));
+  return DYNAMIC_PREFS.map((p) => ({ pref: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ pref: string }> }): Promise<Metadata> {
   const { pref } = await params;
-  const prefJa = MISSING_PREFS[pref];
+  const prefJa = PREF_NAME[pref];
   if (!prefJa) return {};
-  const count = list.filter((p) => p.pref === pref).length;
+  const count = list.filter((p) => p.pref_ja === prefJa).length;
   return {
     title: `${prefJa}のハウスクリーニング業者一覧（${count}店舗）｜店舗データベース`,
     description: `${prefJa}のハウスクリーニング業者${count}店舗を掲載。おそうじ本舗・ダスキン・おそうじ革命など、各ブランド公式サイトで確認した実在店舗のみを確認日つきで一覧化しています。`,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ pref: str
 
 export default async function PrefPage({ params }: { params: Promise<{ pref: string }> }) {
   const { pref } = await params;
-  const prefJa = MISSING_PREFS[pref];
+  const prefJa = PREF_NAME[pref];
   if (!prefJa) return null;
 
   const breadcrumb = {

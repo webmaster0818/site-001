@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import providers from "../../data/providers.json";
 import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
+import { prefPageHref } from "../../components/areaIndexData";
 
 type Provider = {
   slug: string;
@@ -166,7 +167,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
             return (
               <div key={pref}>
                 <h3 className="font-bold text-ink-soft mb-2">
-                  <a href={`/areas/${pref}/`} className="hover:text-primary">{ps[0].pref_ja}</a>
+                  <a href={prefPageHref(ps[0].pref_ja)} className="hover:text-primary">{ps[0].pref_ja}</a>
                   <span className="text-xs text-muted font-normal">（{ps.length}店舗）</span>
                 </h3>
                 <ul className="flex flex-wrap gap-x-4 gap-y-1">

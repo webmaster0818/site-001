@@ -223,7 +223,7 @@ export default function Area_kochi() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>高知県</li>
+ <li><Link href="/areas/kochi-ken/">高知県</Link></li>
  <li>高知市</li>
  </ul>
  </div>

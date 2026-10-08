@@ -223,7 +223,7 @@ export default function Area_fukui() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>福井県</li>
+ <li><Link href="/areas/fukui-ken/">福井県</Link></li>
  <li>福井市</li>
  </ul>
  </div>

@@ -223,7 +223,7 @@ export default function Area_wakayama() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>和歌山県</li>
+ <li><Link href="/areas/wakayama-ken/">和歌山県</Link></li>
  <li>和歌山市</li>
  </ul>
  </div>

@@ -223,7 +223,7 @@ export default function Area_kagoshima() {
  <div className="breadcrumbs text-sm">
  <ul>
  <li><Link href="/">HOME</Link></li>
- <li>鹿児島県</li>
+ <li><Link href="/areas/kagoshima-ken/">鹿児島県</Link></li>
  <li>鹿児島市</li>
  </ul>
  </div>
