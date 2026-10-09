@@ -115,3 +115,13 @@ GSC実数診断:
 - 修正: provider= `parentOrganization(Organization)`→`brand:{"@type":"Brand"}` / brand頁= `Organization`→`Brand`（url追加）。after: 3,869頁すべて Organization 1個（合計3,869）、Brand 3,528。precheck集計 {WebSite 3866, Organization 3866, LocalBusiness 3525, Brand 3}
 - /areas/niigata-minami/: 本番h2「新潟市南区のハウスクリーニング店舗一覧（0店舗）」の直下に近隣対応店舗10件が並んでおり見出しと中身が不一致 → AreaProvidersLead で「域内0かつ近隣>0」のときのみ h2 を「{地域}に対応するハウスクリーニング店舗（近隣N店舗）」に。「域内に所在する店舗は公式で確認できていません」の文は維持。該当は238頁中この1頁のみ。削除・noindexなし
 - sitemap lastmod 3,529（provider 3,525＋brand 3＋niigata-minami）。公開前チェック 全項目OK
+
+### 2026-10-09 提携8社 /review/ の「口コミ・評判」対策（12:00成長ルーチンC・GSC 28日 全て圏外）
+- 対象: migxl・on・kireiyu・seifu・nac-duskin・four-l・osouji-labo・housecleaning110（おそうじ革命は同日新設のため対象外、カジタクはリンクコード待ち）
+- 競合（各社 口コミ/評判 上位）は「良い/悪い口コミの傾向」「作業時間」「立会い」「予約の取りやすさ・繁忙期」「破損時」「キャンセル」「おすすめする人/しない人」「他社比較」を持ち、うちは料金表＋汎用の読み方3視点のみだった。口コミ本文はサイトルール上書かない→「口コミで気にされやすい点を公式情報で確認」表（論点×公式原文要約×確認ページ）で代替
+- テンプレ追加（partners.ts の任意フィールド）: publishedAt / peakSeason / reviewPoints / officialFaqs / checkedPages。WebPage JSON-LD（datePublished・dateModified）・公開日/最終確認日表示・FAQPage に公式FAQを追加。汎用文の「エアコンの機種」「繁忙期（5〜8月）」は各社公式の繁忙期に置換（記載なしは月を書かない）
+- 公式生HTML再確認（2026-10-09）で直した差分: ミガクる エリア「47都道府県」→公式は関東・関西・東海の10都府県中心（47の語は公式に無い）・居住中の扱いは公式内で揺れ / おそうじLabo キャンセル前日→前々日・水回り2点29,800→28,800円・「大阪府全域」→公式一覧は26市町 / キレイユ 200店舗→230店舗超 / 清風 業務用室外機8,800円・市区町村一覧・支払表記がFAQと特商法で不一致 / ナックダスキン サービス別エリア（エアコンは1都3県）・支店34 / フォーエル 実績年数（10年以上/20年以上）と追加料金注記が公式内で不一致→併記 / 110番 公式サイト=hoycambiomibombilla.com、運営会社の公開買付け（2026-09-10〜10-27・上場廃止予定、9/9適時開示）・キャンセルは規約上加盟店へ直接・キャンセル料記載なし
+- 公式で確認できず残したもの: ナックの浴室/キッチン料金（画像のみ）・キャンセル規定・休日料金額、各社の再施工保証、保険会社名/上限
+- ⚠️調査時に felmat 計測リンク(fmcl)へアクセスあり: 清風 4回（GET、14:10頃）・フォーエル 1回（HEAD）・110番 2回（HEAD）。以後は公式ドメイン直接のみ。**計測リンクは調査で開かない**
+- 変化したHTML 21頁（review 9・ranking 5・services 3・scene 2・TOP・/review/）→ sitemap lastmod 21。precheck ✅ 全項目OK（3,867頁）。計測コード集合は旧outと一致
+- source db81c7a → 本番反映 約4分 → 8頁 200・title【2026年10月確認】・dateModified 2026-10-09 確認 → Indexing API 20/20
