@@ -28,8 +28,9 @@ const ROWS = [
     name: "おそうじ革命",
     stores: count("kakumei"),
     storesLabel: "店舗",
-    feature: "追加料金なしの明朗会計が特徴。スタッフは50日間の研修を受けて対応",
-    points: ["業界最安クラス", "追加料金なし"],
+    feature: "表示価格は消費税・出張費込みで当日の追加料金なしを明記。スタッフは2ヶ月間の初期研修を受けて対応",
+    points: ["無料再作業の品質保証", "追加料金なし"],
+    review: "/review/osoujikakumei/",
   },
 ];
 
@@ -62,6 +63,11 @@ export default function BrandCompareTable() {
                   <a href={`/brand/${r.slug}/`} className="text-sky-600 font-bold hover:underline">
                     店舗を探す
                   </a>
+                  {"review" in r && (
+                    <a href={r.review} className="block mt-1 text-xs text-sky-600 hover:underline">
+                      口コミ・評判の検証
+                    </a>
+                  )}
                 </td>
               </tr>
             ))}

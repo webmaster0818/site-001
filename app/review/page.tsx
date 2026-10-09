@@ -4,7 +4,7 @@ import { PARTNERS, SERVICE_LABELS, type ServiceTag } from "../data/partners";
 export const metadata: Metadata = {
   title: "ハウスクリーニング業者の口コミ・評判を公式情報で検証【業者一覧】",
   description:
-    "ハウスクリーニング110番・ナックダスキン・エアコンクリーニング清風・キレイユ・ミガクる・オン・フォーエル・おそうじLaboなどの口コミ・評判・料金・対応エリアを、各社公式サイトの一次確認と確認日つきで整理。架空の口コミは掲載しません。",
+    "ハウスクリーニング110番・ナックダスキン・エアコンクリーニング清風・キレイユ・ミガクる・オン・フォーエル・おそうじLabo・おそうじ革命などの口コミ・評判・料金・対応エリアを、各社公式サイトの一次確認と確認日つきで整理。架空の口コミは掲載しません。",
   alternates: { canonical: "https://cleaning-choices.com/review/" },
 };
 

@@ -296,6 +296,7 @@ export default function NagoyaNakamuraArea() {
  <Icon className="w-8 h-8 text-white"/>
  </div>
  <h3 className="card-title text-2xl">{company.name}</h3>
+ {company.name === "おそうじ革命" && <a href="/review/osoujikakumei/" className="link link-primary text-sm">おそうじ革命の口コミ・評判を公式情報で検証</a>}
  </div>
  <div className="space-y-2">
  <p><strong>キッチン:</strong>{company.kitchen}</p>

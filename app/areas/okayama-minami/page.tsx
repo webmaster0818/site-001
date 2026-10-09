@@ -299,6 +299,7 @@ export default function Area_okayama_minami() {
  </div>
  <div>
  <h3 className="card-title text-2xl">{company.name}</h3>
+ {company.name === "おそうじ革命" && <a href="/review/osoujikakumei/" className="link link-primary text-sm">おそうじ革命の口コミ・評判を公式情報で検証</a>}
  <p className="text-sm text-gray-600">{company.description}</p>
  </div>
  </div>

@@ -3,7 +3,7 @@
 // リンク文言・URL・計測ピクセルはA8提供コードのまま使用すること(改変不可)。
 // rel は提供コードの nofollow に sponsored を追加(ステマ規制・Google推奨)。
 
-const LINKS = {
+export const KAKUMEI_LINKS = {
   // テキスト: お掃除の事なら汚れと戦うプロ集団【おそうじ革命】
   text1: {
     href: "https://px.a8.net/svt/ejp?a8mat=4B66KG+90HVUI+3UHU+69P02",
@@ -28,10 +28,10 @@ export default function KakumeiAffiliateCTA({
   variant = "text1",
   banner = false,
 }: {
-  variant?: keyof typeof LINKS;
+  variant?: keyof typeof KAKUMEI_LINKS;
   banner?: boolean;
 }) {
-  const l = LINKS[variant];
+  const l = KAKUMEI_LINKS[variant];
   return (
     <div className="my-6 rounded-xl border border-amber-200 bg-amber-50 p-5 text-center">
       <a

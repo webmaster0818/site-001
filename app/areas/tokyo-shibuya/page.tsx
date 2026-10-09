@@ -293,6 +293,7 @@ export default function TokyoshibuyaArea() {
                       </div>
                       <div className="flex-1">
                         <h3 className="card-title text-2xl">{company.name}</h3>
+ {company.name === "おそうじ革命" && <a href="/review/osoujikakumei/" className="link link-primary text-sm">おそうじ革命の口コミ・評判を公式情報で検証</a>}
                         
                       </div>
                     </div>

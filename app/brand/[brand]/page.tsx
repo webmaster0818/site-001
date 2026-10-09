@@ -38,8 +38,8 @@ const BRANDS: Record<
   osoujikakumei: {
     name: "おそうじ革命",
     description:
-      "全国約420店舗を展開するハウスクリーニングチェーン。50日間の研修を受けたスタッフが対応し、追加料金なしの明朗会計が特徴です。",
-    features: ["業界最安クラス", "50日間の研修", "追加料金なし", "全国約420店舗展開"],
+      "株式会社KIREI produceが本部を務めるフランチャイズ型のハウスクリーニングブランド。2ヶ月間の初期研修（イールシステム）を受けたスタッフが対応し、表示価格は消費税・出張費込みで当日の追加料金なしを公式に明記しています。",
+    features: ["2ヶ月間の初期研修", "当日の追加料金なし", "無料再作業の品質保証", "全加盟店が賠償責任保険に加入"],
   },
 };
 
@@ -140,6 +140,13 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
             掲載店舗は{b.name}公式サイトで確認した実在店舗のみです（各店舗ページに出典・確認日を記載）。最新の営業状況・料金は必ず公式サイト・店舗にご確認ください。
           </p>
         </div>
+        {brand === "osoujikakumei" && (
+          <p className="text-sm mt-4">
+            料金・保証・キャンセル規定は
+            <a href="/review/osoujikakumei/" className="text-primary underline decoration-primary/30 underline-offset-2 font-bold">おそうじ革命の口コミ・評判を公式情報で検証したページ</a>
+            にまとめています。
+          </p>
+        )}
         {brand === "osoujikakumei" && <KakumeiAffiliateCTA variant="text1" banner />}
       </section>
 
