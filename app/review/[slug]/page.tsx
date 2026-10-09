@@ -3,6 +3,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PARTNERS, SERVICE_LABELS } from "../../data/partners";
 
+function toIso(jp: string): string {
+  const m = jp.match(/(\d+)年(\d+)月(\d+)日/);
+  return m ? `${m[1]}-${m[2].padStart(2, "0")}-${m[3].padStart(2, "0")}` : jp;
+}
+
 export function generateStaticParams() {
   return PARTNERS.map((p) => ({ slug: p.slug }));
 }
@@ -34,6 +39,18 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
     ],
   };
 
+  const modifiedIso = toIso(p.confirmedAt);
+  const publishedIso = p.publishedAt ?? modifiedIso;
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `${p.name}の口コミ・評判は？料金・対応エリア・保証を公式情報で検証`,
+    url: `https://cleaning-choices.com/review/${p.slug}/`,
+    datePublished: publishedIso,
+    dateModified: modifiedIso,
+    about: { "@type": "Service", name: p.name },
+  };
+
   const faqs = [
     {
       q: `${p.name}の口コミ・評判はどこで確認できますか？`,
@@ -49,6 +66,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
       q: `${p.name}はどの地域に対応していますか？`,
       a: `公式サイトの記載では「${p.area}」です${p.areaNote ? `（${p.areaNote}）` : ""}。エリア内でも一部地域は対象外となる場合があるため、申込み前に住所を伝えて確認してください。`,
     },
+    ...(p.officialFaqs ?? []),
   ];
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -71,6 +89,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
 
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -84,6 +103,10 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">{p.name}の口コミ・評判は？料金・対応エリア・保証を公式情報で検証</h1>
           <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl">
             このページの情報は、{p.name}の公式サイトを当サイトが直接確認して整理したものです（確認日: {p.confirmedAt}）。伝聞や口コミサイトからの引用はしていません。口コミ・評判を読む前に、料金・エリア・保証といった「公式に確認できる事実」を先に押さえてください。確認できなかった項目は正直に記載します。
+          </p>
+          <p className="mt-3 text-xs text-gray-500">
+            {publishedIso !== modifiedIso && <>公開日 <time dateTime={publishedIso}>{publishedIso.replace(/-/g, "/")}</time>・</>}
+            最終確認・更新日 <time dateTime={modifiedIso}>{modifiedIso.replace(/-/g, "/")}</time>
           </p>
           {p.areaNote && (
             <p className="mt-4 inline-block rounded-lg bg-amber-50 border border-amber-200 px-4 py-2 text-sm font-bold text-amber-800">対応エリアにご注意：{p.areaNote}</p>
@@ -140,9 +163,39 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-500 mt-3">出典: {p.name}公式サイト（当サイト確認日 {p.confirmedAt}）。内容は変更される場合があります。申込み前に必ず公式サイトで最新情報をご確認ください。</p>
+          <p className="text-xs text-gray-500 mt-3">出典: {p.name}公式サイト（当サイト確認日 {p.confirmedAt}）{p.checkedPages && p.checkedPages.length > 0 && <>。確認したページ: {p.checkedPages.join("／")}</>}。内容は変更される場合があります。申込み前に必ず公式サイトで最新情報をご確認ください。</p>
         </div>
       </section>
+
+      {/* 口コミで気にされやすい点 × 公式の記載 */}
+      {p.reviewPoints && p.reviewPoints.length > 0 && (
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{p.name}の口コミで気にされやすい点を公式情報で確認</h2>
+            <p className="text-sm text-gray-600 mb-6">口コミ・評判で話題になりやすい点について、{p.name}の公式サイトに何が書かれているかを整理しました（確認日 {p.confirmedAt}）。利用者の口コミ本文は掲載していません。公式に記載が見つからない点はそのように記載しています。</p>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[560px] text-sm border-collapse">
+                <thead>
+                  <tr className="bg-gray-50 text-left">
+                    <th className="p-3 border border-gray-200 font-bold text-gray-700 w-40">気にされやすい点</th>
+                    <th className="p-3 border border-gray-200 font-bold text-gray-700">公式サイトの記載</th>
+                    <th className="p-3 border border-gray-200 font-bold text-gray-700 w-36">確認したページ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {p.reviewPoints.map((r) => (
+                    <tr key={r.topic}>
+                      <th className="p-3 border border-gray-200 bg-gray-50 text-left font-bold text-gray-800 align-top">{r.topic}</th>
+                      <td className="p-3 border border-gray-200 text-gray-800 leading-relaxed">{r.official}</td>
+                      <td className="p-3 border border-gray-200 text-gray-600 text-xs align-top">{r.page}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 特徴・確認できなかったこと */}
       <section className="py-12 md:py-16 bg-white">
@@ -182,11 +235,11 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-lg border border-gray-200 bg-white p-5">
               <p className="font-bold text-gray-900 mb-2">1. 同じサービスの口コミか</p>
-              <p className="text-sm text-gray-600 leading-relaxed">{p.name}の公式メニューは「{p.services.slice(0, 3).join("・")}」などです。自分が頼むサービスと同じ口コミを探してください。エアコンの機種や汚れの程度で評価は変わります。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">{p.name}の公式メニューは「{p.services.slice(0, 3).join("・")}」などです。自分が頼むサービスと同じ口コミを探してください。設備の種類や汚れの程度で評価は変わります。</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-5">
               <p className="font-bold text-gray-900 mb-2">2. 同じ地域・時期の口コミか</p>
-              <p className="text-sm text-gray-600 leading-relaxed">対応エリアは「{p.area}」です。担当スタッフや繁忙期（5〜8月）の予約状況で体験は変わるため、地域と時期が近い投稿を優先して読みます。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">対応エリアは「{p.area}」です。担当スタッフや{p.peakSeason ? `繁忙期（公式サイトの記載では${p.peakSeason}）` : "繁忙期"}の予約状況で体験は変わるため、地域と時期が近い投稿を優先して読みます。</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-5">
               <p className="font-bold text-gray-900 mb-2">3. 悪い口コミの「理由」を見る</p>
