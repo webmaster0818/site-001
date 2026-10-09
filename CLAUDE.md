@@ -108,3 +108,10 @@ GSC実数診断:
 - hours「10:00-19:00（年末年始除く）」→「10:00-17:00（年末年始除く）」（公式特商法）、description「仕上がり満足度97%を誇る高品質サービス」→「イオングループ運営。お客さま満足度95%（2025年 カジタク調べ）。」。カジタクのブロック内のみ置換（同じ時間文字列を持つ他社行238は未変更）
 - ★発見: 238頁中、description/hoursを画面に出すテンプレは135頁（hoursは134頁）。残り103頁（県ページ=niigata/chiba等）は name/kitchen/bathroom/toilet のみ描画でhours/descriptionは非表示（ソースは修正済み）
 - sitemap lastmod 238。公開前チェック 全項目OK
+
+### 2026-10-09 Organization構造化データの1頁2個を解消（P2）+ 新潟市南区の「（0店舗）」見出し修正（P4）
+- 実測(out/ 3,869 HTML=sitemap 3,866+404.html+404/+_not-found/): `"@type":"Organization"` 文字列は合計7,397個。1個=341頁・2個=3,528頁（provider 3,525＋brand 3）。10/8の「3,869個>3,866頁」はファイル数ベースの数え方で、3超過分は404系3ファイル（重複ではない）。本当の重複は上記3,528頁
+- 原因: layoutが全頁にサイト運営者Organizationを出力＋ provider頁が LocalBusiness.parentOrganization に `{"@type":"Organization"}` をネスト、brand頁がブランドをトップレベルOrganizationで出力
+- 修正: provider= `parentOrganization(Organization)`→`brand:{"@type":"Brand"}` / brand頁= `Organization`→`Brand`（url追加）。after: 3,869頁すべて Organization 1個（合計3,869）、Brand 3,528。precheck集計 {WebSite 3866, Organization 3866, LocalBusiness 3525, Brand 3}
+- /areas/niigata-minami/: 本番h2「新潟市南区のハウスクリーニング店舗一覧（0店舗）」の直下に近隣対応店舗10件が並んでおり見出しと中身が不一致 → AreaProvidersLead で「域内0かつ近隣>0」のときのみ h2 を「{地域}に対応するハウスクリーニング店舗（近隣N店舗）」に。「域内に所在する店舗は公式で確認できていません」の文は維持。該当は238頁中この1頁のみ。削除・noindexなし
+- sitemap lastmod 3,529（provider 3,525＋brand 3＋niigata-minami）。公開前チェック 全項目OK

@@ -110,7 +110,11 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
   const withHours = located.filter((p) => p.hours).length;
   const withTel = located.filter((p) => p.tel).length;
 
-  const heading = `${area.label}のハウスクリーニング店舗一覧（${located.length}店舗）`;
+  // 域内0店舗でも近隣の対応店舗を掲載している場合、見出しの「（0店舗）」が中身（近隣N店舗）と食い違うため見出しを変える
+  const heading =
+    located.length === 0 && covering.length > 0
+      ? `${area.label}に対応するハウスクリーニング店舗（近隣${covering.length}店舗）`
+      : `${area.label}のハウスクリーニング店舗一覧（${located.length}店舗）`;
 
   return (
     <section id="stores" className="py-10 bg-white border-b border-gray-100">

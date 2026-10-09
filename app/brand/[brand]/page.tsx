@@ -96,11 +96,13 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
       { "@type": "ListItem", position: 2, name: `${b.name}の店舗一覧`, item: `https://cleaning-choices.com/brand/${brand}/` },
     ],
   };
+  // 2026-10-09: Organization→Brand。サイト運営者のOrganization(layout)と同じ頁に2個目のOrganizationが出ていたため
   const org = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "Brand",
     name: b.name,
     description: b.description,
+    url: `https://cleaning-choices.com/brand/${brand}/`,
   };
 
   return (

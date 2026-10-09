@@ -99,7 +99,8 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
     telephone: p.tel ?? undefined,
     url: `https://cleaning-choices.com/provider/${p.slug}/`,
     sameAs: p.source_url,
-    parentOrganization: { "@type": "Organization", name: p.brand_name },
+    // 2026-10-09: parentOrganization(Organization)→brand(Brand)。layoutのサイトOrganizationと重複して1頁にOrganizationが2個出ていたため
+    brand: { "@type": "Brand", name: p.brand_name },
   };
   const breadcrumb = {
     "@context": "https://schema.org",
