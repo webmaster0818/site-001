@@ -568,7 +568,7 @@ export default function Area_sagamihara_midori() {
  <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
  <Link href="/areas/kanagawa/"className="btn btn-outline">神奈川県</Link>
- <Link href="/areas/sagamihara-chuo/"className="btn btn-outline">相模原市緑区</Link>
+ <Link href="/areas/sagamihara-chuo/"className="btn btn-outline">相模原市中央区</Link>
  <Link href="/areas/sagamihara-minami/"className="btn btn-outline">相模原市南区</Link>
  
  </div>

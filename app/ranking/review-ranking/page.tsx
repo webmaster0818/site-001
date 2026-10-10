@@ -31,7 +31,7 @@ const TOP = rated.slice(0, 10);
 const ratedCount = list.filter((p) => typeof p.rating_official === "number").length;
 
 export const metadata: Metadata = {
-  title: "口コミ評価が高いハウスクリーニング店舗ランキング【公式レビュー集計・2026年9月】",
+  title: "口コミ評価が高いハウスクリーニング店舗ランキング【公式レビュー集計】",
   description: `口コミ評価が高いハウスクリーニング店舗トップ10。各ブランド公式サイト掲載のレビュー集計(全${ratedCount}店舗分)から、レビュー100件以上の店舗を評価順に紹介。架空の口コミは一切使用していません。`,
   alternates: { canonical: "https://cleaning-choices.com/ranking/review-ranking/" },
 };

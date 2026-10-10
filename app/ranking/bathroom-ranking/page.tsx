@@ -3,7 +3,7 @@ import BrandCompareTable from "../../components/BrandCompareTable";
 import PartnerCards from "../../components/PartnerCards";
 
 export const metadata: Metadata = {
-  title: "浴室クリーニング業者おすすめランキング｜大手3社の比較と選び方【2026年9月】",
+  title: "浴室クリーニング業者おすすめランキング｜大手3社の比較と選び方",
   description:
     "浴室クリーニング業者を大手3ブランド(おそうじ本舗・ダスキン・おそうじ革命)の公式確認情報で比較。料金相場(浴室のみ15,000円〜)、カビ・防カビの追加項目の注意点、失敗しない選び方をまとめました。",
   alternates: { canonical: "https://cleaning-choices.com/ranking/bathroom-ranking/" },

@@ -570,7 +570,7 @@ export default function Area_niigata_nishi() {
  <Link href="/areas/niigata/"className="btn btn-outline">新潟県</Link>
  <Link href="/areas/niigata-kita/"className="btn btn-outline">新潟市北区</Link>
  <Link href="/areas/niigata-higashi/"className="btn btn-outline">新潟市東区</Link>
- <Link href="/areas/niigata-chuo/"className="btn btn-outline">新潟市西区</Link>
+ <Link href="/areas/niigata-chuo/"className="btn btn-outline">新潟市中央区</Link>
  
  </div>
  </div>

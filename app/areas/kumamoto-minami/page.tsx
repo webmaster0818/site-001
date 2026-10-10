@@ -569,7 +569,7 @@ export default function Area_kumamoto_minami() {
  <h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
  <Link href="/areas/kumamoto/"className="btn btn-outline">熊本市</Link>
- <Link href="/areas/kumamoto-chuo/"className="btn btn-outline">熊本市南区</Link>
+ <Link href="/areas/kumamoto-chuo/"className="btn btn-outline">熊本市中央区</Link>
  <Link href="/areas/kumamoto-higashi/"className="btn btn-outline">熊本市東区</Link>
  <Link href="/areas/kumamoto-nishi/"className="btn btn-outline">熊本市西区</Link>
  <Link href="/areas/kumamoto-kita/"className="btn btn-outline">熊本市北区</Link>

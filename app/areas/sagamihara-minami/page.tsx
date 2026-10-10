@@ -569,7 +569,7 @@ export default function Area_sagamihara_minami() {
  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
  <Link href="/areas/kanagawa/"className="btn btn-outline">神奈川県</Link>
  <Link href="/areas/sagamihara-midori/"className="btn btn-outline">相模原市緑区</Link>
- <Link href="/areas/sagamihara-chuo/"className="btn btn-outline">相模原市南区</Link>
+ <Link href="/areas/sagamihara-chuo/"className="btn btn-outline">相模原市中央区</Link>
  
  </div>
  </div>

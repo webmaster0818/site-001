@@ -3,7 +3,7 @@ import BrandCompareTable from "../../components/BrandCompareTable";
 import PartnerCards from "../../components/PartnerCards";
 
 export const metadata: Metadata = {
-  title: "ハウスクリーニングを安く頼むには｜サービス別の料金相場と節約のコツ【2026年9月】",
+  title: "ハウスクリーニングを安く頼むには｜サービス別の料金相場と節約のコツ",
   description:
     "ハウスクリーニングを安く頼むための実践ガイド。エアコン・浴室・キッチンのサービス別料金相場、セットプラン・閑散期などで費用を抑えるコツ、安さだけで選ばないための注意点をまとめました。",
   alternates: { canonical: "https://cleaning-choices.com/ranking/cheap-ranking/" },

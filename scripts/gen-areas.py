@@ -76,7 +76,7 @@ def gen(city, w):
     )
     s = re.sub(
         r'(<h2 className="text-2xl font-bold text-center mb-8">近隣エリアから探す</h2>\s*<div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">)(.*?)(\s*</div>)',
-        lambda m: m.group(1) + "\n" + nearby + "\n          " + m.group(3),
+        lambda m: m.group(1) + "\n__NEARBY_LINKS__\n          " + m.group(3),
         s, flags=re.DOTALL,
     )
     # 4) パンくず親リンク（city-level は県を非リンク表記でリンク切れ回避）
@@ -97,6 +97,9 @@ def gen(city, w):
     # 6) slug / url / 関数名
     s = s.replace("chiba-chuo", slug)
     s = s.replace("export default function Chiba中央Area()", f"export default function {func_name(slug)}()")
+    # 7) 近隣リンクは文字列置換(5/6)の後に差し込む。先に入れると「○○市中央区」のラベルが
+    #    自区名に化け、自分自身が近隣リストに出る（2026-10-10 新潟市南区ほか13頁で発覚）
+    s = s.replace("__NEARBY_LINKS__", nearby)
     return s
 
 def write_all(cities, dry=True):

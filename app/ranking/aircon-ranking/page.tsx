@@ -4,7 +4,7 @@ import OfficialRatingStores from "../../components/OfficialRatingStores";
 import PartnerCards from "../../components/PartnerCards";
 
 export const metadata: Metadata = {
-  title: "エアコンクリーニング業者おすすめランキング｜大手3社の比較と選び方【2026年9月】",
+  title: "エアコンクリーニング業者おすすめランキング｜大手3社の比較と選び方",
   description:
     "エアコンクリーニング業者を大手3ブランド(おそうじ本舗・ダスキン・おそうじ革命)の公式確認情報で比較。料金相場(壁掛け8,000円〜)、公式レビュー高評価店、失敗しない選び方までまとめました。",
   alternates: { canonical: "https://cleaning-choices.com/ranking/aircon-ranking/" },
