@@ -60,7 +60,7 @@ export default function TokyoArea() {
  bathroom: "17,930円〜", 
  toilet: "8,250円〜",
  description: "技術力と価格のバランスが良く、約420店舗を全国展開。50日間の研修を受けたスタッフが対応。",
- hours: "9:00-20:00（年中無休）",
+ hours: "店舗により異なる（年末年始を除き土日祝も営業）",
  services: "エアコン、浴室、キッチン、トイレ、換気扇クリーニング",
  website: "https://www.osoujikakumei.jp/"
  },
@@ -170,7 +170,7 @@ export default function TokyoArea() {
  bathroom: "18,150円〜", 
  toilet: "8,250円〜",
  description: "プロの技術力と低価格を両立。全国対応で地域密着型のサービスを展開。",
- hours: "8:00-20:00（年中無休）",
+ hours: "店舗により異なる（年末年始を除き土日祝も営業）",
  services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
  website: "https://www.osoujikakumei.jp/"
  },

@@ -174,7 +174,7 @@ COMPANIES_DATA = '''  const companies = [
       bathroom: "17,930円〜", 
       toilet: "8,250円〜",
       description: "技術力と価格のバランスが良く、約420店舗を全国展開。50日間の研修を受けたスタッフが対応。",
-      hours: "9:00-20:00（年中無休）",
+      hours: "店舗により異なる（年末年始を除き土日祝も営業）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇クリーニング",
       website: "https://www.osoujikakumei.jp/"
     },
