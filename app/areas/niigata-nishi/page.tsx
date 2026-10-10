@@ -165,8 +165,8 @@ export default function Area_niigata_nishi() {
  },
  {
  name: "おそうじ革命", 
- kitchen: "17,050円〜", 
- bathroom: "18,150円〜", 
+ kitchen: "17,930円〜", 
+ bathroom: "17,930円〜", 
  toilet: "8,250円〜",
  description: "プロの技術力と低価格を両立。全国対応で地域密着型のサービスを展開。",
  hours: "店舗により異なる（年末年始を除き土日祝も営業）",
