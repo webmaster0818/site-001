@@ -139,3 +139,8 @@ GSC実数診断:
 - 本番実測（out/areas 274頁を全件curl・おそうじ革命カード内だけ数える）: 年中無休 268（134頁）→ 0。他社カードの年中無休 670 → 670（不変）。sitemap lastmod 238。966664b / CF deploy fa72ffcf
 - wip/osoujikakumei-facts は隣接行のため衝突 → 966664b の上に同一内容で載せ直し（dde0ad3、旧a094c4f）
 - 範囲外（未修正）: 重複エントリ②の料金 17,050円〜/18,150円〜 は公式（キッチン・浴室 17,930円）と不一致、説明「プロの技術力と低価格を両立…」も出典なし。1ページに同じブランドが2枚出ている
+
+### 2026-10-11 県名ラベル→市ページの不一致を解消（札幌10区・仙台5区・京都市）
+- 監査スクリプト（out/ 全HTML、<a>表示テキスト=都道府県名 かつ 行き先≠PREF_PAGES の県ページ ＋ BreadcrumbList の同条件）: before 21件/16頁（北海道→sapporo 10・宮城県→sendai 10・京都府→kyoto-city(自己) 1）→ after 0。BreadcrumbList は元から0（AreaProvidersLead が prefSlug で正しく出していた）
+- /areas/hokkaido/・/areas/miyagi/ は D2 の [pref] 動的ルートで既存（本番200）→新設不要。札幌区=パンくず HOME>北海道>札幌市>区・ボタン→hokkaido。仙台区=HOME>宮城県>仙台市>区・ボタン→miyagi。札幌市・京都市ページのパンくずも県ページへ
+- 再発防止: area_data_groupA.py の仙台・広島 parent_name（市slugに県名ラベル）を市名に。sitemap lastmod 17。a40f949
