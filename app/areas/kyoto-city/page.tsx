@@ -225,7 +225,8 @@ export default function KyotocityArea() {
         <div className="text-sm breadcrumbs">
           <ul>
             <li><Link href="/">ホーム</Link></li>
-            <li><Link href="/areas/kyoto-city/">京都府</Link></li>
+            <li><Link href="/areas/kyoto/">京都府</Link></li>
+            <li>京都市</li>
           </ul>
         </div>
       </div>

@@ -15,7 +15,7 @@ def build(city):
 
 CITIES = [build(c) for c in [
 {
- "pref":"宮城県","pref_slug":"miyagi","city":"仙台市","parent_slug":"sendai","parent_name":"宮城県",
+ "pref":"宮城県","pref_slug":"miyagi","city":"仙台市","parent_slug":"sendai","parent_name":"仙台市",
  "geo":[
    ("内陸の盆地と一部臨海部、寒暖差と冬の乾燥に注意",
     "仙台市は内陸に広がる都市で、宮城野区・若林区の東部は仙台港など臨海部も含みます。夏は盆地性で蒸し暑く、冬は太平洋側気候で晴天・乾燥が続き降雪は比較的少なめです。乾燥期は窓やサッシにホコリがたまりやすく、夏はエアコン内部に汚れが蓄積しやすいため、季節ごとの清掃が有効です。"),
@@ -33,7 +33,7 @@ CITIES = [build(c) for c in [
  ],
 },
 {
- "pref":"広島県","pref_slug":"hiroshima","city":"広島市","parent_slug":"hiroshima","parent_name":"広島県",
+ "pref":"広島県","pref_slug":"hiroshima","city":"広島市","parent_slug":"hiroshima","parent_name":"広島市",
  "geo":[
    ("太田川デルタと瀬戸内海、温暖少雨だが沿岸の塩害に注意",
     "広島市は太田川河口のデルタに広がる都市で、南区・西区などは沿岸部を含みます。瀬戸内海式気候で年間を通して温暖・少雨ですが、沿岸部では潮風による塩害でエアコンの室外機や窓に塩分が付着しやすく、年数回の窓清掃と室外機の洗浄が有効です。"),

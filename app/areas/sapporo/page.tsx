@@ -224,7 +224,8 @@ export default function SapporoArea() {
  <div className="text-sm breadcrumbs">
  <ul>
  <li><Link href="/">ホーム</Link></li>
- <li><Link href="/areas/sapporo/">札幌市</Link></li>
+ <li><Link href="/areas/hokkaido/">北海道</Link></li>
+ <li>札幌市</li>
  </ul>
  </div>
  </div>
