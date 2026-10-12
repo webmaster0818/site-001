@@ -144,3 +144,11 @@ GSC実数診断:
 - 監査スクリプト（out/ 全HTML、<a>表示テキスト=都道府県名 かつ 行き先≠PREF_PAGES の県ページ ＋ BreadcrumbList の同条件）: before 21件/16頁（北海道→sapporo 10・宮城県→sendai 10・京都府→kyoto-city(自己) 1）→ after 0。BreadcrumbList は元から0（AreaProvidersLead が prefSlug で正しく出していた）
 - /areas/hokkaido/・/areas/miyagi/ は D2 の [pref] 動的ルートで既存（本番200）→新設不要。札幌区=パンくず HOME>北海道>札幌市>区・ボタン→hokkaido。仙台区=HOME>宮城県>仙台市>区・ボタン→miyagi。札幌市・京都市ページのパンくずも県ページへ
 - 再発防止: area_data_groupA.py の仙台・広島 parent_name（市slugに県名ラベル）を市名に。sitemap lastmod 17。a40f949
+
+### 2026-10-12 朝ルーチン: /review/ 9本 URL検査 + エリア238頁 おそうじ本舗・東京ガスの行を公式に
+- URL検査(GSC API): 登録済み3（migxl・nac-duskin・seifu）/ 検出-未登録5（on・kireiyu・four-l・osouji-labo・housecleaning110）/ 未認識1（osoujikakumei）、/review/ ハブも検出-未登録。全て200・index,follow・自己canonical・sitemap掲載・/review/ ハブとTOP（osoujikakumei以外）からリンクあり → Indexing API 7/7（未登録6＋ハブ）。osoujikakumei はTOPからのリンクなし（エリアページの2エントリからは有り）
+- 公式生HTML(2026-10-12): おそうじ本舗 /house-cleaning/kitchen/kitchen/=18,700円・/water/bathroom/=18,700円・/water/toilet/=9,900円（一致）。営業時間はブランド共通の記載なし、店舗ページで店ごとに違う（例 shop/detail/17347=8:30～18:00 不定休、20198=8:30～19:00 不定休。providers.json 1,876店中「8:00～21:00」は33店・「年中無休」は75店）。「47都道府県に対応」「早朝・夜間などの要望にも柔軟」は公式/about・/shop/にあり、「最大手」は無し
+- 東京ガス kaji.tokyo-gas.co.jp: キッチン19,800・浴室(ウロコ取りなし)17,600・トイレ13,200円。開始時間帯 8:30～9:30/12～13/15～16/17～18（FAQ側は14～15も含む＝公式内で不一致）、土日祝可・12/29～1/4除く、支払いはクレジットカードのみ。対応エリア=東京・神奈川・埼玉・千葉の指定市区町村＋群馬・茨城の一部
+- 修正: 238頁＋旧生成スクリプト17本（batch-update.py・create-*.py・kyoto-header.txt・update-17pages.py・update-companies.js）のこの2社のブロック内だけ置換。out/areas 新しい文言 134頁（各頁2箇所）、古い文言 0。sitemap lastmod 238。precheck 全項目OK。71199c9
+- 作業は worktree（~/projects/site-001-wt1012）で実施。メインのチェックアウトに 10/11 から未コミットの providers.json・provider/[slug]/page.tsx（おそうじ革命 survey_rating 等）が残っているため手を付けていない
+- 範囲外（未修正）: ①東京ガスが対応エリア外の約150頁（大阪・名古屋・札幌など）にも掲載されている → 判断待ち ②app/company/[id]/CompanyPageClient.tsx に東京ガスの旧説明文「独自の清掃技術をマスター」 ③エリアページの「ハウスクリーニングのミライ」「ホームクリーンサービス」は公式サイトを確認できていない
