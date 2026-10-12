@@ -65,11 +65,11 @@ export default function OsakaIkunoArea() {
  },
  {
  name: "おそうじ本舗", 
- kitchen: "19,800円〜", 
- bathroom: "19,800円〜", 
+ kitchen: "18,700円〜", 
+ bathroom: "18,700円〜", 
  toilet: "9,900円〜",
- description: "全国47都道府県に店舗展開する最大手。早朝・夜間対応も可能で予約が取りやすい。",
- hours: "8:00-21:00（年中無休）",
+ description: "全国47都道府県に対応する全国チェーン。混雑期でも予約が取りやすく、早朝・夜間の要望にも対応（公式）。",
+ hours: "店舗により異なる（定休日も店舗ごと）",
  services: "エアコン、浴室、キッチン、トイレ、洗濯機、外壁クリーニング",
  website: "https://www.osoujihonpo.com/"
  },
@@ -105,11 +105,11 @@ export default function OsakaIkunoArea() {
  },
  {
  name: "東京ガスのハウスクリーニング", 
- kitchen: "20,900円〜", 
- bathroom: "19,800円〜", 
- toilet: "11,000円〜",
- description: "大手ガス会社による安心サービス。独自の清掃技術をマスターしたスタッフが対応。",
- hours: "8:30-17:00（平日・土日祝）",
+ kitchen: "19,800円〜", 
+ bathroom: "17,600円〜", 
+ toilet: "13,200円〜",
+ description: "東京ガスが提供。対応エリアは東京・神奈川・埼玉・千葉と群馬・茨城の一部（公式の対応エリア一覧）。支払いはクレジットカードのみ。",
+ hours: "訪問開始8:30〜18:00の時間帯から選択（土日祝も可・12/29〜1/4除く）",
  services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
  website: "https://kaji.tokyo-gas.co.jp/"
  },
