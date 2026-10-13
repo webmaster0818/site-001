@@ -161,3 +161,10 @@ GSC実数診断:
 - URL検査: on・kireiyu・housecleaning110=検出-未登録 / four-l・osouji-labo=登録済み（10/12クロール）/ osoujikakumei・/review/ハブ=未認識
 - 作業は worktree ~/projects/site-001-wt1013（node_modules はシンボリックリンクだと Turbopack の next/font が失敗→ cp -c で複製）。メインの未コミット providers.json 等は未着手
 - （同日 coordinator 指示）ミライ/ホームクリーンの「公式サイト」リンクのみ削除＝bbbb734: 238頁＋旧スクリプト16本の website 行を削除し、表示は `{company.website && (...)}` で条件描画（再生成でも戻らない）。本番 out/areas 274頁を全件curl: 両ドメインへの参照 0、掲載は各238頁のまま。sitemap lastmod 134。掲載自体を外すかは coordinator が翌日に既定案として宣言予定
+
+### 2026-10-13 カジタク（felmat D7184U）リンクコード受領→設置（MediaXAI「適材適所で設置して」）
+- partners.ts に kajitaku 追加（公式生HTML 10/13: /・/house-cleaning/・/about・/zipcode/area・/guide/law・/guide/terms-service）。テキスト E1140960＋600×500バナー 5114084E を /review/kajitaku/ と PartnerCards（TOP・ranking5・services aircon/bathroom/kitchen）に
+- company/5 にテキスト N114090G（partnerSlug で描画）・浴室 16,500→19,580・area「全国対応」→43都道府県の対象市区町村。scene/year-end-package に大掃除セット紹介＋640×100 P114083X。1456×180 G114081O は未使用
+- 公式内の不一致: キャンセル（規約=前々日正午以降50% / 特商法=前日正午以降50%）・支払い（特商法=カードのみ / about=AEON Pay・WAON POINT も）→併記。対応エリア一覧は43都道府県（山形・福井・長崎・大分なし）
+- review の banner img に maxWidth:100%。sitemap +1（3,868）lastmod 14。precheck 全項目OK。7d24c26 → 本番 6頁でコード確認 → Indexing API 4/4
+- 未修正: company/5 の「浴室で防カビコーティング」は公式で未確認
