@@ -169,7 +169,6 @@ export default function HiroshimaArea() {
       description: "最新の清掃技術と環境に優しい洗剤を使用。若手スタッフの丁寧な対応が評判。",
       hours: "9:30-18:30（年末年始除く）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、床クリーニング",
-      website: "https://mirai-clean.jp/"
     },
     { 
       name: "ホームクリーンサービス", 
@@ -179,7 +178,6 @@ export default function HiroshimaArea() {
       description: "創業25年の実績。地域密着型で細かい要望にも柔軟に対応する中堅業者。",
       hours: "9:00-18:00（日祝除く）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、ベランダクリーニング",
-      website: "https://homeclean-service.com/"
     },
   ];
   const areas = ['中区', '東区', '南区', '西区', '安佐南区', '安佐北区', '安芸区', '佐伯区'];

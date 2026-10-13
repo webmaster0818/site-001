@@ -140,7 +140,7 @@ export default function Fukuoka{ward['name'].replace('区', '')}Area() {{
                       </div>
                     </div>
                     <div className="card-actions justify-end mt-4">
-                      <a href={{company.website}} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">公式サイト</a>
+                      {{company.website && (<a href={{company.website}} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">公式サイト</a>)}}
                     </div>
                   </div>
                 </div>
