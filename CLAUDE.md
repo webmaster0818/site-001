@@ -168,3 +168,9 @@ GSC実数診断:
 - 公式内の不一致: キャンセル（規約=前々日正午以降50% / 特商法=前日正午以降50%）・支払い（特商法=カードのみ / about=AEON Pay・WAON POINT も）→併記。対応エリア一覧は43都道府県（山形・福井・長崎・大分なし）
 - review の banner img に maxWidth:100%。sitemap +1（3,868）lastmod 14。precheck 全項目OK。7d24c26 → 本番 6頁でコード確認 → Indexing API 4/4
 - 未修正: company/5 の「浴室で防カビコーティング」は公式で未確認
+
+### 2026-10-13 アールクリーニング（A8 4X26）設置（MediaXAI）
+- 公式 www.r-cleaning.com 生HTML（トップ・各サービス・対応エリア・ご依頼の流れ・安心のための取り組み・FAQ・運営会社）で partners.ts に r-cleaning 追加。運営=株式会社 Fire Works（杉並区）。テキスト 5YRHE＋300×250 601S1（A8はバナーにも別pixel → banner.pixel フィールド新設・review で描画）
+- 未使用: バナー 609HT、テキスト「作業実績20万件突破」5YJRM（公式は現在50万件表記）
+- 49acb47 は CF ビルド失敗（GitHub check-runs で判明・ログは CF ダッシュボードのみ）→ 空コミット e1743e4 で再ビルド成功。**反映しない時は api.github.com/repos/webmaster0818/site-001/commits/<sha>/check-runs で成否を見る**
+- 本番4頁でコード・pixel確認、Indexing API 2/2
