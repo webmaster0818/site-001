@@ -160,3 +160,4 @@ GSC実数診断:
 - 「ハウスクリーニングのミライ」(mirai-clean.jp)・「ホームクリーンサービス」(homeclean-service.com): 両ドメインとも DNS NXDOMAIN・whois 未登録。Web検索でも事業者見つからず。全238頁に掲載（1頁1枚ずつ）、うち134頁は「公式サイト」ボタンで未登録ドメインへリンク → 判断待ち（第三者がドメイン取得すると誘導先になる）
 - URL検査: on・kireiyu・housecleaning110=検出-未登録 / four-l・osouji-labo=登録済み（10/12クロール）/ osoujikakumei・/review/ハブ=未認識
 - 作業は worktree ~/projects/site-001-wt1013（node_modules はシンボリックリンクだと Turbopack の next/font が失敗→ cp -c で複製）。メインの未コミット providers.json 等は未着手
+- （同日 coordinator 指示）ミライ/ホームクリーンの「公式サイト」リンクのみ削除＝bbbb734: 238頁＋旧スクリプト16本の website 行を削除し、表示は `{company.website && (...)}` で条件描画（再生成でも戻らない）。本番 out/areas 274頁を全件curl: 両ドメインへの参照 0、掲載は各238頁のまま。sitemap lastmod 134。掲載自体を外すかは coordinator が翌日に既定案として宣言予定
