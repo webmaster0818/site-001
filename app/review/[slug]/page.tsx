@@ -270,7 +270,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
               {p.banner && (
                 <div className="mt-4 flex justify-center">
                   <a href={p.banner.href} rel="sponsored nofollow noopener" target="_blank">
-                    <img src={p.banner.img} width={p.banner.width} height={p.banner.height} alt={p.name} style={{ border: "none" }} />
+                    <img src={p.banner.img} width={p.banner.width} height={p.banner.height} alt={p.name} style={{ border: "none", maxWidth: "100%", height: "auto" }} />
                   </a>
                 </div>
               )}

@@ -98,6 +98,21 @@ export default function YearEndPage() {
           <li>・繁忙期は人気業者から埋まります。候補は早めに2〜3社リストアップしておきましょう</li>
         </ul>
 
+        <div className="rounded-xl border border-amber-200 bg-amber-50/40 p-5 mb-10">
+          <p className="text-sm font-bold text-gray-900 mb-2">定額のセットでまとめて頼む例：カジタク（イオングループ）</p>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            大掃除2点セットA（浴室・レンジフード）34,800円、4ヶ所セット（浴室・レンジフード・キッチン・トイレまたは洗面所）61,600円（いずれも税込・2026年10月13日に公式サイトで確認）。見積もりなしの全国一律料金ですが、作業日は申込日から5日後以降で、11月上旬〜12月下旬は予約が取りづらいと公式に記載されています。
+            詳しくは<a href="/review/kajitaku/" className="underline text-sky-600">カジタクの検証ページ</a>へ。
+          </p>
+          <div className="mt-4 flex justify-center">
+            <a href="https://t.felmat.net/fmcl?ak=D7184U.1.P114083X.C1396789" target="_blank" rel="sponsored nofollow noopener">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://t.felmat.net/fmimg/D7184U.P114083X.C1396789" width={640} height={100} alt="カジタク" style={{ border: "none", maxWidth: "100%", height: "auto" }} />
+            </a>
+          </div>
+          <p className="mt-2 text-center text-[11px] text-gray-500">PR・カジタクの公式サイトへ移動します。</p>
+        </div>
+
         <h2 className="text-2xl font-bold text-gray-900 mb-4">お住まいの地域の店舗から探す</h2>
         <p className="text-sm text-gray-600 mb-4">
           当サイトは各ブランド公式サイトで確認した<strong>全国3,500店舗超の実在店舗データベース</strong>を掲載しています。地域ページから、お近くの店舗と対応エリアを確認できます。

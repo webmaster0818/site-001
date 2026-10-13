@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { PARTNERS } from "../../data/partners";
 import {
   Sparkles,
   MapPin,
@@ -111,20 +112,21 @@ const COMPANY_DATA: { [key: string]: any } = {
     name: "カジタク（イオングループ）",
     category: "浴室クリーニング",
     categorySlug: "bathroom",
-    price: 16500,
-    area: "全国対応",
+    price: 19580,
+    area: "43都道府県の対象市区町村（公式の対応エリア一覧）",
     image: "/images/service-bathroom.png",
     description:
       "イオングループが運営するハウスクリーニングサービス。仕上がり満足保証付きの高品質なサービスが特徴で、浴室クリーニングでは防カビコーティングにも対応しています。",
     features: ["イオングループ", "仕上がり満足保証", "防カビコーティング"],
     services: [
-      { name: "浴室クリーニング", price: 16500 },
+      { name: "浴室クリーニング", price: 19580 },
       { name: "キッチンクリーニング", price: 19580 },
     ],
     workingHours: "10:00〜17:00（年末年始除く）",
     phone: "公式サイトからWeb予約",
     email: "公式サイトの問い合わせフォームをご利用ください",
     guarantee: "仕上がり満足保証あり",
+    partnerSlug: "kajitaku",
   },
   "6": {
     id: 6,
@@ -308,6 +310,33 @@ export default function CompanyPageClient({ id }: { id: string }) {
             </div>
           </div>
         </div>
+
+        {/* 提携先（felmat）の検証ページと公式サイトへの導線 */}
+        {(() => {
+          const partner = company.partnerSlug && PARTNERS.find((p) => p.slug === company.partnerSlug);
+          if (!partner || partner.slug !== "kajitaku") return null; // 会社ページの提携導線は現状カジタクのみ（felmat 提供コード）
+          return (
+            <section className="bg-white rounded-lg shadow-sm p-6 mt-8 text-center">
+              <p className="text-sm text-gray-700 mb-3">
+                料金・キャンセル規定・保証を公式情報で確認した{" "}
+                <Link href={`/review/${partner.slug}/`} className="text-blue-600 hover:underline">
+                  {partner.name}の検証ページ
+                </Link>
+              </p>
+              <a
+                href="https://t.felmat.net/fmcl?ak=D7184U.1.N114090G.C1396789"
+                rel="sponsored nofollow noopener"
+                target="_blank"
+                className="inline-block rounded-lg bg-amber-600 px-6 py-3 text-sm md:text-base font-bold text-white hover:bg-amber-700 transition"
+              >
+                安心のイオングループ【カジタク】
+              </a>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img width={1} height={1} src="https://t.felmat.net/fmimp/D7184U.N114090G.C1396789" alt="" style={{ border: "none" }} />
+              <p className="mt-2 text-[11px] text-gray-500">PR・{partner.name}の公式サイトへ移動します。</p>
+            </section>
+          );
+        })()}
 
         {/* 同じカテゴリの掲載業者 */}
         {Object.keys(COMPANY_DATA).some((k) => k !== id && COMPANY_DATA[k].categorySlug === company.categorySlug) && (
