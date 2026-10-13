@@ -152,3 +152,11 @@ GSC実数診断:
 - 修正: 238頁＋旧生成スクリプト17本（batch-update.py・create-*.py・kyoto-header.txt・update-17pages.py・update-companies.js）のこの2社のブロック内だけ置換。out/areas 新しい文言 134頁（各頁2箇所）、古い文言 0。sitemap lastmod 238。precheck 全項目OK。71199c9
 - 作業は worktree（~/projects/site-001-wt1012）で実施。メインのチェックアウトに 10/11 から未コミットの providers.json・provider/[slug]/page.tsx（おそうじ革命 survey_rating 等）が残っているため手を付けていない
 - 範囲外（未修正）: ①東京ガスが対応エリア外の約150頁（大阪・名古屋・札幌など）にも掲載されている → 判断待ち ②app/company/[id]/CompanyPageClient.tsx に東京ガスの旧説明文「独自の清掃技術をマスター」 ③エリアページの「ハウスクリーニングのミライ」「ホームクリーンサービス」は公式サイトを確認できていない
+
+### 2026-10-13 P2: 会社ページの東京ガスを公式に + 会社ページ明白誤り3社 + ミライ/ホームクリーン調査 + /review/ URL検査
+- 東京ガス（kaji.tokyo-gas.co.jp 生HTML 10/13再確認=10/12と同じ）: company/4・services/kitchen の「大手ガス会社が運営…独自の清掃技術をマスター…高品質」「東京・神奈川・千葉・埼玉」→ 公式の対応エリア（1都3県指定市区町村＋群馬3市・茨城7市町）・クレジットカードのみ・土日祝可(12/29〜1/4除く)。浴室19,800→17,600（鏡のウロコ取りなし。ありは22,000）・トイレ13,200追加
+- 明白な誤りのみ修正: 革命 company/3「年中無休」→年末年始除く（公式FAQ）/ カジタク company/5 10:00〜19:00→10:00〜17:00（/guide/law）/ ベアーズ company/6・services/kitchen キッチン17,600→18,920（17,600は換気扇）・時間→受付9:00〜18:00（年中無休）
+- 未修正（数えただけ）: 本舗=「業界最大手」公式に無し・時間9:00〜20:00は共通記載なし・損害保険/全員有資格者は未確認 / ダスキン=1963・約1,600拠点・料金3種・時間は servicemaster トップ生HTMLで確認できず / 革命=約420店舗・50日間研修・業界最安クラス・追加料金なし（wip/osoujikakumei-facts と同件・判断待ち）/ カジタク=浴室16,500は公式に無し（公式トップは19,580円〜「キャンペーン中」）/ ベアーズ=対応エリア6都府県は未確認（公式に都道府県別ページ多数）
+- 「ハウスクリーニングのミライ」(mirai-clean.jp)・「ホームクリーンサービス」(homeclean-service.com): 両ドメインとも DNS NXDOMAIN・whois 未登録。Web検索でも事業者見つからず。全238頁に掲載（1頁1枚ずつ）、うち134頁は「公式サイト」ボタンで未登録ドメインへリンク → 判断待ち（第三者がドメイン取得すると誘導先になる）
+- URL検査: on・kireiyu・housecleaning110=検出-未登録 / four-l・osouji-labo=登録済み（10/12クロール）/ osoujikakumei・/review/ハブ=未認識
+- 作業は worktree ~/projects/site-001-wt1013（node_modules はシンボリックリンクだと Turbopack の next/font が失敗→ cp -c で複製）。メインの未コミット providers.json 等は未着手
