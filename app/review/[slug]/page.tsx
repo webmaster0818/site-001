@@ -272,6 +272,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
                   <a href={p.banner.href} rel="sponsored nofollow noopener" target="_blank">
                     <img src={p.banner.img} width={p.banner.width} height={p.banner.height} alt={p.name} style={{ border: "none", maxWidth: "100%", height: "auto" }} />
                   </a>
+                  {p.banner.pixel && <img width={1} height={1} src={p.banner.pixel} alt="" style={{ border: "none" }} />}
                 </div>
               )}
               <p className="mt-2 text-[11px] text-gray-500">PR・{p.name}の公式サイトへ移動します。広告の有無は当サイトの掲載内容・評価に影響しません。</p>
