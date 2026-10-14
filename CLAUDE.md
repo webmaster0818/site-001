@@ -174,3 +174,9 @@ GSC実数診断:
 - 未使用: バナー 609HT、テキスト「作業実績20万件突破」5YJRM（公式は現在50万件表記）
 - 49acb47 は CF ビルド失敗（GitHub check-runs で判明・ログは CF ダッシュボードのみ）→ 空コミット e1743e4 で再ビルド成功。**反映しない時は api.github.com/repos/webmaster0818/site-001/commits/<sha>/check-runs で成否を見る**
 - 本番4頁でコード・pixel確認、Indexing API 2/2
+
+### 2026-10-14 朝ルーチン: ミライ/ホームクリーン 掲載ごと外す版（wip・未公開）+ /review/ URL検査
+- `wip/remove-unverified-providers-1014`（6ebc27a、ローカルのみ・未push）: エリア238頁から2社を削除（15→13件）、本文「業者15社」→13社 134頁、旧スクリプト/テンプレ16本も削除。out: 2社名0頁・「15社」0頁・業者0件のエリア0頁、ranking/company/review/provider は元々掲載なし。sitemap lastmod 238。precheck 全項目OK（3,869頁）。10/15 に main へ merge→push 予定
+- 既存課題（未対応）: 238頁の companies に「おそうじ革命」が2エントリ（key 重複）→ 13件のうち実質12社
+- メインのチェックアウトにあった 10/11 の未コミット変更（providers.json・provider/[slug]/page.tsx＝公式口コミ評価 officialRating/survey_rating/hours_list/service_area/access・同市区町村店舗）は `git stash` に名前付きで退避（stash@{0} "wip-2026-10-11 provider口コミ評価…1014退避"）
+- URL検査: on・housecleaning110=検出-未登録 / kireiyu・osoujikakumei・/review/ハブ=未認識（kireiyu は 10/13 検出-未登録→未認識）
