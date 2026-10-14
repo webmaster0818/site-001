@@ -183,24 +183,6 @@ export default function Area_matsuyama() {
  services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
  website: "https://osoujitaishi.com/"
  },
- {
- name: "ハウスクリーニングのミライ", 
- kitchen: "18,370円〜", 
- bathroom: "19,030円〜", 
- toilet: "9,130円〜",
- description: "最新の清掃技術と環境に優しい洗剤を使用。若手スタッフの丁寧な対応が評判。",
- hours: "9:30-18:30（年末年始除く）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、床クリーニング",
- },
- {
- name: "ホームクリーンサービス", 
- kitchen: "17,380円〜", 
- bathroom: "18,480円〜", 
- toilet: "8,580円〜",
- description: "創業25年の実績。地域密着型で細かい要望にも柔軟に対応する中堅業者。",
- hours: "9:00-18:00（日祝除く）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、ベランダクリーニング",
- },
  ];
 
  const areas = ['松山市駅', '大街道', '道後', '三津', '久米'];
@@ -234,7 +216,7 @@ export default function Area_matsuyama() {
  <div className="prose max-w-4xl mx-auto">
  <h2 className="text-2xl font-bold mb-4">松山市でハウスクリーニングを依頼するなら？</h2>
  <p className="text-lg">松山市は愛媛県の県庁所在地で、道後温泉や松山城を擁する四国最大の都市です。</p>
- <p className="text-lg mt-4">本記事では、松山市全域対応の<strong>おすすめハウスクリーニング業者15社</strong>を徹底比較。料金、サービス内容、営業時間などの詳細情報を掲載しています。</p>
+ <p className="text-lg mt-4">本記事では、松山市全域対応の<strong>おすすめハウスクリーニング業者13社</strong>を徹底比較。料金、サービス内容、営業時間などの詳細情報を掲載しています。</p>
  </div>
  </div>
  </section>
