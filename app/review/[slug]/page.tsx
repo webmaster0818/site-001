@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PARTNERS, SERVICE_LABELS } from "../../data/partners";
+import { PARTNERS, SERVICE_LABELS, KEY_PRICES, KEY_PRICE_LABELS, comparePeers, type KeyPrices } from "../../data/partners";
 
 function toIso(jp: string): string {
   const m = jp.match(/(\d+)年(\d+)月(\d+)日/);
@@ -84,6 +84,15 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
     { label: "スタッフ体制", value: p.staff, fallback: "公式サイト上で明確な記載を確認できませんでした" },
     { label: "申込みの流れ", value: p.flow, fallback: "公式サイト上で明確な記載を確認できませんでした" },
   ];
+
+  // 同じメニューの公式料金比較（各社の確認日時点の公式表記）
+  const selfPrices = KEY_PRICES[p.slug];
+  const peers = selfPrices ? comparePeers(p.slug) : [];
+  const priceCols = (Object.keys(KEY_PRICE_LABELS) as (keyof KeyPrices)[]).filter(
+    (k) => selfPrices?.[k] && peers.some((x) => KEY_PRICES[x.slug]?.[k])
+  );
+  // 同じジャンルを扱う他の検証ページ（内部リンク）
+  const related = PARTNERS.filter((x) => x.slug !== p.slug && x.tags.some((t) => p.tags.includes(t)));
 
   return (
     <div>
@@ -197,6 +206,43 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
         </section>
       )}
 
+      {/* 同じメニューの公式料金を他社と比べる */}
+      {priceCols.length > 0 && (
+        <section className="py-12 md:py-16 bg-gray-50">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{p.name}と同じメニューの公式料金を他社と比べる</h2>
+            <p className="text-sm text-gray-600 mb-6">当サイトが各社の公式サイトで確認した料金のうち、{p.name}と共通するメニューだけを並べました（いずれも税込の公式表記・各社の確認日時点）。作業範囲・割引条件・対応エリアは各社で異なるため、詳しくは各社の検証ページの注記を確認してください。</p>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[640px] text-sm border-collapse bg-white">
+                <thead>
+                  <tr className="bg-gray-50 text-left">
+                    <th className="p-3 border border-gray-200 font-bold text-gray-700">業者</th>
+                    {priceCols.map((k) => (
+                      <th key={k} className="p-3 border border-gray-200 font-bold text-gray-700">{KEY_PRICE_LABELS[k]}</th>
+                    ))}
+                    <th className="p-3 border border-gray-200 font-bold text-gray-700 whitespace-nowrap">確認日</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[p, ...peers].map((x) => (
+                    <tr key={x.slug} className={x.slug === p.slug ? "bg-sky-50" : undefined}>
+                      <th className="p-3 border border-gray-200 text-left font-bold text-gray-900">
+                        {x.slug === p.slug ? x.name : <a href={`/review/${x.slug}/`} className="text-sky-600 hover:underline">{x.name}</a>}
+                      </th>
+                      {priceCols.map((k) => (
+                        <td key={k} className="p-3 border border-gray-200 text-gray-800">{KEY_PRICES[x.slug]?.[k] ?? "—"}</td>
+                      ))}
+                      <td className="p-3 border border-gray-200 text-gray-600 text-xs whitespace-nowrap">{x.confirmedAt}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-gray-500 mt-3">比較相手は、{p.name}と得意ジャンル（公式メニュー）の重なりが多い当サイト掲載の業者から選んでいます。「—」は公式サイトで料金を確認できなかった、またはメニューが無い項目です。表の並びは優劣の評価ではありません。</p>
+          </div>
+        </section>
+      )}
+
       {/* 特徴・確認できなかったこと */}
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-5xl grid gap-8 md:grid-cols-2">
@@ -293,6 +339,18 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
               </details>
             ))}
           </div>
+          {related.length > 0 && (
+            <div className="mt-10">
+              <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3">同じジャンルを扱う業者の検証ページ</h2>
+              <ul className="grid gap-2 sm:grid-cols-2">
+                {related.map((x) => (
+                  <li key={x.slug} className="text-sm">
+                    <a href={`/review/${x.slug}/`} className="text-sky-600 hover:underline">{x.name}の口コミ・評判と公式情報</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="/review/" className="rounded-lg bg-sky-600 px-6 py-3 text-sm font-bold text-white hover:bg-sky-700 transition">他の業者の検証を見る</a>
             <a href="/ranking/" className="rounded-lg border border-sky-600 px-6 py-3 text-sm font-bold text-sky-600 hover:bg-sky-50 transition">大手3ブランドの比較</a>
