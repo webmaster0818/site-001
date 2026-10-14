@@ -174,3 +174,17 @@ GSC実数診断:
 - 未使用: バナー 609HT、テキスト「作業実績20万件突破」5YJRM（公式は現在50万件表記）
 - 49acb47 は CF ビルド失敗（GitHub check-runs で判明・ログは CF ダッシュボードのみ）→ 空コミット e1743e4 で再ビルド成功。**反映しない時は api.github.com/repos/webmaster0818/site-001/commits/<sha>/check-runs で成否を見る**
 - 本番4頁でコード・pixel確認、Indexing API 2/2
+
+### 2026-10-14 12:00成長ルーチン: /review/ 比較表＋相互リンク、カジタク/アールクリーニング公式再確認、「検出・未登録」調査
+- 確認: /review/kajitaku/・/review/r-cleaning/ 本番200・sitemap掲載・TOP/review/ranking5/services3/sitemap(HTML)からリンク済み（カジタクは company/5・year-end-package も）。canonical自己・index,follow・robots.txt問題なし
+- 競合（みん評・駅探PICKS・セレクトラ・オリコン(カジタクは家事代行部門)）: 口コミ出典（みん評/くらしのマーケット＋日付）・他社料金比較表（ダスキン/本舗）・おすすめ/非おすすめ・申込み手順・更新日。アールクリーニング記事は「20万件」「9,500円」など旧数字のまま
+- 追加: ①全検証ページに「同じメニューの公式料金を他社と比べる」表（partners.ts の KEY_PRICES＝既存 prices からの抜粋のみ・比較相手は comparePeers=タグ重なり→料金項目数→自分の次から巡回）②「同じジャンルを扱う業者の検証ページ」相互リンク ③/review/ ハブ description にカジタク・アールクリーニング
+- カジタク公式再確認(10/14): 最短日数が公式内で不一致（特商法=お申込日から5日後以降 / HC TOP FAQ「最短でもお伺いは3日後以降」/ カジタクとは？「申込から最短３日」）→併記に修正。お客さまの声（/user-voice/・サービス別構成）・宅配/家事代行の口コミ混在の注意・「早く終わったら他の所も掃除」を追加。対応エリア43都道府県（山形・福井・長崎・大分なし）再確認。confirmedAt 10/14
+- アールクリーニング公式再確認(10/14): 感謝価格（10/20まで表示）・キャンセル前日15:00・2週間保証・1億円保険・Fire Works 一致。メニューに空室クリーニング・不用品回収・害虫害獣駆除を追加。お客様の声ページは無し。confirmedAt 10/14
+- URL検査(10/14): review = 登録済み5（migxl・seifu・nac-duskin・four-l・osouji-labo）/ 検出-未登録4（/review/ハブ・housecleaning110・osoujikakumei・kireiyu）/ 未認識3（kajitaku・r-cleaning・on※10/13は検出-未登録）。サイト全体サンプル18: 登録済み11（provider 6/6・brand・guide-detail・ranking/review-ranking・scene・services/kitchen・TOP）/ クロール済み未登録3（areas/kyoto-fushimi・areas/saitama-kita・/ranking/）/ 404 1（areas/yokosuka 最終クロール4/23・現在200）/ soft404 1（company/4 最終クロール4/24・現在200）
+- 見立て: 技術要因なし（canonical/noindex/robots/sitemap/200 すべて正常、/review/ ハブは全3,869頁のフッターからリンクされているのに未クロール、osoujikakumei は252頁からリンクでも未登録）。テンプレ重複率（8文字shingle）は登録済みと未登録で差が小さい（登録35〜39% / 未登録36〜46%）。→ 原因はページ単体より「サイト全体のクロール頻度の低さ」（4月の404/soft404が半年再クロールされていない、多くの最終クロールが8〜9月）＋ 3,869URL中3,525がprovider・238がテンプレ型エリア頁で、新規URLのクロール優先度が上がらないこと、と判断
+- 修正後: 本文 約4,000〜5,000字→約4,700〜6,000字。shingle 共有率は比較表・相互リンクで +4〜10pt（表の行が他頁と共通のため）
+- 810f880 → CF success → 本番 12頁 200・比較表11頁（migxl は比較可能な料金なしで非表示）・相互リンク12頁・kajitaku/r-cleaning dateModified 2026-10-14。sitemap lastmod review 12件。precheck ✅ 全項目OK。計測コード集合は本番旧版と12頁とも一致
+- Indexing API 2/14（kajitaku・r-cleaning のみ。3件目で429 → 停止。on 以下と company/4・areas/yokosuka は未送信）。sitemap 再送信 204
+- ⚠️ ビルド前の out/ は wip/remove-unverified-providers-1014 のビルド物だった（ミライ/ホームクリーン行なし＝本番と不一致）。今回 main から再ビルドしたので out/ は main 相当に戻っている
+- 提案（未実施・要判断）: ①Footer に提携11社の検証ページ直リンク（全頁の HTML が変わるので lastmod 一斉更新を伴う）②エリア238頁のテンプレ業者表（同じ業者・同じ文言が全頁に並ぶ）を店舗DB主体に縮小 or 薄いエリア頁の統合 ③provider 3,525頁の sitemap 分割（provider 用 sitemap を別ファイルにし、review/brand/ranking 等の主要頁の sitemap を小さくして GSC で個別にカバレッジ観測）④company/4・areas/yokosuka 等の古い 404/soft404 の再クロール依頼（GSC コンソールの「インデックス登録をリクエスト」）
