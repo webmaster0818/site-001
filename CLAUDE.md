@@ -183,7 +183,7 @@ GSC実数診断:
 - アールクリーニング公式再確認(10/14): 感謝価格（10/20まで表示）・キャンセル前日15:00・2週間保証・1億円保険・Fire Works 一致。メニューに空室クリーニング・不用品回収・害虫害獣駆除を追加。お客様の声ページは無し。confirmedAt 10/14
 - URL検査(10/14): review = 登録済み5（migxl・seifu・nac-duskin・four-l・osouji-labo）/ 検出-未登録4（/review/ハブ・housecleaning110・osoujikakumei・kireiyu）/ 未認識3（kajitaku・r-cleaning・on※10/13は検出-未登録）。サイト全体サンプル18: 登録済み11（provider 6/6・brand・guide-detail・ranking/review-ranking・scene・services/kitchen・TOP）/ クロール済み未登録3（areas/kyoto-fushimi・areas/saitama-kita・/ranking/）/ 404 1（areas/yokosuka 最終クロール4/23・現在200）/ soft404 1（company/4 最終クロール4/24・現在200）
 - 見立て: 技術要因なし（canonical/noindex/robots/sitemap/200 すべて正常、/review/ ハブは全3,869頁のフッターからリンクされているのに未クロール、osoujikakumei は252頁からリンクでも未登録）。テンプレ重複率（8文字shingle）は登録済みと未登録で差が小さい（登録35〜39% / 未登録36〜46%）。→ 原因はページ単体より「サイト全体のクロール頻度の低さ」（4月の404/soft404が半年再クロールされていない、多くの最終クロールが8〜9月）＋ 3,869URL中3,525がprovider・238がテンプレ型エリア頁で、新規URLのクロール優先度が上がらないこと、と判断
-- 修正後: 本文 約4,000〜5,000字→約4,700〜6,000字。shingle 共有率は比較表・相互リンクで +4〜10pt（表の行が他頁と共通のため）
+- 修正後: 本文 約4,000〜5,000字→約4,700〜6,000字（osoujikakumei は 2,973→3,788字）。shingle 共有率は比較表・相互リンクで +4〜10pt（表の行が他頁と共通のため）
 - 810f880 → CF success → 本番 12頁 200・比較表11頁（migxl は比較可能な料金なしで非表示）・相互リンク12頁・kajitaku/r-cleaning dateModified 2026-10-14。sitemap lastmod review 12件。precheck ✅ 全項目OK。計測コード集合は本番旧版と12頁とも一致
 - Indexing API 2/14（kajitaku・r-cleaning のみ。3件目で429 → 停止。on 以下と company/4・areas/yokosuka は未送信）。sitemap 再送信 204
 - ⚠️ ビルド前の out/ は wip/remove-unverified-providers-1014 のビルド物だった（ミライ/ホームクリーン行なし＝本番と不一致）。今回 main から再ビルドしたので out/ は main 相当に戻っている
