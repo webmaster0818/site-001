@@ -183,24 +183,6 @@ export default function OsakaNishinariArea() {
  services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
  website: "https://osoujitaishi.com/"
  },
- {
- name: "ハウスクリーニングのミライ", 
- kitchen: "18,370円〜", 
- bathroom: "19,030円〜", 
- toilet: "9,130円〜",
- description: "最新の清掃技術と環境に優しい洗剤を使用。若手スタッフの丁寧な対応が評判。",
- hours: "9:30-18:30（年末年始除く）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、床クリーニング",
- },
- {
- name: "ホームクリーンサービス", 
- kitchen: "17,380円〜", 
- bathroom: "18,480円〜", 
- toilet: "8,580円〜",
- description: "創業25年の実績。地域密着型で細かい要望にも柔軟に対応する中堅業者。",
- hours: "9:00-18:00（日祝除く）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、ベランダクリーニング",
- },
  ];
 
  const areas = ['新今宮', '天下茶屋', '岸里', '玉出', '津守', '北津守'];

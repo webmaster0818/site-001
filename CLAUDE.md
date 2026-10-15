@@ -175,6 +175,12 @@ GSC実数診断:
 - 49acb47 は CF ビルド失敗（GitHub check-runs で判明・ログは CF ダッシュボードのみ）→ 空コミット e1743e4 で再ビルド成功。**反映しない時は api.github.com/repos/webmaster0818/site-001/commits/<sha>/check-runs で成否を見る**
 - 本番4頁でコード・pixel確認、Indexing API 2/2
 
+### 2026-10-14 朝ルーチン: ミライ/ホームクリーン 掲載ごと外す版（wip・未公開）+ /review/ URL検査
+- `wip/remove-unverified-providers-1014`（6ebc27a、ローカルのみ・未push）: エリア238頁から2社を削除（15→13件）、本文「業者15社」→13社 134頁、旧スクリプト/テンプレ16本も削除。out: 2社名0頁・「15社」0頁・業者0件のエリア0頁、ranking/company/review/provider は元々掲載なし。sitemap lastmod 238。precheck 全項目OK（3,869頁）。10/15 に main へ merge→push 予定
+- 既存課題（未対応）: 238頁の companies に「おそうじ革命」が2エントリ（key 重複）→ 13件のうち実質12社
+- メインのチェックアウトにあった 10/11 の未コミット変更（providers.json・provider/[slug]/page.tsx＝公式口コミ評価 officialRating/survey_rating/hours_list/service_area/access・同市区町村店舗）は `git stash` に名前付きで退避（stash@{0} "wip-2026-10-11 provider口コミ評価…1014退避"）
+- URL検査: on・housecleaning110=検出-未登録 / kireiyu・osoujikakumei・/review/ハブ=未認識（kireiyu は 10/13 検出-未登録→未認識）
+
 ### 2026-10-14 12:00成長ルーチン: /review/ 比較表＋相互リンク、カジタク/アールクリーニング公式再確認、「検出・未登録」調査
 - 確認: /review/kajitaku/・/review/r-cleaning/ 本番200・sitemap掲載・TOP/review/ranking5/services3/sitemap(HTML)からリンク済み（カジタクは company/5・year-end-package も）。canonical自己・index,follow・robots.txt問題なし
 - 競合（みん評・駅探PICKS・セレクトラ・オリコン(カジタクは家事代行部門)）: 口コミ出典（みん評/くらしのマーケット＋日付）・他社料金比較表（ダスキン/本舗）・おすすめ/非おすすめ・申込み手順・更新日。アールクリーニング記事は「20万件」「9,500円」など旧数字のまま
