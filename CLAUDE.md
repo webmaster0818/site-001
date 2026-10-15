@@ -194,3 +194,9 @@ GSC実数診断:
 - Indexing API 2/14（kajitaku・r-cleaning のみ。3件目で429 → 停止。on 以下と company/4・areas/yokosuka は未送信）。sitemap 再送信 204
 - ⚠️ ビルド前の out/ は wip/remove-unverified-providers-1014 のビルド物だった（ミライ/ホームクリーン行なし＝本番と不一致）。今回 main から再ビルドしたので out/ は main 相当に戻っている
 - 提案（未実施・要判断）: ①Footer に提携11社の検証ページ直リンク（全頁の HTML が変わるので lastmod 一斉更新を伴う）②エリア238頁のテンプレ業者表（同じ業者・同じ文言が全頁に並ぶ）を店舗DB主体に縮小 or 薄いエリア頁の統合 ③provider 3,525頁の sitemap 分割（provider 用 sitemap を別ファイルにし、review/brand/ranking 等の主要頁の sitemap を小さくして GSC で個別にカバレッジ観測）④company/4・areas/yokosuka 等の古い 404/soft404 の再クロール依頼（GSC コンソールの「インデックス登録をリクエスト」）
+
+### 2026-10-15 朝ルーチン: ミライ/ホームクリーン 掲載ごと外す（本番反映）+ おそうじ革命2重の原因調査
+- `wip/remove-unverified-providers-1014` を main に merge（2ef4bcf・CLAUDE.md のみ競合→両方残し）。out/ と .next を消して main から再ビルド → out: 2社名0頁・「15社」0頁・「13社」134頁・3,869頁。precheck 全項目OK
+- push 09:19 → 本番反映 09:23。本番: tokyo/osaka/yokohama/kobe-nagata/kyoto-shimogyo/kitakyushu-kokuraminami 200・2社名0・「15社」0（「13社」は区ページ側の本文）、エリア22頁サンプルで2社名/15社 0。sitemap 3,869
+- Indexing API 4/4（tokyo・osaka・yokohama・kobe-nagata）
+- おそうじ革命2重（未修正・判断待ち）: 228頁の companies 配列の1番目と12番目（エディオンハウスクリーンの次）。12番目は元「クリーンプロフェッショナルズ」（架空・cleanpro.co.jp。3/24 add-5-companies.py＝e9f8881、3/25 251cc21 で追加）を 4/10 cb091b9「全ページの架空情報を実在情報に修正」で名前とURLだけ「おそうじ革命」に一括置換したもの。説明文「プロの技術力と低価格を両立…」・窓クリーニングはクリーンプロフェッショナルズの文面のまま（料金・受付時間はその後の修正で革命の値に揃っている）。残り10頁（hiroshima/kawasaki/kyoto-city/niigata/sendai 等の書式違い）も同様に2エントリ
