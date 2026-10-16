@@ -6,6 +6,7 @@ import TopHero from "./components/TopHero";
 import TroubleGrid from "./components/TroubleGrid";
 import AreaAccordion from "./components/AreaAccordion";
 import Reveal from "./components/Reveal";
+import Reasons from "./components/Reasons";
 
 const brandCounts = (() => {
  const list = providersData as { brand: string }[];
@@ -54,7 +55,7 @@ export default function Home() {
  </div>
  <div className="text-center mt-10">
  <p className="text-lg font-bold text-gray-800 mb-4">
- そのお悩み、<span className="text-sky-500">クリーンナビ</span>の比較で解決できます
+ そのお悩み、<span style={{ color: "#16323a" }}>クリーンナビ</span>の比較で解決できます
  </p>
  <a className="btn-cta" href="#trouble">
  あなたに合った業者を探す
@@ -65,179 +66,41 @@ export default function Home() {
 
  <OfficialRatingStores limit={6} />
 
- {/* 大手ブランドの店舗から探す */}
- <section className="py-16 md:py-20 bg-white">
- <div className="container mx-auto px-4">
- <div className="text-center mb-12">
- <h3 className="text-2xl md:text-3xl font-bold text-gray-900 section-heading">
- 大手ブランドの店舗から探す
- </h3>
- <p className="text-sm md:text-base text-gray-500 mt-6">
- 公式サイトで実在確認した全国の加盟店・拠点を、都道府県別に検索できます
- </p>
+ {/* 大手ブランドの店舗から探す（公式サイトのキャプチャ＋出典・2026-10-16） */}
+ <section className="cn-section cn-section-mist" aria-labelledby="brands-title">
+ <div className="cn-container">
+ <div className="cn-head" data-reveal>
+ <p className="cn-eyebrow">BRANDS</p>
+ <h2 id="brands-title" className="cn-h2">大手ブランドの店舗から探す</h2>
+ <p className="cn-lead">公式サイトで実在を確認した全国の加盟店・拠点を、都道府県別に探せます</p>
  </div>
- <div className="grid gap-5 md:grid-cols-3 max-w-5xl mx-auto">
- <a href="/brand/osoujihonpo/" className="block rounded-xl border border-gray-200 bg-white p-6 hover:border-sky-400 hover:shadow-md transition group">
- <div className="font-bold text-lg text-gray-900 group-hover:text-sky-600 transition">おそうじ本舗</div>
- <p className="text-sm text-gray-500 mt-2">全国{brandCounts.honpo.toLocaleString()}店舗の一覧・対応エリア</p>
- <span className="inline-block mt-4 text-sm font-bold text-sky-600">店舗一覧を見る →</span>
- </a>
- <a href="/brand/duskin/" className="block rounded-xl border border-gray-200 bg-white p-6 hover:border-sky-400 hover:shadow-md transition group">
- <div className="font-bold text-lg text-gray-900 group-hover:text-sky-600 transition">ダスキン サービスマスター</div>
- <p className="text-sm text-gray-500 mt-2">全国{brandCounts.duskin.toLocaleString()}拠点の一覧・対応エリア</p>
- <span className="inline-block mt-4 text-sm font-bold text-sky-600">店舗一覧を見る →</span>
- </a>
- <a href="/brand/osoujikakumei/" className="block rounded-xl border border-gray-200 bg-white p-6 hover:border-sky-400 hover:shadow-md transition group">
- <div className="font-bold text-lg text-gray-900 group-hover:text-sky-600 transition">おそうじ革命</div>
- <p className="text-sm text-gray-500 mt-2">全国{brandCounts.kakumei.toLocaleString()}店舗の一覧・対応エリア</p>
- <span className="inline-block mt-4 text-sm font-bold text-sky-600">店舗一覧を見る →</span>
- </a>
+ <ul className="cn-partner-grid">
+ {[
+ { href: "/brand/osoujihonpo/", img: "osoujihonpo", name: "おそうじ本舗", note: `全国${brandCounts.honpo.toLocaleString()}店舗の一覧・対応エリア` },
+ { href: "/brand/duskin/", img: "duskin", name: "ダスキン サービスマスター", note: `全国${brandCounts.duskin.toLocaleString()}拠点の一覧・対応エリア` },
+ { href: "/brand/osoujikakumei/", img: "osoujikakumei", name: "おそうじ革命", note: `全国${brandCounts.kakumei.toLocaleString()}店舗の一覧・対応エリア` },
+ ].map((b, i) => (
+ <li key={b.href} className="cn-partner" data-reveal style={{ transitionDelay: `${i * 70}ms` }}>
+ <figure className="cn-partner-shot">
+ <img src={`/images/partners/${b.img}.webp`} alt={`${b.name} 公式サイトのトップページ`} width={1280} height={800} loading="lazy" />
+ <figcaption>出典：{b.name} 公式サイト（2026年10月16日時点）</figcaption>
+ </figure>
+ <div className="cn-partner-body">
+ <h3>{b.name}</h3>
+ <p className="cn-partner-tag">{b.note}</p>
+ <div className="cn-partner-actions">
+ <a className="cn-btn cn-btn-primary" href={b.href}>店舗一覧を見る</a>
  </div>
+ </div>
+ </li>
+ ))}
+ </ul>
  </div>
  </section>
 
       <PartnerCards title="提携業者の口コミ・評判を公式情報で検証" intro="当サイトと提携している専門業者について、料金・対応エリア・保証を各社公式サイトで一次確認し、確認日つきで整理しています。架空の口コミ・独自評点は作成しません。掲載順は優劣の評価ではありません。" />
 
- {/* WHY CHOOSE US */}
- <section className="py-16 md:py-20 bg-gray-50">
- <div className="container mx-auto px-4">
- <div className="text-center mb-12">
- <h3 className="text-2xl md:text-3xl font-bold text-gray-900 section-heading">
- クリーンナビが選ばれる理由
- </h3>
- <p className="text-sm md:text-base text-gray-500 mt-6">
- 安心・信頼・お得の3つをお約束します
- </p>
- </div>
- <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
- <div className="reason-card bg-white border border-gray-100 relative overflow-hidden">
- <div
- className="absolute top-0 left-0 w-full h-1"
- style={{
- background: 'linear-gradient(90deg, #0ea5e9, #38bdf8, #67e8f9)',
- }}
- ></div>
- <div
- className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-5 relative"
- style={{
- background: 'linear-gradient(135deg, #0ea5e9, #0284c7)',
- boxShadow: '0 8px 32px rgba(14,165,233,0.3)',
- }}
- >
- <svg
- xmlns="http://www.w3.org/2000/svg"
- viewBox="0 0 24 24"
- fill="none"
- stroke="white"
- strokeWidth="1.8"
- strokeLinecap="round"
- strokeLinejoin="round"
- className="w-11 h-11"
- >
- <circle cx="11"cy="11"r="8"></circle>
- <path d="m21 21-4.3-4.3"></path>
- <path d="M11 8v6"></path>
- <path d="M8 11h6"></path>
- </svg>
- <div
- className="absolute -top-1 -right-1 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black"
- style={{
- background: 'linear-gradient(135deg, #fbbf24, #f59e0b)',
- color: '#0c4a6e',
- boxShadow: '0 2px 8px rgba(251,191,36,0.4)',
- }}
- >
- ✓
- </div>
- </div>
- <h4 className="text-xl font-bold text-gray-900 mb-3">簡単比較</h4>
- <p className="text-base text-gray-600 leading-relaxed">
- 料金・口コミ・サービス内容を一目で比較。最適な業者がすぐに見つかります。
- </p>
- </div>
- <div className="reason-card bg-white border border-gray-100 relative overflow-hidden">
- <div
- className="absolute top-0 left-0 w-full h-1"
- style={{
- background: 'linear-gradient(90deg, #fbbf24, #f59e0b, #d97706)',
- }}
- ></div>
- <div
- className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-5 relative"
- style={{
- background: 'linear-gradient(135deg, #f59e0b, #d97706)',
- boxShadow: '0 8px 32px rgba(245,158,11,0.3)',
- }}
- >
- <svg
- xmlns="http://www.w3.org/2000/svg"
- viewBox="0 0 24 24"
- fill="white"
- className="w-11 h-11"
- >
- <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
- </svg>
- <div
- className="absolute -top-1 -right-1 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black"
- style={{
- background: 'linear-gradient(135deg, #0ea5e9, #0284c7)',
- color: '#fff',
- boxShadow: '0 2px 8px rgba(14,165,233,0.4)',
- }}
- >
- ★
- </div>
- </div>
- <h4 className="text-xl font-bold text-gray-900 mb-3">実績豊富</h4>
- <p className="text-base text-gray-600 leading-relaxed">
- 厳選された優良業者のみを掲載。安心してご利用いただけます。
- </p>
- </div>
- <div className="reason-card bg-white border border-gray-100 relative overflow-hidden">
- <div
- className="absolute top-0 left-0 w-full h-1"
- style={{
- background: 'linear-gradient(90deg, #22c55e, #16a34a, #4ade80)',
- }}
- ></div>
- <div
- className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-5 relative"
- style={{
- background: 'linear-gradient(135deg, #22c55e, #16a34a)',
- boxShadow: '0 8px 32px rgba(34,197,94,0.3)',
- }}
- >
- <svg
- xmlns="http://www.w3.org/2000/svg"
- viewBox="0 0 24 24"
- fill="none"
- stroke="white"
- strokeWidth="1.8"
- strokeLinecap="round"
- strokeLinejoin="round"
- className="w-11 h-11"
- >
- <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
- </svg>
- <div
- className="absolute -top-1 -right-1 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black"
- style={{
- background: 'linear-gradient(135deg, #fbbf24, #f59e0b)',
- color: '#0c4a6e',
- boxShadow: '0 2px 8px rgba(251,191,36,0.4)',
- }}
- >
- ¥
- </div>
- </div>
- <h4 className="text-xl font-bold text-gray-900 mb-3">お得な価格</h4>
- <p className="text-base text-gray-600 leading-relaxed">
- 複数業者を比較することで、適正価格でサービスを受けられます。
- </p>
- </div>
- </div>
- </div>
- </section>
+ <Reasons />
 
  {/* FAQ SECTION */}
  <section className="py-16 md:py-20 bg-white"id="faq">
@@ -262,7 +125,7 @@ export default function Home() {
  <span
  className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
  style={{
- background: 'linear-gradient(135deg, #0ea5e9, #0284c7)',
+ background: '#16323a',
  }}
  >
  Q
@@ -290,7 +153,7 @@ export default function Home() {
  <span
  className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
  style={{
- background: 'linear-gradient(135deg, #f59e0b, #d97706)',
+ background: '#0e7490',
  }}
  >
  A
@@ -315,7 +178,7 @@ export default function Home() {
  <span
  className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
  style={{
- background: 'linear-gradient(135deg, #0ea5e9, #0284c7)',
+ background: '#16323a',
  }}
  >
  Q
@@ -343,7 +206,7 @@ export default function Home() {
  <span
  className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
  style={{
- background: 'linear-gradient(135deg, #f59e0b, #d97706)',
+ background: '#0e7490',
  }}
  >
  A
@@ -366,7 +229,7 @@ export default function Home() {
  <span
  className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
  style={{
- background: 'linear-gradient(135deg, #0ea5e9, #0284c7)',
+ background: '#16323a',
  }}
  >
  Q
@@ -394,7 +257,7 @@ export default function Home() {
  <span
  className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
  style={{
- background: 'linear-gradient(135deg, #f59e0b, #d97706)',
+ background: '#0e7490',
  }}
  >
  A
@@ -414,7 +277,7 @@ export default function Home() {
  <span
  className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
  style={{
- background: 'linear-gradient(135deg, #0ea5e9, #0284c7)',
+ background: '#16323a',
  }}
  >
  Q
@@ -442,7 +305,7 @@ export default function Home() {
  <span
  className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
  style={{
- background: 'linear-gradient(135deg, #f59e0b, #d97706)',
+ background: '#0e7490',
  }}
  >
  A
@@ -463,7 +326,7 @@ export default function Home() {
  <span
  className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
  style={{
- background: 'linear-gradient(135deg, #0ea5e9, #0284c7)',
+ background: '#16323a',
  }}
  >
  Q
@@ -491,7 +354,7 @@ export default function Home() {
  <span
  className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
  style={{
- background: 'linear-gradient(135deg, #f59e0b, #d97706)',
+ background: '#0e7490',
  }}
  >
  A
@@ -507,25 +370,15 @@ export default function Home() {
  </div>
  </section>
 
- {/* CTA BANNER */}
- <section
- className="py-16 relative overflow-hidden"
- style={{
- background: 'linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0c4a6e 100%)',
- }}
- >
- <div className="container mx-auto px-4 text-center relative z-10">
- <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
- まずは無料で業者を比較してみませんか？
- </h3>
- <p className="text-base md:text-lg text-blue-200 mb-8 max-w-xl mx-auto">
- 料金・口コミ・サービス内容を一括比較。
- <br />
- 最適な業者がすぐに見つかります。
- </p>
- <a className="btn-cta"href="/services/aircon/">
- 今すぐ業者を探す
- </a>
+ {/* 最後の誘導 */}
+ <section className="cn-cta">
+ <div className="cn-container" data-reveal>
+ <h2>掃除したい場所か、お住まいの地域から探す</h2>
+ <p>料金・対応エリア・保証を、各社の公式情報で比べられます。</p>
+ <div className="cn-hero-actions">
+ <a className="cn-btn cn-btn-primary cn-btn-lg" href="#trouble">お悩みから探す</a>
+ <a className="cn-btn cn-btn-primary cn-btn-lg" href="#area">エリアから探す</a>
+ </div>
  </div>
  </section>
 
@@ -598,306 +451,7 @@ export default function Home() {
  </div>
  </section>
 
- {/* FOOTER */}
- <footer
- className="text-white relative overflow-hidden"
- style={{
- background:
- 'linear-gradient(135deg, #0c4a6e 0%, #0e7490 30%, #0c4a6e 70%, #164e63 100%)',
- }}
- >
- {/* 装飾 */}
- <div
- className="absolute top-0 left-0 w-full h-1"
- style={{
- background: 'linear-gradient(90deg, #38bdf8, #22d3ee, #0ea5e9, #67e8f9, #38bdf8)',
- }}
- ></div>
- <div
- className="absolute top-20 right-10 w-64 h-64 rounded-full opacity-5"
- style={{background: 'radial-gradient(circle, #67e8f9, transparent 70%)' }}
- ></div>
- <div
- className="absolute bottom-10 left-10 w-48 h-48 rounded-full opacity-5"
- style={{background: 'radial-gradient(circle, #fbbf24, transparent 70%)' }}
- ></div>
 
- {/* Upper footer: CTA */}
- <div className="border-b border-white/10 py-8 relative z-10">
- <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
- <div className="flex items-center gap-4">
- <img
- src="/images/logo-character.png"
- alt="クリーンナビ キャラクター"
- className="w-16 h-16 object-contain drop-shadow-lg"
- />
- <div>
- <h5 className="text-xl md:text-2xl font-black">クリーンナビ</h5>
- <p className="text-sky-300 text-sm">ハウスクリーニング業者比較サイト</p>
- </div>
- </div>
- <div className="flex items-center gap-4">
- <div className="hidden md:block text-right">
- <p className="text-sm text-sky-200">お気軽にお問い合わせください</p>
- <p className="text-2xl font-black text-white tracking-wider">Webでお問い合わせ</p>
- </div>
- <a
- className="px-6 py-3 rounded-full text-sm font-bold"
- style={{
- background: 'linear-gradient(135deg, #fbbf24, #f59e0b)',
- color: '#0c4a6e',
- boxShadow: '0 4px 16px rgba(251,191,36,0.3)',
- }}
- href="/contact/"
- >
- 無料お見積り
- </a>
- </div>
- </div>
- </div>
-
- {/* Main footer */}
- <div className="py-10 md:py-14 relative z-10">
- <div className="container mx-auto px-4">
- <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
- {/* サービス */}
- <div>
- <h6 className="font-bold mb-4 text-base flex items-center gap-2">
- <span
- className="w-6 h-6 rounded-md flex items-center justify-center text-xs"
- style={{background: 'rgba(56,189,248,0.2)' }}
- >
- 
- </span>
- サービス
- </h6>
- <ul className="space-y-3 text-sm">
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/services/aircon/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
- エアコンクリーニング
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/services/bathroom/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
- 浴室クリーニング
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/services/kitchen/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
- キッチンクリーニング
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/services/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
- サービス一覧
- </a>
- </li>
- </ul>
- </div>
-
- {/* エリア */}
- <div>
- <h6 className="font-bold mb-4 text-base flex items-center gap-2">
- <span
- className="w-6 h-6 rounded-md flex items-center justify-center text-xs"
- style={{background: 'rgba(56,189,248,0.2)' }}
- >
- 
- </span>
- 人気エリア
- </h6>
- <ul className="space-y-3 text-sm">
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/areas/tokyo/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
- 東京都
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/areas/kanagawa/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
- 神奈川県
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/areas/osaka/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
- 大阪府
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/areas/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
- 全エリア一覧
- </a>
- </li>
- </ul>
- </div>
-
- {/* ご利用ガイド */}
- <div>
- <h6 className="font-bold mb-4 text-base flex items-center gap-2">
- <span
- className="w-6 h-6 rounded-md flex items-center justify-center text-xs"
- style={{background: 'rgba(56,189,248,0.2)' }}
- >
- 
- </span>
- ご利用ガイド
- </h6>
- <ul className="space-y-3 text-sm">
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/about/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
- 初めての方へ
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/faq/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
- よくある質問
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/guide/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
- お掃除コラム
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/contact/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
- お問い合わせ
- </a>
- </li>
- </ul>
- </div>
-
- {/* 会社情報 */}
- <div>
- <h6 className="font-bold mb-4 text-base flex items-center gap-2">
- <span
- className="w-6 h-6 rounded-md flex items-center justify-center text-xs"
- style={{background: 'rgba(56,189,248,0.2)' }}
- >
- 
- </span>
- 会社情報
- </h6>
- <ul className="space-y-3 text-sm">
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/about/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
- 運営会社
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/privacy/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
- プライバシーポリシー
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/terms/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
- 利用規約
- </a>
- </li>
- <li>
- <a
- className="text-sky-200 hover:text-white transition flex items-center gap-2"
- href="/sitemap/"
- >
- <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
- サイトマップ
- </a>
- </li>
- </ul>
- </div>
- </div>
- </div>
- </div>
-
- {/* Bottom bar */}
- <div className="relative z-10 py-6"style={{background: 'rgba(0,0,0,0.15)' }}>
- <div className="container mx-auto px-4">
- <div className="flex flex-col md:flex-row items-center justify-between gap-3">
- <div className="flex items-center gap-3">
- <img
- src="/images/logo-character.png"
- alt=""
- className="w-8 h-8 object-contain opacity-60"
- />
- <p className="text-sky-300 text-xs">
- © 2026 クリーンナビ All rights reserved.
- </p>
- </div>
- <div className="flex items-center gap-4 text-xs text-sky-400">
- <a href="/privacy/"className="hover:text-white transition">
- プライバシー
- </a>
- <span className="text-sky-700">|</span>
- <a href="/terms/"className="hover:text-white transition">
- 利用規約
- </a>
- <span className="text-sky-700">|</span>
- <a href="/sitemap/"className="hover:text-white transition">
- サイトマップ
- </a>
- </div>
- </div>
- </div>
- </div>
- </footer>
  </>
  );
 }

@@ -64,9 +64,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  // 2026-10-16 ロゴ C-1 に差し替え。ブラウザがファビコンを強くキャッシュするので、ファイル名ごと変えて読み直させる
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [{ url: "/favicon-20261016.png", type: "image/png", sizes: "64x64" }],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png?v=20261016",
   },
 };
 

@@ -26,6 +26,9 @@ ICONS = {
     "icon-floor": "a wooden floor with a floor polisher machine",
     "icon-wholehouse": "a house outline with a spray bottle and a sparkle inside it",
     "icon-area": "a folded map with a location pin",
+    "icon-official": "a document page with a check mark seal stamp, representing information verified on official websites",
+    "icon-stores": "a map of Japan outline with three small location pins",
+    "icon-price": "a price tag next to a short bar chart with three bars, representing comparing prices",
 }
 def gen(name, prompt, aspect):
     out = OUT / f"{name}.png"

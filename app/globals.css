@@ -537,26 +537,26 @@ details.collapse[open] summary::after { content: "−"; }
 
 /* --- hero (案2: 全体を細い枠で囲む・左に文字、右に写真) --- */
 .cn-hero { background: #fff; }
-.cn-hero-frame { position: relative; max-width: 80rem; margin: 1rem auto 0; border: 1px solid var(--cn-ink); overflow: hidden; background: var(--cn-mist); }
+.cn-hero-frame { position: relative; margin: 0; border-bottom: 1px solid var(--cn-mist); overflow: hidden; background: var(--cn-mist); }
 .cn-hero-photo img { display: block; width: 100%; height: auto; }
 .cn-hero-copy { padding: 1.75rem 1.25rem 2rem; background: var(--cn-mist); }
-.cn-hero-label { display: inline-block; font-size: .78rem; font-weight: 700; color: var(--cn-ink); padding: .3rem .7rem; border: 1px solid var(--cn-ink); background: #fff; }
+.cn-hero-label { display: inline-block; align-self: flex-start; font-size: .78rem; font-weight: 700; color: var(--cn-ink); padding: .3rem .7rem; border: 1px solid var(--cn-ink); background: #fff; }
 .cn-hero-title { margin-top: 1rem; font-family: var(--font-noto-sans-jp), sans-serif; font-weight: 900; color: var(--cn-ink);
   font-size: clamp(1.45rem, .9rem + 2.6vw, 2.85rem); line-height: 1.38; letter-spacing: .01em; }
 .cn-hero-title span { display: block; white-space: nowrap; }
 .cn-hero-actions { margin-top: 1.75rem; display: grid; grid-template-columns: 1fr; gap: .75rem; }
 .cn-hero-chips { margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: .5rem; }
-.cn-stats { max-width: 80rem; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); background: var(--cn-ink); color: #fff; }
+.cn-stats { margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); background: var(--cn-ink); color: #fff; }
 .cn-stat { padding: 1.1rem .75rem; text-align: center; border-right: 1px solid rgba(255,255,255,.15); border-bottom: 1px solid rgba(255,255,255,.15); }
 .cn-stat dt { font-size: .74rem; opacity: .85; }
 .cn-stat dd { margin-top: .2rem; font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2.2rem); font-weight: 800; letter-spacing: .01em; }
 .cn-stat dd span { font-size: .8rem; margin-left: .15rem; font-weight: 700; }
 .cn-hero-note { max-width: 80rem; margin: .6rem auto 0; padding: 0 1rem; font-size: .7rem; line-height: 1.7; color: #6b8086; }
 @media (min-width: 768px) {
-  .cn-hero-frame { margin-top: 1.25rem; min-height: 560px; }
-  .cn-hero-photo { position: absolute; inset: 0 0 0 38%; }
+  .cn-hero-frame { min-height: 600px; }
+  .cn-hero-photo { position: absolute; inset: 0 0 0 36%; }
   .cn-hero-photo img { height: 100%; object-fit: cover; object-position: 60% 30%; }
-  .cn-hero-copy { position: relative; width: 56%; min-height: 560px; padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center;
+  .cn-hero-copy { position: relative; width: 58%; min-height: 600px; padding: 4rem 3rem 4rem max(3rem, calc((100vw - 72rem) / 2 + 1rem)); display: flex; flex-direction: column; justify-content: center;
     background: linear-gradient(90deg, var(--cn-mist) 72%, rgba(227,236,236,0)); }
   .cn-hero-actions { grid-template-columns: 1fr 1fr; max-width: 34rem; }
   .cn-stats { grid-template-columns: repeat(4, 1fr); }
@@ -611,3 +611,59 @@ details.collapse[open] summary::after { content: "−"; }
 .cn-js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
 .cn-js [data-reveal].is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .cn-js [data-reveal] { opacity: 1; transform: none; transition: none; } }
+
+/* --- サイト全体のボタン・見出しの統一（2026-10-16 MediaXAI「各選択するボタンは色は変えずデザインを統一」） ---
+   旧テンプレのオレンジ・水色のボタンも、紺の1種類（塗り）と紺の枠線の2形だけにそろえる。後ろに置いて上書きする */
+.btn-cta, .btn-primary, .btn:not(.btn-outline):not(.btn-ghost) {
+  background: var(--cn-ink) !important; color: #fff !important; border: 1px solid var(--cn-ink) !important;
+  border-radius: 8px !important; box-shadow: none !important; font-weight: 700; }
+.btn-cta:hover, .btn-primary:hover, .btn:not(.btn-outline):not(.btn-ghost):hover {
+  background: #0f262c !important; transform: translateY(-1px); box-shadow: 0 8px 20px -10px rgba(22,50,58,.6) !important; }
+.btn-outline { background: #fff !important; color: var(--cn-ink) !important; border: 1px solid var(--cn-ink) !important; border-radius: 8px !important; }
+.btn-outline:hover { background: var(--cn-soft) !important; }
+.section-heading { color: var(--cn-ink); }
+.section-heading::after { background: var(--cn-ink) !important; height: 2px !important; width: 40px !important; }
+.chip-active { background: var(--cn-ink); border-color: var(--cn-ink); }
+
+/* 特長 */
+.cn-reasons { display: grid; gap: 1rem; }
+@media (min-width: 768px) { .cn-reasons { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; } }
+.cn-reason { background: #fff; border: 1px solid var(--cn-line); border-radius: 6px; padding: 2rem 1.5rem; text-align: center; }
+.cn-reason img { width: 112px; height: 112px; margin: 0 auto 1rem; }
+.cn-reason h3 { font-weight: 700; font-size: 1.08rem; color: var(--cn-ink); }
+.cn-reason p { margin-top: .6rem; font-size: .88rem; line-height: 1.8; color: #4b6268; text-align: left; }
+/* FAQ（TOP）のQ/Aバッジ */
+.cn-faq-q { background: var(--cn-ink) !important; }
+.cn-faq-a { background: #fff !important; color: var(--cn-ink) !important; border: 1px solid var(--cn-ink); }
+/* 最後の誘導（濃い背景にしない＝ボタンの色をそのまま使える） */
+.cn-cta { background: var(--cn-mist); border-top: 1px solid var(--cn-line); padding: 4rem 0; text-align: center; }
+.cn-cta h2 { font-family: var(--font-zen-maru), var(--font-noto-sans-jp), sans-serif; font-weight: 700; font-size: clamp(1.3rem, 1rem + 1.2vw, 1.8rem); color: var(--cn-ink); }
+.cn-cta p { margin: .75rem auto 1.75rem; max-width: 34rem; font-size: .92rem; color: #4b6268; }
+.cn-cta .cn-hero-actions { max-width: 34rem; margin: 0 auto; }
+
+/* --- 提携業者（kagi の「掲載している業者」と同じ：公式サイトのキャプチャ＋出典） --- */
+.cn-lead-wide { max-width: 46rem; margin-left: auto; margin-right: auto; }
+.cn-partner-grid { display: grid; gap: 1rem; }
+@media (min-width: 700px) { .cn-partner-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .cn-partner-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; } }
+.cn-partner { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--cn-line); border-radius: 6px; overflow: hidden; }
+.cn-partner-shot { margin: 0; padding: .9rem .9rem 0; }
+.cn-partner-shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid var(--cn-mist); }
+.cn-partner-shot figcaption { margin-top: .4rem; font-size: .68rem; color: #6b8086; }
+.cn-partner-body { flex: 1; display: flex; flex-direction: column; padding: .9rem 1rem 1.1rem; }
+.cn-partner-body h3 { font-weight: 700; font-size: 1.02rem; color: var(--cn-ink); }
+.cn-partner-co { margin-top: .15rem; font-size: .74rem; color: #6b8086; }
+.cn-partner-note { margin-top: .5rem; padding: .3rem .55rem; border-left: 2px solid var(--cn-ink); background: var(--cn-soft); font-size: .72rem; color: var(--cn-ink); }
+.cn-partner-tag { margin-top: .6rem; font-size: .84rem; line-height: 1.75; color: #34494f;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.cn-partner-price { margin-top: .7rem; font-size: .86rem; font-weight: 700; color: var(--cn-ink); }
+.cn-partner-price span { display: block; font-size: .7rem; font-weight: 500; color: #6b8086; }
+.cn-partner-area { margin-top: .5rem; font-size: .72rem; line-height: 1.6; color: #6b8086;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.cn-partner-actions { margin-top: auto; padding-top: 1rem; display: grid; gap: .5rem; }
+.cn-btn-outline { background: #fff; color: var(--cn-ink); border: 1px solid var(--cn-ink); min-height: 44px; font-size: .82rem; }
+.cn-btn-outline:hover { background: var(--cn-soft); }
+.cn-btn-pr { min-height: 44px; font-size: .8rem; line-height: 1.4; text-align: center; padding: .6rem .9rem; }
+.cn-btn-pr::after { display: none; }
+.cn-pr { flex: none; font-size: .62rem; padding: .05rem .35rem; border: 1px solid rgba(255,255,255,.7); border-radius: 3px; }
+.cn-fineprint { margin-top: 1.25rem; font-size: .7rem; line-height: 1.7; color: #6b8086; }
