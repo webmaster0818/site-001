@@ -215,3 +215,7 @@ GSC実数診断:
 - ⚠️ ヘッドレス Chrome の --window-size=390 は実際には約500pxで描画して切り取る（横はみ出しに見える）。スマホ確認は CDP の Emulation.setDeviceMetricsOverride（scratchpad の mshot.mjs）で scrollWidth==innerWidth を確かめる
 - ⚠️ セクション見出しに <header> を使うと「header=1」監査に引っかかる → div
 - 次: ①業者紹介枠に各社の公式画像 ②TOP残り・全体のボタン/枠/アイコン統一（WHY CHOOSE US の ✓★ も） ③OG 画像を新ロゴで
+- **第2弾 本番（4d69b46）** MediaXAI 06:40「FVと数字の帯を両端まで／ファビコン／業者名が出る所は公式サイトのキャプチャを kagi と同じように」:
+  FV・数字帯を全幅に。PartnerCards（全ページ共通）を kagi の「掲載している業者」形式＝公式トップのキャプチャ（public/images/partners/<slug>.webp 1280×800・撮影元と日付 app/data/partner-captures.json）＋「出典：〇〇 公式サイト（日付時点）」。TOP の大手3ブランド枠も同形式。特長（Reasons.tsx）＝事実の文言＋線画アイコン（旧「厳選された優良業者のみ」「口コミ比較」は削除）。.btn-cta/.btn-primary/.btn-outline をサイト全体で紺に上書き（globals.css 末尾）。TOP の二重フッター（page.tsx 内の旧 footer）を削除。ファビコンは /favicon-20261016.png（キャッシュ対策でファイル名を変更）
+  計測リンク・pixel の集合は本番と22頁で一致。⚠️ キャプチャにはキャンペーン表示が写る（r-cleaning 10/20まで 等）・110番は「東証上場企業運営」表示（10/27 TOB 後に撮り直し）→ 撮り直し周期を MediaXAI に確認中
+- 残: OG 画像を新ロゴで / サイト全体（エリア・review・ranking 等）の見出し・枠の統一 / 旧テンプレの水色リンク色
