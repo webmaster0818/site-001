@@ -296,8 +296,8 @@ export default function SapporoHigashiArea() {
  
  <h3 className="text-2xl font-bold mb-4 mt-8">住宅地と商業地が混在し、生活に密着したサービスの需要があります</h3>
  <p className="text-lg mb-4">
- 東区は住宅地と商業地が混在するエリアで、生活密着型のハウスクリーニングサービスの需要が高いです。
-ファミリー層が多く、在宅クリーニングの需要が高いです。
+ 東区は住宅地と商業地が混在するエリアで、生活密着型のハウスクリーニングサービスが広く求められています。
+ファミリー層が多く、在宅クリーニングの需要が高い傾向があります。
 広めの物件が多く、セットプラン（エアコン複数台+浴室+キッチンなど）が割安です。
  </p>
  
@@ -372,7 +372,7 @@ export default function SapporoHigashiArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。</p>
  </div>
  </div>
  

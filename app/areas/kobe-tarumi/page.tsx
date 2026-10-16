@@ -304,9 +304,9 @@ export default function KobeTarumiArea() {
  <h3 className="text-2xl font-bold mb-4 mt-8">住宅地を中心としたベッドタウンで、ファミリー向けサービスの需要があります</h3>
  <p className="text-lg mb-4">
  垂水区はベッドタウンとして発展し、住宅地が中心のエリアです。
-ファミリー層が多く、在宅クリーニングの需要が高いです。
+ファミリー層が多く、在宅クリーニングの需要が高い傾向があります。
 広めの物件が多く、セットプラン（エアコン複数台+浴室+キッチンなど）が割安です。
-見積もり時に複数箇所の清掃を依頼すると、セット割引が適用されることが多いです。
+見積もり時に複数箇所の清掃を依頼すると、多くの場合セット割引が適用されます。
  </p>
  
  <h3 className="text-2xl font-bold mb-4 mt-8">JR・山陽電鉄などが通り、交通の便が良好です</h3>
@@ -374,7 +374,7 @@ export default function KobeTarumiArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。</p>
  </div>
  </div>
  

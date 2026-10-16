@@ -560,7 +560,7 @@ export default function OsakaArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。年に一度のまとめ清掃が割安です。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。年に一度のまとめ清掃が割安です。</p>
  </div>
  </div>
  
@@ -684,7 +684,7 @@ export default function OsakaArea() {
  Q. キャンセル料はかかりますか？
  </div>
  <div className="collapse-content">
- <p className="text-lg">業者により異なりますが、前日17時まで無料キャンセル可能な業者が多いです。当日キャンセルは50-100%のキャンセル料が発生する場合があります。</p>
+ <p className="text-lg">業者により異なりますが、前日17時までのキャンセルを無料とする業者が多く見られます。当日キャンセルは50-100%のキャンセル料が発生する場合があります。</p>
  </div>
  </div>
  </div>

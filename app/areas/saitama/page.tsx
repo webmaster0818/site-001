@@ -356,7 +356,7 @@ export default function SaitamaArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。年に一度のまとめ清掃が割安です。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。年に一度のまとめ清掃が割安です。</p>
  </div>
  </div>
  
@@ -427,10 +427,10 @@ export default function SaitamaArea() {
  <div className="collapse collapse-arrow bg-base-100">
  <input type="checkbox"/>
  <div className="collapse-title text-xl font-bold">
- Q. 夏の猛暑でエアコンが汚れやすいです。どう対策すればいいですか？
+ Q. 夏の猛暑で汚れやすいエアコンには、どのような対策が有効ですか？
  </div>
  <div className="collapse-content">
- <p className="text-lg">埼玉県は夏場の気温が高く（熊谷市は日本一暑い）、エアコンの使用頻度が高いため内部に汚れが蓄積しやすいです。使用前（5-6月）に年1回のプロによる清掃が重要です。日頃から2週間に1回フィルター清掃をすることで、汚れの蓄積を抑えられます。また、使用後は送風運転で内部を乾燥させると、カビの発生を防げます。</p>
+ <p className="text-lg">埼玉県は夏場の気温が高く（熊谷市は日本一暑い）、エアコンの使用頻度が高いため、内部に汚れが蓄積しやすくなります。使用前（5-6月）に年1回のプロによる清掃が重要です。日頃から2週間に1回フィルター清掃をすることで、汚れの蓄積を抑えられます。また、使用後は送風運転で内部を乾燥させると、カビの発生を防げます。</p>
  </div>
  </div>
 

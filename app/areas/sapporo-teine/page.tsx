@@ -305,7 +305,7 @@ export default function SapporoTeineArea() {
  <h3 className="text-2xl font-bold mb-4 mt-8">住宅地が中心で、ファミリー向けサービスの需要があります</h3>
  <p className="text-lg mb-4">
  手稲区は住宅地が中心で、ファミリー層が多いエリアです。
-在宅クリーニングの需要が高く、広めの物件が多いです。
+在宅クリーニングの需要が高く、広めの物件が多くを占めます。
 ファミリー向けのセットプラン（エアコン複数台+浴室+キッチンなど）が割安です。
  </p>
  
@@ -373,7 +373,7 @@ export default function SapporoTeineArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。</p>
  </div>
  </div>
  

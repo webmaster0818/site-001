@@ -353,7 +353,7 @@ export default function ChibaArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。湾岸エリアでは窓・ベランダも含めたセット依頼が割安です。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。湾岸エリアでは窓・ベランダも含めたセット依頼が割安です。</p>
  </div>
  </div>
  

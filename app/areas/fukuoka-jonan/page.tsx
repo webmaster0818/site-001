@@ -304,7 +304,7 @@ export default function Fukuoka城南Area() {
  <h3 className="text-2xl font-bold mb-4 mt-8">住宅地と繁華街があり、用途に応じた清掃のニーズがあります</h3>
  <p className="text-lg mb-4">
  城南区は住宅地と繁華街が混在するエリアで、用途に応じた清掃ニーズがあります。
-住宅地では、ファミリー向けの広めの物件が多く、在宅クリーニングの需要が高いです。
+住宅地では、ファミリー向けの広めの物件が多く、在宅クリーニングへの需要が高い地域です。
 一方、学生街では空室クリーニングの需要が高く、引越しシーズンは予約が取りづらくなります。
 用途に応じて、在宅クリーニングか空室クリーニングかを選び、適切な業者を選ぶことが重要です。
  </p>
@@ -374,7 +374,7 @@ export default function Fukuoka城南Area() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。</p>
  </div>
  </div>
  

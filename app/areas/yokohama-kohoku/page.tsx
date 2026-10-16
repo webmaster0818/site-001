@@ -332,7 +332,7 @@ export default function YokohamaKohokuArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。新築マンションでは浴室+キッチンのセット依頼が割安です。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。新築マンションでは浴室+キッチンのセット依頼が割安です。</p>
  </div>
  </div>
  
@@ -426,7 +426,7 @@ export default function YokohamaKohokuArea() {
  Q. 作業時間はどれくらいかかりますか？
  </div>
  <div className="collapse-content">
- <p className="text-lg">エアコン1台で1.5〜2時間、浴室で2〜3時間、キッチンで2.5〜3.5時間が目安です。汚れの程度により前後します。新築マンションでは比較的短時間で完了することが多いです。</p>
+ <p className="text-lg">エアコン1台で1.5〜2時間、浴室で2〜3時間、キッチンで2.5〜3.5時間が目安です。汚れの程度により前後します。新築マンションでは、比較的短時間で完了する傾向があります。</p>
  </div>
  </div>
 

@@ -328,7 +328,7 @@ export default function KawasakiKawasakiArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。工業地帯で汚れが多いため、窓+換気扇のセット依頼が割安です。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。工業地帯で汚れが多いため、窓+換気扇のセット依頼が割安です。</p>
  </div>
  </div>
  

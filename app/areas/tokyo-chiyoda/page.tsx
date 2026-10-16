@@ -350,7 +350,7 @@ export default function TokyoChiyodaArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。オフィス街で汚れが多い環境なので、窓+換気扇のセット依頼が割安です。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。オフィス街で汚れが多い環境なので、窓+換気扇のセット依頼が割安です。</p>
  </div>
  </div>
  
@@ -464,7 +464,7 @@ export default function TokyoChiyodaArea() {
  Q. 立ち会いは必要ですか？
  </div>
  <div className="collapse-content">
- <p className="text-lg">作業開始時と終了時の立ち会いが基本です。作業中は外出可能な業者もありますが、貴重品の管理などのため在宅が推奨されます。高級住宅の場合、在宅での立ち会いが望ましいです。</p>
+ <p className="text-lg">作業開始時と終了時の立ち会いが基本です。作業中は外出可能な業者もありますが、貴重品の管理などのため在宅が推奨されます。高級住宅の場合は、在宅での立ち会いをおすすめします。</p>
  </div>
  </div>
 

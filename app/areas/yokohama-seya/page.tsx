@@ -329,7 +329,7 @@ export default function YokohamaSeyaArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。古い住宅では浴室+キッチンのセット依頼が割安です。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。古い住宅では浴室+キッチンのセット依頼が割安です。</p>
  </div>
  </div>
  
@@ -423,7 +423,7 @@ export default function YokohamaSeyaArea() {
  Q. 作業時間はどれくらいかかりますか？
  </div>
  <div className="collapse-content">
- <p className="text-lg">エアコン1台で1.5〜2時間、浴室で2〜3時間、キッチンで2.5〜3.5時間が目安です。汚れの程度により前後します。瀬谷区は比較的平坦なため、機材搬入の時間は短縮できることが多いです。</p>
+ <p className="text-lg">エアコン1台で1.5〜2時間、浴室で2〜3時間、キッチンで2.5〜3.5時間が目安です。汚れの程度により前後します。瀬谷区は比較的平坦なため、機材搬入にかかる時間を短縮できる場合が多くあります。</p>
  </div>
  </div>
 

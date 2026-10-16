@@ -353,7 +353,7 @@ export default function TokyosetagayaArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。戸建ての場合は庭・外構も含めたセット依頼が割安です。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。戸建ての場合は庭・外構も含めたセット依頼が割安です。</p>
  </div>
  </div>
  

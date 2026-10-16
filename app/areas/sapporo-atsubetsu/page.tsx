@@ -296,7 +296,7 @@ export default function SapporoAtsubetsuArea() {
  
  <h3 className="text-2xl font-bold mb-4 mt-8">ニュータウンなどの計画的な市街地で、新しい住宅が多くあります</h3>
  <p className="text-lg mb-4">
- 厚別区はニュータウンとして計画的に開発されたエリアで、新しい住宅が多いです。
+ 厚別区はニュータウンとして計画的に開発されたエリアで、新しい住宅が多く見られます。
 最新の設備が導入されていますが、定期的なメンテナンスは重要です。
 エアコンクリーニング（年1回、特に使用前の5-6月）で快適な室内環境を保てます。
 新築・築浅物件でも、使用開始2-3年でエアコン内部にカビが発生することがあります。
@@ -373,7 +373,7 @@ export default function SapporoAtsubetsuArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。</p>
  </div>
  </div>
  

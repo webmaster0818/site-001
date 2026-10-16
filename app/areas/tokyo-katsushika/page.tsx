@@ -296,7 +296,7 @@ export default function TokyoKatsushikaArea() {
  <h3 className="text-2xl font-bold mb-4 mt-8">千葉県に隣接し、業者の選択肢が豊富です</h3>
  <p className="text-lg mb-4">
  葛飾区は千葉県（松戸市、市川市など）に隣接しており、東京都内・千葉県の両方から多くのハウスクリーニング業者が営業しています。
- 大手チェーンから地域密着型まで選択肢が豊富で、比較的リーズナブルな価格で依頼できる業者も多いです。
+ 大手チェーンから地域密着型まで選択肢が豊富で、比較的リーズナブルな価格で依頼できる業者も多く見られます。
  複数社を比較して依頼先を選びやすい環境です。
  </p>
  </div>
@@ -327,7 +327,7 @@ export default function TokyoKatsushikaArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。湿気が多い環境なので、浴室+キッチンのセット依頼が割安です。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。湿気が多い環境なので、浴室+キッチンのセット依頼が割安です。</p>
  </div>
  </div>
  

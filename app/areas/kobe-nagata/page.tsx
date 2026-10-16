@@ -304,7 +304,7 @@ export default function KobeNagataArea() {
  
  <h3 className="text-2xl font-bold mb-4 mt-8">商店街と住宅地が混在し、生活に密着したサービスの需要があります</h3>
  <p className="text-lg mb-4">
- 長田区は商店街と住宅地が混在するエリアで、生活密着型のハウスクリーニングサービスの需要が高いです。
+ 長田区は商店街と住宅地が混在するエリアで、生活密着型のハウスクリーニングサービスへの需要が高い傾向にあります。
 地域密着型の業者が多く、親しみやすいサービスが特徴です。
 在宅クリーニングの需要が高く、見積もり時に在宅希望を伝えると、柔軟な対応を受けられる場合があります。
 複数社を比較して依頼先を選びやすい環境です。
@@ -375,7 +375,7 @@ export default function KobeNagataArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。</p>
  </div>
  </div>
  

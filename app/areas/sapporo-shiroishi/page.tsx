@@ -296,7 +296,7 @@ export default function SapporoShiroishiArea() {
  
  <h3 className="text-2xl font-bold mb-4 mt-8">住宅地が中心で、カビ・湿気への対策が重要です</h3>
  <p className="text-lg mb-4">
- 白石区は住宅地が中心のエリアで、古くからの住宅も多いです。
+ 白石区は住宅地が中心のエリアで、古くからの住宅も多く残っています。
 古い住宅では湿気がこもりやすく、カビが発生しやすい環境です。
 特に浴室やキッチンの水回りは、カビが発生しやすくなります。
 プロによる浴室クリーニング（年1回）と換気扇清掃で、カビの発生を抑えることができます。
@@ -373,7 +373,7 @@ export default function SapporoShiroishiArea() {
  <div className="card bg-base-100 shadow-lg">
  <div className="card-body">
  <h3 className="card-title text-xl">セット割引を利用する</h3>
- <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引が適用される業者が多いです。</p>
+ <p>エアコン+浴室など複数箇所をまとめて依頼すると、セット割引を適用する業者が多くなっています。</p>
  </div>
  </div>
  
