@@ -223,3 +223,4 @@ GSC実数診断:
   ⚠️ **Tailwind v4 の .collapse は visibility:collapse**。daisyUI の collapse を使っていた旧FAQが234ページで全部見えていなかった → `.collapse{visibility:visible}`＋ラジオ式は答えを常に開く。daisyUI の steps（/guide/）も未スタイル → 非表示
 - **OG 画像（7ab303f）**: scripts/make-og.py をロゴ C-1＋作業者の写真に。URL は og-image.png?v=20261016（477箇所）
 - 定例: 毎月1日に scripts/capture-partners/run.sh で業者キャプチャ撮り直し（sites.md に登録・次回 11/1）
+- **c0c4baa（MediaXAI 07:14 指摘2点）**: ①エリア238頁の「おすすめ業者詳細」の色付きアイコン → `app/components/CompanyShot.tsx`（エリアの companies.name → キャプチャ slug・出典つき）。サニクリーン・お掃除マスター・アズマ・くらしのセゾン・エディオンを追加撮影（計20社が partner-captures.json に）。おそうじ大使はキャプチャなし（外す判断待ち）。36県の [pref] 動的ページは業者枠が無いので対象外 ②/services/{aircon,bathroom,kitchen} の一覧が COMPANIES（大手6社×1サービス）だけ＝2件 → 提携業者（partnersByTag）を統合して10件。革命・カジタクは提携側のみ（/company/3・5 へは「会社情報」リンク）。料金はそのサービスのメニューだけ（無ければ「検証ページで確認」）。下の PartnerCards は二重になるので外した。お気に入りの死にボタン・未確認の特徴（業界最安クラス・50日間の研修）を削除
