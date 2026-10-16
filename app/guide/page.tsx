@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { CheckCircle, AlertTriangle, Star, Shield, Clock, DollarSign, Users, FileCheck } from "lucide-react";
+import { CheckCircle, AlertTriangle } from "lucide-react";
+import Reveal from "../components/Reveal";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/guide/" },
@@ -11,42 +12,42 @@ export const metadata = {
 export default function Guide() {
   const checkpoints = [
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: "icon-insurance",
       title: "損害保険への加入",
       description: "作業中の事故や破損に備えて、損害保険に加入している業者を選びましょう。",
       importance: "必須",
       color: "primary",
     },
     {
-      icon: <Star className="w-8 h-8" />,
+      icon: "icon-official",
       title: "口コミ・評価の確認",
       description: "実際の利用者の口コミや評価を確認。極端に評価が低い業者は避けましょう。",
       importance: "重要",
       color: "secondary",
     },
     {
-      icon: <DollarSign className="w-8 h-8" />,
+      icon: "icon-price",
       title: "料金の透明性",
       description: "見積もりが明確で、追加料金の有無をしっかり説明してくれる業者を選びましょう。",
       importance: "重要",
       color: "accent",
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: "icon-staff",
       title: "スタッフの対応",
       description: "電話やメールでの対応が丁寧で、質問にしっかり答えてくれる業者が安心です。",
       importance: "推奨",
       color: "info",
     },
     {
-      icon: <Clock className="w-8 h-8" />,
+      icon: "icon-experience",
       title: "実績と経験",
       description: "創業年数や施工実績が豊富な業者は、ノウハウがあり安心できます。",
       importance: "推奨",
       color: "success",
     },
     {
-      icon: <FileCheck className="w-8 h-8" />,
+      icon: "icon-estimate",
       title: "見積もりの詳細さ",
       description: "作業内容、使用する洗剤、所要時間などが明記された見積もりを提示してくれる業者を選びましょう。",
       importance: "推奨",
@@ -141,21 +142,14 @@ export default function Guide() {
           <h2 className="text-3xl font-bold text-center mb-12">
             業者選びの6つのチェックポイント
           </h2>
+          <Reveal />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {checkpoints.map((point, index) => (
-              <div key={index} className={`card bg-base-100 shadow-xl border-t-4 border-${point.color}`}>
-                <div className="card-body">
-                  <div className={`text-${point.color} mb-4`}>
-                    {point.icon}
-                  </div>
-                  <h3 className="card-title text-lg mb-2">{point.title}</h3>
-                  <div className={`badge badge-${point.color} badge-sm mb-4`}>
-                    {point.importance}
-                  </div>
-                  <p className="text-sm text-base-content/80">
-                    {point.description}
-                  </p>
-                </div>
+              <div key={index} className="cn-reason" data-reveal style={{ transitionDelay: `${(index % 3) * 80}ms` }}>
+                <img src={`/images/top/${point.icon}.webp`} alt="" width={384} height={384} loading="lazy" />
+                <h3>{point.title}</h3>
+                <p className="cn-guide-badge">{point.importance}</p>
+                <p>{point.description}</p>
               </div>
             ))}
           </div>

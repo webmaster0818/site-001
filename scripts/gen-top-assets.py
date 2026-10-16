@@ -29,6 +29,16 @@ ICONS = {
     "icon-official": "a document page with a check mark seal stamp, representing information verified on official websites",
     "icon-stores": "a map of Japan outline with three small location pins",
     "icon-price": "a price tag next to a short bar chart with three bars, representing comparing prices",
+    "icon-quick": "a stopwatch with a small motion line, representing same-day quick service",
+    "icon-moving": "two stacked cardboard moving boxes next to a small air conditioner",
+    "icon-newhouse": "a new house outline with a key and a small sparkle",
+    "icon-yearend": "a calendar page showing a December grid with a small broom",
+    "icon-minpaku": "a hotel-style key with a round tag next to a small suitcase",
+    "icon-office": "a small office building with windows and a desk chair in front",
+    "icon-insurance": "a shield with a house inside it, representing damage insurance coverage",
+    "icon-staff": "a friendly service staff person bust with a headset and a speech bubble",
+    "icon-experience": "a ribbon medal with the number of years shown as simple lines, representing years of experience",
+    "icon-estimate": "a quotation document with line items and a small yen sign",
 }
 def gen(name, prompt, aspect):
     out = OUT / f"{name}.png"

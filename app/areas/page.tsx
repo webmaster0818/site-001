@@ -1,10 +1,12 @@
 import Link from "next/link";
-import { MapPin } from "lucide-react";
-import { AREA_INDEX, AREA_TOTAL, PREF_PAGES } from "@/app/components/areaIndexData";
+import AreaAccordion from "@/app/components/AreaAccordion";
+import areaMap from "@/app/data/areaMap.json";
+const AREA_TOTAL = Object.keys(areaMap).length;
+import Reveal from "@/app/components/Reveal";
 
 const TITLE = "地域からハウスクリーニング業者を探す | クリーンナビ";
 const DESCRIPTION =
-  "全国238エリアのハウスクリーニング業者比較ページを都道府県・市区別に一覧掲載。東京・大阪・名古屋・横浜・札幌・福岡など、お住まいの地域からおすすめ業者と料金相場を確認できます。";
+  "全国のハウスクリーニング業者比較ページを都道府県・市区別に一覧掲載。東京・大阪・名古屋・横浜・札幌・福岡など、お住まいの地域からおすすめ業者と料金相場を確認できます。";
 
 export const metadata = {
   title: TITLE,
@@ -63,69 +65,9 @@ export default function AreasIndex() {
         </div>
       </section>
 
-      {/* 47都道府県 店舗データベース */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl font-bold mb-2">都道府県別 店舗データベース</h2>
-            <p className="text-sm text-muted mb-6">
-              各ブランド公式サイトで確認した全国の実在店舗を、都道府県ごとに一覧掲載しています。
-            </p>
-            <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8 gap-2">
-              {PREF_PAGES.map((p) => (
-                <Link
-                  key={p.slug}
-                  href={`/areas/${p.slug}/`}
-                  className="card p-2 text-center text-sm block"
-                >
-                  {p.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 都道府県別索引 */}
-      <section className="pb-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto space-y-8">
-            {AREA_INDEX.map((pref) => (
-              <div key={pref.pref} className="card bg-base-100 shadow-xl border border-base-200">
-                <div className="card-body">
-                  <h2 className="card-title text-2xl">
-                    <MapPin className="w-6 h-6 text-primary" />
-                    {pref.pref}
-                  </h2>
-                  <div className="space-y-4 mt-2">
-                    {pref.cities.map((group, gi) => (
-                      <div key={`${pref.pref}-${group.city || gi}`}>
-                        {group.city && (
-                          <h3 className="font-bold text-base-content/70 mb-2">
-                            {group.city}
-                          </h3>
-                        )}
-                        <ul className="flex flex-wrap gap-2">
-                          {group.areas.map((area) => (
-                            <li key={area.slug}>
-                              <Link
-                                href={`/areas/${area.slug}/`}
-                                className="btn btn-outline btn-sm font-normal"
-                              >
-                                {area.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* エリアの一覧（TOP と同じ折りたたみ形式・2026-10-16 旧テンプレの全数チェックで置き換え） */}
+      <AreaAccordion />
+      <Reveal />
 
       {/* 関連導線 */}
       <section className="py-12 bg-base-200">

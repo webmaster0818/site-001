@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Reveal from "../components/Reveal";
 import OfficialRatingStores from "../components/OfficialRatingStores";
 import { Metadata } from "next";
-import { Sparkles, Trophy, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "ハウスクリーニング業者ランキング一覧 | クリーンナビ",
@@ -15,26 +15,31 @@ export const metadata: Metadata = {
 const RANKINGS = [
   {
     href: "/ranking/aircon-ranking/",
+    icon: "icon-aircon",
     title: "エアコンクリーニング業者ランキング",
     description: "口コミ評価が高いエアコンクリーニング業者を比較。",
   },
   {
     href: "/ranking/bathroom-ranking/",
+    icon: "icon-bathroom",
     title: "浴室クリーニング業者ランキング",
     description: "浴室クリーニングでおすすめの業者を比較。",
   },
   {
     href: "/ranking/cheap-ranking/",
+    icon: "icon-price",
     title: "料金が安い業者ランキング",
     description: "コスパを重視して選びたい方向けの比較。",
   },
   {
     href: "/ranking/review-ranking/",
+    icon: "icon-official",
     title: "口コミ評価が高い業者ランキング",
     description: "実際の利用者評価で選ぶおすすめ業者。",
   },
   {
     href: "/ranking/quick-service/",
+    icon: "icon-quick",
     title: "即日対応可能な業者まとめ",
     description: "今すぐ依頼したい方向けの即日対応業者まとめ。",
   },
@@ -64,24 +69,20 @@ export default function RankingIndexPage() {
           <span className="text-gray-900">ランキング</span>
         </nav>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {RANKINGS.map((ranking) => (
-            <Link
-              key={ranking.href}
-              href={ranking.href}
-              className="bg-white rounded-lg shadow-sm hover:shadow-md transition p-6 flex items-start gap-4"
-            >
-              <Trophy className="w-8 h-8 text-blue-600 shrink-0 mt-1" />
-              <div className="flex-1">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {ranking.title}
-                </h3>
-                <p className="text-sm text-gray-600">{ranking.description}</p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-400 shrink-0 mt-1" />
-            </Link>
+        <ul className="cn-trouble-grid">
+          {RANKINGS.map((ranking, i) => (
+            <li key={ranking.href} data-reveal style={{ transitionDelay: `${(i % 3) * 80}ms` }}>
+              <Link className="cn-trouble-card" href={ranking.href}>
+                <span className="cn-trouble-body">
+                  <img src={`/images/top/${ranking.icon}.webp`} alt="" width={384} height={384} loading="lazy" />
+                  <span className="cn-trouble-note">{ranking.description}</span>
+                </span>
+                <span className="cn-trouble-label">{ranking.title}</span>
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
+        <Reveal />
 
         <section className="bg-white rounded-lg shadow-sm p-6 mb-8">
           <h3 className="text-xl font-bold text-gray-900 mb-4">テーマ別の比較記事</h3>
@@ -112,13 +113,6 @@ export default function RankingIndexPage() {
 
       <OfficialRatingStores limit={10} />
 
-      <footer className="bg-white border-t border-gray-200 py-8 mt-12">
-        <div className="container mx-auto px-4 text-center text-sm text-gray-500">
-          <Link href="/" className="hover:text-blue-600">
-            クリーンナビ トップへ戻る
-          </Link>
-        </div>
-      </footer>
     </div>
   );
 }

@@ -19,7 +19,6 @@ export default function NewhouseScene() {
           <Link href="/services/aircon/" className="btn btn-primary btn-lg">業者を探す</Link>
         </div>
       </section>
-      <footer className="footer footer-center p-10"><p>© 2024 クリーンナビ</p></footer>
     </div>
   );
 }

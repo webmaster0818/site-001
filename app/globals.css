@@ -740,3 +740,4 @@ ul.steps { display: none !important; }
 .cn-area-shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid var(--cn-mist); }
 .cn-area-shot figcaption { margin-top: .35rem; font-size: .68rem; line-height: 1.5; color: #6b8086; }
 .cn-area-thumb { flex: none; width: 96px; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid var(--cn-line); border-radius: 3px; }
+.cn-reason .cn-guide-badge { display: inline-block; margin: .5rem auto 0; padding: .1rem .6rem; border: 1px solid var(--cn-ink); border-radius: 3px; font-size: .72rem; font-weight: 700; color: var(--cn-ink); text-align: center; }
