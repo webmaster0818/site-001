@@ -27,8 +27,8 @@ const BRANDS: Record<
   osoujihonpo: {
     name: "おそうじ本舗",
     description:
-      "全国約1,900店舗を展開する業界最大手のハウスクリーニングチェーン。特許取得の「ファインバブルエアコンクリーニング」で、微細な泡が奥のカビ・汚れまで徹底除去します。",
-    features: ["全国約1,900店舗展開", "特許取得のファインバブル洗浄", "損害保険加入済み", "Webで簡単予約"],
+      "全国約1,900店舗を展開する業界最大手のハウスクリーニングチェーン。特許取得の「ファインバブルエアコンクリーニング」で、微細な泡で奥のカビ・汚れまで除去します。",
+    features: ["全国約1,900店舗展開", "特許取得のファインバブル洗浄", "損害保険加入済み", "Web予約に対応"],
   },
   duskin: {
     name: "ダスキン サービスマスター",
@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: { params: Promise<{ brand: st
   const stores = list.filter((p) => p.brand === BRAND_KEY[brand]);
   return {
     title: `${b.name}の店舗一覧・対応エリア検索（全国${stores.length}店舗）｜クリーンナビ`,
-    description: `${b.name}の全国${stores.length}店舗を都道府県別に検索できます。公式サイトで確認した実在店舗のみ、所在地・対応エリア・公式評価を確認日つきで掲載しています。`,
+    description: `${b.name}の全国${stores.length}店舗を都道府県別に検索できます。公式サイトで所在を確認した店舗のみを対象に、所在地・対応エリア・公式評価を確認日を明記して掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/brand/${brand}/` },
   };
 }
@@ -139,7 +139,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
             ))}
           </div>
           <p className="text-xs text-muted mt-4">
-            掲載店舗は{b.name}公式サイトで確認した実在店舗のみです（各店舗ページに出典・確認日を記載）。最新の営業状況・料金は必ず公式サイト・店舗にご確認ください。
+            掲載店舗は{b.name}公式サイトで所在を確認した店舗のみです（各店舗ページに出典・確認日を記載しています）。最新の営業状況・料金は、ご利用前に公式サイトまたは店舗にてご確認ください。
           </p>
         </div>
         {brand === "osoujikakumei" && (
@@ -155,7 +155,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
       {rated.length > 0 && (
         <section className="container mx-auto px-4 pb-8 max-w-4xl">
           <h2 className="text-xl font-bold text-ink mb-2">公式サイト評価の高い{b.name}の店舗</h2>
-          <p className="text-xs text-muted mb-4">公式サイト掲載のレビュー集計（50件以上）を評価順に表示。当サイトの独自集計ではありません。</p>
+          <p className="text-xs text-muted mb-4">公式サイト掲載のレビュー集計（50件以上）を評価順に表示しています。当サイトが独自に集計した評価ではありません。</p>
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {rated.map((s) => (
               <a key={s.slug} href={`/provider/${s.slug}/`} className="card p-4 block">
@@ -201,7 +201,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
         </div>
         <div className="alert alert-info mt-8">
           <p className="text-sm">
-            依頼前には2〜3社の相見積もりがおすすめです。他ブランドとの比較は
+            ご依頼の前には、2〜3社から相見積もりを取ることをおすすめします。他ブランドとの比較は
             <a href="/ranking/" className="underline text-primary">比較ランキング</a>・お住まいの地域の全店舗は
             <a href="/areas/" className="underline text-primary">地域から探す</a>をご覧ください。
           </p>

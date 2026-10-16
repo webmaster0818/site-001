@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/comparison/major-3-comparison/" },
-  title: "大手3社徹底比較 | クリーンナビ",
-  description: "ダスキン・おそうじ本舗・ベアーズを徹底比較。最適な業者選びをサポート。",
+  title: "大手3社の比較 | クリーンナビ",
+  description: "ダスキン・おそうじ本舗・ベアーズの比較。業者選びの基本は、業者選びガイドでご説明しています。",
 };
 
 export default function Major3comparisonComparison() {
@@ -11,8 +11,8 @@ export default function Major3comparisonComparison() {
     <div className="min-h-screen bg-base-100">
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-8">大手3社徹底比較</h1>
-          <p className="text-xl text-center mb-12">ダスキン・おそうじ本舗・ベアーズを徹底比較</p>
+          <h1 className="text-4xl font-bold text-center mb-8">大手3社の比較</h1>
+          <p className="text-xl text-center mb-12">ダスキン・おそうじ本舗・ベアーズの比較</p>
           <div className="text-center">
             <Link href="/guide/" className="btn btn-primary btn-lg">業者選びガイドを見る</Link>
           </div>

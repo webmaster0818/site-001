@@ -5,7 +5,7 @@ import {Sparkles, DollarSign, TrendingUp, Info } from "lucide-react";
 export const metadata: Metadata = {
   title: "ハウスクリーニング料金相場一覧【エアコン・浴室・キッチン】 | クリーンナビ",
   description:
-    "ハウスクリーニングの料金相場をエアコン・浴室・キッチン別に一覧。料金が変わる6つの要因（作業範囲・汚れ・設備・地域・時期・オプション）と、セット割引や閑散期など安く依頼するコツを解説します。",
+    "ハウスクリーニングの料金相場をエアコン・浴室・キッチン別に掲載しています。料金が変わる6つの要因（作業範囲・汚れ・設備・地域・時期・オプション）と、セット割引や閑散期の利用など費用を抑える方法をご説明します。",
   alternates: {
     canonical: "https://cleaning-choices.com/price/",
   },
@@ -21,7 +21,7 @@ const PRICE_DATA = [
  {type: "お掃除機能付きエアコン", price: "15,000〜25,000円"},
  {type: "業務用エアコン（天井埋込型）", price: "20,000〜40,000円"},
  ],
- notes: "※2台目以降は割引あり。繁忙期（5〜8月）は料金が上がる場合があります。",
+ notes: "※2台目以降の割引を設けている業者があります。繁忙期（5〜8月）は料金が上がる場合があります。",
  },
  {
  service: "浴室クリーニング",
@@ -43,7 +43,7 @@ const PRICE_DATA = [
  {type: "ガスコンロ", price: "6,000〜10,000円"},
  {type: "キッチン+換気扇セット", price: "18,000〜28,000円"},
  ],
- notes: "※頑固な油汚れがある場合は追加料金が発生することがあります。",
+ notes: "※固着した油汚れがある場合は、追加料金が発生することがあります。",
  },
 ];
 
@@ -51,12 +51,12 @@ const PRICE_DATA = [
 const PRICE_FACTORS = [
  {
  title: "作業範囲",
- description: "清掃する箇所が多いほど料金は高くなります。セットプランで割引になることも。",
+ description: "清掃する箇所が多いほど料金は高くなります。セットプランで割引になる場合があります。",
  icon: "",
  },
  {
  title: "汚れの程度",
- description: "長年放置された頑固な汚れは、追加料金が発生する場合があります。",
+ description: "長期間蓄積した汚れは、追加料金が発生する場合があります。",
  icon: "",
  },
  {
@@ -66,7 +66,7 @@ const PRICE_FACTORS = [
  },
  {
  title: "地域",
- description: "都心部は地方よりやや高めの傾向。交通費が別途かかることもあります。",
+ description: "都市部は地方よりやや高めの傾向があります。交通費が別途かかる場合もあります。",
  icon: "",
  },
  {
@@ -95,7 +95,7 @@ export default function PricePage() {
  </h1>
  </div>
  <p className="text-xl opacity-90 max-w-3xl">
- 各サービスの料金相場を詳しく解説。適正価格を知って、賢く業者を選びましょう。
+ 各サービスの料金相場をご説明します。業者選びの際の目安としてご活用ください。
  </p>
  </div>
  </section>
@@ -182,12 +182,12 @@ export default function PricePage() {
  </div>
  </section>
 
- {/* お得に利用するコツ */}
+ {/* 費用を抑える方法 */}
  <section className="py-12 bg-white">
  <div className="container mx-auto px-4">
  <div className="max-w-4xl mx-auto">
  <h3 className="text-3xl font-bold text-gray-900 text-center mb-8">
- お得に利用するコツ
+ 費用を抑える方法
  </h3>
 
  <div className="space-y-6">
@@ -196,14 +196,14 @@ export default function PricePage() {
  複数箇所をまとめて依頼
  </h4>
  <p className="text-gray-700">
- エアコン+浴室など、複数箇所をセットで依頼すると割引が適用されることが多いです。
- トータルで10〜20%程度お得になることも。
+ エアコン+浴室など、複数箇所をセットで依頼すると割引が適用される場合があります。
+ 総額で10〜20%程度安くなる場合もあります。
  </p>
  </div>
 
  <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-600 p-6 rounded-lg">
  <h4 className="text-lg font-bold text-gray-900 mb-2">
- 閑散期を狙う
+ 閑散期に依頼する
  </h4>
  <p className="text-gray-700">
  エアコンクリーニングなら春・秋、大掃除なら1〜2月など、
@@ -213,10 +213,10 @@ export default function PricePage() {
 
  <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-600 p-6 rounded-lg">
  <h4 className="text-lg font-bold text-gray-900 mb-2">
- 複数社から見積もり
+ 複数社から見積もりを取る
  </h4>
  <p className="text-gray-700">
- 必ず複数の業者から見積もりを取りましょう。料金だけでなく、
+ 複数の業者から見積もりを取ることをおすすめします。料金だけでなく、
  サービス内容や保証、口コミも比較することが重要です。
  </p>
  </div>
@@ -226,8 +226,8 @@ export default function PricePage() {
  定期契約を検討
  </h4>
  <p className="text-gray-700">
- 年2回などの定期契約をすると、1回あたりの料金が割引になる業者が多数。
- 長期的にはお得になります。
+ 年2回などの定期契約をすると、1回あたりの料金が割引になる業者があります。
+ 長期的には費用を抑えられます。
  </p>
  </div>
  </div>
@@ -239,11 +239,11 @@ export default function PricePage() {
  <section className="py-16 bg-gradient-to-r from-green-600 to-green-700">
  <div className="container mx-auto px-4 text-center">
  <h3 className="text-3xl font-bold text-white mb-4">
- 適正価格で安心のハウスクリーニング
+ 料金相場を把握して業者を選ぶ
  </h3>
  <p className="text-xl text-white opacity-90 mb-8 max-w-2xl mx-auto">
- クリーンナビなら、料金・口コミを比較して最適な業者が見つかります。
- 複数社の見積もりを比較して、納得の価格で依頼しましょう。
+ クリーンナビでは、各社の公式料金と対応エリアを比較できます。
+ 複数社の見積もりを比較したうえで、依頼先をお選びください。
  </p>
  <div className="flex gap-4 justify-center flex-wrap">
  <Link

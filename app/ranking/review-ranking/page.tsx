@@ -35,7 +35,7 @@ const ratedCount = list.filter((p) => typeof p.rating_official === "number").len
 
 export const metadata: Metadata = {
   title: "口コミ評価が高いハウスクリーニング店舗ランキング【公式レビュー集計】",
-  description: `口コミ評価が高いハウスクリーニング店舗トップ10。各ブランド公式サイト掲載のレビュー集計(全${ratedCount}店舗分)から、レビュー100件以上の店舗を評価順に紹介。架空の口コミは一切使用していません。`,
+  description: `口コミ評価が高いハウスクリーニング店舗トップ10。各ブランド公式サイト掲載のレビュー集計(全${ratedCount}店舗分)から、レビュー100件以上の店舗を評価順に紹介しています。架空の口コミは使用していません。`,
   alternates: { canonical: "https://cleaning-choices.com/ranking/review-ranking/" },
 };
 
@@ -49,7 +49,7 @@ export default function ReviewRankingPage() {
             口コミ評価が高いハウスクリーニング店舗ランキング
           </h1>
           <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl">
-            このランキングは、各ブランド公式サイトに掲載されているレビュー集計(評価値・件数)をそのまま用いた店舗ランキングです。当サイトが独自に集計・作成した評点や口コミは一切ありません。信頼性を担保するため、レビュー件数100件以上の店舗のみを対象に、評価値順(同値は件数順)で並べています(全店舗{verifiedAt}確認)。
+            このランキングは、各ブランド公式サイトに掲載されているレビュー集計(評価値・件数)をそのまま用いた店舗ランキングです。当サイトが独自に集計・作成した評点や口コミは使用していません。評価の信頼性を確保するため、レビュー件数100件以上の店舗のみを対象とし、評価値の順（同値の場合は件数の順）に掲載しています（全店舗{verifiedAt}確認）。
           </p>
         </div>
       </section>
@@ -80,32 +80,32 @@ export default function ReviewRankingPage() {
             ))}
           </div>
           <p className="text-xs text-gray-500 mt-4">
-            出典: 各ブランド公式サイトのレビュー集計（{verifiedAt}確認・出典の詳細は各店舗ページに記載）。評価・件数は確認日時点のもので、変動します。
+            出典: 各ブランド公式サイトのレビュー集計（{verifiedAt}確認・出典の詳細は各店舗ページに記載）。評価・件数は確認日時点のもので、変動する場合があります。
           </p>
         </div>
       </section>
 
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">口コミを比較の道具にする3つの原則</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">口コミを参考にする際の3つの観点</h2>
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-lg border border-gray-200 bg-white p-5">
-              <p className="font-bold text-gray-900 mb-2">1. 件数とセットで見る</p>
-              <p className="text-sm text-gray-600 leading-relaxed">評価5.0でも3件と300件では意味が違います。当ランキングが100件以上に限定しているのはこのためです。</p>
+              <p className="font-bold text-gray-900 mb-2">1. 評価は件数とあわせて確認する</p>
+              <p className="text-sm text-gray-600 leading-relaxed">同じ評価5.0でも、3件と300件では評価の重みが異なります。当ランキングの対象を100件以上の店舗に限定しているのは、このためです。</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-5">
-              <p className="font-bold text-gray-900 mb-2">2. 店舗単位で見る</p>
-              <p className="text-sm text-gray-600 leading-relaxed">実際に自宅へ来るのは地域の店舗のスタッフです。ブランドの評判より、対応する店舗の評価を確認しましょう。</p>
+              <p className="font-bold text-gray-900 mb-2">2. 店舗単位で確認する</p>
+              <p className="text-sm text-gray-600 leading-relaxed">作業を担当するのは地域の店舗のスタッフです。ブランド全体の評判に加えて、担当する店舗の評価をご確認ください。</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-5">
-              <p className="font-bold text-gray-900 mb-2">3. 出どころを確認する</p>
-              <p className="text-sm text-gray-600 leading-relaxed">誰がどこに書いた口コミかを確認できるものだけを参考にしましょう。当サイトは出典を示せない口コミを掲載しません。</p>
+              <p className="font-bold text-gray-900 mb-2">3. 口コミの出典を確認する</p>
+              <p className="text-sm text-gray-600 leading-relaxed">投稿者と掲載先を確認できる口コミを参考にすることをおすすめします。当サイトでは、出典を示せない口コミは掲載していません。</p>
             </div>
           </div>
         </div>
       </section>
 
-      <PartnerCards title="口コミ・評判を公式情報で検証した提携業者" intro="口コミを読む前に押さえたい料金・エリア・保証を各社公式サイトで一次確認した業者ページです。架空の口コミ・独自評点は作成していません。掲載順は優劣の評価ではありません。" />
+      <PartnerCards title="口コミ・評判を公式情報で検証した提携業者" intro="口コミとあわせて確認しておきたい料金・対応エリア・保証を、各社の公式サイトで確認した業者のページです。架空の口コミや独自の評点は作成していません。掲載順は優劣を示すものではありません。" />
 
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl text-center">

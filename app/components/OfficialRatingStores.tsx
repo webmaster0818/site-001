@@ -69,7 +69,7 @@ export default function OfficialRatingStores({ limit = 6 }: { limit?: number }) 
         </div>
         <p className="text-center mt-6">
           <a href="/areas/" className="text-sm text-sky-600 underline">
-            お住まいの地域の店舗データベースを見る
+            お住まいの地域の店舗一覧を見る
           </a>
         </p>
       </div>

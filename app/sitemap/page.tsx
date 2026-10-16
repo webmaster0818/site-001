@@ -82,7 +82,7 @@ const rankingPages: PageLink[] = [
 ];
 
 const comparisonPages: PageLink[] = [
-  { href: "/comparison/major-3-comparison/", name: "大手3社徹底比較" },
+  { href: "/comparison/major-3-comparison/", name: "大手3社の比較" },
   { href: "/comparison/area-price-comparison/", name: "エリア別料金相場比較" },
   { href: "/comparison/time-comparison/", name: "作業時間・所要時間比較" },
   { href: "/comparison/warranty-comparison/", name: "保証・補償制度比較" },
@@ -95,7 +95,7 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/kitchen-oil/", name: "キッチンの油汚れ対策" },
   { href: "/guide-detail/cleaning-timing/", name: "ハウスクリーニングのタイミング" },
   { href: "/guide-detail/before-checklist/", name: "依頼前のチェックリスト" },
-  { href: "/guide-detail/diy-vs-pro/", name: "自分でできる掃除vs業者" },
+  { href: "/guide-detail/diy-vs-pro/", name: "自分で行う掃除と業者への依頼の比較" },
   { href: "/guide-detail/trouble-cases/", name: "トラブル事例と対処法" },
 ];
 
@@ -166,7 +166,7 @@ export default function SitemapPage() {
             <LinkSection title="基本ページ" pages={basicPages} />
             <LinkSection title="サービス別ページ" pages={servicePages} />
             <LinkSection title="ランキング" pages={rankingPages} />
-            <LinkSection title="業者比較・お得情報" pages={comparisonPages} />
+            <LinkSection title="業者比較・割引情報" pages={comparisonPages} />
             <LinkSection title="お役立ちガイド" pages={guideDetailPages} />
             <LinkSection title="シーン別ページ" pages={scenePages} />
             <LinkSection title="掲載業者" pages={companyPages} />

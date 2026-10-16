@@ -6,7 +6,7 @@ import PartnerCards from "../../components/PartnerCards";
 export const metadata: Metadata = {
   title: "エアコンクリーニング業者おすすめランキング｜大手3社の比較と選び方",
   description:
-    "エアコンクリーニング業者を大手3ブランド(おそうじ本舗・ダスキン・おそうじ革命)の公式確認情報で比較。料金相場(壁掛け8,000円〜)、公式レビュー高評価店、失敗しない選び方までまとめました。",
+    "エアコンクリーニング業者を大手3ブランド(おそうじ本舗・ダスキン・おそうじ革命)の公式情報で比較しています。料金相場（壁掛け8,000円〜）、公式レビュー評価の高い店舗、業者選びの確認ポイントをご説明します。",
   alternates: { canonical: "https://cleaning-choices.com/ranking/aircon-ranking/" },
 };
 
@@ -17,11 +17,11 @@ const faqs = [
   },
   {
     q: "エアコンクリーニングはどの時期に頼むのが良いですか？",
-    a: "冷房前の春(4〜5月)と暖房前の秋(9〜11月)が適しています。夏の繁忙期は予約が取りにくく料金も上がりやすいため、時期をずらせるなら春・秋がおすすめです。",
+    a: "冷房前の春(4〜5月)と暖房前の秋(9〜11月)が適しています。夏の繁忙期は予約が取りにくく料金も上がりやすいため、時期を調整できる場合は春・秋をおすすめします。",
   },
   {
-    q: "業者はどう選べば失敗しませんか？",
-    a: "①お掃除機能付きなど自宅の機種に対応しているか ②料金と追加料金の条件 ③損害保険の加入 ④口コミ・評価、の4点を事前に確認してください。当サイトの店舗ページでは公式サイトで確認した情報のみを確認日つきで掲載しています。",
+    q: "業者はどのように選べばよいですか？",
+    a: "①お掃除機能付きなど自宅の機種に対応しているか ②料金と追加料金の条件 ③損害保険の加入 ④口コミ・評価、の4点を事前に確認してください。当サイトの店舗ページでは、公式サイトで確認した情報のみを確認日を明記して掲載しています。",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function AirconRankingPage() {
             エアコンクリーニング業者おすすめランキング
           </h1>
           <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl">
-            エアコンクリーニングを頼める大手3ブランドを、各社公式サイトで確認した情報だけで比較します。当サイトは架空の口コミや独自集計の評点を作成しません。店舗の評価は、各ブランド公式サイトに掲載されているレビュー集計をそのまま確認日つきで紹介します。
+            エアコンクリーニングを頼める大手3ブランドを、各社公式サイトで確認した情報のみで比較しています。当サイトでは、架空の口コミや独自に集計した評点は作成しません。店舗の評価は、各ブランド公式サイトに掲載されているレビュー集計を、確認日を明記してそのまま掲載しています。
           </p>
         </div>
       </section>
@@ -77,30 +77,30 @@ export default function AirconRankingPage() {
             </table>
           </div>
           <p className="text-xs text-gray-500 mt-3">
-            ※2台目以降は割引あり。繁忙期（5〜8月）は料金が上がる場合があります。詳細は<a href="/price/" className="text-sky-600 hover:underline">料金相場ページ</a>をご覧ください。
+            ※2台目以降の割引を設けている業者があります。繁忙期（5〜8月）は料金が上がる場合があります。詳細は<a href="/price/" className="text-sky-600 hover:underline">料金相場ページ</a>をご覧ください。
           </p>
         </div>
       </section>
 
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">失敗しない選び方（4つの確認ポイント）</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">業者選びの4つの確認ポイント</h2>
           <div className="grid gap-4 md:grid-cols-2 mt-6">
             <div className="rounded-lg border border-gray-200 p-5">
               <p className="font-bold text-gray-900 mb-2">1. 自宅の機種に対応しているか</p>
-              <p className="text-sm text-gray-600 leading-relaxed">お掃除機能付き・天井埋込型は対応可否と料金が変わります。申込み前に機種名を伝えて確認しましょう。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">お掃除機能付き・天井埋込型は対応可否と料金が変わります。お申し込みの前に、機種名を伝えてご確認ください。</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <p className="font-bold text-gray-900 mb-2">2. 追加料金の条件</p>
-              <p className="text-sm text-gray-600 leading-relaxed">駐車場代・防カビコーティングなどの追加費用の有無を見積もり時に確認。「追加料金なし」を明記する業者もあります。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">駐車場代・防カビコーティングなどの追加費用の有無を、見積もりの際にご確認ください。「追加料金なし」を明記する業者もあります。</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <p className="font-bold text-gray-900 mb-2">3. 損害保険の加入</p>
-              <p className="text-sm text-gray-600 leading-relaxed">万一の故障・破損に備え、損害保険に加入している業者を選ぶと安心です。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">万一の故障・破損に備え、損害保険に加入している業者を選ぶことをおすすめします。</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <p className="font-bold text-gray-900 mb-2">4. 店舗の口コミ・評価</p>
-              <p className="text-sm text-gray-600 leading-relaxed">同じブランドでも対応するのは地域の店舗です。店舗単位の評価を確認しましょう。下の高評価店舗も参考にしてください。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">同じブランドでも対応するのは地域の店舗です。店舗単位の評価をご確認ください。下に掲載している評価の高い店舗もご参照ください。</p>
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function AirconRankingPage() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">お住まいの地域の店舗から探す</h2>
-          <p className="text-sm text-gray-600 mb-6">全国3,500店超の実在確認済み店舗データベースから、近くの対応店舗を確認できます。</p>
+          <p className="text-sm text-gray-600 mb-6">公式サイトで所在を確認した全国3,500店超の店舗情報から、お近くの対応店舗をご確認いただけます。</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/services/aircon/" className="rounded-lg bg-sky-600 px-6 py-3 text-sm font-bold text-white hover:bg-sky-700 transition">エアコンクリーニング詳細</a>
             <a href="/areas/" className="rounded-lg border border-sky-600 px-6 py-3 text-sm font-bold text-sky-600 hover:bg-sky-50 transition">地域から探す</a>

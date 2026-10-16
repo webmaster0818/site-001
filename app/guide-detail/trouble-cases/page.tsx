@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/guide-detail/trouble-cases/" },
   title: "トラブル事例と対処法 | クリーンナビ",
-  description: "よくあるトラブルと解決方法。プロが教える掃除のコツとポイント。",
+  description: "よくあるトラブルと対処方法。ハウスクリーニング業者の選び方は、業者選びガイドでご説明しています。",
 };
 
 export default function TroublecasesGuide() {
@@ -12,10 +12,10 @@ export default function TroublecasesGuide() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-8">トラブル事例と対処法</h1>
-          <p className="text-xl mb-12">よくあるトラブルと解決方法</p>
+          <p className="text-xl mb-12">よくあるトラブルと対処方法</p>
           <div className="prose max-w-4xl mx-auto">
-            <h2>詳しい情報はこちら</h2>
-            <p>プロの業者によるトラブル事例と対処法について、詳しく解説していきます。</p>
+            <h2>業者選びの基本について</h2>
+            <p>トラブルを避けるための業者の選び方は、業者選びガイドでご説明しています。</p>
           </div>
           <div className="text-center mt-12">
             <Link href="/guide/" className="btn btn-primary">業者選びガイドを見る</Link>

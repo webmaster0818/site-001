@@ -75,7 +75,7 @@ export default function AreaAccordion() {
           <p className="cn-eyebrow">AREA SEARCH</p>
           <h2 id="area-title" className="cn-h2">エリアから探す</h2>
           <p className="cn-lead">
-            47都道府県・{Object.keys(MAP).length}エリアの店舗まとめから、お住まいの地域を選べます
+            47都道府県・{Object.keys(MAP).length}エリアの店舗情報から、お住まいの地域をお選びください
           </p>
         </div>
 

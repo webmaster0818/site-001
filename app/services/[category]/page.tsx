@@ -4,15 +4,15 @@ import { Metadata } from "next";
 const categoryInfo: { [key: string]: { title: string; description: string } } = {
   aircon: {
     title: "エアコンクリーニング",
-    description: "エアコンクリーニング業者を徹底比較。料金相場、口コミ評価、サービス内容を掲載。",
+    description: "エアコンクリーニング業者を比較しています。各社の公式料金・対応エリア・サービス内容を掲載しています。",
   },
   bathroom: {
     title: "浴室クリーニング",
-    description: "浴室クリーニング業者を徹底比較。料金相場、口コミ評価、サービス内容を掲載。",
+    description: "浴室クリーニング業者を比較しています。各社の公式料金・対応エリア・サービス内容を掲載しています。",
   },
   kitchen: {
     title: "キッチンクリーニング",
-    description: "キッチンクリーニング業者を徹底比較。料金相場、口コミ評価、サービス内容を掲載。",
+    description: "キッチンクリーニング業者を比較しています。各社の公式料金・対応エリア・サービス内容を掲載しています。",
   },
 };
 

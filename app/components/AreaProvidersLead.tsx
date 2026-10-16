@@ -127,7 +127,7 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
         <p className="text-sm text-muted mb-1">
           {located.length > 0 ? (
             <>
-              各ブランド公式サイトの店舗情報を転記した実在店舗のみを掲載しています（
+              各ブランド公式サイトの店舗情報をもとに、所在を確認した店舗のみを掲載しています（
               {Object.entries(byBrand).map(([b, n], i) => (
                 <span key={b}>
                   {i > 0 && "・"}
@@ -138,13 +138,13 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
             </>
           ) : (
             <>
-              {area.label}内に所在する店舗は各ブランド公式サイトで確認できていません（{verifiedLabel || "2026-08-15"}時点）。
+              {area.label}内に所在する店舗は、各ブランド公式サイトでは確認できませんでした（{verifiedLabel || "2026-08-15"}時点）。
             </>
           )}
         </p>
         {located.length > 0 && (
           <p className="text-xs text-muted mb-6">
-            電話番号は{withTel}店・営業時間は{withHours}店で公式に記載あり。対応エリアは公式サイトに記載のある店舗のみ表示しています。詳細・出典URLは各店舗ページに記載。
+            公式サイトに電話番号の記載がある店舗は{withTel}店、営業時間の記載がある店舗は{withHours}店です。対応エリアは、公式サイトに記載のある店舗のみ表示しています。詳細と出典URLは各店舗ページに掲載しています。
           </p>
         )}
 
@@ -193,7 +193,7 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
               {area.label}を対応エリアに含む近隣店舗（{covering.length}店舗）
             </h3>
             <p className="text-xs text-muted mb-3">
-              店舗所在地は{area.label}外ですが、公式サイトの対応エリアに{area.label}が明記されている店舗です。
+              店舗の所在地は{area.label}外ですが、公式サイトの対応エリアに{area.label}が明記されている店舗です。
             </p>
             <ul className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
               {coveringShown.map((p) => (
@@ -207,7 +207,7 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
             </ul>
             {covering.length > COVERING_LIMIT && (
               <p className="text-xs text-muted mt-3">
-                ほか{covering.length - COVERING_LIMIT}店舗。各店舗の対応エリアは店舗ページの「対応エリア」欄で確認できます。
+                ほか{covering.length - COVERING_LIMIT}店舗を掲載しています。各店舗の対応エリアは、店舗ページの「対応エリア」欄でご確認いただけます。
               </p>
             )}
           </div>

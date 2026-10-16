@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/guide-detail/kitchen-oil/" },
   title: "キッチンの油汚れ対策 | クリーンナビ",
-  description: "頑固な油汚れを落とす方法と予防策。プロが教える掃除のコツとポイント。",
+  description: "固着した油汚れを落とす方法と予防策。ハウスクリーニング業者の選び方は、業者選びガイドでご説明しています。",
 };
 
 export default function KitchenoilGuide() {
@@ -12,10 +12,10 @@ export default function KitchenoilGuide() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-8">キッチンの油汚れ対策</h1>
-          <p className="text-xl mb-12">頑固な油汚れを落とす方法と予防策</p>
+          <p className="text-xl mb-12">固着した油汚れを落とす方法と予防策</p>
           <div className="prose max-w-4xl mx-auto">
-            <h2>詳しい情報はこちら</h2>
-            <p>プロの業者によるキッチンの油汚れ対策について、詳しく解説していきます。</p>
+            <h2>業者選びの基本について</h2>
+            <p>キッチンの油汚れの清掃をプロに依頼する際の業者の選び方は、業者選びガイドでご説明しています。</p>
           </div>
           <div className="text-center mt-12">
             <Link href="/guide/" className="btn btn-primary">業者選びガイドを見る</Link>

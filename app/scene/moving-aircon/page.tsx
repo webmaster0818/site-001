@@ -4,7 +4,7 @@ import PartnerCards from "../../components/PartnerCards";
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/scene/moving-aircon/" },
   title: "引越し前エアコンクリーニング | クリーンナビ",
-  description: "引越し前のエアコン清掃で新居を快適に。料金相場、おすすめ業者を比較。",
+  description: "引越し前後のエアコンクリーニングと、引越し前後の清掃に対応する提携業者を掲載しています。",
 };
 
 export default function MovingairconScene() {
@@ -15,7 +15,7 @@ export default function MovingairconScene() {
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-8">引越し前エアコンクリーニング</h1>
-          <p className="text-xl mb-12">引越し前のエアコン清掃で新居を快適に</p>
+          <p className="text-xl mb-12">引越し前後のエアコンクリーニングについて</p>
           <Link href="/services/aircon/" className="btn btn-primary btn-lg">業者を探す</Link>
         </div>
       </section>

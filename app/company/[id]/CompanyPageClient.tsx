@@ -22,13 +22,13 @@ const COMPANY_DATA: { [key: string]: any } = {
     area: "全国対応（約1,900店舗）",
     image: "/images/partners/osoujihonpo.webp",
     description:
-      "全国約1,900店舗を展開する業界最大手のハウスクリーニングチェーン。特許取得の「ファインバブルエアコンクリーニング」で、微細な泡が奥のカビ・汚れまで徹底除去。スタッフは全員、独自の研修プログラムを修了した有資格者です。",
+      "全国約1,900店舗を展開する業界最大手のハウスクリーニングチェーン。特許取得の「ファインバブルエアコンクリーニング」で、微細な泡で奥のカビ・汚れまで除去。スタッフは全員、独自の研修プログラムを修了した有資格者です。",
     features: [
       "全国約1,900店舗展開",
       "特許取得のファインバブル洗浄",
       "損害保険加入済み",
       "完全分解洗浄対応",
-      "Webで簡単予約",
+      "Web予約に対応",
     ],
     services: [
       { name: "壁掛けエアコン", price: 12100 },
@@ -49,7 +49,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     area: "全国対応（約1,600拠点）",
     image: "/images/partners/duskin.webp",
     description:
-      "1963年創業の老舗クリーニングブランド。全国約1,600拠点で展開し、浴室クリーニングをはじめとする各種ハウスクリーニングを提供。専門的な技術と設備を持ち、高い清掃スキルを持ったスタッフが在籍。トラブル時のサポート体制も万全です。",
+      "1963年創業の老舗クリーニングブランド。全国約1,600拠点で展開し、浴室クリーニングをはじめとする各種ハウスクリーニングを提供しています。専門的な技術と設備を備え、トラブル時のサポート体制を整えています。",
     features: [
       "創業60年以上の実績",
       "全国約1,600拠点",
@@ -76,7 +76,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     area: "全国対応（約420店舗）",
     image: "/images/partners/osoujikakumei.webp",
     description:
-      "全国約420店舗を展開するハウスクリーニングチェーン。技術力と価格のバランスに優れ、50日間の研修を受けたスタッフが対応します。エアコンクリーニングは業界最安クラスの料金設定で、追加料金なしの明朗会計が特徴です。",
+      "全国約420店舗を展開するハウスクリーニングチェーン。技術力と価格のバランスに優れ、50日間の研修を受けたスタッフが対応します。エアコンクリーニングは追加料金なしの料金体系が特徴です。",
     features: ["業界最安クラス", "50日間の研修", "追加料金なし", "全国約420店舗展開"],
     services: [
       { name: "エアコンクリーニング", price: 9980 },
@@ -157,7 +157,7 @@ export default function CompanyPageClient({ id }: { id: string }) {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            業者が見つかりません
+            該当する業者のページはありません
           </h2>
           <Link href="/" className="text-blue-600 hover:underline">
             トップページに戻る

@@ -6,10 +6,10 @@ import CompanyShot from "../../components/CompanyShot";
 
 export const metadata = {
   title: "横浜市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
-  description: "横浜市でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+  description: "横浜市のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
   openGraph: {
     title: "横浜市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
-    description: "横浜市でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+    description: "横浜市のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
     url: "https://cleaning-choices.com/areas/yokohama/",
     siteName: "クリーンナビ",
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "横浜市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
-    description: "横浜市でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
+    description: "横浜市のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
     images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
   },
   alternates: {
@@ -61,7 +61,7 @@ export default function YokohamaArea() {
       kitchen: "17,930円〜", 
       bathroom: "17,930円〜", 
       toilet: "8,250円〜",
-      description: "技術力と価格のバランスが良く、約420店舗を全国展開。50日間の研修を受けたスタッフが対応。",
+      description: "技術力と価格のバランスを特徴とし、約420店舗を全国展開しています。50日間の研修を受けたスタッフが対応します。",
       hours: "店舗により異なる（年末年始を除き土日祝も営業）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇クリーニング",
       website: "https://www.osoujikakumei.jp/"
@@ -71,7 +71,7 @@ export default function YokohamaArea() {
       kitchen: "18,700円〜", 
       bathroom: "18,700円〜", 
       toilet: "9,900円〜",
-      description: "全国47都道府県に対応する全国チェーン。混雑期でも予約が取りやすく、早朝・夜間の要望にも対応（公式）。",
+      description: "全国47都道府県に対応する全国チェーンです。混雑期でも予約が取りやすく、早朝・夜間の要望にも対応しています（公式）。",
       hours: "店舗により異なる（定休日も店舗ごと）",
       services: "エアコン、浴室、キッチン、トイレ、洗濯機、外壁クリーニング",
       website: "https://www.osoujihonpo.com/"
@@ -81,7 +81,7 @@ export default function YokohamaArea() {
       kitchen: "19,580円〜", 
       bathroom: "19,580円〜", 
       toilet: "19,580円",
-      description: "イオングループ運営。お客さま満足度95%（2025年 カジタク調べ）。",
+      description: "イオングループが運営しています。お客さま満足度95%（2025年 カジタク調べ）。",
       hours: "10:00-17:00（年末年始除く）",
       services: "エアコン、浴室、キッチン、換気扇、窓・サッシクリーニング",
       website: "https://www.kajitaku.com/"
@@ -91,7 +91,7 @@ export default function YokohamaArea() {
       kitchen: "18,920円〜", 
       bathroom: "19,910円〜", 
       toilet: "10,340円〜",
-      description: "家事代行大手による質の高いサービス。スタッフ教育に力を入れ、丁寧な作業が特徴。",
+      description: "家事代行大手によるサービスです。スタッフ教育に力を入れ、丁寧な作業を特徴としています。",
       hours: "受付9:00〜18:00（年中無休）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
       website: "https://www.happy-bears.com/"
@@ -101,7 +101,7 @@ export default function YokohamaArea() {
       kitchen: "20,680円〜", 
       bathroom: "22,000円〜", 
       toilet: "10,340円〜",
-      description: "清掃業界の老舗大手。47都道府県に拠点があり、専門資器材と洗剤で徹底清掃。",
+      description: "清掃業界の老舗大手です。47都道府県に拠点があり、専門の資器材と洗剤で清掃します。",
       hours: "9:00-18:00（店舗により異なる）",
       services: "エアコン、浴室、キッチン、トイレ、レンジフード、フロアクリーニング",
       website: "https://www.duskin.jp/servicemaster/"
@@ -111,7 +111,7 @@ export default function YokohamaArea() {
       kitchen: "19,800円〜", 
       bathroom: "17,600円〜", 
       toilet: "13,200円〜",
-      description: "東京ガスが提供。対応エリアは東京・神奈川・埼玉・千葉と群馬・茨城の一部（公式の対応エリア一覧）。支払いはクレジットカードのみ。",
+      description: "東京ガスが提供しています。対応エリアは東京・神奈川・埼玉・千葉と群馬・茨城の一部（公式の対応エリア一覧）。支払いはクレジットカードのみ。",
       hours: "訪問開始8:30〜18:00の時間帯から選択（土日祝も可・12/29〜1/4除く）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
       website: "https://kaji.tokyo-gas.co.jp/"
@@ -121,7 +121,7 @@ export default function YokohamaArea() {
       kitchen: "17,600円〜", 
       bathroom: "18,700円〜", 
       toilet: "8,800円〜",
-      description: "全国対応の大手清掃会社。無料見積もりサービスで事前に汚れ状況を確認。",
+      description: "全国対応の大手清掃会社です。無料見積もりで、事前に汚れの状況を確認します。",
       hours: "9:00-18:00（年中無休）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
       website: "https://www.sanikleen.co.jp/housecleaning/"
@@ -131,7 +131,7 @@ export default function YokohamaArea() {
       kitchen: "8,000円〜", 
       bathroom: "12,600円〜", 
       toilet: "8,000円〜",
-      description: "全国の加盟店からスタッフを手配する紹介型サービス（運営：株式会社アシスト）。出張料なし（公式）。",
+      description: "全国の加盟店からスタッフを手配する紹介型サービスです（運営：株式会社アシスト）。出張料はかかりません（公式）。",
       hours: "24時間365日受付",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
       website: "https://osoji-master.info/"
@@ -141,7 +141,7 @@ export default function YokohamaArea() {
       kitchen: "19,800円〜", 
       bathroom: "19,800円〜", 
       toilet: "13,200円〜",
-      description: "掃除用品メーカーのアズマ工業（1896年創業）が運営。年間実績は全国20,000件（公式）。",
+      description: "掃除用品メーカーのアズマ工業（1896年創業）が運営しています。年間実績は全国20,000件です（公式）。",
       hours: "電話受付 平日9:00〜17:00",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
       website: "https://www.azuma-cleaning.com/"
@@ -151,7 +151,7 @@ export default function YokohamaArea() {
       kitchen: "19,690円〜", 
       bathroom: "20,900円〜", 
       toilet: "10,010円〜",
-      description: "クレディセゾングループ。セゾン/UCカード会員はハウスクリーニング全メニュー5%OFF（オプション除く）、一部メニューで永久不滅ポイント利用可（公式）。",
+      description: "クレディセゾングループのサービスです。セゾン/UCカード会員はハウスクリーニング全メニュー5%OFF（オプション除く）、一部メニューで永久不滅ポイントを利用できます（公式）。",
       hours: "9:00〜17:00（土日祝除く）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
       website: "https://www.kurashi-saison.co.jp/cleaning/"
@@ -161,7 +161,7 @@ export default function YokohamaArea() {
       kitchen: "19,800円〜", 
       bathroom: "19,800円〜", 
       toilet: "9,240円〜",
-      description: "家電量販店エディオンの「家電のプロのクリーニングサービス」。提供は同社指定エリア内に限る（公式）。",
+      description: "家電量販店エディオンの「家電のプロのクリーニングサービス」です。提供は同社の指定エリア内に限られます（公式）。",
       hours: "店舗により異なる（公式の店舗検索で確認）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、家電周辺クリーニング",
       website: "https://www.edion.co.jp/service/satisfied/cleaning"
@@ -212,7 +212,7 @@ export default function YokohamaArea() {
             </h1>
           </div>
           <p className="text-base md:text-xl text-white leading-relaxed max-w-3xl mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.15)' }}>
-            横浜市全域対応！料金・口コミで徹底比較
+            横浜市の業者を料金・サービス内容で比較しています
           </p>
         </div>
         <svg className="hero-wave" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +224,7 @@ export default function YokohamaArea() {
       <section className="py-12 bg-base-100">
         <div className="container mx-auto px-4">
           <div className="prose max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">横浜市でハウスクリーニングを依頼するなら？</h2>
+            <h2 className="text-2xl font-bold mb-4">横浜市でハウスクリーニングを依頼する際の基本情報</h2>
             <p className="text-lg">横浜市は神奈川県最大の都市で、18区からなる政令指定都市です。港町として発展し、海風による塩害対策が重要です。</p>
           </div>
         </div>
@@ -329,7 +329,7 @@ export default function YokohamaArea() {
       </section>
       <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">横浜市で最適な業者を見つけよう</h2>
+          <h2 className="text-3xl font-bold mb-4">横浜市のハウスクリーニング業者を探す</h2>
           <div className="flex gap-4 justify-center mt-8">
             <Link href="/services/aircon/" className="btn btn-lg bg-white text-primary">サービスから探す</Link>
             <Link href="/price/" className="btn btn-lg btn-outline text-white border-white">料金相場を見る</Link>

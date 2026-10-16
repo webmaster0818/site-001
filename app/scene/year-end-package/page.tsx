@@ -3,26 +3,26 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "年末大掃除はプロに依頼【2026年版】ハウスクリーニングの箇所別の考え方・予約時期",
   description:
-    "年末の大掃除をハウスクリーニング業者に依頼する際のガイド【2026年版】。依頼が集中しやすい箇所（エアコン・キッチン・浴室）、予約のタイミング、業者の選び方、地域の店舗データベースまでまとめました。",
+    "年末の大掃除をハウスクリーニング業者に依頼する際のガイド【2026年版】。依頼が集中しやすい箇所（エアコン・キッチン・浴室）、予約のタイミング、業者の選び方、地域別の店舗情報をご説明します。",
   alternates: { canonical: "https://cleaning-choices.com/scene/year-end-package/" },
 };
 
 const faqs = [
   {
     q: "年末の大掃除はいつ予約すべきですか？",
-    a: "年末（11〜12月）はハウスクリーニングの繁忙期にあたり、希望日が埋まりやすくなる傾向があります。日程の選択肢を確保するには、需要が本格化する前の10〜11月中の予約検討がおすすめです。",
+    a: "年末（11〜12月）はハウスクリーニングの繁忙期にあたり、希望日が埋まりやすくなる傾向があります。日程の選択肢を確保するには、需要が本格化する前の10〜11月中にご予約を検討することをおすすめします。",
   },
   {
-    q: "大掃除では、どこをプロに任せるのが良いですか？",
-    a: "ご家庭で落としにくい汚れがたまりやすい、エアコン内部・キッチンの換気扇や油汚れ・浴室のカビなどは、専用機材や洗剤を使うプロに任せる方が多い箇所です。自分でできる箇所（床・窓拭きなど）と分担すると費用を抑えられます。",
+    q: "大掃除では、どの箇所をプロに依頼するのがよいですか？",
+    a: "ご家庭で落としにくい汚れがたまりやすい、エアコン内部・キッチンの換気扇や油汚れ・浴室のカビなどは、専用の機材や洗剤を使うプロに依頼する方が多い箇所です。ご自身で対応できる箇所（床・窓拭きなど）と分担すると、費用を抑えられます。",
   },
   {
     q: "費用はどのくらいかかりますか？",
-    a: "箇所や汚れの状態、セットプランの有無で変わります。目安は料金相場ページにまとめていますが、正確には見積もりで総額と追加料金の条件を確認してください。2〜3社の相見積もりがおすすめです。",
+    a: "箇所や汚れの状態、セットプランの有無で変わります。目安は料金相場ページに掲載していますが、正確な金額は見積もりで総額と追加料金の条件をご確認ください。2〜3社から相見積もりを取ることをおすすめします。",
   },
   {
-    q: "どの業者に頼めばいいか分かりません。",
-    a: "全国チェーンは対応エリアが広く予約システムが整っています。当サイトでは各ブランド公式サイトで確認した実在店舗データベース（全国3,500店舗超）を地域別に掲載しているので、お住まいの地域から探すのが近道です。",
+    q: "どの業者に依頼すればよいですか？",
+    a: "全国チェーンは対応エリアが広く、予約の仕組みが整っています。当サイトでは、各ブランド公式サイトで所在を確認した全国3,500店舗超の店舗情報を地域別に掲載しています。お住まいの地域からお探しください。",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function YearEndPage() {
       <section className="bg-gradient-to-r from-primary to-secondary text-primary-content py-14">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">年末大掃除はプロに依頼【2026年版】</h1>
-          <p className="text-sm opacity-90">依頼が集中する箇所・予約のタイミング・業者の探し方をまとめました</p>
+          <p className="text-sm opacity-90">依頼が集中する箇所・予約のタイミング・業者の探し方をご説明します</p>
         </div>
       </section>
 
@@ -71,15 +71,15 @@ export default function YearEndPage() {
       <section className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="alert alert-info mb-8">
           <p className="text-sm">
-            <strong>結論:</strong> 年末（11〜12月）は繁忙期で希望日が埋まりやすいため、<strong>10〜11月中の予約検討がおすすめ</strong>です。プロに任せる箇所と自分でやる箇所を分担すると、費用を抑えつつ仕上がりに差が出ます。
+            <strong>概要:</strong> 年末（11〜12月）は繁忙期で希望日が埋まりやすいため、<strong>10〜11月中のご予約の検討をおすすめ</strong>します。プロに依頼する箇所とご自身で行う箇所を分担すると、費用を抑えながら仕上がりを高めることができます。
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">プロに任せる方が多い箇所</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">プロに依頼する方が多い箇所</h2>
         <div className="grid gap-4 md:grid-cols-3 mb-10">
           <a href="/services/aircon/" className="card p-5 block border border-gray-200">
             <p className="font-bold text-gray-900 mb-1">エアコンクリーニング</p>
-            <p className="text-sm text-gray-600">内部のカビ・ホコリは分解洗浄が必要。冬の暖房シーズン前の依頼も多い箇所です。</p>
+            <p className="text-sm text-gray-600">内部のカビ・ホコリの除去には分解洗浄が必要です。冬の暖房シーズン前の依頼も多い箇所です。</p>
           </a>
           <a href="/services/kitchen/" className="card p-5 block border border-gray-200">
             <p className="font-bold text-gray-900 mb-1">キッチン・換気扇</p>
@@ -93,16 +93,16 @@ export default function YearEndPage() {
 
         <h2 className="text-2xl font-bold text-gray-900 mb-4">料金と業者選び</h2>
         <ul className="space-y-2 text-sm text-gray-700 mb-10">
-          <li>・料金の目安は<a href="/price/" className="underline text-sky-600">料金相場ページ</a>で確認できます。総額と追加料金の条件は見積もりで必ず確認を</li>
-          <li>・1社即決を避け、2〜3社の相見積もりが基本です（<a href="/ranking/" className="underline text-sky-600">比較ランキング</a>）</li>
-          <li>・繁忙期は人気業者から埋まります。候補は早めに2〜3社リストアップしておきましょう</li>
+          <li>・料金の目安は<a href="/price/" className="underline text-sky-600">料金相場ページ</a>で確認できます。総額と追加料金の条件は、見積もりでご確認ください</li>
+          <li>・1社だけで決めず、2〜3社から相見積もりを取ることをおすすめします（<a href="/ranking/" className="underline text-sky-600">比較ランキング</a>）</li>
+          <li>・繁忙期は予約が早く埋まります。候補の業者を早めに2〜3社選んでおくことをおすすめします</li>
         </ul>
 
         <div className="rounded-xl border border-amber-200 bg-amber-50/40 p-5 mb-10">
-          <p className="text-sm font-bold text-gray-900 mb-2">定額のセットでまとめて頼む例：カジタク（イオングループ）</p>
+          <p className="text-sm font-bold text-gray-900 mb-2">定額のセットでまとめて依頼する例：カジタク（イオングループ）</p>
           <p className="text-sm text-gray-700 leading-relaxed">
             大掃除2点セットA（浴室・レンジフード）34,800円、4ヶ所セット（浴室・レンジフード・キッチン・トイレまたは洗面所）61,600円（いずれも税込・2026年10月13日に公式サイトで確認）。見積もりなしの全国一律料金ですが、作業日は申込日から5日後以降で、11月上旬〜12月下旬は予約が取りづらいと公式に記載されています。
-            詳しくは<a href="/review/kajitaku/" className="underline text-sky-600">カジタクの検証ページ</a>へ。
+            詳しくは<a href="/review/kajitaku/" className="underline text-sky-600">カジタクの検証ページ</a>をご覧ください。
           </p>
           <div className="mt-4 flex justify-center">
             <a href="https://t.felmat.net/fmcl?ak=D7184U.1.P114083X.C1396789" target="_blank" rel="sponsored nofollow noopener">
@@ -115,7 +115,7 @@ export default function YearEndPage() {
 
         <h2 className="text-2xl font-bold text-gray-900 mb-4">お住まいの地域の店舗から探す</h2>
         <p className="text-sm text-gray-600 mb-4">
-          当サイトは各ブランド公式サイトで確認した<strong>全国3,500店舗超の実在店舗データベース</strong>を掲載しています。地域ページから、お近くの店舗と対応エリアを確認できます。
+          当サイトでは、各ブランド公式サイトで所在を確認した<strong>全国3,500店舗超の店舗情報</strong>を掲載しています。地域ページから、お近くの店舗と対応エリアをご確認いただけます。
         </p>
         <p className="mb-10">
           <a href="/areas/" className="btn-cta inline-block bg-sky-600 text-white font-bold px-6 py-3 rounded-lg">47都道府県から店舗を探す</a>

@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     // P2 CTR実験(9/11〜9/24)は表示▲64%・CTR低下で撤収→全店舗を標準型に統一
     title: `${p.name}（${titleQualifier(p)}）の店舗情報・対応エリア`,
-    description: `${p.name}の店舗情報。${p.address ?? p.pref_ja}を拠点とする${p.brand_name}の加盟店です。対応エリア・営業時間など、公式サイトで確認した情報のみを確認日つきで掲載しています。`,
+    description: `${p.name}の店舗情報です。${p.address ?? p.pref_ja}を拠点とする${p.brand_name}の加盟店で、対応エリア・営業時間など、公式サイトで確認した情報のみを確認日を明記して掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/provider/${p.slug}/` },
   };
 }
@@ -172,8 +172,8 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
             </tbody>
           </table>
           <p className="text-xs text-muted mt-3">
-            最新の営業状況・料金は必ず公式サイト・店舗にご確認ください。掲載内容の訂正は
-            <a href="/contact/" className="underline text-primary">お問い合わせ</a>から受け付けています。
+            最新の営業状況・料金は、ご利用前に公式サイトまたは店舗にてご確認ください。掲載内容の訂正は、
+            <a href="/contact/" className="underline text-primary">お問い合わせ</a>にて受け付けています。
           </p>
         </div>
       </section>
@@ -210,9 +210,9 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
         <div className="card-body">
           <h2 className="card-title">依頼前のチェックポイント</h2>
           <ul className="space-y-2 text-sm text-ink-soft">
-            <li>・料金は作業範囲・汚れの状態で変わるため、見積りで総額と追加料金の条件を確認しましょう</li>
-            <li>・1社即決を避け、2〜3社の相見積もりが基本です（<a href="/ranking/" className="underline text-primary">比較ランキング</a>・<a href={areaHref(p.pref_ja)} className="underline text-primary">{p.pref_ja}の業者一覧</a>）</li>
-            <li>・損害保険の加入有無・作業後の保証条件は事前に確認を</li>
+            <li>・料金は作業範囲・汚れの状態で変わるため、見積もりで総額と追加料金の条件をご確認ください</li>
+            <li>・1社だけで決めず、2〜3社から相見積もりを取ることをおすすめします（<a href="/ranking/" className="underline text-primary">比較ランキング</a>・<a href={areaHref(p.pref_ja)} className="underline text-primary">{p.pref_ja}の業者一覧</a>）</li>
+            <li>・損害保険の加入の有無と作業後の保証条件は、事前にご確認ください</li>
           </ul>
         </div>
       </section>

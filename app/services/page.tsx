@@ -17,7 +17,7 @@ import {
 
 const TITLE = "ハウスクリーニングのサービス一覧 | クリーンナビ";
 const DESCRIPTION =
-  "エアコン・浴室・キッチンをはじめ、換気扇・トイレ・洗濯機・窓・床ワックスなど全13種類のハウスクリーニングサービスを一覧掲載。各サービスの料金相場・作業内容・業者比較ページへご案内します。";
+  "エアコン・浴室・キッチンをはじめ、換気扇・トイレ・洗濯機・窓・床ワックスなど全13種類のハウスクリーニングサービスを掲載しています。各サービスの料金相場・作業内容・業者比較のページをご案内します。";
 
 export const metadata = {
   title: TITLE,
@@ -55,21 +55,21 @@ const mainServices = [
     href: "/services/aircon/",
     name: "エアコンクリーニング",
     description:
-      "分解洗浄でエアコン内部のカビ・ホコリを除去。冷暖房効率の改善と空気環境の向上に。最も依頼が多い定番サービスです。",
+      "分解洗浄でエアコン内部のカビ・ホコリを除去します。冷暖房効率の改善が期待できる、代表的なサービスです。",
     icon: <AirVent className="w-10 h-10" />,
   },
   {
     href: "/services/bathroom/",
     name: "浴室クリーニング",
     description:
-      "浴槽・天井・床・排水口までプロの技術で徹底洗浄。カビや水垢、石鹸カスをまとめてリセットします。",
+      "浴槽・天井・床・排水口まで洗浄し、カビや水垢、石けんカスを除去します。",
     icon: <Bath className="w-10 h-10" />,
   },
   {
     href: "/services/kitchen/",
     name: "キッチンクリーニング",
     description:
-      "シンク・コンロ・壁面の油汚れを専用洗剤で除去。毎日使う場所だからこそプロの徹底洗浄がおすすめです。",
+      "シンク・コンロ・壁面の油汚れを専用洗剤で除去します。毎日使う場所のため、定期的なプロの清掃をおすすめします。",
     icon: <CookingPot className="w-10 h-10" />,
   },
 ];
@@ -157,8 +157,8 @@ export default function ServicesIndex() {
             ハウスクリーニングのサービス一覧
           </h1>
           <p className="text-lg max-w-3xl mx-auto">
-            エアコン・浴室・キッチンの定番3サービスから、換気扇・トイレ・窓・床ワックスまで全13種類。
-            依頼したい場所のページで、作業内容・料金相場・業者比較を確認できます。
+            エアコン・浴室・キッチンの定番3サービスから、換気扇・トイレ・窓・床ワックスまで全13種類を掲載しています。
+            依頼したい場所のページで、作業内容・料金相場・業者比較をご確認いただけます。
           </p>
         </div>
       </section>
@@ -166,9 +166,9 @@ export default function ServicesIndex() {
       {/* 主要サービス */}
       <section className="py-14">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">人気の主要サービス</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">主要サービス</h2>
           <p className="text-center text-base-content/70 mb-10 max-w-2xl mx-auto">
-            依頼件数の多い定番3サービス。対応業者の料金・口コミを比較できます。
+            代表的な3つのサービスです。対応業者の料金・サービス内容を比較できます。
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {mainServices.map((service) => (
@@ -199,7 +199,7 @@ export default function ServicesIndex() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">場所別のサービス詳細</h2>
           <p className="text-center text-base-content/70 mb-10 max-w-2xl mx-auto">
-            各サービスの作業内容・料金相場の目安・依頼前のポイントを解説しています。
+            各サービスの作業内容・料金相場の目安・依頼前のポイントをご説明しています。
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {detailServices.map((service) => (

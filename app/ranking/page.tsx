@@ -17,31 +17,31 @@ const RANKINGS = [
     href: "/ranking/aircon-ranking/",
     icon: "icon-aircon",
     title: "エアコンクリーニング業者ランキング",
-    description: "口コミ評価が高いエアコンクリーニング業者を比較。",
+    description: "エアコンクリーニング業者の料金と対応内容を比較しています。",
   },
   {
     href: "/ranking/bathroom-ranking/",
     icon: "icon-bathroom",
     title: "浴室クリーニング業者ランキング",
-    description: "浴室クリーニングでおすすめの業者を比較。",
+    description: "浴室クリーニング業者の料金と対応内容を比較しています。",
   },
   {
     href: "/ranking/cheap-ranking/",
     icon: "icon-price",
     title: "料金が安い業者ランキング",
-    description: "コスパを重視して選びたい方向けの比較。",
+    description: "料金を重視して業者を選びたい方に向けた比較です。",
   },
   {
     href: "/ranking/review-ranking/",
     icon: "icon-official",
     title: "口コミ評価が高い業者ランキング",
-    description: "実際の利用者評価で選ぶおすすめ業者。",
+    description: "各ブランド公式サイトのレビュー評価をもとにした店舗の比較です。",
   },
   {
     href: "/ranking/quick-service/",
     icon: "icon-quick",
     title: "即日対応可能な業者まとめ",
-    description: "今すぐ依頼したい方向けの即日対応業者まとめ。",
+    description: "急ぎで依頼したい方に向けた、即日対応の業者の探し方です。",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function RankingIndexPage() {
           <h3 className="text-xl font-bold text-gray-900 mb-4">テーマ別の比較記事</h3>
           <ul className="grid gap-2 md:grid-cols-2">
             {[
-              { href: "/comparison/major-3-comparison/", label: "大手3社徹底比較" },
+              { href: "/comparison/major-3-comparison/", label: "大手3社の比較" },
               { href: "/comparison/area-price-comparison/", label: "エリア別料金相場比較" },
               { href: "/comparison/time-comparison/", label: "作業時間・所要時間比較" },
               { href: "/comparison/warranty-comparison/", label: "保証・補償制度比較" },
@@ -106,7 +106,7 @@ export default function RankingIndexPage() {
         <section className="bg-white rounded-lg shadow-sm p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">比較の考え方</h3>
           <p className="text-gray-700 leading-relaxed">
-            ハウスクリーニング業者は、料金の安さだけでなく、依頼したい箇所への対応可否や口コミ評価、予約の取りやすさを合わせて比較するのがおすすめです。まずエアコン・浴室などサービス別のランキングで候補を絞り、料金や即日対応などの条件で最終的な依頼先を選んでください。
+            ハウスクリーニング業者は、料金の安さだけでなく、依頼したい箇所への対応可否や口コミ評価、予約の取りやすさを合わせて比較することをおすすめします。まずエアコン・浴室などサービス別のランキングで候補を絞り、料金や対応時期などの条件をもとに依頼先をお選びください。
           </p>
         </section>
       </div>

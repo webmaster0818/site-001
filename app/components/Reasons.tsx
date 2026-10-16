@@ -5,12 +5,12 @@ import { PARTNERS } from "../data/partners";
 // 「厳選された優良業者のみ」「口コミを比較」は根拠が無い・サイトの方針（架空の口コミを作らない）と合わないので外した。
 export default function Reasons() {
   const items = [
-    { icon: "icon-official", title: "公式情報だけで比べる",
-      body: `料金・対応エリア・保証は、提携${PARTNERS.length}社の公式サイトで確かめ、確認した日付と一緒に載せています。` },
-    { icon: "icon-stores", title: `全国${(providers as unknown[]).length.toLocaleString()}店舗を地域別に`,
-      body: "大手3ブランドの公式店舗一覧から、47都道府県の店舗を市区町村ごとにまとめています。" },
-    { icon: "icon-price", title: "同じメニューの料金を並べる",
-      body: "エアコン・浴室・キッチンなど同じメニューの公式料金を業者ごとに並べ、相場を確かめられます。" },
+    { icon: "icon-official", title: "公式情報にもとづいて比較します",
+      body: `料金・対応エリア・保証は、提携${PARTNERS.length}社の公式サイトで確認し、確認日を明記して掲載しています。` },
+    { icon: "icon-stores", title: `全国${(providers as unknown[]).length.toLocaleString()}店舗を地域別に掲載しています`,
+      body: "大手3ブランドの公式店舗一覧から、47都道府県の店舗を市区町村ごとに整理しています。" },
+    { icon: "icon-price", title: "同じメニューの料金を比較できます",
+      body: "エアコン・浴室・キッチンなど同じメニューの公式料金を業者ごとに掲載し、相場をご確認いただけます。" },
   ];
   return (
     <section className="cn-section cn-section-mist" aria-labelledby="reasons-title">

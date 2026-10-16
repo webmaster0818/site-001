@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ pref: str
   const count = list.filter((p) => p.pref_ja === prefJa).length;
   return {
     title: `${prefJa}のハウスクリーニング業者一覧（${count}店舗）｜店舗データベース`,
-    description: `${prefJa}のハウスクリーニング業者${count}店舗を掲載。おそうじ本舗・ダスキン・おそうじ革命など、各ブランド公式サイトで確認した実在店舗のみを確認日つきで一覧化しています。`,
+    description: `${prefJa}のハウスクリーニング業者${count}店舗を掲載しています。おそうじ本舗・ダスキン・おそうじ革命など、各ブランド公式サイトで所在を確認した店舗のみを、確認日を明記して掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/areas/${pref}/` },
   };
 }
@@ -53,7 +53,7 @@ export default async function PrefPage({ params }: { params: Promise<{ pref: str
       <section className="bg-gradient-to-r from-primary to-secondary text-primary-content py-14">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">{prefJa}のハウスクリーニング業者一覧</h1>
-          <p className="text-sm opacity-90">各ブランド公式サイトで確認した実在店舗のみを掲載しています</p>
+          <p className="text-sm opacity-90">各ブランド公式サイトで所在を確認した店舗のみを掲載しています</p>
         </div>
       </section>
       <div className="container mx-auto px-4 pt-6">
@@ -69,10 +69,10 @@ export default async function PrefPage({ params }: { params: Promise<{ pref: str
       <section className="container mx-auto px-4 pb-14">
         <div className="alert alert-info">
           <p className="text-sm">
-            依頼前には2〜3社の相見積もりがおすすめです。選び方の基準は
+            ご依頼の前には、2〜3社から相見積もりを取ることをおすすめします。選び方の基準は
             <a href="/ranking/" className="underline text-primary">比較ランキング</a>・
             <a href="/guide/" className="underline text-primary">初めての方へ</a>をご覧ください。
-            掲載情報の訂正は<a href="/contact/" className="underline text-primary">お問い合わせ</a>から。
+            掲載情報の訂正は、<a href="/contact/" className="underline text-primary">お問い合わせ</a>にて受け付けています。
           </p>
         </div>
       </section>

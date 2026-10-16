@@ -62,10 +62,10 @@ export default function ServiceDetailContent({ data }: { data: ServiceDetailData
       </div>
       <p className="text-xs text-base-content/60 mb-8">
         ※ 上記は一般的な市場相場の目安です。実際の料金は業者・地域・汚れ具合・オプションにより変動し、金額を保証するものではありません。
-        {data.priceNote ? ` ${data.priceNote}` : ""}正確な料金は無料見積りでご確認ください。
+        {data.priceNote ? ` ${data.priceNote}` : ""}正確な料金は、見積もりにてご確認ください。
       </p>
 
-      <h2 className="text-xl font-bold border-l-4 border-primary pl-3 mb-3">依頼前に押さえるポイント</h2>
+      <h2 className="text-xl font-bold border-l-4 border-primary pl-3 mb-3">依頼前に確認しておきたいポイント</h2>
       <ul className="list-disc pl-6 space-y-1 mb-8 leading-relaxed">
         {data.points.map((x, i) => (
           <li key={i}>{x}</li>
@@ -73,7 +73,7 @@ export default function ServiceDetailContent({ data }: { data: ServiceDetailData
       </ul>
 
       <div className="bg-base-200 rounded-2xl p-6 my-8 text-center">
-        <p className="font-bold mb-3">{data.name}の料金は業者で差が出ます。まずは無料見積りで比較を。</p>
+        <p className="font-bold mb-3">{data.name}の料金は業者によって異なります。複数の業者から見積もりを取り、比較することをおすすめします。</p>
         <div className="flex flex-wrap gap-3 justify-center">
           <Link href="/services/aircon/" className="btn btn-primary">業者を探す</Link>
           <Link href="/price/" className="btn btn-outline">料金相場を見る</Link>

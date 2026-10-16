@@ -20,7 +20,7 @@ export default function TroubleGrid() {
         <div className="cn-head" data-reveal>
           <p className="cn-eyebrow">TROUBLE</p>
           <h2 id="trouble-title" className="cn-h2">お悩みから探す</h2>
-          <p className="cn-lead">掃除したい場所を選んでください。料金の目安と、頼める業者をご案内します。</p>
+          <p className="cn-lead">掃除したい場所をお選びください。料金の目安と、依頼できる業者をご案内します。</p>
         </div>
         <ul className="cn-trouble-grid">
           {ITEMS.map((it, i) => (

@@ -21,7 +21,7 @@ const zenMaru = Zen_Maru_Gothic({
 export const metadata: Metadata = {
   title: "クリーンナビ | ハウスクリーニング業者比較サイト",
   description:
-    "ハウスクリーニング業者を料金・口コミ・サービス内容で徹底比較。エアコン・浴室・キッチンなど人気サービスの優良業者を簡単に見つけられます。30〜50代の主婦・共働き世帯に選ばれる比較サイト。",
+    "ハウスクリーニング業者を料金・対応エリア・サービス内容で比較できる情報サイトです。エアコン・浴室・キッチンなどの料金と全国の店舗情報を、各社の公式情報にもとづいて掲載しています。",
   keywords: [
     "ハウスクリーニング",
     "エアコンクリーニング",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "クリーンナビ | ハウスクリーニング業者比較サイト",
     description:
-      "エアコン・浴室・キッチンのハウスクリーニング業者を料金・口コミで簡単比較。信頼できるプロの業者が見つかります。",
+      "エアコン・浴室・キッチンのハウスクリーニング業者を、各社の公式情報にもとづいて料金・対応エリアで比較できます。",
     url: "https://cleaning-choices.com/",
     siteName: "クリーンナビ",
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "クリーンナビ | ハウスクリーニング業者比較サイト",
     description:
-      "プロのハウスクリーニング業者を料金・口コミで簡単比較。",
+      "ハウスクリーニング業者を、各社の公式情報にもとづいて料金・対応エリアで比較できます。",
     images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
   },
   viewport: {
@@ -82,7 +82,7 @@ const structuredData = {
     "name": "クリーンナビ",
     "alternateName": "CleanNavi",
     "url": "https://cleaning-choices.com/",
-    "description": "ハウスクリーニング業者を料金・口コミ・サービス内容で簡単比較できるサイト"
+    "description": "ハウスクリーニング業者を料金・対応エリア・サービス内容で比較できる情報サイト"
   },
   organization: {
     "@context": "https://schema.org",
@@ -120,7 +120,7 @@ const structuredData = {
         "name": "ハウスクリーニング業者の選び方のポイントは？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "①料金の透明性（追加料金の有無）、②口コミ・評判、③損害保険への加入、④スタッフの研修体制、⑤アフターフォローの有無を確認しましょう。クリーンナビでは、これらの基準を満たした優良業者のみを掲載しています。"
+          "text": "①料金の透明性（追加料金の有無）、②口コミ・評判、③損害保険への加入、④スタッフの研修体制、⑤アフターフォローの有無を確認することをおすすめします。当サイトでは、これらの項目を各社の公式情報で確認できるよう掲載しています。"
         }
       },
       {

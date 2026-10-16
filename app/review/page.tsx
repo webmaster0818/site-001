@@ -4,7 +4,7 @@ import { PARTNERS, SERVICE_LABELS, type ServiceTag } from "../data/partners";
 export const metadata: Metadata = {
   title: "ハウスクリーニング業者の口コミ・評判を公式情報で検証【業者一覧】",
   description:
-    "カジタク・アールクリーニング・ハウスクリーニング110番・ナックダスキン・エアコンクリーニング清風・キレイユ・ミガクる・オン・フォーエル・おそうじLabo・おそうじ革命などの口コミ・評判・料金・対応エリアを、各社公式サイトの一次確認と確認日つきで整理。架空の口コミは掲載しません。",
+    "カジタク・アールクリーニング・ハウスクリーニング110番・ナックダスキン・エアコンクリーニング清風・キレイユ・ミガクる・オン・フォーエル・おそうじLabo・おそうじ革命などの口コミ・評判・料金・対応エリアを、各社公式サイトで確認し、確認日を明記して掲載しています。架空の口コミは掲載していません。",
   alternates: { canonical: "https://cleaning-choices.com/review/" },
 };
 
@@ -34,7 +34,7 @@ export default function ReviewHubPage() {
           </div>
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">ハウスクリーニング業者の口コミ・評判を公式情報で検証</h1>
           <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl">
-            「○○の口コミは本当？」「評判は良い？」と調べるとき、まず確認すべきは料金体系・対応エリア・保証・運営会社といった公式に確認できる事実です。このページでは、当サイトと提携している業者について、各社公式サイトを直接確認した情報を確認日つきで整理し、口コミ・評判の読み方もあわせて案内します。架空の口コミ・独自集計の評点は作成しません。
+            業者の口コミや評判を調べる際は、まず料金体系・対応エリア・保証・運営会社など、公式サイトで確認できる事実を把握することをおすすめします。このページでは、当サイトと提携している業者について、各社公式サイトで確認した情報を確認日を明記して掲載し、口コミ・評判の読み方もあわせてご説明します。当サイトでは、架空の口コミや独自に集計した評点は作成しません。
           </p>
         </div>
       </section>
@@ -69,7 +69,7 @@ export default function ReviewHubPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-500 mt-3">掲載順はデータ順であり、優劣の評価ではありません。料金は各社公式サイトの表記をそのまま転記しています（確認日時点）。</p>
+          <p className="text-xs text-gray-500 mt-3">掲載順は優劣を示すものではありません。料金は各社公式サイトの表記をそのまま掲載しています（確認日時点）。</p>
         </div>
       </section>
 
@@ -100,19 +100,19 @@ export default function ReviewHubPage() {
 
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">口コミ・評判の読み方 — 当サイトの方針</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">口コミ・評判の読み方と当サイトの方針</h2>
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-lg border border-gray-200 p-5">
-              <p className="font-bold text-gray-900 mb-2">公式で確認できる事実を先に</p>
-              <p className="text-sm text-gray-600 leading-relaxed">料金・追加料金の条件・対応エリア・保証・運営会社は、口コミより先に公式サイトで確認できる「動かない事実」です。各業者ページで確認日つきで掲載しています。</p>
+              <p className="font-bold text-gray-900 mb-2">公式サイトで確認できる事実を優先します</p>
+              <p className="text-sm text-gray-600 leading-relaxed">料金・追加料金の条件・対応エリア・保証・運営会社は、公式サイトで確認できる事実です。各業者のページに、確認日を明記して掲載しています。</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
-              <p className="font-bold text-gray-900 mb-2">架空の口コミは作らない</p>
-              <p className="text-sm text-gray-600 leading-relaxed">当サイトは利用者の声や評点を創作しません。第三者の口コミを紹介する場合は、出どころを示せるものに限定します。広告（PR）の有無は掲載内容に影響しません。</p>
+              <p className="font-bold text-gray-900 mb-2">架空の口コミは作成しません</p>
+              <p className="text-sm text-gray-600 leading-relaxed">当サイトでは、利用者の声や評点を創作しません。第三者の口コミを紹介する場合は、出典を示せるものに限ります。広告（PR）の有無は掲載内容に影響しません。</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
-              <p className="font-bold text-gray-900 mb-2">口コミは「条件を揃えて」読む</p>
-              <p className="text-sm text-gray-600 leading-relaxed">同じ業者でも、機種・汚れの程度・地域・担当者で評価は変わります。自分と同じサービス・同じ地域の口コミを探し、良い評価と悪い評価の両方を読むのが基本です。</p>
+              <p className="font-bold text-gray-900 mb-2">口コミは条件をそろえて参考にすることをおすすめします</p>
+              <p className="text-sm text-gray-600 leading-relaxed">同じ業者でも、機種・汚れの程度・地域・担当者で評価は変わります。ご自身と同じサービス・同じ地域の口コミを探し、良い評価と悪い評価の両方を確認することをおすすめします。</p>
             </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">

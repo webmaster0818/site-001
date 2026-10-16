@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/comparison/warranty-comparison/" },
   title: "保証・補償制度比較 | クリーンナビ",
-  description: "各業者の保証内容を徹底比較。最適な業者選びをサポート。",
+  description: "各業者の保証内容の比較。業者選びの基本は、業者選びガイドでご説明しています。",
 };
 
 export default function WarrantycomparisonComparison() {
@@ -12,7 +12,7 @@ export default function WarrantycomparisonComparison() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-8">保証・補償制度比較</h1>
-          <p className="text-xl text-center mb-12">各業者の保証内容を徹底比較</p>
+          <p className="text-xl text-center mb-12">各業者の保証内容の比較</p>
           <div className="text-center">
             <Link href="/guide/" className="btn btn-primary btn-lg">業者選びガイドを見る</Link>
           </div>

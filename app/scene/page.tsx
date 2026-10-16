@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "シーン別ハウスクリーニング活用ガイド | クリーンナビ",
   description:
-    "引越し前、新築・リフォーム後、年末大掃除、民泊運営、オフィスなど、利用シーン別にハウスクリーニングの活用方法とおすすめ業者を紹介します。",
+    "引越し前、新築・リフォーム後、年末大掃除、民泊運営、オフィスなど、利用シーン別にハウスクリーニングの活用方法をご紹介します。",
   alternates: {
     canonical: "https://cleaning-choices.com/scene/",
   },
@@ -16,31 +16,31 @@ const SCENES = [
     href: "/scene/moving-aircon/",
     icon: "icon-moving",
     title: "引越し前エアコンクリーニング",
-    description: "引越し前のエアコン清掃で新居を快適に。",
+    description: "引越し前後のエアコンクリーニングについて。",
   },
   {
     href: "/scene/new-house/",
     icon: "icon-newhouse",
     title: "新築・リフォーム後クリーニング",
-    description: "新築・リフォーム後の仕上げ清掃。",
+    description: "新築・リフォーム後の仕上げ清掃について。",
   },
   {
     href: "/scene/year-end-package/",
     icon: "icon-yearend",
     title: "年末大掃除パッケージ",
-    description: "年末の大掃除をプロにお任せ。",
+    description: "年末の大掃除をプロに依頼する際の考え方と予約時期について。",
   },
   {
     href: "/scene/airbnb/",
     icon: "icon-minpaku",
     title: "民泊・Airbnb向けクリーニング",
-    description: "民泊運営に最適な定期清掃プラン。",
+    description: "民泊施設の清掃について。",
   },
   {
     href: "/scene/office/",
     icon: "icon-office",
     title: "事務所・オフィスクリーニング",
-    description: "オフィス全体の清掃サービス。",
+    description: "事務所・オフィスの清掃について。",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function SceneIndexPage() {
             シーン別クリーニングガイド
           </h1>
           <p className="text-lg opacity-90">
-            引越し・新築・年末大掃除・民泊・オフィスなど、利用シーンに合わせたハウスクリーニングの活用方法を紹介します。
+            引越し・新築・年末大掃除・民泊・オフィスなど、利用シーンに合わせたハウスクリーニングの活用方法をご紹介します。
           </p>
         </div>
       </section>

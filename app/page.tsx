@@ -41,12 +41,12 @@ export default function Home() {
  </div>
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
  {[
- "仕事や育児で掃除の時間がとれず、エアコンや水回りの汚れが気になっている",
- "業者が多すぎて、どこに頼めばよいか・料金が適正か分からない",
+ "仕事や育児で掃除の時間が取れず、エアコンや水回りの汚れが気になっている",
+ "業者が多く、どこに依頼すればよいか、料金が適正かを判断しにくい",
  "浴室のカビや換気扇の油汚れが市販の洗剤では落ちなくなってきた",
  "引越しや退去の前に、部屋をまとめてきれいにしたい",
  "小さい子どもやペットがいるので、洗剤や作業の安全性が気になる",
- "年末の大掃除を全部自分でやるのは大変なので、一部をプロに任せたい",
+ "年末の大掃除のうち、一部をプロに依頼したい",
  ].map((worry) => (
  <div key={worry} className="card bg-white p-5 text-sm text-gray-700 leading-relaxed">
  {worry}
@@ -55,10 +55,10 @@ export default function Home() {
  </div>
  <div className="text-center mt-10">
  <p className="text-lg font-bold text-gray-800 mb-4">
- そのお悩み、<span style={{ color: "#16323a" }}>クリーンナビ</span>の比較で解決できます
+ <span style={{ color: "#16323a" }}>クリーンナビ</span>では、業者選びに必要な情報を掲載しています
  </p>
  <a className="btn-cta" href="#trouble">
- あなたに合った業者を探す
+ 条件に合う業者を探す
  </a>
  </div>
  </div>
@@ -72,7 +72,7 @@ export default function Home() {
  <div className="cn-head" data-reveal>
  <p className="cn-eyebrow">BRANDS</p>
  <h2 id="brands-title" className="cn-h2">大手ブランドの店舗から探す</h2>
- <p className="cn-lead">公式サイトで実在を確認した全国の加盟店・拠点を、都道府県別に探せます</p>
+ <p className="cn-lead">公式サイトで所在を確認した全国の加盟店・拠点を、都道府県別に掲載しています</p>
  </div>
  <ul className="cn-partner-grid">
  {[
@@ -98,7 +98,7 @@ export default function Home() {
  </div>
  </section>
 
-      <PartnerCards title="提携業者の口コミ・評判を公式情報で検証" intro="当サイトと提携している専門業者について、料金・対応エリア・保証を各社公式サイトで一次確認し、確認日つきで整理しています。架空の口コミ・独自評点は作成しません。掲載順は優劣の評価ではありません。" />
+      <PartnerCards title="提携業者の口コミ・評判を公式情報で検証" intro="当サイトと提携している専門業者について、料金・対応エリア・保証を各社の公式サイトで確認し、確認日を明記して掲載しています。当サイトでは、架空の口コミや独自の評点は作成しません。掲載順は優劣を示すものではありません。" />
 
  <Reasons />
 
@@ -216,7 +216,7 @@ export default function Home() {
  <strong>口コミ・評判</strong>、③<strong>損害保険への加入</strong>、④
  <strong>スタッフの研修体制</strong>、⑤
  <strong>アフターフォローの有無</strong>
- を確認しましょう。クリーンナビでは、これらの基準を満たした優良業者のみを掲載しています。
+ を確認することをおすすめします。当サイトでは、これらの項目を各社の公式情報で確認できるよう掲載しています。
  </p>
  </div>
  </div>
@@ -264,7 +264,7 @@ export default function Home() {
  </span>
  <p className="text-base text-gray-700 leading-relaxed">
  一般的には<strong>年に1〜2回</strong>
- が推奨されています。特に夏のエアコン使用シーズン前（4〜5月）にクリーニングすると、カビやホコリを除去して清潔な空気で過ごせます。ペットを飼っている方や喫煙者がいるご家庭では、より頻繁なクリーニングをおすすめします。
+ が目安とされています。夏の使用シーズン前（4〜5月）にクリーニングを行うと、カビやホコリを取り除いた状態で使い始めることができます。ペットを飼っている方や喫煙者がいるご家庭では、より頻繁なクリーニングをおすすめします。
  </p>
  </div>
  </div>
@@ -313,7 +313,7 @@ export default function Home() {
  <p className="text-base text-gray-700 leading-relaxed">
  基本的には<strong>作業スペースの確保</strong>
  （周囲の物を少し移動）と<strong>水道・電気の使用許可</strong>
- があればOKです。貴重品の保管や、ペットがいる場合は別室への移動をお願いする業者もあります。詳しくは各業者の注意事項をご確認ください。
+ をお願いされるのが一般的です。貴重品の保管や、ペットがいる場合は別室への移動をお願いする業者もあります。詳しくは各業者の注意事項をご確認ください。
  </p>
  </div>
  </div>
@@ -360,7 +360,7 @@ export default function Home() {
  A
  </span>
  <p className="text-base text-gray-700 leading-relaxed">
- はい、<strong>賃貸マンションでも問題なく依頼できます</strong>
+ はい、<strong>賃貸マンションでも依頼できます</strong>
  。退去時の原状回復費用を抑えるために依頼される方も多いです。ただし、大規模な作業（外壁洗浄など）は管理会社への確認が必要な場合があります。
  </p>
  </div>
@@ -374,7 +374,7 @@ export default function Home() {
  <section className="cn-cta">
  <div className="cn-container" data-reveal>
  <h2>掃除したい場所か、お住まいの地域から探す</h2>
- <p>料金・対応エリア・保証を、各社の公式情報で比べられます。</p>
+ <p>料金・対応エリア・保証を、各社の公式情報にもとづいて比較できます。</p>
  <div className="cn-hero-actions">
  <a className="cn-btn cn-btn-primary cn-btn-lg" href="#trouble">お悩みから探す</a>
  <a className="cn-btn cn-btn-primary cn-btn-lg" href="#area">エリアから探す</a>

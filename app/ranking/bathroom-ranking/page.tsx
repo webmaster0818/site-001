@@ -5,7 +5,7 @@ import PartnerCards from "../../components/PartnerCards";
 export const metadata: Metadata = {
   title: "浴室クリーニング業者おすすめランキング｜大手3社の比較と選び方",
   description:
-    "浴室クリーニング業者を大手3ブランド(おそうじ本舗・ダスキン・おそうじ革命)の公式確認情報で比較。料金相場(浴室のみ15,000円〜)、カビ・防カビの追加項目の注意点、失敗しない選び方をまとめました。",
+    "浴室クリーニング業者を大手3ブランド(おそうじ本舗・ダスキン・おそうじ革命)の公式情報で比較しています。料金相場（浴室のみ15,000円〜）、カビ取り・防カビの追加項目の注意点、業者選びの確認ポイントをご説明します。",
   alternates: { canonical: "https://cleaning-choices.com/ranking/bathroom-ranking/" },
 };
 
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "浴室クリーニングはどれくらいの頻度で頼むと良いですか？",
-    a: "カビが発生しやすい環境かどうかで変わりますが、年1〜2回の依頼で汚れをリセットし、日常は換気・水切りで維持する使い方が一般的です。定期サービスを提供している業者もあります。",
+    a: "カビが発生しやすい環境かどうかで変わりますが、年1〜2回プロに依頼して汚れを落とし、日常は換気・水切りで清潔な状態を保つ方法が一般的です。定期サービスを提供している業者もあります。",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function BathroomRankingPage() {
             浴室クリーニング業者おすすめランキング
           </h1>
           <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl">
-            浴室クリーニングを頼める大手3ブランドを、各社公式サイトで確認した情報だけで比較します。ダスキン サービスマスターは浴室クリーニングをはじめとする各種ハウスクリーニングを提供する老舗ブランドです。当サイトは架空の口コミや独自集計の評点を作成しません。
+            浴室クリーニングを頼める大手3ブランドを、各社公式サイトで確認した情報のみで比較しています。ダスキン サービスマスターは浴室クリーニングをはじめとする各種ハウスクリーニングを提供する老舗ブランドです。当サイトでは、架空の口コミや独自に集計した評点は作成しません。
           </p>
         </div>
       </section>
@@ -84,19 +84,19 @@ export default function BathroomRankingPage() {
 
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">失敗しない選び方（4つの確認ポイント）</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">業者選びの4つの確認ポイント</h2>
           <div className="grid gap-4 md:grid-cols-2 mt-6">
             <div className="rounded-lg border border-gray-200 p-5">
               <p className="font-bold text-gray-900 mb-2">1. 作業範囲の確認</p>
-              <p className="text-sm text-gray-600 leading-relaxed">エプロン内部・天井・鏡のウロコ取りが基本料金に含まれるかは業者ごとに異なります。見積もり時に範囲を明確にしましょう。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">エプロン内部・天井・鏡のウロコ取りが基本料金に含まれるかは業者ごとに異なります。見積もりの際に作業範囲をご確認ください。</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <p className="font-bold text-gray-900 mb-2">2. 追加料金の条件</p>
-              <p className="text-sm text-gray-600 leading-relaxed">カビ除去・防カビコーティングは追加になる場合があります。「追加料金なし」を明記する業者もあるため、総額で比較を。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">カビ除去・防カビコーティングは追加になる場合があります。「追加料金なし」を明記する業者もあるため、総額で比較することをおすすめします。</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <p className="font-bold text-gray-900 mb-2">3. セットプランの活用</p>
-              <p className="text-sm text-gray-600 leading-relaxed">洗面所・トイレとまとめると1箇所あたりの単価が下がる場合があります。水回り全体の汚れ具合で判断しましょう。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">洗面所・トイレとまとめると1箇所あたりの単価が下がる場合があります。水回り全体の汚れ具合をもとにご判断ください。</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <p className="font-bold text-gray-900 mb-2">4. 店舗の口コミ・評価</p>
@@ -125,7 +125,7 @@ export default function BathroomRankingPage() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">お住まいの地域の店舗から探す</h2>
-          <p className="text-sm text-gray-600 mb-6">全国3,500店超の実在確認済み店舗データベースから、近くの対応店舗を確認できます。</p>
+          <p className="text-sm text-gray-600 mb-6">公式サイトで所在を確認した全国3,500店超の店舗情報から、お近くの対応店舗をご確認いただけます。</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/services/bathroom/" className="rounded-lg bg-sky-600 px-6 py-3 text-sm font-bold text-white hover:bg-sky-700 transition">浴室クリーニング詳細</a>
             <a href="/areas/" className="rounded-lg border border-sky-600 px-6 py-3 text-sm font-bold text-sky-600 hover:bg-sky-50 transition">地域から探す</a>

@@ -4,13 +4,13 @@ export default function SeasonalCleaningNote() {
     <section className="py-10 bg-amber-50 border-y border-amber-100">
       <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-          年末の大掃除をプロに頼むなら、予約は10〜11月が確実です
+          年末の大掃除をプロに依頼する場合は、10〜11月のご予約をおすすめします
         </h2>
         <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-3">
-          ハウスクリーニング業者の予約は、大掃除シーズンの12月に集中しやすく、希望日が埋まってしまうことがあります。年末に依頼を考えている場合は、10〜11月のうちに候補の店舗へ問い合わせておくと、日程の選択肢を確保しやすくなります。
+          ハウスクリーニング業者の予約は、大掃除シーズンの12月に集中しやすく、希望日の予約が取りにくくなる場合があります。年末の依頼をご検討の場合は、10〜11月のうちに候補の店舗へお問い合わせいただくと、日程を選びやすくなります。
         </p>
         <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-5">
-          「どこまで自分でやり、どこからプロに任せるか」の切り分けや、依頼先の選び方は年末大掃除ガイドにまとめています。このページの店舗一覧から、お住まいの地域の対応店舗を確認したうえで、早めの問い合わせをおすすめします。
+          ご自身で行う範囲とプロに依頼する範囲の分け方や、依頼先の選び方は、年末大掃除ガイドでご説明しています。このページの店舗一覧でお住まいの地域の対応店舗をご確認のうえ、早めのお問い合わせをおすすめします。
         </p>
         <a
           href="/scene/year-end-package/"

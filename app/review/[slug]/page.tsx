@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const ym = p.confirmedAt.replace(/(\d+年\d+月).*/, "$1");
   return {
     title: `${p.name}の口コミ・評判は？料金・対応エリア・保証を公式情報で検証【${ym}確認】`,
-    description: `${p.name}（${p.company}）の口コミ・評判を調べる前に確認したい料金体系・対応エリア・保証・支払方法・キャンセル条件を公式サイトで一次確認して整理。確認できなかった項目も正直に記載します。架空の口コミは掲載しません。`,
+    description: `${p.name}（${p.company}）の料金体系・対応エリア・保証・支払方法・キャンセル条件を、公式サイトで確認して掲載しています。確認できなかった項目も明記しており、架空の口コミは掲載していません。`,
     alternates: { canonical: `https://cleaning-choices.com/review/${p.slug}/` },
   };
 }
@@ -54,17 +54,17 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
   const faqs = [
     {
       q: `${p.name}の口コミ・評判はどこで確認できますか？`,
-      a: `当サイトは架空の口コミを作成しないため、利用者の声そのものは掲載していません。口コミを読む際は、同じサービス（例：${SERVICE_LABELS[p.tags[0]]}）・同じ地域の投稿を探し、良い評価と悪い評価の両方を確認してください。料金・エリア・保証といった公式に確認できる事実は、このページに確認日つきで整理しています。`,
+      a: `当サイトでは架空の口コミを作成しないため、利用者の声そのものは掲載していません。口コミを読む際は、同じサービス（例：${SERVICE_LABELS[p.tags[0]]}）・同じ地域の投稿を探し、良い評価と悪い評価の両方を確認してください。料金・対応エリア・保証など公式サイトで確認できる事実は、このページに確認日を明記して掲載しています。`,
     },
     {
       q: `${p.name}の料金は追加料金がかかりますか？`,
       a: p.prices.length
-        ? `公式サイトの料金表記は上の表のとおりです（確認日 ${p.confirmedAt}）。追加料金の条件（駐車場代・汚れの程度・お掃除機能付きの加算など）は公式サイトの注記をご確認のうえ、見積もり時に必ず確認してください。`
-        : `公式サイト上で料金表の明記を確認できませんでした。見積もり時に基本料金と追加料金の条件を必ず確認してください。`,
+        ? `公式サイトの料金表記は上の表のとおりです（確認日 ${p.confirmedAt}）。追加料金の条件（駐車場代・汚れの程度・お掃除機能付きの加算など）は公式サイトの注記をご確認のうえ、見積もりの際にご確認ください。`
+        : `公式サイト上で料金表の明記を確認できませんでした。見積もりの際に、基本料金と追加料金の条件をご確認ください。`,
     },
     {
       q: `${p.name}はどの地域に対応していますか？`,
-      a: `公式サイトの記載では「${p.area}」です${p.areaNote ? `（${p.areaNote}）` : ""}。エリア内でも一部地域は対象外となる場合があるため、申込み前に住所を伝えて確認してください。`,
+      a: `公式サイトの記載では「${p.area}」です${p.areaNote ? `（${p.areaNote}）` : ""}。エリア内でも一部地域は対象外となる場合があるため、お申し込みの前に、住所を伝えてご確認ください。`,
     },
     ...(p.officialFaqs ?? []),
   ];
@@ -111,7 +111,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
           </div>
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">{p.name}の口コミ・評判は？料金・対応エリア・保証を公式情報で検証</h1>
           <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl">
-            このページの情報は、{p.name}の公式サイトを当サイトが直接確認して整理したものです（確認日: {p.confirmedAt}）。伝聞や口コミサイトからの引用はしていません。口コミ・評判を読む前に、料金・エリア・保証といった「公式に確認できる事実」を先に押さえてください。確認できなかった項目は正直に記載します。
+            このページの情報は、当サイトが{p.name}の公式サイトを直接確認して整理したものです（確認日: {p.confirmedAt}）。伝聞や口コミサイトからの引用は行っていません。口コミ・評判を参考にする前に、料金・対応エリア・保証など公式サイトで確認できる事実をご確認ください。公式サイトで確認できなかった項目は、その旨を記載しています。
           </p>
           <p className="mt-3 text-xs text-gray-500">
             {publishedIso !== modifiedIso && <>公開日 <time dateTime={publishedIso}>{publishedIso.replace(/-/g, "/")}</time>・</>}
@@ -127,7 +127,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">公式サイトの料金（確認日 {p.confirmedAt}）</h2>
-          <p className="text-sm text-gray-600 mb-6">料金は公式サイトの表記をそのまま転記しています。税込・税抜の表記も原文どおりです。</p>
+          <p className="text-sm text-gray-600 mb-6">料金は公式サイトの表記をそのまま掲載しています。税込・税抜の表記も公式サイトのとおりです。</p>
           {p.prices.length ? (
             <div className="overflow-x-auto">
               <table className="w-full min-w-[520px] text-sm border-collapse">
@@ -172,7 +172,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-gray-500 mt-3">出典: {p.name}公式サイト（当サイト確認日 {p.confirmedAt}）{p.checkedPages && p.checkedPages.length > 0 && <>。確認したページ: {p.checkedPages.join("／")}</>}。内容は変更される場合があります。申込み前に必ず公式サイトで最新情報をご確認ください。</p>
+          <p className="text-xs text-gray-500 mt-3">出典: {p.name}公式サイト（当サイト確認日 {p.confirmedAt}）{p.checkedPages && p.checkedPages.length > 0 && <>。確認したページ: {p.checkedPages.join("／")}</>}。内容は変更される場合がありますので、お申し込みの前に公式サイトにて最新情報をご確認ください。</p>
         </div>
       </section>
 
@@ -181,7 +181,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
         <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{p.name}の口コミで気にされやすい点を公式情報で確認</h2>
-            <p className="text-sm text-gray-600 mb-6">口コミ・評判で話題になりやすい点について、{p.name}の公式サイトに何が書かれているかを整理しました（確認日 {p.confirmedAt}）。利用者の口コミ本文は掲載していません。公式に記載が見つからない点はそのように記載しています。</p>
+            <p className="text-sm text-gray-600 mb-6">口コミ・評判で話題になりやすい点について、{p.name}の公式サイトの記載を整理しています（確認日 {p.confirmedAt}）。利用者の口コミ本文は掲載していません。公式サイトに記載がない点は、その旨を記載しています。</p>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[560px] text-sm border-collapse">
                 <thead>
@@ -210,8 +210,8 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
       {priceCols.length > 0 && (
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4 max-w-5xl">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{p.name}と同じメニューの公式料金を他社と比べる</h2>
-            <p className="text-sm text-gray-600 mb-6">当サイトが各社の公式サイトで確認した料金のうち、{p.name}と共通するメニューだけを並べました（いずれも税込の公式表記・各社の確認日時点）。作業範囲・割引条件・対応エリアは各社で異なるため、詳しくは各社の検証ページの注記を確認してください。</p>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{p.name}と同じメニューの公式料金を他社と比較する</h2>
+            <p className="text-sm text-gray-600 mb-6">当サイトが各社の公式サイトで確認した料金のうち、{p.name}と共通するメニューのみを掲載しています（いずれも税込の公式表記・各社の確認日時点）。作業範囲・割引条件・対応エリアは各社で異なるため、詳しくは各社の検証ページの注記をご確認ください。</p>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[640px] text-sm border-collapse bg-white">
                 <thead>
@@ -238,7 +238,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-gray-500 mt-3">比較相手は、{p.name}と得意ジャンル（公式メニュー）の重なりが多い当サイト掲載の業者から選んでいます。「—」は公式サイトで料金を確認できなかった、またはメニューが無い項目です。表の並びは優劣の評価ではありません。</p>
+            <p className="text-xs text-gray-500 mt-3">比較相手は、{p.name}と得意ジャンル（公式メニュー）の重なりが多い当サイト掲載の業者から選んでいます。「—」は、公式サイトで料金を確認できなかった項目、またはメニューがない項目です。表の並びは優劣を示すものではありません。</p>
           </div>
         </section>
       )}
@@ -259,8 +259,8 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
           </div>
           {p.unconfirmed.length > 0 && (
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">確認できなかったこと</h2>
-              <p className="text-sm text-gray-600 mb-3">確認日時点で公式サイト上に記載を見つけられなかった項目です。気になる場合は申込み前に直接お問い合わせください。</p>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">公式サイトで確認できなかった項目</h2>
+              <p className="text-sm text-gray-600 mb-3">確認日時点で、公式サイト上に記載が確認できなかった項目です。必要に応じて、お申し込みの前に業者へ直接お問い合わせください。</p>
               <ul className="space-y-2">
                 {p.unconfirmed.map((u) => (
                   <li key={u} className="flex gap-3 text-sm text-gray-700">
@@ -277,28 +277,28 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
       {/* 口コミの読み方・向き */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">{p.name}の口コミ・評判を読むときの3つの視点</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">{p.name}の口コミ・評判を参考にする際の3つの観点</h2>
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-lg border border-gray-200 bg-white p-5">
-              <p className="font-bold text-gray-900 mb-2">1. 同じサービスの口コミか</p>
-              <p className="text-sm text-gray-600 leading-relaxed">{p.name}の公式メニューは「{p.services.slice(0, 3).join("・")}」などです。自分が頼むサービスと同じ口コミを探してください。設備の種類や汚れの程度で評価は変わります。</p>
+              <p className="font-bold text-gray-900 mb-2">1. 同じサービスの口コミを参考にする</p>
+              <p className="text-sm text-gray-600 leading-relaxed">{p.name}の公式メニューは「{p.services.slice(0, 3).join("・")}」などです。ご依頼予定のサービスと同じサービスの口コミを参考にしてください。設備の種類や汚れの程度によって評価は異なります。</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-5">
-              <p className="font-bold text-gray-900 mb-2">2. 同じ地域・時期の口コミか</p>
-              <p className="text-sm text-gray-600 leading-relaxed">対応エリアは「{p.area}」です。担当スタッフや{p.peakSeason ? `繁忙期（公式サイトの記載では${p.peakSeason}）` : "繁忙期"}の予約状況で体験は変わるため、地域と時期が近い投稿を優先して読みます。</p>
+              <p className="font-bold text-gray-900 mb-2">2. 同じ地域・時期の口コミを参考にする</p>
+              <p className="text-sm text-gray-600 leading-relaxed">対応エリアは「{p.area}」です。担当スタッフや{p.peakSeason ? `繁忙期（公式サイトの記載では${p.peakSeason}）` : "繁忙期"}の予約状況によって利用時の状況は異なるため、地域と時期が近い投稿を優先して参考にすることをおすすめします。</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-5">
-              <p className="font-bold text-gray-900 mb-2">3. 悪い口コミの「理由」を見る</p>
-              <p className="text-sm text-gray-600 leading-relaxed">追加料金・日程・仕上がりのどれが原因かで、自分に当てはまるかが変わります。追加料金の条件は上の料金表と公式注記で先に確認できます。</p>
+              <p className="font-bold text-gray-900 mb-2">3. 低い評価の理由を確認する</p>
+              <p className="text-sm text-gray-600 leading-relaxed">追加料金・日程・仕上がりのいずれが原因かによって、ご自身に当てはまるかどうかが異なります。追加料金の条件は、上の料金表と公式サイトの注記でご確認いただけます。</p>
             </div>
           </div>
           <div className="grid gap-4 md:grid-cols-2 mt-6">
             <div className="rounded-xl border border-sky-200 bg-sky-50 p-5">
-              <p className="text-xs font-bold text-sky-700 mb-2">確認できた事実から言える「向いているケース」</p>
+              <p className="text-xs font-bold text-sky-700 mb-2">公式情報から判断できる、利用に適したケース</p>
               <p className="text-sm text-gray-800 leading-relaxed">{p.fitFor}</p>
             </div>
             <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
-              <p className="text-xs font-bold text-amber-700 mb-2">申込み前に確認しておきたい点</p>
+              <p className="text-xs font-bold text-amber-700 mb-2">お申し込みの前に確認しておきたい点</p>
               <p className="text-sm text-gray-800 leading-relaxed">{p.checkBefore}</p>
             </div>
           </div>

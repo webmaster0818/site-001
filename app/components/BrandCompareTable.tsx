@@ -13,7 +13,7 @@ const ROWS = [
     stores: count("honpo"),
     storesLabel: "店舗",
     feature: "業界最大手。特許取得の「ファインバブルエアコンクリーニング」を提供",
-    points: ["損害保険加入済み", "Webで簡単予約"],
+    points: ["損害保険加入済み", "Web予約に対応"],
   },
   {
     slug: "duskin",
@@ -75,7 +75,7 @@ export default function BrandCompareTable() {
         </table>
       </div>
       <p className="text-xs text-gray-500 mt-3">
-        掲載内容は各社公式サイトで確認した情報のみです（店舗数は当サイト収録の実在確認済み店舗数）。掲載順は店舗数順であり、優劣の評価ではありません。
+        掲載内容は各社公式サイトで確認した情報のみです（店舗数は、当サイトが公式サイトで所在を確認した店舗の数です）。掲載順は店舗数の順で、優劣を示すものではありません。
       </p>
       <KakumeiAffiliateCTA variant="text1" />
     </div>

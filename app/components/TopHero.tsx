@@ -39,10 +39,10 @@ export default function TopHero() {
           />
         </picture>
         <div className="cn-hero-copy">
-          <p className="cn-hero-label">公式情報で中立に比較する、ハウスクリーニングの比較サイト</p>
+          <p className="cn-hero-label">各社の公式情報にもとづく、ハウスクリーニングの比較サイト</p>
           <h1 id="hero-title" className="cn-hero-title">
-            <span>エアコン・浴室・キッチン。</span>
-            <span>プロのお掃除を、正しく選ぶ。</span>
+            <span>エアコン・浴室・キッチンの</span>
+            <span>ハウスクリーニング業者選びを支援します</span>
           </h1>
           <div className="cn-hero-actions">
             <a className="cn-btn cn-btn-primary cn-btn-lg" href="#trouble">お悩みから探す</a>
@@ -70,7 +70,7 @@ export default function TopHero() {
       </dl>
       <p className="cn-hero-note">
         ※ 掲載店舗・対応エリアは、おそうじ本舗・ダスキン サービスマスター・おそうじ革命の公式店舗一覧から当サイトが集計した数です。
-        エアコンクリーニングの料金は掲載業者の公式表示の最安（おそうじLabo 初回限定・税込）。地域・機種・時期により異なります。
+        エアコンクリーニングの料金は、掲載業者の公式表示のうち最も安い料金です（おそうじLabo 初回限定・税込）。料金は地域・機種・時期により異なります。
         当サイトは清掃業者ではなく、業者を選ぶための情報を提供する比較サイトです。写真はイメージです。
       </p>
     </section>

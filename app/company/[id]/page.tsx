@@ -30,7 +30,7 @@ export async function generateMetadata({
   }
   return {
     title: `${meta.name}の${meta.category}｜料金・サービス内容 | クリーンナビ`,
-    description: `${meta.name}の${meta.category}サービスを紹介。料金、対応エリア、サービス内容を掲載しています。`,
+    description: `${meta.name}の${meta.category}サービスをご紹介します。料金、対応エリア、サービス内容を掲載しています。`,
     alternates: {
       canonical: `https://cleaning-choices.com/company/${id}/`,
     },

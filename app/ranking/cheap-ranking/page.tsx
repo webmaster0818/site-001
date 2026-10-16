@@ -5,7 +5,7 @@ import PartnerCards from "../../components/PartnerCards";
 export const metadata: Metadata = {
   title: "ハウスクリーニングを安く頼むには｜サービス別の料金相場と節約のコツ",
   description:
-    "ハウスクリーニングを安く頼むための実践ガイド。エアコン・浴室・キッチンのサービス別料金相場、セットプラン・閑散期などで費用を抑えるコツ、安さだけで選ばないための注意点をまとめました。",
+    "ハウスクリーニングの費用を抑えるためのガイドです。エアコン・浴室・キッチンのサービス別料金相場、セットプランや閑散期の利用など費用を抑える方法、料金だけで選ばないための注意点をご説明します。",
   alternates: { canonical: "https://cleaning-choices.com/ranking/cheap-ranking/" },
 };
 
@@ -22,7 +22,7 @@ const PRICE_ROWS = [
 const faqs = [
   {
     q: "ハウスクリーニングの費用を安く抑えるコツはありますか？",
-    a: "①複数箇所をまとめて頼むセットプランを使う ②エアコンは繁忙期(5〜8月)を避けて春・秋に頼む ③2台目以降の割引を活用する ④相見積もりで総額を比較する、の4つが基本です。",
+    a: "①複数箇所をまとめて頼むセットプランを使う ②エアコンは繁忙期(5〜8月)を避けて春・秋に頼む ③2台目以降の割引を活用する ④相見積もりで総額を比較する、の4点が基本です。",
   },
   {
     q: "安い業者を選ぶときの注意点はありますか？",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "「追加料金なし」の業者はありますか？",
-    a: "おそうじ革命は追加料金なしの明朗会計を公式サイトで明記しています。他の業者でも見積もり時に総額を確定できる場合があるため、申込み前に確認するのが確実です。",
+    a: "おそうじ革命は追加料金なしの明朗会計を公式サイトで明記しています。他の業者でも見積もり時に総額を確定できる場合があるため、お申し込みの前にご確認ください。",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function CheapRankingPage() {
             ハウスクリーニングを安く頼むには
           </h1>
           <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl">
-            「一番安い業者」を探す前に、まず相場を知ることが節約の近道です。相場が分かれば、安すぎる見積もりの理由(作業範囲が狭い等)にも気づけます。このページではサービス別の料金相場と、費用を抑える実践的なコツをまとめました。
+            料金の安い業者を探す前に、まず相場を把握することが費用を抑える近道です。相場を把握しておくと、相場より大幅に安い見積もりの理由（作業範囲が狭いなど）にも気づきやすくなります。このページでは、サービス別の料金相場と費用を抑える方法をご説明します。
           </p>
         </div>
       </section>
@@ -89,7 +89,7 @@ export default function CheapRankingPage() {
 
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">費用を抑える4つのコツ</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">費用を抑える4つの方法</h2>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-lg border border-gray-200 bg-white p-5">
               <p className="font-bold text-gray-900 mb-2">1. セットプランでまとめて頼む</p>
@@ -97,15 +97,15 @@ export default function CheapRankingPage() {
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-5">
               <p className="font-bold text-gray-900 mb-2">2. 繁忙期を避ける</p>
-              <p className="text-sm text-gray-600 leading-relaxed">エアコンは5〜8月、大掃除需要は12月に集中します。春・秋など時期をずらすと予約も取りやすく、料金面でも有利なことがあります。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">エアコンは5〜8月、大掃除需要は12月に集中します。春・秋など時期をずらすと予約が取りやすく、料金面でも有利になる場合があります。</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-5">
               <p className="font-bold text-gray-900 mb-2">3. 台数・回数の割引を使う</p>
-              <p className="text-sm text-gray-600 leading-relaxed">エアコン2台目以降の割引や定期サービスの割引を設けている業者があります。対象かどうか申込み時に確認しましょう。</p>
+              <p className="text-sm text-gray-600 leading-relaxed">エアコン2台目以降の割引や定期サービスの割引を設けている業者があります。対象となるかどうかは、お申し込みの際にご確認ください。</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-5">
-              <p className="font-bold text-gray-900 mb-2">4. 相見積もりで総額比較</p>
-              <p className="text-sm text-gray-600 leading-relaxed">表示価格ではなく「追加料金を含めた総額」で2〜3社を比べるのが確実です。追加料金なしを明記する業者もあります。</p>
+              <p className="font-bold text-gray-900 mb-2">4. 相見積もりで総額を比較する</p>
+              <p className="text-sm text-gray-600 leading-relaxed">表示価格ではなく「追加料金を含めた総額」で2〜3社を比較することをおすすめします。追加料金なしを明記する業者もあります。</p>
             </div>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function CheapRankingPage() {
         </div>
       </section>
 
-      <PartnerCards title="料金を公式サイトで明示している提携業者" intro="当サイトと提携している業者のうち、公式サイトで料金を明示している業者です。料金は公式表記のまま転記し、掲載順は優劣の評価ではありません。" />
+      <PartnerCards title="料金を公式サイトで明示している提携業者" intro="当サイトと提携している業者のうち、公式サイトで料金を明示している業者です。料金は公式の表記のまま掲載しています。掲載順は優劣を示すものではありません。" />
 
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -137,7 +137,7 @@ export default function CheapRankingPage() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">近くの店舗の情報を確認する</h2>
-          <p className="text-sm text-gray-600 mb-6">全国3,500店超の実在確認済み店舗データベースで、お住まいの地域の対応店舗を確認できます。</p>
+          <p className="text-sm text-gray-600 mb-6">公式サイトで所在を確認した全国3,500店超の店舗情報から、お住まいの地域の対応店舗をご確認いただけます。</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a href="/areas/" className="rounded-lg bg-sky-600 px-6 py-3 text-sm font-bold text-white hover:bg-sky-700 transition">地域から探す</a>
             <a href="/price/" className="rounded-lg border border-sky-600 px-6 py-3 text-sm font-bold text-sky-600 hover:bg-sky-50 transition">料金相場の詳細</a>

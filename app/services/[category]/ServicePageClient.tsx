@@ -62,15 +62,15 @@ function servesPref(area: string, pref: string): boolean {
 const CATEGORY_INFO = {
   aircon: {
     title: "エアコンクリーニング",
-    description: "プロの技術でカビ・ホコリを徹底除去。快適な空気環境を取り戻します。",
+    description: "エアコン内部のカビ・ホコリを除去するサービスです。各社の公式料金と対応エリアを掲載しています。",
   },
   bathroom: {
     title: "浴室クリーニング",
-    description: "頑固な水垢・カビもピカピカに。毎日のバスタイムを快適に。",
+    description: "浴室の水垢・カビを除去するサービスです。各社の公式料金と対応エリアを掲載しています。",
   },
   kitchen: {
     title: "キッチンクリーニング",
-    description: "油汚れ・焦げ付きもスッキリ。清潔なキッチンで料理を楽しく。",
+    description: "キッチンの油汚れ・焦げ付きを除去するサービスです。各社の公式料金と対応エリアを掲載しています。",
   },
 };
 
@@ -82,7 +82,7 @@ export default function ServicePageClient({ category }: { category: string }) {
   const categoryInfo = CATEGORY_INFO[category as keyof typeof CATEGORY_INFO];
 
   // 一覧＝大手ブランド（COMPANIES）＋このサービスを公式に扱う提携業者（partners.ts）。
-  // 2026-10-16 MediaXAI「『2件の業者が見つかりました』がなぜ少ないの？下の提携業者には多くあるのに」
+  // 2026-10-16 MediaXAI「『2件の業者を掲載しています』がなぜ少ないの？下の提携業者には多くあるのに」
   // → 以前は COMPANIES（1社1サービス）だけを読んでいて、提携11社とつながっていなかった。
   //   おそうじ革命・カジタクは提携側に公式確認済みのデータがあるので提携側だけを出す（二重に出さない）。
   const tag = (["aircon", "bathroom", "kitchen"].includes(category) ? category : "whole") as ServiceTag;
@@ -105,7 +105,7 @@ export default function ServicePageClient({ category }: { category: string }) {
       return {
         key: p.slug, name: p.name, href: `/review/${p.slug}/`, image: `/images/partners/${p.slug}.webp`,
         caption: `出典：${p.name} 公式サイト（${jp(capAt(p.slug))}時点）`, area: p.area,
-        priceText: pr ? `${pr.menu} ${pr.price}` : `${categoryInfo?.title ?? "このサービス"}の料金は検証ページで確認`, price: pr ? yen(pr.price) : NaN, features: [p.company],
+        priceText: pr ? `${pr.menu} ${pr.price}` : `${categoryInfo?.title ?? "このサービス"}の料金は検証ページでご確認ください`, price: pr ? yen(pr.price) : NaN, features: [p.company],
         pr: p.affiliateUrl ? { url: p.affiliateUrl, label: p.affiliateLabel ?? `${p.name}の公式サイトへ`, pixel: p.affiliatePixel } : undefined,
         company: COMPANY_PAGE[p.slug],
       };
@@ -196,7 +196,7 @@ export default function ServicePageClient({ category }: { category: string }) {
             {/* ソート */}
             <div className="bg-white p-4 rounded-lg shadow-sm mb-6 flex items-center justify-between">
               <div className="text-sm text-gray-600">
-                {filteredCompanies.length}件の業者が見つかりました
+                {filteredCompanies.length}件の業者を掲載しています
               </div>
               <div className="flex items-center gap-2">
                 <label className="text-sm text-gray-700">並び替え:</label>
@@ -252,7 +252,7 @@ export default function ServicePageClient({ category }: { category: string }) {
         </div>
       </div>
 
-      <p className="container mx-auto px-4 pb-10 text-xs text-gray-500">「PR」のボタンは提携先の公式サイトへ移動します（広告の有無は掲載内容・評価に影響しません）。料金は各社公式サイトの表記のままで、地域・機種により異なります。画像は各社公式サイトのトップページを当サイトが撮影したものです。</p>
+      <p className="container mx-auto px-4 pb-10 text-xs text-gray-500">「PR」のボタンは提携先の公式サイトへ移動します（広告の有無は掲載内容・評価に影響しません）。料金は各社公式サイトの表記のとおりで、地域・機種により異なります。画像は各社公式サイトのトップページを当サイトが撮影したものです。</p>
     </div>
   );
 }

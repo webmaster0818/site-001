@@ -10,7 +10,7 @@ AREAS = ROOT / "app" / "areas"
 TPL = (AREAS / "chiba-chuo" / "page.tsx").read_text(encoding="utf-8")
 
 # テンプレ固有の差し替え対象（chiba-chuo）
-TPL_GEO_BLOCK = """            <h3 className="text-2xl font-bold mb-4 mt-8">東京湾沿い・臨海部、塩害・潮風対策重要</h3>
+TPL_GEO_BLOCK = """            <h3 className="text-2xl font-bold mb-4 mt-8">東京湾沿いの臨海部では、塩害・潮風への対策が重要です</h3>
             <p className="text-lg mb-4">
               千葉市は東京湾に面する臨海部があり、中央区は千葉駅、県庁、中心街のエリアです。
 海沿いのエリアでは、潮風による塩害が問題となり、窓ガラスやエアコンの室外機に塩分が付着しやすい環境です。
@@ -18,7 +18,7 @@ TPL_GEO_BLOCK = """            <h3 className="text-2xl font-bold mb-4 mt-8">東�
 海沿いエリアでは、年2-3回の窓清掃とエアコンクリーニング（年1回）に加え、室外機の洗浄も重要です。
             </p>
 
-            <h3 className="text-2xl font-bold mb-4 mt-8">関東平野の臨海部、夏の高温多湿対策重要</h3>
+            <h3 className="text-2xl font-bold mb-4 mt-8">関東平野の臨海部で、夏の高温多湿への対策が重要です</h3>
             <p className="text-lg mb-4">
               千葉市は関東平野の臨海部に位置し、夏は高温多湿になります。
 特に7-8月は気温が30度を超える真夏日が多く、湿度も高いため、エアコンの使用頻度が高くなります。
@@ -26,7 +26,7 @@ TPL_GEO_BLOCK = """            <h3 className="text-2xl font-bold mb-4 mt-8">東�
 夏前（5-6月）のエアコンクリーニングで、効率的な冷房と快適な室内環境を保てます。
             </p>
 
-            <h3 className="text-2xl font-bold mb-4 mt-8">JR・私鉄など交通非常に良好、業者の選択肢が非常に豊富</h3>
+            <h3 className="text-2xl font-bold mb-4 mt-8">JR・私鉄などが通り、業者の選択肢が豊富です</h3>
             <p className="text-lg mb-4">
               中央区はJR総武線、京成線、千葉都市モノレールなどが通っており、交通の便が非常に良好です。
 千葉駅、海浜幕張駅など主要駅があり、東京都心へもアクセスしやすいエリアです。

@@ -4,8 +4,8 @@ import Reveal from "../components/Reveal";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/guide/" },
-  title: "ハウスクリーニング業者の選び方完全ガイド | クリーンナビ",
-  description: "失敗しないハウスクリーニング業者の選び方を徹底解説。料金相場、チェックポイント、よくあるトラブルと対策まで完全網羅。",
+  title: "ハウスクリーニング業者の選び方ガイド | クリーンナビ",
+  description: "ハウスクリーニング業者の選び方をご説明します。確認すべきポイント、依頼までの流れ、よくあるトラブルと対策を掲載しています。",
   viewport: "width=device-width, initial-scale=1",
 };
 
@@ -14,42 +14,42 @@ export default function Guide() {
     {
       icon: "icon-insurance",
       title: "損害保険への加入",
-      description: "作業中の事故や破損に備えて、損害保険に加入している業者を選びましょう。",
+      description: "作業中の事故や破損に備えて、損害保険に加入している業者を選ぶことをおすすめします。",
       importance: "必須",
       color: "primary",
     },
     {
       icon: "icon-official",
       title: "口コミ・評価の確認",
-      description: "実際の利用者の口コミや評価を確認。極端に評価が低い業者は避けましょう。",
+      description: "利用者の口コミや評価をご確認ください。評価が極端に低い業者は、避けることをおすすめします。",
       importance: "重要",
       color: "secondary",
     },
     {
       icon: "icon-price",
       title: "料金の透明性",
-      description: "見積もりが明確で、追加料金の有無をしっかり説明してくれる業者を選びましょう。",
+      description: "見積もりが明確で、追加料金の有無を十分に説明する業者を選ぶことをおすすめします。",
       importance: "重要",
       color: "accent",
     },
     {
       icon: "icon-staff",
       title: "スタッフの対応",
-      description: "電話やメールでの対応が丁寧で、質問にしっかり答えてくれる業者が安心です。",
+      description: "電話やメールでの対応が丁寧で、質問に的確に回答する業者を選ぶことをおすすめします。",
       importance: "推奨",
       color: "info",
     },
     {
       icon: "icon-experience",
       title: "実績と経験",
-      description: "創業年数や施工実績が豊富な業者は、ノウハウがあり安心できます。",
+      description: "創業年数や施工実績が豊富な業者は、作業の経験が蓄積されています。",
       importance: "推奨",
       color: "success",
     },
     {
       icon: "icon-estimate",
       title: "見積もりの詳細さ",
-      description: "作業内容、使用する洗剤、所要時間などが明記された見積もりを提示してくれる業者を選びましょう。",
+      description: "作業内容、使用する洗剤、所要時間などが明記された見積もりを提示する業者を選ぶことをおすすめします。",
       importance: "推奨",
       color: "warning",
     },
@@ -59,7 +59,7 @@ export default function Guide() {
     {
       title: "追加料金を請求された",
       cause: "見積もり時に詳細な説明がなかった",
-      solution: "事前に追加料金の可能性について確認し、書面で見積もりをもらう",
+      solution: "事前に追加料金の可能性を確認し、書面で見積もりを受け取る",
     },
     {
       title: "仕上がりに不満",
@@ -67,14 +67,14 @@ export default function Guide() {
       solution: "作業前に仕上がりイメージを確認し、保証内容を確認する",
     },
     {
-      title: "物を壊された",
+      title: "家財が破損した",
       cause: "損害保険に未加入、または保証がなかった",
-      solution: "損害保険加入の有無を確認し、事前に貴重品は移動させる",
+      solution: "損害保険の加入の有無を確認し、貴重品は事前に移動しておく",
     },
     {
-      title: "予約時間に来ない",
-      cause: "スケジュール管理が甘い業者だった",
-      solution: "口コミで時間厳守かを確認し、前日に確認連絡をもらう",
+      title: "予約時間に到着しない",
+      cause: "業者のスケジュール管理が不十分だった",
+      solution: "口コミで時間を守る業者かを確認し、前日に確認の連絡を受ける",
     },
   ];
 
@@ -82,32 +82,32 @@ export default function Guide() {
     {
       step: 1,
       title: "サービス内容を決める",
-      description: "エアコン、浴室、キッチンなど、どこを清掃したいか明確にしましょう。",
+      description: "エアコン、浴室、キッチンなど、清掃したい箇所を明確にします。",
     },
     {
       step: 2,
-      title: "複数社から見積もり",
-      description: "最低3社から見積もりを取り、料金とサービス内容を比較しましょう。",
+      title: "複数社から見積もりを取る",
+      description: "2〜3社から見積もりを取り、料金とサービス内容を比較します。",
     },
     {
       step: 3,
       title: "口コミ・評価を確認",
-      description: "実際の利用者の口コミや評価をチェックし、信頼できる業者か確認しましょう。",
+      description: "利用者の口コミや評価を確認し、信頼できる業者かを判断します。",
     },
     {
       step: 4,
       title: "保険・保証を確認",
-      description: "損害保険の加入状況と、作業後の保証内容を確認しましょう。",
+      description: "損害保険の加入状況と、作業後の保証内容を確認します。",
     },
     {
       step: 5,
       title: "契約内容を確認",
-      description: "作業範囲、料金、所要時間、キャンセルポリシーなどを書面で確認しましょう。",
+      description: "作業範囲、料金、所要時間、キャンセルポリシーなどを書面で確認します。",
     },
     {
       step: 6,
       title: "予約・作業実施",
-      description: "希望日時を予約し、当日は立ち会って作業内容を確認しましょう。",
+      description: "希望日時を予約し、当日は立ち会って作業内容を確認します。",
     },
   ];
 
@@ -128,10 +128,10 @@ export default function Guide() {
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            失敗しないハウスクリーニング業者の選び方
+            ハウスクリーニング業者の選び方
           </h1>
           <p className="text-xl max-w-3xl mx-auto">
-            初めての方でも安心！ハウスクリーニング業者を選ぶ際のポイントを徹底解説します
+            ハウスクリーニング業者を選ぶ際のポイントをご説明します
           </p>
         </div>
       </section>
@@ -198,7 +198,7 @@ export default function Guide() {
             よくあるトラブルと対策
           </h2>
           <p className="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
-            事前に知っておけばトラブルを回避できます
+            事前に把握しておくことで、トラブルを避けることができます
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {troubles.map((trouble, index) => (
@@ -238,7 +238,7 @@ export default function Guide() {
               <div className="card-body">
                 <h3 className="card-title text-success">
                   <CheckCircle className="w-6 h-6" />
-                  必ず確認すべきこと
+                  確認すべき事項
                 </h3>
                 <ul className="space-y-2 mt-4">
                   <li className="flex items-start gap-2">
@@ -282,7 +282,7 @@ export default function Guide() {
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-5 h-5 text-warning flex-shrink-0 mt-0.5" />
-                    <span>電話対応が不親切</span>
+                    <span>電話での対応が不十分</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-5 h-5 text-warning flex-shrink-0 mt-0.5" />
@@ -309,11 +309,11 @@ export default function Guide() {
                 <div>
                   <h3 className="font-bold">ポイントのまとめ</h3>
                   <div className="text-sm mt-2">
-                    <p>・複数社から見積もりを取る（最低3社）</p>
-                    <p>・損害保険加入と保証内容を確認</p>
-                    <p>・口コミや評価をしっかりチェック</p>
-                    <p>・契約内容を書面で確認</p>
-                    <p>・追加料金の可能性を事前確認</p>
+                    <p>・複数社から見積もりを取る（2〜3社）</p>
+                    <p>・損害保険の加入と保証内容を確認する</p>
+                    <p>・口コミや評価を確認する</p>
+                    <p>・契約内容を書面で確認する</p>
+                    <p>・追加料金の可能性を事前に確認する</p>
                   </div>
                 </div>
               </div>
@@ -330,7 +330,7 @@ export default function Guide() {
             {[
               { href: "/guide-detail/before-checklist/", label: "依頼前のチェックリスト" },
               { href: "/guide-detail/cleaning-timing/", label: "ハウスクリーニングのタイミング" },
-              { href: "/guide-detail/diy-vs-pro/", label: "自分でできる掃除vs業者" },
+              { href: "/guide-detail/diy-vs-pro/", label: "自分で行う掃除と業者への依頼の比較" },
               { href: "/guide-detail/trouble-cases/", label: "トラブル事例と対処法" },
               { href: "/guide-detail/aircon-frequency/", label: "エアコンクリーニングの頻度" },
               { href: "/guide-detail/bathroom-mold/", label: "浴室のカビ対策" },
@@ -350,10 +350,10 @@ export default function Guide() {
       <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            信頼できる業者を見つけよう
+            条件に合う業者を探す
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            クリーンナビで、あなたにピッタリのハウスクリーニング業者を比較・検討
+            クリーンナビでは、ハウスクリーニング業者を料金・対応エリアで比較できます
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/services/aircon/" className="btn btn-lg bg-white text-primary hover:bg-base-200">
