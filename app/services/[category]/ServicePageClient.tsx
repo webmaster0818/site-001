@@ -14,7 +14,7 @@ const COMPANIES = [
     category: "aircon",
     price: 12100,
     area: "全国対応（約1,900店舗）",
-    image: "/images/service-aircon.png",
+    image: "/images/partners/osoujihonpo.webp",
     features: ["全国約1,900店舗", "特許取得ファインバブル洗浄", "損害保険加入"],
   },
   {
@@ -23,7 +23,7 @@ const COMPANIES = [
     category: "bathroom",
     price: 19800,
     area: "全国対応（約1,600拠点）",
-    image: "/images/service-bathroom.png",
+    image: "/images/partners/duskin.webp",
     features: ["創業60年以上", "全国約1,600拠点", "定期サービス対応"],
   },
   {
@@ -32,7 +32,7 @@ const COMPANIES = [
     category: "aircon",
     price: 9980,
     area: "全国対応（約420店舗）",
-    image: "/images/service-aircon.png",
+    image: "/images/partners/osoujikakumei.webp",
     features: ["業界最安クラス", "50日間の研修", "追加料金なし"],
   },
   {
@@ -41,7 +41,7 @@ const COMPANIES = [
     category: "kitchen",
     price: 19800,
     area: "東京・神奈川・埼玉・千葉と群馬・茨城の一部",
-    image: "/images/service-kitchen.png",
+    image: "/images/partners/tokyogas.webp",
     features: ["東京ガスが提供", "土日祝も対応（12/29〜1/4除く）", "支払いはクレジットカードのみ"],
   },
   {
@@ -50,7 +50,7 @@ const COMPANIES = [
     category: "bathroom",
     price: 16500,
     area: "全国対応",
-    image: "/images/service-bathroom.png",
+    image: "/images/partners/kajitaku.webp",
     features: ["イオングループ", "仕上がり満足保証", "防カビコーティング"],
   },
   {
@@ -59,7 +59,7 @@ const COMPANIES = [
     category: "kitchen",
     price: 18920,
     area: "東京・神奈川・千葉・埼玉・大阪・兵庫",
-    image: "/images/service-kitchen.png",
+    image: "/images/partners/bears.webp",
     features: ["家事代行大手", "セット割引", "定期利用対応"],
   },
 ];
@@ -200,13 +200,14 @@ export default function ServicePageClient({ category }: { category: string }) {
                   className="block bg-white rounded-lg shadow-sm hover:shadow-md transition overflow-hidden"
                 >
                   <div className="flex flex-col md:flex-row">
-                    <div className="md:w-64 h-48 md:h-auto">
+                    <figure className="md:w-72 p-3 m-0 flex-none">
                       <img
                         src={company.image}
-                        alt={company.name}
-                        className="w-full h-full object-cover"
+                        alt={`${company.name} 公式サイトのトップページ`}
+                        className="w-full h-auto aspect-[16/10] object-cover object-top border border-[#e3ecec]"
                       />
-                    </div>
+                      <figcaption className="mt-1 text-[11px] text-gray-500">出典：{company.name} 公式サイト（2026年10月16日時点）</figcaption>
+                    </figure>
                     <div className="flex-1 p-6">
                       <div className="flex items-start justify-between mb-3">
                         <div>

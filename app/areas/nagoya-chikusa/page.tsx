@@ -373,27 +373,27 @@ export default function NagoyaChikusaArea() {
  
  <div className="space-y-6">
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 料金が明確</h3>
+ <h3 className="text-xl font-bold mb-2">料金が明確</h3>
  <p className="text-lg">事前見積もりで追加料金の有無を確認。「追加料金なし」を明記している業者が安心です。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 実績と口コミ</h3>
+ <h3 className="text-xl font-bold mb-2">実績と口コミ</h3>
  <p className="text-lg">Googleレビューや口コミサイトで実際の利用者の声を確認。評価3.5以上が目安です。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 損害保険に加入</h3>
+ <h3 className="text-xl font-bold mb-2">損害保険に加入</h3>
  <p className="text-lg">万が一の破損・傷に備えて、損害保険加入業者を選びましょう。大手は必ず加入しています。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ スタッフの研修体制</h3>
+ <h3 className="text-xl font-bold mb-2">スタッフの研修体制</h3>
  <p className="text-lg">研修制度がしっかりした業者は技術力が高く、仕上がりに差が出ます。研修期間50日以上が一つの基準です。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 高級住宅地での清掃経験、学生向けから高級住宅まで柔軟な対応力</h3>
+ <h3 className="text-xl font-bold mb-2">高級住宅地での清掃経験、学生向けから高級住宅まで柔軟な対応力</h3>
  <p className="text-lg">千種区は星ヶ丘・覚王山など高級住宅地が多く、高品質サービスへの需要が高い環境です。また、名古屋大学など教育機関が多数あり、学生向け物件と高級住宅が混在します。高級住宅地での清掃経験が豊富で、学生向けから高級住宅まで柔軟に対応できる業者を選びましょう。見積もり時に物件タイプを伝えると、適切なプランを提案してもらえます。</p>
  </div>
  </div>

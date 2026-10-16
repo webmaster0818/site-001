@@ -1,93 +1,107 @@
 [
-  {
-    "slug": "migxl",
-    "name": "ミガクる（MIGXL）",
-    "url": "https://migxl.com/",
-    "title": "引越し前後の空室ハウスクリーニング専門｜MIGXL（ミガクる）",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "on",
-    "name": "ハウスクリーニングのオン",
-    "url": "https://al-on.com/",
-    "title": "ハウスクリーニングのオン｜定額制のエアコン・水まわり・空室清掃【公式】",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "kireiyu",
-    "name": "風呂釜洗浄キレイユ",
-    "url": "https://kireiyu.com/",
-    "title": "【公式】風呂釜洗浄キレイユ｜お風呂の追い焚き配管クリーニング｜あらゆる菌を徹底除去",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "seifu",
-    "name": "エアコンクリーニング清風",
-    "url": "https://seifu-ac.jp/",
-    "title": "エアコンクリーニングのプロ｜清風【公式】年間実績3万台・お掃除機能付き全機種対応",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "nac-duskin",
-    "name": "ナックダスキン",
-    "url": "https://nac-duskin.com/",
-    "title": "ダスキン商品の使用お試しキャンペーンはナックダスキンまで。お気軽にお問い合わせください。",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "four-l",
-    "name": "ハウスクリーニング専門店 フォーエル",
-    "url": "https://www.4l-japan.com/",
-    "title": "ハウスクリーニングならフォーエル",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "osouji-labo",
-    "name": "おそうじLabo",
-    "url": "https://osojilabo.com/",
-    "title": "大阪のエアコンクリーニング・ハウスクリーニングなら おそうじLabo – 大阪府全域+兵庫県の一部エリアで出張費無料",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "housecleaning110",
-    "name": "ハウスクリーニング110番",
-    "url": "https://hoycambiomibombilla.com/",
-    "title": "ハウスクリーニング110番｜エアコン掃除も対応！カビ臭い汚れ撃退",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "kajitaku",
-    "name": "カジタク",
-    "url": "https://www.kajitaku.com/",
-    "title": "【公式】イオンの「ハウス・宅配」クリーニングサービス　カジタク｜ほぼ全国対応　WAON POINTがたまる、AEON Payでおトク",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "r-cleaning",
-    "name": "アールクリーニング",
-    "url": "https://www.r-cleaning.com/",
-    "title": "エアコンクリーニング【作業実績50万件】口コミNo1を3冠獲得 - 【アールクリーニング】",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "osoujikakumei",
-    "name": "おそうじ革命",
-    "url": "https://www.osoujikakumei.jp/",
-    "title": "おそうじ革命｜エアコン清掃・水回り・空室・法人まで全国対応",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "osoujihonpo",
-    "name": "おそうじ本舗",
-    "url": "https://www.osoujihonpo.com/",
-    "title": "ハウスクリーニング・お掃除のことならおそうじ本舗",
-    "captured_at": "2026-10-16"
-  },
-  {
-    "slug": "duskin",
-    "name": "ダスキン サービスマスター",
-    "url": "https://www.duskin.jp/servicemaster/",
-    "title": "ハウスクリーニング | お掃除サービスのダスキン",
-    "captured_at": "2026-10-16"
-  }
+ {
+  "slug": "migxl",
+  "name": "ミガクる（MIGXL）",
+  "url": "https://migxl.com/",
+  "title": "引越し前後の空室ハウスクリーニング専門｜MIGXL（ミガクる）",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "on",
+  "name": "ハウスクリーニングのオン",
+  "url": "https://al-on.com/",
+  "title": "ハウスクリーニングのオン｜定額制のエアコン・水まわり・空室清掃【公式】",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "kireiyu",
+  "name": "風呂釜洗浄キレイユ",
+  "url": "https://kireiyu.com/",
+  "title": "【公式】風呂釜洗浄キレイユ｜お風呂の追い焚き配管クリーニング｜あらゆる菌を徹底除去",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "seifu",
+  "name": "エアコンクリーニング清風",
+  "url": "https://seifu-ac.jp/",
+  "title": "エアコンクリーニングのプロ｜清風【公式】年間実績3万台・お掃除機能付き全機種対応",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "nac-duskin",
+  "name": "ナックダスキン",
+  "url": "https://nac-duskin.com/",
+  "title": "ダスキン商品の使用お試しキャンペーンはナックダスキンまで。お気軽にお問い合わせください。",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "four-l",
+  "name": "ハウスクリーニング専門店 フォーエル",
+  "url": "https://www.4l-japan.com/",
+  "title": "ハウスクリーニングならフォーエル",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "osouji-labo",
+  "name": "おそうじLabo",
+  "url": "https://osojilabo.com/",
+  "title": "大阪のエアコンクリーニング・ハウスクリーニングなら おそうじLabo – 大阪府全域+兵庫県の一部エリアで出張費無料",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "housecleaning110",
+  "name": "ハウスクリーニング110番",
+  "url": "https://hoycambiomibombilla.com/",
+  "title": "ハウスクリーニング110番｜エアコン掃除も対応！カビ臭い汚れ撃退",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "kajitaku",
+  "name": "カジタク",
+  "url": "https://www.kajitaku.com/",
+  "title": "【公式】イオンの「ハウス・宅配」クリーニングサービス　カジタク｜ほぼ全国対応　WAON POINTがたまる、AEON Payでおトク",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "r-cleaning",
+  "name": "アールクリーニング",
+  "url": "https://www.r-cleaning.com/",
+  "title": "エアコンクリーニング【作業実績50万件】口コミNo1を3冠獲得 - 【アールクリーニング】",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "osoujikakumei",
+  "name": "おそうじ革命",
+  "url": "https://www.osoujikakumei.jp/",
+  "title": "おそうじ革命｜エアコン清掃・水回り・空室・法人まで全国対応",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "osoujihonpo",
+  "name": "おそうじ本舗",
+  "url": "https://www.osoujihonpo.com/",
+  "title": "ハウスクリーニング・お掃除のことならおそうじ本舗",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "duskin",
+  "name": "ダスキン サービスマスター",
+  "url": "https://www.duskin.jp/servicemaster/",
+  "title": "ハウスクリーニング | お掃除サービスのダスキン",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "tokyogas",
+  "name": "東京ガス ハウスクリーニング",
+  "url": "https://kaji.tokyo-gas.co.jp/",
+  "title": "",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "bears",
+  "name": "ベアーズ",
+  "url": "https://www.happy-bears.com/",
+  "title": "",
+  "captured_at": "2026-10-16"
+ }
 ]

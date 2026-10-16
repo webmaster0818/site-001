@@ -20,7 +20,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     categorySlug: "aircon",
     price: 12100,
     area: "全国対応（約1,900店舗）",
-    image: "/images/service-aircon.png",
+    image: "/images/partners/osoujihonpo.webp",
     description:
       "全国約1,900店舗を展開する業界最大手のハウスクリーニングチェーン。特許取得の「ファインバブルエアコンクリーニング」で、微細な泡が奥のカビ・汚れまで徹底除去。スタッフは全員、独自の研修プログラムを修了した有資格者です。",
     features: [
@@ -47,7 +47,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     categorySlug: "bathroom",
     price: 19800,
     area: "全国対応（約1,600拠点）",
-    image: "/images/service-bathroom.png",
+    image: "/images/partners/duskin.webp",
     description:
       "1963年創業の老舗クリーニングブランド。全国約1,600拠点で展開し、浴室クリーニングをはじめとする各種ハウスクリーニングを提供。専門的な技術と設備を持ち、高い清掃スキルを持ったスタッフが在籍。トラブル時のサポート体制も万全です。",
     features: [
@@ -74,7 +74,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     categorySlug: "aircon",
     price: 9980,
     area: "全国対応（約420店舗）",
-    image: "/images/service-aircon.png",
+    image: "/images/partners/osoujikakumei.webp",
     description:
       "全国約420店舗を展開するハウスクリーニングチェーン。技術力と価格のバランスに優れ、50日間の研修を受けたスタッフが対応します。エアコンクリーニングは業界最安クラスの料金設定で、追加料金なしの明朗会計が特徴です。",
     features: ["業界最安クラス", "50日間の研修", "追加料金なし", "全国約420店舗展開"],
@@ -94,7 +94,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     categorySlug: "kitchen",
     price: 19800,
     area: "東京・神奈川・埼玉・千葉と群馬・茨城の一部",
-    image: "/images/service-kitchen.png",
+    image: "/images/partners/tokyogas.webp",
     description:
       "東京ガスが提供するハウスクリーニング。対応エリアは東京・神奈川・埼玉・千葉と群馬・茨城の一部（公式の対応エリア一覧で市区町村を指定）。東京ガスとガス・電気の契約がなくても、対応エリア内なら利用できます。支払いはクレジットカードのみ。",
     features: ["東京ガスが提供", "土日祝も対応（12/29〜1/4除く）", "支払いはクレジットカードのみ"],
@@ -114,7 +114,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     categorySlug: "bathroom",
     price: 19580,
     area: "43都道府県の対象市区町村（公式の対応エリア一覧）",
-    image: "/images/service-bathroom.png",
+    image: "/images/partners/kajitaku.webp",
     description:
       "イオングループが運営するハウスクリーニングサービス。仕上がり満足保証付きの高品質なサービスが特徴で、浴室クリーニングでは防カビコーティングにも対応しています。",
     features: ["イオングループ", "仕上がり満足保証", "防カビコーティング"],
@@ -135,7 +135,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     categorySlug: "kitchen",
     price: 18920,
     area: "東京・神奈川・千葉・埼玉・大阪・兵庫",
-    image: "/images/service-kitchen.png",
+    image: "/images/partners/bears.webp",
     description:
       "家事代行サービス大手が手がけるハウスクリーニング。スタッフ教育に力を入れており、丁寧な作業が特徴です。複数箇所のセット割引や定期利用にも対応しています。",
     features: ["家事代行大手", "セット割引", "定期利用対応"],
@@ -189,13 +189,14 @@ export default function CompanyPageClient({ id }: { id: string }) {
           {/* メインコンテンツ */}
           <div className="lg:col-span-2 space-y-6">
             {/* メイン画像 */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+            <figure className="bg-white rounded-lg overflow-hidden border border-[#c9d6d8] p-3 m-0">
               <img
                 src={company.image}
-                alt={company.name}
-                className="w-full h-96 object-cover"
+                alt={`${company.name} 公式サイトのトップページ`}
+                className="w-full h-auto aspect-[16/10] object-cover object-top border border-[#e3ecec]"
               />
-            </div>
+              <figcaption className="mt-2 text-xs text-gray-500">出典：{company.name} 公式サイト（2026年10月16日時点）</figcaption>
+            </figure>
 
             {/* 業者情報 */}
             <div className="bg-white rounded-lg shadow-sm p-6">

@@ -667,3 +667,69 @@ details.collapse[open] summary::after { content: "−"; }
 .cn-btn-pr::after { display: none; }
 .cn-pr { flex: none; font-size: .62rem; padding: .05rem .35rem; border: 1px solid rgba(255,255,255,.7); border-radius: 3px; }
 .cn-fineprint { margin-top: 1.25rem; font-size: .7rem; line-height: 1.7; color: #6b8086; }
+
+/* ==========================================================================
+   サイト全体のテイスト統一（2026-10-16 MediaXAI「他のページもすべてテイストをそろえて」）
+   TOP と同じ「紺 #16323a・青緑 #0e7490・霧 #e3ecec・白」だけにする。
+   旧テンプレのページは数百ファイルあるので、マークアップではなく共通のクラスをここで上書きする。
+   ========================================================================== */
+
+/* 1) ページ上部の帯（旧: 青緑のグラデーション／青／緑／都市の写真＋波）→ 霧色の帯・紺の文字・下に細い線 */
+section.bg-gradient-to-r.from-primary, section.bg-blue-600, section[class*="from-green-600"], section.hero-section {
+  background: var(--cn-mist) !important; background-image: none !important; color: var(--cn-ink) !important;
+  border-bottom: 1px solid var(--cn-line); }
+section.bg-gradient-to-r.from-primary :is(h1,h2,p,span,div,svg), section.bg-blue-600 :is(h1,h2,p,span,div,svg),
+section[class*="from-green-600"] :is(h1,h2,p,span,div,svg), section.hero-section :is(h1,h2,p,span,div,svg) {
+  color: var(--cn-ink) !important; text-shadow: none !important; }
+section.bg-gradient-to-r.from-primary h1, section.bg-blue-600 h1, section[class*="from-green-600"] h1, section.hero-section h1 {
+  font-weight: 800 !important; letter-spacing: .02em; }
+section.hero-section .hero-bg, section.hero-section .hero-overlay, section.hero-section .hero-wave { display: none !important; }
+section.hero-section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+section.hero-section [class*="text-yellow"], section.hero-section .text-yellow-300 { color: var(--cn-ink) !important; }
+section.hero-section [style*="linear-gradient"] { background: none !important; -webkit-text-fill-color: var(--cn-ink) !important; }
+
+/* 2) 色付きの小さなアイコン枠（旧: 業者ごとに青・緑・紫・橙のグラデーション）→ 紺1色 */
+[class*="bg-gradient-to-br"][class*="from-"], [class*="bg-gradient-to-r"][class*="from-"]:not(section) {
+  background-image: none !important; background-color: var(--cn-ink) !important; }
+
+/* 3) 文字・枠の色（旧: 水色・青・緑・黄色）→ 紺／青緑 */
+.text-primary, .text-sky-600, .text-sky-500, .text-blue-600, .text-blue-700, .text-green-600, .text-green-700 { color: var(--cn-teal) !important; }
+.hover\:text-sky-600:hover, .hover\:text-blue-600:hover, .group:hover .group-hover\:text-sky-600, .group:hover .group-hover\:text-sky-500 { color: var(--cn-ink) !important; }
+.bg-primary, .bg-sky-600, .bg-blue-600:not(section) { background-color: var(--cn-ink) !important; color: #fff !important; }
+.hover\:bg-sky-700:hover, .hover\:bg-blue-700:hover { background-color: #0f262c !important; }
+.bg-sky-50, .bg-blue-50, .bg-green-50, .hover\:bg-sky-50:hover { background-color: var(--cn-soft) !important; }
+.border-sky-600, .border-blue-600, .border-primary { border-color: var(--cn-ink) !important; }
+.hover\:border-sky-400:hover, .hover\:border-primary:hover { border-color: var(--cn-ink) !important; }
+.bg-amber-600, .hover\:bg-amber-700:hover { background-color: var(--cn-ink) !important; }
+.bg-amber-50 { background-color: var(--cn-soft) !important; } .border-amber-200 { border-color: var(--cn-line) !important; }
+.text-amber-700 { color: var(--cn-ink) !important; }
+.text-yellow-300 { color: var(--cn-ink) !important; }
+
+/* 4) カード・表・パンくず：白い面には細い枠、角は控えめに */
+.card { border: 1px solid var(--cn-line) !important; border-radius: 8px !important; box-shadow: none !important; }
+.card:hover { border-color: var(--cn-ink) !important; box-shadow: 0 12px 26px -18px rgba(22,50,58,.5) !important; }
+.shadow-xl, .shadow-2xl, .hover\:shadow-2xl:hover, .shadow-lg { box-shadow: none !important; }
+.rounded-2xl, .rounded-xl { border-radius: 8px !important; }
+.badge { border-radius: 4px !important; }
+.badge-primary, .badge.bg-primary { background: var(--cn-ink) !important; color: #fff !important; }
+table th { color: var(--cn-ink); }
+.breadcrumbs a, .breadcrumbs { color: #5b7177; }
+
+/* 5) 見出し（旧テンプレの h2 下線や左の色帯）を紺に */
+h1, h2, h3 { color: var(--cn-ink); }
+.border-l-4.border-primary, [class*="border-l-4"] { border-left-color: var(--cn-ink) !important; }
+
+/* ⚠️ Tailwind v4 の .collapse は visibility: collapse（＝見えない）。旧テンプレは daisyUI の「collapse」を
+   折りたたみの意味で使っていたため、FAQ の質問と答えが全部見えなくなっていた（2026-10-16 発見・/faq/ ほか）。
+   見えるように戻し、ラジオボタン式（JS 無しで開閉できない）は答えを最初から開いて見せる */
+.collapse { visibility: visible !important; }
+.collapse > input[type="radio"], .collapse > input[type="checkbox"] { display: none; }
+.collapse:not(details) > .collapse-content { display: block !important; max-height: none !important; }
+.collapse .badge-primary, .collapse .badge-secondary { background: var(--cn-ink) !important; color: #fff !important; border: 0; }
+/* ページ上部の帯の見出しに付いていた小さなアイコン（$・ピン・？）は外す（$ は円の料金ページに合わない） */
+section.bg-gradient-to-r.from-primary h1 svg, section.bg-blue-600 h1 svg, section[class*="from-green-600"] svg,
+section.hero-section h1 svg, section.hero-section .flex > svg:first-child { display: none !important; }
+/* 帯の見出しの横に並んだアイコン（h1 の兄弟要素）も外す */
+section.bg-gradient-to-r.from-primary .flex:has(> h1) > svg, section.bg-blue-600 .flex:has(> h1) > svg { display: none !important; }
+/* daisyUI の steps（未導入なので番号だけが縦に並んでいた）→ 下に同じ内容のカードがあるので出さない */
+ul.steps { display: none !important; }

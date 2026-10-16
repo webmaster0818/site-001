@@ -374,27 +374,27 @@ export default function NagoyaNakakuArea() {
  
  <div className="space-y-6">
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 料金が明確</h3>
+ <h3 className="text-xl font-bold mb-2">料金が明確</h3>
  <p className="text-lg">事前見積もりで追加料金の有無を確認。「追加料金なし」を明記している業者が安心です。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 実績と口コミ</h3>
+ <h3 className="text-xl font-bold mb-2">実績と口コミ</h3>
  <p className="text-lg">Googleレビューや口コミサイトで実際の利用者の声を確認。評価3.5以上が目安です。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 損害保険に加入</h3>
+ <h3 className="text-xl font-bold mb-2">損害保険に加入</h3>
  <p className="text-lg">万が一の破損・傷に備えて、損害保険加入業者を選びましょう。大手は必ず加入しています。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ スタッフの研修体制</h3>
+ <h3 className="text-xl font-bold mb-2">スタッフの研修体制</h3>
  <p className="text-lg">研修制度がしっかりした業者は技術力が高く、仕上がりに差が出ます。研修期間50日以上が一つの基準です。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 商業地・観光地での清掃経験、多様な物件タイプへの対応力</h3>
+ <h3 className="text-xl font-bold mb-2">商業地・観光地での清掃経験、多様な物件タイプへの対応力</h3>
  <p className="text-lg">中区は栄・久屋大通など商業地が発展し、排気ガス対策が重要です。また、名古屋城など観光地が多数あり、清掃ニーズが非常に多様です。商業地・観光地での清掃経験が豊富で、多様な物件タイプに対応できる業者を選びましょう。見積もり時に立地と物件タイプを伝えると、適切な提案がもらえます。</p>
  </div>
  </div>

@@ -375,27 +375,27 @@ export default function OsakaNishiyodogawaArea() {
  
  <div className="space-y-6">
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 料金が明確</h3>
+ <h3 className="text-xl font-bold mb-2">料金が明確</h3>
  <p className="text-lg">事前見積もりで追加料金の有無を確認。「追加料金なし」を明記している業者が安心です。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 実績と口コミ</h3>
+ <h3 className="text-xl font-bold mb-2">実績と口コミ</h3>
  <p className="text-lg">Googleレビューや口コミサイトで実際の利用者の声を確認。評価3.5以上が目安です。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 損害保険に加入</h3>
+ <h3 className="text-xl font-bold mb-2">損害保険に加入</h3>
  <p className="text-lg">万が一の破損・傷に備えて、損害保険加入業者を選びましょう。大手は必ず加入しています。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ スタッフの研修体制</h3>
+ <h3 className="text-xl font-bold mb-2">スタッフの研修体制</h3>
  <p className="text-lg">研修制度がしっかりした業者は技術力が高く、仕上がりに差が出ます。研修期間50日以上が一つの基準です。</p>
  </div>
  
  <div className="border-l-4 border-primary pl-6 py-4">
- <h3 className="text-xl font-bold mb-2">✓ 臨海部・工業地帯・淀川沿いでの清掃経験、塩害・湿気対策の知識</h3>
+ <h3 className="text-xl font-bold mb-2">臨海部・工業地帯・淀川沿いでの清掃経験、塩害・湿気対策の知識</h3>
  <p className="text-lg">西淀川区は淀川河口付近の臨海部で、塩害対策が重要です。また、工業地帯が広がっており、排気ガス・粉塵対策も必要です。淀川沿いの住宅地では湿気対策も重要です。臨海部・工業地帯・淀川沿いでの清掃経験が豊富で、塩害・湿気対策の知識がある業者を選びましょう。見積もり時に立地（臨海部か、工業地帯か、淀川沿いかなど）を伝えると、適切な提案がもらえます。</p>
  </div>
  </div>
