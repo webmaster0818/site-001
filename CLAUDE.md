@@ -233,3 +233,10 @@ GSC実数診断:
 - `scripts/refresh-official-ratings.py`: honpo 全1,876店の店舗ページ .c-review__value と「N件」を読み直す。評価欄が件数だけ（スコア非表示＝公式 /policy/guideline/ の条件未満）の店は評価を消す。取得失敗は前回値と前回日付のまま。結果: 更新634・変化なし56・新規70・スコア非表示化192・取得失敗31 → 評価あり 886→764店
 - 評価の「時点」は新フィールド `rating_checked_at`（verified_at は住所等の確認日のまま）。provider/[slug]・OfficialRatingStores・ranking/review-ranking は rating_checked_at ?? verified_at を表示
 - 定例: 毎月1日に capture-partners と同時に実行（workspace/sites.md 登録済み・次回 11/1）
+
+### 2026-10-16 サイト全体の文言をビジネス文書基準に（writing-standards §8・MediaXAI）
+- e4d0bc6（+ 続きのコミット）: 共通部品（layout メタ・TopHero・Reasons・TroubleGrid・AreaAccordion・PartnerCards・OfficialRatingStores・AreaProvidersLead・SeasonalCleaningNote・BrandCompareTable・serviceDetailData）、provider テンプレ（3,525頁のメタ説明・チェックポイント）、review/ranking/services/guide/faq/price/scene/comparison/guide-detail/company/brand/areas ハブ・[pref] を「です・ます」「〜をおすすめします」「ご確認ください」型に。partners.ts は fitFor/checkBefore と地の文のみ（「」内の公式引用・affiliateLabel は不変）
+- エリア238頁: テンプレ文言（全域対応！・徹底比較・本記事・賢く安く・⏰・失敗しない・〜しましょう等）を正規表現で一括置換、地域見出し364種（「〇〇、△△対策重要」型）を宣言形の文に手作業マップで置換、本文の「非常に」「お得」「しっかり」「もらえます」等も置換。二重語「中央区は中央区は」60頁を解消。同じ置換を scripts/area_data_group*.py と gen-areas.py にも反映（再生成で戻らない）。旧一回限りスクリプト（create-*.py 等）は未変更＝再実行禁止のまま
+- 監査: out/ 全3,872 HTML で copy-audit の NG 語＋追加語（ましょう・徹底比較・失敗しない・確認日つき・⏰・お得・非常に 等）0件。計測コード集合 477頁が本番と一致。precheck 全項目OK。sitemap lastmod 3,865件（privacy/terms/contact/for-business 以外）
+- 残る「！」「しっかり」「徹底」は ASP 提供のリンク文言と公式サイトの引用のみ（改変不可）
+- 未修正（事実・要判断）: 「研修期間50日以上が一つの基準」「大手は必ず加入しています」「評価3.5以上が目安」（エリア228頁）、company/3 の features「業界最安クラス」「50日間の研修」「約420店舗」、本舗「業界最大手」「約1,900店舗」、/faq/ の相場（エアコン10,000〜15,000円）が TOP・/price/（8,000〜15,000円）と不一致、繁忙期の記述がページにより「3-4月・9-10月」と「5〜8月」で不一致、comparison 5頁・guide-detail 7頁・scene/airbnb・office は本文の無いスタブ

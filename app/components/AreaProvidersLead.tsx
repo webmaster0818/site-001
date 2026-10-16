@@ -207,7 +207,7 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
             </ul>
             {covering.length > COVERING_LIMIT && (
               <p className="text-xs text-muted mt-3">
-                ほか{covering.length - COVERING_LIMIT}店舗を掲載しています。各店舗の対応エリアは、店舗ページの「対応エリア」欄でご確認いただけます。
+                このほかに{covering.length - COVERING_LIMIT}店舗が、公式サイトの対応エリアに{area.label}を記載しています。各店舗の対応エリアは、店舗ページの「対応エリア」欄でご確認いただけます。
               </p>
             )}
           </div>
