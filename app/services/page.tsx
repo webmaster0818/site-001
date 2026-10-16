@@ -29,7 +29,7 @@ export const metadata = {
     siteName: "クリーンナビ",
     images: [
       {
-        url: "https://cleaning-choices.com/og-image.png",
+        url: "https://cleaning-choices.com/og-image.png?v=20261016",
         width: 1200,
         height: 630,
         alt: "ハウスクリーニングのサービス一覧 - クリーンナビ",
@@ -42,7 +42,7 @@ export const metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["https://cleaning-choices.com/og-image.png"],
+    images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
   },
   alternates: {
     canonical: "https://cleaning-choices.com/services/",

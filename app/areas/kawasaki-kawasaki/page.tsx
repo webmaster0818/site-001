@@ -13,7 +13,7 @@ export const metadata = {
  siteName: "クリーンナビ",
  images: [
  {
- url: "https://cleaning-choices.com/og-image.png",
+ url: "https://cleaning-choices.com/og-image.png?v=20261016",
  width: 1200,
  height: 630,
  alt: "川崎区のハウスクリーニング業者比較 - クリーンナビ",
@@ -26,7 +26,7 @@ export const metadata = {
  card: "summary_large_image",
  title: "川崎区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
  description: "川崎区でおすすめのハウスクリーニング業者を徹底比較。全域対応。料金相場、口コミ評価を掲載。",
- images: ["https://cleaning-choices.com/og-image.png"],
+ images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
  },
  alternates: {
  canonical: "https://cleaning-choices.com/areas/kawasaki-kawasaki/",

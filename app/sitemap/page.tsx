@@ -16,7 +16,7 @@ export const metadata = {
     siteName: "クリーンナビ",
     images: [
       {
-        url: "https://cleaning-choices.com/og-image.png",
+        url: "https://cleaning-choices.com/og-image.png?v=20261016",
         width: 1200,
         height: 630,
         alt: "クリーンナビ - ハウスクリーニング業者比較",
