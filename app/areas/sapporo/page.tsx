@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Sparkles, Award, Shield, Zap, MapPin } from "lucide-react";
+import CompanyShot from "../../components/CompanyShot";
 
 export const metadata = {
  title: "札幌市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
@@ -265,9 +266,7 @@ export default function SapporoArea() {
  <div key={index} className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
  <div className="card-body">
  <div className="flex items-start gap-4">
- <div className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-xl flex items-center justify-center flex-shrink-0`}>
- <Icon className="w-8 h-8 text-white"/>
- </div>
+ <CompanyShot name={company.name} />
  <div className="flex-1">
  <h3 className="card-title text-2xl">{company.name}</h3>
  {company.name === "おそうじ革命" && <a href="/review/osoujikakumei/" className="link link-primary text-sm">おそうじ革命の口コミ・評判を公式情報で検証</a>}

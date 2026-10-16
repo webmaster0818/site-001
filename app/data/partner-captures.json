@@ -103,5 +103,40 @@
   "url": "https://www.happy-bears.com/",
   "title": "",
   "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "sanikleen",
+  "name": "サニクリーン",
+  "url": "https://www.sanikleen.co.jp/housecleaning/",
+  "title": "",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "osoji-master",
+  "name": "お掃除マスター",
+  "url": "https://osoji-master.info/",
+  "title": "",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "azuma",
+  "name": "アズマのホームクリーニング",
+  "url": "https://www.azuma-cleaning.com/",
+  "title": "",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "kurashi-saison",
+  "name": "くらしのセゾン",
+  "url": "https://www.kurashi-saison.co.jp/cleaning/",
+  "title": "",
+  "captured_at": "2026-10-16"
+ },
+ {
+  "slug": "edion",
+  "name": "エディオンハウスクリーン",
+  "url": "https://www.edion.co.jp/service/satisfied/cleaning",
+  "title": "",
+  "captured_at": "2026-10-16"
  }
 ]

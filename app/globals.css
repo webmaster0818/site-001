@@ -733,3 +733,9 @@ section.hero-section h1 svg, section.hero-section .flex > svg:first-child { disp
 section.bg-gradient-to-r.from-primary .flex:has(> h1) > svg, section.bg-blue-600 .flex:has(> h1) > svg { display: none !important; }
 /* daisyUI の steps（未導入なので番号だけが縦に並んでいた）→ 下に同じ内容のカードがあるので出さない */
 ul.steps { display: none !important; }
+/* エリアページの業者枠のキャプチャ（色付きアイコンの代わり） */
+.card-body > .flex:has(> .cn-area-shot) { flex-wrap: wrap; }
+.cn-area-shot { margin: 0; flex: 1 1 100%; }
+@media (min-width: 768px) { .cn-area-shot { flex: 0 0 240px; } }
+.cn-area-shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid var(--cn-mist); }
+.cn-area-shot figcaption { margin-top: .35rem; font-size: .68rem; line-height: 1.5; color: #6b8086; }
