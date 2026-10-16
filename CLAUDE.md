@@ -228,3 +228,8 @@ GSC実数診断:
 - **43926fe＋99be1f7（MediaXAI「外して」）**: エリア238頁から重複2つ目の「おそうじ革命」（元架空業者クリーンプロフェッショナルズの行）と「おそうじ大使」を削除（13→11件・「業者13社」→「11社」134頁）。43926fe は CF ビルド失敗 → 空コミット 99be1f7 で成功。⚠️ 旧一回限りスクリプト16本（create-*.py 等）には2社が残る＝再実行禁止（gen-areas.py は chiba-chuo テンプレ経由なので反映済み）。wip/remove-osoujitaishi-1016 は不要になった
 - **c67862b（MediaXAI「ほかにも旧テンプレ残っていないかチェック」）**: 全3,869頁を機械監査（色付きアイコン・旧色/グラデ・イラスト・絵文字/★・お気に入り・header/footer≠1）。残っていた /areas/ ハブ → AreaAccordion、/ranking/ /scene/ /guide/ → cn-trouble-card / cn-reason（アイコン10点追加 public/images/top/）、ranking/scene の二重フッターと scene 詳細4頁の「© 2024」フッターを削除。監査結果すべて0
 - **d565332（MediaXAI 09:11「areas配下のキャプチャやり切れてない（〇〇の店舗一覧）」）**: 店舗カードにブランド公式サイトのサムネイル（CompanyShot.tsx の StoreBrandShot・providers.json の brand コード honpo/duskin/kakumei → キャプチャ）。AreaProvidersLead・OfficialRatingStores・ranking/review-ranking・brand/[brand]（PartnerShot＋評価上位カード）・provider/[slug]（大きいキャプチャ＋近隣店舗カード）。監査＝out/ の /provider/ への card リンク 26,722 枚すべてに cn-store-thumb（漏れ0）。⚠️ 前回は「業者紹介」だけ見て店舗一覧を見落とした＝**「キャプチャを入れて」は、業者・店舗・ブランド名が出る全部品を out/ で数えてから完了報告する**
+
+### 2026-10-16 おそうじ本舗の公式レビュー評価を取り直し（MediaXAI「（〜2026-08-15時点）この「時点」を月単位で最新化できない？」）
+- `scripts/refresh-official-ratings.py`: honpo 全1,876店の店舗ページ .c-review__value と「N件」を読み直す。評価欄が件数だけ（スコア非表示＝公式 /policy/guideline/ の条件未満）の店は評価を消す。取得失敗は前回値と前回日付のまま。結果: 更新634・変化なし56・新規70・スコア非表示化192・取得失敗31 → 評価あり 886→764店
+- 評価の「時点」は新フィールド `rating_checked_at`（verified_at は住所等の確認日のまま）。provider/[slug]・OfficialRatingStores・ranking/review-ranking は rating_checked_at ?? verified_at を表示
+- 定例: 毎月1日に capture-partners と同時に実行（workspace/sites.md 登録済み・次回 11/1）

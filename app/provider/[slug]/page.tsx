@@ -24,6 +24,7 @@ type Provider = {
   review_count_official?: number;
   source_url: string;
   verified_at: string;
+  rating_checked_at?: string;
 };
 
 const list = providers as Provider[];
@@ -152,7 +153,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
           <p>
             公式サイト掲載のレビュー評価: <strong>{p.rating_official.toFixed(2)}</strong>
             {typeof p.review_count_official === "number" && <>（{p.review_count_official}件）</>}
-            <span className="text-xs">（{p.brand_name}公式サイト集計・{p.verified_at}時点）</span>
+            <span className="text-xs">（{p.brand_name}公式サイト集計・{p.rating_checked_at ?? p.verified_at}時点）</span>
           </p>
         </div>
       )}

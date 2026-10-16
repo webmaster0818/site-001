@@ -12,6 +12,7 @@ type Provider = {
   rating_official?: number;
   review_count_official?: number;
   verified_at?: string;
+  rating_checked_at?: string;
 };
 
 const list = providers as Provider[];
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
 };
 
 export default function ReviewRankingPage() {
-  const verifiedAt = TOP[0]?.verified_at ?? "2026-08-15";
+  const verifiedAt = TOP[0]?.rating_checked_at ?? TOP[0]?.verified_at ?? "2026-08-15";
   return (
     <div>
       <section className="py-12 md:py-16 bg-gray-50">

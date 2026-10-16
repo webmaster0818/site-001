@@ -10,6 +10,7 @@ type Provider = {
   rating_official?: number;
   review_count_official?: number;
   verified_at?: string;
+  rating_checked_at?: string;
 };
 
 const list = providers as Provider[];
@@ -30,7 +31,7 @@ const rated = list
 export default function OfficialRatingStores({ limit = 6 }: { limit?: number }) {
   const items = rated.slice(0, limit);
   if (items.length === 0) return null;
-  const verifiedAt = items[0].verified_at ?? "2026-08-15";
+  const verifiedAt = items[0].rating_checked_at ?? items[0].verified_at ?? "2026-08-15";
 
   return (
     <section className="py-12 bg-white">
