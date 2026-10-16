@@ -164,26 +164,6 @@ export default function Fukuoka中央Area() {
  services: "エアコン、浴室、キッチン、トイレ、換気扇、家電周辺クリーニング",
  website: "https://www.edion.co.jp/service/satisfied/cleaning"
  },
- {
- name: "おそうじ革命", 
- kitchen: "17,930円〜", 
- bathroom: "17,930円〜", 
- toilet: "8,250円〜",
- description: "プロの技術力と低価格を両立。全国対応で地域密着型のサービスを展開。",
- hours: "店舗により異なる（年末年始を除き土日祝も営業）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
- website: "https://www.osoujikakumei.jp/"
- },
- {
- name: "おそうじ大使", 
- kitchen: "16,800円〜", 
- bathroom: "17,930円〜", 
- toilet: "7,920円〜",
- description: "低価格が魅力の全国チェーン。即日対応可能で急ぎの依頼にも柔軟に対応。",
- hours: "9:00-19:00（年中無休）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
- website: "https://osoujitaishi.com/"
- },
  ];
 
  const areas = ['天神', '大名', '赤坂', '薬院', '舞鶴', '大濠公園'];
@@ -217,7 +197,7 @@ export default function Fukuoka中央Area() {
  <div className="prose max-w-4xl mx-auto">
  <h2 className="text-2xl font-bold mb-4">福岡市中央区でハウスクリーニングを依頼するなら？</h2>
  <p className="text-lg">中央区は福岡市の中心部に位置し、天神がある福岡の中心繁華街です。商業施設が集積し、オフィス街も発展しています。</p>
- <p className="text-lg mt-4">本記事では、中央区全域対応の<strong>おすすめハウスクリーニング業者13社</strong>を徹底比較。料金、サービス内容、営業時間などの詳細情報を掲載しています。</p>
+ <p className="text-lg mt-4">本記事では、中央区全域対応の<strong>おすすめハウスクリーニング業者11社</strong>を徹底比較。料金、サービス内容、営業時間などの詳細情報を掲載しています。</p>
  </div>
  </div>
  </section>

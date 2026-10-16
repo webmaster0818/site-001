@@ -166,26 +166,6 @@ export default function ChibaArea() {
  services: "エアコン、浴室、キッチン、トイレ、換気扇、家電周辺クリーニング",
  website: "https://www.edion.co.jp/service/satisfied/cleaning"
  },
- {
- name: "おそうじ革命", 
- kitchen: "17,930円〜", 
- bathroom: "17,930円〜", 
- toilet: "8,250円〜",
- description: "プロの技術力と低価格を両立。全国対応で地域密着型のサービスを展開。",
- hours: "店舗により異なる（年末年始を除き土日祝も営業）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
- website: "https://www.osoujikakumei.jp/"
- },
- {
- name: "おそうじ大使", 
- kitchen: "16,800円〜", 
- bathroom: "17,930円〜", 
- toilet: "7,920円〜",
- description: "低価格が魅力の全国チェーン。即日対応可能で急ぎの依頼にも柔軟に対応。",
- hours: "9:00-19:00（年中無休）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
- website: "https://osoujitaishi.com/"
- },
  ];
  // 千葉市6区（リンク付き）
  const chibaWards = [

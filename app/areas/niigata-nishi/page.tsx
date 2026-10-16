@@ -164,26 +164,6 @@ export default function Area_niigata_nishi() {
  services: "エアコン、浴室、キッチン、トイレ、換気扇、家電周辺クリーニング",
  website: "https://www.edion.co.jp/service/satisfied/cleaning"
  },
- {
- name: "おそうじ革命", 
- kitchen: "17,930円〜", 
- bathroom: "17,930円〜", 
- toilet: "8,250円〜",
- description: "プロの技術力と低価格を両立。全国対応で地域密着型のサービスを展開。",
- hours: "店舗により異なる（年末年始を除き土日祝も営業）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
- website: "https://www.osoujikakumei.jp/"
- },
- {
- name: "おそうじ大使", 
- kitchen: "16,800円〜", 
- bathroom: "17,930円〜", 
- toilet: "7,920円〜",
- description: "低価格が魅力の全国チェーン。即日対応可能で急ぎの依頼にも柔軟に対応。",
- hours: "9:00-19:00（年中無休）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
- website: "https://osoujitaishi.com/"
- },
  ];
 
  const areas = ['坂井輪', '内野', '小針', '寺尾', '黒埼'];
@@ -217,7 +197,7 @@ export default function Area_niigata_nishi() {
  <div className="prose max-w-4xl mx-auto">
  <h2 className="text-2xl font-bold mb-4">新潟市西区でハウスクリーニングを依頼するなら？</h2>
  <p className="text-lg">西区は新潟市西部に位置し、坂井輪や内野など住宅地と大学が広がるエリアです。</p>
- <p className="text-lg mt-4">本記事では、西区全域対応の<strong>おすすめハウスクリーニング業者13社</strong>を徹底比較。料金、サービス内容、営業時間などの詳細情報を掲載しています。</p>
+ <p className="text-lg mt-4">本記事では、西区全域対応の<strong>おすすめハウスクリーニング業者11社</strong>を徹底比較。料金、サービス内容、営業時間などの詳細情報を掲載しています。</p>
  </div>
  </div>
  </section>
