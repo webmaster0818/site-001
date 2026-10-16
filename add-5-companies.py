@@ -5,13 +5,13 @@ import glob
 # 追加する5社のデータ
 ADDITIONAL_COMPANIES = '''    { 
       name: "エディオンハウスクリーン", 
-      kitchen: "18,500円〜", 
-      bathroom: "19,250円〜", 
-      toilet: "9,900円〜",
-      description: "家電量販店エディオンが提供する安心のハウスクリーニング。家電に詳しいスタッフが対応。",
-      hours: "10:00-19:00（年末年始除く）",
+      kitchen: "19,800円〜", 
+      bathroom: "19,800円〜", 
+      toilet: "9,240円〜",
+      description: "家電量販店エディオンの「家電のプロのクリーニングサービス」。提供は同社指定エリア内に限る（公式）。",
+      hours: "店舗により異なる（公式の店舗検索で確認）",
       services: "エアコン、浴室、キッチン、トイレ、換気扇、家電周辺クリーニング",
-      website: "https://www.edion.co.jp/"
+      website: "https://www.edion.co.jp/service/satisfied/cleaning"
     },
     { 
       name: "クリーンプロフェッショナルズ", 
