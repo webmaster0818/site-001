@@ -2,6 +2,10 @@ import type {Metadata } from "next";
 import OfficialRatingStores from "./components/OfficialRatingStores";
 import providersData from "./data/providers.json";
 import PartnerCards from "./components/PartnerCards";
+import TopHero from "./components/TopHero";
+import TroubleGrid from "./components/TroubleGrid";
+import AreaAccordion from "./components/AreaAccordion";
+import Reveal from "./components/Reveal";
 
 const brandCounts = (() => {
  const list = providersData as { brand: string }[];
@@ -16,123 +20,12 @@ export const metadata: Metadata = {
 export default function Home() {
  return (
  <>
- {/* HERO SECTION */}
- <section className="hero-section py-16 md:py-24 relative">
- {/* Background Photo */}
- <div className="hero-bg">
- <img
- src="/images/hero-banner.png"
- alt="ハウスクリーニングスタッフが掃除している様子"
- />
- </div>
- <div className="hero-overlay"></div>
- <div className="container mx-auto px-4 text-center relative z-10">
- {/* Badge */}
- <div
- className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6"
- style={{
- background: 'rgba(255,255,255,0.15)',
- border: '1px solid rgba(255,255,255,0.25)',
- }}
- >
- <span className="text-yellow-300 text-sm"></span>
- <span className="text-white text-sm font-medium">
- 厳選業者を徹底比較
- </span>
- </div>
+ <TopHero />
+ <Reveal />
 
- <h1
- className="text-3xl md:text-5xl font-black text-white leading-tight mb-4"
- style={{textShadow: '0 2px 16px rgba(0,0,0,0.2)' }}
- >
- プロのハウスクリーニングを
- <br />
- <span
- style={{
- background: 'linear-gradient(135deg, #fbbf24, #f59e0b)',
- WebkitBackgroundClip: 'text',
- WebkitTextFillColor: 'transparent',
- backgroundClip: 'text',
- }}
- >
- 簡単比較
- </span>
- ・
- <span
- style={{
- background: 'linear-gradient(135deg, #fbbf24, #f59e0b)',
- WebkitBackgroundClip: 'text',
- WebkitTextFillColor: 'transparent',
- backgroundClip: 'text',
- }}
- >
- 予約
- </span>
- </h1>
+ <TroubleGrid />
 
- <p
- className="text-base md:text-lg text-white leading-relaxed max-w-2xl mx-auto mb-8"
- style={{textShadow: '0 1px 4px rgba(0,0,0,0.15)' }}
- >
- 30〜50代の忙しい主婦・共働き世帯に選ばれています。
- <br className="hidden md:block"/>
- 信頼できる業者を
- <span className="font-bold text-yellow-300">口コミ・料金・サービス内容</span>
- で徹底比較。
- </p>
-
- {/* CTA Buttons */}
- <div className="flex gap-4 justify-center flex-wrap mb-8">
- <a className="btn-cta"href="#services">
- あなたに合った業者を探す
- </a>
- </div>
-
- {/* Stats */}
- <div className="flex gap-4 justify-center flex-wrap">
- <div className="stat-box">
- <div
- className="text-3xl font-black text-white mb-1"
- style={{textShadow: '0 1px 4px rgba(0,0,0,0.2)' }}
- >
- 全国<span className="text-lg text-yellow-300 font-bold">対応</span>
- </div>
- <p className="text-xs text-blue-200 font-medium">主要エリア網羅</p>
- </div>
- <div className="stat-box">
- <div
- className="text-3xl font-black text-white mb-1"
- style={{textShadow: '0 1px 4px rgba(0,0,0,0.2)' }}
- >
- 47<span className="text-lg text-yellow-300 font-bold">都道府県</span>
- </div>
- <p className="text-xs text-blue-200 font-medium">対応エリア</p>
- </div>
- <div className="stat-box">
- <div
- className="text-3xl font-black text-white mb-1"
- style={{textShadow: '0 1px 4px rgba(0,0,0,0.2)' }}
- >
- 厳選<span className="text-lg text-yellow-300 font-bold">比較</span>
- </div>
- <p className="text-xs text-blue-200 font-medium">優良業者のみ掲載</p>
- </div>
- </div>
- </div>
-
- {/* Wave SVG */}
- <svg
- className="hero-wave"
- viewBox="0 0 1440 80"
- fill="none"
- xmlns="http://www.w3.org/2000/svg"
- >
- <path
- d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z"
- fill="#f9fafb"
- ></path>
- </svg>
- </section>
+ <AreaAccordion />
 
  {/* PARALLAX: USER VOICES */}
  <section className="py-14 md:py-20 bg-gray-50">
@@ -163,7 +56,7 @@ export default function Home() {
  <p className="text-lg font-bold text-gray-800 mb-4">
  そのお悩み、<span className="text-sky-500">クリーンナビ</span>の比較で解決できます
  </p>
- <a className="btn-cta" href="#services">
+ <a className="btn-cta" href="#trouble">
  あなたに合った業者を探す
  </a>
  </div>
@@ -171,192 +64,6 @@ export default function Home() {
  </section>
 
  <OfficialRatingStores limit={6} />
-
- {/* POPULAR SERVICES */}
- <section className="py-16 md:py-20 bg-gray-50"id="services">
- <div className="container mx-auto px-4">
- <div className="text-center mb-12">
- <h3 className="text-2xl md:text-3xl font-bold text-gray-900 section-heading">
- 人気のクリーニングサービス
- </h3>
- <p className="text-sm md:text-base text-gray-500 mt-6">
- お悩みに合わせて最適なサービスをお選びください
- </p>
- </div>
- <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
- {/* エアコン */}
- <a className="service-card group"href="/services/aircon/">
- <div className="p-6 md:p-8">
- <div className="flex items-center gap-3 mb-4">
- <div className="service-card-icon bg-sky-50 text-sky-500">
- <svg
- xmlns="http://www.w3.org/2000/svg"
- width="36"
- height="36"
- viewBox="0 0 24 24"
- fill="none"
- stroke="currentColor"
- strokeWidth="2"
- strokeLinecap="round"
- strokeLinejoin="round"
- >
- <path d="M12.8 19.6A2 2 0 1 0 14 16H2"></path>
- <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"></path>
- <path d="M9.8 4.4A2 2 0 1 1 11 8H2"></path>
- </svg>
- </div>
- <div>
- <span className="badge-popular">人気No.1</span>
- </div>
- </div>
- <h4 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-sky-500 transition">
- エアコンクリーニング
- </h4>
- <p className="text-base text-gray-600 mb-4 leading-relaxed">
- カビ・ホコリを徹底除去。快適な空気で健康的な暮らしを。プロの技で分解洗浄いたします。
- </p>
- <div className="flex items-center gap-1 text-sky-500 font-bold group-hover:gap-3 transition-all">
- <span>業者を比較する</span>
- <span>→</span>
- </div>
- </div>
- </a>
-
- {/* 浴室 */}
- <a className="service-card group"href="/services/bathroom/">
- <div className="p-6 md:p-8">
- <div className="flex items-center gap-3 mb-4">
- <div className="service-card-icon bg-cyan-50 text-cyan-600">
- <svg
- xmlns="http://www.w3.org/2000/svg"
- width="36"
- height="36"
- viewBox="0 0 24 24"
- fill="none"
- stroke="currentColor"
- strokeWidth="2"
- strokeLinecap="round"
- strokeLinejoin="round"
- >
- <path d="M10 4 8 6"></path>
- <path d="M17 19v2"></path>
- <path d="M2 12h20"></path>
- <path d="M7 19v2"></path>
- <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path>
- </svg>
- </div>
- <div>
- <span className="badge-recommend">おすすめ</span>
- </div>
- </div>
- <h4 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-sky-500 transition">
- 浴室クリーニング
- </h4>
- <p className="text-base text-gray-600 mb-4 leading-relaxed">
- 頑固な水垢・カビもピカピカに。リラックスできるバスタイムを取り戻しましょう。
- </p>
- <div className="flex items-center gap-1 text-sky-500 font-bold group-hover:gap-3 transition-all">
- <span>業者を比較する</span>
- <span>→</span>
- </div>
- </div>
- </a>
-
- {/* キッチン */}
- <a className="service-card group"href="/services/kitchen/">
- <div className="p-6 md:p-8">
- <div className="flex items-center gap-3 mb-4">
- <div className="service-card-icon bg-orange-50 text-orange-600">
- <svg
- xmlns="http://www.w3.org/2000/svg"
- width="36"
- height="36"
- viewBox="0 0 24 24"
- fill="none"
- stroke="currentColor"
- strokeWidth="2"
- strokeLinecap="round"
- strokeLinejoin="round"
- >
- <path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"></path>
- <path d="M6 17h12"></path>
- </svg>
- </div>
- </div>
- <h4 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-sky-500 transition">
- キッチンクリーニング
- </h4>
- <p className="text-base text-gray-600 mb-4 leading-relaxed">
- 油汚れ・焦げ付きもスッキリ。清潔なキッチンで毎日の料理がもっと楽しく。
- </p>
- <div className="flex items-center gap-1 text-sky-500 font-bold group-hover:gap-3 transition-all">
- <span>業者を比較する</span>
- <span>→</span>
- </div>
- </div>
- </a>
- </div>
- </div>
- </section>
-
- {/* AREAS */}
- <section className="py-16 md:py-20 bg-white">
- <div className="container mx-auto px-4">
- <div className="text-center mb-12">
- <h3 className="text-2xl md:text-3xl font-bold text-gray-900 section-heading">
- エリアから業者を探す
- </h3>
- <p className="text-sm md:text-base text-gray-500 mt-6">
- お住まいの地域の優良業者をすぐに見つけられます
- </p>
- </div>
- {/* 北海道・東北 */}
- <h4 className="text-sm font-bold text-gray-500 mt-6 mb-3 max-w-5xl mx-auto">北海道・東北</h4>
- <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3 max-w-5xl mx-auto mb-6">
- <a className="area-card text-center group"href="/areas/sapporo/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">札幌市</div></a>
- <a className="area-card text-center group"href="/areas/sendai/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">仙台市</div></a>
- <a className="area-card text-center group"href="/areas/niigata/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">新潟県</div></a>
- </div>
-
- {/* 関東 */}
- <h4 className="text-sm font-bold text-gray-500 mb-3 max-w-5xl mx-auto">関東</h4>
- <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3 max-w-5xl mx-auto mb-6">
- <a className="area-card text-center group"href="/areas/tokyo/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">東京都</div></a>
- <a className="area-card text-center group"href="/areas/kanagawa/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">神奈川県</div></a>
- <a className="area-card text-center group"href="/areas/saitama/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">埼玉県</div></a>
- <a className="area-card text-center group"href="/areas/chiba/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">千葉県</div></a>
- <a className="area-card text-center group"href="/areas/yokohama/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">横浜市</div></a>
- <a className="area-card text-center group"href="/areas/kawasaki/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">川崎市</div></a>
- </div>
-
- {/* 中部 */}
- <h4 className="text-sm font-bold text-gray-500 mb-3 max-w-5xl mx-auto">中部</h4>
- <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3 max-w-5xl mx-auto mb-6">
- <a className="area-card text-center group"href="/areas/aichi/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">愛知県</div></a>
- <a className="area-card text-center group"href="/areas/shizuoka/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">静岡県</div></a>
- </div>
-
- {/* 近畿 */}
- <h4 className="text-sm font-bold text-gray-500 mb-3 max-w-5xl mx-auto">近畿</h4>
- <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3 max-w-5xl mx-auto mb-6">
- <a className="area-card text-center group"href="/areas/osaka/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">大阪府</div></a>
- <a className="area-card text-center group"href="/areas/kyoto/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">京都府</div></a>
- <a className="area-card text-center group"href="/areas/hyogo/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">兵庫県</div></a>
- </div>
-
- {/* 中国・四国 */}
- <h4 className="text-sm font-bold text-gray-500 mb-3 max-w-5xl mx-auto">中国・四国</h4>
- <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3 max-w-5xl mx-auto mb-6">
- <a className="area-card text-center group"href="/areas/hiroshima-ken/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">広島県</div></a>
- </div>
-
- {/* 九州・沖縄 */}
- <h4 className="text-sm font-bold text-gray-500 mb-3 max-w-5xl mx-auto">九州・沖縄</h4>
- <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3 max-w-5xl mx-auto mb-6">
- <a className="area-card text-center group"href="/areas/fukuoka/"><div className="font-bold text-sm text-gray-900 group-hover:text-sky-500 transition">福岡県</div></a>
- </div>
- </div>
- </section>
 
  {/* 大手ブランドの店舗から探す */}
  <section className="py-16 md:py-20 bg-white">

@@ -87,7 +87,7 @@ const structuredData = {
     "@type": "Organization",
     "name": "クリーンナビ",
     "url": "https://cleaning-choices.com/",
-    "logo": "https://cleaning-choices.com/images/logo-character.png"
+    "logo": "https://cleaning-choices.com/images/logo-mark.png"
   },
   breadcrumb: {
     "@context": "https://schema.org",

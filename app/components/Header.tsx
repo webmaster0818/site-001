@@ -14,7 +14,7 @@ export default function Header() {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
           <a className="flex items-center gap-3 shrink-0" href="/">
             <img
-              src="/images/logo-character.png"
+              src="/images/logo-mark.png"
               alt=""
               className="w-10 h-10 md:w-12 md:h-12 object-contain"
             />
