@@ -1,3 +1,4 @@
+import { StoreBrandShot } from "../../components/CompanyShot";
 import type { Metadata } from "next";
 import providers from "../../data/providers.json";
 // CTR実験(2026-09-11開始): GSC表示上位50店のみtitle/descに比較フックを追加。2週間で判定→全展開or撤収
@@ -145,6 +146,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
         <a href={p.source_url} target="_blank" rel="noopener noreferrer" className="underline text-primary">出典: 公式店舗ページ</a>）。
       </p>
 
+      <StoreBrandShot brand={p.brand} name={p.brand_name} />
       {typeof p.rating_official === "number" && (
         <div className="alert alert-info mb-6">
           <p>
@@ -220,8 +222,13 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
           <div className="grid gap-3 md:grid-cols-2">
             {nearby.map((n) => (
               <a key={n.slug} href={`/provider/${n.slug}/`} className="card p-4 block">
+               <div className="cn-store-row">
+                <StoreBrandShot brand={n.brand} name={n.brand_name} compact />
+                <div>
                 <p className="text-sm font-bold text-ink">{n.name}</p>
                 <p className="text-xs text-muted mt-1">{n.address ?? n.pref_ja}</p>
+                </div>
+               </div>
               </a>
             ))}
           </div>

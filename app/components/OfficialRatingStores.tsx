@@ -1,7 +1,9 @@
+import { StoreBrandShot } from "./CompanyShot";
 import providers from "../data/providers.json";
 
 type Provider = {
   slug: string;
+  brand: string;
   brand_name: string;
   name: string;
   pref_ja: string;
@@ -46,9 +48,12 @@ export default function OfficialRatingStores({ limit = 6 }: { limit?: number }) 
               href={`/provider/${p.slug}/`}
               className="card p-4 block border border-gray-200"
             >
-              <div className="flex items-center justify-between mb-1">
+              <div className="cn-store-row mb-2">
+                <StoreBrandShot brand={p.brand} name={p.brand_name} compact />
+                <div className="flex items-center justify-between w-full">
                 <span className="text-xs font-bold text-gray-400">#{i + 1}</span>
                 <span className="text-xs text-gray-500">{p.pref_ja}</span>
+                </div>
               </div>
               <p className="text-sm font-bold text-gray-900">{p.name}</p>
               <p className="text-xs text-gray-500 mt-1">{p.brand_name}</p>

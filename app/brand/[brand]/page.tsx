@@ -1,3 +1,4 @@
+import { PartnerShot, StoreBrandShot } from "../../components/CompanyShot";
 import type { Metadata } from "next";
 import providers from "../../data/providers.json";
 import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
@@ -128,6 +129,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
       </div>
 
       <section className="container mx-auto px-4 py-8 max-w-4xl">
+        <PartnerShot slug={brand} name={b.name} />
         <div className="card p-6">
           <h2 className="text-xl font-bold text-ink mb-3">{b.name}とは</h2>
           <p className="text-sm text-ink-soft leading-relaxed mb-4">{b.description}</p>
@@ -157,11 +159,16 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {rated.map((s) => (
               <a key={s.slug} href={`/provider/${s.slug}/`} className="card p-4 block">
+               <div className="cn-store-row">
+                <StoreBrandShot brand={s.brand} name={b.name} compact />
+                <div>
                 <p className="text-sm font-bold text-ink">{s.name}</p>
                 <p className="text-xs text-muted mt-1">{s.pref_ja}</p>
                 <p className="text-xs text-primary mt-1">
                   公式評価 {s.rating_official!.toFixed(2)}（{s.review_count_official}件）
                 </p>
+                </div>
+               </div>
               </a>
             ))}
           </div>

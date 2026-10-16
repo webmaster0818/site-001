@@ -1,3 +1,4 @@
+import { StoreBrandShot, StoreShotNote } from "./CompanyShot";
 import providers from "../data/providers.json";
 import areaMap from "../data/areaMap.json";
 
@@ -151,6 +152,9 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {located.map((p) => (
               <a key={p.slug} href={`/provider/${p.slug}/`} className="card p-4 block border border-gray-200">
+               <div className="cn-store-row">
+                <StoreBrandShot brand={p.brand} name={p.brand_name} compact />
+                <div>
                 <div className="flex items-center gap-2 mb-1">
                   <span className="badge text-[11px]">{p.brand_name}</span>
                   {typeof p.rating_official === "number" && (
@@ -175,10 +179,13 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
                     {p.charge_region.length > 6 && ` ほか${p.charge_region.length - 6}地域`}
                   </p>
                 )}
+                </div>
+               </div>
               </a>
             ))}
           </div>
         )}
+        {located.length > 0 && <StoreShotNote />}
 
         {covering.length > 0 && (
           <div className="mt-8">

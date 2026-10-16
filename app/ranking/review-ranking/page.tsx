@@ -1,9 +1,11 @@
+import { StoreBrandShot } from "../../components/CompanyShot";
 import type { Metadata } from "next";
 import providers from "../../data/providers.json";
 import PartnerCards from "../../components/PartnerCards";
 
 type Provider = {
   slug: string;
+  brand: string;
   brand_name: string;
   name: string;
   pref_ja: string;
@@ -64,6 +66,7 @@ export default function ReviewRankingPage() {
                 <span className={`shrink-0 w-10 h-10 rounded-full font-bold flex items-center justify-center ${i < 3 ? "bg-amber-500 text-white" : "bg-gray-100 text-gray-600"}`}>
                   {i + 1}
                 </span>
+                <StoreBrandShot brand={p.brand} name={p.brand_name} compact />
                 <div className="min-w-0 flex-1">
                   <p className="font-bold text-gray-900 truncate">{p.name}</p>
                   <p className="text-xs text-gray-500">{p.brand_name}・{p.pref_ja}</p>
