@@ -219,3 +219,7 @@ GSC実数診断:
   FV・数字帯を全幅に。PartnerCards（全ページ共通）を kagi の「掲載している業者」形式＝公式トップのキャプチャ（public/images/partners/<slug>.webp 1280×800・撮影元と日付 app/data/partner-captures.json）＋「出典：〇〇 公式サイト（日付時点）」。TOP の大手3ブランド枠も同形式。特長（Reasons.tsx）＝事実の文言＋線画アイコン（旧「厳選された優良業者のみ」「口コミ比較」は削除）。.btn-cta/.btn-primary/.btn-outline をサイト全体で紺に上書き（globals.css 末尾）。TOP の二重フッター（page.tsx 内の旧 footer）を削除。ファビコンは /favicon-20261016.png（キャッシュ対策でファイル名を変更）
   計測リンク・pixel の集合は本番と22頁で一致。⚠️ キャプチャにはキャンペーン表示が写る（r-cleaning 10/20まで 等）・110番は「東証上場企業運営」表示（10/27 TOB 後に撮り直し）→ 撮り直し周期を MediaXAI に確認中
 - 残: OG 画像を新ロゴで / サイト全体（エリア・review・ranking 等）の見出し・枠の統一 / 旧テンプレの水色リンク色
+- **第3弾 全ページのテイスト統一（73eaac2）** MediaXAI 06:55「他のページもすべてテイストをそろえて」: globals.css 末尾の「サイト全体のテイスト統一」ブロックで旧テンプレの共通クラスを上書き（上部の帯 bg-gradient-to-r.from-primary / bg-blue-600 / from-green-600 / hero-section → 霧色＋紺文字・写真と波は非表示、bg-gradient-to-br の色付きアイコン枠 → 紺、text-sky/blue/green → 青緑、カードは細い枠・影なし）。✓1,145個を削除（229ファイル・見出しは削除、行頭は「・」）。会社/サービス別の業者画像を公式キャプチャ＋出典に（東京ガス kaji.tokyo-gas.co.jp・ベアーズ happy-bears.com を追加撮影、ベアーズは LINE ポップアップを閉じて撮影）
+  ⚠️ **Tailwind v4 の .collapse は visibility:collapse**。daisyUI の collapse を使っていた旧FAQが234ページで全部見えていなかった → `.collapse{visibility:visible}`＋ラジオ式は答えを常に開く。daisyUI の steps（/guide/）も未スタイル → 非表示
+- **OG 画像（7ab303f）**: scripts/make-og.py をロゴ C-1＋作業者の写真に。URL は og-image.png?v=20261016（477箇所）
+- 定例: 毎月1日に scripts/capture-partners/run.sh で業者キャプチャ撮り直し（sites.md に登録・次回 11/1）
