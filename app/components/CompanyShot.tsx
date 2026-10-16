@@ -13,10 +13,14 @@ const CAP: Record<string, { name: string; captured_at: string }> = Object.fromEn
 );
 const jpDate = (d: string) => { const [y, m, dd] = d.split("-").map(Number); return `${y}年${m}月${dd}日`; };
 
-export default function CompanyShot({ name }: { name: string }) {
+export default function CompanyShot({ name, compact = false }: { name: string; compact?: boolean }) {
   const slug = BY_NAME[name];
   const cap = slug && CAP[slug];
   if (!cap) return null;
+  // 比較表の行用：小さなサムネイルだけ（出典は表の下にまとめて書く）
+  if (compact) {
+    return <img className="cn-area-thumb" src={`/images/partners/${slug}.webp`} alt={`${name} 公式サイト`} width={1280} height={800} loading="lazy" />;
+  }
   return (
     <figure className="cn-area-shot">
       <img src={`/images/partners/${slug}.webp`} alt={`${name} 公式サイトのトップページ`} width={1280} height={800} loading="lazy" />

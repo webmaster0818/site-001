@@ -739,3 +739,4 @@ ul.steps { display: none !important; }
 @media (min-width: 768px) { .cn-area-shot { flex: 0 0 240px; } }
 .cn-area-shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid var(--cn-mist); }
 .cn-area-shot figcaption { margin-top: .35rem; font-size: .68rem; line-height: 1.5; color: #6b8086; }
+.cn-area-thumb { flex: none; width: 96px; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid var(--cn-line); border-radius: 3px; }

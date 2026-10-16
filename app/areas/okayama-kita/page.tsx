@@ -245,9 +245,7 @@ export default function Area_okayama_kita() {
  <tr key={company.name} className="hover">
  <td>
  <div className="flex items-center gap-3">
- <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center`}>
- <Icon className="w-6 h-6 text-white"/>
- </div>
+ <CompanyShot name={company.name} compact />
  <span className="font-bold text-lg">{company.name}</span>
  </div>
  </td>
@@ -259,6 +257,7 @@ export default function Area_okayama_kita() {
  })}
  </tbody>
  </table>
+ <p className="text-xs text-gray-500 mt-2 max-w-6xl mx-auto">画像は各社公式サイトのトップページ（2026年10月16日時点・当サイト撮影）。料金は各社公式サイトの表記です。</p>
  </div>
  </div>
  </section>

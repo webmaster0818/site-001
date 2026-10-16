@@ -239,9 +239,7 @@ export default function TokyominatoArea() {
                     <tr key={i}>
                       <td>
                         <div className="flex items-center gap-3">
-                          <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center`}>
-                            <Icon className="w-6 h-6 text-white" />
-                          </div>
+                          <CompanyShot name={c.name} compact />
                           <span className="font-bold text-lg">{c.name}</span>
                         </div>
                       </td>

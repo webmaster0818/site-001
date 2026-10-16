@@ -45,6 +45,20 @@ const COMPANIES = [
   },
 ];
 
+// 対応エリアの絞り込み（2026-10-16 MediaXAI「対応エリアって何でこんな少ないの？」＝東京・神奈川・埼玉・千葉の4つしか無かった）。
+// 47都道府県から選べるようにし、業者の対応エリア文（公式の記載の要約）に県名・地方名・「全国」があれば該当とする。
+const PREFS = ["北海道","青森","岩手","宮城","秋田","山形","福島","茨城","栃木","群馬","埼玉","千葉","東京","神奈川","新潟","富山","石川","福井","山梨","長野","岐阜","静岡","愛知","三重","滋賀","京都","大阪","兵庫","奈良","和歌山","鳥取","島根","岡山","広島","山口","徳島","香川","愛媛","高知","福岡","佐賀","長崎","熊本","大分","宮崎","鹿児島","沖縄"];
+const REGION: Record<string, string[]> = {
+  関東: ["茨城","栃木","群馬","埼玉","千葉","東京","神奈川"], 首都圏: ["埼玉","千葉","東京","神奈川"], "1都3県": ["埼玉","千葉","東京","神奈川"],
+  関西: ["滋賀","京都","大阪","兵庫","奈良","和歌山"], 近畿: ["滋賀","京都","大阪","兵庫","奈良","和歌山"], 東海: ["岐阜","静岡","愛知","三重"],
+  九州: ["福岡","佐賀","長崎","熊本","大分","宮崎","鹿児島"], 東北: ["青森","岩手","宮城","秋田","山形","福島"],
+};
+function servesPref(area: string, pref: string): boolean {
+  if (/全国|47都道府県/.test(area)) return true;
+  if (area.includes(pref)) return true;
+  return Object.entries(REGION).some(([r, ps]) => area.includes(r) && ps.includes(pref));
+}
+
 const CATEGORY_INFO = {
   aircon: {
     title: "エアコンクリーニング",
@@ -108,9 +122,7 @@ export default function ServicePageClient({ category }: { category: string }) {
   }
 
   if (areaFilter !== "all") {
-    filteredCompanies = filteredCompanies.filter((c) =>
-      c.area.includes(areaFilter) || /全国|47都道府県/.test(c.area)
-    );
+    filteredCompanies = filteredCompanies.filter((c) => servesPref(c.area, areaFilter));
   }
 
   // ソート処理
@@ -170,10 +182,9 @@ export default function ServicePageClient({ category }: { category: string }) {
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="all">すべて</option>
-                  <option value="東京">東京</option>
-                  <option value="神奈川">神奈川</option>
-                  <option value="埼玉">埼玉</option>
-                  <option value="千葉">千葉</option>
+                  {PREFS.map((p) => (
+                    <option key={p} value={p}>{p}</option>
+                  ))}
                 </select>
               </div>
 
