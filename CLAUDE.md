@@ -210,3 +210,8 @@ GSC実数診断:
 - 提案済み（id 1560536344336535572・1560536373302399009）: FV 3案＋ロゴ5案（scripts/gen-design-proposals.py・gemini-3-pro-image-preview 2K・出力 design-proposals/ は gitignore）。FV の数字=掲載3,525店舗・47都道府県・274エリア・エアコン8,800円〜（おそうじLabo 初回限定）。「〇分以内到着」「業界最多水準」は根拠が無いので不使用。ボタン文言は「お悩みから探す」（指示は「トラブル」→要確認）
 - 23区は全23区のページが既にある（app/data/areaMap.json の tokyo-*）→ 新規作成は不要
 - 次: FV・ロゴの選択待ち → 残りの改修
+- 選択（06:17）: FV=案2・ロゴ=C を色付け → C-1（06:19）
+- **第1弾 本番（6c9e459・15:35 反映）**: TopHero（FV案2・数字は providers.json/areaMap.json から計算）・TroubleGrid（9項目・紺の線画アイコン public/images/top/icon-*.webp）・AreaAccordion（東京都別枠＝23区＋多摩、関東に東京都を入れない、全部 <details> で閉じた状態、274エリア全リンク）・Reveal（IntersectionObserver・reduced-motion と JS 無しでは常に表示）。ロゴ C-1 → public/images/logo-mark.png・app/icon.png・favicon.ico・apple-touch-icon。CSS は globals.css の「TOP 刷新」ブロック（.cn-*）
+- ⚠️ ヘッドレス Chrome の --window-size=390 は実際には約500pxで描画して切り取る（横はみ出しに見える）。スマホ確認は CDP の Emulation.setDeviceMetricsOverride（scratchpad の mshot.mjs）で scrollWidth==innerWidth を確かめる
+- ⚠️ セクション見出しに <header> を使うと「header=1」監査に引っかかる → div
+- 次: ①業者紹介枠に各社の公式画像 ②TOP残り・全体のボタン/枠/アイコン統一（WHY CHOOSE US の ✓★ も） ③OG 画像を新ロゴで
