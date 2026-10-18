@@ -116,12 +116,12 @@ export default function Area_kumamoto_nishi() {
  },
  {
  name: "サニクリーン", 
- kitchen: "17,600円〜", 
- bathroom: "18,700円〜", 
- toilet: "8,800円〜",
+ kitchen: "見積もり制", 
+ bathroom: "見積もり制", 
+ toilet: "見積もり制",
  description: "全国対応の大手清掃会社です。無料見積もりで、事前に汚れの状況を確認します。",
- hours: "9:00-18:00（年中無休）",
- services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
+ hours: "電話受付 10:00〜16:00（土・日・祝日を除く）",
+ services: "エアコン、キッチン、浴室、トイレ、換気扇・レンジフード、フロア、まるごとハウスクリーニング",
  website: "https://www.sanikleen.co.jp/housecleaning/"
  },
  {
