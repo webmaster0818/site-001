@@ -12,6 +12,10 @@
 
   python3 scripts/refresh-official-ratings.py            # 取得して providers.json を更新
   python3 scripts/refresh-official-ratings.py --dry-run  # 差分だけ表示
+  python3 scripts/refresh-official-ratings.py --cache-date 2026-10-16  # その日の取得キャッシュだけで再計算（通信しない）
+
+2026-10-19: 評価が整数（例「5」）の店を読めていなかった（小数点必須の正規表現）→ 177店で評価が落ちていた。
+評価点が無く件数だけ出ている店（c-review__count のみ）は件数だけを持つ（rating_official は持たない）。
 """
 import json
 import re
@@ -23,11 +27,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "app/data/providers.json"
-CACHE = Path("/tmp") / f"honpo-ratings-{date.today().isoformat()}"
+CACHE_DATE = sys.argv[sys.argv.index("--cache-date") + 1] if "--cache-date" in sys.argv else None
+CACHE = Path("/tmp") / f"honpo-ratings-{CACHE_DATE or date.today().isoformat()}"
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/130.0 Safari/537.36")
-VALUE = re.compile(r'class="c-review__value">\s*([0-9]\.[0-9]+)\s*<')
+VALUE = re.compile(r'class="c-review__value">\s*([0-9](?:\.[0-9]+)?)\s*<')
 COUNT = re.compile(r'([0-9][0-9,]*)\s*件')
+COUNT_ONLY = re.compile(r'class="c-review__count">\s*([0-9][0-9,]*)\s*件')
 
 
 def fetch(url: str) -> str | None:
@@ -35,6 +41,8 @@ def fetch(url: str) -> str | None:
     key = CACHE / (re.sub(r"[^0-9A-Za-z]+", "_", url) + ".html")
     if key.exists():
         return key.read_text(encoding="utf-8")
+    if CACHE_DATE:  # キャッシュ指定時は通信しない（無い店は失敗扱い＝前回値のまま）
+        return None
     for _ in range(3):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "ja"})
@@ -50,6 +58,11 @@ def fetch(url: str) -> str | None:
     return None
 
 
+def parse_count_only(html: str) -> int | None:
+    c = COUNT_ONLY.search(html)
+    return int(c.group(1).replace(",", "")) if c else None
+
+
 def parse(html: str) -> tuple[float, int | None] | None:
     m = VALUE.search(html)
     if not m:
@@ -61,7 +74,7 @@ def parse(html: str) -> tuple[float, int | None] | None:
 
 def main() -> None:
     dry = "--dry-run" in sys.argv
-    today = date.today().isoformat()
+    today = CACHE_DATE or date.today().isoformat()
     stores = json.loads(DATA.read_text(encoding="utf-8"))
     honpo = [p for p in stores if p.get("brand") == "honpo"]
     stat = {"updated": 0, "same": 0, "added": 0, "removed": 0, "failed": 0}
@@ -75,7 +88,11 @@ def main() -> None:
         if got is None:
             if had:
                 stat["removed"] += 1
-                p.pop("rating_official", None)
+            p.pop("rating_official", None)
+            n = parse_count_only(html)
+            if n is not None:
+                p["review_count_official"] = n
+            else:
                 p.pop("review_count_official", None)
             p["rating_checked_at"] = today
             continue
