@@ -320,16 +320,6 @@ COMPANIES_DATA = '''  const companies = [
       services: "エアコン、浴室、キッチン、トイレ、換気扇、家電周辺クリーニング",
       website: "https://www.edion.co.jp/service/satisfied/cleaning"
     },
-    { 
-      name: "おそうじ大使", 
-      kitchen: "16,800円〜", 
-      bathroom: "17,930円〜", 
-      toilet: "7,920円〜",
-      description: "低価格が魅力の全国チェーン。即日対応可能で急ぎの依頼にも柔軟に対応。",
-      hours: "9:00-19:00（年中無休）",
-      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
-      website: "https://osoujitaishi.com/"
-    },
   ];'''
 
 def generate_ward_page(ward):
@@ -395,7 +385,7 @@ export default function Kyoto{component_name}Area() {{
           <div className="prose max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-4">京都市{ward['name']}でハウスクリーニングを依頼するなら？</h2>
             <p className="text-lg">{ward['intro']}</p>
-            <p className="text-lg mt-4">本記事では、{ward['name']}全域対応の<strong>おすすめハウスクリーニング業者12社</strong>を徹底比較。料金、サービス内容、営業時間などの詳細情報を掲載しています。</p>
+            <p className="text-lg mt-4">本記事では、{ward['name']}全域対応の<strong>おすすめハウスクリーニング業者11社</strong>を徹底比較。料金、サービス内容、営業時間などの詳細情報を掲載しています。</p>
           </div>
         </div>
       </section>

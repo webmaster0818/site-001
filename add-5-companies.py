@@ -13,16 +13,6 @@ ADDITIONAL_COMPANIES = '''    {
       services: "エアコン、浴室、キッチン、トイレ、換気扇、家電周辺クリーニング",
       website: "https://www.edion.co.jp/service/satisfied/cleaning"
     },
-    { 
-      name: "おそうじ大使", 
-      kitchen: "16,800円〜", 
-      bathroom: "17,930円〜", 
-      toilet: "7,920円〜",
-      description: "低価格が魅力の全国チェーン。即日対応可能で急ぎの依頼にも柔軟に対応。",
-      hours: "9:00-19:00（年中無休）",
-      services: "エアコン、浴室、キッチン、トイレ、換気扇、洗濯機クリーニング",
-      website: "https://osoujitaishi.com/"
-    },
   ];'''
 
 # 15色に拡張
