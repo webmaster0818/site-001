@@ -115,16 +115,6 @@ NEW_COMPANIES_15 = '''  const companies = [
       website: "https://www.edion.co.jp/service/satisfied/cleaning"
     },
     { 
-      name: "クリーンプロフェッショナルズ", 
-      kitchen: "17,050円〜", 
-      bathroom: "18,150円〜", 
-      toilet: "8,250円〜",
-      description: "プロの技術力と低価格を両立。全国対応で地域密着型のサービスを展開。",
-      hours: "8:00-20:00（年中無休）",
-      services: "エアコン、浴室、キッチン、トイレ、換気扇、窓クリーニング",
-      website: "https://cleanpro.co.jp/"
-    },
-    { 
       name: "おそうじ大使", 
       kitchen: "16,800円〜", 
       bathroom: "17,930円〜", 
