@@ -275,3 +275,10 @@ GSC実数診断:
 - 個別（10/19 公式店舗ページで確認）: 本舗4店に電話番号（名護大北 0120-06-2041・敦賀 0120-560-682・白河 0120-49-2007・菰野 0120-905-927）・クチコミ件数（名護 4・敦賀 8・白河 5.00/17件・菰野 4.94/16件）、6店の verified_at=2026-10-19（住所・営業時間・定休日・電話は公式と一致）。住所の県名二重 2件（kakumei-meguro_gakugeidai・kakumei-sakado_tsurugashima）を修正
 - 未対応（件数のみ）: 本舗 1,872店は電話番号が未収録（公式店舗ページにはあり）。kakumei-saitama_hanno は slug=飯能だが住所が坂戸市。provider の og:title/og:url は layout 既定のまま（全3,525頁）
 - out: 3,869頁・precheck 全項目OK・計測リンク 2256→2256・sitemap lastmod provider 3,525（URL数 3,869 不変）
+
+### 2026-10-20 朝ルーチン: 店舗ページ 3,525頁の og:title・og:url を title・canonical と同じ値に
+- 原因: provider/[slug] の generateMetadata に openGraph が無く、layout 既定（og:title=サイト名・og:url=TOP）を継承していた。Next.js は openGraph をオブジェクトごと置き換える（浅いマージ）ため、既定値を `app/siteOpenGraph.ts`（SITE_OPEN_GRAPH）に切り出し、layout と provider で共用（provider は `{...SITE_OPEN_GRAPH, title, url: canonical}`）
+- 本番全3,525頁（sitemap の provider URL を全件 curl）: og:title=title 0→3,525・og:url=canonical 0→3,525、既定値 3,525→0。out/ の provider 以外 347頁の og/twitter メタは変化なし。計測リンク 3,395→3,395。precheck 全項目OK。a76c43d6（CF success）
+- sitemap lastmod は変更せず（表示内容は不変・provider は 10/19 のまま）。Indexing API 送信なし
+- 未修正（件数のみ）: og:description・twitter:title は provider 3,525頁とも layout 既定のまま。provider 以外で og:url=TOP の頁が 101（[pref] 動的ルートの県ページなど）
+- kakumei-saitama_hanno（10/20 公式 https://www.osoujikakumei.jp/saitama_hanno/ 生HTML）: 公式の店名は「埼玉わかば店」、住所 〒350-0237 坂戸市浅羽野２−４−２１、電話 0120-849-242、対応エリア11市（埼玉7・東京4、公式も坂戸市は掲載なし）＝ providers.json と全項目一致。店舗紹介に「元々、おそうじ革命埼玉飯能店として４年ほど」＝旧店名の名残で、公式URLも saitama_hanno のまま。slug は公式URLのパスに合わせたものなので変更不要（変えるなら301・判断事項）。インボイス番号は公式に「インボイス登録済み」のみで番号の記載なし→ verified_at は据え置き
