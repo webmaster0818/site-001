@@ -3,9 +3,11 @@ import AreaProvidersLead from "../../components/AreaProvidersLead";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {Building2, MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/areas/kanagawa/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/areas/kanagawa/" },
  title: "神奈川県のハウスクリーニング業者おすすめ比較 | 料金・口コミ | クリーンナビ",
  description: "神奈川県のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
  viewport: "width=device-width, initial-scale=1",

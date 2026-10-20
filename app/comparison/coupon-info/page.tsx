@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/comparison/coupon-info/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/comparison/coupon-info/" },
   title: "クーポン・割引情報まとめ | クリーンナビ",
   description: "クーポン・キャンペーン情報について。業者選びの基本は、業者選びガイドでご説明しています。",
 };

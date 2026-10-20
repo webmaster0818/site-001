@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/comparison/time-comparison/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/comparison/time-comparison/" },
   title: "作業時間・所要時間比較 | クリーンナビ",
   description: "サービス別の作業時間を比較。業者選びの基本は、業者選びガイドでご説明しています。",
 };

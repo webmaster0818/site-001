@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/guide-detail/before-checklist/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/guide-detail/before-checklist/" },
   title: "依頼前のチェックリスト | クリーンナビ",
   description: "業者に依頼する前に確認すべき10のポイント。ハウスクリーニング業者の選び方は、業者選びガイドでご説明しています。",
 };

@@ -3,9 +3,11 @@ import AreaProvidersLead from "../../components/AreaProvidersLead";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import { Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/areas/hiroshima/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/areas/hiroshima/" },
   title: "広島市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
   description: "広島市のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
 };

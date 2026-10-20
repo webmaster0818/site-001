@@ -17,3 +17,12 @@ export const SITE_OPEN_GRAPH = {
   locale: "ja_JP",
   type: "website" as const,
 };
+
+// サイト既定の Twitter カード。openGraph と同じく浅いマージなので、ページ側で上書きするときは展開して使う。
+export const SITE_TWITTER = {
+  card: "summary_large_image" as const,
+  title: "クリーンナビ | ハウスクリーニング業者比較サイト",
+  description:
+    "ハウスクリーニング業者を、各社の公式情報にもとづいて料金・対応エリアで比較できます。",
+  images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
+};

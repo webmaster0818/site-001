@@ -1,8 +1,10 @@
 import Link from "next/link";
 import PartnerCards from "../../components/PartnerCards";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/scene/new-house/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/scene/new-house/" },
   title: "新築・リフォーム後クリーニング | クリーンナビ",
   description: "新築・リフォーム後の仕上げ清掃と、入居前の清掃に対応する提携業者を掲載しています。",
 };

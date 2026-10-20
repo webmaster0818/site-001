@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
-import { SITE_OPEN_GRAPH } from "./siteOpenGraph";
+import { SITE_OPEN_GRAPH, SITE_TWITTER } from "./siteOpenGraph";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -33,13 +33,7 @@ export const metadata: Metadata = {
     "料金比較",
   ],
   openGraph: SITE_OPEN_GRAPH,
-  twitter: {
-    card: "summary_large_image",
-    title: "クリーンナビ | ハウスクリーニング業者比較サイト",
-    description:
-      "ハウスクリーニング業者を、各社の公式情報にもとづいて料金・対応エリアで比較できます。",
-    images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
-  },
+  twitter: SITE_TWITTER,
   viewport: {
     width: "device-width",
     initialScale: 1,

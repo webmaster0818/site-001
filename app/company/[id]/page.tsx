@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import CompanyPageClient from "./CompanyPageClient";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 // メタデータ用の業者名・カテゴリ一覧（実データはCompanyPageClientのCOMPANY_DATA）
 const COMPANY_META: { [id: string]: { name: string; category: string } } = {
@@ -34,6 +35,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://cleaning-choices.com/company/${id}/`,
     },
+    openGraph: { ...SITE_OPEN_GRAPH, url: `https://cleaning-choices.com/company/${id}/` },
   };
 }
 

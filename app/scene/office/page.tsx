@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/scene/office/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/scene/office/" },
   title: "事務所・オフィスクリーニング | クリーンナビ",
   description: "事務所・オフィスの清掃についてのページです。対応する業者は、サービス別の業者一覧からお探しください。",
 };

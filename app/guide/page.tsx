@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { CheckCircle, AlertTriangle } from "lucide-react";
 import Reveal from "../components/Reveal";
+import { SITE_OPEN_GRAPH } from "../siteOpenGraph";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/guide/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/guide/" },
   title: "ハウスクリーニング業者の選び方ガイド | クリーンナビ",
   description: "ハウスクリーニング業者の選び方をご説明します。確認すべきポイント、依頼までの流れ、よくあるトラブルと対策を掲載しています。",
   viewport: "width=device-width, initial-scale=1",

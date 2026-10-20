@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import {Sparkles, DollarSign, TrendingUp, Info } from "lucide-react";
+import { SITE_OPEN_GRAPH } from "../siteOpenGraph";
 
 export const metadata: Metadata = {
   title: "ハウスクリーニング料金相場一覧【エアコン・浴室・キッチン】 | クリーンナビ",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://cleaning-choices.com/price/",
   },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/price/" },
 };
 
 // 料金相場データ

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import PartnerCards from "../../components/PartnerCards";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata: Metadata = {
   title: "ハウスクリーニングの即日・急ぎ対応業者の探し方｜当日予約のコツと注意点",
   description:
     "急ぎでハウスクリーニングを依頼したい場合のガイドです。即日対応の業者を探す3つの手順、電話で確認すべきこと、繁忙期の注意点をご説明します。全国3,500店超の店舗情報を掲載しています。",
   alternates: { canonical: "https://cleaning-choices.com/ranking/quick-service/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/ranking/quick-service/" },
 };
 
 const faqs = [

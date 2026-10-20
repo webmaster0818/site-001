@@ -1,6 +1,6 @@
 import { StoreBrandShot } from "../../components/CompanyShot";
 import type { Metadata } from "next";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { SITE_OPEN_GRAPH, SITE_TWITTER } from "../../siteOpenGraph";
 import providers from "../../data/providers.json";
 // CTR実験(2026-09-11開始): GSC表示上位50店のみtitle/descに比較フックを追加。2週間で判定→全展開or撤収
 import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
@@ -46,13 +46,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!p) return {};
   const title = `${p.name}（${titleQualifier(p)}）の店舗情報・${BRAND_PRICES[p.brand] ? "料金・" : ""}対応エリア`;
   const canonical = `https://cleaning-choices.com/provider/${p.slug}/`;
+  const description = `${p.name}の店舗情報です。${p.address ?? p.pref_ja}を拠点とする${p.brand_name}の加盟店で、対応エリア・営業時間など、公式サイトで確認した情報のみを確認日を明記して掲載しています。`;
   return {
     // P2 CTR実験(9/11〜9/24)は表示▲64%・CTR低下で撤収→全店舗を標準型に統一
     title,
-    description: `${p.name}の店舗情報です。${p.address ?? p.pref_ja}を拠点とする${p.brand_name}の加盟店で、対応エリア・営業時間など、公式サイトで確認した情報のみを確認日を明記して掲載しています。`,
+    description,
     alternates: { canonical },
-    // og:title/og:url は title・canonical と同じ値に（2026-10-20。それまで layout 既定＝TOPと同じだった）
-    openGraph: { ...SITE_OPEN_GRAPH, title, url: canonical },
+    // og/twitter の title・description・url は各頁の title・description・canonical と同じ値に（2026-10-20。それまで layout 既定＝TOPと同じだった）
+    openGraph: { ...SITE_OPEN_GRAPH, title, description, url: canonical },
+    twitter: { ...SITE_TWITTER, title, description },
   };
 }
 

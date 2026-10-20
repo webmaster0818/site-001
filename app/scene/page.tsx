@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Reveal from "../components/Reveal";
 import { Metadata } from "next";
+import { SITE_OPEN_GRAPH } from "../siteOpenGraph";
 
 export const metadata: Metadata = {
   title: "シーン別ハウスクリーニング活用ガイド | クリーンナビ",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://cleaning-choices.com/scene/",
   },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/scene/" },
 };
 
 const SCENES = [

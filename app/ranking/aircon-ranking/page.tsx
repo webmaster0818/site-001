@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import BrandCompareTable from "../../components/BrandCompareTable";
 import OfficialRatingStores from "../../components/OfficialRatingStores";
 import PartnerCards from "../../components/PartnerCards";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata: Metadata = {
   title: "エアコンクリーニング業者おすすめランキング｜大手3社の比較と選び方",
   description:
     "エアコンクリーニング業者を大手3ブランド(おそうじ本舗・ダスキン・おそうじ革命)の公式情報で比較しています。料金相場（壁掛け8,000円〜）、公式レビュー評価の高い店舗、業者選びの確認ポイントをご説明します。",
   alternates: { canonical: "https://cleaning-choices.com/ranking/aircon-ranking/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/ranking/aircon-ranking/" },
 };
 
 const faqs = [

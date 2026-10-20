@@ -2,6 +2,7 @@ import Link from "next/link";
 import Reveal from "../components/Reveal";
 import OfficialRatingStores from "../components/OfficialRatingStores";
 import { Metadata } from "next";
+import { SITE_OPEN_GRAPH } from "../siteOpenGraph";
 
 export const metadata: Metadata = {
   title: "ハウスクリーニング業者ランキング一覧 | クリーンナビ",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://cleaning-choices.com/ranking/",
   },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/ranking/" },
 };
 
 const RANKINGS = [

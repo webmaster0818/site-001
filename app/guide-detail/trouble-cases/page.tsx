@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/guide-detail/trouble-cases/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/guide-detail/trouble-cases/" },
   title: "トラブル事例と対処法 | クリーンナビ",
   description: "よくあるトラブルと対処方法。ハウスクリーニング業者の選び方は、業者選びガイドでご説明しています。",
 };

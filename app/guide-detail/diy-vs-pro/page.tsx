@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
 
 export const metadata = {
   alternates: { canonical: "https://cleaning-choices.com/guide-detail/diy-vs-pro/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/guide-detail/diy-vs-pro/" },
   title: "自分で行う掃除と業者への依頼の比較 | クリーンナビ",
   description: "自分で行う掃除とプロへの依頼の違い・使い分け。ハウスクリーニング業者の選び方は、業者選びガイドでご説明しています。",
 };

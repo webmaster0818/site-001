@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { SITE_OPEN_GRAPH } from "../siteOpenGraph";
 
 export const metadata: Metadata = {
   title: "掲載をご希望の事業者さまへ｜クリーンナビ",
   description: "クリーンナビへの店舗情報掲載をご希望のハウスクリーニング事業者さま向けのご案内です。掲載基準・掲載情報の範囲・訂正依頼の方法をまとめています。",
   alternates: { canonical: "https://cleaning-choices.com/for-business/" },
+  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/for-business/" },
 };
 
 export default function ForBusinessPage() {
