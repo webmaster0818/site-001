@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
+import { SITE_OPEN_GRAPH } from "./siteOpenGraph";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -31,23 +32,7 @@ export const metadata: Metadata = {
     "口コミ",
     "料金比較",
   ],
-  openGraph: {
-    title: "クリーンナビ | ハウスクリーニング業者比較サイト",
-    description:
-      "エアコン・浴室・キッチンのハウスクリーニング業者を、各社の公式情報にもとづいて料金・対応エリアで比較できます。",
-    url: "https://cleaning-choices.com/",
-    siteName: "クリーンナビ",
-    images: [
-      {
-        url: "https://cleaning-choices.com/og-image.png?v=20261016",
-        width: 1200,
-        height: 630,
-        alt: "クリーンナビ - ハウスクリーニング業者比較",
-      },
-    ],
-    locale: "ja_JP",
-    type: "website",
-  },
+  openGraph: SITE_OPEN_GRAPH,
   twitter: {
     card: "summary_large_image",
     title: "クリーンナビ | ハウスクリーニング業者比較サイト",
