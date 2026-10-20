@@ -282,3 +282,10 @@ GSC実数診断:
 - sitemap lastmod は変更せず（表示内容は不変・provider は 10/19 のまま）。Indexing API 送信なし
 - 未修正（件数のみ）: og:description・twitter:title は provider 3,525頁とも layout 既定のまま。provider 以外で og:url=TOP の頁が 101（[pref] 動的ルートの県ページなど）
 - kakumei-saitama_hanno（10/20 公式 https://www.osoujikakumei.jp/saitama_hanno/ 生HTML）: 公式の店名は「埼玉わかば店」、住所 〒350-0237 坂戸市浅羽野２−４−２１、電話 0120-849-242、対応エリア11市（埼玉7・東京4、公式も坂戸市は掲載なし）＝ providers.json と全項目一致。店舗紹介に「元々、おそうじ革命埼玉飯能店として４年ほど」＝旧店名の名残で、公式URLも saitama_hanno のまま。slug は公式URLのパスに合わせたものなので変更不要（変えるなら301・判断事項）。インボイス番号は公式に「インボイス登録済み」のみで番号の記載なし→ verified_at は据え置き
+
+### 2026-10-20（続き）P3: provider の og:description・twitter と、provider 以外101頁の og:url（coordinator 指示）
+- siteOpenGraph.ts に SITE_TWITTER を追加（layout も共用）。provider は `openGraph:{...SITE_OPEN_GRAPH,title,description,url}`・`twitter:{...SITE_TWITTER,title,description}`
+- provider 以外で openGraph を持たない 49 ファイル（guide・ranking 6・faq・for-business・brand/[brand]・guide-detail 7・price・services-detail 10・review・review/[slug]・comparison 5・scene 6・company/[id]・areas/[pref]・areas/{hiroshima,kanagawa,kyoto,niigata,sendai,shizuoka}）に `openGraph:{...SITE_OPEN_GRAPH,url:<canonical と同じ式>}` を追加。out/ で変わったのはこの101頁の og:url のみ
+- 本番 sitemap 全3,869URL（7f05f2d2・CF success）: provider og:description=description 0→3,525・twitter:title=title 0→3,525・twitter:description=description 0→3,525。provider 以外 343頁（TOP除く）の og:url=canonical 242→343・og:url=TOP 101→0。計測リンク 3,395→3,395。precheck 全項目OK。lastmod 変更なし・Indexing 送信なし
+- 未修正（件数のみ）: 上記101頁は og:title・twitter はサイト既定のまま（og:title 既定 101）
+- ⚠️ check-runs を未認証で20秒ごとに叩くと GitHub API の rate limit（60回/時）に当たる → 認証付き（adminトークン・値は出さない）で60秒間隔に
