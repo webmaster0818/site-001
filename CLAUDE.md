@@ -289,3 +289,9 @@ GSC実数診断:
 - 本番 sitemap 全3,869URL（7f05f2d2・CF success）: provider og:description=description 0→3,525・twitter:title=title 0→3,525・twitter:description=description 0→3,525。provider 以外 343頁（TOP除く）の og:url=canonical 242→343・og:url=TOP 101→0。計測リンク 3,395→3,395。precheck 全項目OK。lastmod 変更なし・Indexing 送信なし
 - 未修正（件数のみ）: 上記101頁は og:title・twitter はサイト既定のまま（og:title 既定 101）
 - ⚠️ check-runs を未認証で20秒ごとに叩くと GitHub API の rate limit（60回/時）に当たる → 認証付き（adminトークン・値は出さない）で60秒間隔に
+
+### 2026-10-21 朝ルーチン: provider 以外101頁（県ページ等）の og:title・og:description・twitter:title/description を各頁の値に
+- `app/siteOpenGraph.ts` に `withPageSocial(metadata)` を追加（title・description・alternates.canonical を og:title/og:description/og:url と twitter:title/twitter:description に写す。画像・siteName はサイト既定）。10/20 に `openGraph:{...SITE_OPEN_GRAPH,url}` を入れた49ファイルを `withPageSocial({...})` で包む形に置換（og:url は canonical から自動）
+- out/: 変わったのはこの101頁の og:title・og:description・twitter:title・twitter:description の4項目のみ（og:url 等は不変）。計測リンク 1738→1738（ユニーク 48→48）。precheck 全項目OK
+- 本番 sitemap 全3,869URL（99d0f17b・09:33 反映）: og:title=サイト既定の頁（TOP除く）101→0、og:title≠title 101→0、og:description≠description 101→0、twitter:title≠title 106→5、twitter:description≠description 107→6。変化したのは101URLの4項目のみ・og:url≠canonical 0→0。計測リンク 1738→1738（ユニーク48→48・URL別集合も全一致）
+- 未修正（件数のみ）: 独自 openGraph を持つ頁で twitter が title/description と不一致 5頁（about・contact・privacy・terms＝og は正しいが twitter:title/description がサイト既定、areas/tokyo＝twitter:title が「…おすすめ比較 | クリーンナビ」で title の「| 料金・口コミ」なし・twitter:description 不一致）
