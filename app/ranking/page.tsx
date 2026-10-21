@@ -2,17 +2,16 @@ import Link from "next/link";
 import Reveal from "../components/Reveal";
 import OfficialRatingStores from "../components/OfficialRatingStores";
 import { Metadata } from "next";
-import { SITE_OPEN_GRAPH } from "../siteOpenGraph";
+import { withPageSocial } from "../siteOpenGraph";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "ハウスクリーニング業者ランキング一覧 | クリーンナビ",
   description:
     "エアコン・浴室などサービス別ランキング、料金の安さ、口コミ評価、即日対応など切り口別にハウスクリーニング業者を比較できます。",
   alternates: {
     canonical: "https://cleaning-choices.com/ranking/",
   },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/ranking/" },
-};
+});
 
 const RANKINGS = [
   {

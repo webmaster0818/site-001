@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
-export const metadata = {
+export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/comparison/major-3-comparison/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/comparison/major-3-comparison/" },
   title: "大手3社の比較 | クリーンナビ",
   description: "ダスキン・おそうじ本舗・ベアーズの比較。業者選びの基本は、業者選びガイドでご説明しています。",
-};
+});
 
 export default function Major3comparisonComparison() {
   return (

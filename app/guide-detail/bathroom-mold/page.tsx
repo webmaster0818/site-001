@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
-export const metadata = {
+export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/guide-detail/bathroom-mold/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/guide-detail/bathroom-mold/" },
   title: "浴室のカビ対策 | クリーンナビ",
   description: "浴室のカビを防ぐための考え方。ハウスクリーニング業者の選び方は、業者選びガイドでご説明しています。",
-};
+});
 
 export default function BathroommoldGuide() {
   return (

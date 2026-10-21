@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
-export const metadata = {
+export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/comparison/warranty-comparison/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/comparison/warranty-comparison/" },
   title: "保証・補償制度比較 | クリーンナビ",
   description: "各業者の保証内容の比較。業者選びの基本は、業者選びガイドでご説明しています。",
-};
+});
 
 export default function WarrantycomparisonComparison() {
   return (

@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { PARTNERS, SERVICE_LABELS, type ServiceTag } from "../data/partners";
-import { SITE_OPEN_GRAPH } from "../siteOpenGraph";
+import { withPageSocial } from "../siteOpenGraph";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "ハウスクリーニング業者の口コミ・評判を公式情報で検証【業者一覧】",
   description:
     "カジタク・アールクリーニング・ハウスクリーニング110番・ナックダスキン・エアコンクリーニング清風・キレイユ・ミガクる・オン・フォーエル・おそうじLabo・おそうじ革命などの口コミ・評判・料金・対応エリアを、各社公式サイトで確認し、確認日を明記して掲載しています。架空の口コミは掲載していません。",
   alternates: { canonical: "https://cleaning-choices.com/review/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/review/" },
-};
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",

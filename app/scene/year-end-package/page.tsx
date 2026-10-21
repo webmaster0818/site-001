@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "年末大掃除はプロに依頼【2026年版】ハウスクリーニングの箇所別の考え方・予約時期",
   description:
     "年末の大掃除をハウスクリーニング業者に依頼する際のガイド【2026年版】。依頼が集中しやすい箇所（エアコン・キッチン・浴室）、予約のタイミング、業者の選び方、地域別の店舗情報をご説明します。",
   alternates: { canonical: "https://cleaning-choices.com/scene/year-end-package/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/scene/year-end-package/" },
-};
+});
 
 const faqs = [
   {

@@ -4,7 +4,7 @@ import * as path from "path";
 import providers from "../../data/providers.json";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
 import { PREF_PAGES } from "../../components/areaIndexData";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
 // 既存の静的ディレクトリ(app/areas/tokyo等)が優先されるため、
 // この動的ルートは「静的ディレクトリの無い県ページ」だけを生成する。
@@ -26,12 +26,11 @@ export async function generateMetadata({ params }: { params: Promise<{ pref: str
   const prefJa = PREF_NAME[pref];
   if (!prefJa) return {};
   const count = list.filter((p) => p.pref_ja === prefJa).length;
-  return {
+  return withPageSocial({
     title: `${prefJa}のハウスクリーニング業者一覧（${count}店舗）｜店舗データベース`,
     description: `${prefJa}のハウスクリーニング業者${count}店舗を掲載しています。おそうじ本舗・ダスキン・おそうじ革命など、各ブランド公式サイトで所在を確認した店舗のみを、確認日を明記して掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/areas/${pref}/` },
-    openGraph: { ...SITE_OPEN_GRAPH, url: `https://cleaning-choices.com/areas/${pref}/` },
-  };
+  });
 }
 
 export default async function PrefPage({ params }: { params: Promise<{ pref: string }> }) {

@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { HelpCircle, ChevronDown } from "lucide-react";
-import { SITE_OPEN_GRAPH } from "../siteOpenGraph";
+import { withPageSocial } from "../siteOpenGraph";
 
-export const metadata = {
+export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/faq/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/faq/" },
   title: "よくある質問（FAQ）| クリーンナビ",
   description: "ハウスクリーニングに関するよくある質問と回答。料金、作業時間、事前の準備、トラブルへの対応など、よくあるご質問にお答えします。",
   viewport: "width=device-width, initial-scale=1",
-};
+});
 
 export default function FAQ() {
   const faqs = [

@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PARTNERS, SERVICE_LABELS, KEY_PRICES, KEY_PRICE_LABELS, comparePeers, type KeyPrices } from "../../data/partners";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
 function toIso(jp: string): string {
   const m = jp.match(/(\d+)年(\d+)月(\d+)日/);
@@ -18,12 +18,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const p = PARTNERS.find((x) => x.slug === slug);
   if (!p) return {};
   const ym = p.confirmedAt.replace(/(\d+年\d+月).*/, "$1");
-  return {
+  return withPageSocial({
     title: `${p.name}の口コミ・評判は？料金・対応エリア・保証を公式情報で検証【${ym}確認】`,
     description: `${p.name}（${p.company}）の料金体系・対応エリア・保証・支払方法・キャンセル条件を、公式サイトで確認して掲載しています。確認できなかった項目も明記しており、架空の口コミは掲載していません。`,
     alternates: { canonical: `https://cleaning-choices.com/review/${p.slug}/` },
-    openGraph: { ...SITE_OPEN_GRAPH, url: `https://cleaning-choices.com/review/${p.slug}/` },
-  };
+  });
 }
 
 export default async function ReviewDetailPage({ params }: { params: Promise<{ slug: string }> }) {

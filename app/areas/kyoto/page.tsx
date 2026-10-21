@@ -2,14 +2,13 @@ import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
-export const metadata = {
+export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/areas/kyoto/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/areas/kyoto/" },
  title: "京都府のハウスクリーニング業者おすすめ比較 | クリーンナビ",
  description: "京都府のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
-};
+});
 
 export default function KyotoArea() {
  const companyIcons = [Sparkles, Award, Shield, Zap];

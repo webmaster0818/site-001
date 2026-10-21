@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import CompanyPageClient from "./CompanyPageClient";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
 // メタデータ用の業者名・カテゴリ一覧（実データはCompanyPageClientのCOMPANY_DATA）
 const COMPANY_META: { [id: string]: { name: string; category: string } } = {
@@ -29,14 +29,13 @@ export async function generateMetadata({
   if (!meta) {
     return { title: "業者詳細 | クリーンナビ" };
   }
-  return {
+  return withPageSocial({
     title: `${meta.name}の${meta.category}｜料金・サービス内容 | クリーンナビ`,
     description: `${meta.name}の${meta.category}サービスをご紹介します。料金、対応エリア、サービス内容を掲載しています。`,
     alternates: {
       canonical: `https://cleaning-choices.com/company/${id}/`,
     },
-    openGraph: { ...SITE_OPEN_GRAPH, url: `https://cleaning-choices.com/company/${id}/` },
-  };
+  });
 }
 
 export default async function CompanyPage({

@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import BrandCompareTable from "../../components/BrandCompareTable";
 import PartnerCards from "../../components/PartnerCards";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "ハウスクリーニングを安く頼むには｜サービス別の料金相場と節約のコツ",
   description:
     "ハウスクリーニングの費用を抑えるためのガイドです。エアコン・浴室・キッチンのサービス別料金相場、セットプランや閑散期の利用など費用を抑える方法、料金だけで選ばないための注意点をご説明します。",
   alternates: { canonical: "https://cleaning-choices.com/ranking/cheap-ranking/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/ranking/cheap-ranking/" },
-};
+});
 
 const PRICE_ROWS = [
   { service: "エアコン（壁掛け・通常）", price: "8,000〜15,000円" },

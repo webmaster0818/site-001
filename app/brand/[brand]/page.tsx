@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import providers from "../../data/providers.json";
 import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
 import { prefPageHref } from "../../components/areaIndexData";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
 type Provider = {
   slug: string;
@@ -68,12 +68,11 @@ export async function generateMetadata({ params }: { params: Promise<{ brand: st
   const b = BRANDS[brand];
   if (!b) return {};
   const stores = list.filter((p) => p.brand === BRAND_KEY[brand]);
-  return {
+  return withPageSocial({
     title: `${b.name}の店舗一覧・対応エリア検索（全国${stores.length}店舗）｜クリーンナビ`,
     description: `${b.name}の全国${stores.length}店舗を都道府県別に検索できます。公式サイトで所在を確認した店舗のみを対象に、所在地・対応エリア・公式評価を確認日を明記して掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/brand/${brand}/` },
-    openGraph: { ...SITE_OPEN_GRAPH, url: `https://cleaning-choices.com/brand/${brand}/` },
-  };
+  });
 }
 
 export default async function BrandPage({ params }: { params: Promise<{ brand: string }> }) {

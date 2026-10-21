@@ -1,17 +1,16 @@
 import Link from "next/link";
 import Reveal from "../components/Reveal";
 import { Metadata } from "next";
-import { SITE_OPEN_GRAPH } from "../siteOpenGraph";
+import { withPageSocial } from "../siteOpenGraph";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "シーン別ハウスクリーニング活用ガイド | クリーンナビ",
   description:
     "引越し前、新築・リフォーム後、年末大掃除、民泊運営、オフィスなど、利用シーン別にハウスクリーニングの活用方法をご紹介します。",
   alternates: {
     canonical: "https://cleaning-choices.com/scene/",
   },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/scene/" },
-};
+});
 
 const SCENES = [
   {

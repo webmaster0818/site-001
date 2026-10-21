@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
-export const metadata = {
+export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/guide-detail/kitchen-oil/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/guide-detail/kitchen-oil/" },
   title: "キッチンの油汚れ対策 | クリーンナビ",
   description: "固着した油汚れを落とす方法と予防策。ハウスクリーニング業者の選び方は、業者選びガイドでご説明しています。",
-};
+});
 
 export default function KitchenoilGuide() {
   return (

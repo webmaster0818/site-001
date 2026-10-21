@@ -1,17 +1,16 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import {Sparkles, DollarSign, TrendingUp, Info } from "lucide-react";
-import { SITE_OPEN_GRAPH } from "../siteOpenGraph";
+import { withPageSocial } from "../siteOpenGraph";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "ハウスクリーニング料金相場一覧【エアコン・浴室・キッチン】 | クリーンナビ",
   description:
     "ハウスクリーニングの料金相場をエアコン・浴室・キッチン別に掲載しています。料金が変わる6つの要因（作業範囲・汚れ・設備・地域・時期・オプション）と、セット割引や閑散期の利用など費用を抑える方法をご説明します。",
   alternates: {
     canonical: "https://cleaning-choices.com/price/",
   },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/price/" },
-};
+});
 
 // 料金相場データ
 const PRICE_DATA = [

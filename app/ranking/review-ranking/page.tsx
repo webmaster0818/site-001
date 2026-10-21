@@ -2,7 +2,7 @@ import { StoreBrandShot } from "../../components/CompanyShot";
 import type { Metadata } from "next";
 import providers from "../../data/providers.json";
 import PartnerCards from "../../components/PartnerCards";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
 type Provider = {
   slug: string;
@@ -34,12 +34,11 @@ const rated = list
 const TOP = rated.slice(0, 10);
 const ratedCount = list.filter((p) => typeof p.rating_official === "number").length;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSocial({
   title: "口コミ評価が高いハウスクリーニング店舗ランキング【公式レビュー集計】",
   description: `口コミ評価が高いハウスクリーニング店舗トップ10。各ブランド公式サイト掲載のレビュー集計(全${ratedCount}店舗分)から、レビュー100件以上の店舗を評価順に紹介しています。架空の口コミは使用していません。`,
   alternates: { canonical: "https://cleaning-choices.com/ranking/review-ranking/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/ranking/review-ranking/" },
-};
+});
 
 export default function ReviewRankingPage() {
   const verifiedAt = TOP[0]?.rating_checked_at ?? TOP[0]?.verified_at ?? "2026-08-15";

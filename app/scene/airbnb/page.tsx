@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { SITE_OPEN_GRAPH } from "../../siteOpenGraph";
+import { withPageSocial } from "../../siteOpenGraph";
 
-export const metadata = {
+export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/scene/airbnb/" },
-  openGraph: { ...SITE_OPEN_GRAPH, url: "https://cleaning-choices.com/scene/airbnb/" },
   title: "民泊・Airbnb向けクリーニング | クリーンナビ",
   description: "民泊・Airbnb施設の清掃についてのページです。対応する業者は、サービス別の業者一覧からお探しください。",
-};
+});
 
 export default function AirbnbScene() {
   return (
