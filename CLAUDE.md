@@ -295,3 +295,8 @@ GSC実数診断:
 - out/: 変わったのはこの101頁の og:title・og:description・twitter:title・twitter:description の4項目のみ（og:url 等は不変）。計測リンク 1738→1738（ユニーク 48→48）。precheck 全項目OK
 - 本番 sitemap 全3,869URL（99d0f17b・09:33 反映）: og:title=サイト既定の頁（TOP除く）101→0、og:title≠title 101→0、og:description≠description 101→0、twitter:title≠title 106→5、twitter:description≠description 107→6。変化したのは101URLの4項目のみ・og:url≠canonical 0→0。計測リンク 1738→1738（ユニーク48→48・URL別集合も全一致）
 - 未修正（件数のみ）: 独自 openGraph を持つ頁で twitter が title/description と不一致 5頁（about・contact・privacy・terms＝og は正しいが twitter:title/description がサイト既定、areas/tokyo＝twitter:title が「…おすすめ比較 | クリーンナビ」で title の「| 料金・口コミ」なし・twitter:description 不一致）
+
+### 2026-10-22 朝ルーチン P3: about・contact・privacy・terms・areas/tokyo の twitter:title/description を各頁の値に
+- about/contact/privacy/terms は独自 openGraph（中身はサイト既定＋各頁の title/description/url と同じ）を削除して `withPageSocial({...})` で包んだ（og は出力不変）。areas/tokyo は og:image:alt が独自（東京都の…）なので withPageSocial を使わず twitter の title/description だけ title・description と同じ文字列に
+- out/ 3,872 HTML の head（title・description・canonical・og:*・twitter:*）を前回ビルドと全件比較: 変わったのはこの5頁の twitter:title・twitter:description のみ。計測リンク 3,394→3,394（ユニーク100→100）。precheck 全項目OK。841bbf59 → 本番 09:27 反映、5頁とも twitter:title=title・twitter:description=description（before 0/5 → 5/5）、旧値 5→0、og は不変
+- sites.md P3「TOP『優良業者のみ掲載』」: cleaning-choices の TOP には無い（Reasons.tsx の「厳選された優良業者のみ」は 4d69b466＝10/16 に削除済み、layout の FAQPage JSON-LD の「基準を満たした優良業者のみを掲載」も a58ec6c9 で削除済み）。本番 TOP・out/ 全 HTML とも「優良」0件。「優良業者のみ掲載」の指摘は growth/findings_jiro2_20261016.md の zouen-navi.com（companies.json）の項目＝取り違えと思われる
