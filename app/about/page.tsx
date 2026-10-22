@@ -1,30 +1,14 @@
 import Link from "next/link";
+import { withPageSocial } from "../siteOpenGraph";
 
-export const metadata = {
+export const metadata = withPageSocial({
   title: "運営者情報 | クリーンナビ",
   description:
     "クリーンナビの運営者情報です。運営会社、編集方針、比較・掲載の基準、広告（PR）についての開示、免責事項をご確認いただけます。",
-  openGraph: {
-    title: "運営者情報 | クリーンナビ",
-    description:
-      "クリーンナビの運営者情報です。運営会社、編集方針、比較・掲載の基準、広告（PR）についての開示、免責事項をご確認いただけます。",
-    url: "https://cleaning-choices.com/about/",
-    siteName: "クリーンナビ",
-    images: [
-      {
-        url: "https://cleaning-choices.com/og-image.png?v=20261016",
-        width: 1200,
-        height: 630,
-        alt: "クリーンナビ - ハウスクリーニング業者比較",
-      },
-    ],
-    locale: "ja_JP",
-    type: "website",
-  },
   alternates: {
     canonical: "https://cleaning-choices.com/about/",
   },
-};
+});
 
 export default function About() {
   return (

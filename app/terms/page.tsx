@@ -1,30 +1,14 @@
 import Link from "next/link";
+import { withPageSocial } from "../siteOpenGraph";
 
-export const metadata = {
+export const metadata = withPageSocial({
   title: "利用規約 | クリーンナビ",
   description:
     "クリーンナビの利用規約です。掲載情報の取り扱い、著作権、免責事項、準拠法など、当サイトをご利用いただく際の条件を定めています。",
-  openGraph: {
-    title: "利用規約 | クリーンナビ",
-    description:
-      "クリーンナビの利用規約です。掲載情報の取り扱い、著作権、免責事項、準拠法など、当サイトをご利用いただく際の条件を定めています。",
-    url: "https://cleaning-choices.com/terms/",
-    siteName: "クリーンナビ",
-    images: [
-      {
-        url: "https://cleaning-choices.com/og-image.png?v=20261016",
-        width: 1200,
-        height: 630,
-        alt: "クリーンナビ - ハウスクリーニング業者比較",
-      },
-    ],
-    locale: "ja_JP",
-    type: "website",
-  },
   alternates: {
     canonical: "https://cleaning-choices.com/terms/",
   },
-};
+});
 
 export default function Terms() {
   return (

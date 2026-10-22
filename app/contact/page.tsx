@@ -1,30 +1,14 @@
 import Link from "next/link";
+import { withPageSocial } from "../siteOpenGraph";
 
-export const metadata = {
+export const metadata = withPageSocial({
   title: "お問い合わせ | クリーンナビ",
   description:
     "クリーンナビへのお問い合わせ窓口のご案内です。掲載内容の修正依頼・広告掲載のご相談は運営会社（株式会社MediaX）までお願いします。",
-  openGraph: {
-    title: "お問い合わせ | クリーンナビ",
-    description:
-      "クリーンナビへのお問い合わせ窓口のご案内です。掲載内容の修正依頼・広告掲載のご相談は運営会社（株式会社MediaX）までお願いします。",
-    url: "https://cleaning-choices.com/contact/",
-    siteName: "クリーンナビ",
-    images: [
-      {
-        url: "https://cleaning-choices.com/og-image.png?v=20261016",
-        width: 1200,
-        height: 630,
-        alt: "クリーンナビ - ハウスクリーニング業者比較",
-      },
-    ],
-    locale: "ja_JP",
-    type: "website",
-  },
   alternates: {
     canonical: "https://cleaning-choices.com/contact/",
   },
-};
+});
 
 export default function Contact() {
   return (
