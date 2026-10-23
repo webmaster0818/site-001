@@ -300,3 +300,9 @@ GSC実数診断:
 - about/contact/privacy/terms は独自 openGraph（中身はサイト既定＋各頁の title/description/url と同じ）を削除して `withPageSocial({...})` で包んだ（og は出力不変）。areas/tokyo は og:image:alt が独自（東京都の…）なので withPageSocial を使わず twitter の title/description だけ title・description と同じ文字列に
 - out/ 3,872 HTML の head（title・description・canonical・og:*・twitter:*）を前回ビルドと全件比較: 変わったのはこの5頁の twitter:title・twitter:description のみ。計測リンク 3,394→3,394（ユニーク100→100）。precheck 全項目OK。841bbf59 → 本番 09:27 反映、5頁とも twitter:title=title・twitter:description=description（before 0/5 → 5/5）、旧値 5→0、og は不変
 - sites.md P3「TOP『優良業者のみ掲載』」: cleaning-choices の TOP には無い（Reasons.tsx の「厳選された優良業者のみ」は 4d69b466＝10/16 に削除済み、layout の FAQPage JSON-LD の「基準を満たした優良業者のみを掲載」も a58ec6c9 で削除済み）。本番 TOP・out/ 全 HTML とも「優良」0件。「優良業者のみ掲載」の指摘は growth/findings_jiro2_20261016.md の zouen-navi.com（companies.json）の項目＝取り違えと思われる
+
+### 2026-10-23 朝ルーチン: エリア238頁のダスキン受付時間を公式表記に
+- 照合（2026-10-23 公式生HTML）: ダスキン servicemaster のキッチン20,680・浴室22,000・トイレ10,340円（water/sm000080・090・100）＝一致。カジタク キッチン/浴室/トイレ&洗面所 19,580円〜（/house-cleaning/）・電話10:00～17:00 年末年始除く（/guide/law）＝一致。おそうじ革命 キッチン/浴室17,930・トイレ8,250円（/price/）＝一致
+- 不一致1件: ダスキン hours「9:00-18:00（店舗により異なる）」は公式に記載なし。https://www.duskin.jp/inquiry/ の電話窓口（商品・サービス）=「0120-100100 フリーダイヤル/8時～20時・年中無休」（9時～18時は DDuet 会員サイト窓口・平日）→「電話受付 8:00〜20:00（年中無休）」に。238頁＋旧生成スクリプト17本のこの文字列のみ置換（ダスキンのブロックにしか無いことを確認）。sitemap lastmod 238
+- out/: 新文言 134頁（各2箇所＝268）・旧文言 0。計測リンク 3,395（app 内 56→56）。precheck 全項目OK。92e51054
+- 未修正（判断待ちのまま）: company/2 のダスキン workingHours「9:00〜17:00」・1963/約1,600拠点（会社ページ17件の判断待ちに含む）
