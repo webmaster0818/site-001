@@ -284,7 +284,7 @@ COMPANIES_DATA = '''  const companies = [
       bathroom: "22,000円〜", 
       toilet: "10,340円〜",
       description: "清掃業界の老舗大手。47都道府県に拠点があり、専門資器材と洗剤で徹底清掃。",
-      hours: "9:00-18:00（店舗により異なる）",
+      hours: "電話受付 8:00〜20:00（年中無休）",
       services: "エアコン、浴室、キッチン、トイレ、レンジフード、フロアクリーニング",
       website: "https://www.duskin.jp/servicemaster/"
     },

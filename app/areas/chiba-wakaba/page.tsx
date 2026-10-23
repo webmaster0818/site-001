@@ -100,7 +100,7 @@ export default function Chiba若葉Area() {
  bathroom: "22,000円〜", 
  toilet: "10,340円〜",
  description: "清掃業界の老舗大手です。47都道府県に拠点があり、専門の資器材と洗剤で清掃します。",
- hours: "9:00-18:00（店舗により異なる）",
+ hours: "電話受付 8:00〜20:00（年中無休）",
  services: "エアコン、浴室、キッチン、トイレ、レンジフード、フロアクリーニング",
  website: "https://www.duskin.jp/servicemaster/"
  },
