@@ -20,10 +20,10 @@ const COMPANIES = [
     id: 2,
     name: "ダスキン サービスマスター",
     category: "bathroom",
-    price: 19800,
-    area: "全国対応（約1,600拠点）",
+    price: 22000,
+    area: "全国対応（1,222拠点・2026年3月末現在）",
     image: "/images/partners/duskin.webp",
-    features: ["創業60年以上", "全国約1,600拠点", "定期サービス対応"],
+    features: ["1971年からサービスマスター事業を展開", "全国1,222拠点（2026年3月末現在）", "定期サービス対応"],
   },
   {
     id: 4,
