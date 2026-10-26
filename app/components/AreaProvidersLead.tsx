@@ -1,6 +1,7 @@
 import { StoreBrandShot, StoreShotNote } from "./CompanyShot";
 import providers from "../data/providers.json";
 import areaMap from "../data/areaMap.json";
+import { AREA_PRICE_COMPARE, BRAND_PRICE_CHECKED } from "../data/brandPrices";
 
 type Provider = {
   slug: string;
@@ -123,6 +124,45 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       )}
       <div className="container mx-auto px-4">
+        {/* 2026-10-26: 地域名＋ハウスクリーニング（キッチン等）の検索で、店舗数と料金の目安をページ冒頭で答える要点ボックス */}
+        <div className="card p-5 mb-8 border border-gray-200" aria-label="要点">
+          <h2 className="text-lg font-bold text-ink mb-2">{area.label}のハウスクリーニング 要点</h2>
+          <ul className="text-sm text-ink-soft space-y-1 mb-3">
+            <li>
+              ・{area.label}内に所在する店舗: <strong>{located.length}店</strong>
+              {located.length > 0 && (
+                <>（{Object.entries(byBrand).map(([b, n]) => `${b} ${n}店`).join("・")}）</>
+              )}
+              {covering.length > 0 && <>／{area.label}を対応エリアに含む近隣店舗: <strong>{covering.length}店</strong></>}
+            </li>
+            <li>・大手2ブランドの標準料金（公式サイト記載・税込・{BRAND_PRICE_CHECKED}確認）は下の表のとおりです。地域による違いは見積もりでご確認ください。</li>
+          </ul>
+          <div className="overflow-x-auto">
+            <table className="table text-sm">
+              <thead>
+                <tr>
+                  <th>箇所</th>
+                  <th>おそうじ本舗</th>
+                  <th>ダスキン サービスマスター</th>
+                </tr>
+              </thead>
+              <tbody>
+                {AREA_PRICE_COMPARE.map((r) => (
+                  <tr key={r.label}>
+                    <th>{r.service ? <a href={r.service} className="underline text-primary">{r.label}</a> : r.label}</th>
+                    <td>
+                      {r.honpo[1]}（<a href={r.honpo[2]} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）
+                    </td>
+                    <td>
+                      {r.duskin[1]}（<a href={r.duskin[2]} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-muted mt-2">期間限定のキャンペーン価格は含みません。強い汚れ・追加範囲・オプション・土日祝や夜間の作業は追加料金になる場合があります。他社も含めた料金の比較は<a href="/price/" className="underline text-primary">料金相場</a>をご覧ください。</p>
+        </div>
         <h2 className="text-2xl md:text-3xl font-bold text-ink mb-2">{heading}</h2>
         <p className="text-sm text-muted mb-1">
           {located.length > 0 ? (

@@ -5,6 +5,8 @@ import providers from "../../data/providers.json";
 // CTR実験(2026-09-11開始): GSC表示上位50店のみtitle/descに比較フックを追加。2週間で判定→全展開or撤収
 import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
 import { prefPageHref } from "../../components/areaIndexData";
+import areaMap from "../../data/areaMap.json";
+import { BRAND_PRICES, BRAND_PRICE_CHECKED } from "../../data/brandPrices";
 
 type Provider = {
   slug: string;
@@ -110,39 +112,18 @@ function placeLabel(p: Provider): string {
   return c ? `${p.pref_ja}${c}` : p.pref_ja;
 }
 
-// 2026-10-19: ブランド公式の標準料金（各ブランド公式のサービスページを当日開いて確認した税込の通常価格。キャンペーン価格は載せない）。
-// 店舗ごとの料金は公式店舗ページに記載がないため、ブランド共通の標準料金として出典・確認日とともに出す。
-const BRAND_PRICE_CHECKED = "2026-10-19";
-const BRAND_PRICES: Record<string, { rows: [string, string, string][]; notes: string[] }> = {
-  honpo: {
-    rows: [
-      ["エアコン（壁掛け・お掃除機能なし）", "13,200円／台", "https://www.osoujihonpo.com/house-cleaning/aircon/wall/"],
-      ["エアコン（壁掛け・お掃除機能付き）", "23,100円／台", "https://www.osoujihonpo.com/house-cleaning/aircon/wall/"],
-      ["レンジフード・換気扇", "18,700円／式", "https://www.osoujihonpo.com/house-cleaning/kitchen/fan/"],
-      ["キッチン", "18,700円／式", "https://www.osoujihonpo.com/house-cleaning/kitchen/kitchen/"],
-      ["風呂・浴室", "18,700円／式", "https://www.osoujihonpo.com/house-cleaning/water/bathroom/"],
-      ["トイレ", "9,900円／式", "https://www.osoujihonpo.com/house-cleaning/water/toilet/"],
-    ],
-    notes: [
-      "公式サイトの通常価格（税込）です。期間限定のキャンペーン価格は掲載していません。",
-      "公式サイトには「サービス内容と価格は予告無く変更する場合がございます」と記載されています。強い汚れ・追加範囲・オプションは別料金です。",
-    ],
-  },
-  duskin: {
-    rows: [
-      ["エアコン（家庭用壁掛け・幅120cm未満）", "15,400円／1台", "https://www.duskin.jp/servicemaster/spot/sm000010/"],
-      ["エアコン（フィルター自動お掃除機能付き）", "26,400円／1台", "https://www.duskin.jp/servicemaster/spot/sm000010/"],
-      ["レンジフード（幅95cm未満）", "22,000円", "https://www.duskin.jp/servicemaster/water/sm000070/"],
-      ["浴室（床面積3m²・高さ2.4m未満）", "22,000円", "https://www.duskin.jp/servicemaster/water/sm000090/"],
-      ["トイレ（床面積2m²未満）", "10,340円", "https://www.duskin.jp/servicemaster/water/sm000100/"],
-      ["縦型全自動洗濯機 除菌クリーニング", "15,400円", "https://www.duskin.jp/servicemaster/water/sm000170/"],
-    ],
-    notes: [
-      "ダスキン公式の標準料金（税込）です。店舗ページにも同じ標準料金が掲載されています。",
-      "公式サイトには「土日・祝日・その他の休業日及び夜間の作業は、お受けできない場合や標準料金に加えて追加の費用が発生する場合があります」「サービスは1回あたり11,000円（税込）以上で承ります。この料金は加盟店によって異なる場合があります」と記載されています。",
-    ],
-  },
-};
+// ブランド公式の標準料金は app/data/brandPrices.ts（2026-10-26 ブランドハブ・エリアページと共通化）
+
+// 2026-10-26: 店舗の所在市区町村にエリアページ（市・区）がある場合はリンクする（以前は県ページのみ）。
+// areaMap.json の match（住所に含まれる市区名）で照合し、区ページを市ページより優先する。
+const AREA_ENTRIES = Object.values(areaMap as Record<string, { slug: string; kind: string; label: string; pref: string; match: string[] }>)
+  .filter((a) => a.kind !== "pref")
+  .sort((x, y) => (x.kind === y.kind ? 0 : x.kind === "ward" ? -1 : 1));
+function localArea(p: Provider): { slug: string; label: string } | null {
+  if (!p.address) return null;
+  const hit = AREA_ENTRIES.find((a) => a.pref === p.pref_ja && a.match.some((m) => p.address!.includes(m)));
+  return hit ? { slug: hit.slug, label: hit.label } : null;
+}
 
 // 同じ都道府県に同名の店舗が複数ある場合(公式サイトに別ページとして掲載)は、
 // 出典である公式店舗ページの番号でtitleを区別する。
@@ -161,6 +142,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
   const nearby = nearbyProviders(p);
   const city = cityOf(p);
   const prices = BRAND_PRICES[p.brand];
+  const local = localArea(p);
   const mapHref = p.address ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.address)}` : null;
 
   const schema = {
@@ -180,7 +162,8 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "ホーム", item: "https://cleaning-choices.com/" },
       { "@type": "ListItem", position: 2, name: `${p.pref_ja}のハウスクリーニング`, item: `https://cleaning-choices.com${areaHref(p.pref_ja)}` },
-      { "@type": "ListItem", position: 3, name: p.name, item: `https://cleaning-choices.com/provider/${p.slug}/` },
+      ...(local ? [{ "@type": "ListItem", position: 3, name: `${local.label}のハウスクリーニング`, item: `https://cleaning-choices.com/areas/${local.slug}/` }] : []),
+      { "@type": "ListItem", position: local ? 4 : 3, name: p.name, item: `https://cleaning-choices.com/provider/${p.slug}/` },
     ],
   };
 
@@ -203,6 +186,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
         <ol>
           <li><a href="/">ホーム</a></li>
           <li><a href={areaHref(p.pref_ja)}>{p.pref_ja}</a></li>
+          {local && <li><a href={`/areas/${local.slug}/`}>{local.label}</a></li>}
           <li>{p.name}</li>
         </ol>
       </nav>
@@ -218,6 +202,12 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
           <>
             {" "}
             <a href={mapHref} target="_blank" rel="noopener noreferrer" className="underline text-primary text-sm">地図で見る（Googleマップ）</a>
+          </>
+        )}
+        {local && (
+          <>
+            {" "}
+            <a href={`/areas/${local.slug}/`} className="underline text-primary text-sm">{local.label}の全店舗・料金を比較</a>
           </>
         )}
       </p>
@@ -237,7 +227,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
       )}
       {p.brand === "duskin" && (
         <p className="text-xs text-muted mb-6">
-          ダスキン公式サイトの店舗ページには、店舗ごとのクチコミ・レビューは掲載されていません（{BRAND_PRICE_CHECKED}確認）。
+          ダスキン公式サイトの店舗ページには、店舗ごとのクチコミ・レビューは掲載されていません（2026-10-19確認）。
         </p>
       )}
       {typeof p.rating_official === "number" && (
