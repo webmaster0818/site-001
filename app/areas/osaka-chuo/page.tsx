@@ -1,14 +1,15 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import ChuoWardSwitcher from "../../components/ChuoWardSwitcher";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
 export const metadata = {
  title: "大阪市中央区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
- description: "中央区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ description: "大阪市中央区（心斎橋・難波・本町・谷町・大阪城周辺）のハウスクリーニング業者を比較しています。区内の店舗・料金相場・業者選びのポイントを掲載しています（東京都中央区は別ページ）。",
  openGraph: {
  title: "大阪市中央区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
- description: "中央区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ description: "大阪市中央区（心斎橋・難波・本町・谷町・大阪城周辺）のハウスクリーニング業者を比較しています。区内の店舗・料金相場・業者選びのポイントを掲載しています（東京都中央区は別ページ）。",
  url: "https://cleaning-choices.com/areas/osaka-chuo/",
  siteName: "クリーンナビ",
  images: [
@@ -25,7 +26,7 @@ export const metadata = {
  twitter: {
  card: "summary_large_image",
  title: "大阪市中央区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
- description: "中央区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ description: "大阪市中央区（心斎橋・難波・本町・谷町・大阪城周辺）のハウスクリーニング業者を比較しています。区内の店舗・料金相場・業者選びのポイントを掲載しています（東京都中央区は別ページ）。",
  images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
  },
  alternates: {
@@ -174,10 +175,11 @@ export default function OsakaChuoArea() {
  <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
  <div className="container mx-auto px-4 text-center">
  <h1 className="text-4xl font-bold mb-4">大阪市中央区のハウスクリーニング業者比較</h1>
- <p className="text-xl">中央区のハウスクリーニング業者と店舗情報を掲載しています</p>
+ <p className="text-xl">大阪市中央区（心斎橋・難波・本町・谷町）のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
  <AreaProvidersLead slug="osaka-chuo" />
+ <ChuoWardSwitcher current="osaka-chuo" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
  <div className="container mx-auto px-4">

@@ -7,6 +7,7 @@ import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
 import { prefPageHref } from "../../components/areaIndexData";
 import areaMap from "../../data/areaMap.json";
 import { BRAND_PRICES, BRAND_PRICE_CHECKED } from "../../data/brandPrices";
+import { PROVIDER_EXTRAS } from "../../data/providerExtras";
 
 type Provider = {
   slug: string;
@@ -46,9 +47,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = list.find((x) => x.slug === slug);
   if (!p) return {};
-  const title = `${p.name}（${titleQualifier(p)}）の店舗情報・${BRAND_PRICES[p.brand] ? "料金・" : ""}対応エリア`;
+  const extra = PROVIDER_EXTRAS[p.slug];
+  const title = extra?.titleOverride ?? `${p.name}（${titleQualifier(p)}）の店舗情報・${BRAND_PRICES[p.brand] ? "料金・" : ""}対応エリア`;
   const canonical = `https://cleaning-choices.com/provider/${p.slug}/`;
-  const description = `${p.name}の店舗情報です。${p.address ?? p.pref_ja}を拠点とする${p.brand_name}の加盟店で、対応エリア・営業時間など、公式サイトで確認した情報のみを確認日を明記して掲載しています。`;
+  const description = extra?.descriptionOverride ?? `${p.name}の店舗情報です。${p.address ?? p.pref_ja}を拠点とする${p.brand_name}の加盟店で、対応エリア・営業時間など、公式サイトで確認した情報のみを確認日を明記して掲載しています。`;
   return {
     // P2 CTR実験(9/11〜9/24)は表示▲64%・CTR低下で撤収→全店舗を標準型に統一
     title,
@@ -142,6 +144,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
   const nearby = nearbyProviders(p);
   const city = cityOf(p);
   const prices = BRAND_PRICES[p.brand];
+  const extra = PROVIDER_EXTRAS[p.slug];
   const local = localArea(p);
   const mapHref = p.address ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.address)}` : null;
 
@@ -215,6 +218,50 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
         掲載情報は{p.brand_name}公式サイトで確認した内容のみです（{p.verified_at}確認・
         <a href={p.source_url} target="_blank" rel="noopener noreferrer" className="underline text-primary">出典: 公式店舗ページ</a>）。
       </p>
+
+      {extra && (
+        <section className="card mb-8 border border-primary/30" id="summary">
+          <div className="card-body">
+            {extra.leadTitle && <h2 className="card-title">{extra.leadTitle}</h2>}
+            {extra.leadRows && (
+              <table className="table">
+                <tbody>
+                  {extra.leadRows.map(([k, v]) => (
+                    <tr key={k}><th className="w-40 align-top">{k}</th><td>{v}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+            {extra.priceRows && (
+              <>
+                <h3 className="font-bold mt-4">メニュー別料金（税込・{p.brand_name}公式の全国一律価格）</h3>
+                <table className="table">
+                  <tbody>
+                    {extra.priceRows.map(([k, v]) => (
+                      <tr key={k}><th className="w-64">{k}</th><td>{v}</td></tr>
+                    ))}
+                  </tbody>
+                </table>
+                <p className="text-xs text-muted">公式の料金表の通常価格です（キャンペーン価格・オプションは含みません）。</p>
+              </>
+            )}
+            {extra.priceSource && (
+              <p className="text-xs text-muted mt-2">
+                出典（{extra.checkedAt}確認）:{" "}
+                {extra.priceSource.map((s, i) => (
+                  <span key={s.url}>{i > 0 && "・"}<a href={s.url} target="_blank" rel="noopener noreferrer" className="underline text-primary">{s.label}</a></span>
+                ))}
+              </p>
+            )}
+            {extra.hubNote && (
+              <p className="text-sm mt-3">
+                {extra.hubNote}{" "}
+                <a href={`/brand/${{"honpo":"osoujihonpo","duskin":"duskin","kakumei":"osoujikakumei"}[p.brand] ?? ""}/`} className="underline text-primary">{p.brand_name}の店舗一覧・料金を見る</a>
+              </p>
+            )}
+          </div>
+        </section>
+      )}
 
       <StoreBrandShot brand={p.brand} name={p.brand_name} />
       {typeof p.rating_official !== "number" && p.brand === "honpo" && typeof p.review_count_official === "number" && p.review_count_official > 0 && (

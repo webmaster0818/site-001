@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import ChuoWardSwitcher from "../../components/ChuoWardSwitcher";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
@@ -178,6 +179,7 @@ export default function SapporoChuoArea() {
  </div>
  </section>
  <AreaProvidersLead slug="sapporo-chuo" />
+ <ChuoWardSwitcher current="sapporo-chuo" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
  <div className="container mx-auto px-4">

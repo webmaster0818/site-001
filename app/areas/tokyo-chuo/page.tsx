@@ -1,14 +1,15 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import ChuoWardSwitcher from "../../components/ChuoWardSwitcher";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
 export const metadata = {
  title: "東京都中央区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "中央区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ description: "東京都中央区（銀座・日本橋・月島・晴海・築地）のハウスクリーニング業者を比較しています。区内の店舗・料金相場・業者選びのポイントを掲載しています（大阪市中央区は別ページ）。",
  openGraph: {
  title: "東京都中央区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "中央区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ description: "東京都中央区（銀座・日本橋・月島・晴海・築地）のハウスクリーニング業者を比較しています。区内の店舗・料金相場・業者選びのポイントを掲載しています（大阪市中央区は別ページ）。",
  url: "https://cleaning-choices.com/areas/tokyo-chuo/",
  siteName: "クリーンナビ",
  images: [
@@ -25,7 +26,7 @@ export const metadata = {
  twitter: {
  card: "summary_large_image",
  title: "東京都中央区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "中央区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ description: "東京都中央区（銀座・日本橋・月島・晴海・築地）のハウスクリーニング業者を比較しています。区内の店舗・料金相場・業者選びのポイントを掲載しています（大阪市中央区は別ページ）。",
  images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
  },
  alternates: {
@@ -173,11 +174,12 @@ export default function TokyoChuoArea() {
  {/* ヒーローセクション */}
  <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
  <div className="container mx-auto px-4 text-center">
- <h1 className="text-4xl font-bold mb-4">中央区のハウスクリーニング業者比較</h1>
- <p className="text-xl">中央区のハウスクリーニング業者と店舗情報を掲載しています</p>
+ <h1 className="text-4xl font-bold mb-4">東京都中央区のハウスクリーニング業者比較</h1>
+ <p className="text-xl">東京都中央区（銀座・日本橋・月島・晴海）のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
  <AreaProvidersLead slug="tokyo-chuo" />
+ <ChuoWardSwitcher current="tokyo-chuo" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
  <div className="container mx-auto px-4">

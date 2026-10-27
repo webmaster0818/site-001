@@ -153,6 +153,16 @@ export default function NiigataArea() {
         </div>
       </section>
  <AreaProvidersLead slug="niigata" />
+      <section className="py-8" id="azuma">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto rounded-lg border border-base-300 bg-base-100 p-5 text-sm space-y-2">
+            <h2 className="text-xl font-bold">アズマのホームクリーニングの店舗（新潟県）</h2>
+            <p>アズマのホームクリーニング（運営：アズマ工業）の公式「対応エリア」では、新潟県は対応エリアです（佐渡市・粟島浦村を除く）。公式では全国150拠点からサービスを提供していると記載されています（2024年6月現在）。</p>
+            <p>公式の「フランチャイズ一覧」に掲載の12店（東京・千葉・静岡・愛知・岐阜）に新潟県内の店舗はありません。新潟県からの申し込みは店舗ではなく、公式サイトの注文フォームまたは電話（0120-120-083・平日9:00〜17:00）で受け付けています。</p>
+            <p className="text-xs text-muted">出典（2026-10-27確認）: <a href="https://www.azuma-cleaning.com/blog/fcarea/" target="_blank" rel="noopener noreferrer" className="underline text-primary">アズマのホームクリーニング 対応エリア</a>・<a href="https://www.azuma-cleaning.com/blog/area/" target="_blank" rel="noopener noreferrer" className="underline text-primary">フランチャイズ一覧</a>・<a href="https://www.azuma-cleaning.com/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式トップ（受付時間）</a></p>
+          </div>
+        </div>
+      </section>
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="prose max-w-4xl mx-auto">

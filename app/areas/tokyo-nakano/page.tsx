@@ -5,10 +5,10 @@ import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
 export const metadata = {
- title: "中野区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+ title: "中野区のハウスクリーニング業者おすすめ比較｜キッチン・浴室・エアコンの料金 | クリーンナビ",
  description: "中野区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
  openGraph: {
- title: "中野区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+ title: "中野区のハウスクリーニング業者おすすめ比較｜キッチン・浴室・エアコンの料金 | クリーンナビ",
  description: "中野区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
  url: "https://cleaning-choices.com/areas/tokyo-nakano/",
  siteName: "クリーンナビ",
@@ -25,7 +25,7 @@ export const metadata = {
  },
  twitter: {
  card: "summary_large_image",
- title: "中野区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
+ title: "中野区のハウスクリーニング業者おすすめ比較｜キッチン・浴室・エアコンの料金 | クリーンナビ",
  description: "中野区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
  images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
  },
@@ -179,6 +179,23 @@ export default function TokyoNakanoArea() {
  </div>
  </section>
  <AreaProvidersLead slug="tokyo-nakano" />
+ <section className="py-8" id="kitchen">
+ <div className="container mx-auto px-4">
+ <div className="max-w-4xl mx-auto rounded-lg border border-base-300 bg-base-100 p-5 text-sm">
+ <h2 className="text-xl font-bold mb-2">中野区のキッチンクリーニング料金（掲載業者の比較）</h2>
+ <p className="mb-3">このページの掲載業者のキッチンクリーニング料金を安い順に並べています（各社公式の通常価格・税込。料金は下の「おすすめ業者比較」と同じ値）。中野区が対応エリアに入るかは業者・店舗ごとに異なるため、依頼前に公式でご確認ください。</p>
+ <table className="table table-sm">
+ <thead><tr><th>業者</th><th>キッチン</th></tr></thead>
+ <tbody>
+ {[...companies].filter((c) => /^[0-9,]+円/.test(c.kitchen)).sort((a, b) => parseInt(a.kitchen.replace(/[^0-9]/g, "")) - parseInt(b.kitchen.replace(/[^0-9]/g, ""))).map((c) => (
+ <tr key={c.name}><td>{c.name}</td><td>{c.kitchen}</td></tr>
+ ))}
+ </tbody>
+ </table>
+ <p className="text-xs text-muted mt-2">お掃除マスターは加盟店を手配する紹介型サービスです。サニクリーンは見積もり制のため表に含めていません。キッチンの作業範囲（シンク・コンロ・レンジフードを含むか）は業者ごとに異なるため、<a href="/services/kitchen/" className="underline text-primary">キッチンクリーニングの比較</a>もあわせてご確認ください。</p>
+ </div>
+ </div>
+ </section>
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
  <div className="container mx-auto px-4">

@@ -240,6 +240,25 @@ export default function OsakaArea() {
  </svg>
  </section>
  <AreaProvidersLead slug="osaka" />
+ <section className="py-8" id="ranking">
+ <div className="container mx-auto px-4">
+ <div className="max-w-4xl mx-auto rounded-lg border border-base-300 bg-base-100 p-5 text-sm">
+ <h2 className="text-xl font-bold mb-2">大阪府のハウスクリーニング業者ランキングの見方</h2>
+ <p className="mb-3">当サイトは広告費の多寡で順位を付けていません。大阪府で業者を比べるときは、①箇所別の料金（公式の通常価格）②近くの店舗の公式評価・口コミ件数（上の店舗一覧は公式の口コミ件数順）③対応エリア の3点で見るのが確実です。当サイトに掲載している大阪府内の店舗（おそうじ本舗134店・ダスキン104店・おそうじ革命16店）の3ブランドの料金は次のとおりです。</p>
+ <table className="table table-sm">
+ <thead><tr><th>箇所（税込）</th><th>おそうじ革命</th><th>おそうじ本舗</th><th>ダスキン</th></tr></thead>
+ <tbody>
+ <tr><td>エアコン（壁掛け・お掃除機能なし）</td><td>9,980円</td><td>13,200円</td><td>15,400円</td></tr>
+ <tr><td>キッチン</td><td>17,930円</td><td>18,700円</td><td>20,680円</td></tr>
+ <tr><td>浴室</td><td>17,930円</td><td>18,700円</td><td>22,000円</td></tr>
+ <tr><td>トイレ</td><td>8,250円</td><td>9,900円</td><td>10,340円</td></tr>
+ </tbody>
+ </table>
+ <p className="text-xs text-muted mt-2">出典: <a href="https://www.osoujikakumei.jp/price/" target="_blank" rel="noopener noreferrer" className="underline">おそうじ革命 料金（全国一律価格・2026-10-27確認）</a>・<a href="/brand/osoujihonpo/" className="underline">おそうじ本舗</a>／<a href="/brand/duskin/" className="underline">ダスキン</a>の公式標準料金（2026-10-26確認）。期間限定のキャンペーン価格・オプションは含みません。ダスキンのエアコンは家庭用壁掛け・幅120cm未満、キッチンは間口3m未満、浴室は床面積3m²・高さ2.4m未満の料金です。</p>
+ <p className="mt-3">箇所別・目的別のランキングは <a href="/ranking/" className="underline text-primary">ハウスクリーニング比較ランキング</a>（<a href="/ranking/aircon-ranking/" className="underline text-primary">エアコン</a>・<a href="/ranking/bathroom-ranking/" className="underline text-primary">浴室</a>・<a href="/ranking/cheap-ranking/" className="underline text-primary">安さ重視</a>・<a href="/ranking/review-ranking/" className="underline text-primary">公式レビュー</a>）にまとめています。</p>
+ </div>
+ </div>
+ </section>
  {/* 導入文 */}
  <section className="py-12 bg-base-100">
  <div className="container mx-auto px-4">
