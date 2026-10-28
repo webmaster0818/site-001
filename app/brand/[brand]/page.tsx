@@ -16,6 +16,7 @@ type Provider = {
   address?: string | null;
   rating_official?: number;
   review_count_official?: number;
+  rating_checked_at?: string;
   verified_at?: string;
 };
 
@@ -86,6 +87,13 @@ const BRAND_GUIDE: Record<
         a: "公式のよくある質問に「万一に備えて責任保険に加入しております」「補償期間は作業後30日間です」と記載されています。",
         src: "https://www.osoujihonpo.com/house-cleaning/faq/service/",
         checked: "2026-10-26",
+      },
+      // 2026-10-28: 「おそうじ本舗」の検索で知りたいことのうち、問い合わせ先がページに無かったため追加（公式店舗ページの記載）
+      {
+        q: "おそうじ本舗の電話番号（問い合わせ先）は？",
+        a: "依頼・見積もりは各店舗のフリーダイヤルが窓口です（番号は公式の各店舗ページに記載）。公式の店舗ページには「上記の電話番号へ通話できない場合は、店舗の携帯電話か本部フリーダイヤル（0120-24-1000 ※年末年始を除き平日・土日祝問わず9:00～18:00）へ」と記載されています。",
+        src: "https://www.osoujihonpo.com/shop/detail/20047/",
+        checked: "2026-10-28",
       },
     ],
   },
@@ -189,11 +197,26 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
   const guide = BRAND_GUIDE[brand];
   const prices = BRAND_PRICES[BRAND_KEY[brand]];
   const prefsShown = PREF_ORDER.filter((pref) => byPref.has(pref));
+  // 2026-10-28: 「おそうじ本舗 口コミ／評判」向けに、公式店舗ページのクチコミ評価の集計（当サイトが公式で確認した値の件数のみ。独自評価ではない）をFAQに足す
+  const faqs = guide ? [...guide.faq] : [];
+  if (brand === "osoujihonpo") {
+    const withRating = stores.filter((s) => typeof s.rating_official === "number");
+    const high = withRating.filter((s) => s.rating_official! >= 4.5).length;
+    const reviews = withRating.reduce((n, s) => n + (s.review_count_official ?? 0), 0);
+    const checked = Array.from(new Set(stores.map((s) => s.rating_checked_at).filter(Boolean) as string[])).sort();
+    const checkedLabel = checked.length > 1 ? `${checked[0]}〜${checked[checked.length - 1]}` : (checked[0] ?? "");
+    faqs.push({
+      q: "おそうじ本舗の口コミ・評判はどこで確認できますか？",
+      a: `公式サイトの各店舗ページに、利用者のクチコミ（5段階評価と件数）が店舗ごとに掲載されています。当サイトが公式で確認した時点（${checkedLabel}）では、全${stores.length.toLocaleString("ja-JP")}店のうち評価が表示されている店舗は${withRating.length.toLocaleString("ja-JP")}店（クチコミ合計${reviews.toLocaleString("ja-JP")}件）、そのうち評価4.5以上は${high.toLocaleString("ja-JP")}店でした。評価は店舗ごとに違うため、依頼する店舗のページでご確認ください（このページの「公式サイト評価の高い店舗」は公式の値を並べたもので、当サイト独自の評価ではありません）。`,
+      src: "https://www.osoujihonpo.com/shop/",
+      checked: checkedLabel,
+    });
+  }
   const faqLd = guide
     ? {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: guide.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+        mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
       }
     : null;
 
@@ -348,7 +371,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
           <div className="mt-10">
             <h2 className="text-xl font-bold text-ink mb-4">{b.name}についてよくある質問</h2>
             <div className="space-y-4">
-              {guide.faq.map((f) => (
+              {faqs.map((f) => (
                 <div key={f.q} className="card p-5">
                   <h3 className="font-bold text-ink mb-2">{f.q}</h3>
                   <p className="text-sm text-ink-soft leading-relaxed">{f.a}</p>
