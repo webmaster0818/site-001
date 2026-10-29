@@ -179,6 +179,16 @@ export default function KawasakiKawasakiArea() {
  </div>
  </section>
  <AreaProvidersLead slug="kawasaki-kawasaki" />
+ {/* 2026-10-29: 「川崎市川崎区 ダスキン エアコンクリーニング」でこのページ(58.5位)と店舗ページ(36.4位)が分散 → 店舗ページを主にし、このページは区内全店の比較に役割を分ける */}
+ <section className="py-4 bg-base-100" id="duskin-kawasaki">
+ <div className="container mx-auto px-4">
+ <p className="max-w-4xl mx-auto text-sm border border-primary/30 rounded p-4">
+ 川崎区でダスキンにエアコンクリーニングを頼む場合、区内に所在するダスキンの店舗は「ダスキン大師店サービスマスター」（川崎区塩浜）の1店です。対応エリア（川崎区・幸区）・営業時間・エアコンの作業時間・標準料金（壁掛け15,400円〜）は{" "}
+ <Link href="/provider/duskin-1351440/" className="underline text-primary">ダスキン大師店サービスマスターの店舗ページ</Link>
+ にまとめています。このページは、おそうじ本舗・おそうじ革命を含む川崎区の全店舗と料金を比べるためのページです。
+ </p>
+ </div>
+ </section>
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
  <div className="container mx-auto px-4">

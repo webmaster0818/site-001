@@ -4,11 +4,11 @@ import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
 export const metadata = {
- title: "中川区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
- description: "中川区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: "名古屋市中川区のハウスクリーニング・エアコンクリーニング業者比較｜区内8店舗と料金 | クリーンナビ",
+ description: "名古屋市中川区に所在するハウスクリーニング8店舗（おそうじ本舗3・ダスキン3・おそうじ革命2）を比較。エアコンクリーニングは公式の標準料金で壁掛け9,980円〜15,400円（税込）。店舗の電話・営業時間・対応エリアは公式で確認して掲載しています。",
  openGraph: {
- title: "中川区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
- description: "中川区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: "名古屋市中川区のハウスクリーニング・エアコンクリーニング業者比較｜区内8店舗と料金 | クリーンナビ",
+ description: "名古屋市中川区に所在するハウスクリーニング8店舗（おそうじ本舗3・ダスキン3・おそうじ革命2）を比較。エアコンクリーニングは公式の標準料金で壁掛け9,980円〜15,400円（税込）。店舗の電話・営業時間・対応エリアは公式で確認して掲載しています。",
  url: "https://cleaning-choices.com/areas/nagoya-nakagawa/",
  siteName: "クリーンナビ",
  images: [
@@ -24,8 +24,8 @@ export const metadata = {
  },
  twitter: {
  card: "summary_large_image",
- title: "中川区のハウスクリーニング業者おすすめ比較｜エアコン・浴室・キッチン | クリーンナビ",
- description: "中川区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: "名古屋市中川区のハウスクリーニング・エアコンクリーニング業者比較｜区内8店舗と料金 | クリーンナビ",
+ description: "名古屋市中川区に所在するハウスクリーニング8店舗（おそうじ本舗3・ダスキン3・おそうじ革命2）を比較。エアコンクリーニングは公式の標準料金で壁掛け9,980円〜15,400円（税込）。店舗の電話・営業時間・対応エリアは公式で確認して掲載しています。",
  images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
  },
  alternates: {
@@ -173,11 +173,30 @@ export default function NagoyaNakagawaArea() {
  {/* ヒーローセクション */}
  <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
  <div className="container mx-auto px-4 text-center">
- <h1 className="text-4xl font-bold mb-4">名古屋市中川区のハウスクリーニング業者比較</h1>
+ <h1 className="text-4xl font-bold mb-4">名古屋市中川区のハウスクリーニング・エアコンクリーニング業者比較</h1>
  <p className="text-xl">中川区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
  <AreaProvidersLead slug="nagoya-nakagawa" />
+ {/* 2026-10-29: 「エアコンクリーニング 中川区」49.8位・「中川区 ハウスクリーニング」12.5位 → 区内に店舗がある3ブランドのエアコン料金を冒頭で即答 */}
+ <section className="py-6 bg-base-100" id="aircon-price">
+ <div className="container mx-auto px-4">
+ <div className="card border border-primary/30 max-w-4xl mx-auto">
+ <div className="card-body">
+ <h2 className="card-title">中川区のエアコンクリーニング料金（区内に店舗がある3ブランドの公式標準料金）</h2>
+ <table className="table">
+ <thead><tr><th>ブランド（中川区内の店舗数）</th><th>壁掛け・お掃除機能なし</th><th>お掃除機能付き</th></tr></thead>
+ <tbody>
+ <tr><td>おそうじ革命（2店）</td><td>9,980円</td><td>18,700円</td></tr>
+ <tr><td>おそうじ本舗（3店）</td><td>13,200円／台</td><td>23,100円／台</td></tr>
+ <tr><td>ダスキン サービスマスター（3店）</td><td>15,400円／1台</td><td>26,400円／1台</td></tr>
+ </tbody>
+ </table>
+ <p className="text-xs text-muted">税込・通常価格（キャンペーン価格・オプションは含みません）。出典（2026-10-29 確認）: <a href="https://www.osoujikakumei.jp/price/" target="_blank" rel="noopener noreferrer" className="underline text-primary">おそうじ革命 料金</a>・<a href="https://www.osoujihonpo.com/house-cleaning/aircon/wall/" target="_blank" rel="noopener noreferrer" className="underline text-primary">おそうじ本舗 壁掛けエアコン</a>・<a href="https://www.duskin.jp/servicemaster/spot/sm000010/" target="_blank" rel="noopener noreferrer" className="underline text-primary">ダスキン エアコンクリーニング</a>。各店舗の電話・営業時間は下の店舗一覧と各店舗ページへ。</p>
+ </div>
+ </div>
+ </div>
+ </section>
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
  <div className="container mx-auto px-4">
