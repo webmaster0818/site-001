@@ -158,7 +158,11 @@ export async function generateMetadata({ params }: { params: Promise<{ brand: st
     title: hasGuide
       ? `${b.name}の店舗一覧（全国${stores.length.toLocaleString("ja-JP")}店舗）・料金・対応エリア｜クリーンナビ`
       : `${b.name}の店舗一覧・対応エリア検索（全国${stores.length}店舗）｜クリーンナビ`,
-    description: `${b.name}の全国${stores.length}店舗を都道府県別に検索できます。公式サイトで所在を確認した店舗のみを対象に、所在地・対応エリア・公式評価を確認日を明記して掲載しています。`,
+    // おそうじ本舗だけ: 「おそうじ本舗」表示313・ハブ22.6位でクリック0（2026-10-30）→ description に店舗数・標準料金・電話の答え（title は 10/26 変更のため不変）
+    description:
+      brand === "osoujihonpo"
+        ? `おそうじ本舗の店舗一覧（全国${stores.length.toLocaleString("ja-JP")}店舗・47都道府県）と公式の標準料金（エアコン壁掛け13,200円〜・キッチン/浴室18,700円・税込）。都道府県から近くの店舗の電話番号・営業時間・公式クチコミを確認できます（本部 0120-24-1000）。`
+        : `${b.name}の全国${stores.length}店舗を都道府県別に検索できます。公式サイトで所在を確認した店舗のみを対象に、所在地・対応エリア・公式評価を確認日を明記して掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/brand/${brand}/` },
   });
 }
