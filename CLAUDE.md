@@ -391,3 +391,12 @@ GSC実数診断:
 - /brand/osoujihonpo/ description に店舗数・標準料金・本部電話（title は 10/26 変更のため不変）
 - out: 3,869頁・本文が変わった HTML 7頁のみ・precheck 全項目OK・計測リンク 676→676（ASPドメイン href 集計）・sitemap lastmod 7（2026-10-30）
 - クロール確認: tokyo-nakano 10/29 クロール（10/27 修正後）／areas/kawasaki-kawasaki は「Crawled - currently not indexed」（10/21）／ほかは修正前のクロールのまま
+
+### 2026-10-31 朝ルーチン: 提携業者の照合の残り（キレイユ・清風・ナックダスキン）を公式と全項目照合（10/30 オンと同じ方式）
+- キレイユ https://kireiyu.com/ 生HTML（2026-10-31）: トップ・menu/kireiyu・bathcleaning・keeper・mirrorcoat・setmenu・area/・guide/・guide/faq・guide/review・corporate/・corporate/tokutei・about・cp/u-next・contact → 料金全行（風呂釜 22,000／セット 19,800・バス 17,600＋1帖3,100・エプロン高圧 4,400・KeePer 浴槽16,500／浴室19,800／セット27,500・30,800・鏡 8,800/㎡）、47都道府県・230店舗超、支払（現金・PayPay／特商法は振込・カードも）、キャンセル前日12時・100%、2営業日以内、会社概要（アロン・2012年9月・MTG正規代理店）、口コミ84件、出張費・駐車場・作業時間 = 一致
+  - 修正: ①総合受付「9:00〜18:00」→「（土日祝休）」を追記（トップ・お問い合わせ） ②頻度FAQ: 風呂釜洗浄ページ＝1〜2年に1回、よくある質問ページ＝「頻度に決まりはありません」と公式内で不一致 → 併記 ③services に「洗濯槽クリーニング（セットメニューページに記載・料金は問い合わせ）」を追加。U-NEXT コラボ（1,000円割引）は期間不明のため載せない
+- 清風 https://seifu-ac.jp/ 生HTML（2026-10-31・サイトはリニューアル済み）: トップ・menu/・aircon-wall・housing-cassette・office・pricelist・guide/・faq・firsttime・sv/What・sv/area/・sv/flow・campaign/・company/・company/sctl・contact → 料金全行・駐車場2,000円上限・対応市区町村（全件同一）・支払（FAQ=現金/PayPay/カード、特商法=現金/振込/カード＝不一致のまま）・8年補償・2016年開始・3万台・6〜7月・20時目安・在宅必須・キャンセル100% = 全一致、修正なし（confirmedAt のみ）
+- ナックダスキン https://nac-duskin.com/ 生HTML（2026-10-31）: トップ・branch_list・duskin-acclean・bath・kitchen・toilet・homecleaning・merrymaidcleaning・merrymaidservice・/law/・credit、nacoo.com/corporate/about/・/ir/stock/info/ → 料金（エアコン15,400〜/18,150/26,400/29,150・トイレ10,340〜/最低11,000/コート3,850・ハウスワイド75,900〜/100,100〜/106,700〜・おそうじ定額 20,900〜）、支店34（内訳一致）、東証プライム 9788・1971年5月20日設立、休日料金・駐車場・9年・28年・電話24時間/平日9-18 = 全一致、修正なし
+  - メモ: エアコンページの「サービス提供地域は？（東京・千葉・神奈川・埼玉・茨城・福岡・愛知・札幌）」FAQ は HTML コメントアウト（非表示）。表示は h1「関東の」・meta「東京、千葉、神奈川、埼玉」= 当サイトの記載どおり。ハウスワイドの表示画像 alt は7地域・meta は4都県（表示側＝当サイトの記載を維持）。特商法のサービス提供エリアは「北海道、茨城、埼玉、千葉、東京、神奈川、大阪、兵庫、福岡」（愛知なし・支店一覧には名古屋＝春日井市あり）。浴室・キッチン料金は今も画像のみ、キャンセル規定は記載なし
+- confirmedAt 3社 10/9→10/31。out: 文言が変わった HTML 4頁（review/・kireiyu・seifu・nac-duskin）・計測リンク 676→676・precheck 全項目OK・sitemap lastmod 4（2026-10-31）
+- 11/1 月次の事前確認（実行せず）: scripts/capture-partners/run.sh・cap.mjs・cap-click.mjs・scripts/refresh-official-ratings.py あり、Chrome・node v25・PIL あり。partner-captures.json は20社（run.sh コメントの「全13社」は古い）・撮影元は全て公式ドメイン。本舗はポップアップのため cap-click.mjs で撮る（run.sh の webp 変換は run.sh 内だけ＝cap-click 後は変換を別途）。自動実行（cron/launchd）の登録はなし＝ルーチンで手動実行
