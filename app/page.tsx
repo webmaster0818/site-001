@@ -1,3 +1,4 @@
+import { CAPTURE_DATE_JA } from "./data/capture-date";
 import type {Metadata } from "next";
 import OfficialRatingStores from "./components/OfficialRatingStores";
 import providersData from "./data/providers.json";
@@ -83,7 +84,7 @@ export default function Home() {
  <li key={b.href} className="cn-partner" data-reveal style={{ transitionDelay: `${i * 70}ms` }}>
  <figure className="cn-partner-shot">
  <img src={`/images/partners/${b.img}.webp`} alt={`${b.name} 公式サイトのトップページ`} width={1280} height={800} loading="lazy" />
- <figcaption>出典：{b.name} 公式サイト（2026年10月16日時点）</figcaption>
+ <figcaption>出典：{b.name} 公式サイト（{CAPTURE_DATE_JA}時点）</figcaption>
  </figure>
  <div className="cn-partner-body">
  <h3>{b.name}</h3>

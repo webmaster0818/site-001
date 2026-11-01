@@ -1,3 +1,4 @@
+import { CAPTURE_DATE_JA } from "../data/capture-date";
 /* eslint-disable @next/next/no-img-element */
 import captures from "../data/partner-captures.json";
 
@@ -47,7 +48,7 @@ export function StoreBrandShot({ brand, name, compact = false }: { brand: string
 }
 /** 店舗の一覧の下に一度だけ書く出典 */
 export function StoreShotNote() {
-  return <p className="text-xs text-gray-500 mt-3">画像は各ブランド（おそうじ本舗・ダスキン サービスマスター・おそうじ革命）の公式サイトのトップページを当サイトが撮影したものです（2026年10月16日時点）。店舗ごとの写真ではありません。</p>;
+  return <p className="text-xs text-gray-500 mt-3">画像は各ブランド（おそうじ本舗・ダスキン サービスマスター・おそうじ革命）の公式サイトのトップページを当サイトが撮影したものです（{CAPTURE_DATE_JA}時点）。店舗ごとの写真ではありません。</p>;
 }
 /** キャプチャの slug を直接指定する版（ブランドハブ /brand/[brand]/ 用） */
 export function PartnerShot({ slug, name }: { slug: string; name: string }) {

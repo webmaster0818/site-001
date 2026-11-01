@@ -1,4 +1,5 @@
 "use client";
+import { CAPTURE_DATE_JA } from "../../data/capture-date";
 
 import { useState } from "react";
 import { MapPin } from "lucide-react";
@@ -96,7 +97,7 @@ export default function ServicePageClient({ category }: { category: string }) {
   const COMPANY_PAGE: Record<string, string> = { osoujikakumei: "/company/3/", kajitaku: "/company/5/" };
   const rows: Row[] = [
     ...COMPANIES.filter((c) => c.category === category).map((c) => ({
-      key: `c${c.id}`, name: c.name, href: `/company/${c.id}/`, image: c.image, caption: `出典：${c.name} 公式サイト（2026年10月16日時点）`,
+      key: `c${c.id}`, name: c.name, href: `/company/${c.id}/`, image: c.image, caption: `出典：${c.name} 公式サイト（${CAPTURE_DATE_JA}時点）`,
       area: c.area, priceText: `${c.price.toLocaleString()}円〜`, price: c.price, features: c.features,
     })),
     ...partnersByTag(tag).map((p) => {

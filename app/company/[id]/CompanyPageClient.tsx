@@ -1,4 +1,5 @@
 "use client";
+import { CAPTURE_DATE_JA } from "../../data/capture-date";
 
 import Link from "next/link";
 import { PARTNERS } from "../../data/partners";
@@ -195,7 +196,7 @@ export default function CompanyPageClient({ id }: { id: string }) {
                 alt={`${company.name} 公式サイトのトップページ`}
                 className="w-full h-auto aspect-[16/10] object-cover object-top border border-[#e3ecec]"
               />
-              <figcaption className="mt-2 text-xs text-gray-500">出典：{company.name} 公式サイト（2026年10月16日時点）</figcaption>
+              <figcaption className="mt-2 text-xs text-gray-500">出典：{company.name} 公式サイト（{CAPTURE_DATE_JA}時点）</figcaption>
             </figure>
 
             {/* 業者情報 */}

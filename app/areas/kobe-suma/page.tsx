@@ -1,3 +1,4 @@
+import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
@@ -236,7 +237,7 @@ export default function KobeSumaArea() {
  })}
  </tbody>
  </table>
- <p className="text-xs text-gray-500 mt-2 max-w-6xl mx-auto">画像は各社公式サイトのトップページを当サイトが撮影したものです（2026年10月16日時点）。料金は各社公式サイトの表記です。</p>
+ <p className="text-xs text-gray-500 mt-2 max-w-6xl mx-auto">画像は各社公式サイトのトップページを当サイトが撮影したものです（{CAPTURE_DATE_JA}時点）。料金は各社公式サイトの表記です。</p>
  </div>
  </div>
  </section>
