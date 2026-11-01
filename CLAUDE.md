@@ -400,3 +400,8 @@ GSC実数診断:
   - メモ: エアコンページの「サービス提供地域は？（東京・千葉・神奈川・埼玉・茨城・福岡・愛知・札幌）」FAQ は HTML コメントアウト（非表示）。表示は h1「関東の」・meta「東京、千葉、神奈川、埼玉」= 当サイトの記載どおり。ハウスワイドの表示画像 alt は7地域・meta は4都県（表示側＝当サイトの記載を維持）。特商法のサービス提供エリアは「北海道、茨城、埼玉、千葉、東京、神奈川、大阪、兵庫、福岡」（愛知なし・支店一覧には名古屋＝春日井市あり）。浴室・キッチン料金は今も画像のみ、キャンセル規定は記載なし
 - confirmedAt 3社 10/9→10/31。out: 文言が変わった HTML 4頁（review/・kireiyu・seifu・nac-duskin）・計測リンク 676→676・precheck 全項目OK・sitemap lastmod 4（2026-10-31）
 - 11/1 月次の事前確認（実行せず）: scripts/capture-partners/run.sh・cap.mjs・cap-click.mjs・scripts/refresh-official-ratings.py あり、Chrome・node v25・PIL あり。partner-captures.json は20社（run.sh コメントの「全13社」は古い）・撮影元は全て公式ドメイン。本舗はポップアップのため cap-click.mjs で撮る（run.sh の webp 変換は run.sh 内だけ＝cap-click 後は変換を別途）。自動実行（cron/launchd）の登録はなし＝ルーチンで手動実行
+
+### 2026-11-01 月次：業者枠キャプチャ撮り直し（20社）
+- `bash scripts/capture-partners/run.sh`（20社）→ 本舗は cap-click.mjs で撮って webp 変換。全20枚を目視：ベアーズだけ LINE 友だち募集のポップアップが写った（固定位置・出たり出なかったりする）→ 撮り直し（クリック座標方式はポップアップ未表示のときにリンクを踏んで別ページになった＝不可。/tmp で fixed 要素を消す版を作って撮影、今回はポップアップ無しで撮れた）。おそうじラボは 10/16 と同じ構図（左がロゴの帯）で正常
+- 写っている先方のキャンペーン表示：カジタク「11月30日まで」・東京ガス「注文期間 10/12〜11/8」・アールクリーニング「11月10日まで」・110番「東証上場企業運営」（公式トップの表示のまま）
+- partner-captures.json の captured_at 20社とも 2026-11-01。precheck 全項目OK
