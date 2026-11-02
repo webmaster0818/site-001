@@ -242,7 +242,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
                     ))}
                   </tbody>
                 </table>
-                <p className="text-xs text-muted">公式の料金表の通常価格です（キャンペーン価格・オプションは含みません）。</p>
+                <p className="text-xs text-muted">{extra.priceRows.some(([k]) => k.includes("オプション")) ? "公式の料金表の通常価格です（キャンペーン価格は含みません。オプションは「オプション」と書いた行のみ）。" : "公式の料金表の通常価格です（キャンペーン価格・オプションは含みません）。"}</p>
               </>
             )}
             {extra.priceSource && (
