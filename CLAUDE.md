@@ -407,3 +407,9 @@ GSC実数診断:
 - partner-captures.json の captured_at 20社とも 2026-11-01。precheck 全項目OK
 - ⚠️ キャプチャの「（2026年10月16日時点）」が220ファイル（TOP・CompanyShot・services・company・エリア216頁）に手書きされていて、撮り直し後も古い日付が出る状態だった → `app/data/capture-date.ts`（partner-captures.json の captured_at の最新から「YYYY年M月D日」）に置き換え。以後は run.sh で撮り直せば表記も追従する。out/ で旧日付 0・新日付 3,816頁。計測リンク TOP 58=本番 58
 - 月次：`refresh-official-ratings.py`（本舗1,876店）＝ 更新0・変化なし934・取得失敗45（前回値・前回日付のまま）→ 評価あり 941店（10/19 と同数）。評価・件数は 10/16 から変化なし（心斎橋 4.81/15件 等を目視照合）、rating_checked_at を 2026-11-01 に。⚠️ 1回目はバックグラウンド実行の時間上限（60分）で 1,700店付近で止まった → 同日のキャッシュ（/tmp/honpo-ratings-YYYY-MM-DD）を使って再実行で完了。所要は合計約85分（1.2秒間隔＋失敗時の再試行）。次回は最初から長い timeout で回す
+
+### 2026-11-02 朝ルーチン: /review/ 未登録7URLの URL 検査再確認＋Indexing API 通知（サイト修正なし）＋110番 IR 確認
+- URL 検査（11/2・sc-domain）: 登録5は変化なし（four-l・osouji-labo 10/12／migxl・seifu 9/17／nac-duskin 9/15 クロール・Google canonical=自己）。未登録: /review/・kajitaku・kireiyu・on・osoujikakumei・housecleaning110＝「検出 - インデックス未登録」（クロール記録なし・sitemap 経由で検出。housecleaning110 は 10/29 の「未認識」→「検出」に前進）、r-cleaning のみ「URL が Google に認識されていません」のまま
+- 本番 HTML（?cb=）: 7URL とも 200・canonical 自己・robots index,follow・X-Robots-Tag なし・robots.txt 許可・sitemap.xml 掲載（lastmod 10/30〜31）。被リンク（out/ の href 頁数）: ハブ 3,872頁（全頁ナビ）・kajitaku 23・kireiyu 17・on 24・osoujikakumei 263・110番 24・r-cleaning 21＝登録済み（four-l 24・migxl 14・seifu 17）と同水準、TOP から全12本に直リンク → サイト側の問題なし＝クロール予算待ち
+- Indexing API URL_UPDATED 7本送信（全 200）
+- 110番: TDnet（3989）10/29・10/30・11/2 朝の新規開示なし。公式 IR（xj-storage AS03964）の最新は 10/28 16:24 臨時報告書。決済開始日 11/4 は 10/28 TOB 結果開示に記載済み、上場廃止日は未公表。10/20 基準日設定＝基準日 11/4・臨時株主総会 2027年1月上旬予定（議決権 85.74%＜90% のため株式併合ルート）→ 上場廃止は総会後。文言更新は 11/4 決済確認後（10/29 の文言案）
