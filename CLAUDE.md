@@ -422,3 +422,8 @@ GSC実数診断:
 - 競合: WebSearch（US 結果のみ・日本の検索結果は取れず）で出たのはミツモア・みん評・くらしのマーケット（ブランド全体・他店舗）で、この店の専用ページは見当たらず
 - 「おそうじ本舗 店舗一覧」は /brand/osoujihonpo/ に着地（73表示・7.8位・1クリック）、「おそうじ本舗」は店舗ページへの地域出し分け（10/30 の見立てどおり）。ハブは要点・標準料金・都道府県ジャンプ・FAQ・公式店舗検索とも揃っており、追加なし
 - out: 3,872 HTML 中、表示が変わったのはこの1頁のみ・precheck 全項目OK・計測リンク 676→676・sitemap lastmod 1（2026-11-02）。845f9cf4
+
+### 2026-11-03 朝ルーチン: trust-audit C7（薄い16頁）のうち7頁に提携業者の公式データ表を追加・C5/C3 確認
+- C7 16頁はいずれも h1＋1行＋ボタンだけの殻（本文38〜99字）。`app/components/PartnerFactTable.tsx` を新設し、partners.ts の公式確認データ（各社 confirmedAt つき）から主題の項目だけを業者横断で表にした（新しい調査値なし・「確認できません」行は除外）: warranty-comparison（guarantee 11社）・time-comparison（作業時間 7社）・cleaning-timing（peakSeason 6社）・before-checklist（キャンセル10・立会い4・駐車場7）・trouble-cases（仕上がり6・追加料金12）・bathroom-mold（カビの公式記載4社）・moving-aircon（moving 対応6社のエアコン料金）。title 不変・description を中身に合わせて変更・sitemap lastmod 7（2026-11-03）
+- 材料が無い9頁（coupon-info・major-3-comparison（ベアーズのデータなし）・area-price-comparison・kitchen-oil・aircon-frequency・diy-vs-pro・office・airbnb・new-house）は触らず noindex/統合の A/B を判断待ち
+- C5 /review/: 本文に出典つき口コミなし＝指摘どおり → title 案 A/B を判断待ち（変更なし）。C3 /review/kireiyu/「当サイトが効果を検証したものではありません」＝否定の断り書き＝誤検知
