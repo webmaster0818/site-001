@@ -4,7 +4,7 @@ import providers from "../../data/providers.json";
 import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
 import { prefPageHref } from "../../components/areaIndexData";
 import { withPageSocial } from "../../siteOpenGraph";
-import { BRAND_PRICES } from "../../data/brandPrices";
+import { BRAND_PRICES, KAKUMEI_HUB_PRICES } from "../../data/brandPrices";
 
 type Provider = {
   slug: string;
@@ -97,6 +97,50 @@ const BRAND_GUIDE: Record<
       },
     ],
   },
+  // 2026-11-04: 「おそうじ革命」60表示が店舗ページに割れ、「お掃除革命」14表示はこのハブ（8.4位）に着地するのに料金の答えが無かった
+  osoujikakumei: {
+    officialName: "おそうじ革命（公式のブランド表記はひらがなの「おそうじ」。「お掃除革命」と検索されることもあります）",
+    officialStoreUrl: "https://www.osoujikakumei.jp/locations/",
+    officialStoreLabel: "おそうじ革命公式の全国店舗一覧（店舗名・地域名から検索）",
+    faq: [
+      {
+        q: "おそうじ革命の料金はいくらですか？",
+        a: "公式の料金ページの全国一律価格（税込）は、エアコン（壁掛け・お掃除機能なし）9,980円、お掃除機能付き18,700円、キッチン・レンジフード・浴室が各17,930円、トイレ・洗面所が各8,250円です。",
+        src: "https://www.osoujikakumei.jp/price/",
+        checked: "2026-11-04",
+      },
+      {
+        q: "追加料金や駐車場代はかかりますか？",
+        a: "公式のよくある質問に「当ホームページに記載の料金以外に、別途料金や追加料金がかかることはございません」「駐車料金はご請求しません」と記載されています。",
+        src: "https://www.osoujikakumei.jp/support/faq/",
+        checked: "2026-11-04",
+      },
+      {
+        q: "キャンセル料はかかりますか？",
+        a: "公式のよくある質問には、作業日の2日前までのキャンセルは無料、前日は作業料金の50%、当日は100%と記載されています。",
+        src: "https://www.osoujikakumei.jp/support/faq/",
+        checked: "2026-11-04",
+      },
+      {
+        q: "土日祝は料金が変わりますか？",
+        a: "公式のよくある質問に「年末年始を除き、土日祝日も営業しております。料金は変わりません」と記載されています。",
+        src: "https://www.osoujikakumei.jp/support/faq/",
+        checked: "2026-11-04",
+      },
+      {
+        q: "作業中の事故に備えた保険はありますか？",
+        a: "公式のよくある質問に「損害賠償保険に加入しております」と記載されています。例外として、製造から10年以上のエアコン、7年以上の洗濯機は補償の対象外です。",
+        src: "https://www.osoujikakumei.jp/support/faq/",
+        checked: "2026-11-04",
+      },
+      {
+        q: "近くの店舗はどう探せばよいですか？",
+        a: "このページの「都道府県から探す」で都道府県を選ぶと、当サイトが公式サイトで所在を確認した店舗の一覧に移動します。公式の全国店舗一覧でも店舗名・地域名から探せます。公式サイトには「全国の各エリアに対応しています（一部を除く）」と記載されています。",
+        src: "https://www.osoujikakumei.jp/locations/",
+        checked: "2026-11-04",
+      },
+    ],
+  },
   duskin: {
     officialName: "ダスキン サービスマスター（株式会社ダスキンのハウスクリーニング事業）",
     officialStoreUrl: "https://www.duskin.jp/servicemaster/",
@@ -130,6 +174,11 @@ const BRAND_GUIDE: Record<
   },
 };
 
+// title・h1 だけで両表記を出すブランド（本文の表記は公式の b.name のまま）
+const HEADING_NAME: Record<string, string> = {
+  osoujikakumei: "おそうじ革命（お掃除革命）",
+};
+
 const BRAND_KEY: Record<string, string> = {
   osoujihonpo: "honpo",
   duskin: "duskin",
@@ -156,12 +205,14 @@ export async function generateMetadata({ params }: { params: Promise<{ brand: st
   const hasGuide = Boolean(BRAND_GUIDE[brand]);
   return withPageSocial({
     title: hasGuide
-      ? `${b.name}の店舗一覧（全国${stores.length.toLocaleString("ja-JP")}店舗）・料金・対応エリア｜クリーンナビ`
+      ? `${HEADING_NAME[brand] ?? b.name}の店舗一覧（全国${stores.length.toLocaleString("ja-JP")}店舗）・料金・対応エリア｜クリーンナビ`
       : `${b.name}の店舗一覧・対応エリア検索（全国${stores.length}店舗）｜クリーンナビ`,
     // おそうじ本舗だけ: 「おそうじ本舗」表示313・ハブ22.6位でクリック0（2026-10-30）→ description に店舗数・標準料金・電話の答え（title は 10/26 変更のため不変）
     description:
       brand === "osoujihonpo"
         ? `おそうじ本舗の店舗一覧（全国${stores.length.toLocaleString("ja-JP")}店舗・47都道府県）と公式の標準料金（エアコン壁掛け14,300円・キッチン/浴室19,800円・税込）。都道府県から近くの店舗の電話番号・営業時間・公式クチコミを確認できます（本部 0120-24-1000）。`
+        : brand === "osoujikakumei"
+        ? `おそうじ革命（お掃除革命）の店舗一覧（全国${stores.length}店舗）と公式の全国一律料金（エアコン壁掛け9,980円・お掃除機能付き18,700円・キッチン/浴室/レンジフード17,930円・トイレ8,250円・税込）。都道府県から近くの店舗の所在地・対応エリアを確認できます。`
         : `${b.name}の全国${stores.length}店舗を都道府県別に検索できます。公式サイトで所在を確認した店舗のみを対象に、所在地・対応エリア・公式評価を確認日を明記して掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/brand/${brand}/` },
   });
@@ -199,7 +250,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
     url: `https://cleaning-choices.com/brand/${brand}/`,
   };
   const guide = BRAND_GUIDE[brand];
-  const prices = BRAND_PRICES[BRAND_KEY[brand]];
+  const prices = brand === "osoujikakumei" ? KAKUMEI_HUB_PRICES : BRAND_PRICES[BRAND_KEY[brand]];
   const prefsShown = PREF_ORDER.filter((pref) => byPref.has(pref));
   // 2026-10-28: 「おそうじ本舗 口コミ／評判」向けに、公式店舗ページのクチコミ評価の集計（当サイトが公式で確認した値の件数のみ。独自評価ではない）をFAQに足す
   const faqs = guide ? [...guide.faq] : [];
@@ -231,7 +282,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       <section className="bg-gradient-to-r from-primary to-secondary text-primary-content py-14">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">{b.name}の店舗一覧{guide ? "・料金・特徴" : "・特徴"}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">{HEADING_NAME[brand] ?? b.name}の店舗一覧{guide ? "・料金・特徴" : "・特徴"}</h1>
           <p className="text-sm opacity-90">
             公式サイトで確認した全国{stores.length}店舗を都道府県別に掲載しています
           </p>
@@ -276,7 +327,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
               </tbody>
             </table>
             <ul className="text-xs text-muted mt-3 space-y-1">
-              <li>・{prices.checkedAt}に{b.name}公式サイトで確認したブランド共通の料金です。店舗ごとの料金は見積もりでご確認ください。</li>
+              <li>・{prices.checkedAt}に{b.name}公式サイトで確認した{brand === "osoujikakumei" ? "全国一律の料金です。" : "ブランド共通の料金です。店舗ごとの料金は見積もりでご確認ください。"}</li>
               {prices.notes.map((n) => (
                 <li key={n}>・{n}</li>
               ))}

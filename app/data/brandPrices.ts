@@ -40,6 +40,26 @@ export const BRAND_PRICES: Record<string, { checkedAt: string; rows: BrandPriceR
   },
 };
 
+// おそうじ革命のブランドハブ専用（2026-11-04 公式 /price/ 確認）。BRAND_PRICES に入れると provider 452頁の title・料金表まで変わるので分けている
+const KAKUMEI_PRICE_URL = "https://www.osoujikakumei.jp/price/";
+export const KAKUMEI_HUB_PRICES: { checkedAt: string; rows: BrandPriceRow[]; notes: string[] } = {
+  checkedAt: "2026-11-04",
+  rows: [
+    ["エアコン（壁掛け・お掃除機能なし）", "9,980円／台", KAKUMEI_PRICE_URL],
+    ["エアコン（壁掛け・お掃除機能付き）", "18,700円／台", KAKUMEI_PRICE_URL],
+    ["レンジフード", "17,930円", KAKUMEI_PRICE_URL],
+    ["キッチン", "17,930円", KAKUMEI_PRICE_URL],
+    ["浴室", "17,930円", KAKUMEI_PRICE_URL],
+    ["トイレ", "8,250円", KAKUMEI_PRICE_URL],
+    ["洗面所", "8,250円", KAKUMEI_PRICE_URL],
+    ["水回りセット", "2点 32,890円／3点 45,980円／4点 57,970円", KAKUMEI_PRICE_URL],
+  ],
+  notes: [
+    "公式の料金ページには「全国一律価格：どの地域でも同じ料金」「事前に料金を提示し、あとから追加費用が発生することはありません」と記載されています。",
+    "オプション（コーティング等）は別料金です。対応メニューは店舗により異なることがあります。",
+  ],
+};
+
 // エリアページ冒頭の「要点」で使う、箇所別の比較（大手2ブランドの公式標準料金）。
 export const AREA_PRICE_COMPARE: { label: string; service: string; honpo: BrandPriceRow; duskin: BrandPriceRow }[] = [
   { label: "エアコン（壁掛け・お掃除機能なし）", service: "/services/aircon/", honpo: BRAND_PRICES.honpo.rows[0], duskin: BRAND_PRICES.duskin.rows[0] },

@@ -135,6 +135,13 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
               )}
               {covering.length > 0 && <>／{area.label}を対応エリアに含む近隣店舗: <strong>{covering.length}店</strong></>}
             </li>
+            {/* 2026-11-04: 「おそうじ本舗」単語が富山県ページに着地（表示11・9.3位）。この1頁だけハブへの導線 */}
+            {area.slug === "toyama-ken" && (
+              <li>
+                ・「おそうじ本舗」で探している方へ: 富山県内は{byBrand["おそうじ本舗"] ?? 0}店（下の一覧）。全国の店舗・本部の電話・よくある質問は
+                <a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>にまとめています。
+              </li>
+            )}
             <li>・大手2ブランドの標準料金（公式サイト記載・税込・{BRAND_PRICE_CHECKED}確認）は下の表のとおりです。地域による違いは見積もりでご確認ください。</li>
           </ul>
           <div className="overflow-x-auto">
