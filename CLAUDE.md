@@ -427,3 +427,9 @@ GSC実数診断:
 - C7 16頁はいずれも h1＋1行＋ボタンだけの殻（本文38〜99字）。`app/components/PartnerFactTable.tsx` を新設し、partners.ts の公式確認データ（各社 confirmedAt つき）から主題の項目だけを業者横断で表にした（新しい調査値なし・「確認できません」行は除外）: warranty-comparison（guarantee 11社）・time-comparison（作業時間 7社）・cleaning-timing（peakSeason 6社）・before-checklist（キャンセル10・立会い4・駐車場7）・trouble-cases（仕上がり6・追加料金12）・bathroom-mold（カビの公式記載4社）・moving-aircon（moving 対応6社のエアコン料金）。title 不変・description を中身に合わせて変更・sitemap lastmod 7（2026-11-03）
 - 材料が無い9頁（coupon-info・major-3-comparison（ベアーズのデータなし）・area-price-comparison・kitchen-oil・aircon-frequency・diy-vs-pro・office・airbnb・new-house）は触らず noindex/統合の A/B を判断待ち
 - C5 /review/: 本文に出典つき口コミなし＝指摘どおり → title 案 A/B を判断待ち（変更なし）。C3 /review/kireiyu/「当サイトが効果を検証したものではありません」＝否定の断り書き＝誤検知
+
+### 2026-11-04 朝ルーチン: 110番 TOB の決済確認（決済を一次情報で確認できず・partners.ts 修正なし）＋/review/kireiyu/ C3 の原文確認
+- 確認時点 11/4 09:20頃。TDnet 11/4 一覧（9件・最新 09:00）に 3989 なし／10/29・10/30・11/2 も 3989 なし（最新は 10/28 16:00 の TOB 結果）。公式 IR（xj-storage AS03964）の最新は 10/28 16:24 臨時報告書。EDINET API はキーなしで未確認（401）。JPX 上場廃止銘柄一覧・監理銘柄ページに該当の掲載なし（監理指定は 9/9 の JPX 発表で確認）
+- 10/28 開示の決済関連の記載は「決済が行われた場合には…11月4日付で親会社に該当」「異動が生じる見込み」＝予定であり完了の確認ではない。よって 10/29 の文言案は未適用（/review/housecleaning110/ は従来文・MP-2606 0件）
+- 上場廃止日: 未公表。10/20 開示＝基準日 11/4・臨時株主総会 2027年1月上旬予定。10/28 開示＝具体的手続・時期は決定次第公表。公式サイト（トップ・/company/）の「東証上場」表示は 11/4 も残る
+- /review/kireiyu/ C3「当サイトが効果を検証し」＝ partners.ts checkBefore の否定の断り書き（「当サイトが効果を検証したものではありません」）＝誤検知・修正なし。C7 9頁は判断待ちのまま不変
