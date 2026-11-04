@@ -1,18 +1,20 @@
 // ブランド公式の標準料金（各ブランド公式のサービスページを当日開いて確認した税込の通常価格。キャンペーン価格は載せない）。
 // 2026-10-19 provider/[slug] に新設 → 2026-10-26 ブランドハブ・エリアページでも使うため共通化し、全行を公式で再確認（ダスキンのキッチンを追加）。
 // 店舗ごとの料金は公式店舗ページに記載がないため、ブランド共通の標準料金として出典・確認日とともに出す。
-export const BRAND_PRICE_CHECKED = "2026-10-26";
+// エリアページの比較表（本舗・ダスキン）の確認日。2026-11-04 に両ブランドの公式を再確認（本舗は値上げを反映、ダスキンは全行一致）
+export const BRAND_PRICE_CHECKED = "2026-11-04";
 
 export type BrandPriceRow = [label: string, price: string, sourceUrl: string];
 
-export const BRAND_PRICES: Record<string, { rows: BrandPriceRow[]; notes: string[] }> = {
+export const BRAND_PRICES: Record<string, { checkedAt: string; rows: BrandPriceRow[]; notes: string[] }> = {
   honpo: {
+    checkedAt: "2026-11-04",
     rows: [
-      ["エアコン（壁掛け・お掃除機能なし）", "13,200円／台", "https://www.osoujihonpo.com/house-cleaning/aircon/wall/"],
-      ["エアコン（壁掛け・お掃除機能付き）", "23,100円／台", "https://www.osoujihonpo.com/house-cleaning/aircon/wall/"],
-      ["レンジフード・換気扇", "18,700円／式", "https://www.osoujihonpo.com/house-cleaning/kitchen/fan/"],
-      ["キッチン", "18,700円／式", "https://www.osoujihonpo.com/house-cleaning/kitchen/kitchen/"],
-      ["風呂・浴室", "18,700円／式", "https://www.osoujihonpo.com/house-cleaning/water/bathroom/"],
+      ["エアコン（壁掛け・お掃除機能なし）", "14,300円／台（2台以上の注文は12,100円／台）", "https://www.osoujihonpo.com/house-cleaning/aircon/wall/"],
+      ["エアコン（壁掛け・お掃除機能付き）", "24,200円／台（2台以上の注文は22,000円／台）", "https://www.osoujihonpo.com/house-cleaning/aircon/wall/"],
+      ["レンジフード・換気扇", "19,800円／式", "https://www.osoujihonpo.com/house-cleaning/kitchen/fan/"],
+      ["キッチン", "19,800円／式", "https://www.osoujihonpo.com/house-cleaning/kitchen/kitchen/"],
+      ["風呂・浴室", "19,800円／式", "https://www.osoujihonpo.com/house-cleaning/water/bathroom/"],
       ["トイレ", "9,900円／式", "https://www.osoujihonpo.com/house-cleaning/water/toilet/"],
     ],
     notes: [
@@ -21,6 +23,7 @@ export const BRAND_PRICES: Record<string, { rows: BrandPriceRow[]; notes: string
     ],
   },
   duskin: {
+    checkedAt: "2026-10-26", // 店舗ページの再生成を避けるため表示日は据え置き（2026-11-04 の再確認でも全行一致）
     rows: [
       ["エアコン（家庭用壁掛け・幅120cm未満）", "15,400円／1台", "https://www.duskin.jp/servicemaster/spot/sm000010/"],
       ["エアコン（フィルター自動お掃除機能付き）", "26,400円／1台", "https://www.duskin.jp/servicemaster/spot/sm000010/"],

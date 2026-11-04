@@ -19,7 +19,7 @@ const COMPANY_DATA: { [key: string]: any } = {
     name: "おそうじ本舗",
     category: "エアコンクリーニング",
     categorySlug: "aircon",
-    price: 12100,
+    price: 14300,
     area: "全国対応（1,765店舗・2023年9月現在）",
     image: "/images/partners/osoujihonpo.webp",
     description:
@@ -32,8 +32,8 @@ const COMPANY_DATA: { [key: string]: any } = {
       "Web予約に対応",
     ],
     services: [
-      { name: "壁掛けエアコン", price: 12100 },
-      { name: "お掃除機能付きエアコン", price: 20900 },
+      { name: "壁掛けエアコン", price: 14300 },
+      { name: "お掃除機能付きエアコン", price: 24200 },
       { name: "天井埋込エアコン", price: 27500 },
     ],
     workingHours: "9:00〜20:00（店舗により異なる）",

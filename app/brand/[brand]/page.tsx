@@ -4,7 +4,7 @@ import providers from "../../data/providers.json";
 import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
 import { prefPageHref } from "../../components/areaIndexData";
 import { withPageSocial } from "../../siteOpenGraph";
-import { BRAND_PRICES, BRAND_PRICE_CHECKED } from "../../data/brandPrices";
+import { BRAND_PRICES } from "../../data/brandPrices";
 
 type Provider = {
   slug: string;
@@ -66,7 +66,7 @@ const BRAND_GUIDE: Record<
     faq: [
       {
         q: "おそうじ本舗の料金はいくらですか？",
-        a: "公式サイトの通常価格（税込）は、エアコン（壁掛け・お掃除機能なし）13,200円／台、キッチン・浴室・レンジフードが各18,700円／式、トイレ9,900円／式です。期間限定のキャンペーン価格が別に表示されることがあります。",
+        a: "公式サイトの通常価格（税込）は、エアコン（壁掛け・お掃除機能なし）14,300円／台（2台以上の注文は12,100円／台）、キッチン・浴室・レンジフードが各19,800円／式、トイレ9,900円／式です。期間限定のキャンペーン価格が別に表示されることがあります。",
         src: "https://www.osoujihonpo.com/house-cleaning/kitchen/kitchen/",
         checked: "2026-10-26",
       },
@@ -161,7 +161,7 @@ export async function generateMetadata({ params }: { params: Promise<{ brand: st
     // おそうじ本舗だけ: 「おそうじ本舗」表示313・ハブ22.6位でクリック0（2026-10-30）→ description に店舗数・標準料金・電話の答え（title は 10/26 変更のため不変）
     description:
       brand === "osoujihonpo"
-        ? `おそうじ本舗の店舗一覧（全国${stores.length.toLocaleString("ja-JP")}店舗・47都道府県）と公式の標準料金（エアコン壁掛け13,200円〜・キッチン/浴室18,700円・税込）。都道府県から近くの店舗の電話番号・営業時間・公式クチコミを確認できます（本部 0120-24-1000）。`
+        ? `おそうじ本舗の店舗一覧（全国${stores.length.toLocaleString("ja-JP")}店舗・47都道府県）と公式の標準料金（エアコン壁掛け14,300円・キッチン/浴室19,800円・税込）。都道府県から近くの店舗の電話番号・営業時間・公式クチコミを確認できます（本部 0120-24-1000）。`
         : `${b.name}の全国${stores.length}店舗を都道府県別に検索できます。公式サイトで所在を確認した店舗のみを対象に、所在地・対応エリア・公式評価を確認日を明記して掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/brand/${brand}/` },
   });
@@ -276,7 +276,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
               </tbody>
             </table>
             <ul className="text-xs text-muted mt-3 space-y-1">
-              <li>・{BRAND_PRICE_CHECKED}に{b.name}公式サイトで確認したブランド共通の料金です。店舗ごとの料金は見積もりでご確認ください。</li>
+              <li>・{prices.checkedAt}に{b.name}公式サイトで確認したブランド共通の料金です。店舗ごとの料金は見積もりでご確認ください。</li>
               {prices.notes.map((n) => (
                 <li key={n}>・{n}</li>
               ))}

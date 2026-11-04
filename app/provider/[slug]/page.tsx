@@ -6,7 +6,7 @@ import providers from "../../data/providers.json";
 import KakumeiAffiliateCTA from "../../components/KakumeiAffiliateCTA";
 import { prefPageHref } from "../../components/areaIndexData";
 import areaMap from "../../data/areaMap.json";
-import { BRAND_PRICES, BRAND_PRICE_CHECKED } from "../../data/brandPrices";
+import { BRAND_PRICES } from "../../data/brandPrices";
 import { PROVIDER_EXTRAS } from "../../data/providerExtras";
 
 type Provider = {
@@ -324,7 +324,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
               </tbody>
             </table>
             <ul className="text-xs text-muted mt-3 space-y-1">
-              <li>・{BRAND_PRICE_CHECKED}に{p.brand_name}公式サイトで確認したブランド共通の料金です。{p.name}の料金は、見積もりで店舗にご確認ください。</li>
+              <li>・{prices.checkedAt}に{p.brand_name}公式サイトで確認したブランド共通の料金です。{p.name}の料金は、見積もりで店舗にご確認ください。</li>
               {prices.notes.map((n) => (
                 <li key={n}>・{n}</li>
               ))}

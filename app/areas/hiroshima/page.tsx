@@ -45,8 +45,8 @@ export default function HiroshimaArea() {
     },
     { 
       name: "おそうじ本舗", 
-      kitchen: "18,700円〜", 
-      bathroom: "18,700円〜", 
+      kitchen: "19,800円〜", 
+      bathroom: "19,800円〜", 
       toilet: "9,900円〜",
       description: "全国47都道府県に対応する全国チェーンです。混雑期でも予約が取りやすく、早朝・夜間の要望にも対応しています（公式）。",
       hours: "店舗により異なる（定休日も店舗ごと）",

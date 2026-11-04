@@ -67,8 +67,8 @@ export default function NagoyaNakagawaArea() {
  },
  {
  name: "おそうじ本舗", 
- kitchen: "18,700円〜", 
- bathroom: "18,700円〜", 
+ kitchen: "19,800円〜", 
+ bathroom: "19,800円〜", 
  toilet: "9,900円〜",
  description: "全国47都道府県に対応する全国チェーンです。混雑期でも予約が取りやすく、早朝・夜間の要望にも対応しています（公式）。",
  hours: "店舗により異なる（定休日も店舗ごと）",
@@ -189,7 +189,7 @@ export default function NagoyaNakagawaArea() {
  <thead><tr><th>ブランド（中川区内の店舗数）</th><th>壁掛け・お掃除機能なし</th><th>お掃除機能付き</th></tr></thead>
  <tbody>
  <tr><td>おそうじ革命（2店）</td><td>9,980円</td><td>18,700円</td></tr>
- <tr><td>おそうじ本舗（3店）</td><td>13,200円／台</td><td>23,100円／台</td></tr>
+ <tr><td>おそうじ本舗（3店）</td><td>14,300円／台</td><td>24,200円／台</td></tr>
  <tr><td>ダスキン サービスマスター（3店）</td><td>15,400円／1台</td><td>26,400円／1台</td></tr>
  </tbody>
  </table>

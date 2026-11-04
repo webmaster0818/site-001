@@ -12,7 +12,7 @@ const COMPANIES = [
     id: 1,
     name: "おそうじ本舗",
     category: "aircon",
-    price: 12100,
+    price: 14300,
     area: "全国対応（1,765店舗・2023年9月現在）",
     image: "/images/partners/osoujihonpo.webp",
     features: ["全国1,765店舗（2023年9月現在）", "特許取得ファインバブル洗浄", "損害保険加入"],

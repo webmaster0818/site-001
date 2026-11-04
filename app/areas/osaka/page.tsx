@@ -56,8 +56,8 @@ export default function OsakaArea() {
  },
  {
  name: "おそうじ本舗", 
- kitchen: "18,700円〜", 
- bathroom: "18,700円〜", 
+ kitchen: "19,800円〜", 
+ bathroom: "19,800円〜", 
  toilet: "9,900円〜",
  description: "全国47都道府県に対応する全国チェーンです。混雑期でも予約が取りやすく、早朝・夜間の要望にも対応しています（公式）。",
  hours: "店舗により異なる（定休日も店舗ごと）",
@@ -248,9 +248,9 @@ export default function OsakaArea() {
  <table className="table table-sm">
  <thead><tr><th>箇所（税込）</th><th>おそうじ革命</th><th>おそうじ本舗</th><th>ダスキン</th></tr></thead>
  <tbody>
- <tr><td>エアコン（壁掛け・お掃除機能なし）</td><td>9,980円</td><td>13,200円</td><td>15,400円</td></tr>
- <tr><td>キッチン</td><td>17,930円</td><td>18,700円</td><td>20,680円</td></tr>
- <tr><td>浴室</td><td>17,930円</td><td>18,700円</td><td>22,000円</td></tr>
+ <tr><td>エアコン（壁掛け・お掃除機能なし）</td><td>9,980円</td><td>14,300円</td><td>15,400円</td></tr>
+ <tr><td>キッチン</td><td>17,930円</td><td>19,800円</td><td>20,680円</td></tr>
+ <tr><td>浴室</td><td>17,930円</td><td>19,800円</td><td>22,000円</td></tr>
  <tr><td>トイレ</td><td>8,250円</td><td>9,900円</td><td>10,340円</td></tr>
  </tbody>
  </table>
