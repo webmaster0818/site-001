@@ -6,11 +6,11 @@ import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
 export const metadata = {
- title: "豊島区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "豊島区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: "豊島区のハウスクリーニング業者おすすめ比較｜ソファ・エアコンの料金 | クリーンナビ",
+ description: "豊島区のハウスクリーニング業者を比較しています。ソファクリーニングはおそうじ本舗 5,500円（通常2人掛け・税込）、ダスキン 布1人掛け 5,142円〜など公式料金を確認日つきで掲載。店舗情報も確認できます。",
  openGraph: {
- title: "豊島区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "豊島区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: "豊島区のハウスクリーニング業者おすすめ比較｜ソファ・エアコンの料金 | クリーンナビ",
+ description: "豊島区のハウスクリーニング業者を比較しています。ソファクリーニングはおそうじ本舗 5,500円（通常2人掛け・税込）、ダスキン 布1人掛け 5,142円〜など公式料金を確認日つきで掲載。店舗情報も確認できます。",
  url: "https://cleaning-choices.com/areas/tokyo-toshima/",
  siteName: "クリーンナビ",
  images: [
@@ -26,8 +26,8 @@ export const metadata = {
  },
  twitter: {
  card: "summary_large_image",
- title: "豊島区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "豊島区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: "豊島区のハウスクリーニング業者おすすめ比較｜ソファ・エアコンの料金 | クリーンナビ",
+ description: "豊島区のハウスクリーニング業者を比較しています。ソファクリーニングはおそうじ本舗 5,500円（通常2人掛け・税込）、ダスキン 布1人掛け 5,142円〜など公式料金を確認日つきで掲載。店舗情報も確認できます。",
  images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
  },
  alternates: {

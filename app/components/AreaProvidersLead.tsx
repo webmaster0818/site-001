@@ -142,6 +142,13 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
                 <a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>にまとめています。
               </li>
             )}
+            {/* 2026-11-05: 「おそうじ本舗」単語が広島県ページに着地（表示7・10.0位）。この1頁だけハブへの導線 */}
+            {area.slug === "hiroshima-ken" && (
+              <li>
+                ・「おそうじ本舗」で探している方へ: 広島県内は{byBrand["おそうじ本舗"] ?? 0}店（下の一覧）。全国の店舗・本部の電話・よくある質問は
+                <a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>にまとめています。
+              </li>
+            )}
             <li>・大手2ブランドの標準料金（公式サイト記載・税込・{BRAND_PRICE_CHECKED}確認）は下の表のとおりです。地域による違いは見積もりでご確認ください。</li>
           </ul>
           <div className="overflow-x-auto">
@@ -170,6 +177,41 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
           </div>
           <p className="text-xs text-muted mt-2">期間限定のキャンペーン価格は含みません。強い汚れ・追加範囲・オプション・土日祝や夜間の作業は追加料金になる場合があります。他社も含めた料金の比較は<a href="/price/" className="underline text-primary">料金相場</a>をご覧ください。</p>
         </div>
+        {/* 2026-11-05: 「ソファクリーニング 豊島区」表示4・5.2位にソファの料金の答えが無かった。この1頁だけ。区内に店舗がある3ブランドの公式値 */}
+        {area.slug === "tokyo-toshima" && (
+          <div className="card p-5 mb-8 border border-gray-200" aria-label="ソファクリーニングの料金">
+            <h2 className="text-lg font-bold text-ink mb-2">豊島区のソファクリーニング料金（公式サイト記載・税込・2026-11-05確認）</h2>
+            <div className="overflow-x-auto">
+              <table className="table text-sm">
+                <thead>
+                  <tr>
+                    <th>ブランド（区内の店舗）</th>
+                    <th>料金</th>
+                    <th>公式の条件</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>おそうじ本舗（{byBrand["おそうじ本舗"] ?? 0}店）</th>
+                    <td>5,500円／式（通常2人掛け）（<a href="https://www.osoujihonpo.com/house-cleaning/room/sofa/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）</td>
+                    <td>座面・背もたれ部・肘掛部が対象。サイズが異なる場合は別途見積もり。天然皮革（スウェード・バックスキン含む）は対象外</td>
+                  </tr>
+                  <tr>
+                    <th>ダスキン サービスマスター（{byBrand["ダスキン サービスマスター"] ?? 0}店）</th>
+                    <td>布 1人掛け 5,142円〜・3人掛け 11,874円〜／ビニールレザー 1人掛け 3,740円〜・3人掛け 7,480円〜（<a href="https://www.duskin.jp/servicemaster/spot/sm000050/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）</td>
+                    <td>東京都が含まれる Sエリアの標準料金。土日祝・夜間は受けられない場合や追加費用の場合あり</td>
+                  </tr>
+                  <tr>
+                    <th>おそうじ革命（{byBrand["おそうじ革命"] ?? 0}店）</th>
+                    <td>訪問見積り（金額の記載なし）（<a href="https://www.osoujikakumei.jp/price/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）</td>
+                    <td>布地以外のソファは不可。背面は洗浄箇所に含まれない</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted mt-2">店舗ごとの対応と正確な金額は、依頼前に各店舗で確認してください。</p>
+          </div>
+        )}
         <h2 className="text-2xl md:text-3xl font-bold text-ink mb-2">{heading}</h2>
         <p className="text-sm text-muted mb-1">
           {located.length > 0 ? (
