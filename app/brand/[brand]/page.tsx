@@ -143,9 +143,15 @@ const BRAND_GUIDE: Record<
   },
   duskin: {
     officialName: "ダスキン サービスマスター（株式会社ダスキンのハウスクリーニング事業）",
-    officialStoreUrl: "https://www.duskin.jp/servicemaster/",
-    officialStoreLabel: "ダスキン サービスマスター公式サイト",
+    officialStoreUrl: "https://www.duskin.jp/store/select.html?s1=0&s2=1&s3=0&s4=0&s5=0&s6=0&s7=0&s8=0&s9=0&s10=0&ccg=sm",
+    officialStoreLabel: "ダスキン公式のサービスマスター全国店舗一覧（都道府県→市区郡で検索）",
     faq: [
+      {
+        q: "ダスキン サービスマスターの店舗はどう探せばよいですか？",
+        a: "このページの「都道府県から探す」で都道府県を選ぶと、当サイトが公式サイトで所在を確認した店舗の一覧に移動します。公式の「サービスマスター 全国店舗一覧」では、都道府県と市区郡を順に選んで店舗を探せます。公式の店舗一覧には店舗名から担当店を調べる入口もあります。",
+        src: "https://www.duskin.jp/store/select.html?s1=0&s2=1&s3=0&s4=0&s5=0&s6=0&s7=0&s8=0&s9=0&s10=0&ccg=sm",
+        checked: "2026-11-06",
+      },
       {
         q: "ダスキンのハウスクリーニングの料金はいくらですか？",
         a: "公式の標準料金（税込）は、エアコン（家庭用壁掛け・幅120cm未満）15,400円／1台、キッチン（間口3m未満）20,680円、浴室（床面積3m²・高さ2.4m未満）22,000円、トイレ（床面積2m²未満）10,340円です。",
