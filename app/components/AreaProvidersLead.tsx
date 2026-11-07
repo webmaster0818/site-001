@@ -135,6 +135,13 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
               )}
               {covering.length > 0 && <>／{area.label}を対応エリアに含む近隣店舗: <strong>{covering.length}店</strong></>}
             </li>
+            {/* 2026-11-07: 「アズマのホームクリーニング 店舗」11@6.0c3 が新潟県に着地。答えの節（#azuma）が52店の一覧の後ろにあるので要点で先に答える。この1頁だけ */}
+            {area.slug === "niigata" && (
+              <li>
+                ・「アズマのホームクリーニング」の店舗を探している方へ: 公式のフランチャイズ一覧（12店）に新潟県内の店舗はありません。新潟県は佐渡市・粟島浦村を除き対応エリアで、申し込みは公式の注文フォームか電話 0120-120-083（平日 9:00〜17:00）です（
+                <a href="#azuma" className="underline text-primary">詳細と出典</a>・2026-11-07 公式確認）。
+              </li>
+            )}
             {/* 2026-11-04: 「おそうじ本舗」単語が富山県ページに着地（表示11・9.3位）。この1頁だけハブへの導線 */}
             {area.slug === "toyama-ken" && (
               <li>
@@ -177,6 +184,53 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
           </div>
           <p className="text-xs text-muted mt-2">期間限定のキャンペーン価格は含みません。強い汚れ・追加範囲・オプション・土日祝や夜間の作業は追加料金になる場合があります。他社も含めた料金の比較は<a href="/price/" className="underline text-primary">料金相場</a>をご覧ください。</p>
         </div>
+        {/* 2026-11-07: 「おそうじ本舗 北区」8@9.9。区内の本舗3店の連絡先を要点の直後で答える。この1頁だけ */}
+        {area.slug === "nagoya-kita" && (
+          <div className="card p-5 mb-8 border border-gray-200" aria-label="名古屋市北区のおそうじ本舗">
+            <h2 className="text-lg font-bold text-ink mb-2">名古屋市北区のおそうじ本舗（3店・公式 2026-11-07 確認）</h2>
+            <div className="overflow-x-auto">
+              <table className="table text-sm">
+                <thead>
+                  <tr>
+                    <th>店舗</th>
+                    <th>活動拠点</th>
+                    <th>電話</th>
+                    <th>営業時間・定休日</th>
+                    <th>公式のクチコミ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th><a href="/provider/honpo-21099/" className="underline text-primary">大曽根店</a></th>
+                    <td>北区大曽根</td>
+                    <td>0120-800-445</td>
+                    <td>8:00〜19:00・不定休</td>
+                    <td>評価 4.77・32件</td>
+                  </tr>
+                  <tr>
+                    <th><a href="/provider/honpo-19386/" className="underline text-primary">中味鋺店</a></th>
+                    <td>北区中味鋺</td>
+                    <td>0120-63-4028</td>
+                    <td>9:00〜19:00・不定休</td>
+                    <td>評価 4.89・18件</td>
+                  </tr>
+                  <tr>
+                    <th><a href="/provider/honpo-13808/" className="underline text-primary">黒川店</a></th>
+                    <td>北区黒川本通</td>
+                    <td>052-508-4732</td>
+                    <td>9:00〜20:00・不定休</td>
+                    <td>1件（評価点の表示なし）</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted mt-2">
+              料金は上の表のブランド共通の標準料金です。クチコミは公式店舗ページの表示で、当サイト独自の評価ではありません。出典:{" "}
+              <a href="https://www.osoujihonpo.com/shop/tokai/aichi/23103/" target="_blank" rel="noopener noreferrer" className="underline text-primary">おそうじ本舗 公式の名古屋市北区の店舗一覧</a>
+              ・全国の店舗は<a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>
+            </p>
+          </div>
+        )}
         {/* 2026-11-05: 「ソファクリーニング 豊島区」表示4・5.2位にソファの料金の答えが無かった。この1頁だけ。区内に店舗がある3ブランドの公式値 */}
         {area.slug === "tokyo-toshima" && (
           <div className="card p-5 mb-8 border border-gray-200" aria-label="ソファクリーニングの料金">
