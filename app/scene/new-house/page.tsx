@@ -4,6 +4,7 @@ import { withPageSocial } from "../../siteOpenGraph";
 
 export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/scene/new-house/" },
+  robots: { index: false, follow: true },
   title: "新築・リフォーム後クリーニング | クリーンナビ",
   description: "新築・リフォーム後の仕上げ清掃と、入居前の清掃に対応する提携業者を掲載しています。",
 });

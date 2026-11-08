@@ -3,6 +3,7 @@ import { withPageSocial } from "../../siteOpenGraph";
 
 export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/scene/airbnb/" },
+  robots: { index: false, follow: true },
   title: "民泊・Airbnb向けクリーニング | クリーンナビ",
   description: "民泊・Airbnb施設の清掃についてのページです。対応する業者は、サービス別の業者一覧からお探しください。",
 });

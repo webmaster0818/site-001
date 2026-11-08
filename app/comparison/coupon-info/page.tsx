@@ -3,6 +3,7 @@ import { withPageSocial } from "../../siteOpenGraph";
 
 export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/comparison/coupon-info/" },
+  robots: { index: false, follow: true },
   title: "クーポン・割引情報まとめ | クリーンナビ",
   description: "クーポン・キャンペーン情報について。業者選びの基本は、業者選びガイドでご説明しています。",
 });

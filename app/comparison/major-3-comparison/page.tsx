@@ -3,6 +3,7 @@ import { withPageSocial } from "../../siteOpenGraph";
 
 export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/comparison/major-3-comparison/" },
+  robots: { index: false, follow: true },
   title: "大手3社の比較 | クリーンナビ",
   description: "ダスキン・おそうじ本舗・ベアーズの比較。業者選びの基本は、業者選びガイドでご説明しています。",
 });

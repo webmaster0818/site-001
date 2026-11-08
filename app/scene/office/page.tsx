@@ -3,6 +3,7 @@ import { withPageSocial } from "../../siteOpenGraph";
 
 export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/scene/office/" },
+  robots: { index: false, follow: true },
   title: "事務所・オフィスクリーニング | クリーンナビ",
   description: "事務所・オフィスの清掃についてのページです。対応する業者は、サービス別の業者一覧からお探しください。",
 });
