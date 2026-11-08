@@ -527,3 +527,9 @@ GSC実数診断:
 - 競合: WebSearch で店舗別の専用ページは見当たらず（鹿児島宇宿はみん評等ブランド全体、革命はセレクトラ等ブランド全体、北区は公式の店舗ページと比較記事）。アズマは学校生協の取次・FC 比較記事が出る（第三者なので不記載）
 - 判断待ち（不変）: honpo-21223・21196・16607、C7 9頁、110番文言、/review/ title、革命「技術力と価格のバランス」、本舗の店舗数、京都市 東京ガス、花見川区の共通部品、アズマのエリア外59頁
 - out: 3,869頁・表示が変わったのは7頁のみ・precheck 全項目OK・計測リンク 676→676（href 集計）・sitemap lastmod 7（2026-11-07）
+
+### 2026-11-08 朝ルーチン: 点検 C7 の材料が無い9頁を noindex,follow・sitemap から除外（11/7 宣言の既定案）＋110番 TOB 開示の確認（開示なし・partners.ts 修正なし）
+- 対象: /comparison/coupon-info/・major-3-comparison/・area-price-comparison/、/guide-detail/kitchen-oil/・aircon-frequency/・diy-vs-pro/、/scene/office/・airbnb/・new-house/。各 page.tsx の metadata に `robots: { index: false, follow: true }` を追加、public/sitemap.xml から9行削除（3,869→3,860）。title・本文・内部リンク（ハブ・HTMLサイトマップ等）は不変。commit bb569593・本番 09:22 反映確認（9頁とも `noindex, follow`・title 不変・本番 sitemap 3,860 で9頁 0件・トップは index, follow のまま）
+- 戻すとき: 9ファイルの robots 行を消し、sitemap に9行を戻す（lastmod は元 2026-10-16 等）
+- 110番: 確認時点 11/8 09:20頃。TDnet 11/6 全767件・11/7・11/8 は「開示された情報はありません」（週末）で 3989 なし。sharing-tech.co.jp トップ/ir/news/ /company/ に親会社・MP-2606・上場廃止の記載なし（「東証上場」表示は残る）。JPX 上場廃止一覧に掲載なし、監理銘柄は 9/9 指定のまま。xj-storage・EDINET は未確認。文言案は未適用
+- out: 3,869頁（HTML 3,872）・precheck 全項目OK（noindex 9）・計測リンク 676→676（href 集計）
