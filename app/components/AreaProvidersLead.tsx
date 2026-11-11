@@ -156,6 +156,19 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
                 <a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>にまとめています。
               </li>
             )}
+            {/* 2026-11-11 16:00: /areas/yokohama/ は区別ページへの導線が103店の一覧の後ろだけだった。要点で区ごとの店舗数と区別ページへ先に案内する。この1頁だけ */}
+            {area.slug === "yokohama" && area.children.length > 0 && (
+              <li>
+                ・区ごとの掲載店数（所在地ベース・クリックで区別の店舗一覧へ）:{" "}
+                {area.children.map((c, i) => (
+                  <span key={c.slug}>
+                    {i > 0 && "・"}
+                    <a href={`/areas/${c.slug}/`} className="underline text-primary">{c.name.replace(area.label, "")}</a>
+                    {" "}{AREA_MAP[c.slug]?.count ?? 0}店
+                  </span>
+                ))}
+              </li>
+            )}
             <li>・大手2ブランドの標準料金（公式サイト記載・税込・{BRAND_PRICE_CHECKED}確認）は下の表のとおりです。地域による違いは見積もりでご確認ください。</li>
           </ul>
           <div className="overflow-x-auto">
@@ -227,6 +240,40 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
             <p className="text-xs text-muted mt-2">
               料金は上の表のブランド共通の標準料金です。クチコミは公式店舗ページの表示で、当サイト独自の評価ではありません。出典:{" "}
               <a href="https://www.osoujihonpo.com/shop/tokai/aichi/23103/" target="_blank" rel="noopener noreferrer" className="underline text-primary">おそうじ本舗 公式の名古屋市北区の店舗一覧</a>
+              ・全国の店舗は<a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>
+            </p>
+          </div>
+        )}
+        {/* 2026-11-11 16:00: 「おそうじ本舗 北区」8@9.1 が神戸市北区にも着地。11/7 nagoya-kita と同じ型で区内の本舗の連絡先を要点の直後で答える。この1頁だけ */}
+        {area.slug === "kobe-kita" && (
+          <div className="card p-5 mb-8 border border-gray-200" aria-label="神戸市北区のおそうじ本舗">
+            <h2 className="text-lg font-bold text-ink mb-2">神戸市北区のおそうじ本舗（1店・公式 2026-11-11 確認）</h2>
+            <div className="overflow-x-auto">
+              <table className="table text-sm">
+                <thead>
+                  <tr>
+                    <th>店舗</th>
+                    <th>活動拠点</th>
+                    <th>電話</th>
+                    <th>営業時間・定休日</th>
+                    <th>公式のクチコミ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th><a href="/provider/honpo-20327/" className="underline text-primary">神戸岡場駅前店</a></th>
+                    <td>北区唐櫃六甲台</td>
+                    <td>0120-79-4033（無料通話）</td>
+                    <td>8:00〜17:00・不定休</td>
+                    <td>評価 4.5・15件</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted mt-2">
+              公式の神戸市北区の店舗一覧はこの1店です。料金は上の表のブランド共通の標準料金（エアコン壁掛け 14,300円／台・キッチン・浴室 各19,800円・トイレ 9,900円、公式サービスページで 2026-11-11 に再確認）で、店舗ごとの料金は公式店舗ページに記載がありません。電話がつながらない場合は本部フリーダイヤル 0120-24-1000 と公式に記載。クチコミは公式店舗ページの表示で、当サイト独自の評価ではありません。出典:{" "}
+              <a href="https://www.osoujihonpo.com/shop/kinki/hyogo/28109/" target="_blank" rel="noopener noreferrer" className="underline text-primary">おそうじ本舗 公式の神戸市北区の店舗一覧</a>
+              ・<a href="https://www.osoujihonpo.com/shop/detail/20327/" target="_blank" rel="noopener noreferrer" className="underline text-primary">神戸岡場駅前店 公式店舗ページ</a>
               ・全国の店舗は<a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>
             </p>
           </div>
