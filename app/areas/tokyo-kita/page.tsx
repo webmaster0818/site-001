@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import KitaWardSwitcher from "../../components/KitaWardSwitcher";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
@@ -179,6 +180,8 @@ export default function TokyoKitaArea() {
  <p className="text-xl">北区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-12 16:00: 「大掃除業者 東京都北区」の答え（大手3社の公式料金の早見表）。この頁だけ */}
+ <OosoujiPriceAnswer areaLabel="東京都北区" />
  <AreaProvidersLead slug="tokyo-kita" />
  <KitaWardSwitcher current="tokyo-kita" />
  {/* パンくずリスト */}

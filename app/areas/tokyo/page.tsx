@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import {Building2, MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
@@ -245,6 +246,8 @@ export default function TokyoArea() {
  ></path>
  </svg>
  </section>
+ {/* 2026-11-12 16:00: 「大掃除業者 東京都」の答え（大手3社の公式料金の早見表）。この頁だけ */}
+ <OosoujiPriceAnswer areaLabel="東京都" />
  <AreaProvidersLead slug="tokyo" />
 
  <section className="py-12 bg-base-100">

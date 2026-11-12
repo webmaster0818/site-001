@@ -1,15 +1,16 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import { AirconPriceAnswer } from "../../components/OosoujiPriceAnswer";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
 export const metadata = {
- title: "文京区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "文京区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: "文京区のハウスクリーニング・エアコンクリーニング業者比較 | 料金 | クリーンナビ",
+ description: "文京区のハウスクリーニング・エアコンクリーニング業者を比較。エアコンクリーニングの公式料金はおそうじ革命 9,980円・おそうじ本舗 14,300円・ダスキン 15,400円（壁掛け・税込、2026年11月12日確認）。区内の店舗も掲載。",
  openGraph: {
- title: "文京区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "文京区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: "文京区のハウスクリーニング・エアコンクリーニング業者比較 | 料金 | クリーンナビ",
+ description: "文京区のハウスクリーニング・エアコンクリーニング業者を比較。エアコンクリーニングの公式料金はおそうじ革命 9,980円・おそうじ本舗 14,300円・ダスキン 15,400円（壁掛け・税込、2026年11月12日確認）。区内の店舗も掲載。",
  url: "https://cleaning-choices.com/areas/tokyo-bunkyo/",
  siteName: "クリーンナビ",
  images: [
@@ -25,8 +26,8 @@ export const metadata = {
  },
  twitter: {
  card: "summary_large_image",
- title: "文京区のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "文京区のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: "文京区のハウスクリーニング・エアコンクリーニング業者比較 | 料金 | クリーンナビ",
+ description: "文京区のハウスクリーニング・エアコンクリーニング業者を比較。エアコンクリーニングの公式料金はおそうじ革命 9,980円・おそうじ本舗 14,300円・ダスキン 15,400円（壁掛け・税込、2026年11月12日確認）。区内の店舗も掲載。",
  images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
  },
  alternates: {
@@ -178,6 +179,8 @@ export default function TokyoBunkyoArea() {
  <p className="text-xl">文京区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-12 16:00: 「エアコンクリーニング 文京区」の答え（3社の公式料金）。この頁だけ */}
+ <AirconPriceAnswer areaLabel="文京区" />
  <AreaProvidersLead slug="tokyo-bunkyo" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
