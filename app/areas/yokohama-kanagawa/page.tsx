@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
@@ -178,6 +179,16 @@ export default function YokohamaKanagawaArea() {
  <p className="text-xl">神奈川区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-13 16:00: 「大掃除業者 神奈川区」の答え（大手3社の公式料金の早見表・区内の掲載店）。この頁だけ */}
+ <OosoujiPriceAnswer
+  areaLabel="横浜市神奈川区"
+  checked="2026年11月13日"
+  duskinArea="S"
+  stores={[
+   { name: "おそうじ本舗 神奈川菅田店", href: "/provider/honpo-18265/" },
+   { name: "おそうじ本舗 神奈川三枚町店", href: "/provider/honpo-19274/" },
+  ]}
+ />
  <AreaProvidersLead slug="yokohama-kanagawa" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">

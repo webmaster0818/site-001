@@ -79,12 +79,48 @@ export function AirconPriceAnswer({ areaLabel }: { areaLabel: string }) {
   );
 }
 
-export default function OosoujiPriceAnswer({ areaLabel }: { areaLabel: string }) {
+// 2026-11-13 16:00 遅れ挽回: 横浜市南区・神奈川区・千葉市花見川区にも同じ型で設置。値は 2026-11-13 に全行を公式で再確認（11/12 と全一致）。
+// checked: 表示する確認日（既存4頁は 11/12 のまま）／duskinArea: ダスキン ハウスワイドの地域区分（千葉は A エリア。A セットの金額は S と同額）
+// stores: その区に所在する掲載店（答えの直後に店名と店舗ページへの導線）／washer: 洗濯槽（洗濯機）クリーニングの3社の公式料金を足す
+type StoreLink = { name: string; href: string };
+
+// 洗濯機クリーニング（2026-11-13 各公式で確認・税込）
+const WASHER_ROWS: [string, string, string][] = [
+  [
+    "おそうじ本舗",
+    "縦型 12,100円／台・ドラム式 18,700円／台（いずれも分解を伴わない洗浄。完全分解洗浄はオプションで縦型 +11,000円・ドラム式 +19,800円）",
+    "https://www.osoujihonpo.com/house-cleaning/washer/top/",
+  ],
+  [
+    "ダスキン",
+    "縦型全自動洗濯機 除菌クリーニング 15,400円・縦型洗濯乾燥機 18,700円・ドラム式洗濯乾燥機 22,000円（洗濯槽は取り外さず、洗浄水に12時間以上浸け置き。最後のすすぎは利用者が行う）",
+    "https://www.duskin.jp/servicemaster/water/sm000170/",
+  ],
+  [
+    "おそうじ革命",
+    "分解クリーニング 縦型 8kg未満 17,600円・8kg以上 20,900円、乾燥機能付き 8kg未満 23,100円・8kg以上 26,400円、ドラム式 30,800円〜（要見積り）",
+    KAKUMEI_PRICE,
+  ],
+];
+
+export default function OosoujiPriceAnswer({
+  areaLabel,
+  checked = CHECKED,
+  duskinArea = "S",
+  stores,
+  washer = false,
+}: {
+  areaLabel: string;
+  checked?: string;
+  duskinArea?: "S" | "A";
+  stores?: StoreLink[];
+  washer?: boolean;
+}) {
   return (
     <section id="oosouji-price" className="py-8 bg-amber-50 border-b border-amber-100">
       <div className="container mx-auto px-4 max-w-5xl">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-          {areaLabel}で大掃除を業者に頼むといくら？ 大手3社の公式料金（{CHECKED}確認）
+          {areaLabel}で大掃除を業者に頼むといくら？ 大手3社の公式料金（{checked}確認）
         </h2>
         <p className="text-sm text-gray-700 mb-3">
           大掃除でよく頼まれる箇所の1か所あたりの標準料金（税込・通常価格）です。おそうじ革命は公式に「全国一律価格」、おそうじ本舗・ダスキンはブランド共通の標準料金で、店舗ごとの金額は見積もりで確認してください。
@@ -111,10 +147,52 @@ export default function OosoujiPriceAnswer({ areaLabel }: { areaLabel: string })
             </tbody>
           </table>
         </div>
+        {stores && stores.length > 0 && (
+          <p className="text-sm text-gray-700 mt-3">
+            {areaLabel}内に所在する掲載店（{stores.length}店・各ブランド公式の店舗ページで{checked}に掲載を確認）:{" "}
+            {stores.map((st, i) => (
+              <span key={st.href}>
+                {i > 0 && "・"}
+                <a href={st.href} className="underline text-primary">{st.name}</a>
+              </span>
+            ))}
+            。電話・営業時間・対応エリアは各店舗ページ、区外から対応する店舗は下の一覧をご覧ください。
+          </p>
+        )}
+        {washer && (
+          <>
+            <h3 className="text-base font-bold text-gray-900 mt-4 mb-1">洗濯槽（洗濯機）クリーニングの料金（公式・税込）</h3>
+            <div className="overflow-x-auto">
+              <table className="table table-sm text-sm bg-white">
+                <thead>
+                  <tr>
+                    <th>ブランド</th>
+                    <th>料金</th>
+                    <th>出典</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {WASHER_ROWS.map(([b, v, u]) => (
+                    <tr key={b}>
+                      <th>{b}</th>
+                      <td>{v}</td>
+                      <td>
+                        <a href={u} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-gray-500 mt-1">
+              作業内容がブランドごとに違います（本舗の基本料金とダスキンは分解しない洗浄、革命は分解洗浄）。メーカー・機種・設置状況により対応できない場合があります（各公式に記載）。
+            </p>
+          </>
+        )}
         <h3 className="text-base font-bold text-gray-900 mt-4 mb-1">まとめて頼むセット料金（公式）</h3>
         <ul className="text-sm text-gray-700 space-y-1">
           <li>
-            ・ダスキン「ハウスワイドサービス」（公式に「夏季、年末の大掃除、引越し、新築、改装時などにおすすめ」と記載）: 東京・神奈川（Sエリア）のマンション Aセット＝水まわり5か所（キッチン・レンジフード・浴室・トイレ・洗面所）＋窓ガラス・サッシ・網戸で、1R／1K 52,800円、1LDK／2DK 78,100円、2LDK／3DK 103,400円、3LDK／4DK 110,000円（
+            ・ダスキン「ハウスワイドサービス」（公式に「夏季、年末の大掃除、引越し、新築、改装時などにおすすめ」と記載）: {duskinArea === "A" ? "千葉県など（Aエリア。マンション Aセットの金額は東京・神奈川のSエリアと同額）" : "東京・神奈川（Sエリア）"}のマンション Aセット＝水まわり5か所（キッチン・レンジフード・浴室・トイレ・洗面所）＋窓ガラス・サッシ・網戸で、1R／1K 52,800円、1LDK／2DK 78,100円、2LDK／3DK 103,400円、3LDK／4DK 110,000円（
             <a href={DUSKIN_HOUSEWIDE} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）
           </li>
           <li>

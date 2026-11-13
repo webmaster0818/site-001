@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
@@ -178,6 +179,23 @@ export default function YokohamaMinamiArea() {
  <p className="text-xl">南区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-13 16:00: 「大掃除代行／大掃除業者 横浜市南区」の答え（大手3社の公式料金の早見表・区内の掲載店）。この頁だけ */}
+ <OosoujiPriceAnswer
+  areaLabel="横浜市南区"
+  checked="2026年11月13日"
+  duskinArea="S"
+  stores={[
+   { name: "おそうじ本舗 弘明寺店", href: "/provider/honpo-19732/" },
+   { name: "おそうじ本舗 横浜別所インター店", href: "/provider/honpo-20337/" },
+   { name: "おそうじ本舗 横浜中村町店", href: "/provider/honpo-20660/" },
+   { name: "おそうじ本舗 横浜南太田店", href: "/provider/honpo-19479/" },
+   { name: "おそうじ革命 横浜井土ヶ谷店", href: "/provider/kakumei-yokohama_idogaya/" },
+   { name: "おそうじ革命 横浜南区白妙店", href: "/provider/kakumei-yokohama_minamiku_shirotae/" },
+   { name: "ダスキン横浜南サービスマスター", href: "/provider/duskin-1353165/" },
+   { name: "ダスキン宿町サービスマスター", href: "/provider/duskin-1354864/" },
+   { name: "ナックダスキン事業部 第4支店 サービスマスター", href: "/provider/duskin-1352400/" },
+  ]}
+ />
  <AreaProvidersLead slug="yokohama-minami" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">

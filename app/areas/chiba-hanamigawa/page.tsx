@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
@@ -178,6 +179,21 @@ export default function Chiba花見川Area() {
  <p className="text-xl">花見川区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-13 16:00: 「大掃除業者 花見川区」「洗濯槽クリーニング 花見川区」の答え（大手3社の公式料金の早見表・区内の掲載店）。この頁だけ */}
+ <OosoujiPriceAnswer
+  areaLabel="千葉市花見川区"
+  checked="2026年11月13日"
+  duskinArea="A"
+  washer
+  stores={[
+   { name: "おそうじ本舗 幕張本郷店", href: "/provider/honpo-19873/" },
+   { name: "おそうじ本舗 こてはし台店", href: "/provider/honpo-19357/" },
+   { name: "おそうじ本舗 新検見川店", href: "/provider/honpo-14679/" },
+   { name: "おそうじ革命 花見川さつきが丘店", href: "/provider/kakumei-hanamigawa_satsukigaoka/" },
+   { name: "おそうじ革命 千葉花見川朝日ヶ丘店", href: "/provider/kakumei-chiba_hanamigawaasahigaoka/" },
+   { name: "おそうじ革命 千葉幕張本郷店", href: "/provider/kakumei-chiba_makuharihongo/" },
+  ]}
+ />
  <AreaProvidersLead slug="chiba-hanamigawa" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
