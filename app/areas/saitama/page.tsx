@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
@@ -214,6 +215,21 @@ export default function SaitamaArea() {
  <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z"fill="#f9fafb"></path>
  </svg>
  </section>
+  {/* 2026-11-14 16:00: 「大掃除業者 埼玉」「大掃除業者 桜区」の答え（大手3社の公式料金の早見表・ダスキンは埼玉＝Aエリア・桜区の掲載店4店）。この頁だけ */}
+ <OosoujiPriceAnswer
+  areaLabel="埼玉県"
+  checked="2026年11月14日"
+  duskinArea="A"
+  duskinAreaLabel="埼玉県"
+  storesLabel="さいたま市桜区"
+  storesMore={{ name: "さいたま市桜区のページ", href: "/areas/saitama-sakura/" }}
+  stores={[
+   { name: "おそうじ本舗 さいたま白鍬店", href: "/provider/honpo-19934/" },
+   { name: "おそうじ本舗 西浦和店", href: "/provider/honpo-20864/" },
+   { name: "ナックダスキン事業部 第9支店サービスマスター", href: "/provider/duskin-1331666/" },
+   { name: "ダスキン 在家支店", href: "/provider/duskin-8002878/" },
+  ]}
+ />
  <AreaProvidersLead slug="saitama" />
  <section className="py-12">
  <div className="container mx-auto px-4">

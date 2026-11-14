@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
@@ -179,6 +180,8 @@ export default function TokyoNakanoArea() {
  <p className="text-xl">中野区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+  {/* 2026-11-14 16:00: 「大掃除業者 中野区」の答え（大手3社の公式料金の早見表・区内の掲載店数と一覧への導線）。この頁だけ */}
+ <OosoujiPriceAnswer areaLabel="中野区" checked="2026年11月14日" duskinArea="S" storeCount={{ honpo: 10, duskin: 6, kakumei: 2 }} />
  <AreaProvidersLead slug="tokyo-nakano" />
  <section className="py-8" id="kitchen">
  <div className="container mx-auto px-4">

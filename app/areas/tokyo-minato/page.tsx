@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import { Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
@@ -175,6 +176,8 @@ export default function TokyominatoArea() {
           <p className="text-xl">港区のハウスクリーニング業者と店舗情報を掲載しています</p>
         </div>
       </section>
+  {/* 2026-11-14 16:00: 「大掃除業者 港区」の答え（大手3社の公式料金の早見表・区内の掲載店数と一覧への導線）。この頁だけ */}
+ <OosoujiPriceAnswer areaLabel="東京都港区" checked="2026年11月14日" duskinArea="S" storeCount={{ honpo: 10, duskin: 5, kakumei: 7 }} />
  <AreaProvidersLead slug="tokyo-minato" />
 
       {/* パンくずリスト */}

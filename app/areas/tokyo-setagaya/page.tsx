@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
@@ -176,6 +177,8 @@ export default function TokyosetagayaArea() {
  <p className="text-xl">世田谷区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+  {/* 2026-11-14 16:00: 「大掃除業者 世田谷区」「マンションクリーニング 世田谷区」の答え（大手3社の公式料金の早見表・区内の掲載店数と一覧への導線）。この頁だけ */}
+ <OosoujiPriceAnswer areaLabel="世田谷区" checked="2026年11月14日" duskinArea="S" storeCount={{ honpo: 27, duskin: 7, kakumei: 6 }} />
  <AreaProvidersLead slug="tokyo-setagaya" />
  <SeasonalCleaningNote />
  {/* パンくずリスト */}

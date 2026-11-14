@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
@@ -178,6 +179,19 @@ export default function TokyoChiyodaArea() {
  <p className="text-xl">千代田区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+  {/* 2026-11-14 16:00: 「大掃除業者 千代田区」「ハウスクリーニング 千代田区」の答え（大手3社の公式料金の早見表・区内の掲載店5店）。この頁だけ */}
+ <OosoujiPriceAnswer
+  areaLabel="千代田区"
+  checked="2026年11月14日"
+  duskinArea="S"
+  stores={[
+   { name: "おそうじ本舗 大手町店", href: "/provider/honpo-16990/" },
+   { name: "おそうじ本舗 千代田麹町店", href: "/provider/honpo-21022/" },
+   { name: "おそうじ革命 千代田麹町店", href: "/provider/kakumei-chiyoda_kojimachi/" },
+   { name: "おそうじ革命 新宿市ヶ谷店（所在地は千代田区九段南）", href: "/provider/kakumei-shinjuku_ichigaya/" },
+   { name: "ダスキン富士見東サービスマスター", href: "/provider/duskin-3401972/" },
+  ]}
+ />
  <AreaProvidersLead slug="tokyo-chiyoda" />
 
  {/* パンくずリスト */}

@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import { WasherPriceAnswer } from "../../components/OosoujiPriceAnswer";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
@@ -178,6 +179,26 @@ export default function Area_wakayama() {
  <p className="text-xl">和歌山市のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+  {/* 2026-11-14 16:00: 「和歌山 洗濯機クリーニング」の答え（洗濯槽クリーニングの3社公式料金・機種の条件・市内の掲載店11店）。この頁だけ */}
+ <WasherPriceAnswer
+  areaLabel="和歌山市"
+  checked="2026年11月14日"
+  stores={[
+   { name: "おそうじ本舗 和歌山インター店", href: "/provider/honpo-15236/" },
+   { name: "おそうじ本舗 和歌山神前店", href: "/provider/honpo-18112/" },
+   { name: "おそうじ本舗 和歌山市駅前店", href: "/provider/honpo-20146/" },
+   { name: "おそうじ本舗 和歌山宇田森店", href: "/provider/honpo-21386/" },
+   { name: "おそうじ本舗 和歌山紀三井寺店", href: "/provider/honpo-21463/" },
+   { name: "おそうじ本舗 和歌山松江店", href: "/provider/honpo-21480/" },
+   { name: "ダスキンワーク店サービスマスター", href: "/provider/duskin-1640277/" },
+   { name: "ダスキン明光社サービスマスター", href: "/provider/duskin-1640461/" },
+   { name: "ダスキンKMサービスマスター", href: "/provider/duskin-1640516/" },
+   { name: "ダスキン本町通りサービスマスター", href: "/provider/duskin-1640833/" },
+   { name: "ダスキン きのかわ支店", href: "/provider/duskin-8001880/" },
+  ]}
+  storesNote="おそうじ本舗の6店は、公式店舗ページにいずれもドラム式洗濯機クリーニング（インター店はドラム式の完全分解洗浄）の対応表示があります。ダスキン各店の洗濯機クリーニングの対応は店舗に確認してください。"
+  more={{ name: "和歌山県のページ", href: "/areas/wakayama-ken/" }}
+ />
  <AreaProvidersLead slug="wakayama" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">

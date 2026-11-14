@@ -103,18 +103,31 @@ const WASHER_ROWS: [string, string, string][] = [
   ],
 ];
 
+// 2026-11-14 16:00 遅れ挽回: 任意 props を追加（既存7頁は渡していないので表示不変）。
+// storesLabel: 掲載店の行の地域名を areaLabel と別にする（埼玉県ページで「さいたま市桜区」の掲載店を出す）／storesMore: 掲載店の行の後ろに足す地域ページへの導線
+// storeCount: 掲載店が多い区（世田谷区40店など）は店名を並べず、ブランド別の店数と下の一覧（#stores）への導線を出す
+type StoreCount = { honpo: number; duskin: number; kakumei: number };
+
 export default function OosoujiPriceAnswer({
   areaLabel,
   checked = CHECKED,
   duskinArea = "S",
   stores,
   washer = false,
+  storesLabel,
+  storesMore,
+  storeCount,
+  duskinAreaLabel,
 }: {
   areaLabel: string;
   checked?: string;
   duskinArea?: "S" | "A";
   stores?: StoreLink[];
   washer?: boolean;
+  storesLabel?: string;
+  storesMore?: StoreLink;
+  storeCount?: StoreCount;
+  duskinAreaLabel?: string; // A エリアの表記を地域に合わせる（埼玉県ページ＝「埼玉県など」）。未指定は従来の「千葉県など」
 }) {
   return (
     <section id="oosouji-price" className="py-8 bg-amber-50 border-b border-amber-100">
@@ -149,14 +162,30 @@ export default function OosoujiPriceAnswer({
         </div>
         {stores && stores.length > 0 && (
           <p className="text-sm text-gray-700 mt-3">
-            {areaLabel}内に所在する掲載店（{stores.length}店・各ブランド公式の店舗ページで{checked}に掲載を確認）:{" "}
+            {storesLabel ?? areaLabel}内に所在する掲載店（{stores.length}店・各ブランド公式の店舗ページで{checked}に掲載を確認）:{" "}
             {stores.map((st, i) => (
               <span key={st.href}>
                 {i > 0 && "・"}
                 <a href={st.href} className="underline text-primary">{st.name}</a>
               </span>
             ))}
-            。電話・営業時間・対応エリアは各店舗ページ、区外から対応する店舗は下の一覧をご覧ください。
+            。電話・営業時間・対応エリアは各店舗ページ
+            {storesMore ? (
+              <>
+                、{storesLabel ?? areaLabel}の店舗一覧は
+                <a href={storesMore.href} className="underline text-primary">{storesMore.name}</a>
+                をご覧ください。
+              </>
+            ) : (
+              "、区外から対応する店舗は下の一覧をご覧ください。"
+            )}
+          </p>
+        )}
+        {storeCount && (
+          <p className="text-sm text-gray-700 mt-3">
+            {areaLabel}内に所在する掲載店は計{storeCount.honpo + storeCount.duskin + storeCount.kakumei}店（おそうじ本舗 {storeCount.honpo}店・ダスキン {storeCount.duskin}店・おそうじ革命 {storeCount.kakumei}店）。店名・電話・営業時間と各店の公式ページは
+            <a href="#stores" className="underline text-primary">下の店舗一覧</a>
+            をご覧ください。
           </p>
         )}
         {washer && (
@@ -192,7 +221,7 @@ export default function OosoujiPriceAnswer({
         <h3 className="text-base font-bold text-gray-900 mt-4 mb-1">まとめて頼むセット料金（公式）</h3>
         <ul className="text-sm text-gray-700 space-y-1">
           <li>
-            ・ダスキン「ハウスワイドサービス」（公式に「夏季、年末の大掃除、引越し、新築、改装時などにおすすめ」と記載）: {duskinArea === "A" ? "千葉県など（Aエリア。マンション Aセットの金額は東京・神奈川のSエリアと同額）" : "東京・神奈川（Sエリア）"}のマンション Aセット＝水まわり5か所（キッチン・レンジフード・浴室・トイレ・洗面所）＋窓ガラス・サッシ・網戸で、1R／1K 52,800円、1LDK／2DK 78,100円、2LDK／3DK 103,400円、3LDK／4DK 110,000円（
+            ・ダスキン「ハウスワイドサービス」（公式に「夏季、年末の大掃除、引越し、新築、改装時などにおすすめ」と記載）: {duskinArea === "A" ? `${duskinAreaLabel ?? "千葉県"}など（Aエリア。マンション Aセットの金額は東京・神奈川のSエリアと同額）` : "東京・神奈川（Sエリア）"}のマンション Aセット＝水まわり5か所（キッチン・レンジフード・浴室・トイレ・洗面所）＋窓ガラス・サッシ・網戸で、1R／1K 52,800円、1LDK／2DK 78,100円、2LDK／3DK 103,400円、3LDK／4DK 110,000円（
             <a href={DUSKIN_HOUSEWIDE} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）
           </li>
           <li>
@@ -212,6 +241,76 @@ export default function OosoujiPriceAnswer({
         <p className="text-xs text-gray-500 mt-2">
           期間限定のキャンペーン価格は含みません。強い汚れ・追加範囲・オプションは別料金です。{areaLabel}の店舗は下の一覧、自分でやる範囲との分け方は
           <a href="/scene/year-end-package/" className="underline text-primary">年末大掃除ガイド</a>をご覧ください。
+        </p>
+      </div>
+    </section>
+  );
+}
+
+// 2026-11-14 16:00 遅れ挽回: 「和歌山 洗濯機クリーニング」（/areas/wakayama/）向け。洗濯槽クリーニングの3社公式料金（11/13 花見川区と同じ値を 2026-11-14 に各公式で再確認）と、市内の掲載店
+export function WasherPriceAnswer({
+  areaLabel,
+  checked,
+  stores,
+  storesNote,
+  more,
+}: {
+  areaLabel: string;
+  checked: string;
+  stores: StoreLink[];
+  storesNote?: string;
+  more?: StoreLink;
+}) {
+  return (
+    <section id="washer-price" className="py-8 bg-sky-50 border-b border-sky-100">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+          {areaLabel}の洗濯機（洗濯槽）クリーニング料金 大手3社の公式料金（{checked}確認）
+        </h2>
+        <div className="overflow-x-auto">
+          <table className="table table-sm text-sm bg-white">
+            <thead>
+              <tr>
+                <th>ブランド</th>
+                <th>料金（税込）</th>
+                <th>出典</th>
+              </tr>
+            </thead>
+            <tbody>
+              {WASHER_ROWS.map(([b, v, u]) => (
+                <tr key={b}>
+                  <th>{b}</th>
+                  <td>{v}</td>
+                  <td>
+                    <a href={u} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <ul className="text-xs text-gray-600 mt-2 space-y-1">
+          <li>・作業内容がブランドごとに違います（本舗の基本料金とダスキンは分解しない洗浄、革命は分解洗浄）。</li>
+          <li>・おそうじ本舗: 日立製は追加費用（オプション 5,500円／台）、日立「ビートウォッシュ」は完全分解洗浄と日立製オプションが必要、SHARP「穴なし槽」は完全分解洗浄で対応。製造から6年以上の洗濯機は断る・保証できない場合あり（公式）。</li>
+          <li>・ダスキン: 2槽式は不可、外国製など機種によっては受けられない場合あり（公式）。</li>
+          <li>・おそうじ革命: 二槽式・海外製（斜めドラム）は分解クリーニングの対象外。ドラム式はメーカー・容量・ヒートポンプの有無で対応可否・料金が異なる（公式）。</li>
+        </ul>
+        <p className="text-sm text-gray-700 mt-3">
+          {areaLabel}内に所在する掲載店（{stores.length}店・各ブランド公式の店舗ページで{checked}に掲載を確認）:{" "}
+          {stores.map((st, i) => (
+            <span key={st.href}>
+              {i > 0 && "・"}
+              <a href={st.href} className="underline text-primary">{st.name}</a>
+            </span>
+          ))}
+          。{storesNote}
+          {more && (
+            <>
+              県内のほかの市町村の店舗は
+              <a href={more.href} className="underline text-primary">{more.name}</a>
+              をご覧ください。
+            </>
+          )}
         </p>
       </div>
     </section>
