@@ -139,6 +139,13 @@ const BRAND_GUIDE: Record<
         src: "https://www.osoujikakumei.jp/locations/",
         checked: "2026-11-04",
       },
+      // 2026-11-14: 「おそうじ革命 口コミ／評判」の上位（みん評・比較サイト）は第三者の評価を出しているのに、このページには評判の答えが無かった。出典を開いて確認できた数値だけを書く
+      {
+        q: "おそうじ革命の口コミ・評判は？",
+        a: "第三者の調査では、オリコン顧客満足度調査「2026年 ハウスクリーニング」（調査期間 2025年12月4日〜22日・回答5,211人・13社）で、おそうじ革命は総合3位（79.4点・おそうじ本舗と同点）、評価項目「コストパフォーマンス」は4位（79.6点）です。公式サイトは「2020〜2025年 オリコン顧客満足度調査 ハウスクリーニング コストパフォーマンス第1位」と掲示しています（2026年版のコストパフォーマンス1位はアイ・コーポレーション）。公式トップには「店舗全体のGoogle口コミ平均4.9」と記載があり、各店舗の公式ページに利用者の声が載っています（公式トップ・2026-11-14確認）。当サイト独自の口コミ・評価は掲載していません。",
+        src: "https://life.oricon.co.jp/rank-house-cleaning/",
+        checked: "2026-11-14",
+      },
     ],
   },
   duskin: {
@@ -314,6 +321,14 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
                 ・当サイト掲載の店舗: <strong>全国{stores.length.toLocaleString("ja-JP")}店舗・{prefsShown.length}都道府県</strong>（公式サイトで所在を確認した店舗のみ）。
                 <a href="#pref-index" className="underline text-primary">都道府県から探す</a>
               </li>
+              {/* 2026-11-14: 「おそうじ革命 評判」向け。第三者調査（オリコン 2026年）の順位を要点で先に答える。詳細と出典は FAQ */}
+              {brand === "osoujikakumei" && (
+                <li>
+                  ・評判（第三者の調査）: オリコン顧客満足度調査「2026年 ハウスクリーニング」で<strong>総合3位（79.4点）</strong>・コストパフォーマンス4位（79.6点）。公式サイトの「コストパフォーマンス6年連続第1位」は2020〜2025年の結果です（
+                  <a href="https://life.oricon.co.jp/rank-house-cleaning/" target="_blank" rel="noopener noreferrer" className="underline text-primary">オリコン</a>・2026-11-14確認）。
+                  <a href="#faq" className="underline text-primary">口コミの確認先</a>
+                </li>
+              )}
               <li>
                 ・公式の店舗検索:{" "}
                 <a href={guide.officialStoreUrl} target="_blank" rel="noopener noreferrer" className="underline text-primary">{guide.officialStoreLabel}</a>
@@ -429,7 +444,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
           })}
         </div>
         {guide && (
-          <div className="mt-10">
+          <div className="mt-10" id={brand === "osoujikakumei" ? "faq" : undefined}>
             <h2 className="text-xl font-bold text-ink mb-4">{b.name}についてよくある質問</h2>
             <div className="space-y-4">
               {faqs.map((f) => (
@@ -437,7 +452,7 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
                   <h3 className="font-bold text-ink mb-2">{f.q}</h3>
                   <p className="text-sm text-ink-soft leading-relaxed">{f.a}</p>
                   <p className="text-xs text-muted mt-2">
-                    出典: <a href={f.src} target="_blank" rel="noopener noreferrer" className="underline text-primary">{b.name}公式サイト</a>（{f.checked}確認）
+                    出典: <a href={f.src} target="_blank" rel="noopener noreferrer" className="underline text-primary">{f.src.includes("oricon.co.jp") ? "オリコン顧客満足度調査（life.oricon.co.jp）" : <>{b.name}公式サイト</>}</a>（{f.checked}確認）
                   </p>
                 </div>
               ))}

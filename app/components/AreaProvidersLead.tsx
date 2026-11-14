@@ -56,6 +56,22 @@ function sortStores(a: Provider, b: Provider) {
  * - 対応エリア店舗: 公式の対応エリア(charge_region)に市区名を含む近隣店舗(所在店舗と重複しないもの)
  * - 0件の市区は所在店舗の代わりに対応エリア店舗と上位ページへの導線を出す
  */
+// 2026-11-14: /areas/toyama-ken/ の要点だけで使う（公式 /shop/hokuriku/toyama/ の掲載順・店名）
+const TOYAMA_HONPO: [string, string][] = [
+  ["honpo-21147", "小矢部氷見店"],
+  ["honpo-18340", "富山本郷店"],
+  ["honpo-20965", "射水西店"],
+  ["honpo-20753", "富山婦中店"],
+  ["honpo-17203", "となみ店"],
+  ["honpo-15121", "富山駅前店"],
+  ["honpo-12039", "黒部店"],
+  ["honpo-20622", "富山山室店"],
+  ["honpo-21079", "富山呉羽店"],
+  ["honpo-15504", "魚津滑川店"],
+  ["honpo-15120", "射水店"],
+  ["honpo-18921", "新高岡店"],
+];
+
 export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug: string; breadcrumbLd?: boolean }) {
   const area = AREA_MAP[slug];
   if (!area) return null;
@@ -147,6 +163,20 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
               <li>
                 ・「おそうじ本舗」で探している方へ: 富山県内は{byBrand["おそうじ本舗"] ?? 0}店（下の一覧）。全国の店舗・本部の電話・よくある質問は
                 <a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>にまとめています。
+              </li>
+            )}
+            {/* 2026-11-14: 同上。県内の本舗の店舗ページへの導線が一覧の中だけだった → 公式の富山県一覧（2026-11-14 確認）にある12店を要点で直接リンク */}
+            {area.slug === "toyama-ken" && (
+              <li>
+                ・富山県のおそうじ本舗（公式の富山県の店舗一覧にある12店・2026-11-14確認）:{" "}
+                {TOYAMA_HONPO.map(([slug, label], i) => (
+                  <span key={slug}>
+                    {i > 0 && "・"}
+                    <a href={`/provider/${slug}/`} className="underline text-primary">{label}</a>
+                  </span>
+                ))}
+                。当サイト掲載の富山新庄店は、公式の店舗ページが表示されず（404）公式の富山県一覧にも載っていません（
+                <a href="https://www.osoujihonpo.com/shop/hokuriku/toyama/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式 富山県の店舗一覧</a>）。
               </li>
             )}
             {/* 2026-11-05: 「おそうじ本舗」単語が広島県ページに着地（表示7・10.0位）。この1頁だけハブへの導線 */}
