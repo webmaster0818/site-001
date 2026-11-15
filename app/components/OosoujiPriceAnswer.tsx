@@ -118,6 +118,7 @@ export default function OosoujiPriceAnswer({
   storesMore,
   storeCount,
   duskinAreaLabel,
+  storesNote,
 }: {
   areaLabel: string;
   checked?: string;
@@ -128,6 +129,8 @@ export default function OosoujiPriceAnswer({
   storesMore?: StoreLink;
   storeCount?: StoreCount;
   duskinAreaLabel?: string; // A エリアの表記を地域に合わせる（埼玉県ページ＝「埼玉県など」）。未指定は従来の「千葉県など」
+  // 2026-11-15 16:00 遅れ挽回: 掲載店の行の後ろに足す注記（豊島区＝公式404の店を店名リストから外した理由）。既存頁は渡していないので表示不変
+  storesNote?: string;
 }) {
   return (
     <section id="oosouji-price" className="py-8 bg-amber-50 border-b border-amber-100">
@@ -179,6 +182,7 @@ export default function OosoujiPriceAnswer({
             ) : (
               "、区外から対応する店舗は下の一覧をご覧ください。"
             )}
+            {storesNote}
           </p>
         )}
         {storeCount && (

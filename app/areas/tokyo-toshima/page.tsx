@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
@@ -179,6 +180,24 @@ export default function TokyoToshimaArea() {
  <p className="text-xl">豊島区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-15 16:00 遅れ挽回: 「大掃除業者 豊島区」6@48.7・「ハウスクリーニング 豊島区」2@50.0 → 11/12〜14 と同じ部品で大掃除の答え＋区内の掲載店（公式店舗ページ 2026-11-15 に 200 の9店） */}
+ <OosoujiPriceAnswer
+  areaLabel="豊島区"
+  checked="2026年11月15日"
+  duskinArea="S"
+  stores={[
+   { name: "おそうじ本舗 大塚店", href: "/provider/honpo-12903/" },
+   { name: "おそうじ本舗 巣鴨店", href: "/provider/honpo-14868/" },
+   { name: "おそうじ本舗 池袋店", href: "/provider/honpo-17792/" },
+   { name: "おそうじ本舗 千川店", href: "/provider/honpo-20964/" },
+   { name: "おそうじ本舗 目白店", href: "/provider/honpo-21054/" },
+   { name: "おそうじ革命 池袋西口店", href: "/provider/kakumei-ikebukuro_nishiguchi/" },
+   { name: "おそうじ革命 豊島東長崎駅店", href: "/provider/kakumei-toshima_higashinagasakieki/" },
+   { name: "ダスキンサービスマスター南長崎店", href: "/provider/duskin-1405960/" },
+   { name: "ダスキン雑司が谷サービスマスター", href: "/provider/duskin-3402043/" },
+  ]}
+  storesNote="おそうじ本舗の公式の豊島区の店舗一覧は上の5店で、下の一覧にある池袋本町店は2026年11月15日時点で公式店舗ページが表示されず（404）、公式一覧にも載っていません。"
+ />
  <AreaProvidersLead slug="tokyo-toshima" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">

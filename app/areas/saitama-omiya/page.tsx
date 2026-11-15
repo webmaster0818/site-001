@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
@@ -179,6 +180,21 @@ export default function Saitama大宮Area() {
  <p className="text-xl">大宮区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-15 16:00 遅れ挽回: 「ハウスクリーニング 大宮区」12@52.2・「大掃除業者 大宮区」2@49.0 → 11/12〜14 と同じ部品で大掃除の答え（ダスキン ハウスワイドは埼玉＝Aエリア）＋区内の掲載店（公式店舗ページ 2026-11-15 に 200 の6店） */}
+ <OosoujiPriceAnswer
+  areaLabel="さいたま市大宮区"
+  checked="2026年11月15日"
+  duskinArea="A"
+  duskinAreaLabel="埼玉県など"
+  stores={[
+   { name: "おそうじ本舗 大宮駅西口店", href: "/provider/honpo-21043/" },
+   { name: "おそうじ本舗 大宮公園駅前店", href: "/provider/honpo-20377/" },
+   { name: "おそうじ本舗 大宮吉敷店", href: "/provider/honpo-16867/" },
+   { name: "おそうじ本舗 大宮大成店", href: "/provider/honpo-21354/" },
+   { name: "おそうじ革命 さいたま大宮駅前店", href: "/provider/kakumei-saitama_omiya_ekimae/" },
+   { name: "ダスキン寿能サービスマスター", href: "/provider/duskin-1333092/" },
+  ]}
+ />
  <AreaProvidersLead slug="saitama-omiya" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">
