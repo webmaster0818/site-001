@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {Sparkles, Award, Shield, Zap, MapPin } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
@@ -210,6 +211,39 @@ export default function ChibaArea() {
  <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z"fill="#f9fafb"></path>
  </svg>
  </section>
+  {/* 2026-11-16 16:00: 「大掃除業者 千葉」「ハウスクリーニング 稲毛区」の答え（大手3社の公式料金・ダスキンは千葉＝Aエリア・稲毛区の掲載店6店・千葉市6区の区別ページ）。この頁だけ */}
+ <OosoujiPriceAnswer
+  areaLabel="千葉県"
+  checked="2026年11月16日"
+  duskinArea="A"
+  duskinAreaLabel="千葉県"
+  storesLabel="千葉市稲毛区"
+  storesMore={{ name: "千葉市稲毛区のページ", href: "/areas/chiba-inage/" }}
+  stores={[
+   { name: "おそうじ本舗 稲毛駅前店", href: "/provider/honpo-13932/" },
+   { name: "おそうじ本舗 稲毛長沼店", href: "/provider/honpo-15507/" },
+   { name: "おそうじ本舗 稲毛東店", href: "/provider/honpo-18264/" },
+   { name: "おそうじ本舗 稲毛園生店", href: "/provider/honpo-19290/" },
+   { name: "ダスキン 小深支店", href: "/provider/duskin-8002684/" },
+   { name: "ダスキン 長沼支店", href: "/provider/duskin-8003094/" },
+  ]}
+  cityWards={{
+   label: "千葉市",
+   links: [
+    { name: "中央区", href: "/areas/chiba-chuo/", count: 8 },
+    { name: "花見川区", href: "/areas/chiba-hanamigawa/", count: 6 },
+    { name: "稲毛区", href: "/areas/chiba-inage/", count: 6 },
+    { name: "若葉区", href: "/areas/chiba-wakaba/", count: 7 },
+    { name: "緑区", href: "/areas/chiba-midori/", count: 5 },
+    { name: "美浜区", href: "/areas/chiba-mihama/", count: 2 },
+   ],
+   note: (
+    <>
+     若葉区の<a href="/provider/duskin-1341847/" className="underline text-primary">ダスキン西都賀サービスマスター</a>（若葉区西都賀4丁目・0120-04-9994）は、公式店舗ページに利用者の口コミ・レビューの掲載がありません（2026年11月16日確認）。当サイトも独自の口コミは掲載していません。
+    </>
+   ),
+  }}
+ />
  <AreaProvidersLead slug="chiba" />
  <section className="py-12">
  <div className="container mx-auto px-4">

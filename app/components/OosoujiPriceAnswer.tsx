@@ -1,6 +1,7 @@
 // 2026-11-12 16:00 遅れ挽回: 「大掃除業者 ＋地域」の検索（東京都・目黒区・北区）に、ページ冒頭で
 // 「大掃除を業者に頼むと主要メニューはいくらか」を大手3ブランドの公式標準料金で答える早見表。
 // 使うのは呼び出したエリアページだけ（共通テンプレートには入れない）。値はすべて 2026-11-12 に各公式ページで確認。
+import type { ReactNode } from "react";
 import { BRAND_PRICES, KAKUMEI_HUB_PRICES } from "../data/brandPrices";
 
 const CHECKED = "2026年11月12日";
@@ -119,6 +120,7 @@ export default function OosoujiPriceAnswer({
   storeCount,
   duskinAreaLabel,
   storesNote,
+  cityWards,
 }: {
   areaLabel: string;
   checked?: string;
@@ -131,6 +133,8 @@ export default function OosoujiPriceAnswer({
   duskinAreaLabel?: string; // A エリアの表記を地域に合わせる（埼玉県ページ＝「埼玉県など」）。未指定は従来の「千葉県など」
   // 2026-11-15 16:00 遅れ挽回: 掲載店の行の後ろに足す注記（豊島区＝公式404の店を店名リストから外した理由）。既存頁は渡していないので表示不変
   storesNote?: string;
+  // 2026-11-16 16:00 遅れ挽回: 県ページ（/areas/chiba/）で政令市の区別ページへの導線（区名・掲載店数）を出す。既存頁は渡していないので表示不変
+  cityWards?: { label: string; links: { name: string; href: string; count: number }[]; note?: ReactNode };
 }) {
   return (
     <section id="oosouji-price" className="py-8 bg-amber-50 border-b border-amber-100">
@@ -183,6 +187,18 @@ export default function OosoujiPriceAnswer({
               "、区外から対応する店舗は下の一覧をご覧ください。"
             )}
             {storesNote}
+          </p>
+        )}
+        {cityWards && (
+          <p className="text-sm text-gray-700 mt-3">
+            {cityWards.label}の区別の掲載店（計{cityWards.links.reduce((a, l) => a + l.count, 0)}店）:{" "}
+            {cityWards.links.map((l, i) => (
+              <span key={l.href}>
+                {i > 0 && "・"}
+                <a href={l.href} className="underline text-primary">{l.name}</a>（{l.count}店）
+              </span>
+            ))}
+            。{cityWards.note}
           </p>
         )}
         {storeCount && (
