@@ -157,19 +157,19 @@ const BRAND_GUIDE: Record<
         q: "ダスキン サービスマスターの店舗はどう探せばよいですか？",
         a: "このページの「都道府県から探す」で都道府県を選ぶと、当サイトが公式サイトで所在を確認した店舗の一覧に移動します。公式の「サービスマスター 全国店舗一覧」では、都道府県と市区郡を順に選んで店舗を探せます。公式の店舗一覧には店舗名から担当店を調べる入口もあります。",
         src: "https://www.duskin.jp/store/select.html?s1=0&s2=1&s3=0&s4=0&s5=0&s6=0&s7=0&s8=0&s9=0&s10=0&ccg=sm",
-        checked: "2026-11-06",
+        checked: "2026-11-16",
       },
       {
         q: "ダスキンのハウスクリーニングの料金はいくらですか？",
         a: "公式の標準料金（税込）は、エアコン（家庭用壁掛け・幅120cm未満）15,400円／1台、キッチン（間口3m未満）20,680円、浴室（床面積3m²・高さ2.4m未満）22,000円、トイレ（床面積2m²未満）10,340円です。",
         src: "https://www.duskin.jp/servicemaster/water/sm000080/",
-        checked: "2026-10-26",
+        checked: "2026-11-16",
       },
       {
         q: "最低料金や追加費用はありますか？",
         a: "公式サイトには「サービスは1回あたり11,000円（税込）以上で承ります（加盟店によって異なる場合があります）」「土日・祝日・その他の休業日及び夜間の作業は、お受けできない場合や標準料金に加えて追加の費用が発生する場合があります」と記載されています。",
-        src: "https://www.duskin.jp/servicemaster/water/sm000100/",
-        checked: "2026-10-26",
+        src: "https://www.duskin.jp/servicemaster/water/sm000090/",
+        checked: "2026-11-16",
       },
       {
         q: "仕上がりに満足できなかった場合はどうなりますか？",
@@ -186,6 +186,9 @@ const BRAND_GUIDE: Record<
     ],
   },
 };
+
+// 2026-11-16: ダスキンハブの料金表を公式（sm000010/70/80/90/100/170）で再確認し全行一致。表示日はハブだけ更新（BRAND_PRICES.duskin.checkedAt は店舗ページ1,197頁に出るため据え置き）
+const DUSKIN_HUB_CHECKED = "2026-11-16";
 
 // title・h1 だけで両表記を出すブランド（本文の表記は公式の b.name のまま）
 const HEADING_NAME: Record<string, string> = {
@@ -226,6 +229,9 @@ export async function generateMetadata({ params }: { params: Promise<{ brand: st
         ? `おそうじ本舗の店舗一覧（全国${stores.length.toLocaleString("ja-JP")}店舗・47都道府県）と公式の標準料金（エアコン壁掛け14,300円・キッチン/浴室19,800円・税込）。都道府県から近くの店舗の電話番号・営業時間・公式クチコミを確認できます（本部 0120-24-1000）。`
         : brand === "osoujikakumei"
         ? `おそうじ革命（お掃除革命）の店舗一覧（全国${stores.length}店舗）と公式の全国一律料金（エアコン壁掛け9,980円・お掃除機能付き18,700円・キッチン/浴室/レンジフード17,930円・トイレ8,250円・税込）。都道府県から近くの店舗の所在地・対応エリアを確認できます。`
+        : brand === "duskin"
+        ? // 2026-11-16: 「ダスキン 店舗一覧」40@8.5 向け。本舗・革命と同じく description に店舗数と公式の標準料金の答え（title は不変）
+          `ダスキン サービスマスターの店舗一覧（全国${stores.length.toLocaleString("ja-JP")}店舗・47都道府県）と公式の標準料金（エアコン壁掛け15,400円・キッチン20,680円・浴室22,000円・トイレ10,340円・税込）。公式の拠点数は1,222拠点（2026年3月末）。`
         : `${b.name}の全国${stores.length}店舗を都道府県別に検索できます。公式サイトで所在を確認した店舗のみを対象に、所在地・対応エリア・公式評価を確認日を明記して掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/brand/${brand}/` },
   });
@@ -329,6 +335,13 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
                   <a href="#faq" className="underline text-primary">口コミの確認先</a>
                 </li>
               )}
+              {/* 2026-11-16: 「ダスキン 店舗一覧」向け。当サイトの掲載数と公式の拠点数（数え方が違う）を出典つきで並べる */}
+              {brand === "duskin" && (
+                <li>
+                  ・公式の拠点数: サービスマスター <strong>1,222拠点</strong>（2026年3月末現在・国内。公式の注記では拠点数は事業加盟数で、複数の事業を兼ねる店舗があるため実際の店舗数とは異なります。
+                  <a href="https://www.duskin.co.jp/company/business/cleancare/" target="_blank" rel="noopener noreferrer" className="underline text-primary">株式会社ダスキン 事業内容</a>・2026-11-16確認）。当サイトの{stores.length.toLocaleString("ja-JP")}店舗は、公式の店舗一覧で所在を確認できた店舗の数です
+                </li>
+              )}
               <li>
                 ・公式の店舗検索:{" "}
                 <a href={guide.officialStoreUrl} target="_blank" rel="noopener noreferrer" className="underline text-primary">{guide.officialStoreLabel}</a>
@@ -348,7 +361,13 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
               </tbody>
             </table>
             <ul className="text-xs text-muted mt-3 space-y-1">
-              <li>・{prices.checkedAt}に{b.name}公式サイトで確認した{brand === "osoujikakumei" ? "全国一律の料金です。" : "ブランド共通の料金です。店舗ごとの料金は見積もりでご確認ください。"}</li>
+              <li>・{brand === "duskin" ? DUSKIN_HUB_CHECKED : prices.checkedAt}に{b.name}公式サイトで確認した{brand === "osoujikakumei" ? "全国一律の料金です。" : "ブランド共通の料金です。店舗ごとの料金は見積もりでご確認ください。"}</li>
+              {brand === "duskin" && (
+                <li>
+                  ・エアコンの複数台料金（同一世帯）: 壁掛け 2台セット25,300円・3台目から1台12,650円、お掃除機能付き 2台セット47,300円・3台目から1台23,650円、お掃除機能なし1台＋付き1台 36,300円（
+                  <a href="https://www.duskin.jp/servicemaster/spot/sm000010/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>・{DUSKIN_HUB_CHECKED}確認）
+                </li>
+              )}
               {prices.notes.map((n) => (
                 <li key={n}>・{n}</li>
               ))}
