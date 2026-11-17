@@ -3,9 +3,9 @@ import { PARTNERS, SERVICE_LABELS, type ServiceTag } from "../data/partners";
 import { withPageSocial } from "../siteOpenGraph";
 
 export const metadata: Metadata = withPageSocial({
-  title: "ハウスクリーニング業者の口コミ・評判を公式情報で検証【業者一覧】",
+  title: `ハウスクリーニング業者${PARTNERS.length}社の料金・対応エリアを公式情報で検証【業者一覧】`,
   description:
-    "カジタク・アールクリーニング・ハウスクリーニング110番・ナックダスキン・エアコンクリーニング清風・キレイユ・ミガクる・オン・フォーエル・おそうじLabo・おそうじ革命などの口コミ・評判・料金・対応エリアを、各社公式サイトで確認し、確認日を明記して掲載しています。架空の口コミは掲載していません。",
+    "カジタク・アールクリーニング・ハウスクリーニング110番・ナックダスキン・エアコンクリーニング清風・キレイユ・ミガクる・オン・フォーエル・おそうじLabo・おそうじ革命の料金・対応エリア・保証・運営会社を、各社公式サイトで確認し、確認日を明記して一覧にしています。架空の口コミや独自の評点は掲載していません。",
   alternates: { canonical: "https://cleaning-choices.com/review/" },
 });
 
@@ -14,7 +14,7 @@ const breadcrumbJsonLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "ホーム", item: "https://cleaning-choices.com/" },
-    { "@type": "ListItem", position: 2, name: "業者の口コミ・評判検証", item: "https://cleaning-choices.com/review/" },
+    { "@type": "ListItem", position: 2, name: "業者の公式情報検証", item: "https://cleaning-choices.com/review/" },
   ],
 };
 
@@ -30,10 +30,10 @@ export default function ReviewHubPage() {
           <div className="breadcrumbs text-xs text-gray-500 mb-4">
             <ul>
               <li><a href="/">ホーム</a></li>
-              <li>業者の口コミ・評判検証</li>
+              <li>業者の公式情報検証</li>
             </ul>
           </div>
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">ハウスクリーニング業者の口コミ・評判を公式情報で検証</h1>
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">ハウスクリーニング業者の料金・対応エリアを公式情報で検証</h1>
           <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl">
             業者の口コミや評判を調べる際は、まず料金体系・対応エリア・保証・運営会社など、公式サイトで確認できる事実を把握することをおすすめします。このページでは、当サイトと提携している業者について、各社公式サイトで確認した情報を確認日を明記して掲載し、口コミ・評判の読み方もあわせてご説明します。当サイトでは、架空の口コミや独自に集計した評点は作成しません。
           </p>

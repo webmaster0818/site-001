@@ -35,7 +35,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "ホーム", item: "https://cleaning-choices.com/" },
-      { "@type": "ListItem", position: 2, name: "業者の口コミ・評判検証", item: "https://cleaning-choices.com/review/" },
+      { "@type": "ListItem", position: 2, name: "業者の公式情報検証", item: "https://cleaning-choices.com/review/" },
       { "@type": "ListItem", position: 3, name: p.name, item: `https://cleaning-choices.com/review/${p.slug}/` },
     ],
   };
@@ -106,7 +106,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
           <div className="breadcrumbs text-xs text-gray-500 mb-4">
             <ul>
               <li><a href="/">ホーム</a></li>
-              <li><a href="/review/">業者の口コミ・評判検証</a></li>
+              <li><a href="/review/">業者の公式情報検証</a></li>
               <li>{p.name}</li>
             </ul>
           </div>
