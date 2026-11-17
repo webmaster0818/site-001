@@ -3,6 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import providers from "../../data/providers.json";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import { AirconPriceAnswer } from "../../components/OosoujiPriceAnswer";
 import { PREF_PAGES } from "../../components/areaIndexData";
 import { withPageSocial } from "../../siteOpenGraph";
 
@@ -15,6 +16,56 @@ const DYNAMIC_PREFS = PREF_PAGES.filter((p) => !fs.existsSync(path.join(AREAS_DI
 const PREF_NAME: Record<string, string> = Object.fromEntries(DYNAMIC_PREFS.map((p) => [p.slug, p.name]));
 
 type Provider = { pref_ja: string };
+
+// 2026-11-17 16:00 遅れ挽回: 「高松市 エアコンクリーニング」（香川県）・「ハウスクリーニング 宇都宮市」（栃木県）向けに、冒頭でエアコンクリーニングの3社公式料金と
+// 県庁所在市の掲載店（各公式店舗ページが 2026-11-17 に 200・本舗/ダスキンは公式の市の一覧と一致）への導線を出す。他の県ページは表示不変
+const CAPITAL_STORES: Record<string, { label: string; more?: { name: string; href: string }; stores: { name: string; href: string }[] }> = {
+  kagawa: { label: "高松市", more: { name: "高松市のハウスクリーニング", href: "/areas/takamatsu/" }, stores: [
+  { name: "おそうじ本舗 サンフラワー通り店", href: "/provider/honpo-14465/" },
+  { name: "おそうじ本舗 高松木太中央店", href: "/provider/honpo-14870/" },
+  { name: "おそうじ本舗 高松仏生山店", href: "/provider/honpo-17089/" },
+  { name: "おそうじ本舗 高松国分寺店", href: "/provider/honpo-17186/" },
+  { name: "おそうじ本舗 高松瓦町駅前店", href: "/provider/honpo-18577/" },
+  { name: "おそうじ本舗 高松円座店", href: "/provider/honpo-19909/" },
+  { name: "おそうじ本舗 高松香西店", href: "/provider/honpo-19955/" },
+  { name: "おそうじ本舗 高松牟礼店", href: "/provider/honpo-20143/" },
+  { name: "おそうじ本舗 高松東山崎店", href: "/provider/honpo-21010/" },
+  { name: "ニューダスキン屋島サービスマスター", href: "/provider/duskin-1800291/" },
+  { name: "ダスキン牟礼サービスマスター", href: "/provider/duskin-1800530/" },
+  { name: "ダスキン竹内サービスマスター", href: "/provider/duskin-1800546/" },
+  { name: "ダスキン 鶴市支店", href: "/provider/duskin-8000420/" },
+  { name: "ダスキン 太田支店", href: "/provider/duskin-8001802/" },
+  { name: "おそうじ革命 香川高松端岡店", href: "/provider/kakumei-kagawa_takamatsu_hashioka/" },
+  { name: "おそうじ革命 香川高松国分寺店", href: "/provider/kakumei-kagawa_takamatsukitacho/" },
+  ] },
+  tochigi: { label: "宇都宮市", stores: [
+  { name: "おそうじ本舗 宇都宮今泉店", href: "/provider/honpo-15413/" },
+  { name: "おそうじ本舗 東武宇都宮駅前店", href: "/provider/honpo-17047/" },
+  { name: "おそうじ本舗 宇都宮御幸ヶ原店", href: "/provider/honpo-17335/" },
+  { name: "おそうじ本舗 宇都宮テクノ店", href: "/provider/honpo-17500/" },
+  { name: "おそうじ本舗 宇都宮インターパーク店", href: "/provider/honpo-17923/" },
+  { name: "おそうじ本舗 宇都宮鶴田店", href: "/provider/honpo-18880/" },
+  { name: "おそうじ本舗 宇都宮野沢店", href: "/provider/honpo-19879/" },
+  { name: "おそうじ本舗 宇都宮雀宮店", href: "/provider/honpo-20649/" },
+  { name: "おそうじ本舗 宇都宮川田町店", href: "/provider/honpo-20852/" },
+  { name: "おそうじ本舗 宇都宮平松町店", href: "/provider/honpo-20939/" },
+  { name: "おそうじ本舗 宇都宮泉が丘店", href: "/provider/honpo-21093/" },
+  { name: "おそうじ本舗 宇都宮宝木店", href: "/provider/honpo-21230/" },
+  { name: "ダスキンICSホットスタッフサービスマスター", href: "/provider/duskin-1310450/" },
+  { name: "ダスキンみどり平松店サービスマスター", href: "/provider/duskin-1311165/" },
+  { name: "ダスキン栃の葉泉町サービスマスター", href: "/provider/duskin-1311171/" },
+  { name: "ダスキンフォワード宇都宮東店サービスマスター", href: "/provider/duskin-1311254/" },
+  { name: "ダスキン伝馬町サービスマスター", href: "/provider/duskin-1311393/" },
+  { name: "ダスキン 駒生支店", href: "/provider/duskin-8000636/" },
+  { name: "ダスキン やなぜ支店", href: "/provider/duskin-8001157/" },
+  { name: "ダスキン 若松原支店", href: "/provider/duskin-8001252/" },
+  { name: "ダスキン つるた支店", href: "/provider/duskin-8003488/" },
+  { name: "おそうじ革命 栃木宇都宮花房店", href: "/provider/kakumei-tochigi_utsunomiya_hanabusa/" },
+  { name: "おそうじ革命 栃木県宇都宮ゆいの杜店", href: "/provider/kakumei-tochigiken_utsunomiya_yuinomori/" },
+  { name: "おそうじ革命 宇都宮店", href: "/provider/kakumei-utsunomiya/" },
+  { name: "おそうじ革命 宇都宮平成通り店", href: "/provider/kakumei-utsunomiya_heiseidori/" },
+  ] },
+};
 const list = providers as Provider[];
 
 export async function generateStaticParams() {
@@ -66,6 +117,15 @@ export default async function PrefPage({ params }: { params: Promise<{ pref: str
           </ol>
         </nav>
       </div>
+      {CAPITAL_STORES[pref] && (
+        <AirconPriceAnswer
+          areaLabel={`${prefJa}（${CAPITAL_STORES[pref].label}）`}
+          checked="2026年11月17日"
+          stores={CAPITAL_STORES[pref].stores}
+          storesLabel={CAPITAL_STORES[pref].label}
+          storesMore={CAPITAL_STORES[pref].more}
+        />
+      )}
       <AreaProvidersLead slug={pref} breadcrumbLd={false} />
       <section className="container mx-auto px-4 pb-14">
         <div className="alert alert-info">

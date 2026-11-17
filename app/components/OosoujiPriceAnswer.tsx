@@ -35,7 +35,20 @@ function Cell({ row }: { row: [string, string, string] }) {
 }
 
 // 「エアコンクリーニング ＋地域」（文京区）向け。エアコンだけの3社比較（2026-11-12 公式確認）
-export function AirconPriceAnswer({ areaLabel }: { areaLabel: string }) {
+// 2026-11-17 16:00 遅れ挽回: 任意 props（checked・stores・storesLabel・storesMore）を追加。県ページ（香川県・栃木県）で県庁所在市の掲載店への導線を出す。文京区は渡していないので表示不変
+export function AirconPriceAnswer({
+  areaLabel,
+  checked = CHECKED,
+  stores,
+  storesLabel,
+  storesMore,
+}: {
+  areaLabel: string;
+  checked?: string;
+  stores?: StoreLink[];
+  storesLabel?: string;
+  storesMore?: StoreLink;
+}) {
   const rows: [string, string, string, string][] = [
     ["おそうじ本舗", "14,300円／台（2台以上の注文は12,100円／台）", "24,200円／台（同 22,000円／台）", H[0][2]],
     ["ダスキン", "15,400円／1台（2台セット 25,300円）", "26,400円／1台（2台セット 47,300円）", D[0][2]],
@@ -45,7 +58,7 @@ export function AirconPriceAnswer({ areaLabel }: { areaLabel: string }) {
     <section id="aircon-price" className="py-8 bg-sky-50 border-b border-sky-100">
       <div className="container mx-auto px-4 max-w-5xl">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-          {areaLabel}のエアコンクリーニング料金 大手3社の公式標準料金（{CHECKED}確認）
+          {areaLabel}のエアコンクリーニング料金 大手3社の公式標準料金（{checked}確認）
         </h2>
         <div className="overflow-x-auto">
           <table className="table table-sm text-sm bg-white">
@@ -75,6 +88,25 @@ export function AirconPriceAnswer({ areaLabel }: { areaLabel: string }) {
           税込の通常価格（期間限定のキャンペーン価格は含みません）。家庭用の壁掛けタイプの料金で、天井埋め込み型などは別料金・見積もりです。おそうじ革命は製造から20年以上のエアコンは作業不可、ダスキンは製造後長期間たった機種は断る場合ありと公式に記載。{areaLabel}の店舗は下の一覧、詳しい比較は
           <a href="/services/aircon/" className="underline text-primary">エアコンクリーニングの比較</a>をご覧ください。
         </p>
+        {stores && stores.length > 0 && (
+          <p className="text-sm text-gray-700 mt-3">
+            {storesLabel ?? areaLabel}内に所在する掲載店（{stores.length}店・各ブランド公式の店舗ページで{checked}に掲載を確認）:{" "}
+            {stores.map((st, i) => (
+              <span key={st.href}>
+                {i > 0 && "・"}
+                <a href={st.href} className="underline text-primary">{st.name}</a>
+              </span>
+            ))}
+            。電話・営業時間・対応エリアは各店舗ページ
+            {storesMore && (
+              <>
+                、{storesLabel ?? areaLabel}のページは
+                <a href={storesMore.href} className="underline text-primary">{storesMore.name}</a>
+              </>
+            )}
+            をご覧ください。
+          </p>
+        )}
       </div>
     </section>
   );
@@ -331,6 +363,70 @@ export function WasherPriceAnswer({
               をご覧ください。
             </>
           )}
+        </p>
+      </div>
+    </section>
+  );
+}
+
+// 2026-11-17 16:00 遅れ挽回: /price/（「ハウスクリーニング 相場」21位）の冒頭に、相場の目安の前に大手3社の公式標準料金の早見表と、
+// 間取り・点数でまとめて頼む場合の公式セット料金を置く。値は 2026-11-17 に各公式ページで再確認（11/12〜16 と全一致）。
+export function PriceTopAnswer({ checked }: { checked: string }) {
+  return (
+    <section id="official-price" className="py-8 bg-amber-50 border-b border-amber-100">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+          大手3社の公式標準料金 早見表（エアコン・浴室・キッチン・レンジフード／{checked}確認）
+        </h2>
+        <p className="text-sm text-gray-700 mb-3">
+          1か所あたりの標準料金（税込・通常価格）です。おそうじ革命は公式に「全国一律価格」、おそうじ本舗・ダスキンはブランド共通の標準料金で、店舗ごとの金額は見積もりで確認してください。下の「サービス別料金相場」は業者全体の目安で、大手の標準料金はその上限に近いか、上回る箇所があります（例: ダスキンの浴室 22,000円・レンジフード 22,000円）。
+        </p>
+        <div className="overflow-x-auto">
+          <table className="table table-sm text-sm bg-white">
+            <thead>
+              <tr>
+                <th>箇所</th>
+                <th>おそうじ本舗</th>
+                <th>ダスキン</th>
+                <th>おそうじ革命</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ROWS.map(([label, h, d, k]) => (
+                <tr key={label}>
+                  <th>{label}</th>
+                  <Cell row={h} />
+                  <Cell row={d} />
+                  <Cell row={k} />
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 mt-2">
+          複数台の割引: おそうじ本舗は2台以上の注文で壁掛け 12,100円／台・お掃除機能付き 22,000円／台、ダスキンは2台セット 25,300円・お掃除機能付き 47,300円（同一世帯）。ダスキンの浴室は床面積3m²・高さ2.4m未満、キッチンは間口3m未満、レンジフードは幅95cm未満の料金です（各公式）。
+        </p>
+        <h3 className="text-base font-bold text-gray-900 mt-4 mb-1">間取り・点数でまとめて頼む場合（公式のセット料金）</h3>
+        <ul className="text-sm text-gray-700 space-y-1">
+          <li>
+            ・ダスキン「ハウスワイドサービス」マンション Aセット（水まわり5か所＋窓ガラス・サッシ・網戸）: 1R／1K 52,800円、1LDK／2DK 78,100円、2LDK／3DK 103,400円、3LDK／4DK 110,000円（東京・神奈川のSエリア。
+            <a href={DUSKIN_HOUSEWIDE} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）
+          </li>
+          <li>
+            ・おそうじ革命「水回りセット」（浴室・キッチン・レンジフード・洗面所・トイレから選ぶ）: 2点 32,890円／3点 45,980円／4点 57,970円（
+            <a href={KAKUMEI_PRICE} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）
+          </li>
+          <li>
+            ・おそうじ本舗「換気扇・キッチンクリーニングセット」: 36,300円（期間限定の割引価格は含みません・
+            <a href={HONPO_KITCHEN_SET} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）
+          </li>
+        </ul>
+        <p className="text-xs text-gray-500 mt-2">
+          期間限定のキャンペーン価格は含みません。強い汚れ・追加範囲・オプション・土日祝や夜間の作業は追加料金になる場合があります（各公式に記載）。店舗は
+          <a href="/areas/" className="underline text-primary">地域から探す</a>、ブランド別の全店舗は
+          <a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗</a>・
+          <a href="/brand/duskin/" className="underline text-primary">ダスキン</a>・
+          <a href="/brand/osoujikakumei/" className="underline text-primary">おそうじ革命</a>の店舗一覧をご覧ください。
         </p>
       </div>
     </section>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import {Sparkles, DollarSign, TrendingUp, Info } from "lucide-react";
 import { withPageSocial } from "../siteOpenGraph";
+import { PriceTopAnswer } from "../components/OosoujiPriceAnswer";
 
 export const metadata: Metadata = withPageSocial({
   title: "ハウスクリーニング料金相場一覧【エアコン・浴室・キッチン】 | クリーンナビ",
@@ -100,6 +101,9 @@ export default function PricePage() {
  </p>
  </div>
  </section>
+
+ {/* 2026-11-17 16:00 遅れ挽回: 「ハウスクリーニング 相場」向けに、相場の目安の前に大手3社の公式標準料金の早見表 */}
+ <PriceTopAnswer checked="2026年11月17日" />
 
  {/* 料金相場一覧 */}
  <section className="py-12 bg-white">
