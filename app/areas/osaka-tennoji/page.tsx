@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
@@ -178,6 +179,18 @@ export default function OsakaTennojiArea() {
  <p className="text-xl">天王寺区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-18 16:00 遅れ挽回: 「天王寺 ハウスクリーニング」7@20.7 c1。11/12〜17 と同じ型で冒頭に大手3社の公式料金（2026-11-18 再確認・ダスキンは大阪＝Aエリア）と区内の掲載店（公式の天王寺区一覧 27109 の3店と一致・ダスキン公式の大阪市の区別一覧に天王寺区なし）。この頁だけ */}
+ <OosoujiPriceAnswer
+  areaLabel="天王寺区"
+  checked="2026年11月18日"
+  duskinArea="A"
+  duskinAreaLabel="大阪府"
+  stores={[
+   { name: "おそうじ本舗 天王寺真田山店", href: "/provider/honpo-20756/" },
+   { name: "おそうじ本舗 桃谷駅前店", href: "/provider/honpo-19947/" },
+   { name: "おそうじ本舗 上本町店", href: "/provider/honpo-16717/" },
+  ]}
+ />
  <AreaProvidersLead slug="osaka-tennoji" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">

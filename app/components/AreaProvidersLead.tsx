@@ -144,8 +144,20 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
         <div className="card p-5 mb-8 border border-gray-200" aria-label="要点">
           <h2 className="text-lg font-bold text-ink mb-2">{area.label}のハウスクリーニング 要点</h2>
           <ul className="text-sm text-ink-soft space-y-1 mb-3">
+            {/* 2026-11-18 16:00 遅れ挽回: 「おそうじ本舗 北区」16@8.8。店名・電話の表（下）より先に、本舗3店と本舗の主要メニュー料金を1行で答える。この1頁だけ */}
+            {area.slug === "nagoya-kita" && (
+              <li>
+                ・<strong>名古屋市北区のおそうじ本舗は3店</strong>（公式の名古屋市北区の店舗一覧・2026-11-18確認）:{" "}
+                <a href="/provider/honpo-21099/" className="underline text-primary">大曽根店</a>（北区大曽根・0120-800-445）・
+                <a href="/provider/honpo-19386/" className="underline text-primary">中味鋺店</a>（北区中味鋺・0120-63-4028）・
+                <a href="/provider/honpo-13808/" className="underline text-primary">黒川店</a>（北区黒川本通・052-508-4732）。
+                おそうじ本舗の公式標準料金（税込）は、エアコン壁掛け 14,300円／台（2台以上は12,100円／台）・お掃除機能付き 24,200円／台・キッチン 19,800円・レンジフード 19,800円・浴室 19,800円・トイレ 9,900円、換気扇・キッチンクリーニングセット 36,300円です（
+                <a href="https://www.osoujihonpo.com/house-cleaning/aircon/wall/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>・2026-11-18確認）。各店の対応エリアは公式店舗ページに記載がないため、電話で確認してください（
+                <a href="#honpo-nagoya-kita" className="underline text-primary">3店の営業時間・公式クチコミ</a>）。
+              </li>
+            )}
             <li>
-              ・{area.label}内に所在する店舗: <strong>{located.length}店</strong>
+              ・{area.label}内に所在する店舗:<strong>{located.length}店</strong>
               {located.length > 0 && (
                 <>（{Object.entries(byBrand).map(([b, n]) => `${b} ${n}店`).join("・")}）</>
               )}
@@ -156,6 +168,10 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
               <li>
                 ・「アズマのホームクリーニング」の店舗を探している方へ: 公式のフランチャイズ一覧（12店）に新潟県内の店舗はありません。新潟県は佐渡市・粟島浦村を除き対応エリアで、申し込みは公式の注文フォームか電話 0120-120-083（平日 9:00〜17:00）です（
                 <a href="#azuma" className="underline text-primary">詳細と出典</a>・2026-11-07 公式確認）。
+                {/* 2026-11-18 16:00 遅れ挽回: 同じ検索（16@5.8 c4）向けに、店舗の答えの直後に料金の答え（公式の各メニューページ 2026-11-18 確認）。FC一覧12店・新潟県なし・佐渡市/粟島浦村除外も 11/18 に再確認 */}
+                公式の料金（税込・2026-11-18確認）は、家庭用壁掛けエアコン 13,200円・お掃除機能付きエアコン 24,200円・キッチン 19,800円・レンジフード 17,600円・浴室 19,800円・トイレ 13,200円・洗面所 13,200円です（
+                <a href="https://www.azuma-cleaning.com/view/item/000000000001" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式 エアコン</a>・
+                <a href="https://www.azuma-cleaning.com/view/category/cleaningmenu" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式 メニュー一覧</a>）。
               </li>
             )}
             {/* 2026-11-04: 「おそうじ本舗」単語が富山県ページに着地（表示11・9.3位）。この1頁だけハブへの導線 */}
@@ -229,8 +245,8 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
         </div>
         {/* 2026-11-07: 「おそうじ本舗 北区」8@9.9。区内の本舗3店の連絡先を要点の直後で答える。この1頁だけ */}
         {area.slug === "nagoya-kita" && (
-          <div className="card p-5 mb-8 border border-gray-200" aria-label="名古屋市北区のおそうじ本舗">
-            <h2 className="text-lg font-bold text-ink mb-2">名古屋市北区のおそうじ本舗（3店・公式 2026-11-07 確認）</h2>
+          <div id="honpo-nagoya-kita" className="card p-5 mb-8 border border-gray-200" aria-label="名古屋市北区のおそうじ本舗">
+            <h2 className="text-lg font-bold text-ink mb-2">名古屋市北区のおそうじ本舗（3店・公式 2026-11-18 確認）</h2>
             <div className="overflow-x-auto">
               <table className="table text-sm">
                 <thead>

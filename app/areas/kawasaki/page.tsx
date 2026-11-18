@@ -208,6 +208,12 @@ export default function KawasakiArea() {
           <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="#f9fafb"></path>
         </svg>
       </section>
+ {/* 2026-11-18 16:00 遅れ挽回: 全国語「ハウスクリーニング おすすめ」32表示が kanagawa/sapporo/kawasaki に分散。この頁の役割（川崎市の掲載店）を書き分け、全国の比較は /ranking/・/guide/ へ1行で案内 */}
+ <div className="container mx-auto px-4 pt-6">
+ <p className="max-w-4xl mx-auto text-sm text-gray-700 border-l-4 border-primary pl-3">
+ このページは<strong>川崎市内に所在する掲載店</strong>の一覧ページです。全国の業者を比較したい方は<a href="/ranking/" className="underline text-primary">ハウスクリーニング業者ランキング一覧</a>、業者の選び方は<a href="/guide/" className="underline text-primary">選び方ガイド</a>、神奈川県全体の店舗と大手3社の公式料金は<a href="/areas/kanagawa/" className="underline text-primary">神奈川県のページ</a>をご覧ください。
+ </p>
+ </div>
  <AreaProvidersLead slug="kawasaki" />
  <SeasonalCleaningNote />
       <section className="py-12 bg-base-100">

@@ -4,6 +4,16 @@ import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {Building2, MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 import { withPageSocial } from "../../siteOpenGraph";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
+import providers from "../../data/providers.json";
+
+// 2026-11-18 16:00 遅れ挽回: 県内に所在する掲載店のブランド別店数（AreaProvidersLead と同じ pref_ja 条件）
+const KANAGAWA_COUNT = (providers as { pref_ja: string; brand: string }[])
+  .filter((p) => p.pref_ja === "神奈川県")
+  .reduce((a, p) => {
+    if (p.brand === "honpo" || p.brand === "duskin" || p.brand === "kakumei") a[p.brand] += 1;
+    return a;
+  }, { honpo: 0, duskin: 0, kakumei: 0 });
 
 export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/areas/kanagawa/" },
@@ -156,6 +166,14 @@ export default function KanagawaArea() {
  <p className="text-xl">横浜市・川崎市・相模原市など神奈川県のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-18 16:00 遅れ挽回: 全国語「ハウスクリーニング おすすめ」32表示が kanagawa/sapporo/kawasaki に分散。この頁の役割（神奈川県の掲載店）を書き分け、全国の比較は /ranking/・/guide/ へ1行で案内 */}
+ <div className="container mx-auto px-4 pt-6">
+ <p className="max-w-4xl mx-auto text-sm text-gray-700 border-l-4 border-primary pl-3">
+ このページは<strong>神奈川県内に所在する掲載店</strong>と、神奈川県で頼むときの大手3社の公式料金をまとめたページです。全国の業者を比較したい方は<a href="/ranking/" className="underline text-primary">ハウスクリーニング業者ランキング一覧</a>、業者の選び方は<a href="/guide/" className="underline text-primary">選び方ガイド</a>、市ごとの店舗は<a href="/areas/yokohama/" className="underline text-primary">横浜市</a>・<a href="/areas/kawasaki/" className="underline text-primary">川崎市</a>・相模原市（<a href="/areas/sagamihara-chuo/" className="underline text-primary">中央区</a>・<a href="/areas/sagamihara-midori/" className="underline text-primary">緑区</a>・<a href="/areas/sagamihara-minami/" className="underline text-primary">南区</a>）のページをご覧ください。
+ </p>
+ </div>
+ {/* 同: 「ハウスクリーニング 横浜」「掃除 業者 おすすめ」向けに冒頭で大手3社の公式料金を答える（11/12〜 の既存部品・値は 2026-11-18 に各公式で再確認）。この頁だけ */}
+ <OosoujiPriceAnswer areaLabel="神奈川県" checked="2026年11月18日" duskinArea="S" storeCount={KANAGAWA_COUNT} />
  <AreaProvidersLead slug="kanagawa" />
  <section className="py-12">
  <div className="container mx-auto px-4">

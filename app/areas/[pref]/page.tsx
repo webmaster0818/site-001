@@ -3,7 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import providers from "../../data/providers.json";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
-import { AirconPriceAnswer } from "../../components/OosoujiPriceAnswer";
+import OosoujiPriceAnswer, { AirconPriceAnswer } from "../../components/OosoujiPriceAnswer";
 import { PREF_PAGES } from "../../components/areaIndexData";
 import { withPageSocial } from "../../siteOpenGraph";
 
@@ -66,6 +66,23 @@ const CAPITAL_STORES: Record<string, { label: string; more?: { name: string; hre
   { name: "おそうじ革命 宇都宮平成通り店", href: "/provider/kakumei-utsunomiya_heiseidori/" },
   ] },
 };
+// 2026-11-18 16:00 遅れ挽回: 「ハウスクリーニング 奈良市」「ハウスクリーニング 奈良」（奈良県）向けに、11/17 と同じ型で冒頭に大手3社の公式料金（エアコン・水まわり・セット料金。
+// ハウスクリーニング全般の語なので AirconPriceAnswer ではなく OosoujiPriceAnswer）と県庁所在市の掲載店（本舗4＝公式の奈良市一覧 29201 と一致・ダスキン6＝公式の奈良市一覧と一致・
+// 各公式店舗ページ 2026-11-18 に 200）。ダスキン ハウスワイドは奈良＝Aエリア（公式 sm000180）。他の県ページは表示不変
+const CAPITAL_HOUSE_STORES: Record<string, { label: string; duskinArea: "S" | "A"; stores: { name: string; href: string }[] }> = {
+  nara: { label: "奈良市", duskinArea: "A", stores: [
+  { name: "おそうじ本舗 奈良西大寺店", href: "/provider/honpo-18642/" },
+  { name: "おそうじ本舗 奈良西店", href: "/provider/honpo-11161/" },
+  { name: "おそうじ本舗 奈良北町店", href: "/provider/honpo-15388/" },
+  { name: "おそうじ本舗 奈良富雄店", href: "/provider/honpo-20009/" },
+  { name: "ダスキン南都サービスマスター", href: "/provider/duskin-1620154/" },
+  { name: "ダスキンあやめ池サービスマスター", href: "/provider/duskin-1620215/" },
+  { name: "ダスキン奈良サービスマスター", href: "/provider/duskin-1620471/" },
+  { name: "ダスキン富雄元町サービスマスター", href: "/provider/duskin-1620859/" },
+  { name: "ダスキン 菅原支店", href: "/provider/duskin-8003238/" },
+  { name: "ダスキン 北之庄支店", href: "/provider/duskin-8003850/" },
+  ] },
+};
 const list = providers as Provider[];
 
 export async function generateStaticParams() {
@@ -124,6 +141,17 @@ export default async function PrefPage({ params }: { params: Promise<{ pref: str
           stores={CAPITAL_STORES[pref].stores}
           storesLabel={CAPITAL_STORES[pref].label}
           storesMore={CAPITAL_STORES[pref].more}
+        />
+      )}
+      {CAPITAL_HOUSE_STORES[pref] && (
+        <OosoujiPriceAnswer
+          areaLabel={prefJa}
+          checked="2026年11月18日"
+          duskinArea={CAPITAL_HOUSE_STORES[pref].duskinArea}
+          duskinAreaLabel={prefJa}
+          stores={CAPITAL_HOUSE_STORES[pref].stores}
+          storesLabel={CAPITAL_HOUSE_STORES[pref].label}
+          storesMore={{ name: `このページ下の一覧（${prefJa}内${list.filter((p) => p.pref_ja === prefJa).length}店）`, href: "#stores" }}
         />
       )}
       <AreaProvidersLead slug={pref} breadcrumbLd={false} />
