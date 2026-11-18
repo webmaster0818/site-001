@@ -7,6 +7,7 @@ import { partnersByTag, type ServiceTag } from "../../data/partners";
 import captures from "../../data/partner-captures.json";
 
 // 実在業者データ
+// 2026-11-18 ダスキン（id 2）・ベアーズ（id 6）は A8 提携で partners.ts に公式確認済みのデータを入れたため、提携側だけを出す（二重に出さない）。
 const COMPANIES = [
   {
     id: 1,
@@ -18,15 +19,6 @@ const COMPANIES = [
     features: ["全国1,765店舗（2023年9月現在）", "特許取得ファインバブル洗浄", "損害保険加入"],
   },
   {
-    id: 2,
-    name: "ダスキン サービスマスター",
-    category: "bathroom",
-    price: 22000,
-    area: "全国対応（1,222拠点・2026年3月末現在）",
-    image: "/images/partners/duskin.webp",
-    features: ["1971年からサービスマスター事業を展開", "全国1,222拠点（2026年3月末現在）", "定期サービス対応"],
-  },
-  {
     id: 4,
     name: "東京ガス ハウスクリーニング",
     category: "kitchen",
@@ -34,15 +26,6 @@ const COMPANIES = [
     area: "東京・神奈川・埼玉・千葉と群馬・茨城の一部",
     image: "/images/partners/tokyogas.webp",
     features: ["東京ガスが提供", "土日祝も対応（12/29〜1/4除く）", "支払いはクレジットカードのみ"],
-  },
-  {
-    id: 6,
-    name: "ベアーズ",
-    category: "kitchen",
-    price: 18920,
-    area: "東京・神奈川・千葉・埼玉・大阪・兵庫",
-    image: "/images/partners/bears.webp",
-    features: ["家事代行大手", "セット割引", "定期利用対応"],
   },
 ];
 
@@ -94,7 +77,7 @@ export default function ServicePageClient({ category }: { category: string }) {
   type Row = { key: string; name: string; href: string; image: string; caption: string; area: string; priceText: string; price: number;
     features: string[]; pr?: { url: string; label: string; pixel?: string }; company?: string };
   // 提携側に移した2社にも、会社ページ（/company/3/・/company/5/）への導線を残す
-  const COMPANY_PAGE: Record<string, string> = { osoujikakumei: "/company/3/", kajitaku: "/company/5/" };
+  const COMPANY_PAGE: Record<string, string> = { osoujikakumei: "/company/3/", kajitaku: "/company/5/", duskin: "/company/2/", bears: "/company/6/" };
   const rows: Row[] = [
     ...COMPANIES.filter((c) => c.category === category).map((c) => ({
       key: `c${c.id}`, name: c.name, href: `/company/${c.id}/`, image: c.image, caption: `出典：${c.name} 公式サイト（${CAPTURE_DATE_JA}時点）`,
