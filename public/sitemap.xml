@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
- <url><loc>https://cleaning-choices.com/</loc><lastmod>2026-11-15</lastmod><priority>1.0</priority></url>
+ <url><loc>https://cleaning-choices.com/</loc><lastmod>2026-11-18</lastmod><priority>1.0</priority></url>
  <url><loc>https://cleaning-choices.com/about/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/areas/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
  <url><loc>https://cleaning-choices.com/areas/aichi/</loc><lastmod>2026-11-07</lastmod><priority>0.8</priority></url>
@@ -287,14 +287,14 @@
  <url><loc>https://cleaning-choices.com/company/5/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/company/6/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/comparison/time-comparison/</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/comparison/warranty-comparison/</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/comparison/warranty-comparison/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/contact/</loc><lastmod>2026-08-15</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/faq/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/for-business/</loc><lastmod>2026-08-15</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/guide-detail/bathroom-mold/</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/guide-detail/before-checklist/</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/guide-detail/before-checklist/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/guide-detail/cleaning-timing/</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/guide-detail/trouble-cases/</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/guide-detail/trouble-cases/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/guide/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/price/</loc><lastmod>2026-11-17</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/privacy/</loc><lastmod>2026-08-15</lastmod><priority>0.7</priority></url>
@@ -3823,25 +3823,27 @@
  <url><loc>https://cleaning-choices.com/provider/kakumei-yokohama_totsukakamiyabeinta/</loc><lastmod>2026-10-26</lastmod><priority>0.6</priority></url>
  <url><loc>https://cleaning-choices.com/provider/kakumei-yokohama_tsurumichuo/</loc><lastmod>2026-10-26</lastmod><priority>0.6</priority></url>
  <url><loc>https://cleaning-choices.com/ranking/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/ranking/aircon-ranking/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/ranking/bathroom-ranking/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/ranking/cheap-ranking/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/ranking/quick-service/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/ranking/review-ranking/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/</loc><lastmod>2026-11-17</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/four-l/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/housecleaning110/</loc><lastmod>2026-11-17</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/kireiyu/</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/migxl/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/nac-duskin/</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/on/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/osouji-labo/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/osoujikakumei/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/kajitaku/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/r-cleaning/</loc><lastmod>2026-10-30</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/review/seifu/</loc><lastmod>2026-10-31</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/ranking/aircon-ranking/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/ranking/bathroom-ranking/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/ranking/cheap-ranking/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/ranking/quick-service/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/ranking/review-ranking/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/four-l/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/housecleaning110/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/kireiyu/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/migxl/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/nac-duskin/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/on/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/osouji-labo/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/osoujikakumei/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/kajitaku/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/r-cleaning/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/review/seifu/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+<url><loc>https://cleaning-choices.com/review/cleancrew/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+<url><loc>https://cleaning-choices.com/review/r-maid/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/scene/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/scene/moving-aircon/</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/scene/moving-aircon/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/scene/year-end-package/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/services-detail/balcony/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/services-detail/carpet/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
@@ -3854,9 +3856,9 @@
  <url><loc>https://cleaning-choices.com/services-detail/whole-house/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/services-detail/window/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/services/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/services/aircon/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/services/bathroom/</loc><lastmod>2026-10-24</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/services/kitchen/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
- <url><loc>https://cleaning-choices.com/sitemap/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/services/aircon/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/services/bathroom/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/services/kitchen/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+ <url><loc>https://cleaning-choices.com/sitemap/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
  <url><loc>https://cleaning-choices.com/terms/</loc><lastmod>2026-08-15</lastmod><priority>0.7</priority></url>
 </urlset>
