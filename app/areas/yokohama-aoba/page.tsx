@@ -1,6 +1,7 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
 import SeasonalCleaningNote from "../../components/SeasonalCleaningNote";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
@@ -179,6 +180,28 @@ export default function YokohamaAobaArea() {
  <p className="text-xl">青葉区のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-19 16:00 遅れ挽回: 「横浜 ハウスクリーニング」12.8位・「ハウスクリーニング 横浜」17.3位がこの頁に着地。11/13 南区・神奈川区と同じ型で冒頭に大手3社の公式料金（2026-11-19 再確認）と区内の掲載店
+  （本舗5＝公式 14117 一覧と一致・ダスキン2＝公式 /store/kanagawa/yokohama_aoba/ と一致・革命3。各公式店舗ページ 200）＋横浜市全体のページとの役割の書き分け。この頁だけ */}
+ <OosoujiPriceAnswer
+  areaLabel="横浜市青葉区"
+  checked="2026年11月19日"
+  duskinArea="S"
+  stores={[
+   { name: "おそうじ本舗 たまプラーザ店", href: "/provider/honpo-13557/" },
+   { name: "おそうじ本舗 青葉桜台店", href: "/provider/honpo-15400/" },
+   { name: "おそうじ本舗 青葉台駅前店", href: "/provider/honpo-16100/" },
+   { name: "おそうじ本舗 藤が丘駅前店", href: "/provider/honpo-16402/" },
+   { name: "おそうじ本舗 あざみ野店", href: "/provider/honpo-21392/" },
+   { name: "ダスキン横浜緑サービスマスター", href: "/provider/duskin-1353248/" },
+   { name: "ダスキン あざみ野支店", href: "/provider/duskin-8001868/" },
+   { name: "おそうじ革命 横浜たまプラーザ店", href: "/provider/kakumei-yokohama_tamapuraza/" },
+   { name: "おそうじ革命 横浜荏田店", href: "/provider/kakumei-yokohama_eda/" },
+   { name: "おそうじ革命 横浜青葉台店", href: "/provider/kakumei-yokohama_aobadai/" },
+  ]}
+ />
+ <div className="container mx-auto px-4 max-w-5xl pt-4">
+  <p className="text-sm text-gray-700">このページは横浜市青葉区（青葉台・たまプラーザ・あざみ野・市が尾・藤が丘など）に所在する掲載店のページです。横浜市全体（18区）の店舗・区ごとのページは<Link href="/areas/yokohama/" className="underline text-primary">横浜市のハウスクリーニング</Link>、全国の業者の比較は<Link href="/ranking/" className="underline text-primary">比較ランキング</Link>をご覧ください。</p>
+ </div>
  <AreaProvidersLead slug="yokohama-aoba" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">

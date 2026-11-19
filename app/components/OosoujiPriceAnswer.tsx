@@ -156,7 +156,8 @@ export default function OosoujiPriceAnswer({
 }: {
   areaLabel: string;
   checked?: string;
-  duskinArea?: "S" | "A";
+  // 2026-11-19 16:00 遅れ挽回: "B"（北海道・東北・甲信越・中国・四国・九州など＝公式 sm000180 の地域区分）を追加。長野県・鳥取県で使用。既存頁は S/A のまま表示不変
+  duskinArea?: "S" | "A" | "B";
   stores?: StoreLink[];
   washer?: boolean;
   storesLabel?: string;
@@ -273,7 +274,7 @@ export default function OosoujiPriceAnswer({
         <h3 className="text-base font-bold text-gray-900 mt-4 mb-1">まとめて頼むセット料金（公式）</h3>
         <ul className="text-sm text-gray-700 space-y-1">
           <li>
-            ・ダスキン「ハウスワイドサービス」（公式に「夏季、年末の大掃除、引越し、新築、改装時などにおすすめ」と記載）: {duskinArea === "A" ? `${duskinAreaLabel ?? "千葉県"}など（Aエリア。マンション Aセットの金額は東京・神奈川のSエリアと同額）` : "東京・神奈川（Sエリア）"}のマンション Aセット＝水まわり5か所（キッチン・レンジフード・浴室・トイレ・洗面所）＋窓ガラス・サッシ・網戸で、1R／1K 52,800円、1LDK／2DK 78,100円、2LDK／3DK 103,400円、3LDK／4DK 110,000円（
+            ・ダスキン「ハウスワイドサービス」（公式に「夏季、年末の大掃除、引越し、新築、改装時などにおすすめ」と記載）: {duskinArea === "B" ? `${duskinAreaLabel ?? "北海道・東北"}など（Bエリア）` : duskinArea === "A" ? `${duskinAreaLabel ?? "千葉県"}など（Aエリア。マンション Aセットの金額は東京・神奈川のSエリアと同額）` : "東京・神奈川（Sエリア）"}のマンション Aセット＝水まわり5か所（キッチン・レンジフード・浴室・トイレ・洗面所）＋窓ガラス・サッシ・網戸で、{duskinArea === "B" ? "1R／1K 50,600円、1LDK／2DK 75,900円、2LDK／3DK 100,100円、3LDK／4DK 106,700円" : "1R／1K 52,800円、1LDK／2DK 78,100円、2LDK／3DK 103,400円、3LDK／4DK 110,000円"}（
             <a href={DUSKIN_HOUSEWIDE} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）
           </li>
           <li>

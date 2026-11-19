@@ -19,7 +19,26 @@ type Provider = { pref_ja: string };
 
 // 2026-11-17 16:00 遅れ挽回: 「高松市 エアコンクリーニング」（香川県）・「ハウスクリーニング 宇都宮市」（栃木県）向けに、冒頭でエアコンクリーニングの3社公式料金と
 // 県庁所在市の掲載店（各公式店舗ページが 2026-11-17 に 200・本舗/ダスキンは公式の市の一覧と一致）への導線を出す。他の県ページは表示不変
-const CAPITAL_STORES: Record<string, { label: string; more?: { name: string; href: string }; stores: { name: string; href: string }[] }> = {
+const CAPITAL_STORES: Record<string, { label: string; checked?: string; more?: { name: string; href: string }; stores: { name: string; href: string }[] }> = {
+  // 2026-11-19 16:00 遅れ挽回: 「エアコンクリーニング 盛岡」5.0位・「一関 エアコンクリーニング」10.0位・「岩手県 クリーニング」6.7位（岩手県）。同じ型で盛岡市の掲載店15店
+  // （本舗7＝公式の盛岡市一覧 /shop/tohoku/iwate/3201/ と一致・ダスキン4＝公式 /store/iwate/morioka/ と一致・革命4。各公式店舗ページ 2026-11-19 に 200）
+  iwate: { label: "盛岡市", checked: "2026年11月19日", stores: [
+  { name: "おそうじ本舗 盛岡本宮店", href: "/provider/honpo-13757/" },
+  { name: "おそうじ本舗 盛岡河南店", href: "/provider/honpo-17002/" },
+  { name: "おそうじ本舗 盛岡青山店", href: "/provider/honpo-19146/" },
+  { name: "おそうじ本舗 盛岡前潟店", href: "/provider/honpo-19349/" },
+  { name: "おそうじ本舗 盛岡南インター店", href: "/provider/honpo-20050/" },
+  { name: "おそうじ本舗 盛岡駅西店", href: "/provider/honpo-20523/" },
+  { name: "おそうじ本舗 盛岡緑が丘店", href: "/provider/honpo-20749/" },
+  { name: "ダスキン矢巾サービスマスター", href: "/provider/duskin-1210747/" },
+  { name: "ダスキン 本宮支店", href: "/provider/duskin-8001757/" },
+  { name: "ダスキン 上堂支店", href: "/provider/duskin-8001929/" },
+  { name: "ダスキン 中野支店", href: "/provider/duskin-8004771/" },
+  { name: "おそうじ革命 盛岡本宮店", href: "/provider/kakumei-morioka_motomiya/" },
+  { name: "おそうじ革命 岩手盛岡東見前店", href: "/provider/kakumei-iwate_morioka_higashimirumae/" },
+  { name: "おそうじ革命 岩手盛岡青山店", href: "/provider/kakumei-iwate_moriokaaoyama/" },
+  { name: "おそうじ革命 岩手盛岡飯岡店", href: "/provider/kakumei-morioka_iioka/" },
+  ] },
   kagawa: { label: "高松市", more: { name: "高松市のハウスクリーニング", href: "/areas/takamatsu/" }, stores: [
   { name: "おそうじ本舗 サンフラワー通り店", href: "/provider/honpo-14465/" },
   { name: "おそうじ本舗 高松木太中央店", href: "/provider/honpo-14870/" },
@@ -69,7 +88,32 @@ const CAPITAL_STORES: Record<string, { label: string; more?: { name: string; hre
 // 2026-11-18 16:00 遅れ挽回: 「ハウスクリーニング 奈良市」「ハウスクリーニング 奈良」（奈良県）向けに、11/17 と同じ型で冒頭に大手3社の公式料金（エアコン・水まわり・セット料金。
 // ハウスクリーニング全般の語なので AirconPriceAnswer ではなく OosoujiPriceAnswer）と県庁所在市の掲載店（本舗4＝公式の奈良市一覧 29201 と一致・ダスキン6＝公式の奈良市一覧と一致・
 // 各公式店舗ページ 2026-11-18 に 200）。ダスキン ハウスワイドは奈良＝Aエリア（公式 sm000180）。他の県ページは表示不変
-const CAPITAL_HOUSE_STORES: Record<string, { label: string; duskinArea: "S" | "A"; stores: { name: string; href: string }[] }> = {
+const CAPITAL_HOUSE_STORES: Record<string, { label: string; duskinArea: "S" | "A" | "B"; checked?: string; stores: { name: string; href: string }[] }> = {
+  // 2026-11-19 16:00 遅れ挽回: 「鳥取県 クリーニング」9.3位（鳥取県）・「ハウスクリーニング 業者 一覧」22.1位（長野県）。同じ型で、ダスキン ハウスワイドは両県とも Bエリア（公式 sm000180・2026-11-19）。
+  // 鳥取市3店（本舗1＝公式 31201 一覧と一致・ダスキン2＝公式 /store/tottori/tottori/ と一致）、長野市16店（本舗7＝公式 20201 一覧と一致・ダスキン7＝公式 /store/nagano/nagano/ と一致・革命2）。各公式店舗ページ 2026-11-19 に 200
+  tottori: { label: "鳥取市", duskinArea: "B", checked: "2026年11月19日", stores: [
+  { name: "おそうじ本舗 鳥取西店", href: "/provider/honpo-18492/" },
+  { name: "ダスキン鳥取サービスマスター", href: "/provider/duskin-1720140/" },
+  { name: "ダスキンいなばサービスマスター", href: "/provider/duskin-1720328/" },
+  ] },
+  "nagano-ken": { label: "長野市", duskinArea: "B", checked: "2026年11月19日", stores: [
+  { name: "おそうじ本舗 川中島店", href: "/provider/honpo-13644/" },
+  { name: "おそうじ本舗 長野稲田店", href: "/provider/honpo-16286/" },
+  { name: "おそうじ本舗 南長野店", href: "/provider/honpo-17565/" },
+  { name: "おそうじ本舗 長野柳原店", href: "/provider/honpo-18677/" },
+  { name: "おそうじ本舗 長野高田店", href: "/provider/honpo-19793/" },
+  { name: "おそうじ本舗 川中島今井店", href: "/provider/honpo-21316/" },
+  { name: "おそうじ本舗 長野豊野店", href: "/provider/honpo-21364/" },
+  { name: "ダスキンサービスマスター第一クリーン店", href: "/provider/duskin-1510321/" },
+  { name: "ダスキンビホームサービスマスター", href: "/provider/duskin-1510454/" },
+  { name: "ダスキンサービスマスタースィンセリティ", href: "/provider/duskin-1510765/" },
+  { name: "ダスキンイチバン サービスマスター", href: "/provider/duskin-1511092/" },
+  { name: "ダスキン川中島サービスマスター", href: "/provider/duskin-1511519/" },
+  { name: "ダスキン長池サービスマスター", href: "/provider/duskin-1511553/" },
+  { name: "ダスキン 大豆島支店", href: "/provider/duskin-8000197/" },
+  { name: "おそうじ革命 長野朝陽店", href: "/provider/kakumei-nagano_asahi/" },
+  { name: "おそうじ革命 長野丹波島店", href: "/provider/kakumei-nagano_tanbajima/" },
+  ] },
   nara: { label: "奈良市", duskinArea: "A", stores: [
   { name: "おそうじ本舗 奈良西大寺店", href: "/provider/honpo-18642/" },
   { name: "おそうじ本舗 奈良西店", href: "/provider/honpo-11161/" },
@@ -137,7 +181,7 @@ export default async function PrefPage({ params }: { params: Promise<{ pref: str
       {CAPITAL_STORES[pref] && (
         <AirconPriceAnswer
           areaLabel={`${prefJa}（${CAPITAL_STORES[pref].label}）`}
-          checked="2026年11月17日"
+          checked={CAPITAL_STORES[pref].checked ?? "2026年11月17日"}
           stores={CAPITAL_STORES[pref].stores}
           storesLabel={CAPITAL_STORES[pref].label}
           storesMore={CAPITAL_STORES[pref].more}
@@ -146,7 +190,7 @@ export default async function PrefPage({ params }: { params: Promise<{ pref: str
       {CAPITAL_HOUSE_STORES[pref] && (
         <OosoujiPriceAnswer
           areaLabel={prefJa}
-          checked="2026年11月18日"
+          checked={CAPITAL_HOUSE_STORES[pref].checked ?? "2026年11月18日"}
           duskinArea={CAPITAL_HOUSE_STORES[pref].duskinArea}
           duskinAreaLabel={prefJa}
           stores={CAPITAL_HOUSE_STORES[pref].stores}

@@ -1,8 +1,14 @@
 import { CAPTURE_DATE_JA } from "../../data/capture-date";
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
+import providers from "../../data/providers.json";
 import {Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
+// 2026-11-19 16:00 遅れ挽回: 冒頭の大手3社の公式料金の答えで使う、川口市内に所在する掲載店のブランド別店数（AreaProvidersLead と同じ数え方）
+const AREA_COUNT = (providers as { address?: string | null; pref_ja: string; brand: string }[])
+  .filter((p) => (p.address ?? "").startsWith("埼玉県川口市"))
+  .reduce((a, p) => { if (p.brand === "honpo" || p.brand === "duskin" || p.brand === "kakumei") a[p.brand] += 1; return a; }, { honpo: 0, duskin: 0, kakumei: 0 });
 
 export const metadata = {
  title: "川口市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
@@ -178,6 +184,8 @@ export default function Area_kawaguchi() {
  <p className="text-xl">川口市のハウスクリーニング業者と店舗情報を掲載しています</p>
  </div>
  </section>
+ {/* 2026-11-19 16:00 遅れ挽回: 「掃除 業者 おすすめ」17.0位・「ハウスクリーニング 川口」39.5位・「エアコンクリーニング川口」9.0位。11/18 と同じ型で冒頭に大手3社の公式料金（2026-11-19 再確認・埼玉は Aエリア）と市内の掲載店数。この頁だけ */}
+ <OosoujiPriceAnswer areaLabel="川口市" checked="2026年11月19日" duskinArea="A" duskinAreaLabel="埼玉県" storeCount={AREA_COUNT} />
  <AreaProvidersLead slug="kawaguchi" />
  {/* パンくずリスト */}
  <div className="bg-base-100 py-4 border-b border-base-300">

@@ -1,7 +1,13 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
+import providers from "../../data/providers.json";
 import {Sparkles, Award, Shield, Zap, MapPin } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
+// 2026-11-19 16:00 遅れ挽回: 冒頭の大手3社の公式料金の答えで使う、兵庫県内に所在する掲載店のブランド別店数（AreaProvidersLead と同じ数え方）
+const AREA_COUNT = (providers as { address?: string | null; pref_ja: string; brand: string }[])
+  .filter((p) => p.pref_ja === "兵庫県")
+  .reduce((a, p) => { if (p.brand === "honpo" || p.brand === "duskin" || p.brand === "kakumei") a[p.brand] += 1; return a; }, { honpo: 0, duskin: 0, kakumei: 0 });
 
 export const metadata = {
  title: "兵庫県のハウスクリーニング業者おすすめ比較 | クリーンナビ",
@@ -212,6 +218,8 @@ export default function HyogoArea() {
  <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z"fill="#f9fafb"></path>
  </svg>
  </section>
+ {/* 2026-11-19 16:00 遅れ挽回: 「キッチンクリーニング 兵庫」28.6位・「浴室クリーニング 兵庫」34.8位・「兵庫 ハウスクリーニング」89位。11/18 神奈川県と同じ型で冒頭に大手3社の公式料金（2026-11-19 再確認・兵庫は Aエリア）と県内の掲載店数。この頁だけ */}
+ <OosoujiPriceAnswer areaLabel="兵庫県" checked="2026年11月19日" duskinArea="A" duskinAreaLabel="兵庫県" storeCount={AREA_COUNT} />
  <AreaProvidersLead slug="hyogo" />
  <section className="py-12">
  <div className="container mx-auto px-4">
