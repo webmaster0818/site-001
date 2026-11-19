@@ -801,3 +801,12 @@ GSC実数診断:
 - skip: 「エアコンフィルター 掃除」＝aircon-self-cleaning と重複（手順・頻度・FAQ 掲載済み）
 - 導線: /guide/・/sitemap/（HTML）・既存 aircon 3本の関連ガイド。sitemap 3,874→3,879（lastmod 2026-11-20 ＝新規5＋aircon 3本・guide・sitemap）
 - out: 3,888頁・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）・trust-audit --dry 新規5 指摘0（既存 /review/kireiyu/ C3 1件＝否定文の誤検知）。2e4f6916 → 本番5頁 200・h1 確認
+
+### 2026-11-20 深夜04時 kwexp（競合 ouchipro.com）: キッチン・エアコン・トイレ・壁紙・浴室のガイド5本（1デプロイ）
+- 新設: /guide-detail/gas-stove-cleaning/（ガスコンロ 掃除 9,680）・daikin-aircon-cleaning/（ダイキン エアコン 掃除 7,920）・toilet-citric-acid/（トイレ掃除 クエン酸 7,920）・wallpaper-stain-removal/（壁紙 汚れ落とし 6,480）・bath-floor-black-stains/（お風呂 床 黒ずみ 6,480）。diyGuides.ts に追加（SRC2・KITCHEN/TOILET/BATH/WALLPAPER/DAIKIN_PRICES 新設）
+- 事実は公式のみ（11/20 確認）: リンナイ RRB71W15GV系・パロマ PD-N34WV 取扱説明書（煮洗い約30分・使えない洗剤/道具・年1回点検）、ダイキン CLUB DAIKIN 2記事＋製品ページ（2025 A/D・E・R：水内部クリーン月1回・電気代52〜63円/加湿水109円・ダストボックス「1年に1度」vs CLUB DAIKIN「約3〜10年」を併記）＋2015/2025 お知らせ、LIXIL Q&A 洗剤可否表（酸性＝便器/タンク外○・タンク内×・便座×）・湿布法・尿石、TOTO トイレ資料・浴室「床のお手入れ」「汚れの基礎知識」、LIXIL 浴室床 日常/定期、国民生活センター 2026-03-18（塩素系＋酸性で16ppm超・クエン酸併用の事例）、東京都保健医療局、サンゲツ・リリカラ（素材別）
+- 業者公式料金 11/20: 本舗 キッチン19,800・トイレ9,900（便器追加5,500）・浴室19,800（コーティング9,900）・壁紙クリーニング11,000（20㎡以下）・壁紙染色22,000・エアコンお掃除機能付き24,200/22,000、★本舗の完全分解洗浄は東芝・ダイキン製のみ対応店舗限定で＋12,100（他＋8,800）。ダスキン キッチン20,680（グリル+2,530）・トイレ10,340（ロータンク+4,400）・浴室22,000（カビ防止コート+5,060）。革命 キッチン17,930・トイレ8,250（タンク内+3,850）・浴室17,930
+- skip: 「五徳 掃除」＝gas-stove-cleaning と重複（五徳の手入れ・煮洗い・FAQ を統合）。既存 /guide-detail/kitchen-oil/・bathroom-mold/ は業者選び/業者のカビ記載の頁＝DIY 手順の今回とは意図が別
+- 導線: /guide/・/sitemap/（HTML）・相互リンク（daikin→aircon 2本、toilet⇔bath-floor）。sitemap 3,879→3,884
+- out: 3,893頁・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）・trust-audit --dry 新規5 指摘0。1e4f1198 → 本番5頁 200・h1・/guide/・sitemap.xml 確認
+- 次回注意: queue 次行「浴槽 掃除」は bath-floor-black-stains・既存 bathroom-mold と近い→重複確認してから
