@@ -785,3 +785,11 @@ GSC実数診断:
 - affiliateUrl は null（CTA 非描画）。RT（ワンヒッター16436・ハート7964・ミニメイド7481・ミツモア15653）のコードは、同一案件の他ASP単価と比べて（高単価側・差15%以内は felmat）から設定
 - ハートクリーニング公式トップの「9,800円」は税抜（税込10,780円）＝不一致ではない
 - キャプチャ4枚（captured_at 2026-11-19）・KEY_PRICES 3社。out: 新規4頁＋partner 一覧を含む34頁・precheck 全項目OK・計測リンク 749→749・sitemap 3,865→3,869。95dc6a8e
+
+### 2026-11-19 20:00 kwexp（競合 ouchipro.com・作成初日）: 「自分で掃除する」段階のガイド5本（1デプロイ）
+- 新設: /guide-detail/aircon-self-cleaning/（エアコン掃除 自分で 59,200）・aircon-water-leak/（エアコン 水漏れ 48,400）・aircon-smell/（エアコン 臭い 17,760）・washer-drain-cleaning/（洗濯機 排水口 掃除 17,760）・washer-lifespan/（洗濯機 寿命 14,480）。共通部品 app/components/DiyGuideArticle.tsx＋データ app/data/diyGuides.ts（Breadcrumb・WebPage・FAQPage）
+- 事実は公式のみ（11/19 確認）: 日立 kadenfan FAQ・ダイキン CLUB DAIKIN/大切なお知らせ（FNシリーズ水漏れ無償修理 2025-11-28）・シャープ コールセンターからのアドバイス・NITE 2020-06-25（内部洗浄の火災20件）・内閣府 消費動向調査 2026年3月（洗濯機 10.1年・時系列22回を当サイトで抜粋）・東芝/シャープ 部品保有期間6年・SANEI 排水トラップ取説。各ページに「業者に依頼する目安」と業者公式料金（本舗 エアコン14,300/完全分解+8,800・洗濯機 縦12,100/ドラム18,700/洗濯パン+2,200、ダスキン エアコン15,400/26,400・洗濯機15,400/22,000、革命 9,980/18,700）
+- ★本舗の洗濯機は「製造から6年以上経過」はサービスを断る/保証できない場合あり（部品保有6年と連動）。METI の長期使用製品安全表示制度ページは 403 のため不使用
+- 導線: /guide/ テーマ別ガイド・/sitemap/（HTML）・記事間の関連リンク。sitemap 3,869→3,874（lastmod 2026-11-19 ＋ guide/・sitemap/）
+- out: 3,883頁・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）・trust-audit --dry 指摘0。79d5ee18（CF success）→ 本番5頁 200・h1 確認
+- 次回注意: queue 次行「エアコンフィルター 掃除」は aircon-self-cleaning とフィルター手順が重なる→重複確認してから
