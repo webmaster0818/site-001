@@ -107,6 +107,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/aircon-fan-cleaning/", name: "エアコンの送風ファンの掃除" },
   { href: "/guide-detail/aircon-cleaning-spray/", name: "エアコン洗浄スプレーの使用について" },
   { href: "/guide-detail/outdoor-unit-cleaning/", name: "エアコン室外機の掃除方法" },
+  { href: "/guide-detail/gas-stove-cleaning/", name: "ガスコンロの掃除方法（五徳・バーナー・天板）" },
+  { href: "/guide-detail/daikin-aircon-cleaning/", name: "ダイキンのエアコン掃除" },
+  { href: "/guide-detail/toilet-citric-acid/", name: "トイレ掃除にクエン酸を使うときの注意点" },
+  { href: "/guide-detail/wallpaper-stain-removal/", name: "壁紙（クロス）の汚れ落とし" },
+  { href: "/guide-detail/bath-floor-black-stains/", name: "お風呂の床の黒ずみの落とし方" },
 ];
 
 const scenePages: PageLink[] = [

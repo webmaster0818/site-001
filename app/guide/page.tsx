@@ -346,6 +346,11 @@ export default function Guide() {
               { href: "/guide-detail/aircon-fan-cleaning/", label: "エアコンの送風ファンの掃除" },
               { href: "/guide-detail/aircon-cleaning-spray/", label: "エアコン洗浄スプレーの使用について" },
               { href: "/guide-detail/outdoor-unit-cleaning/", label: "エアコン室外機の掃除方法" },
+              { href: "/guide-detail/gas-stove-cleaning/", label: "ガスコンロの掃除方法（五徳・バーナー・天板）" },
+              { href: "/guide-detail/daikin-aircon-cleaning/", label: "ダイキンのエアコン掃除" },
+              { href: "/guide-detail/toilet-citric-acid/", label: "トイレ掃除にクエン酸を使うときの注意点" },
+              { href: "/guide-detail/wallpaper-stain-removal/", label: "壁紙（クロス）の汚れ落とし" },
+              { href: "/guide-detail/bath-floor-black-stains/", label: "お風呂の床の黒ずみの落とし方" },
             ].map((g) => (
               <li key={g.href}>
                 <Link href={g.href} className="card bg-base-100 p-4 block text-primary font-bold hover:underline">
