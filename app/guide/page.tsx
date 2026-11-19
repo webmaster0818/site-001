@@ -336,6 +336,11 @@ export default function Guide() {
               { href: "/guide-detail/aircon-frequency/", label: "エアコンクリーニングの頻度" },
               { href: "/guide-detail/bathroom-mold/", label: "浴室のカビ対策" },
               { href: "/guide-detail/kitchen-oil/", label: "キッチンの油汚れ対策" },
+              { href: "/guide-detail/aircon-self-cleaning/", label: "エアコン掃除を自分でできる範囲" },
+              { href: "/guide-detail/aircon-water-leak/", label: "エアコンの水漏れの原因と対処" },
+              { href: "/guide-detail/aircon-smell/", label: "エアコンの臭いの原因と対処" },
+              { href: "/guide-detail/washer-drain-cleaning/", label: "洗濯機の排水口の掃除方法" },
+              { href: "/guide-detail/washer-lifespan/", label: "洗濯機の寿命の目安" },
             ].map((g) => (
               <li key={g.href}>
                 <Link href={g.href} className="card bg-base-100 p-4 block text-primary font-bold hover:underline">

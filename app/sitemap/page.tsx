@@ -97,6 +97,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/before-checklist/", name: "依頼前のチェックリスト" },
   { href: "/guide-detail/diy-vs-pro/", name: "自分で行う掃除と業者への依頼の比較" },
   { href: "/guide-detail/trouble-cases/", name: "トラブル事例と対処法" },
+  { href: "/guide-detail/aircon-self-cleaning/", name: "エアコン掃除を自分でできる範囲" },
+  { href: "/guide-detail/aircon-water-leak/", name: "エアコンの水漏れの原因と対処" },
+  { href: "/guide-detail/aircon-smell/", name: "エアコンの臭いの原因と対処" },
+  { href: "/guide-detail/washer-drain-cleaning/", name: "洗濯機の排水口の掃除方法" },
+  { href: "/guide-detail/washer-lifespan/", name: "洗濯機の寿命の目安" },
 ];
 
 const scenePages: PageLink[] = [
