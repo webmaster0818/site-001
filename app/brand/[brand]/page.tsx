@@ -412,6 +412,15 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
             にまとめています。
           </p>
         )}
+        {brand === "duskin" && (
+          <p className="text-sm mt-4">
+            このページは店舗一覧です。ダスキン本部の公式サイトで申し込むサービスの料金・やり直しの保証・申込み方法は
+            <a href="/review/duskin/" className="text-primary underline decoration-primary/30 underline-offset-2 font-bold">ダスキン サービスマスターの口コミ・評判を公式情報で検証したページ</a>
+            に、加盟店の株式会社ナックが運営する別の窓口は
+            <a href="/review/nac-duskin/" className="text-primary underline decoration-primary/30 underline-offset-2 font-bold">ナックダスキンの検証ページ</a>
+            にまとめています。
+          </p>
+        )}
         {brand === "osoujikakumei" && <KakumeiAffiliateCTA variant="text1" banner />}
       </section>
 

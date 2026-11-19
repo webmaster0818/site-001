@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const ym = p.confirmedAt.replace(/(\d+年\d+月).*/, "$1");
   return withPageSocial({
     title: `${p.name}の口コミ・評判は？料金・対応エリア・保証を公式情報で検証【${ym}確認】`,
-    description: `${p.name}（${p.company}）の料金体系・対応エリア・保証・支払方法・キャンセル条件を、公式サイトで確認して掲載しています。確認できなかった項目も明記しており、架空の口コミは掲載していません。`,
+    description: p.metaDescription ?? `${p.name}（${p.company}）の料金体系・対応エリア・保証・支払方法・キャンセル条件を、公式サイトで確認して掲載しています。確認できなかった項目も明記しており、架空の口コミは掲載していません。`,
     alternates: { canonical: `https://cleaning-choices.com/review/${p.slug}/` },
   });
 }
@@ -118,6 +118,33 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
             {publishedIso !== modifiedIso && <>公開日 <time dateTime={publishedIso}>{publishedIso.replace(/-/g, "/")}</time>・</>}
             最終確認・更新日 <time dateTime={modifiedIso}>{modifiedIso.replace(/-/g, "/")}</time>
           </p>
+          {p.quickAnswer && p.quickAnswer.length > 0 && (
+            <div className="mt-6 rounded-xl border border-sky-200 bg-white p-4 md:p-5 max-w-3xl">
+              <p className="text-sm font-bold text-gray-900 mb-3">{p.name}の要点（公式サイトの記載{p.quickAnswerCheckedAt ? `・料金は${p.quickAnswerCheckedAt}に再確認` : ""}）</p>
+              <table className="w-full text-sm border-collapse">
+                <tbody>
+                  {p.quickAnswer.map((r) => (
+                    <tr key={r.label}>
+                      <th className="py-2 pr-3 border-t border-gray-100 text-left font-bold text-gray-700 align-top w-28 md:w-36">{r.label}</th>
+                      <td className="py-2 border-t border-gray-100 text-gray-800 leading-relaxed">{r.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p className="mt-2 text-xs text-gray-500">料金の詳細・条件は下の「公式サイトの料金」の表をご覧ください。</p>
+            </div>
+          )}
+          {p.seeAlso && (
+            <p className="mt-4 text-sm text-gray-700 leading-relaxed max-w-3xl">
+              {p.seeAlso.note}
+              {p.seeAlso.links.map((l, i) => (
+                <span key={l.href}>
+                  {i > 0 ? "／" : ""}
+                  <a href={l.href} className="text-sky-600 hover:underline font-bold">{l.label}</a>
+                </span>
+              ))}
+            </p>
+          )}
           {p.areaNote && (
             <p className="mt-4 inline-block rounded-lg bg-amber-50 border border-amber-200 px-4 py-2 text-sm font-bold text-amber-800">対応エリアにご注意：{p.areaNote}</p>
           )}
