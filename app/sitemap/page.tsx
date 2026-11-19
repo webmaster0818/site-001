@@ -102,6 +102,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/aircon-smell/", name: "エアコンの臭いの原因と対処" },
   { href: "/guide-detail/washer-drain-cleaning/", name: "洗濯機の排水口の掃除方法" },
   { href: "/guide-detail/washer-lifespan/", name: "洗濯機の寿命の目安" },
+  { href: "/guide-detail/aircon-lifespan/", name: "エアコンの寿命の目安" },
+  { href: "/guide-detail/aircon-not-cooling/", name: "エアコンが冷えない原因と対処" },
+  { href: "/guide-detail/aircon-fan-cleaning/", name: "エアコンの送風ファンの掃除" },
+  { href: "/guide-detail/aircon-cleaning-spray/", name: "エアコン洗浄スプレーの使用について" },
+  { href: "/guide-detail/outdoor-unit-cleaning/", name: "エアコン室外機の掃除方法" },
 ];
 
 const scenePages: PageLink[] = [
