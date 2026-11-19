@@ -793,3 +793,11 @@ GSC実数診断:
 - 導線: /guide/ テーマ別ガイド・/sitemap/（HTML）・記事間の関連リンク。sitemap 3,869→3,874（lastmod 2026-11-19 ＋ guide/・sitemap/）
 - out: 3,883頁・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）・trust-audit --dry 指摘0。79d5ee18（CF success）→ 本番5頁 200・h1 確認
 - 次回注意: queue 次行「エアコンフィルター 掃除」は aircon-self-cleaning とフィルター手順が重なる→重複確認してから
+
+### 2026-11-20 深夜02時 kwexp（競合 ouchipro.com）: エアコンのガイド5本（1デプロイ）
+- 新設: /guide-detail/aircon-lifespan/（エアコン 寿命 11,840）・aircon-not-cooling/（エアコン 冷えない 9,680）・aircon-fan-cleaning/（エアコン ファン 掃除 9,680）・aircon-cleaning-spray/（エアコン掃除スプレー 9,680）・outdoor-unit-cleaning/（室外機 掃除 9,680）。11/19 の DiyGuideArticle＋diyGuides.ts に追加（D2=2026-11-20・SRC_AC_PRICES・OUTDOOR_PRICES 新設）
+- 事実は公式のみ（11/20 確認）: 内閣府 消費動向調査 2026年3月（ルームエアコン 13.4年・故障66.6%・11品目で最長・時系列22回を抜粋）・東芝/シャープ 部品保有 エアコン10年・ダイキン購入相談窓口（寿命10年程度＝2020年同社調べ・保証 本体1年/冷媒系統5年・故障サイン）・日立 FAQ post-19/166/120/41/63・ダイキン CLUB DAIKIN aircon_care・シャープ care_a3・NITE 2020-06-25（事故263件・火災244件・内部洗浄の火災20件）
+- 業者の公式料金 11/20 再確認（11/19 値と一致）＋室外機オプション: 本舗 5,500（壁掛けと併用・天吊り/屋根置き不可）・ダスキン 6,600（業務用不可）・革命 3,300／大型 9,900。★受付年数: 本舗=製造9年以上は断る/保証できない場合あり・革命=10年以上保証外/20年以上作業不可・ダスキン=長期間経過は断る場合あり（年数記載なし）
+- skip: 「エアコンフィルター 掃除」＝aircon-self-cleaning と重複（手順・頻度・FAQ 掲載済み）
+- 導線: /guide/・/sitemap/（HTML）・既存 aircon 3本の関連ガイド。sitemap 3,874→3,879（lastmod 2026-11-20 ＝新規5＋aircon 3本・guide・sitemap）
+- out: 3,888頁・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）・trust-audit --dry 新規5 指摘0（既存 /review/kireiyu/ C3 1件＝否定文の誤検知）。2e4f6916 → 本番5頁 200・h1 確認
