@@ -820,6 +820,15 @@ GSC実数診断:
 - 導線: /guide/・/sitemap/（HTML）・既存 related（bath-floor→bathtub、washer-drain→washer-tub、aircon-not-cooling→heating、gas-stove→sink）。sitemap 3,879→3,884（lastmod 2026-11-20）
 - out: 3,893頁・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）。1回目のビルドは Google Fonts 取得失敗（Turbopack module not found）→ 再ビルドで成功。f791c7bb（CF 20:16 反映）→ 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 新規5 指摘0（既存 /review/kireiyu/ C3 1件＝否定文の誤検知）
 
+### 2026-11-21 深夜02時 kwexp（競合 ouchipro.com）: エアコン・トイレ・浴室・キッチンのガイド5本（1デプロイ）
+- 新設: /guide-detail/aircon-internal-clean/（エアコン 内部クリーン 5,280）・toilet-fan-cleaning/（トイレ 換気扇 掃除 5,280）・toilet-floor-cleaning/（トイレ 床 掃除 5,280）・bath-fan-cleaning/（お風呂 換気扇 掃除 5,280）・fish-grill-cleaning/（魚焼きグリル 掃除 4,320）。diyGuides.ts に追加（D3・SRC4・TOILET_FAN/TOILET_FLOOR/BATH_FAN_PRICES 新設。グリルは KITCHEN_PRICES を流用）
+- 事実は公式のみ（11/21 確認）: 内部クリーン＝三菱 CME・パナソニック用語集/取説 CS-K222D・富士通ゼネラル取説 AS-ZN253N・日立 a34/post-159・東芝 Nシリーズ/FAQ 704・シャープ取説 AY-L22S・ダイキン FAQ 2504/2995/2930 を7社比較（時間・電気代・既存カビ不可・入切）。換気扇＝パナソニック天井埋込形取説（1か月/3か月・標準使用期間15年）・三菱 パイプ用/ダクト用/バス乾/取り替え目安・TOTO 三乾王・LIXIL Q&A/SQUARE 179・マックス FAQ。床＝TOTO・LIXIL 日常/定期・パナソニック基礎知識・東リ FAQ 11・サンゲツ。グリル＝リンナイ 安全のお知らせ/FAQ 449/499・ノーリツ・パロマ・パナソニック IH・NITE Vol.489（2025-11-25）・東京消防庁
+- ★東芝は内部乾燥の時間・電気代・既存カビの記載が公式で取れず「記載なし」と明記。TOTO の「中性以外の洗剤は材質に影響」は検索要約のみ＝不使用
+- 業者公式料金 11/21: 本舗 トイレ換気扇+3,300・床ワックス+1,100・浴室乾燥機+7,700（★製造9年以上は断る/保証できない場合あり）、ダスキン トイレ床1m²追加+2,530・浴室暖房乾燥機（換気扇）内部 +5,830（ファン外せない）/+10,120（外せる）/単独11,000、革命 通常換気扇+3,850・浴室乾燥機11,000。基本料金の換気扇はカバー/表面まで（3社とも）
+- skip: 「洗濯機 臭い」＝washer-tub-cleaning・washer-drain-cleaning と重複、「エアコン 分解洗浄」＝aircon-fan-cleaning と重複
+- 導線: /guide/・/sitemap/（HTML）・既存 related（toilet-citric-acid→床/換気扇、gas-stove→グリル、bathtub→浴室換気扇、aircon-smell→内部クリーン）。sitemap.xml 新規5＋lastmod 2026-11-21（既存4本・guide・sitemap）
+- out: 3,901 HTML・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）・新規5頁 copy-audit NG 0。354d47f8 → 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 通知0
+
 ### 2026-11-20 朝ルーチン: 公式404の5店を掲載から外し 301（11/19 宣言の既定案）＋110番の確認（新規開示なし）＋点検 C3
 - 公式再確認（11/20 09:1x 生HTML）: 店舗ページ 5店とも 404（https://www.osoujihonpo.com/shop/detail/21196/・16607/・20773/・18810/、https://www.osoujikakumei.jp/yamaguchi_hofunishi/）。一覧にも無し＝八戸市 /shop/tohoku/aomori/2203/ 3店（18274・19936・21289）・福島県 /shop/tohoku/fukushima/ 20店・広島市東区 /shop/chugoku/hiroshima/34102/ 1店（21404）・富山県 /shop/hokuriku/toyama/ 12店（TOYAMA_HONPO と同じ12店）・革命 /yamaguchi/ 3店（下松中央・周南・黒川）。復活した店なし
 - 手順は 99de27e2（宇都宮陽東店）と同じ: providers.json から削除、_redirects でその店を載せていた最も狭いエリアページへ 301（21196→/areas/aomori/・16607→/areas/fukushima/・20773→/areas/hiroshima-higashi/・18810→/areas/toyama/・hofunishi→/areas/yamaguchi/）。providerExtras の3店の「掲載状況」注記を削除、HONPO_HUB_NOTE「全国1,875店舗」→1,871、富山県の要点の富山新庄店の注記を削除（確認日 11/14→11/20）
