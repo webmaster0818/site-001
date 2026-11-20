@@ -351,6 +351,11 @@ export default function Guide() {
               { href: "/guide-detail/toilet-citric-acid/", label: "トイレ掃除にクエン酸を使うときの注意点" },
               { href: "/guide-detail/wallpaper-stain-removal/", label: "壁紙（クロス）の汚れ落とし" },
               { href: "/guide-detail/bath-floor-black-stains/", label: "お風呂の床の黒ずみの落とし方" },
+              { href: "/guide-detail/bathtub-cleaning/", label: "浴槽の掃除方法（エプロン内部・追いだき配管）" },
+              { href: "/guide-detail/oxiclean-bathroom/", label: "オキシクリーンでお風呂を掃除する方法と注意点" },
+              { href: "/guide-detail/washer-tub-cleaning/", label: "洗濯機の槽洗浄のやり方と頻度" },
+              { href: "/guide-detail/sink-water-stains/", label: "シンクの水垢の落とし方" },
+              { href: "/guide-detail/aircon-heating-not-warm/", label: "エアコンの暖房が効かない原因と対処" },
             ].map((g) => (
               <li key={g.href}>
                 <Link href={g.href} className="card bg-base-100 p-4 block text-primary font-bold hover:underline">

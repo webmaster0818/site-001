@@ -112,6 +112,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/toilet-citric-acid/", name: "トイレ掃除にクエン酸を使うときの注意点" },
   { href: "/guide-detail/wallpaper-stain-removal/", name: "壁紙（クロス）の汚れ落とし" },
   { href: "/guide-detail/bath-floor-black-stains/", name: "お風呂の床の黒ずみの落とし方" },
+  { href: "/guide-detail/bathtub-cleaning/", name: "浴槽の掃除方法（エプロン内部・追いだき配管）" },
+  { href: "/guide-detail/oxiclean-bathroom/", name: "オキシクリーンでお風呂を掃除する方法と注意点" },
+  { href: "/guide-detail/washer-tub-cleaning/", name: "洗濯機の槽洗浄のやり方と頻度" },
+  { href: "/guide-detail/sink-water-stains/", name: "シンクの水垢の落とし方" },
+  { href: "/guide-detail/aircon-heating-not-warm/", name: "エアコンの暖房が効かない原因と対処" },
 ];
 
 const scenePages: PageLink[] = [
