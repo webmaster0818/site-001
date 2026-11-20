@@ -810,3 +810,11 @@ GSC実数診断:
 - 導線: /guide/・/sitemap/（HTML）・相互リンク（daikin→aircon 2本、toilet⇔bath-floor）。sitemap 3,879→3,884
 - out: 3,893頁・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）・trust-audit --dry 新規5 指摘0。1e4f1198 → 本番5頁 200・h1・/guide/・sitemap.xml 確認
 - 次回注意: queue 次行「浴槽 掃除」は bath-floor-black-stains・既存 bathroom-mold と近い→重複確認してから
+
+### 2026-11-20 朝ルーチン: 公式404の5店を掲載から外し 301（11/19 宣言の既定案）＋110番の確認（新規開示なし）＋点検 C3
+- 公式再確認（11/20 09:1x 生HTML）: 店舗ページ 5店とも 404（https://www.osoujihonpo.com/shop/detail/21196/・16607/・20773/・18810/、https://www.osoujikakumei.jp/yamaguchi_hofunishi/）。一覧にも無し＝八戸市 /shop/tohoku/aomori/2203/ 3店（18274・19936・21289）・福島県 /shop/tohoku/fukushima/ 20店・広島市東区 /shop/chugoku/hiroshima/34102/ 1店（21404）・富山県 /shop/hokuriku/toyama/ 12店（TOYAMA_HONPO と同じ12店）・革命 /yamaguchi/ 3店（下松中央・周南・黒川）。復活した店なし
+- 手順は 99de27e2（宇都宮陽東店）と同じ: providers.json から削除、_redirects でその店を載せていた最も狭いエリアページへ 301（21196→/areas/aomori/・16607→/areas/fukushima/・20773→/areas/hiroshima-higashi/・18810→/areas/toyama/・hofunishi→/areas/yamaguchi/）。providerExtras の3店の「掲載状況」注記を削除、HONPO_HUB_NOTE「全国1,875店舗」→1,871、富山県の要点の富山新庄店の注記を削除（確認日 11/14→11/20）
+- 件数: 全 3,524→3,519店・本舗 1,875→1,871・革命 452→451（県別: 青森 本舗18→17・福島 30→29・広島 29→28・富山 13→12・山口 革命4→3）。out 3,896→3,891 HTML・本文が変わったのは78頁（エリア8・brand 2・TOP・ranking 4・近隣枠が入れ替わった provider 等）・sitemap 3,884→3,879 URL・lastmod 78（2026-11-20）。計測リンク href 749→748（削除した革命 防府西の頁の1本分。残る頁ごとの件数は全頁一致）・app/ ソース 49→49。precheck 全項目OK。581340fa
+- 判断待ちのまま触っていない: 五所川原（20702）・中川高畑（21315）・玉名岱明（20954）
+- 110番: TDnet 11/19 全3頁・11/20（09:00 時点 1頁）に 3989 なし（11/16 一覧で 39890 検出を確認）。公式トップの「東証上場企業運営」は残る → partners.ts 不変
+- 点検 11/20: C3 /review/kireiyu/「当サイトが効果を検証したものではありません」＝否定の断り書き（本番 11/20 原文）で誤検知・修正なし
