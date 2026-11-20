@@ -361,6 +361,11 @@ export default function Guide() {
               { href: "/guide-detail/toilet-floor-cleaning/", label: "トイレの床の掃除方法" },
               { href: "/guide-detail/bath-fan-cleaning/", label: "お風呂の換気扇の掃除方法" },
               { href: "/guide-detail/fish-grill-cleaning/", label: "魚焼きグリルの掃除方法" },
+              { href: "/guide-detail/range-hood-filter-cleaning/", label: "換気扇（レンジフード）フィルターの掃除方法" },
+              { href: "/guide-detail/toilet-cleaning-basics/", label: "トイレ掃除のやり方（部位別・頻度別）" },
+              { href: "/guide-detail/aircon-noise/", label: "エアコンの異音の原因と対処" },
+              { href: "/guide-detail/kitchen-drain-cleaning/", label: "キッチンの排水口の掃除方法" },
+              { href: "/guide-detail/ih-cooktop-cleaning/", label: "IHコンロ（IHクッキングヒーター）の掃除方法" },
             ].map((g) => (
               <li key={g.href}>
                 <Link href={g.href} className="card bg-base-100 p-4 block text-primary font-bold hover:underline">

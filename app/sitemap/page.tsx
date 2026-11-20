@@ -122,6 +122,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/toilet-floor-cleaning/", name: "トイレの床の掃除方法" },
   { href: "/guide-detail/bath-fan-cleaning/", name: "お風呂の換気扇の掃除方法" },
   { href: "/guide-detail/fish-grill-cleaning/", name: "魚焼きグリルの掃除方法" },
+  { href: "/guide-detail/range-hood-filter-cleaning/", name: "換気扇（レンジフード）フィルターの掃除方法" },
+  { href: "/guide-detail/toilet-cleaning-basics/", name: "トイレ掃除のやり方（部位別・頻度別）" },
+  { href: "/guide-detail/aircon-noise/", name: "エアコンの異音の原因と対処" },
+  { href: "/guide-detail/kitchen-drain-cleaning/", name: "キッチンの排水口の掃除方法" },
+  { href: "/guide-detail/ih-cooktop-cleaning/", name: "IHコンロ（IHクッキングヒーター）の掃除方法" },
 ];
 
 const scenePages: PageLink[] = [
