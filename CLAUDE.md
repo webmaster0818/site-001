@@ -826,3 +826,4 @@ GSC実数診断:
 - 競合（WebSearch 日本の結果あり）: 「ハートクリーニング 口コミ」＝駅探・セレクトラ・みん評、「ミニメイド 口コミ」＝駅探・みん評、「ミツモア エアコンクリーニング 口コミ」＝ミツモア自身の口コミ頁・lifehacker、「ワンヒッター 口コミ」＝該当なし。競合は口コミ評点・クラウドワークス等のアンケートを載せるが partners.ts 冒頭ルールで不使用。料金表・エリア・キャンセル・支払い・他社比較は既に掲載
 - 内部リンク: 4社は PartnerCards 経由で既に ranking 5頁・TOP・before-checklist 等から 12〜34頁の被リンクあり（minimaid は r-maid・casy・kajitaku の家事代行頁から）。共通部品は触らず、データ駆動の time-comparison のみ追加
 - out: 3,891 HTML・表示が変わったのは5頁のみ（4社＋time-comparison）・precheck 全項目OK・計測リンク href（rentracks r.html／felmat／a8／moshimo 等）782→782・486頁で頁ごと一致・sitemap lastmod 5（2026-11-20）
+- 8427d2b3・本番 12:34 ?cb= で5頁とも新内容（要点の確認日 11/20・旧 11/19 0件、ミツモア 11/18更新・5,041人／旧 11/17・5,037 0件、time-comparison にワンヒッター・ハートの行）・sitemap 2026-11-20 が5件
