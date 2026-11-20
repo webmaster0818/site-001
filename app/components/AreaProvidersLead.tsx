@@ -181,17 +181,17 @@ export default function AreaProvidersLead({ slug, breadcrumbLd = true }: { slug:
                 <a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>にまとめています。
               </li>
             )}
-            {/* 2026-11-14: 同上。県内の本舗の店舗ページへの導線が一覧の中だけだった → 公式の富山県一覧（2026-11-14 確認）にある12店を要点で直接リンク */}
+            {/* 2026-11-14: 同上。県内の本舗の店舗ページへの導線が一覧の中だけだった → 公式の富山県一覧（2026-11-14 確認）にある12店を要点で直接リンク。2026-11-20: 公式404の富山新庄店（honpo-18810）を掲載から外し、その注記を削除（公式一覧は同じ12店を 11/20 に再確認） */}
             {area.slug === "toyama-ken" && (
               <li>
-                ・富山県のおそうじ本舗（公式の富山県の店舗一覧にある12店・2026-11-14確認）:{" "}
+                ・富山県のおそうじ本舗（公式の富山県の店舗一覧にある12店・2026-11-20確認）:{" "}
                 {TOYAMA_HONPO.map(([slug, label], i) => (
                   <span key={slug}>
                     {i > 0 && "・"}
                     <a href={`/provider/${slug}/`} className="underline text-primary">{label}</a>
                   </span>
                 ))}
-                。当サイト掲載の富山新庄店は、公式の店舗ページが表示されず（404）公式の富山県一覧にも載っていません（
+                （
                 <a href="https://www.osoujihonpo.com/shop/hokuriku/toyama/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式 富山県の店舗一覧</a>）。
               </li>
             )}

@@ -17446,45 +17446,6 @@
   "verified_at": "2026-08-15"
  },
  {
-  "slug": "kakumei-yamaguchi_hofunishi",
-  "brand": "kakumei",
-  "brand_name": "おそうじ革命",
-  "name": "おそうじ革命 山口防府西店",
-  "pref_ja": "山口県",
-  "pref": "yamaguchi",
-  "address": "山口県防府市西浦７３３",
-  "zip": "747-0835",
-  "tel": "0120-402-362",
-  "charge_region": [
-   "下関市",
-   "宇部市",
-   "山口市",
-   "萩市",
-   "防府市",
-   "下松市",
-   "岩国市",
-   "光市",
-   "長門市",
-   "柳井市",
-   "美祢市",
-   "周南市",
-   "山陽小野田市",
-   "大島郡周防大島町",
-   "玖珂郡和木町",
-   "熊毛郡上関町",
-   "熊毛郡田布施町",
-   "熊毛郡平生町",
-   "阿武郡阿武町"
-  ],
-  "services": [
-   "クレジット払い可",
-   "電子マネー対応"
-  ],
-  "invoice_number": "T4-8103-1300-1293",
-  "source_url": "https://www.osoujikakumei.jp/yamaguchi_hofunishi/",
-  "verified_at": "2026-08-15"
- },
- {
   "slug": "kakumei-gunma_kiryuaioi",
   "brand": "kakumei",
   "brand_name": "おそうじ革命",
@@ -44818,21 +44779,6 @@
   "rating_checked_at": "2026-11-01"
  },
  {
-  "slug": "honpo-16607",
-  "brand": "honpo",
-  "brand_name": "おそうじ本舗",
-  "name": "おそうじ本舗 郡山横塚店",
-  "pref_ja": "福島県",
-  "pref": "fukushima",
-  "address": "福島県郡山市横塚",
-  "hours": "9:00～18:00",
-  "holiday": "不定休",
-  "rating_official": null,
-  "review_count_official": 6,
-  "source_url": "https://www.osoujihonpo.com/shop/detail/16607/",
-  "verified_at": "2026-08-15"
- },
- {
   "slug": "honpo-16608",
   "brand": "honpo",
   "brand_name": "おそうじ本舗",
@@ -50756,21 +50702,6 @@
   "source_url": "https://www.osoujihonpo.com/shop/detail/18806/",
   "verified_at": "2026-08-15",
   "rating_checked_at": "2026-11-01"
- },
- {
-  "slug": "honpo-18810",
-  "brand": "honpo",
-  "brand_name": "おそうじ本舗",
-  "name": "おそうじ本舗 富山新庄店",
-  "pref_ja": "富山県",
-  "pref": "toyama",
-  "address": "富山県富山市新庄町",
-  "hours": "9:00～18:00",
-  "holiday": "不定休",
-  "rating_official": 4.84,
-  "review_count_official": 19,
-  "source_url": "https://www.osoujihonpo.com/shop/detail/18810/",
-  "verified_at": "2026-08-15"
  },
  {
   "slug": "honpo-18814",
@@ -60398,21 +60329,6 @@
   "rating_checked_at": "2026-11-01"
  },
  {
-  "slug": "honpo-20773",
-  "brand": "honpo",
-  "brand_name": "おそうじ本舗",
-  "name": "おそうじ本舗 広島牛田店",
-  "pref_ja": "広島県",
-  "pref": "hiroshima",
-  "address": "広島県広島市東区牛田本町",
-  "hours": "9：00～18：00",
-  "holiday": "不定休",
-  "rating_official": null,
-  "review_count_official": 5,
-  "source_url": "https://www.osoujihonpo.com/shop/detail/20773/",
-  "verified_at": "2026-08-15"
- },
- {
   "slug": "honpo-20774",
   "brand": "honpo",
   "brand_name": "おそうじ本舗",
@@ -64411,21 +64327,6 @@
   "rating_checked_at": "2026-10-16",
   "rating_official": 5.0,
   "review_count_official": 24
- },
- {
-  "slug": "honpo-21196",
-  "brand": "honpo",
-  "brand_name": "おそうじ本舗",
-  "name": "おそうじ本舗 八戸白銀店",
-  "pref_ja": "青森県",
-  "pref": "aomori",
-  "address": "青森県八戸市白銀",
-  "hours": "9：00～18：00",
-  "holiday": "不定休",
-  "rating_official": 4.87,
-  "review_count_official": 15,
-  "source_url": "https://www.osoujihonpo.com/shop/detail/21196/",
-  "verified_at": "2026-08-15"
  },
  {
   "slug": "honpo-21197",
