@@ -829,6 +829,15 @@ GSC実数診断:
 - 導線: /guide/・/sitemap/（HTML）・既存 related（toilet-citric-acid→床/換気扇、gas-stove→グリル、bathtub→浴室換気扇、aircon-smell→内部クリーン）。sitemap.xml 新規5＋lastmod 2026-11-21（既存4本・guide・sitemap）
 - out: 3,901 HTML・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）・新規5頁 copy-audit NG 0。354d47f8 → 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 通知0
 
+### 2026-11-21 深夜04時 kwexp（競合 ouchipro.com）: キッチン・トイレ・エアコンのガイド5本（1デプロイ）
+- 新設: /guide-detail/range-hood-filter-cleaning/（換気扇フィルター 掃除 4,320）・toilet-cleaning-basics/（トイレ掃除 やり方 3,520）・aircon-noise/（エアコン 異音 2,880）・kitchen-drain-cleaning/（キッチン 排水口 掃除 2,880）・ih-cooktop-cleaning/（IHコンロ 掃除 2,320）。diyGuides.ts に追加（SRC5・RANGE_HOOD_PRICES/KITCHEN_DRAIN_PRICES・RANGE_HOOD_CTA/KITCHEN_CTA 新設。トイレは TOILET_PRICES、IH は KITCHEN_PRICES、異音は AIRCON_PRICES を流用）
+- 事実は公式のみ（11/21 確認）: レンジフード＝三菱 detail_09（フィルター月1以上・羽根半年1以上）・LIXIL kitchen_08 daily/regular（月1・約40℃・アルカリ性不可）・パナソニック care/kitchen/05（3か月/半年・35〜40℃ 20〜30分・換気扇用弱アルカリ性の湿布・市販フィルターカバー不可）。トイレ＝TOTO 07.htm・washlet_soji（ふだん/月1/半年/年1〜2）・パナソニック basic。異音＝日立 post-65/post-70/a08/a07・ダイキン knowledge3009/3010。排水口＝パナソニック care/kitchen/03（熱湯不可・塩素系ヌメリ取り注意）・LIXIL kitchen_02_regular（タイプ別・塩素系パイプ洗浄剤）。IH＝パナソニック care/kitchen/06（アルミホイル）・三菱 くらトク detail_665（ラップ・研磨剤30%以下・重曹不推奨）
+- ★メーカー間で分かれる点を本文に併記: アルカリ性洗剤（LIXIL不可 vs パナ 弱アルカリの湿布）・塩素系（パナ ヌメリ取り注意 vs LIXIL パイプ洗浄剤）・IHの焦げ（パナ アルミホイル vs 三菱 ラップ）。日立IH取説PDFは10MB超で取得できず不使用
+- 業者公式料金 11/21: 本舗 レンジフード19,800（★製造9年以上は断る/保証できない場合あり・屋外フード/ダクト対象外）・お掃除機能付き+6,600、ダスキン レンジフード22,000（幅15cm追加+2,530）・キッチン排水管+1,980、革命 レンジフード17,930／フード無し9,900。本舗キッチンは「排水トラップを外し排水口の中を掃除」
+- skip: 「洗濯機 オキシクリーン」＝washer-tub-cleaning、「エアコン 酸っぱい臭い」＝aircon-smell、「エアコン ドレンパン」＝aircon-water-leak・aircon-fan-cleaning、「エアコン 熱交換器」「エアコン フィン 掃除」＝aircon-self-cleaning・aircon-cleaning-spray と重複
+- 導線: /guide/・/sitemap/（HTML）・既存 related（gas-stove→レンジフード/IH、sink-water-stains→排水口、toilet-citric-acid→トイレ基本、aircon-self-cleaning→異音）。sitemap.xml 新規5＋lastmod 2026-11-21（既存4本）
+- out: 3,906 HTML・precheck 全項目OK。1回目のビルドは Google Fonts 取得失敗→再ビルドで成功。22f4e2cf → 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 通知0
+
 ### 2026-11-20 朝ルーチン: 公式404の5店を掲載から外し 301（11/19 宣言の既定案）＋110番の確認（新規開示なし）＋点検 C3
 - 公式再確認（11/20 09:1x 生HTML）: 店舗ページ 5店とも 404（https://www.osoujihonpo.com/shop/detail/21196/・16607/・20773/・18810/、https://www.osoujikakumei.jp/yamaguchi_hofunishi/）。一覧にも無し＝八戸市 /shop/tohoku/aomori/2203/ 3店（18274・19936・21289）・福島県 /shop/tohoku/fukushima/ 20店・広島市東区 /shop/chugoku/hiroshima/34102/ 1店（21404）・富山県 /shop/hokuriku/toyama/ 12店（TOYAMA_HONPO と同じ12店）・革命 /yamaguchi/ 3店（下松中央・周南・黒川）。復活した店なし
 - 手順は 99de27e2（宇都宮陽東店）と同じ: providers.json から削除、_redirects でその店を載せていた最も狭いエリアページへ 301（21196→/areas/aomori/・16607→/areas/fukushima/・20773→/areas/hiroshima-higashi/・18810→/areas/toyama/・hofunishi→/areas/yamaguchi/）。providerExtras の3店の「掲載状況」注記を削除、HONPO_HUB_NOTE「全国1,875店舗」→1,871、富山県の要点の富山新庄店の注記を削除（確認日 11/14→11/20）
