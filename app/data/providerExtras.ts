@@ -62,7 +62,7 @@ const HONPO_EXTRA_SOURCES: { label: string; url: string }[] = [
   { label: "おそうじ本舗 お客様の声", url: "https://www.osoujihonpo.com/house-cleaning/voice/" },
 ];
 
-// 2026-11-19 16:00 遅れ挽回: brandHub（本部の標準料金の要点）。値は 2026-11-19 に公式5ページで再確認（11/4 の値と全一致）
+// 2026-11-19 16:00 遅れ挽回: brandHub（本部の標準料金の要点）。値は 2026-11-19 に公式5ページで再確認（11/4 の値と全一致）。2026-11-20 にも公式5ページで再確認し全一致（11/20 の5店で使用）
 const HONPO_BRAND_PRICE_1119 =
   "エアコン 壁掛け 14,300円／台（2台以上の注文は12,100円／台）・お掃除機能付き 24,200円／台（同 22,000円／台）、キッチン・浴室・レンジフード 各19,800円／式、トイレ 9,900円／式、換気扇・キッチンクリーニングセット 36,300円／式";
 
@@ -1128,7 +1128,13 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
       ...HONPO_PRICE_SOURCES,
       ...HONPO_EXTRA_SOURCES,
     ],
-    hubNote: HONPO_HUB_NOTE,
+    // 2026-11-20 16:00 遅れ挽回: 11/19 の3店と同じ brandHub（下部の hubNote はこの枠と重複するため削除）
+    brandHub: {
+      role: "このページは「おそうじ本舗 志木本町店」（埼玉県志木市本町）1店舗の情報です。電話 0120-24-1000（本部フリーダイヤルと同じ番号）・9:00〜18:00・日曜日と不定休（公式店舗ページ 2026-11-20 確認）。公式の志木市の店舗一覧はこの店と志木上宗岡店の2店です（同日確認）",
+      price: HONPO_BRAND_PRICE_1119,
+      sources: HONPO_PRICE_SOURCES,
+      checkedAt: "2026-11-20",
+    },
     checkedAt: "2026-11-09",
   },
 
@@ -1155,7 +1161,13 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
       ...HONPO_PRICE_SOURCES,
       ...HONPO_EXTRA_SOURCES,
     ],
-    hubNote: HONPO_HUB_NOTE,
+    // 2026-11-20 16:00 遅れ挽回: 11/19 の3店と同じ brandHub（下部の hubNote はこの枠と重複するため削除）
+    brandHub: {
+      role: "このページは「おそうじ本舗 笛吹店」（山梨県笛吹市石和町広瀬）1店舗の情報です。電話 0120-29-9038（無料通話）・9:00〜19:00・不定休（公式店舗ページ 2026-11-20 確認）。公式の笛吹市の店舗一覧はこの店と春日居町店の2店、山梨県の一覧は12店です（同日確認）",
+      price: HONPO_BRAND_PRICE_1119,
+      sources: HONPO_PRICE_SOURCES,
+      checkedAt: "2026-11-20",
+    },
     checkedAt: "2026-11-09",
   },
 
@@ -1182,7 +1194,13 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
       ...HONPO_PRICE_SOURCES,
       ...HONPO_EXTRA_SOURCES,
     ],
-    hubNote: HONPO_HUB_NOTE,
+    // 2026-11-20 16:00 遅れ挽回: 11/19 の3店と同じ brandHub（下部の hubNote はこの枠と重複するため削除）
+    brandHub: {
+      role: "このページは「おそうじ本舗 甲斐店」（山梨県甲斐市竜王町）1店舗の情報です。電話 0120-768-012（無料通話）・8:00〜20:00・不定休（公式店舗ページ 2026-11-20 確認）。公式の甲斐市の店舗一覧はこの1店、山梨県の一覧は12店です（同日確認）",
+      price: HONPO_BRAND_PRICE_1119,
+      sources: HONPO_PRICE_SOURCES,
+      checkedAt: "2026-11-20",
+    },
     checkedAt: "2026-11-09",
   },
 
@@ -1209,7 +1227,13 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
       ...HONPO_PRICE_SOURCES,
       ...HONPO_EXTRA_SOURCES,
     ],
-    hubNote: HONPO_HUB_NOTE,
+    // 2026-11-20 16:00 遅れ挽回: 11/19 の3店と同じ brandHub（下部の hubNote はこの枠と重複するため削除）
+    brandHub: {
+      role: "このページは「おそうじ本舗 宝塚仁川店」（兵庫県宝塚市大成町）1店舗の情報です。電話 0120-967-106（無料通話）・9:00〜18:00・不定休（公式店舗ページ 2026-11-20 確認）。公式の宝塚市の店舗一覧はこの店を含め6店です（同日確認）",
+      price: HONPO_BRAND_PRICE_1119,
+      sources: HONPO_PRICE_SOURCES,
+      checkedAt: "2026-11-20",
+    },
     checkedAt: "2026-11-09",
   },
 
@@ -1305,7 +1329,13 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
       ...HONPO_PRICE_SOURCES,
       ...HONPO_EXTRA_SOURCES,
     ],
-    hubNote: "鹿児島県内のほかのおそうじ本舗の店舗や、ブランド全体の標準料金は、おそうじ本舗の店舗一覧ページにまとめています。",
+    // 2026-11-20 16:00 遅れ挽回: 11/19 の3店と同じ brandHub（下部の hubNote はこの枠と重複するため削除）
+    brandHub: {
+      role: "このページは「おそうじ本舗 霧島店」（鹿児島県霧島市国分中央）1店舗の情報です。電話 0120-453-942（無料通話）・営業時間と定休日は公式店舗ページに記載なし（2026-11-20 確認）。公式の霧島市の店舗一覧はこの1店です（同日確認）",
+      price: HONPO_BRAND_PRICE_1119,
+      sources: HONPO_PRICE_SOURCES,
+      checkedAt: "2026-11-20",
+    },
     checkedAt: "2026-11-10",
   },
   // 三川支店: 「ダスキン エアコン クリーニング 大分」11.0位・クリック0 → title/description をエアコン向けに（前回 10/19）、冒頭に公式の要点

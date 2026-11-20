@@ -1,14 +1,24 @@
 import Link from "next/link";
 import AreaProvidersLead from "../../components/AreaProvidersLead";
+import OosoujiPriceAnswer from "../../components/OosoujiPriceAnswer";
+import providers from "../../data/providers.json";
 import {Sparkles, Award, Shield, Zap, MapPin } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
+// 2026-11-20 16:00 遅れ挽回: 冒頭の大手3社の公式料金の答えで使う、札幌市内に所在する掲載店のブランド別店数（AreaProvidersLead と同じ数え方＝住所に「札幌市」）
+const AREA_COUNT = (providers as { address?: string | null; brand: string }[])
+ .filter((p) => (p.address ?? "").includes("札幌市"))
+ .reduce((a, p) => { if (p.brand === "honpo" || p.brand === "duskin" || p.brand === "kakumei") a[p.brand] += 1; return a; }, { honpo: 0, duskin: 0, kakumei: 0 });
+const AREA_TOTAL = AREA_COUNT.honpo + AREA_COUNT.duskin + AREA_COUNT.kakumei;
+const PAGE_TITLE = `札幌市のハウスクリーニング業者おすすめ比較｜大手3社の料金・${AREA_TOTAL}店舗 | クリーンナビ`;
+const PAGE_DESC = `札幌市のハウスクリーニング業者を比較。大手3社の公式料金（エアコン壁掛け おそうじ本舗14,300円・ダスキン15,400円・おそうじ革命9,980円、税込）と市内に所在する${AREA_TOTAL}店舗の電話・所在地を掲載（2026年11月20日確認）。`;
+
 export const metadata = {
- title: "札幌市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "札幌市のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: PAGE_TITLE,
+ description: PAGE_DESC,
  openGraph: {
- title: "札幌市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "札幌市のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: PAGE_TITLE,
+ description: PAGE_DESC,
  url: "https://cleaning-choices.com/areas/sapporo/",
  siteName: "クリーンナビ",
  images: [
@@ -24,8 +34,8 @@ export const metadata = {
  },
  twitter: {
  card: "summary_large_image",
- title: "札幌市のハウスクリーニング業者おすすめ比較 | クリーンナビ",
- description: "札幌市のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
+ title: PAGE_TITLE,
+ description: PAGE_DESC,
  images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
  },
  alternates: {
@@ -211,6 +221,13 @@ export default function SapporoArea() {
  <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z"fill="#f9fafb"></path>
  </svg>
  </section>
+ {/* 2026-11-20 16:00 遅れ挽回: 「ハウスクリーニング 業者」25.8位・「ハウスクリーニング おすすめ」18.8位・「ダスキン北野サービスマスター レビュー」11.1位がこの頁に着地。
+  11/17〜19（kagawa・tochigi・nara・kawaguchi）と同じ部品で冒頭に大手3社の公式料金（2026-11-20 再確認・北海道はダスキン ハウスワイドの Bエリア）＋市内の掲載店数、役割の1行と北野サービスマスターへの導線。この頁だけ */}
+ <OosoujiPriceAnswer areaLabel="札幌市" checked="2026年11月20日" duskinArea="B" duskinAreaLabel="北海道" storeCount={AREA_COUNT} />
+ <div className="container mx-auto px-4 max-w-5xl pt-4">
+  <p className="text-sm text-gray-700">このページは札幌市（10区）に所在する掲載店のページです。区ごとの店舗は区別ページ（<Link href="/areas/sapporo-chuo/" className="underline text-primary">中央区</Link>・<Link href="/areas/sapporo-kita/" className="underline text-primary">北区</Link>・<Link href="/areas/sapporo-higashi/" className="underline text-primary">東区</Link>・<Link href="/areas/sapporo-shiroishi/" className="underline text-primary">白石区</Link>・<Link href="/areas/sapporo-atsubetsu/" className="underline text-primary">厚別区</Link>・<Link href="/areas/sapporo-toyohira/" className="underline text-primary">豊平区</Link>・<Link href="/areas/sapporo-kiyota/" className="underline text-primary">清田区</Link>・<Link href="/areas/sapporo-minami/" className="underline text-primary">南区</Link>・<Link href="/areas/sapporo-nishi/" className="underline text-primary">西区</Link>・<Link href="/areas/sapporo-teine/" className="underline text-primary">手稲区</Link>）、全国の業者の比較は<Link href="/ranking/" className="underline text-primary">比較ランキング</Link>、選び方は<Link href="/guide/" className="underline text-primary">業者の選び方ガイド</Link>をご覧ください。</p>
+  <p className="text-sm text-gray-700 mt-2">「ダスキン北野サービスマスター」（札幌市清田区北野4条・電話 011-888-5177・月〜金 8:30〜17:30、土日祝は定休＝ダスキン公式店舗ページの「2026年9月1日時点の情報」）は<Link href="/provider/duskin-1103499/" className="underline text-primary">店舗ページ</Link>に掲載しています。ダスキン公式の店舗ページに利用者の口コミ・レビューの掲載はありません（2026年11月20日確認）。当サイトも独自の口コミは掲載していません。</p>
+ </div>
  <AreaProvidersLead slug="sapporo" />
  <section className="py-12">
  <div className="container mx-auto px-4">
