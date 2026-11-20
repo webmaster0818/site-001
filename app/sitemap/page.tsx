@@ -117,6 +117,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/washer-tub-cleaning/", name: "洗濯機の槽洗浄のやり方と頻度" },
   { href: "/guide-detail/sink-water-stains/", name: "シンクの水垢の落とし方" },
   { href: "/guide-detail/aircon-heating-not-warm/", name: "エアコンの暖房が効かない原因と対処" },
+  { href: "/guide-detail/aircon-internal-clean/", name: "エアコンの内部クリーンの運転時間・電気代・止め方" },
+  { href: "/guide-detail/toilet-fan-cleaning/", name: "トイレの換気扇の掃除方法" },
+  { href: "/guide-detail/toilet-floor-cleaning/", name: "トイレの床の掃除方法" },
+  { href: "/guide-detail/bath-fan-cleaning/", name: "お風呂の換気扇の掃除方法" },
+  { href: "/guide-detail/fish-grill-cleaning/", name: "魚焼きグリルの掃除方法" },
 ];
 
 const scenePages: PageLink[] = [

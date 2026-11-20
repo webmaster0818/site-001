@@ -356,6 +356,11 @@ export default function Guide() {
               { href: "/guide-detail/washer-tub-cleaning/", label: "洗濯機の槽洗浄のやり方と頻度" },
               { href: "/guide-detail/sink-water-stains/", label: "シンクの水垢の落とし方" },
               { href: "/guide-detail/aircon-heating-not-warm/", label: "エアコンの暖房が効かない原因と対処" },
+              { href: "/guide-detail/aircon-internal-clean/", label: "エアコンの内部クリーンの運転時間・電気代・止め方" },
+              { href: "/guide-detail/toilet-fan-cleaning/", label: "トイレの換気扇の掃除方法" },
+              { href: "/guide-detail/toilet-floor-cleaning/", label: "トイレの床の掃除方法" },
+              { href: "/guide-detail/bath-fan-cleaning/", label: "お風呂の換気扇の掃除方法" },
+              { href: "/guide-detail/fish-grill-cleaning/", label: "魚焼きグリルの掃除方法" },
             ].map((g) => (
               <li key={g.href}>
                 <Link href={g.href} className="card bg-base-100 p-4 block text-primary font-bold hover:underline">
