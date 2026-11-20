@@ -811,6 +811,15 @@ GSC実数診断:
 - out: 3,893頁・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）・trust-audit --dry 新規5 指摘0。1e4f1198 → 本番5頁 200・h1・/guide/・sitemap.xml 確認
 - 次回注意: queue 次行「浴槽 掃除」は bath-floor-black-stains・既存 bathroom-mold と近い→重複確認してから
 
+### 2026-11-20 20:00 kwexp（競合 ouchipro.com）: 浴室・洗濯機・キッチン・エアコン暖房のガイド5本（1デプロイ）
+- 新設: /guide-detail/bathtub-cleaning/（浴槽 掃除 6,480）・oxiclean-bathroom/（オキシクリーン お風呂 6,480）・washer-tub-cleaning/（洗濯機 槽洗浄 6,480）・sink-water-stains/（シンク 水垢 5,280）・aircon-heating-not-warm/（エアコン 暖房 効かない 5,280）。diyGuides.ts に追加（SRC3・BATHTUB_PRICES・BATH_CTA 新設）
+- 重複確認: 「浴槽 掃除」は bath-floor-black-stains（床）・bathroom-mold（33行の業者向け）と部位・意図が別＝浴槽内側・追いだき循環口/配管・エプロン内部の頻度表で作成。own-pages/GSC 90日に浴槽・槽洗浄・シンク・暖房・オキシの重複なし
+- 事実は公式のみ（11/20 確認）: LIXIL 浴槽 日常/定期・追いだき循環口・浴槽下・Q&A（追いだき配管 月1回・エプロン外し/スパージュ不可）、TOTO 浴室まるごと/Help（金属石けん・もらいさび・銅石けん）、日立エコキュート a19（循環洗浄 半年1回・推奨ジャバ1つ穴用・硫黄/酸/アルカリ不可）、オキシクリーン日本公式（グラフィコ・お風呂場/オキシ漬け/商品の注意/洗濯槽＝4Lに約28g・弱アルカリ性・追いだき配管の掲載なし）、日立 洗濯機 a67/a205/a45（1〜2か月/3〜4か月・酸素系/台所用漂白剤は不可・表示なしは500/200mL）、パナソニック公式通販（月1回 塩素系・酸素系/高発泡は勧めない・重曹/クエン酸は不適）、LIXIL シンク Q&A 2件（クエン酸水 200ml＋小さじ1・30分パック・材質別の可否表）＋パナソニック k23 PDF、日立 post-20・三菱電機 冬のFAQ PDF（予熱約3分・霜取り最大10分/30〜90分に1回）・パナソニック暖房ページ
+- ★独自の突き合わせ: 槽洗浄は日立/パナソニック＝酸素系不可 vs オキシ公式＝洗い方を掲載 を1表に。オキシ（弱アルカリ性）は日立エコキュートの「アルカリを含む洗浄剤は使用しない」に当たる。暖房の霜取り時間は日立5〜22分・三菱最大10分を比較
+- 業者公式料金 11/20: 本舗 エプロン内部洗浄+3,300・追い焚き配管 22,000、ダスキン エプロン内部（浴室セット）+5,060・追いだき配管+6,600、革命 エプロン内部+3,080・追い焚き配管 18,700（単品）。既存の浴室・キッチン・洗濯機・エアコン料金も再照合し一致
+- 導線: /guide/・/sitemap/（HTML）・既存 related（bath-floor→bathtub、washer-drain→washer-tub、aircon-not-cooling→heating、gas-stove→sink）。sitemap 3,879→3,884（lastmod 2026-11-20）
+- out: 3,893頁・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）。1回目のビルドは Google Fonts 取得失敗（Turbopack module not found）→ 再ビルドで成功。f791c7bb（CF 20:16 反映）→ 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 新規5 指摘0（既存 /review/kireiyu/ C3 1件＝否定文の誤検知）
+
 ### 2026-11-20 朝ルーチン: 公式404の5店を掲載から外し 301（11/19 宣言の既定案）＋110番の確認（新規開示なし）＋点検 C3
 - 公式再確認（11/20 09:1x 生HTML）: 店舗ページ 5店とも 404（https://www.osoujihonpo.com/shop/detail/21196/・16607/・20773/・18810/、https://www.osoujikakumei.jp/yamaguchi_hofunishi/）。一覧にも無し＝八戸市 /shop/tohoku/aomori/2203/ 3店（18274・19936・21289）・福島県 /shop/tohoku/fukushima/ 20店・広島市東区 /shop/chugoku/hiroshima/34102/ 1店（21404）・富山県 /shop/hokuriku/toyama/ 12店（TOYAMA_HONPO と同じ12店）・革命 /yamaguchi/ 3店（下松中央・周南・黒川）。復活した店なし
 - 手順は 99de27e2（宇都宮陽東店）と同じ: providers.json から削除、_redirects でその店を載せていた最も狭いエリアページへ 301（21196→/areas/aomori/・16607→/areas/fukushima/・20773→/areas/hiroshima-higashi/・18810→/areas/toyama/・hofunishi→/areas/yamaguchi/）。providerExtras の3店の「掲載状況」注記を削除、HONPO_HUB_NOTE「全国1,875店舗」→1,871、富山県の要点の富山新庄店の注記を削除（確認日 11/14→11/20）
