@@ -863,7 +863,7 @@ GSC実数診断:
 - skip: 「お風呂 白い汚れ」（鏡/床/浴槽ガイドの水あか・金属石けんと重なる・朝に確認）「洗濯機 クエン酸」「ドラム式 洗濯槽 掃除」＝washer-tub-cleaning、「浴槽 エプロン 掃除」「追い焚き配管 掃除」＝bathtub-cleaning、「お風呂 天井 カビ」＝bath-wall-cleaning、「引越し ハウスクリーニング」＝/services-detail/whole-house/ と重複。「エアコン 虫」「雨樋 掃除」「クッションフロア 黒ずみ」「シンク下 臭い」「換気扇 臭い」は公式の出典・料金が取れず（queue に理由）
 - 導線: /guide/・/sitemap/（HTML）・既存 related（bathtub→ユニットバス、balcony→窓、washer-tub→自動投入、aircon-self→天井埋込、gas-stove→タイル）。sitemap.xml 新規5＋lastmod 2026-11-22（既存5本・guide・sitemap）
 - out: 3,918 HTML・precheck 全項目OK。fadfa6e3 → 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 通知0
-- 次回注意: queue 次行は「洗濯機クリーニング 自分で」以降（キッチンハイター お風呂・糸くずフィルター 掃除 等）。washer-tub-cleaning・bath 系との重複を確認してから
+- 次回注意: queue 次行は「キッチンハイター お風呂」「糸くずフィルター 掃除」以降。bath 系・washer-tub-cleaning との重複を確認してから
 
 ### 2026-11-20 朝ルーチン: 公式404の5店を掲載から外し 301（11/19 宣言の既定案）＋110番の確認（新規開示なし）＋点検 C3
 - 公式再確認（11/20 09:1x 生HTML）: 店舗ページ 5店とも 404（https://www.osoujihonpo.com/shop/detail/21196/・16607/・20773/・18810/、https://www.osoujikakumei.jp/yamaguchi_hofunishi/）。一覧にも無し＝八戸市 /shop/tohoku/aomori/2203/ 3店（18274・19936・21289）・福島県 /shop/tohoku/fukushima/ 20店・広島市東区 /shop/chugoku/hiroshima/34102/ 1店（21404）・富山県 /shop/hokuriku/toyama/ 12店（TOYAMA_HONPO と同じ12店）・革命 /yamaguchi/ 3店（下松中央・周南・黒川）。復活した店なし
