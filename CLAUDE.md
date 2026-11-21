@@ -838,6 +838,15 @@ GSC実数診断:
 - 導線: /guide/・/sitemap/（HTML）・既存 related（gas-stove→レンジフード/IH、sink-water-stains→排水口、toilet-citric-acid→トイレ基本、aircon-self-cleaning→異音）。sitemap.xml 新規5＋lastmod 2026-11-21（既存4本）
 - out: 3,906 HTML・precheck 全項目OK。1回目のビルドは Google Fonts 取得失敗→再ビルドで成功。22f4e2cf → 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 通知0
 
+### 2026-11-21 20:00 kwexp（競合 ouchipro.com）: 壁紙・床・換気扇・浴室のガイド5本（1デプロイ）
+- 新設: /guide-detail/wallpaper-mold/（壁紙 カビ 2,320）・flooring-mold/（フローリング カビ 2,320）・ventilation-fan-noise/（換気扇 異音 2,320）・bath-mirror-water-stains/（お風呂 鏡 水垢 2,320）・bath-pink-mold/（お風呂 赤カビ 1,920）。diyGuides.ts に追加（SRC6・WALL_MOLD/FLOOR/MIRROR_PRICES・FLOOR_CTA 新設。異音は RANGE_HOOD_PRICES、赤カビは BATH_PRICES を流用）
+- 事実は公式のみ（11/21 確認）: 壁紙＝サンゲツ技術資料PDF（表面のカビは消毒用アルコール・漂白剤/有機溶剤/研磨剤不可・内部に達したら専門業者）・花王Q&A 16331（強力カビハイターは壁に使えない）・リリカラ・東京都 指針（家具と壁5cm以上・カビ 20〜35℃/湿度70%以上）・国交省 原状回復リーフレット（結露を放置して拡大したカビ＝賃借人負担の例）。床＝永大 マニュアルPDF・朝日ウッドテック PDF（スチームでカビ等のおそれ）・大建 FAQ 3189/222/332/3849。異音＝パナ FAQ 81877/62437/81831・三菱 FAQ 6692/9125/10714・長年使用の点検・窓用換気扇取説（標準使用期間15年）・LIXIL Q&A・富士工業 AGG 取説。鏡＝TOTO Help/洗剤/鏡2種・LIXIL 鏡/Q&A/ストア・パナ 05・コラム・花王 28678。赤カビ＝LIXIL 完全マニュアル/tips02/Q&A・ライオン 2024 リリース・パナ お手入れ読本・花王・TOTO
+- ★メーカー間で分かれる点を併記: 床のアルコール（大建 FAQ 222 可 vs 3189 不可）・鏡のクエン酸（パナ 1時間 vs LIXILストア 3分・30分以上不可 vs TOTO 酸性不可）・メラミンスポンジ（パナ内で可/コーティング鏡は不可）
+- 業者公式料金 11/21: 本舗 フローリング洗浄ワックス13,200（10帖）/ハクリ＆ワックス46,200・鏡の水アカ除去＆コーティング+3,300/曇り止めフィルム+5,500（強固な水アカはオプション）、ダスキン フロア 10m² 11,425〜（S/A）・10,081〜（B）・鏡曇り止めフィルム+3,630、革命 床 330/605/1,100円/㎡・剥離1,100/㎡・壁紙補修15,400/20,680・鏡水垢防止コーティング+7,700。★壁紙・床の業者メニューはいずれもカビ除去を明記していない→本文に明記
+- skip: 「エアコン 結露」＝aircon-water-leak、「換気扇 掃除 自分で」＝range-hood-filter-cleaning・toilet/bath-fan、「洗濯機 カビ取り」＝washer-tub-cleaning と重複。「ディスポーザー 掃除」＝大手3社とも公式にメニューなし（導線が作れない）
+- 導線: /guide/・/sitemap/（HTML）・既存 related（wallpaper-stain-removal→壁紙カビ、range-hood-filter→異音、bath-floor-black-stains→赤カビ/鏡）。sitemap.xml 新規5＋lastmod 2026-11-21（既存2本）
+- out: 3,911 HTML・precheck 1回目 description 160字超2件→短縮して全項目OK・heading-lint 要確認1（既存 provider の誤検知）。c773deaf → 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 通知0
+
 ### 2026-11-20 朝ルーチン: 公式404の5店を掲載から外し 301（11/19 宣言の既定案）＋110番の確認（新規開示なし）＋点検 C3
 - 公式再確認（11/20 09:1x 生HTML）: 店舗ページ 5店とも 404（https://www.osoujihonpo.com/shop/detail/21196/・16607/・20773/・18810/、https://www.osoujikakumei.jp/yamaguchi_hofunishi/）。一覧にも無し＝八戸市 /shop/tohoku/aomori/2203/ 3店（18274・19936・21289）・福島県 /shop/tohoku/fukushima/ 20店・広島市東区 /shop/chugoku/hiroshima/34102/ 1店（21404）・富山県 /shop/hokuriku/toyama/ 12店（TOYAMA_HONPO と同じ12店）・革命 /yamaguchi/ 3店（下松中央・周南・黒川）。復活した店なし
 - 手順は 99de27e2（宇都宮陽東店）と同じ: providers.json から削除、_redirects でその店を載せていた最も狭いエリアページへ 301（21196→/areas/aomori/・16607→/areas/fukushima/・20773→/areas/hiroshima-higashi/・18810→/areas/toyama/・hofunishi→/areas/yamaguchi/）。providerExtras の3店の「掲載状況」注記を削除、HONPO_HUB_NOTE「全国1,875店舗」→1,871、富山県の要点の富山新庄店の注記を削除（確認日 11/14→11/20）
