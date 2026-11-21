@@ -376,6 +376,11 @@ export default function Guide() {
               { href: "/guide-detail/bath-chair-cleaning/", label: "お風呂の椅子（風呂いす）の掃除方法" },
               { href: "/guide-detail/bath-wall-cleaning/", label: "お風呂の壁の掃除方法" },
               { href: "/guide-detail/bath-drain-cleaning/", label: "お風呂の排水口の掃除方法" },
+              { href: "/guide-detail/unit-bath-cleaning/", label: "ユニットバスの掃除方法（床・壁・天井）" },
+              { href: "/guide-detail/window-screen-cleaning/", label: "窓と網戸の掃除方法" },
+              { href: "/guide-detail/washer-auto-dosing-cleaning/", label: "洗濯機の自動投入（タンク・経路）の掃除方法" },
+              { href: "/guide-detail/ceiling-aircon-cleaning/", label: "天井埋め込みエアコンの掃除方法" },
+              { href: "/guide-detail/kitchen-tile-cleaning/", label: "キッチンタイル（壁・目地）の掃除方法" },
             ].map((g) => (
               <li key={g.href}>
                 <Link href={g.href} className="card bg-base-100 p-4 block text-primary font-bold hover:underline">

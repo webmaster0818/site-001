@@ -137,6 +137,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/bath-chair-cleaning/", name: "お風呂の椅子（風呂いす）の掃除方法" },
   { href: "/guide-detail/bath-wall-cleaning/", name: "お風呂の壁の掃除方法" },
   { href: "/guide-detail/bath-drain-cleaning/", name: "お風呂の排水口の掃除方法" },
+  { href: "/guide-detail/unit-bath-cleaning/", name: "ユニットバスの掃除方法（床・壁・天井）" },
+  { href: "/guide-detail/window-screen-cleaning/", name: "窓と網戸の掃除方法" },
+  { href: "/guide-detail/washer-auto-dosing-cleaning/", name: "洗濯機の自動投入（タンク・経路）の掃除方法" },
+  { href: "/guide-detail/ceiling-aircon-cleaning/", name: "天井埋め込みエアコンの掃除方法" },
+  { href: "/guide-detail/kitchen-tile-cleaning/", name: "キッチンタイル（壁・目地）の掃除方法" },
 ];
 
 const scenePages: PageLink[] = [
