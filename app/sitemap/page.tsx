@@ -132,6 +132,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/ventilation-fan-noise/", name: "換気扇・レンジフードの異音の原因と対処" },
   { href: "/guide-detail/bath-mirror-water-stains/", name: "お風呂の鏡の水垢（ウロコ）の落とし方" },
   { href: "/guide-detail/bath-pink-mold/", name: "お風呂の赤カビ（ピンク汚れ）の落とし方" },
+  { href: "/guide-detail/rental-aircon-cleaning/", name: "賃貸のエアコンクリーニングの費用負担（国交省ガイドライン）" },
+  { href: "/guide-detail/balcony-cleaning-detergent/", name: "ベランダ掃除に使う洗剤とお手入れ方法" },
+  { href: "/guide-detail/bath-chair-cleaning/", name: "お風呂の椅子（風呂いす）の掃除方法" },
+  { href: "/guide-detail/bath-wall-cleaning/", name: "お風呂の壁の掃除方法" },
+  { href: "/guide-detail/bath-drain-cleaning/", name: "お風呂の排水口の掃除方法" },
 ];
 
 const scenePages: PageLink[] = [

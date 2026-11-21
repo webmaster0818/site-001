@@ -847,6 +847,14 @@ GSC実数診断:
 - 導線: /guide/・/sitemap/（HTML）・既存 related（wallpaper-stain-removal→壁紙カビ、range-hood-filter→異音、bath-floor-black-stains→赤カビ/鏡）。sitemap.xml 新規5＋lastmod 2026-11-21（既存2本）
 - out: 3,911 HTML・precheck 1回目 description 160字超2件→短縮して全項目OK・heading-lint 要確認1（既存 provider の誤検知）。c773deaf → 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 通知0
 
+### 2026-11-22 深夜02時 kwexp（競合 ouchipro.com）: 賃貸エアコン・ベランダ・浴室（椅子・壁・排水口）のガイド5本（1デプロイ）
+- 新設: /guide-detail/rental-aircon-cleaning/（賃貸 エアコンクリーニング 1,520）・balcony-cleaning-detergent/（ベランダ掃除 洗剤 1,520）・bath-chair-cleaning/（お風呂 椅子 掃除 1,280）・bath-wall-cleaning/（お風呂 壁 掃除 1,280）・bath-drain-cleaning/（お風呂 排水口 掃除 1,280）。diyGuides.ts に追加（D4・SRC7・BALCONY_PRICES/BALCONY_CTA 新設。賃貸は AIRCON_PRICES、浴室3本は BATH_PRICES を流用）
+- 事実は公式のみ（11/22 確認）: 賃貸＝国交省 原状回復ガイドライン再改訂版 第1章 PDF（エアコン内部洗浄＝喫煙等の臭いがなければ賃貸人負担が妥当・ビス穴は通常損耗・水漏れ放置は賃借人・耐用年数6年・クリーニングは経過年数を考慮しない・特約3要件）。費用負担は断定せず契約書・管理会社確認を前提に。ベランダ＝LIXIL ベランダ手すり MAF-658F／バルコニー M70407B（中性洗剤のみ・酸/アルカリ/塩素系・有機溶剤・金属ブラシ不可・年1〜2回）・トヨタホーム オーナー向け PDF 2本（防水シートの手順・排水口・火気厳禁）。椅子＝花王 おそうじガイド2頁＋Q&A 28131（逆さにして洗う・風呂椅子の内側・5分/15〜30分・ゴム製品は漬け込み不可）。壁＝LIXIL bathroom_08 daily/regular・07 regular、TOTO wallfloor（週1・樹脂ブラシ・FRP）・help-time、花王（目より高い位置に直接スプレーしない・天井は洗剤を控える＝LIXIL 月1 中性洗剤と分かれる点を併記）。排水口＝LIXIL bathroom_09 daily/regular・10 daily、TOTO floordrain/floordrainsmell
+- 業者公式料金 11/22: 本舗 ベランダ・外回り高圧洗浄 11,000（10㎡まで）・+1,100/㎡・エフロ除去+3,300、革命 ベランダ・バルコニー 7,700/15,400/23,100（10㎡未満/20㎡未満/30㎡未満）。ダスキンはベランダの料金を公式で確認できず＝2社のみ掲載。浴室は ダスキン「排水口を分解」・本舗「排水口まわり」を本文に
+- skip: 「洗濯機 掃除 重曹」＝washer-tub-cleaning、「ステンレス 水垢」＝sink-water-stains、「お風呂 白い汚れ」は次回確認。「エアコン ゴキブリ」＝メーカー公式で侵入経路と内部清掃の関係を確認できず。「水回りコーティング」「お風呂 鏡 曇り止め」「エアコン 喉が痛い」「エアコンクリーニング 必要ない」「エアコン 咳」は queue に理由（朝に確認含む）
+- 導線: /guide/・/sitemap/（HTML）・既存 related（kitchen-drain→浴室排水口、bath-pink-mold→壁/椅子、outdoor-unit→ベランダ、aircon-smell→賃貸）。sitemap.xml 新規5＋lastmod 2026-11-22（既存4本・guide・sitemap）
+- out: 3,916 HTML・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）
+
 ### 2026-11-20 朝ルーチン: 公式404の5店を掲載から外し 301（11/19 宣言の既定案）＋110番の確認（新規開示なし）＋点検 C3
 - 公式再確認（11/20 09:1x 生HTML）: 店舗ページ 5店とも 404（https://www.osoujihonpo.com/shop/detail/21196/・16607/・20773/・18810/、https://www.osoujikakumei.jp/yamaguchi_hofunishi/）。一覧にも無し＝八戸市 /shop/tohoku/aomori/2203/ 3店（18274・19936・21289）・福島県 /shop/tohoku/fukushima/ 20店・広島市東区 /shop/chugoku/hiroshima/34102/ 1店（21404）・富山県 /shop/hokuriku/toyama/ 12店（TOYAMA_HONPO と同じ12店）・革命 /yamaguchi/ 3店（下松中央・周南・黒川）。復活した店なし
 - 手順は 99de27e2（宇都宮陽東店）と同じ: providers.json から削除、_redirects でその店を載せていた最も狭いエリアページへ 301（21196→/areas/aomori/・16607→/areas/fukushima/・20773→/areas/hiroshima-higashi/・18810→/areas/toyama/・hofunishi→/areas/yamaguchi/）。providerExtras の3店の「掲載状況」注記を削除、HONPO_HUB_NOTE「全国1,875店舗」→1,871、富山県の要点の富山新庄店の注記を削除（確認日 11/14→11/20）
