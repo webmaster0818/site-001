@@ -856,6 +856,15 @@ GSC実数診断:
 - out: 3,916 HTML・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）。a56f9962 → 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 通知0
 - 次回注意: queue 次行「お風呂 白い汚れ」は bath-floor-black-stains・bathtub-cleaning・bath-mirror-water-stains の金属石けん・水あかと重なる→重複確認してから
 
+### 2026-11-22 深夜04時 kwexp（競合 ouchipro.com）: ユニットバス・窓と網戸・洗濯機の自動投入・天井埋込エアコン・キッチンタイルのガイド5本（1デプロイ）
+- 新設: /guide-detail/unit-bath-cleaning/（ユニットバス 掃除 1,280）・window-screen-cleaning/（窓 網戸 掃除 576）・washer-auto-dosing-cleaning/（洗濯機 自動投入 掃除 384）・ceiling-aircon-cleaning/（天井埋め込みエアコン 掃除 384）・kitchen-tile-cleaning/（キッチンタイル 掃除 384）。diyGuides.ts に追加（SRC8・WINDOW_PRICES/WINDOW_CTA・CEIL_AC_PRICES・HONPO_AC_CEIL・DUSKIN_WINDOW 新設。ユニットバスは BATHTUB_PRICES、自動投入は WASHER_PRICES、タイルは KITCHEN_PRICES を流用）
+- 事実は公式のみ（11/22 確認）: ユニットバス＝TOTO 浴室まるごと（入浴後の軽い掃除・15〜30分）・床 12.htm（週1・樹脂ブラシ・コーキング注意）・壁天井 16.htm（天井にアルカリ性洗剤・カビ取り剤不可）、LIXIL bathroom_tips01/02（汚れの種類・クレンザー4〜5回）。窓＝LIXIL window_shutter_04（網戸は室内側を下に）・05（ガラス 数ヶ月に1回以上）・01（アルミ 年1〜2回・酸/アルカリ/塩素・金たわし不可）・MAN-201A（固定式網戸 漂白剤不可）。自動投入＝日立 a255（ドラム式・2〜3か月・約40℃・4分/9時間）。天井埋込＝ダイキン customercenter article 18（業務用天井カセット形の手順・スプレー不可・内部はプロ）・housing FAQ cassette（自動掃除・昇降パネル）。タイル＝LIXIL tile_04
+- 業者公式料金 11/22: ダスキン 網戸 腰高 1,122〜/990〜・掃き出し 1,496〜/1,320〜、ガラス・サッシ 掃き出し 2,992〜/2,640〜（S・A／B）。革命 窓ガラス・サッシ 3,850・網戸洗浄+1,100、家庭用天井埋め込み 20,900・天カセ 26,400。本舗 天井埋込1・2方向 27,500（約3時間・お掃除機能+8,800・4方向は相談・製造9年以上は断る/保証不可）。本舗の窓ガラスの料金は取得できず＝窓は2社。自動投入の経路が洗濯機クリーニングの範囲に入るかは各社記載なし＝priceLead に明記
+- skip: 「お風呂 白い汚れ」（鏡/床/浴槽ガイドの水あか・金属石けんと重なる・朝に確認）「洗濯機 クエン酸」「ドラム式 洗濯槽 掃除」＝washer-tub-cleaning、「浴槽 エプロン 掃除」「追い焚き配管 掃除」＝bathtub-cleaning、「お風呂 天井 カビ」＝bath-wall-cleaning、「引越し ハウスクリーニング」＝/services-detail/whole-house/ と重複。「エアコン 虫」「雨樋 掃除」「クッションフロア 黒ずみ」「シンク下 臭い」「換気扇 臭い」は公式の出典・料金が取れず（queue に理由）
+- 導線: /guide/・/sitemap/（HTML）・既存 related（bathtub→ユニットバス、balcony→窓、washer-tub→自動投入、aircon-self→天井埋込、gas-stove→タイル）。sitemap.xml 新規5＋lastmod 2026-11-22（既存5本・guide・sitemap）
+- out: 3,918 HTML・precheck 全項目OK。fadfa6e3 → 本番5頁 200・h1・/guide/・sitemap.xml 確認・trust-audit --dry 通知0
+- 次回注意: queue 次行は「洗濯機クリーニング 自分で」以降（キッチンハイター お風呂・糸くずフィルター 掃除 等）。washer-tub-cleaning・bath 系との重複を確認してから
+
 ### 2026-11-20 朝ルーチン: 公式404の5店を掲載から外し 301（11/19 宣言の既定案）＋110番の確認（新規開示なし）＋点検 C3
 - 公式再確認（11/20 09:1x 生HTML）: 店舗ページ 5店とも 404（https://www.osoujihonpo.com/shop/detail/21196/・16607/・20773/・18810/、https://www.osoujikakumei.jp/yamaguchi_hofunishi/）。一覧にも無し＝八戸市 /shop/tohoku/aomori/2203/ 3店（18274・19936・21289）・福島県 /shop/tohoku/fukushima/ 20店・広島市東区 /shop/chugoku/hiroshima/34102/ 1店（21404）・富山県 /shop/hokuriku/toyama/ 12店（TOYAMA_HONPO と同じ12店）・革命 /yamaguchi/ 3店（下松中央・周南・黒川）。復活した店なし
 - 手順は 99de27e2（宇都宮陽東店）と同じ: providers.json から削除、_redirects でその店を載せていた最も狭いエリアページへ 301（21196→/areas/aomori/・16607→/areas/fukushima/・20773→/areas/hiroshima-higashi/・18810→/areas/toyama/・hofunishi→/areas/yamaguchi/）。providerExtras の3店の「掲載状況」注記を削除、HONPO_HUB_NOTE「全国1,875店舗」→1,871、富山県の要点の富山新庄店の注記を削除（確認日 11/14→11/20）
