@@ -127,6 +127,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/aircon-noise/", name: "エアコンの異音の原因と対処" },
   { href: "/guide-detail/kitchen-drain-cleaning/", name: "キッチンの排水口の掃除方法" },
   { href: "/guide-detail/ih-cooktop-cleaning/", name: "IHコンロ（IHクッキングヒーター）の掃除方法" },
+  { href: "/guide-detail/wallpaper-mold/", name: "壁紙（クロス）のカビの落とし方" },
+  { href: "/guide-detail/flooring-mold/", name: "フローリングのカビ・黒ずみの対処" },
+  { href: "/guide-detail/ventilation-fan-noise/", name: "換気扇・レンジフードの異音の原因と対処" },
+  { href: "/guide-detail/bath-mirror-water-stains/", name: "お風呂の鏡の水垢（ウロコ）の落とし方" },
+  { href: "/guide-detail/bath-pink-mold/", name: "お風呂の赤カビ（ピンク汚れ）の落とし方" },
 ];
 
 const scenePages: PageLink[] = [

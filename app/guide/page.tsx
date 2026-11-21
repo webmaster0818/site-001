@@ -366,6 +366,11 @@ export default function Guide() {
               { href: "/guide-detail/aircon-noise/", label: "エアコンの異音の原因と対処" },
               { href: "/guide-detail/kitchen-drain-cleaning/", label: "キッチンの排水口の掃除方法" },
               { href: "/guide-detail/ih-cooktop-cleaning/", label: "IHコンロ（IHクッキングヒーター）の掃除方法" },
+              { href: "/guide-detail/wallpaper-mold/", label: "壁紙（クロス）のカビの落とし方" },
+              { href: "/guide-detail/flooring-mold/", label: "フローリングのカビ・黒ずみの対処" },
+              { href: "/guide-detail/ventilation-fan-noise/", label: "換気扇・レンジフードの異音の原因と対処" },
+              { href: "/guide-detail/bath-mirror-water-stains/", label: "お風呂の鏡の水垢（ウロコ）の落とし方" },
+              { href: "/guide-detail/bath-pink-mold/", label: "お風呂の赤カビ（ピンク汚れ）の落とし方" },
             ].map((g) => (
               <li key={g.href}>
                 <Link href={g.href} className="card bg-base-100 p-4 block text-primary font-bold hover:underline">
