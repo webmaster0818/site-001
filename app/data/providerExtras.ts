@@ -14,7 +14,8 @@ export type ProviderExtra = {
   hubNote?: string;
   // 2026-11-19 16:00 遅れ挽回: 「おそうじ本舗」（ブランド名だけ）で店舗ページが上位に出てクリック0の3店だけ、h1 直下の1行（店名・所在地）の後に
   // 「この頁は◯◯店の情報」の役割の1行＋本部の標準料金の要点＋全国の店舗一覧（/brand/osoujihonpo/）への導線を出す。指定のない店舗は表示不変
-  brandHub?: { role: string; price: string; sources: { label: string; url: string }[]; checkedAt: string };
+  // 2026-11-21 16:00 遅れ挽回: 任意 priceNote（料金の後ろの1文を差し替える。おそうじ革命は全国一律価格なので「店舗ごとの料金は記載がない」の文は使わない）。指定のない brandHub は表示不変
+  brandHub?: { role: string; price: string; sources: { label: string; url: string }[]; checkedAt: string; priceNote?: string };
   checkedAt: string;
 };
 
@@ -90,6 +91,13 @@ const DUSKIN_NOTES =
 const DUSKIN_REVIEW_NOTE =
   "公式店舗ページに利用者の口コミ・レビューの掲載はありません（2026-11-10 確認）。当サイトも独自の口コミは掲載していません。ダスキン公式はブランド全体の数字として、ニオイが気になって依頼した6,500名の約95%が「ニオイが軽減された」と回答（2022〜2024年の実施後アンケート）と記載しています";
 const DUSKIN_AIRCON_SOURCE = { label: "ダスキン エアコンクリーニング 標準料金", url: "https://www.duskin.jp/servicemaster/spot/sm000010/" };
+
+// 2026-11-21 16:00 遅れ挽回: おそうじ革命の brandHub（本部の全国一律料金の要点）。公式 /price/ を 2026-11-21 に確認（11/04 の KAKUMEI_HUB_PRICES と全一致）
+const KAKUMEI_BRAND_PRICE_1121 =
+  "エアコン 壁掛け 9,980円／台・お掃除機能付き 18,700円／台、キッチン・レンジフード・浴室 各17,930円、トイレ・洗面所 各8,250円、水回りセット 2点 32,890円／3点 45,980円／4点 57,970円";
+const KAKUMEI_BRAND_PRICE_NOTE_1121 =
+  "公式の料金ページに「全国一律価格：どの地域でも同じ料金」「事前に料金を提示し、あとから追加費用が発生することはありません」と記載されています（最低出張料金は7,700円）。オプション・強い汚れの範囲は店舗の見積もりで確認してください";
+const KAKUMEI_BRAND_SOURCES_1121 = [{ label: "おそうじ革命 料金（全国一律価格）", url: "https://www.osoujikakumei.jp/price/" }];
 
 export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
   // 2026-11-06 16:00 遅れ挽回ルーチン: 地域×本舗で上位の未着手4店（11/4〜6 と同じ型）・ダスキン2店（その語の公式料金を冒頭に）・革命1店
@@ -875,7 +883,14 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
       { label: "愛知尾張旭店 公式店舗ページ", url: "https://www.osoujikakumei.jp/aichi_owari_asahi/" },
       { label: "おそうじ革命 料金（全国一律価格）", url: "https://www.osoujikakumei.jp/price/" },
     ],
-    hubNote: KAKUMEI_HUB_NOTE,
+    // 2026-11-21 16:00 遅れ挽回: 「おそうじ革命」（ブランド名だけ）で店舗ページが上位・クリック0 → 11/19 本舗と同じ型の brandHub（下部の hubNote はこの枠と重複するため削除）
+    brandHub: {
+      role: "このページは「おそうじ革命 愛知尾張旭店」（愛知県尾張旭市城山町城山1-1）1店舗の情報です。電話 0120-265-278・公式の総合評価 5.0（6件）・対応は名古屋市16区など公式記載の34市区町村（公式店舗ページ 2026-11-21 確認）",
+      price: KAKUMEI_BRAND_PRICE_1121,
+      priceNote: KAKUMEI_BRAND_PRICE_NOTE_1121,
+      sources: KAKUMEI_BRAND_SOURCES_1121,
+      checkedAt: "2026-11-21",
+    },
     checkedAt: "2026-11-07",
   },
   // 2026-11-07 12:00: 「おそうじ革命」16@5.8（単語・ハブが主）→ 料金の答えを先頭に、電話・営業時間の有無・対応・市内の店舗。title は不変
@@ -898,7 +913,14 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
       { label: "千葉木更津店 公式店舗ページ", url: "https://www.osoujikakumei.jp/chiba_kisarazu/" },
       { label: "おそうじ革命 料金（全国一律価格）", url: "https://www.osoujikakumei.jp/price/" },
     ],
-    hubNote: KAKUMEI_HUB_NOTE,
+    // 2026-11-21 16:00 遅れ挽回: 「おそうじ革命」（ブランド名だけ）で店舗ページが上位・クリック0 → 11/19 本舗と同じ型の brandHub（下部の hubNote はこの枠と重複するため削除）
+    brandHub: {
+      role: "このページは「おそうじ革命 千葉木更津店」（千葉県木更津市江川940-5）1店舗の情報です。電話 0120-362-143・対応は木更津市など公式記載の34市区町村（公式店舗ページ 2026-11-21 確認）",
+      price: KAKUMEI_BRAND_PRICE_1121,
+      priceNote: KAKUMEI_BRAND_PRICE_NOTE_1121,
+      sources: KAKUMEI_BRAND_SOURCES_1121,
+      checkedAt: "2026-11-21",
+    },
     checkedAt: "2026-11-07",
   },
   // 2026-11-11 16:00 遅れ挽回: 「おそうじ革命」3@7.3・「お掃除革命」2@8.0（単語・ハブが主）→ 11/8 yotsukaido・11/10 ashiyachuo と同じ型で
@@ -953,7 +975,14 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
       { label: "千葉佐倉店 公式店舗ページ", url: "https://www.osoujikakumei.jp/chiba_sakura/" },
       { label: "おそうじ革命 料金（全国一律価格）", url: "https://www.osoujikakumei.jp/price/" },
     ],
-    hubNote: KAKUMEI_HUB_NOTE,
+    // 2026-11-21 16:00 遅れ挽回: 「おそうじ革命」（ブランド名だけ）で店舗ページが上位・クリック0 → 11/19 本舗と同じ型の brandHub（下部の hubNote はこの枠と重複するため削除）
+    brandHub: {
+      role: "このページは「おそうじ革命 千葉四街道店」（千葉県四街道市池花2-4-16）1店舗の情報です。電話 0120-544-874・公式の総合評価 5.0（2件）・対応は四街道市・千葉市・東京都23区など公式記載の78市区町村（公式店舗ページ 2026-11-21 確認）",
+      price: KAKUMEI_BRAND_PRICE_1121,
+      priceNote: KAKUMEI_BRAND_PRICE_NOTE_1121,
+      sources: KAKUMEI_BRAND_SOURCES_1121,
+      checkedAt: "2026-11-21",
+    },
     checkedAt: "2026-11-08",
   },
   // 2026-11-07 12:00: 「おそうじ本舗 見沼東新井店」17@8.6 → 料金の答え・公式クチコミ欄への案内・区内の店舗・ハブ導線を足す。title は不変
@@ -1638,5 +1667,17 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
     ],
     hubNote: "ダスキン全体の標準料金・都道府県別の店舗は",
     checkedAt: "2026-11-19",
+  },
+  // ===== 2026-11-21 16:00 遅れ挽回ルーチン =====
+  // 中野中央西店: 「お掃除本舗」3@7.7・「おそうじ本舗」2@8.5・「ドラム式洗濯機クリーニング 中野区」2@12.0・クリック0。個別の追記なし → 11/19 高崎西店と同じ型（役割の1行・本部の標準料金・全国の店舗一覧への導線）。
+  // 公式アイコンにドラム式洗濯機クリーニングがあるので、本部のドラム式の標準料金（公式 /washer/front/ 2026-11-21）を料金に含める
+  "honpo-19652": {
+    brandHub: {
+      role: "このページは「おそうじ本舗 中野中央西店」（東京都中野区中央5丁目）1店舗の情報です。電話 0120-40-2030（無料通話）・9:00〜19:00・不定休。公式の対応サービスにドラム式洗濯機クリーニングあり（完全分解洗浄のアイコンはなし）。公式の中野区の店舗一覧は11店（公式店舗ページ・一覧 2026-11-21 確認）",
+      price: `${HONPO_BRAND_PRICE_1119}、ドラム式洗濯機クリーニング 18,700円／台（分解を伴わない洗浄・約2時間。完全分解洗浄オプション +19,800円／台・製造から6年以上の洗濯機は断る/保証できない場合あり）`,
+      sources: [...HONPO_PRICE_SOURCES, { label: "ドラム式洗濯機", url: "https://www.osoujihonpo.com/house-cleaning/washer/front/" }],
+      checkedAt: "2026-11-21",
+    },
+    checkedAt: "2026-11-21",
   },
 };

@@ -223,7 +223,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
         <section className="mb-8 rounded-lg border border-base-300 bg-base-200/60 p-4 text-sm" id="brand-hub">
           <p className="mb-2">{extra.brandHub.role}</p>
           <p className="mb-2">
-            <strong>{p.brand_name}（本部）の標準料金の要点</strong>（公式・税込の通常価格・{extra.brandHub.checkedAt}確認）: {extra.brandHub.price}。店舗ごとの料金は公式店舗ページに記載がないため、正確な金額は店舗の見積もりで確認してください（出典:{" "}
+            <strong>{p.brand_name}（本部）の標準料金の要点</strong>（公式・税込の通常価格・{extra.brandHub.checkedAt}確認）: {extra.brandHub.price}。{extra.brandHub.priceNote ?? "店舗ごとの料金は公式店舗ページに記載がないため、正確な金額は店舗の見積もりで確認してください"}（出典:{" "}
             {extra.brandHub.sources.map((s, i) => (
               <span key={s.url}>{i > 0 && "・"}<a href={s.url} target="_blank" rel="noopener noreferrer" className="underline text-primary">{s.label}</a></span>
             ))}
