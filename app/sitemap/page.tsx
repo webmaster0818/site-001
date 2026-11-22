@@ -147,6 +147,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/auto-clean-aircon-cleaning/", name: "お掃除機能付きエアコンの掃除方法（ダストボックス）" },
   { href: "/guide-detail/propeller-fan-cleaning/", name: "プロペラ換気扇の掃除方法" },
   { href: "/guide-detail/aircon-cleaning-scams/", name: "悪質なエアコンクリーニングのトラブル事例と対処" },
+  { href: "/guide-detail/kitchen-cleaning-tools/", name: "キッチン掃除の道具と洗剤の使い分け" },
+  { href: "/guide-detail/auto-clean-aircon-check/", name: "お掃除機能付きエアコンの見分け方" },
+  { href: "/guide-detail/bath-door-cleaning/", name: "お風呂のドアの汚れの落とし方" },
+  { href: "/guide-detail/aircon-cleaning-flow/", name: "エアコンクリーニングの流れ（申し込みから作業完了まで）" },
+  { href: "/guide-detail/rental-move-out-cleaning/", name: "賃貸の退去時のハウスクリーニング費用の負担" },
 ];
 
 const scenePages: PageLink[] = [
