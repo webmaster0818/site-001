@@ -381,6 +381,11 @@ export default function Guide() {
               { href: "/guide-detail/washer-auto-dosing-cleaning/", label: "洗濯機の自動投入（タンク・経路）の掃除方法" },
               { href: "/guide-detail/ceiling-aircon-cleaning/", label: "天井埋め込みエアコンの掃除方法" },
               { href: "/guide-detail/kitchen-tile-cleaning/", label: "キッチンタイル（壁・目地）の掃除方法" },
+              { href: "/guide-detail/washer-lint-filter-cleaning/", label: "洗濯機の糸くずフィルターの掃除方法" },
+              { href: "/guide-detail/toilet-hand-wash-cleaning/", label: "トイレの手洗い器・手洗い金具の掃除方法" },
+              { href: "/guide-detail/auto-clean-aircon-cleaning/", label: "お掃除機能付きエアコンの掃除方法（ダストボックス）" },
+              { href: "/guide-detail/propeller-fan-cleaning/", label: "プロペラ換気扇の掃除方法" },
+              { href: "/guide-detail/aircon-cleaning-scams/", label: "悪質なエアコンクリーニングのトラブル事例と対処" },
             ].map((g) => (
               <li key={g.href}>
                 <Link href={g.href} className="card bg-base-100 p-4 block text-primary font-bold hover:underline">
