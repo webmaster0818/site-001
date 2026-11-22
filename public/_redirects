@@ -8,3 +8,7 @@
 /provider/honpo-20773/ /areas/hiroshima-higashi/ 301
 /provider/honpo-18810/ /areas/toyama/ 301
 /provider/kakumei-yamaguchi_hofunishi/ /areas/yamaguchi/ 301
+# 公式店舗ページ 404・公式の市区町村/県の店舗一覧に無い本舗3店を掲載から外す（2026-11-22 確認・11/21 宣言の既定案）→その店を載せていた最も狭いエリアページへ
+/provider/honpo-20702/ /areas/aomori/ 301
+/provider/honpo-21315/ /areas/nagoya-nakagawa/ 301
+/provider/honpo-20954/ /areas/kumamoto-ken/ 301

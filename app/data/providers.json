@@ -59799,21 +59799,6 @@
   "rating_checked_at": "2026-11-01"
  },
  {
-  "slug": "honpo-20702",
-  "brand": "honpo",
-  "brand_name": "おそうじ本舗",
-  "name": "おそうじ本舗 五所川原店",
-  "pref_ja": "青森県",
-  "pref": "aomori",
-  "address": "青森県五所川原市旭町",
-  "hours": "9：00～18：00",
-  "holiday": "不定休",
-  "review_count_official": 1,
-  "source_url": "https://www.osoujihonpo.com/shop/detail/20702/",
-  "verified_at": "2026-08-15",
-  "rating_checked_at": "2026-11-01"
- },
- {
   "slug": "honpo-20703",
   "brand": "honpo",
   "brand_name": "おそうじ本舗",
@@ -61770,21 +61755,6 @@
   "source_url": "https://www.osoujihonpo.com/shop/detail/20953/",
   "verified_at": "2026-08-15",
   "rating_checked_at": "2026-11-01"
- },
- {
-  "slug": "honpo-20954",
-  "brand": "honpo",
-  "brand_name": "おそうじ本舗",
-  "name": "おそうじ本舗 玉名岱明店",
-  "pref_ja": "熊本県",
-  "pref": "kumamoto",
-  "address": "熊本県玉名市岱明町大野下",
-  "hours": "9：00～18：00",
-  "holiday": "不定休",
-  "review_count_official": 10,
-  "source_url": "https://www.osoujihonpo.com/shop/detail/20954/",
-  "verified_at": "2026-08-15",
-  "rating_checked_at": "2026-10-16"
  },
  {
   "slug": "honpo-20956",
@@ -65671,21 +65641,6 @@
   "source_url": "https://www.osoujihonpo.com/shop/detail/21314/",
   "verified_at": "2026-08-15",
   "rating_checked_at": "2026-11-01"
- },
- {
-  "slug": "honpo-21315",
-  "brand": "honpo",
-  "brand_name": "おそうじ本舗",
-  "name": "おそうじ本舗 中川高畑店",
-  "pref_ja": "愛知県",
-  "pref": "aichi",
-  "address": "愛知県名古屋市中川区高畑",
-  "hours": "9：00～18：00",
-  "holiday": "不定休",
-  "rating_official": null,
-  "review_count_official": 1,
-  "source_url": "https://www.osoujihonpo.com/shop/detail/21315/",
-  "verified_at": "2026-08-15"
  },
  {
   "slug": "honpo-21316",

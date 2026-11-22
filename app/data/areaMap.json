@@ -2444,7 +2444,7 @@
   ],
   "parent": null,
   "children": [],
-  "count": 10
+  "count": 9
  },
  "kanazawa": {
   "slug": "kanazawa",
@@ -2678,7 +2678,7 @@
     "name": "名古屋市天白区"
    }
   ],
-  "count": 202
+  "count": 201
  },
  "nagoya-chikusa": {
   "slug": "nagoya-chikusa",
@@ -2838,7 +2838,7 @@
   ],
   "parent": null,
   "children": [],
-  "count": 8
+  "count": 7
  },
  "nagoya-minato": {
   "slug": "nagoya-minato",
@@ -4291,7 +4291,7 @@
     "name": "広島市佐伯区"
    }
   ],
-  "count": 34
+  "count": 33
  },
  "hiroshima-naka": {
   "slug": "hiroshima-naka",
@@ -4329,7 +4329,7 @@
    "name": "広島市"
   },
   "children": [],
-  "count": 2
+  "count": 1
  },
  "hiroshima-minami": {
   "slug": "hiroshima-minami",
@@ -5055,7 +5055,7 @@
   ],
   "parent": null,
   "children": [],
-  "count": 33
+  "count": 31
  },
  "iwate": {
   "slug": "iwate",
@@ -5150,7 +5150,7 @@
   ],
   "parent": null,
   "children": [],
-  "count": 59
+  "count": 58
  },
  "ibaraki": {
   "slug": "ibaraki",
@@ -5178,7 +5178,7 @@
   ],
   "parent": null,
   "children": [],
-  "count": 58
+  "count": 57
  },
  "gunma": {
   "slug": "gunma",
@@ -5211,7 +5211,7 @@
     "name": "富山市"
    }
   ],
-  "count": 21
+  "count": 20
  },
  "ishikawa": {
   "slug": "ishikawa",
@@ -5481,7 +5481,7 @@
     "name": "広島市佐伯区"
    }
   ],
-  "count": 56
+  "count": 55
  },
  "yamaguchi": {
   "slug": "yamaguchi",
@@ -5495,7 +5495,7 @@
   ],
   "parent": null,
   "children": [],
-  "count": 32
+  "count": 31
  },
  "tokushima": {
   "slug": "tokushima",
@@ -5633,7 +5633,7 @@
     "name": "熊本市北区"
    }
   ],
-  "count": 49
+  "count": 48
  },
  "oita-ken": {
   "slug": "oita-ken",
