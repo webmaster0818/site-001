@@ -90,7 +90,62 @@ const CAPITAL_STORES: Record<string, { label: string; checked?: string; more?: {
 // ハウスクリーニング全般の語なので AirconPriceAnswer ではなく OosoujiPriceAnswer）と県庁所在市の掲載店（本舗4＝公式の奈良市一覧 29201 と一致・ダスキン6＝公式の奈良市一覧と一致・
 // 各公式店舗ページ 2026-11-18 に 200）。ダスキン ハウスワイドは奈良＝Aエリア（公式 sm000180）。他の県ページは表示不変
 // 2026-11-21 16:00 遅れ挽回: 任意 withCount（県内の掲載店のブランド別店数を出す）・cityWards（政令市の区別ページへの導線）・note（答えの後ろの1段落）を追加。既存3県は渡していないので表示不変
-const CAPITAL_HOUSE_STORES: Record<string, { label: string; duskinArea: "S" | "A" | "B"; checked?: string; withCount?: boolean; cityWards?: { label: string; links: { name: string; href: string; count: number }[]; note?: React.ReactNode }; note?: React.ReactNode; stores: { name: string; href: string }[] }> = {
+// 2026-11-22 16:00 遅れ挽回: 任意 storesNote（掲載店の行の後ろの注記＝公式404で店名の行から外した店の理由）を追加。既存の県は渡していないので表示不変
+const CAPITAL_HOUSE_STORES: Record<string, { label: string; duskinArea: "S" | "A" | "B"; checked?: string; withCount?: boolean; cityWards?: { label: string; links: { name: string; href: string; count: number }[]; note?: React.ReactNode }; note?: React.ReactNode; storesNote?: string; stores: { name: string; href: string }[] }> = {
+  // 2026-11-22 16:00 遅れ挽回: 佐賀県・長崎県・広島県（11/21 宮城県・滋賀県・群馬県と同じ型）。ダスキン ハウスワイドは3県とも Bエリア（公式 sm000180・2026-11-22）。
+  // 本舗5ページ＋換気扇・キッチンセット、ダスキン sm000010/70/80/90/100、革命 /price/ を 2026-11-22 に再確認（brandPrices と全一致）。
+  // saga: 「おそうじ本舗 店舗一覧」3@4.7・「クリーニング 佐賀」3@56.7。佐賀市7店（本舗5＝公式 41201 一覧と一致・ダスキン2＝公式 /store/saga/saga/ と一致）。各公式店舗ページ 2026-11-22 に 200。
+  //   おそうじ革命 佐賀中央店（kakumei-saga_chuo）は公式店舗ページ 404・公式の佐賀県一覧（オブリ神埼店のみ）に無し → 店名の行には載せない（掲載から外すかは判断待ち）
+  saga: { label: "佐賀市", duskinArea: "B", checked: "2026年11月22日", withCount: true,
+    storesNote: "（おそうじ革命 佐賀中央店は公式の店舗ページが表示されず、公式の佐賀県の店舗一覧にも無いため、ここには載せていません・2026年11月22日確認）",
+    note: <>「おそうじ本舗」の店舗を探している方へ: 佐賀県内の掲載は下の一覧、全国の店舗・本部の電話・よくある質問は<a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>にまとめています。</>,
+    stores: [
+  { name: "おそうじ本舗 佐賀北店", href: "/provider/honpo-16056/" },
+  { name: "おそうじ本舗 佐賀西店", href: "/provider/honpo-20408/" },
+  { name: "おそうじ本舗 佐賀兵庫店", href: "/provider/honpo-20821/" },
+  { name: "おそうじ本舗 佐賀大前店", href: "/provider/honpo-20847/" },
+  { name: "おそうじ本舗 佐賀南店", href: "/provider/honpo-21125/" },
+  { name: "ダスキンオークスサービスマスター", href: "/provider/duskin-1920211/" },
+  { name: "ダスキン 巨勢支店", href: "/provider/duskin-8000492/" },
+  ] },
+  // nagasaki: 「長崎 トイレコーティング」3@7.0・「お掃除本舗」3@6.7。長崎市8店（本舗6＝公式 42201 一覧の長崎市拠点6店と一致・ダスキン2＝公式 /store/nagasaki/nagasaki/ と一致）。各公式店舗ページ 2026-11-22 に 200。
+  //   トイレのコーティング: 本舗 /house-cleaning/coating/toilet/・/house-cleaning/water/toilet/、ダスキン sm000100、革命 /price/ の 2026-11-22 生HTML の値
+  nagasaki: { label: "長崎市", duskinArea: "B", checked: "2026年11月22日", withCount: true,
+    note: <>トイレのコーティング（公式・税込・2026年11月22日確認）: おそうじ本舗「トイレリニューアルコーティング」16,500円／式（便器・タンク・約2.5時間。新築以外はトイレクリーニング 9,900円が別途）、トイレクリーニングのオプション「お手入れ簡単コーティング」5,500円（<a href="https://www.osoujihonpo.com/house-cleaning/coating/toilet/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）。ダスキン トイレクリーニング（10,340円）のオプション「汚れ防止コート（便器内部1台）」3,850円（<a href="https://www.duskin.jp/servicemaster/water/sm000100/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）。おそうじ革命 トイレ（8,250円）のオプション「便器内水垢防止コーティング」5,500円・「便器内水垢防止＋菌分解除去コーティング」15,950円（コーティング単品の注文は不可と公式に記載・<a href="https://www.osoujikakumei.jp/price/" target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）。「おそうじ本舗」の店舗を探している方へ: 長崎県内の掲載は下の一覧、全国の店舗・本部の電話・よくある質問は<a href="/brand/osoujihonpo/" className="underline text-primary">おそうじ本舗の店舗一覧</a>にまとめています。</>,
+    stores: [
+  { name: "おそうじ本舗 長崎平和町店", href: "/provider/honpo-11766/" },
+  { name: "おそうじ本舗 長崎西店", href: "/provider/honpo-17765/" },
+  { name: "おそうじ本舗 長崎桜町店", href: "/provider/honpo-19307/" },
+  { name: "おそうじ本舗 長崎戸町店", href: "/provider/honpo-20034/" },
+  { name: "おそうじ本舗 長崎出島店", href: "/provider/honpo-20499/" },
+  { name: "おそうじ本舗 長崎滑石店", href: "/provider/honpo-21160/" },
+  { name: "ダスキンオークス上野サービスマスター", href: "/provider/duskin-1930614/" },
+  { name: "ダスキン 畝刈支店", href: "/provider/duskin-8000503/" },
+  ] },
+  // "hiroshima-ken": 「おそうじ本舗」8@10.0。本舗ハブへの導線は 11/05 から要点にあるので重複させない。県庁所在市の広島市は区別ページへの導線（areaMap の店数）、
+  //   店名は福山市9店（本舗6＝公式 34207 一覧と一致・ダスキン2＝公式 /store/hiroshima/fukuyama/ と一致・革命1＝公式の広島県一覧にあり）。各公式店舗ページ 2026-11-22 に 200
+  "hiroshima-ken": { label: "福山市", duskinArea: "B", checked: "2026年11月22日", withCount: true,
+    cityWards: { label: "広島市", links: [
+      { name: "中区", href: "/areas/hiroshima-naka/", count: 4 },
+      { name: "東区", href: "/areas/hiroshima-higashi/", count: 1 },
+      { name: "南区", href: "/areas/hiroshima-minami/", count: 3 },
+      { name: "西区", href: "/areas/hiroshima-nishi/", count: 6 },
+      { name: "安佐南区", href: "/areas/hiroshima-asaminami/", count: 6 },
+      { name: "安佐北区", href: "/areas/hiroshima-asakita/", count: 3 },
+      { name: "安芸区", href: "/areas/hiroshima-aki/", count: 2 },
+      { name: "佐伯区", href: "/areas/hiroshima-saeki/", count: 3 },
+    ], note: <>広島市全体の比較（区の記載のない店を含む33店）は<a href="/areas/hiroshima/" className="underline text-primary">広島市のハウスクリーニング</a>をご覧ください。</> },
+    stores: [
+  { name: "おそうじ本舗 福山駅家店", href: "/provider/honpo-13105/" },
+  { name: "おそうじ本舗 福山駅前店", href: "/provider/honpo-15807/" },
+  { name: "おそうじ本舗 福山松永店", href: "/provider/honpo-16851/" },
+  { name: "おそうじ本舗 福山手城店", href: "/provider/honpo-18947/" },
+  { name: "おそうじ本舗 福山神辺店", href: "/provider/honpo-20876/" },
+  { name: "おそうじ本舗 福山沖野上店", href: "/provider/honpo-21071/" },
+  { name: "ダスキンヘイセイサービスマスター", href: "/provider/duskin-1710775/" },
+  { name: "ダスキン 南蔵王支店", href: "/provider/duskin-8001557/" },
+  { name: "おそうじ革命 広島福山駅家店", href: "/provider/kakumei-hiroshima_fukuyamaekiya/" },
+  ] },
   // 2026-11-21 16:00 遅れ挽回: 「宮城県 クリーニング」10@8.7・「エアコンクリーニング 宮城」6@10.2・「石巻 ハウスクリーニング」2@5.0（宮城県）。ダスキン ハウスワイドは宮城＝Bエリア（公式 sm000180・2026-11-21）。
   // 石巻市4店（本舗1＝公式 4202 一覧と一致・ダスキン3＝公式 /store/miyagi/ishinomaki/ の3店と店名一致＝公式一覧側は別の店舗番号）＋仙台市5区の区別ページ（areaMap の店数）。各公式店舗ページ 2026-11-21 に 200
   miyagi: { label: "石巻市", duskinArea: "B", checked: "2026年11月21日", withCount: true,
@@ -186,11 +241,12 @@ export async function generateMetadata({ params }: { params: Promise<{ pref: str
   if (!prefJa) return {};
   const count = list.filter((p) => p.pref_ja === prefJa).length;
   // 2026-11-21 16:00 遅れ挽回: 冒頭に大手3社の料金を置いた3県だけ title・description を答えに合わせる（11/20 札幌市と同じ型。他の県は不変）
-  const priced = ["miyagi", "shiga", "gunma"].includes(pref);
+  // 2026-11-22 16:00 遅れ挽回: 佐賀県・長崎県・広島県を同じ型に追加（description の確認日は各県の checked＝既存3県は 11/21 のまま）
+  const priced = ["miyagi", "shiga", "gunma", "saga", "nagasaki", "hiroshima-ken"].includes(pref);
   return withPageSocial({
     title: priced ? `${prefJa}のハウスクリーニング業者おすすめ比較｜大手3社の料金・${count}店舗` : `${prefJa}のハウスクリーニング業者一覧（${count}店舗）｜店舗データベース`,
     description: priced
-      ? `${prefJa}のハウスクリーニング${count}店舗を比較。エアコンクリーニングの公式標準料金はおそうじ本舗 14,300円・ダスキン 15,400円・おそうじ革命 9,980円（税込・2026年11月21日確認）。浴室・キッチンの料金と店舗の電話・営業時間も掲載。`
+      ? `${prefJa}のハウスクリーニング${count}店舗を比較。エアコンクリーニングの公式標準料金はおそうじ本舗 14,300円・ダスキン 15,400円・おそうじ革命 9,980円（税込・${CAPITAL_HOUSE_STORES[pref]?.checked ?? "2026年11月21日"}確認）。浴室・キッチンの料金と店舗の電話・営業時間も掲載。`
       : `${prefJa}のハウスクリーニング業者${count}店舗を掲載しています。おそうじ本舗・ダスキン・おそうじ革命など、各ブランド公式サイトで所在を確認した店舗のみを、確認日を明記して掲載しています。`,
     alternates: { canonical: `https://cleaning-choices.com/areas/${pref}/` },
   });
@@ -248,6 +304,7 @@ export default async function PrefPage({ params }: { params: Promise<{ pref: str
           storesLabel={CAPITAL_HOUSE_STORES[pref].label}
           storesMore={{ name: `このページ下の一覧（${prefJa}内${list.filter((p) => p.pref_ja === prefJa).length}店）`, href: "#stores" }}
           cityWards={CAPITAL_HOUSE_STORES[pref].cityWards}
+          storesNote={CAPITAL_HOUSE_STORES[pref].storesNote}
           storeCount={CAPITAL_HOUSE_STORES[pref].withCount ? {
             honpo: list.filter((p) => p.pref_ja === prefJa && p.brand === "honpo").length,
             duskin: list.filter((p) => p.pref_ja === prefJa && p.brand === "duskin").length,

@@ -222,6 +222,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
       {extra?.brandHub && (
         <section className="mb-8 rounded-lg border border-base-300 bg-base-200/60 p-4 text-sm" id="brand-hub">
           <p className="mb-2">{extra.brandHub.role}</p>
+          {extra.brandHub.price && (
           <p className="mb-2">
             <strong>{p.brand_name}（本部）の標準料金の要点</strong>（公式・税込の通常価格・{extra.brandHub.checkedAt}確認）: {extra.brandHub.price}。{extra.brandHub.priceNote ?? "店舗ごとの料金は公式店舗ページに記載がないため、正確な金額は店舗の見積もりで確認してください"}（出典:{" "}
             {extra.brandHub.sources.map((s, i) => (
@@ -229,6 +230,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
             ))}
             ）。
           </p>
+          )}
           <p>
             全国の店舗一覧（当サイト掲載 {list.filter((x) => x.brand === p.brand).length.toLocaleString("ja-JP")}店舗・{new Set(list.filter((x) => x.brand === p.brand).map((x) => x.pref)).size}都道府県）・本部の電話・よくある質問は{" "}
             <a href={`/brand/${{"honpo":"osoujihonpo","duskin":"duskin","kakumei":"osoujikakumei"}[p.brand] ?? ""}/`} className="underline text-primary font-bold">{p.brand_name}の店舗一覧・料金</a>

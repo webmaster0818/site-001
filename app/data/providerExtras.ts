@@ -15,7 +15,8 @@ export type ProviderExtra = {
   // 2026-11-19 16:00 遅れ挽回: 「おそうじ本舗」（ブランド名だけ）で店舗ページが上位に出てクリック0の3店だけ、h1 直下の1行（店名・所在地）の後に
   // 「この頁は◯◯店の情報」の役割の1行＋本部の標準料金の要点＋全国の店舗一覧（/brand/osoujihonpo/）への導線を出す。指定のない店舗は表示不変
   // 2026-11-21 16:00 遅れ挽回: 任意 priceNote（料金の後ろの1文を差し替える。おそうじ革命は全国一律価格なので「店舗ごとの料金は記載がない」の文は使わない）。指定のない brandHub は表示不変
-  brandHub?: { role: string; price: string; sources: { label: string; url: string }[]; checkedAt: string; priceNote?: string };
+  // 2026-11-22 16:00 遅れ挽回: price を任意に（冒頭の要点にすでに料金がある店は役割の1行と店舗一覧への導線だけを出す＝料金の重複を避ける）。price のある既存 brandHub は表示不変
+  brandHub?: { role: string; price?: string; sources: { label: string; url: string }[]; checkedAt: string; priceNote?: string };
   checkedAt: string;
 };
 
@@ -341,7 +342,12 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
       ["大町市の店舗", "当サイトの掲載では、大町市内のおそうじ本舗はこの1店です（長野県内は30店）"],
     ],
     priceSource: [{ label: "大町店 公式店舗ページ", url: "https://www.osoujihonpo.com/shop/detail/16953/" }, ...HONPO_PRICE_SOURCES],
-    hubNote: HONPO_HUB_NOTE,
+    // 2026-11-22 16:00 遅れ挽回: 「おそうじ本舗」（ブランド名だけ）で約10位・クリック0。冒頭に料金の要点は 11/05 からあるので、役割の1行と全国の店舗一覧への導線だけ（price なし）。下部の hubNote はこの枠と重複するため削除
+    brandHub: {
+      role: "このページは「おそうじ本舗 大町店」（長野県大町市大町）1店舗の情報です。電話 0120-62-0087（無料通話）・8:30〜17:30・日曜日と不定休（公式店舗ページ 2026-11-22 確認）。料金は下の要点の表にあります",
+      sources: [],
+      checkedAt: "2026-11-22",
+    },
     checkedAt: "2026-11-05",
   },
   // 「おそうじ本舗」表示4・9.0位・クリック0（我孫子市周辺での表示）。電話は公式の通常番号（無料通話の記載なし）
@@ -360,8 +366,24 @@ export const PROVIDER_EXTRAS: Record<string, ProviderExtra> = {
       ["我孫子市の店舗", "当サイトの掲載では、我孫子市内のおそうじ本舗はこの1店です（千葉県内は95店）"],
     ],
     priceSource: [{ label: "我孫子駅前店 公式店舗ページ", url: "https://www.osoujihonpo.com/shop/detail/15533/" }, ...HONPO_PRICE_SOURCES],
-    hubNote: HONPO_HUB_NOTE,
+    // 2026-11-22 16:00 遅れ挽回: 「おそうじ本舗」（ブランド名だけ）で約10位・クリック0。冒頭に料金の要点は 11/05 からあるので、役割の1行と全国の店舗一覧への導線だけ（price なし）。下部の hubNote はこの枠と重複するため削除
+    brandHub: {
+      role: "このページは「おそうじ本舗 我孫子駅前店」（千葉県我孫子市我孫子）1店舗の情報です。電話 04-7186-5888・8:30〜18:00・不定休（公式店舗ページ 2026-11-22 確認）。料金は下の要点の表にあります",
+      sources: [],
+      checkedAt: "2026-11-22",
+    },
     checkedAt: "2026-11-05",
+  },
+  // 2026-11-22 16:00 遅れ挽回: 「おそうじ本舗」6@10.0・「お掃除本舗」3@7.7（9/15〜11/19）・クリック0。11/19 honpo・11/21 honpo-19652 と同じ型の brandHub だけ（title・description は不変）。
+  // 公式店舗ページ 2026-11-22 生HTML: 店名・活動拠点 福岡県久留米市中央町・9:00〜18:00・不定休は providers.json と一致。本部の標準料金は公式5ページ＋換気扇・キッチンセットで 11/19 の値と全一致
+  "honpo-18485": {
+    brandHub: {
+      role: "このページは「おそうじ本舗 久留米駅前店」（福岡県久留米市中央町）1店舗の情報です。電話 0120-575-889（無料通話）・9:00〜18:00・不定休（公式店舗ページ 2026-11-22 確認）。公式の久留米市の店舗一覧はこの店と久留米南店・久留米旗崎店・久留米西店の4店です（同日確認）",
+      price: HONPO_BRAND_PRICE_1119,
+      sources: HONPO_PRICE_SOURCES,
+      checkedAt: "2026-11-22",
+    },
+    checkedAt: "2026-11-22",
   },
   // 「おそうじ本舗」表示4・11.5位・クリック0（長崎市周辺での表示）
   "honpo-20034": {
