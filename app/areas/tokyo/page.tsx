@@ -5,10 +5,10 @@ import {Building2, MapPin, Sparkles, Award, Shield, Zap } from "lucide-react";
 import CompanyShot from "../../components/CompanyShot";
 
 export const metadata = {
- title: "東京都のハウスクリーニング業者おすすめ比較 | 料金・口コミ | クリーンナビ",
+ title: "東京都のハウスクリーニング業者おすすめ比較 | 料金・店舗情報 | クリーンナビ",
  description: "東京都のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
  openGraph: {
- title: "東京都のハウスクリーニング業者おすすめ比較 | 料金・口コミ | クリーンナビ",
+ title: "東京都のハウスクリーニング業者おすすめ比較 | 料金・店舗情報 | クリーンナビ",
  description: "東京都のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
  url: "https://cleaning-choices.com/areas/tokyo/",
  siteName: "クリーンナビ",
@@ -25,7 +25,7 @@ export const metadata = {
  },
  twitter: {
  card: "summary_large_image",
- title: "東京都のハウスクリーニング業者おすすめ比較 | 料金・口コミ | クリーンナビ",
+ title: "東京都のハウスクリーニング業者おすすめ比較 | 料金・店舗情報 | クリーンナビ",
  description: "東京都のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
  images: ["https://cleaning-choices.com/og-image.png?v=20261016"],
  },

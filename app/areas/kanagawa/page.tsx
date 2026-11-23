@@ -17,7 +17,7 @@ const KANAGAWA_COUNT = (providers as { pref_ja: string; brand: string }[])
 
 export const metadata = withPageSocial({
   alternates: { canonical: "https://cleaning-choices.com/areas/kanagawa/" },
- title: "神奈川県のハウスクリーニング業者おすすめ比較 | 料金・口コミ | クリーンナビ",
+ title: "神奈川県のハウスクリーニング業者おすすめ比較 | 料金・店舗情報 | クリーンナビ",
  description: "神奈川県のハウスクリーニング業者を比較しています。店舗情報・料金相場・業者選びのポイントを掲載しています。",
  viewport: "width=device-width, initial-scale=1",
 });
