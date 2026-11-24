@@ -786,6 +786,13 @@ GSC実数診断:
 - ハートクリーニング公式トップの「9,800円」は税抜（税込10,780円）＝不一致ではない
 - キャプチャ4枚（captured_at 2026-11-19）・KEY_PRICES 3社。out: 新規4頁＋partner 一覧を含む34頁・precheck 全項目OK・計測リンク 749→749・sitemap 3,865→3,869。95dc6a8e
 
+### 2026-11-25 深夜02時 kwexp（競合 osouji.support・作成初日）: フローリング・玄関・水回り・洗濯乾燥機の臭い・定期ハウスクリーニングのガイド5本（1デプロイ）
+- 新設: /guide-detail/flooring-cleaning/（フローリング 掃除 14,480）・entrance-cleaning/（玄関 掃除 6,480）・water-area-cleaning/（水回り 掃除 3,520）・dryer-odor/（乾燥機 臭い 1,280）・regular-house-cleaning/（ハウスクリーニング 定期 312）。diyGuides.ts に追加（D6・SRC11・ENTRANCE/WATER_SET/REGULAR/DRYER_PRICES 新設。床は FLOOR_PRICES/FLOOR_CTA、乾燥機は WASHER_CTA を流用）
+- 事実は公式のみ（11/25 確認）: 床＝LIXIL interior_04・大建 FAQ 3189（ロボット掃除機は勧めない・湿式/スチーム不可＝LIXIL は記載なし、を1表に）。玄関＝LIXIL tile_06（土間はメラミン・液体クレンザー可）・door_01/02/03（鋼板・アルミはメラミン/クレンザー不可＝素材で分かれる点を併記）。水回り＝LIXIL シンク/浴槽/便器 daily・洗面化粧室お手入れカレンダー・国民生活センター 2026-03-18（16ppm）。臭い＝日立 a51/a51-3/a51-1/a48。定期＝ダスキン mm000010（4/8/12週・B/A/S エリア・初回別途）・teiki、革命 /price/ 定期清掃（時間制）
+- 業者公式料金 11/25: 本舗 玄関床クリーニングのみ 11,000（4㎡以下）・＆コーティング 19,800/27,500、ドラム式 18,700・完全分解+19,800・乾燥機能分解 27,500（Panasonic・ニトリ・AQUA まっすぐドラムの一部のみ）。ダスキン 水まわり 1回のみ 42,680/63,360・定期 17,600〜、ドラム式 22,000・縦型乾燥機 18,700。革命 水回り2/3/4点 32,890/45,980/57,970・定期清掃 1名2h 13,200〜。本舗は定期プランの掲載なし・水回りセットは期間限定のため不掲載。床 FLOOR_PRICES は 11/25 公式と一致
+- skip: 「浴槽 黒ずみ」＝bathtub-cleaning・bath-floor-black-stains、「洗濯パン 掃除」＝washer-drain-cleaning と重複、「くらしのマーケット 評判」＝出典つき口コミなし。「エアコンクリーニング 浜松」は /areas/ にページがない市（エリア生成が要る）＝今回は作らず queue 空欄のまま
+- out: 3,933 HTML・precheck 全項目OK・heading-lint 要確認1（既存 provider の誤検知）・新規5頁 copy-audit NG 0。691aba81 → 本番5頁 200・title・/guide/・sitemap.xml 確認・trust-audit --dry 通知0
+
 ### 2026-11-19 20:00 kwexp（競合 ouchipro.com・作成初日）: 「自分で掃除する」段階のガイド5本（1デプロイ）
 - 新設: /guide-detail/aircon-self-cleaning/（エアコン掃除 自分で 59,200）・aircon-water-leak/（エアコン 水漏れ 48,400）・aircon-smell/（エアコン 臭い 17,760）・washer-drain-cleaning/（洗濯機 排水口 掃除 17,760）・washer-lifespan/（洗濯機 寿命 14,480）。共通部品 app/components/DiyGuideArticle.tsx＋データ app/data/diyGuides.ts（Breadcrumb・WebPage・FAQPage）
 - 事実は公式のみ（11/19 確認）: 日立 kadenfan FAQ・ダイキン CLUB DAIKIN/大切なお知らせ（FNシリーズ水漏れ無償修理 2025-11-28）・シャープ コールセンターからのアドバイス・NITE 2020-06-25（内部洗浄の火災20件）・内閣府 消費動向調査 2026年3月（洗濯機 10.1年・時系列22回を当サイトで抜粋）・東芝/シャープ 部品保有期間6年・SANEI 排水トラップ取説。各ページに「業者に依頼する目安」と業者公式料金（本舗 エアコン14,300/完全分解+8,800・洗濯機 縦12,100/ドラム18,700/洗濯パン+2,200、ダスキン エアコン15,400/26,400・洗濯機15,400/22,000、革命 9,980/18,700）
