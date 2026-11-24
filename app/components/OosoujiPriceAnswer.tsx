@@ -372,13 +372,40 @@ export function WasherPriceAnswer({
 
 // 2026-11-17 16:00 遅れ挽回: /price/（「ハウスクリーニング 相場」21位）の冒頭に、相場の目安の前に大手3社の公式標準料金の早見表と、
 // 間取り・点数でまとめて頼む場合の公式セット料金を置く。値は 2026-11-17 に各公式ページで再確認（11/12〜16 と全一致）。
+// 2026-11-24 16:00 遅れ挽回: 「ハウスクリーニング 料金・相場」「カビ取り 業者 費用」向けに、表の前に場所別の答えの1段落（3社の公式標準料金の幅）と、
+// 表の後に「カビ取りの費用」（浴室クリーニングにカビ除去が含まれる旨と防カビのオプション料金・エアコンの防カビ）を足す。全値を 2026-11-24 に各公式で再確認（11/17 と全一致）。
+// 呼び出しは /price/ の1頁だけ。
+const KABI_ROWS: [string, string, string, string][] = [
+  [
+    "おそうじ本舗",
+    "風呂・浴室クリーニング 19,800円／式に、天井・壁面・蛇口・排水口まわりのカビ除去（オリジナルのカビ取り剤）を含む",
+    "浴室防カビコート 3,300円／式、エプロン内部高圧洗浄＆防カビ仕上げ 7,700円／式、浴室が1坪以上またはタイル壁は +5,500円／式。エアコンの防カビチタンコーティング 3,300円／台",
+    "https://www.osoujihonpo.com/house-cleaning/water/bathroom/",
+  ],
+  [
+    "ダスキン",
+    "浴室クリーニング 22,000円（床面積3m²・高さ2.4m未満）で天井の黒いカビなどを洗浄。床面積1m²追加ごとに 5,060円",
+    "カビ防止コート 5,060円（床面積3m²未満・高さ2.4m未満、1m²増えるごとに 2,530円）、浴槽エプロン内部クリーニング 5,060円（浴室クリーニングとセット）。エアコンの抗菌コート 2,750円／台",
+    "https://www.duskin.jp/servicemaster/water/sm000090/",
+  ],
+  [
+    "おそうじ革命",
+    "浴室 17,930円（全国一律）で床・壁・目地・排水口・パッキンのカビを除去",
+    "エプロン内部清掃 3,080円（浴室の防カビコートは公式の料金一覧に記載なし）。エアコンの防カビ抗菌コート 2,750円",
+    "https://www.osoujikakumei.jp/price/",
+  ],
+];
+
 export function PriceTopAnswer({ checked }: { checked: string }) {
   return (
     <section id="official-price" className="py-8 bg-amber-50 border-b border-amber-100">
       <div className="container mx-auto px-4 max-w-5xl">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-          大手3社の公式標準料金 早見表（エアコン・浴室・キッチン・レンジフード／{checked}確認）
+          大手3社の公式標準料金 早見表（エアコン・浴室・キッチン・レンジフード・トイレ・カビ取り／{checked}確認）
         </h2>
+        <p className="text-sm text-gray-900 font-medium mb-2">
+          場所別の料金の答え（大手3社の公式標準料金・税込の通常価格の幅）: エアコン（壁掛け・お掃除機能なし）9,980〜15,400円／台、お掃除機能付き 18,700〜26,400円／台、浴室 17,930〜22,000円、キッチン 17,930〜20,680円、レンジフード・換気扇 17,930〜22,000円、トイレ 8,250〜10,340円です。浴室のカビ取りは3社とも浴室クリーニングの作業に含まれ、防カビのコートは別料金です（浴室: おそうじ本舗 3,300円・ダスキン 5,060円〜）。
+        </p>
         <p className="text-sm text-gray-700 mb-3">
           1か所あたりの標準料金（税込・通常価格）です。おそうじ革命は公式に「全国一律価格」、おそうじ本舗・ダスキンはブランド共通の標準料金で、店舗ごとの金額は見積もりで確認してください。下の「サービス別料金相場」は業者全体の目安で、大手の標準料金はその上限に近いか、上回る箇所があります（例: ダスキンの浴室 22,000円・レンジフード 22,000円）。
         </p>
@@ -406,6 +433,38 @@ export function PriceTopAnswer({ checked }: { checked: string }) {
         </div>
         <p className="text-xs text-gray-500 mt-2">
           複数台の割引: おそうじ本舗は2台以上の注文で壁掛け 12,100円／台・お掃除機能付き 22,000円／台、ダスキンは2台セット 25,300円・お掃除機能付き 47,300円（同一世帯）。ダスキンの浴室は床面積3m²・高さ2.4m未満、キッチンは間口3m未満、レンジフードは幅95cm未満の料金です（各公式）。
+        </p>
+        <h3 id="kabi-price" className="text-base font-bold text-gray-900 mt-4 mb-1">カビ取りの費用（浴室・エアコン／{checked}に各公式で確認）</h3>
+        <p className="text-sm text-gray-700 mb-2">
+          大手3社とも「カビ取り」単独の料金ではなく、浴室クリーニングの作業の中でカビを除去します。カビを生えにくくする防カビのコートは追加のオプションです。おそうじ本舗・ダスキンは公式に、汚れの状況によっては完全に除去できない場合があると記載しています。
+        </p>
+        <div className="overflow-x-auto">
+          <table className="table table-sm text-sm bg-white">
+            <thead>
+              <tr>
+                <th>ブランド</th>
+                <th>カビ除去を含む料金</th>
+                <th>防カビ・追加のオプション</th>
+              </tr>
+            </thead>
+            <tbody>
+              {KABI_ROWS.map(([b, base, opt, u]) => (
+                <tr key={b}>
+                  <th>{b}</th>
+                  <td>{base}</td>
+                  <td>
+                    {opt}（
+                    <a href={u} target="_blank" rel="noopener noreferrer" className="underline text-primary">公式</a>）
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 mt-2">
+          エアコンのオプションの出典: おそうじ本舗
+          <a href={H[0][2]} target="_blank" rel="noopener noreferrer" className="underline text-primary">エアコンクリーニング</a>・ダスキン
+          <a href={D[0][2]} target="_blank" rel="noopener noreferrer" className="underline text-primary">エアコンクリーニング</a>（各公式）。おそうじ革命は上の料金ページ。
         </p>
         <h3 className="text-base font-bold text-gray-900 mt-4 mb-1">間取り・点数でまとめて頼む場合（公式のセット料金）</h3>
         <ul className="text-sm text-gray-700 space-y-1">
