@@ -152,6 +152,11 @@ const guideDetailPages: PageLink[] = [
   { href: "/guide-detail/bath-door-cleaning/", name: "お風呂のドアの汚れの落とし方" },
   { href: "/guide-detail/aircon-cleaning-flow/", name: "エアコンクリーニングの流れ（申し込みから作業完了まで）" },
   { href: "/guide-detail/rental-move-out-cleaning/", name: "賃貸の退去時のハウスクリーニング費用の負担" },
+  { href: "/guide-detail/flooring-cleaning/", name: "フローリングの掃除方法" },
+  { href: "/guide-detail/entrance-cleaning/", name: "玄関の掃除方法（土間・玄関ドア・網戸）" },
+  { href: "/guide-detail/water-area-cleaning/", name: "水回りの掃除方法（場所ごとの頻度）" },
+  { href: "/guide-detail/dryer-odor/", name: "洗濯乾燥機の臭いの原因と対処" },
+  { href: "/guide-detail/regular-house-cleaning/", name: "定期ハウスクリーニングの料金と頻度" },
 ];
 
 const scenePages: PageLink[] = [
