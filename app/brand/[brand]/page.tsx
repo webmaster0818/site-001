@@ -107,19 +107,19 @@ const BRAND_GUIDE: Record<
         q: "おそうじ革命の料金はいくらですか？",
         a: "公式の料金ページの全国一律価格（税込）は、エアコン（壁掛け・お掃除機能なし）9,980円、お掃除機能付き18,700円、キッチン・レンジフード・浴室が各17,930円、トイレ・洗面所が各8,250円です。",
         src: "https://www.osoujikakumei.jp/price/",
-        checked: "2026-11-04",
+        checked: "2026-11-24",
       },
       {
         q: "追加料金や駐車場代はかかりますか？",
         a: "公式のよくある質問に「当ホームページに記載の料金以外に、別途料金や追加料金がかかることはございません」「駐車料金はご請求しません」と記載されています。",
         src: "https://www.osoujikakumei.jp/support/faq/",
-        checked: "2026-11-04",
+        checked: "2026-11-24",
       },
       {
         q: "キャンセル料はかかりますか？",
         a: "公式のよくある質問には、作業日の2日前までのキャンセルは無料、前日は作業料金の50%、当日は100%と記載されています。",
         src: "https://www.osoujikakumei.jp/support/faq/",
-        checked: "2026-11-04",
+        checked: "2026-11-24",
       },
       {
         q: "土日祝は料金が変わりますか？",
@@ -138,6 +138,12 @@ const BRAND_GUIDE: Record<
         a: "このページの「都道府県から探す」で都道府県を選ぶと、当サイトが公式サイトで所在を確認した店舗の一覧に移動します。公式の全国店舗一覧でも店舗名・地域名から探せます。公式サイトには「全国の各エリアに対応しています（一部を除く）」と記載されています。",
         src: "https://www.osoujikakumei.jp/locations/",
         checked: "2026-11-04",
+      },
+      {
+        q: "おそうじ革命の予約・申し込みはどうすればよいですか？",
+        a: "公式サイトの専用フォームか電話（0120-963-933）で申し込みます。公式「初めての方へ」の流れは、お問い合わせ→料金の案内（内容により無料の訪問見積り）→予約確定→作業当日の再確認→作業→仕上がりを確認して支払い、です。予約は依頼日から半年先までが目安で、対応する決済方法は店舗により異なります。",
+        src: "https://www.osoujikakumei.jp/support/first-time",
+        checked: "2026-11-24",
       },
       // 2026-11-14: 「おそうじ革命 口コミ／評判」の上位（みん評・比較サイト）は第三者の評価を出しているのに、このページには評判の答えが無かった。出典を開いて確認できた数値だけを書く
       {
@@ -423,6 +429,37 @@ export default async function BrandPage({ params }: { params: Promise<{ brand: s
         )}
         {brand === "osoujikakumei" && <KakumeiAffiliateCTA variant="text1" banner />}
       </section>
+
+      {brand === "osoujikakumei" && (
+        <section className="container mx-auto px-4 pb-8 max-w-4xl" id="flow">
+          <div className="card p-6">
+            <h2 className="text-xl font-bold text-ink mb-3">おそうじ革命の予約・申込の流れ（公式）</h2>
+            <p className="text-sm text-ink-soft leading-relaxed mb-3">
+              申込は公式サイトの専用フォームか電話（本部 0120-963-933）です。公式「初めての方へ」の流れは次の6段階です。
+            </p>
+            <ol className="text-sm text-ink-soft leading-relaxed list-decimal pl-5 space-y-1">
+              <li>お問い合わせ：サービス内容・希望日程・作業箇所の状況を伝える</li>
+              <li>料金の案内：作業内容によっては無料の訪問見積り（現地調査）が入る</li>
+              <li>予約確定：見積り内容に納得したら確定</li>
+              <li>作業当日：担当スタッフが予約時間に訪問し、作業内容を再確認</li>
+              <li>作業開始（基本1名・内容により人数を調整）</li>
+              <li>完了確認・支払い：仕上がりを一緒に確認してから支払う</li>
+            </ol>
+            <ul className="text-sm text-ink-soft leading-relaxed mt-3 space-y-1">
+              <li>・予約は依頼日から半年先までが目安。翌日の予約も空き状況しだい</li>
+              <li>・作業日前日などの事前連絡は行っていない（公式FAQ）</li>
+              <li>・支払い：現金・銀行振込・クレジットカード・交通系/電子マネー・コード決済など。対応する決済方法は店舗により異なるため事前に確認が必要</li>
+              <li>・最低出張料金は7,700円（作業料金がこれを下回る場合は差額を請求）。夕方〜夜の作業は時間外料金がかかる場合あり</li>
+            </ul>
+            <p className="text-xs text-muted mt-3">
+              出典：
+              <a href="https://www.osoujikakumei.jp/support/first-time" className="underline" target="_blank" rel="noopener noreferrer">おそうじ革命「初めての方へ」</a>・
+              <a href="https://www.osoujikakumei.jp/support/faq/" className="underline" target="_blank" rel="noopener noreferrer">よくある質問</a>・
+              <a href="https://www.osoujikakumei.jp/price/" className="underline" target="_blank" rel="noopener noreferrer">料金</a>（2026年11月24日確認）
+            </p>
+          </div>
+        </section>
+      )}
 
       {rated.length > 0 && (
         <section className="container mx-auto px-4 pb-8 max-w-4xl">
