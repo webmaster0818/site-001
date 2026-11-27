@@ -36,6 +36,7 @@ export type Partner = {
   affiliateUrl: string | null; // felmat計測リンク(2026-09-15受領・提供コードのまま使用)
   affiliateLabel?: string; // 計測リンクのテキスト(felmat指定文言・改変不可)
   affiliatePixel?: string; // インプレッション計測用1x1画像(必須)
+  extraAffiliates?: { href: string; label: string; pixel: string; note?: string }[]; // 同じ会社の別プラン用の計測リンク（ASP提供の文言・1x1をそのまま使う）
   banner?: { href: string; img: string; width: number; height: number; pixel?: string }; // バナー(あれば検証ページに併設)。pixel=A8等でバナー別に計測画像がある場合
   // 2026-10-09 追加: 検証ページ固有の情報(すべて公式の生HTMLで確認したもののみ)
   publishedAt?: string; // 検証ページ初出日(YYYY-MM-DD)
@@ -621,6 +622,10 @@ export const PARTNERS: Partner[] = [
     affiliateUrl: "https://px.a8.net/svt/ejp?a8mat=4B66KG+8YPL16+4X26+5YRHE", // 2026-11-18 サイト030（クリーンナビ）のコードに差し替え（旧コードは別サイト「エアコンメンテナンスナビ」013 用だった）
     affiliateLabel: "業界最安値に挑戦！【アールクリーニング】",
     affiliatePixel: "https://www19.a8.net/0.gif?a8mat=4B66KG+8YPL16+4X26+5YRHE",
+    extraAffiliates: [ // 2026-11-27 A8 承認（4時間 22947002・6時間 22947006）。料金は本ページの「時間パック」行（公式 11/21 確認）
+      { href: "https://px.a8.net/svt/ejp?a8mat=4BGO4M+40OZ5M+4X26+BWVTE", label: "作業実績20万件突破！☆やりたいお掃除を選べる☆激トク4時間パック", pixel: "https://www15.a8.net/0.gif?a8mat=4BGO4M+40OZ5M+4X26+BWVTE", note: "4時間パック 34,980円（税込）" },
+      { href: "https://px.a8.net/svt/ejp?a8mat=4BGO4M+4D72UY+4X26+ZQ80I", label: "アールクリーニング【激トク6時間パック】", pixel: "https://www13.a8.net/0.gif?a8mat=4BGO4M+4D72UY+4X26+ZQ80I", note: "6時間パック 52,140円（税込）" },
+    ],
     banner: { href: "https://px.a8.net/svt/ejp?a8mat=4B66KG+8YPL16+4X26+601S1", img: "https://www26.a8.net/svt/bgt?aid=260628928542&wid=030&eno=01&mid=s00000022947001008000&mc=1", width: 300, height: 250, pixel: "https://www11.a8.net/0.gif?a8mat=4B66KG+8YPL16+4X26+601S1" },
   },
   {

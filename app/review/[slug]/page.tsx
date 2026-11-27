@@ -341,6 +341,18 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
                 {p.affiliateLabel ?? `${p.name}の公式サイトで最新料金を確認する`}
               </a>
               {p.affiliatePixel && <img width={1} height={1} src={p.affiliatePixel} alt="" style={{ border: "none" }} />}
+              {p.extraAffiliates && p.extraAffiliates.length > 0 && (
+                <div className="mt-4 space-y-2 text-sm">
+                  <p className="text-xs font-bold text-gray-600">時間パックで申し込む場合</p>
+                  {p.extraAffiliates.map((x) => (
+                    <p key={x.href}>
+                      {x.note && <span className="text-gray-600">{x.note}：</span>}
+                      <a href={x.href} rel="sponsored nofollow noopener" target="_blank" className="text-amber-700 underline font-bold">{x.label}</a>
+                      <img width={1} height={1} src={x.pixel} alt="" style={{ border: "none" }} />
+                    </p>
+                  ))}
+                </div>
+              )}
               {p.banner && (
                 <div className="mt-4 flex justify-center">
                   <a href={p.banner.href} rel="sponsored nofollow noopener" target="_blank">
