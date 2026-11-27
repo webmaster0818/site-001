@@ -71,6 +71,7 @@ export default function ServicePageClient({ category }: { category: string }) {
   //   おそうじ革命・カジタクは提携側に公式確認済みのデータがあるので提携側だけを出す（二重に出さない）。
   const tag = (["aircon", "bathroom", "kitchen"].includes(category) ? category : "whole") as ServiceTag;
   const KW: Record<string, RegExp> = { aircon: /エアコン|壁掛け/, bathroom: /浴室|風呂/, kitchen: /キッチン|レンジ/ };
+  const hasCap = (slug: string) => (captures as { slug: string }[]).some((c) => c.slug === slug);
   const capAt = (slug: string) => (captures as { slug: string; captured_at: string }[]).find((c) => c.slug === slug)?.captured_at ?? "2026-10-16";
   const jp = (d: string) => { const [y, m, dd] = d.split("-").map(Number); return `${y}年${m}月${dd}日`; };
   const yen = (t: string) => { const m = t.replace(/,/g, "").match(/(\d{4,6})円/); return m ? Number(m[1]) : NaN; };
@@ -87,8 +88,9 @@ export default function ServicePageClient({ category }: { category: string }) {
       // このサービスの料金が partners.ts に無い業者は、別メニューの料金を出さない（浴室ページにエアコン料金が出ていた）
       const pr = KW[category] ? p.prices.find((x) => KW[category].test(x.menu)) : p.prices[0];
       return {
-        key: p.slug, name: p.name, href: `/review/${p.slug}/`, image: `/images/partners/${p.slug}.webp`,
-        caption: `出典：${p.name} 公式サイト（${jp(capAt(p.slug))}時点）`, area: p.area,
+        // キャプチャ未撮影の業者（partner-captures.json に無い）は画像・出典を出さない（11/28 画像404の修正）
+        key: p.slug, name: p.name, href: `/review/${p.slug}/`, image: hasCap(p.slug) ? `/images/partners/${p.slug}.webp` : "",
+        caption: hasCap(p.slug) ? `出典：${p.name} 公式サイト（${jp(capAt(p.slug))}時点）` : "", area: p.area,
         priceText: pr ? `${pr.menu} ${pr.price}` : `${categoryInfo?.title ?? "このサービス"}の料金は検証ページでご確認ください`, price: pr ? yen(pr.price) : NaN, features: [p.company],
         pr: p.affiliateUrl ? { url: p.affiliateUrl, label: p.affiliateLabel ?? `${p.name}の公式サイトへ`, pixel: p.affiliatePixel } : undefined,
         company: COMPANY_PAGE[p.slug],
@@ -201,6 +203,7 @@ export default function ServicePageClient({ category }: { category: string }) {
               {filteredCompanies.map((company) => (
                 <div key={company.key} className="block bg-white rounded-lg overflow-hidden">
                   <div className="flex flex-col md:flex-row">
+                    {company.image && (
                     <figure className="md:w-72 p-3 m-0 flex-none">
                       <a href={company.href}>
                         <img
@@ -211,6 +214,7 @@ export default function ServicePageClient({ category }: { category: string }) {
                       </a>
                       <figcaption className="mt-1 text-[11px] text-gray-500">{company.caption}</figcaption>
                     </figure>
+                    )}
                     <div className="flex-1 p-5">
                       <h3 className="text-lg font-bold mb-1"><a href={company.href}>{company.name}</a></h3>
                       <p className="text-xs text-gray-500 mb-2">{company.features.join("・")}{company.company && <> ・<a className="underline" href={company.company}>会社情報</a></>}</p>
