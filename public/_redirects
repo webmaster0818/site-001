@@ -12,3 +12,5 @@
 /provider/honpo-20702/ /areas/aomori/ 301
 /provider/honpo-21315/ /areas/nagoya-nakagawa/ 301
 /provider/honpo-20954/ /areas/kumamoto-ken/ 301
+# 公式店舗ページ 404・公式の葛飾区の店舗一覧（7店）に無い本舗 葛飾高砂店を掲載から外す（2026-11-28 再確認・11/27 宣言の既定案）→葛飾区のエリアページへ
+/provider/honpo-21340/ /areas/tokyo-katsushika/ 301
